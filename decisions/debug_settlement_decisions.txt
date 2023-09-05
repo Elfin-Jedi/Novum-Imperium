@@ -1,0 +1,274 @@
+# FROM is the decision taker
+# ROOT is the targeted settlement
+settlement_decisions = {
+
+	debug_show_province_id = {
+		filter = all
+		ai_target_filter = owned
+		diplomacy_icon = GFX_debug_decision
+		
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		
+		potential = {
+		}
+		allow = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_spawn_army = {
+		filter = all
+		ai_target_filter = owned
+		diplomacy_icon = GFX_debug_decision
+		
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		
+		potential = {
+		}
+		allow = {
+		}
+		
+		effect = {
+			location = {
+				FROM = {
+					spawn_unit = {
+						owner = THIS
+						leader = THIS
+						province = PREV
+						home = PREV
+						troops = {
+							heavy_infantry = { 2000 2000 }
+							knights = { 5000 5000 }
+							light_cavalry = { 2000 2000 }
+							archers = { 1000 1000 }
+						}
+						merge = yes
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_increase_prosperity = {
+		filter = all
+		ai_target_filter = owned
+		diplomacy_icon = GFX_debug_decision
+		
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		
+		potential = {
+		}
+		allow = {
+			location = {
+				NOT = {
+					has_province_modifier = prosperity_modifier_3
+				}
+			}
+		}
+		
+		effect = {
+			location = {
+				if = {
+					limit = {
+						NOR = {
+							has_province_modifier = depopulated_3
+							has_province_modifier = depopulated_2
+							has_province_modifier = depopulated_1
+						}
+					}
+					increase_prosperity_effect = yes
+				}
+				if = {
+					limit = {
+						OR = {
+							has_province_modifier = depopulated_3
+							has_province_modifier = depopulated_2
+							has_province_modifier = depopulated_1
+						}
+					}
+					decrease_depopulation_effect = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_decrease_prosperity = {
+		filter = all
+		ai_target_filter = owned
+		diplomacy_icon = GFX_debug_decision
+		
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		
+		potential = {
+		}
+		allow = {
+			location = {
+				NOT = {
+					has_province_modifier = depopulated_3
+				}
+			}
+		}
+		
+		effect = {
+			location = {
+				if = {
+					limit = {
+						NOR = {
+							has_province_modifier = prosperity_modifier_3
+							has_province_modifier = prosperity_modifier_2
+							has_province_modifier = prosperity_modifier_1
+						}
+					}
+					increase_depopulation_effect = yes
+				}
+				if = {
+					limit = {
+						OR = {
+							has_province_modifier = prosperity_modifier_3
+							has_province_modifier = prosperity_modifier_2
+							has_province_modifier = prosperity_modifier_1
+						}
+					}
+					debug_decrease_prosperity_effect = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_make_capital = {
+		filter = owned # Can only move capital to an own holding
+		ai_target_filter = owned
+		diplomacy_icon = GFX_debug_decision
+		
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		
+		potential = {
+		}
+		allow = {
+		}
+		
+		effect = {
+			FROM = {
+				capital = ROOT
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}	
+	}
+	
+	debug_convert_religion = {
+		filter = all
+		ai_target_filter = owned
+		diplomacy_icon = GFX_debug_decision
+		
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+			NOT = { religion = FROM }
+		}
+		allow = {
+		}
+		effect = {
+			location = {
+				religion = FROM
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_convert_culture = {
+		filter = all
+		ai_target_filter = owned
+		diplomacy_icon = GFX_debug_decision
+		
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+			NOT = { culture = FROM }
+		}
+		allow = {
+		}
+		effect = {
+			location = {
+				culture = FROM	
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

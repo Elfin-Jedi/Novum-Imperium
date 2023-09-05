@@ -1,0 +1,28 @@
+death_title = { #switch person
+	name = "RULE_SWITCH_PERSON"
+	group = "RULE_GROUP_HEIR"
+	option = {
+		name = allowed
+		text = "RULE_ALLOWED_SWITCH_PERSON"
+		desc = "RULE_ALLOWED_SWITCH_PERSON_DESC"
+	}
+	option = {
+		name = disallowed
+		text = "RULE_DISALLOWED_SWITCH_PERSON"
+		desc = "RULE_DISALLOWED_SWITCH_PERSON_DESC"
+	}
+}
+nastepca_multi = {
+	name = "RULE_NASTEPCA_MULTI"
+	group = "RULE_GROUP_HEIR"
+	option = {
+		name = nastepca_singleplayer
+		text = "RULE_NASTEPCA_SINGLE"
+		desc = "RULE_NASTEPCA_SINGLE_DESC"
+	}
+	option = {
+		name = nastepca_multiplayer
+		text = "RULE_NASTEPCA_DISALLOWED"
+		desc = "RULE_NASTEPCA_MULTI_DESC"
+	}
+}

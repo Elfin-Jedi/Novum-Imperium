@@ -1,0 +1,59 @@
+succession_laws = {
+
+	succ_eldership_afr = {
+		dynasty_opinion = 5
+	
+		potential = {
+			emf_laws_succ_basic_potential = yes
+			emf_laws_potential_not_for_byzantium = yes
+			holder_scope = {
+				OR = {
+					is_feudal = yes
+					is_tribal = yes
+				}
+				OR = {
+					religion = bori
+					religion = a_tag_roog
+					culture = kanuri
+					has_religion_feature = religion_feature_a_tag_roog
+                }
+				NOR = {
+                    AND = {
+                        religion_group = muslim
+                        NOT = { culture = kanuri }
+                    }
+				}
+			}
+			rebel = no
+		}
+		allow = {
+			holder_scope = { # For the tooltip
+				show_scope_change = no
+				trigger_if = {
+					limit = { has_religion_features = no }
+					OR = {
+						religion = bori
+                        religion = a_tag_roog
+                        culture = kanuri
+					}
+				}
+				trigger_else = {
+					has_religion_feature = religion_feature_a_tag_roog
+				}
+			}
+		}
+		effect = {
+			succession = {
+				base_type = tanistry
+				voting_rules = eldership_rules_afr
+			}
+			elective_voting_rules = eldership_rules_afr
+		}
+		revoke_allowed = {
+			always = no
+		}
+		default_selection = {
+			factor = 100
+        }
+	}
+}

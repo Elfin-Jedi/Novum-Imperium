@@ -1,0 +1,745 @@
+song = {
+	name = "Medieval II Total War - Amen (Main Theme).ogg"
+	song_name = "Medieval II Total War - Amen (Main Theme)"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = { religion_group = christian }
+		}
+	}
+}
+song = {
+	name = "Medieval II Total War - Field of Blood.ogg"
+	song_name = "Medieval II Total War - Field of Blood"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+}
+song = {
+	name = "Medieval II Total War - Grey Meadow.ogg"
+	song_name = "Medieval II Total War - Grey Meadow"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+}
+song = {
+	name = "Medieval II Total War - Lilly.ogg"
+	song_name = "Medieval II Total War - Lilly"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+}
+song = {
+	name = "Medieval II Total War - Destiny.ogg"
+	song_name = "Medieval II Total War - Destiny"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}
+}
+song = {
+	name = "Medieval II Total War - Call of the Sheep.ogg"
+	song_name = "Medieval II Total War - Call of the Sheep"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+}
+song = {
+	name = "Medieval II Total War - Sister Davul.ogg"
+	song_name = "Medieval II Total War - Sister Davul"
+	
+	chance = {
+		factor = 2
+	}
+}
+song = {
+	name = "Medieval II Total War - This is It.ogg"
+	song_name = "Medieval II Total War - This is It"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+				AND = {
+					religion_group = christian
+					war = yes
+				}
+			}
+		}
+	}
+}
+song = {
+	name = "Medieval II Total War - Duke of Death.ogg"
+	song_name = "Medieval II Total War - Duke of Death"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}
+}
+song = {
+	name = "Medieval II Total War - Whispers in the Grove.ogg"
+	song_name = "Medieval II Total War - Whispers in the Grove"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+}
+song = {
+	name = "Medieval II Total War - Honour of Sultan.ogg"
+	song_name = "Medieval II Total War - Honour of Sultan"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {
+				AND = {
+					religion_group = muslim
+					war = yes
+				}
+			}
+		}
+	}
+}
+song = {
+	name = "Medieval II Total War - Dream of Albion.ogg"
+	song_name = "Medieval II Total War - Dream of Albion"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { culture_group = celtic }
+		}
+	}
+}
+song = {
+	name = "Medieval II Total War - Wandering Hills.ogg"
+	song_name = "Medieval II Total War - Wandering Hills"
+	
+	chance = {
+		factor = 2
+	}
+}
+song = {
+	name = "Medieval II Total War - Brothers Together.ogg"
+	song_name = "Medieval II Total War - Brothers Together"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}
+}
+song = {
+	name = "Medieval II Total War - Forest Haze.ogg"
+	song_name = "Medieval II Total War - Forest Haze"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NAND = {
+				OR = {
+					religion = baltic_pagan_reformed
+					religion = baltic_pagan
+					culture = lithuanian
+				}
+				war = no
+			}
+		}
+	}
+}
+song = {
+	name = "Medieval II Total War - Iron Wolf.ogg"
+	song_name = "Medieval II Total War - Iron Wolf"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NAND = {
+				OR = {
+					religion = baltic_pagan_reformed
+					religion = baltic_pagan
+					culture = lithuanian
+				}
+				war = no
+			}
+		}
+	}
+}
+song = {
+	name = "A Plague Tale Innocence - A Plague Tale (Main Theme).ogg"
+	song_name = "A Plague Tale Innocence - A Plague Tale (Main Theme)"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+}
+song = {
+	name = "A Plague Tale Innocence - Father.ogg"
+	song_name = "A Plague Tale Innocence - Father"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+}
+song = {
+	name = "A Plague Tale Innocence - The Inquisition.ogg"
+	song_name = "A Plague Tale Innocence - The Inquisition"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}
+}
+song = {
+	name = "A Plague Tale Innocence - Prisoners.ogg"
+	song_name = "A Plague Tale Innocence - Prisoners"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}
+}
+song = {
+	name = "A Plague Tale Innocence - The Shelter.ogg"
+	song_name = "A Plague Tale Innocence - The Shelter"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+}
+song = {
+	name = "A Plague Tale Innocence - The Wrath.ogg"
+	song_name = "A Plague Tale Innocence - The Wrath"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}
+}
+song = {
+	name = "Lord of the Rings - Concerning Hobbits.ogg"
+	song_name = "Lord of the Rings - Concerning Hobbits"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+}
+song = {
+	name = "Lord of the Rings - The Treason of Isengard.ogg"
+	song_name = "Lord of the Rings - The Treason of Isengard"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+}
+song = {
+	name = "Lord of the Rings - The Council of Elrond.ogg"
+	song_name = "Lord of the Rings - The Council of Elrond"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2
+			capital_scope = { region = world_europe }
+		}
+	}
+}
+song = {
+	name = "Lord of the Rings - The Bridge of Khazad-dum.ogg"
+	song_name = "Lord of the Rings - The Bridge of Khazad-dum"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}
+}
+song = {
+	name = "Lord of the Rings - The Breaking of the Fellowship.ogg"
+	song_name = "Lord of the Rings - The Breaking of the Fellowship"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+}
+song = {
+	name = "Lord of the Rings - Foundations of Stone.ogg"
+	song_name = "Lord of the Rings - Foundations of Stone"
+	
+	chance = {
+		factor = 2
+	}
+}
+song = {
+	name = "Lord of the Rings - The Riders of Rohan.ogg"
+	song_name = "Lord of the Rings - The Riders of Rohan"
+	
+	chance = {
+		factor = 2
+	}
+}
+song = {
+	name = "Lord of the Rings - A Storm Is Coming.ogg"
+	song_name = "Lord of the Rings - A Storm Is Coming"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+}
+song = {
+	name = "Lord of the Rings - Minas Tirith.ogg"
+	song_name = "Lord of the Rings - Minas Tirith"
+	
+	chance = {
+		factor = 2
+	}
+}
+song = {
+	name = "Lord of the Rings - The Ride of the Rohirrim.ogg"
+	song_name = "Lord of the Rings - The Ride of the Rohirrim"
+	
+	chance = {
+		factor = 2
+	}
+}
+song = {
+	name = "Lord of the Rings - The Black Gate Opens.ogg"
+	song_name = "Lord of the Rings - The Black Gate Opens"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}
+}
+song = {
+	name = "Lord of the Rings - The Return Of The King.ogg"
+	song_name = "Lord of the Rings - The Return Of The King"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+}
+song = {
+	name = "ESO - For Blood, for Glory, for Honor.ogg"
+	song_name = "ESO - For Blood, for Glory, for Honor"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}
+}
+song = {
+	name = "ESO - Even Paradise Has Shadows.ogg"
+	song_name = "ESO - Even Paradise Has Shadows"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}
+}
+song = {
+	name = "ESO - Masque of Reveries.ogg"
+	song_name = "ESO - Masque of Reveries"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+}
+song = {
+	name = "ESO - Gryphons Soar In the Sun.ogg"
+	song_name = "ESO - Gryphons Soar In the Sun"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+}
+song = {
+	name = "ESO - Sun-Blessed Alinor.ogg"
+	song_name = "ESO - Sun-Blessed Alinor"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+}
+song = {
+	name = "ESO - A Land of War and Poetry.ogg"
+	song_name = "ESO - A Land of War and Poetry"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}
+}
+song = {
+	name = "ESO - Magnus Smiles On Suran.ogg"
+	song_name = "ESO - Magnus Smiles On Suran"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+}
+song = {
+	name = "Civilization VI - Banat Iskandaria.ogg"
+	song_name = "Civilization VI - Banat Iskandaria (Arabian Theme)"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0.1
+			NOR = {
+				culture_group = arabic
+				religion_group = muslim
+			}
+		}
+	}
+}
+song = {
+	name = "Civilization VI - Mo Li Huaa.ogg"
+	song_name = "Civilization VI - Mo Li Hua (Chinese Theme)"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0.1
+			NOR = {
+				government = chinese_imperial_government
+				culture_group = chinese_group
+			}
+		}
+	}
+}
+song = {
+	name = "Civilization VI - Scarborough Fair.ogg"
+	song_name = "Civilization VI - Scarborough Fair (English Theme)"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0.1
+			NOR = {
+				culture = saxon
+				culture = english
+				culture = scottish
+			}
+		}
+	}
+}
+song = {
+	name = "Civilization VI - Quand je bois du vin clairet.ogg"
+	song_name = "Civilization VI - Quand je bois du vin clairet (Franch Theme)"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0.1
+			NOR = {
+				culture = frankish
+				culture = norman
+				culture = occitan
+				culture = outremer
+			}
+		}
+	}
+}
+song = {
+	name = "Civilization VI - Ich hab die Nacht geträumet.ogg"
+	song_name = "Civilization VI - Ich hab die Nacht getraumet (German Theme)"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0.1
+			NOR = {
+				culture = german
+				culture = low_german
+				culture = old_frankish
+				culture = low_saxon
+				culture = thuringian
+				culture = franconian
+				culture = swabian
+				culture = bavarian
+				culture = low_frankish
+			}
+		}
+	}
+}
+song = {
+	name = "Civilization VI - Epitaph of Seikilos.ogg"
+	song_name = "Civilization VI - Epitaph of Seikilos (Greek Theme)"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0.1
+			NOT = { culture = greek }
+		}
+	}
+}
+song = {
+	name = "Civilization VI - Lullaby of Itsuki.ogg"
+	song_name = "Civilization VI - Lullaby of Itsuki (Japanese Theme)"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0.1
+			NOT = { culture_group = japonic }
+		}
+	}
+}
+song = {
+	name = "Civilization VI - Urtin Duu.ogg"
+	song_name = "Civilization VI - Urtin Duu (Mongolian Theme)"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0.1
+			NOT = { culture_group = altaic }
+		}
+	}
+}
+song = {
+	name = "Civilization VI - Gaillarde L'esmerillone.ogg"
+	song_name = "Civilization VI - Gaillarde L'esmerillone (Dutch Theme)"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0.1
+			NOT = { culture = dutch }
+		}
+	}
+}
+song = {
+	name = "Civilization VI - Kalinka.ogg"
+	song_name = "Civilization VI - Kalinka (Russian Theme)"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0.1
+			NOT = { culture_group = east_slavic }
+		}
+	}
+}
+song = {
+	name = "Civilization VI - Recuerdos de la Alhambra.ogg"
+	song_name = "Civilization VI - Recuerdos de la Alhambra (Spanish Theme)"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0.1
+			NOT = { culture_group = iberian }
+		}
+	}
+}
+song = {
+	name = "Civilization VI - Scythia Theme.ogg"
+	song_name = "Civilization VI - Scythia Theme"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0.1
+			NOT = { culture = saka }
+		}
+	}
+}
+song = {
+	name = "Gothic 4 - Main Theme.ogg"
+	song_name = "Gothic 4 - Main Theme"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+}
+song = {
+	name = "Gothic 4 - Arrival in Feshyr.ogg"
+	song_name = "Gothic 4 - Arrival in Feshyr"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+}
+song = {
+	name = "Gothic 4 - The Hills Of Stewark.ogg"
+	song_name = "Gothic 4 - The Hills Of Stewark"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+}
+song = {
+	name = "Gothic 4 - A Storm Is Coming.ogg"
+	song_name = "Gothic 4 - A Storm Is Coming"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}
+}
+song = {
+	name = "Gothic 4 - Stewark City Theme.ogg"
+	song_name = "Gothic 4 - Stewark City Theme"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+}
+song = {
+	name = "Gothic 4 - A Hero Returns.ogg"
+	song_name = "Gothic 4 - A Hero Returns"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}
+}
+song = {
+	name = "Gothic 4 - Credit Song.ogg"
+	song_name = "Gothic 4 - Credit Song"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}
+}

@@ -1,0 +1,61 @@
+de_jure_laws = {
+
+	we_r_legion_laws_0 = {
+		show_as_title = yes
+		group = we_r_legion_laws
+		default = yes
+
+		allow = {
+			has_law = we_r_legion_laws_1
+		}
+		potential = {
+			real_tier = EMPEROR
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = we_r_legion_laws_1
+			}
+		}
+	}
+
+	we_r_legion_laws_1 = {
+		show_as_title = yes
+		group = we_r_legion_laws
+
+		allow = {
+			has_law = we_r_legion_laws_0
+		}
+		potential = {
+			real_tier = EMPEROR
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = we_r_legion_laws_0
+			}
+		}
+		castle_vassal_min_levy = 0
+		castle_vassal_max_levy = -1.0
+		city_vassal_min_levy = 0
+		city_vassal_max_levy = -1.0
+		temple_vassal_min_levy = 0
+		temple_vassal_max_levy = -1.0
+	}
+}

@@ -1,0 +1,102 @@
+*1. African Religions Overhaul
+*2. Ancient Religions Reborn and Expanded
+3. Lux Invicta
+4. WTWSMS
+5. HIP More Cultures and Religions 
+6. Dido's Legacy 
+7. Diadochi Kings 
+8. Winter King 
+9. Tianxia
+10. Sons of Vinland
+11. Pharoah's and Consuls
+12. Umbra Sapiens
+
+Testing:
+
+Zunbils still have 2 caste types. Check?
+Need to test joining the coven as a hellenic male or gay female
+
+Fixes:
+
+Make Egyptian pagan and African religions have African shield in character view.
+
+Rise to Power:
+
+Will I need to add anything to nomad bows? Crowns: crown or head slot? Also Chinese silk robes.
+rtp_is_theocracy = {, rtp_is_republic = {, rtp_is_holy_order = {, & rtp_is_feudal = {
+rtp_laws religious customs clergy obligations
+
+Fix 'gender_succ = agnatic' This might be useful:
+
+OR = {
+	is_female = no
+	gender_equality_trigger = yes
+}
+
+Does rtp_no_loans_st include emf loans?
+
+Do I need have_gender_laws = yes etc. from TiaraMod in: !!!rtp_landless_governments, !!rtp_baron_governments, !rtp_governments, chivalry_governments etc.
+Make it so with game rule full equality of women they can take consorts if men can
+
+Societies & Resources Edition:
+
+Societies: Guilds, Sufis.
+Rowan's mod thingy (I forgot the name, Buildings and Resources?)
+"Medieval Trade Routes (HIP map)"
+
+Artifacts & Wonders Edition:
+
+"Caesar's Books"
+"Caesar's Wonders"
+"Cities of Wonders"
+"More Buildable Wonders"
+"More Pagan Artifacts"
+"MTA - New Artifacts"
+"WOWGAG's More Artifacts & Bloodlines" [Contains "Historical and Fantastical Artifacts" & "Mythic Artifacts"]
+"More Artifacts Submod - BLG Compatibility Mod"
+"An Antique Land"
+
+Nicknames & Renaming Edition
+
+"More Historical Nicknames"
+"Nicknames+++"
+"Rename Anyone"
+"Some Interesting NicknamesEN"
+
+Lux Invicta
+
+More Historical Bloodlines Edition
+
+"Bunch of Bloodlines"
+"Extra Bloodlines 1.4"
+"HIP - More Bloodlines"
+"Legendary Bloodlines"
+"More Bloodlines"
+"More Historical Bloodlines"
+"Muslim Bloodlines"
+
+LF - Custom Religion
+
+Landless Courts and Kings?
+Better Gender Law?
+
+Reformation Reform
+Monastic Feudal for Pagan Temporal Heads
+
+Usurpation Fix
+The Rise of the New Churches
+Easy Heresy
+
+Try to find Assassins societies.
+
+WTWSMS
+
+Novum Imperium
+
+	New trigger: novum_imperium_is_pagan, updated for African
+	emf_unreformed_pagan updated to include novum_imperium_is_pagan unless is_organized_religion_trigger
+	
+CleanSlate
+
+	Don't want to do buildings or cb_types CleanSlate style
+	At cb_types

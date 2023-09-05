@@ -1,0 +1,169 @@
+decisions = {
+
+	legion_broken = {
+		potential = {
+			is_ruler = yes
+			any_demesne_title = {
+				real_tier = EMPEROR
+				has_law = we_r_legion_laws_1
+			}
+			NAND = {
+				has_earmarked_regiments = legion_1
+				has_earmarked_regiments = legion_2
+				has_earmarked_regiments = legion_3
+				has_earmarked_regiments = legion_4
+				has_earmarked_regiments = legion_5
+			}
+		}
+		allow = {
+			is_ruler = yes
+			any_demesne_title = {
+				real_tier = EMPEROR
+				has_law = we_r_legion_laws_1
+			}
+			NAND = {
+				has_earmarked_regiments = legion_1
+				has_earmarked_regiments = legion_2
+				has_earmarked_regiments = legion_3
+				has_earmarked_regiments = legion_4
+				has_earmarked_regiments = legion_5
+			}
+		}
+		effect = {
+			IF = {
+				limit = {
+					NOT = { has_earmarked_regiments = legion_1 }
+				}
+				capital_scope = {
+					holder_scope = {
+						spawn_unit = {
+							owner = THIS
+							province = PREV
+							leader = none
+							troops = {
+								light_infantry = { 1 600 }
+								heavy_infantry = { 1 4800 }
+								light_cavalry = { 1 100 }
+								knights = { 1 50 }
+							}
+							attrition = 1.0
+							reinforcing = yes
+							reinforce_rate_multiplier = 0.3
+							maintenance_multiplier = 1.0
+							earmark = legion_1
+							merge = yes
+						}
+					}
+				}
+			}
+			IF = {
+				limit = {
+					NOT = { has_earmarked_regiments = legion_2 }
+				}
+				capital_scope = {
+					holder_scope = {
+						spawn_unit = {
+							owner = THIS
+							province = PREV
+							leader = none
+							troops = {
+								light_infantry = { 1 600 }
+								heavy_infantry = { 1 4800 }
+								light_cavalry = { 1 100 }
+								knights = { 1 50 }
+							}
+							attrition = 1.0
+							reinforcing = yes
+							reinforce_rate_multiplier = 0.3
+							maintenance_multiplier = 1.0
+							earmark = legion_2
+							merge = yes
+						}
+					}
+				}
+			}
+			IF = {
+				limit = {
+					NOT = { has_earmarked_regiments = legion_3 }
+				}
+				capital_scope = {
+					holder_scope = {
+						spawn_unit = {
+							owner = THIS
+							province = PREV
+							leader = none
+							troops = {
+								light_infantry = { 1 600 }
+								heavy_infantry = { 1 4800 }
+								light_cavalry = { 1 100 }
+								knights = { 1 50 }
+							}
+							attrition = 1.0
+							reinforcing = yes
+							reinforce_rate_multiplier = 0.3
+							maintenance_multiplier = 1.0
+							earmark = legion_3
+							merge = yes
+						}
+					}
+				}
+			}
+			IF = {
+				limit = {
+					NOT = { has_earmarked_regiments = legion_4 }
+				}
+				capital_scope = {
+					holder_scope = {
+						spawn_unit = {
+							owner = THIS
+							province = PREV
+							leader = none
+							troops = {
+								light_infantry = { 1 600 }
+								heavy_infantry = { 1 4800 }
+								light_cavalry = { 1 100 }
+								knights = { 1 50 }
+							}
+							attrition = 1.0
+							reinforcing = yes
+							reinforce_rate_multiplier = 0.3
+							maintenance_multiplier = 1.0
+							earmark = legion_4
+							merge = yes
+						}
+					}
+				}
+			}
+			IF = {
+				limit = {
+					NOT = { has_earmarked_regiments = legion_5 }
+				}
+				capital_scope = {
+					holder_scope = {
+						spawn_unit = {
+							owner = THIS
+							province = PREV
+							leader = none
+							troops = {
+								light_infantry = { 1 600 }
+								heavy_infantry = { 1 4800 }
+								light_cavalry = { 1 100 }
+								knights = { 1 50 }
+							}
+							attrition = 1.0
+							reinforcing = yes
+							reinforce_rate_multiplier = 0.3
+							maintenance_multiplier = 1.0
+							earmark = legion_5
+							merge = yes
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+}

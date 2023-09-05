@@ -1,0 +1,427 @@
+title_decisions = {
+	kuru_ec_abolish_title = {
+		ai = no
+		filter = owned
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+			NOT = {owns = ROOT}
+		}
+		potential = {
+			is_titular = no
+			temporary = no
+			higher_tier_than = COUNT
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			owner = {
+				destroy_landed_title = ROOT
+				# add_pressed_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_mc_set_war_target = {
+		ai = no
+		filter = owned
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+
+			has_character_flag = mind_control_enabled
+			#has_global_flag = kuru_ec_flag_divine_will
+		}
+		potential = {
+			is_titular = no
+			temporary = no
+			higher_tier_than = BARON
+			NOT = {
+				has_title_flag = kuru_ec_flag_mc_war_target
+			}
+		}
+		allow = {
+			has_holder = yes
+		}
+		effect = {
+			any_title = {
+				clr_title_flag = kuru_ec_flag_mc_war_target
+			}
+			set_title_flag = kuru_ec_flag_mc_war_target
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_mc_clear_war_target = {
+		ai = no
+		filter = owned
+
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			has_title_flag = kuru_ec_flag_mc_war_target
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			clr_title_flag = kuru_ec_flag_mc_war_target
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_mc_add_claim = {
+		ai = no
+		filter = owned
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+
+			has_character_flag = mind_control_enabled
+			#has_global_flag = kuru_ec_flag_divine_will
+		}
+		potential = {
+			is_titular = no
+			temporary = no
+			any_character = {
+				has_character_flag = mind_controlled
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_character = {
+				limit = {
+					has_character_flag = mind_controlled
+				}
+				ROOT = {
+					add_claim = PREV
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_mc_take_title = {
+		ai = no
+		filter = owned
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+
+			has_character_flag = mind_control_enabled
+			#has_global_flag = kuru_ec_flag_divine_will
+		}
+		potential = {
+			is_titular = no
+			temporary = no
+			any_character = {
+				has_character_flag = mind_controlled
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_character = {
+				limit = {
+					has_character_flag = mind_controlled
+				}
+				ROOT = {
+					gain_title = PREV
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_mc_war_claim_attacker_wins = {
+		ai = no
+		filter = owned
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+
+			has_character_flag = mind_control_enabled
+			#has_global_flag = kuru_ec_flag_divine_will
+		}
+		potential = {
+			is_titular = no
+			temporary = no
+			any_war = {
+				OR = {
+					using_cb = religious
+					using_cb = claim
+					using_cb = other_claim
+					using_cb = claim_on_liege
+					using_cb = claim_on_liege_plot
+					using_cb = claim_on_vassal_plot
+					using_cb = other_claim_on_liege
+					# using_cb = claim_all
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			FROM = {
+				any_war = {
+					limit = {
+						war_title = ROOT
+						OR = {
+							using_cb = claim
+							using_cb = religious
+							using_cb = other_claim
+							using_cb = claim_on_liege
+							using_cb = claim_on_liege_plot
+							using_cb = claim_on_vassal_plot
+							using_cb = other_claim_on_liege
+							# using_cb = claim_all
+						}
+					}
+					attacker = {
+						save_event_target_as = target_attacker
+					}
+					defender = {
+						save_event_target_as = target_defender
+					}
+
+					end_war = success
+
+					ROOT = {
+						location = {
+							any_province_holding = {
+								owner = {
+									save_event_target_as = target_owner
+								}
+								if = {
+									limit = {
+										event_target:target_owner = {
+											NOT = {
+												religion = event_target:target_attacker
+											}
+										}
+									}
+									event_target:target_attacker = {
+										gain_title = PREV
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_mc_war_claim_defender_wins = {
+		ai = no
+		filter = owned
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+
+			has_character_flag = mind_control_enabled
+			#has_global_flag = kuru_ec_flag_divine_will
+		}
+		potential = {
+			is_titular = no
+			temporary = no
+			any_war = {
+				OR = {
+					using_cb = religious
+					using_cb = claim
+					using_cb = other_claim
+					using_cb = claim_on_liege
+					using_cb = claim_on_liege_plot
+					using_cb = claim_on_vassal_plot
+					using_cb = other_claim_on_liege
+					# using_cb = claim_all
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			FROM = {
+				any_war = {
+					limit = {
+						war_title = ROOT
+						OR = {
+							using_cb = religious
+							using_cb = claim
+							using_cb = other_claim
+							using_cb = claim_on_liege
+							using_cb = claim_on_liege_plot
+							using_cb = claim_on_vassal_plot
+							using_cb = other_claim_on_liege
+							# using_cb = claim_all
+						}
+					}
+					end_war = reverse_demand
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_mc_war_claim_whitepeace = {
+		ai = no
+		filter = owned
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+
+			has_character_flag = mind_control_enabled
+			#has_global_flag = kuru_ec_flag_divine_will
+		}
+		potential = {
+			is_titular = no
+			temporary = no
+			any_war = {
+				OR = {
+					using_cb = religious
+					using_cb = claim
+					using_cb = other_claim
+					using_cb = claim_on_liege
+					using_cb = claim_on_liege_plot
+					using_cb = claim_on_vassal_plot
+					using_cb = other_claim_on_liege
+					# using_cb = claim_all
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			FROM = {
+				any_war = {
+					limit = {
+						war_title = ROOT
+						OR = {
+							using_cb = religious
+							using_cb = claim
+							using_cb = other_claim
+							using_cb = claim_on_liege
+							using_cb = claim_on_liege_plot
+							using_cb = claim_on_vassal_plot
+							using_cb = other_claim_on_liege
+							# using_cb = claim_all
+						}
+					}
+					end_war = whitepeace
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_mc_war_claim_invalid = {
+		ai = no
+		filter = owned
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+
+			has_character_flag = mind_control_enabled
+			#has_global_flag = kuru_ec_flag_divine_will
+		}
+		potential = {
+			is_titular = no
+			temporary = no
+			any_war = {
+				OR = {
+					using_cb = religious
+					using_cb = claim
+					using_cb = other_claim
+					using_cb = claim_on_liege
+					using_cb = claim_on_liege_plot
+					using_cb = claim_on_vassal_plot
+					using_cb = other_claim_on_liege
+					# using_cb = claim_all
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			FROM = {
+				any_war = {
+					limit = {
+						war_title = ROOT
+						OR = {
+							using_cb = religious
+							using_cb = claim
+							using_cb = other_claim
+							using_cb = claim_on_liege
+							using_cb = claim_on_liege_plot
+							using_cb = claim_on_vassal_plot
+							using_cb = other_claim_on_liege
+							# using_cb = claim_all
+						}
+					}
+					end_war = invalid
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_mc_destabilize_province = {
+		ai = no
+		filter = owned
+
+		from_potential = {
+			ai = no
+			has_character_flag = mind_control_enabled
+		}
+		potential = {
+			is_titular = no
+			temporary = no
+			tier = COUNT
+			NOT = {
+				has_province_modifier = kuru_ec_unstable_province
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			location = {
+				add_province_modifier = {
+					name = kuru_ec_unstable_province
+					days = 30
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

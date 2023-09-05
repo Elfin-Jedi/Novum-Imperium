@@ -1,0 +1,402 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+### TOOLTIPS ###
+mta_IMPERIAL_DECAY_MINUS_5;§YImperial Decay§! will be §Greduced§! by 5\n;;;;;;;;;;;;;x
+mta_HAS_AT_LEAST_1_DECAY;The §Y[Root.PrimaryTitle.GetFullName]§! has at least §R1§! §YImperial Decay§!\n;;;;;;;;;;;;;x
+mta_debug_more_options_TT;View additional options;;;;;;;;;;;;;x
+
+### DECISIONS ###
+mta_enable_debug_cheats;§RDEBUG:§! Show Debug Cheats;;;;;;;;;;;;;x
+mta_enable_debug_cheats_desc;Toggles debug cheat decisions on.;;;;;;;;;;;;;x
+mta_enable_debug_cheats_all_MP;§RDEBUG§! §BMP:§! Show Player Cheats;;;;;;;;;;;;;x
+mta_enable_debug_cheats_all_MP_desc;Toggles debug cheat decisions on for all players.;;;;;;;;;;;;;x
+mta_disable_debug_cheats;§RDEBUG:§! Hide Debug Cheats;;;;;;;;;;;;;x
+mta_disable_debug_cheats_desc;Toggles debug cheat decisions off.;;;;;;;;;;;;;x
+mta_disable_debug_cheats_all_MP;§RDEBUG§! §BMP:§! Hide Player Cheats;;;;;;;;;;;;;x
+mta_disable_debug_cheats_all_MP_desc;Toggles debug cheat decisions off for all players.;;;;;;;;;;;;;x
+mta_set_player_character;§RDEBUG:§! Set Player Character;;;;;;;;;;;;;x
+mta_set_player_character_desc;Set §Y[Root.GetTitledFirstName]§! as your currently controlled character.;;;;;;;;;;;;;x
+mta_create_cadet_dynasty;§RDEBUG:§! Create Cadet Dynasty;;;;;;;;;;;;;x
+mta_create_cadet_dynasty_desc;§Y[Root.GetTitledFirstName]§! will found a new dynasty, joined by any of [Root.GetHerHis] legitimate descendants.;;;;;;;;;;;;;x
+mta_create_artifact;§RDEBUG:§! Create Artifact;;;;;;;;;;;;;x
+mta_create_artifact_desc;§Y[Root.GetTitledFirstName]§! will instantly gain a smithed artifact of a type to be chosen after taking this decision.;;;;;;;;;;;;;x
+mta_create_bloodline;§RDEBUG:§! Create Bloodline;;;;;;;;;;;;;x
+mta_create_bloodline_desc;§Y[Root.GetTitledFirstName]§! will become the founder of a bloodline to be chosen after taking this decision.;;;;;;;;;;;;;x
+mta_lower_imperial_decay;§RDEBUG:§! Lower Imperial Decay;;;;;;;;;;;;;x
+mta_lower_imperial_decay_desc;Decrease the §YImperial Decay§! of the §Y[Root.PrimaryTitle.GetFullName]§!.;;;;;;;;;;;;;x
+mta_debug_technology;§RDEBUG:§! Technology Points;;;;;;;;;;;;;x;;;;;;;;;;;;;x
+mta_debug_technology_desc;§Y[Root.GetTitledFirstName]§! will receive 300 technology points of a type to be chosen after taking this decision.;;;;;;;;;;;;;x
+mta_debug_loyal_vassals;§RDEBUG:§! Vassal Loyalty;;;;;;;;;;;;;x
+mta_debug_loyal_vassals_desc;The lords of the §Y[Root.PrimaryTitle.GetFullName]§! have their opinion towards §Y[Root.GetTitledFirstName]§! increased by §G+25§! §Y(A Most Loyal Vassal)§! for §Y10§! years.;;;;;;;;;;;;;x
+mta_debug_loyal_vassals_obedience;§RDEBUG:§! Vassal Obedience;;;;;;;;;;;;;x
+mta_debug_loyal_vassals_obedience_desc;The lords of the §Y[Root.PrimaryTitle.GetFullName]§! have their opinion towards §Y[Root.GetTitledFirstName]§! increased by §G+50§! §Y(Loyal Servant)§! for §Y100§! years. Their AI will accept all diplomatic interactions from §Y[Root.GetTitledFirstName]§!.;;;;;;;;;;;;;x
+mta_debug_impregnate;§RDEBUG:§! Impregnate;;;;;;;;;;;;;x
+mta_debug_impregnate_desc;Have a child with §Y[Root.GetTitledFirstName]§!.;;;;;;;;;;;;;x
+mta_debug_impregnate_cuckoo;§RDEBUG:§! Impregnate Cuckoo;;;;;;;;;;;;;x
+mta_debug_impregnate_cuckoo_desc;Have a child in secret with §Y[Root.GetTitledFirstName]§!.;;;;;;;;;;;;;x
+mta_debug_impregnate_spouse;§RDEBUG:§! Impregnate Spouse;;;;;;;;;;;;;x
+mta_debug_impregnate_spouse_desc;§Y[Root.GetTitledFirstName]§! will have a child with [Root.GetHerHis] [Root.GetHusbandWifeOpp] §Y[Root.Spouse.GetTitledFirstName]§!.;;;;;;;;;;;;;x
+mta_debug_like_me;§RDEBUG:§! Like Me;;;;;;;;;;;;;x
+mta_debug_like_me_desc;Increase §Y[Root.GetTitledFirstName]§!'s opinion of me by §G+25§! §Y(Wildly Impressed)§! for §Y10§! years.;;;;;;;;;;;;;x
+mta_debug_like_me_obedience;§RDEBUG:§! Like and Obey Me;;;;;;;;;;;;;x
+mta_debug_like_me_obedience_desc;Increase §Y[Root.GetTitledFirstName]§!'s opinion of me by §G+50§! §Y(Loyal Servant)§! for §Y100§! years. The AI will accept all diplomatic interactions from me.;;;;;;;;;;;;;x
+mta_debug_mass_imprison;§RDEBUG:§! Mass Imprison;;;;;;;;;;;;;x
+mta_debug_mass_imprison_desc;Imprison §Y[Root.GetTitledFirstName]§! and anyone in the §Y[Root.PrimaryTitle.GetFullName]§!.;;;;;;;;;;;;;x
+mta_debug_imprison;§RDEBUG:§! Imprison;;;;;;;;;;;;;x
+mta_debug_imprison_desc;Imprison §Y[Root.GetTitledFirstName]§!.;;;;;;;;;;;;;x
+mta_debug_raise_moral_authority;§RDEBUG:§! Raise [Root.Location.Religion.GetName] Authority;;;;;;;;;;;;;x
+mta_debug_raise_moral_authority_desc;Raise the Moral Authority of the §Y[Root.Location.Religion.GetName]§! faith by §G+10§! §Y([Root.Location.Religion.GetName] Resurgence)§! for §Y20§! years.;;;;;;;;;;;;;x
+mta_debug_lower_moral_authority;§RDEBUG:§! Lower [Root.Location.Religion.GetName] Authority;;;;;;;;;;;;;x
+mta_debug_lower_moral_authority_desc;Lower the Moral Authority of the §Y[Root.Location.Religion.GetName]§! faith by §R-10§! §Y([Root.Location.Religion.GetName] Decline)§! for §Y20§! years.;;;;;;;;;;;;;x
+mta_debug_convert_county_to_from_culture;§RDEBUG:§! Convert to [From.Culture.GetName];;;;;;;;;;;;;x
+mta_debug_convert_county_to_from_culture_desc;Convert §Y[Root.GetName]§! to §Y[From.Culture.GetName]§!.;;;;;;;;;;;;;x
+mta_debug_convert_county_to_from_religion;§RDEBUG:§! Convert to [From.Religion.GetName];;;;;;;;;;;;;x
+mta_debug_convert_county_to_from_religion_desc;Convert §Y[Root.GetName]§! to §Y[From.Religion.GetName]§!.;;;;;;;;;;;;;x
+mta_debug_convert_to_from_culture;§RDEBUG:§! Convert to [From.Culture.GetName];;;;;;;;;;;;;x
+mta_debug_convert_to_from_culture_desc;Convert §Y[Root.GetTitledFirstName]§! to §Y[From.Culture.GetName]§!.;;;;;;;;;;;;;x
+mta_debug_convert_to_from_religion;§RDEBUG:§! Convert to [From.Religion.GetName];;;;;;;;;;;;;x
+mta_debug_convert_to_from_religion_desc;Convert §Y[Root.GetTitledFirstName]§! to §Y[From.Religion.GetName]§!.;;;;;;;;;;;;;x
+mta_debug_secretly_convert_to_from_religion;§RDEBUG:§! Make Secret [From.SecretReligion.GetName];;;;;;;;;;;;;x
+mta_debug_secretly_convert_to_from_religion_desc;Secretly convert §Y[Root.GetTitledFirstName]§! to §Y[From.SecretReligion.GetName]§!.;;;;;;;;;;;;;x
+mta_debug_clear_secret_religion;§RDEBUG:§! Clear Secret [Root.SecretReligion.GetName];;;;;;;;;;;;;x
+mta_debug_clear_secret_religion_desc;Clear §Y[Root.GetTitledFirstName]§!'s secret §Y[Root.SecretReligion.GetName]§! faith.;;;;;;;;;;;;;x
+mta_debug_take_artifact;§RDEBUG:§! Take Artifact;;;;;;;;;;;;;x
+mta_debug_take_artifact_desc;Take an artifact from §Y[Root.GetTitledFirstName]§! and transfer it to your treasury.;;;;;;;;;;;;;x
+mta_debug_destroy_artifact;§RDEBUG:§! Destroy Artifact;;;;;;;;;;;;;x
+mta_debug_destroy_artifact_desc;Permanently destroy an artifact belonging to §Y[Root.GetTitledFirstName]§!.;;;;;;;;;;;;;x
+mta_debug_take_landed_titles;§RDEBUG:§! Take Landed Titles;;;;;;;;;;;;;x
+mta_debug_take_landed_titles_desc;§Y[Root.GetTitledFirstName]§! will abdicate all of their landed titles to you.;;;;;;;;;;;;;x
+mta_debug_take_title;§RDEBUG:§! Take Title;;;;;;;;;;;;;x
+mta_debug_take_title_desc;Take the §Y[Root.GetFullName]§! from §Y[Root.Holder.GetTitledFirstName]§!.;;;;;;;;;;;;;x
+mta_debug_add_claim_strong;§RDEBUG:§! Add Strong Claim;;;;;;;;;;;;;x
+mta_debug_add_claim_strong_desc;Add a heritable §YStrong Claim§! on the §Y[Root.GetFullName]§! to §Y[From.GetBestName]§!.;;;;;;;;;;;;;x
+mta_debug_add_claim_weak_pressed;§RDEBUG:§! Add Weak Claim;;;;;;;;;;;;;x
+mta_debug_add_claim_weak_pressed_desc;Add a heritable §YWeak Claim§! on the §Y[Root.GetFullName]§! to §Y[From.GetBestName]§!.;;;;;;;;;;;;;x
+mta_debug_independence;§RDEBUG:§! Independence;;;;;;;;;;;;;x
+mta_debug_independence_desc;Give §Y[Root.GetTitledFirstName]§! independence.;;;;;;;;;;;;;x
+mta_debug_vassalise;§RDEBUG:§! Vassalise;;;;;;;;;;;;;x
+mta_debug_vassalise_desc;Vassalise §Y[Root.GetTitledFirstName]§!.;;;;;;;;;;;;;x
+mta_debug_tributary;§RDEBUG:§! Make Tributary;;;;;;;;;;;;;x
+mta_debug_tributary_desc;Make §Y[Root.GetBestName]§! a tributary of §Y[From.GetBestName]§!.;;;;;;;;;;;;;x
+mta_debug_shatter_realm;§RDEBUG:§! Shatter Realm;;;;;;;;;;;;;x
+mta_debug_shatter_realm_desc;Destroy any landed titles above §YDuke§! tier held by §Y[Root.GetTitledFirstName]§!.;;;;;;;;;;;;;x
+mta_debug_health;§RDEBUG:§! Health Boost;;;;;;;;;;;;;x
+mta_debug_health_desc;Temporarily boost §Y[Root.GetTitledFirstName]§!'s health.;;;;;;;;;;;;;x
+mta_debug_bad_health;§RDEBUG:§! Health Penalty;;;;;;;;;;;;;x
+mta_debug_bad_health_desc;Temporarily decrease §Y[Root.GetTitledFirstName]§!'s health.;;;;;;;;;;;;;x
+mta_rename_character;§RDEBUG:§! Rename;;;;;;;;;;;;;x
+mta_rename_character_desc;Rename §Y[Root.GetFirstName]§!.;;;;;;;;;;;;;x
+mta_debug_add_holding_slot;§RDEBUG:§! Add Holding Slot;;;;;;;;;;;;;x
+mta_debug_add_holding_slot_desc;Add §Y1§! holding slot to §Y[Root.Location.GetName]§!.;;;;;;;;;;;;;x
+mta_debug_remove_holding_slot;§RDEBUG:§! Remove Holding Slot;;;;;;;;;;;;;x
+mta_debug_remove_holding_slot_desc;Remove §Y1§! holding slot from §Y[Root.Location.GetName]§!.;;;;;;;;;;;;;x
+mta_debug_replenish_levies;§RDEBUG:§! Replenish Levies;;;;;;;;;;;;;x
+mta_debug_replenish_levies_desc;Restore the Levy in §Y[This.GetName]§!.;;;;;;;;;;;;;x
+mta_debug_destroy_settlement;§RDEBUG:§! Destroy Settlement;;;;;;;;;;;;;x
+mta_debug_destroy_settlement_desc;Destroy §Y[This.GetName]§!.;;;;;;;;;;;;;x
+
+### EVENTS ###
+# Create Bloodline
+mta_debug_2_desc;What type of bloodline will [debug_bloodline_founder.GetTitledFirstName] become the founder of?;;;;;;;;;;;;;x
+mta_debug_2_a;Event Chain;;;;;;;;;;;;;x
+mta_debug_2_b;Murder, Conquest;;;;;;;;;;;;;x
+mta_debug_2_c;Peace, Construction, Hybrid;;;;;;;;;;;;;x
+mta_debug_2_d;Cancel;;;;;;;;;;;;;x
+
+# Event Chain
+mta_debug_3_desc;Narrow it down further...;;;;;;;;;;;;;x
+mta_debug_3_a;Benevolent, Family;;;;;;;;;;;;;x
+mta_debug_3_b;Theologian, Philosopher;;;;;;;;;;;;;x
+mta_debug_3_c;Zealot, Ruthless;;;;;;;;;;;;;x
+mta_debug_3_d;Back;;;;;;;;;;;;;x
+# Benevolent / Family
+mta_debug_4_desc;Which?;;;;;;;;;;;;;x
+mta_debug_4_a;Benevolent;;;;;;;;;;;;;x
+mta_debug_4_b;Family;;;;;;;;;;;;;x
+mta_debug_4_d;Back;;;;;;;;;;;;;x
+# Theologian / Philosopher
+mta_debug_5_desc;Which?;;;;;;;;;;;;;x
+mta_debug_5_a;Theologian;;;;;;;;;;;;;x
+mta_debug_5_b;Philosopher;;;;;;;;;;;;;x
+mta_debug_5_d;Back;;;;;;;;;;;;;x
+# Zealot / Ruthless
+mta_debug_6_desc;Which?;;;;;;;;;;;;;x
+mta_debug_6_a;Zealot;;;;;;;;;;;;;x
+mta_debug_6_b;Ruthless;;;;;;;;;;;;;x
+mta_debug_6_d;Back;;;;;;;;;;;;;x
+
+# Murder / Conquest
+mta_debug_7_desc;Narrow it down further...;;;;;;;;;;;;;x
+mta_debug_7_a;Macabre Banquet, Silent Killer, The Butcher;;;;;;;;;;;;;x
+mta_debug_7_b;Happy Child, The Dragon-[debug_bloodline_founder.GetTitle], Conqueror;;;;;;;;;;;;;x
+mta_debug_7_c;Warrior-Philosopher, L'il Warrior Philosopher, The Perfect Knight;;;;;;;;;;;;;x
+mta_debug_7_d;Back;;;;;;;;;;;;;x
+# Macabre Banquet / Silent Killer / The Butcher
+mta_debug_8_desc;Which?;;;;;;;;;;;;;x
+mta_debug_8_a;Macabre Banquet;;;;;;;;;;;;;x
+mta_debug_8_b;Silent Killer;;;;;;;;;;;;;x
+mta_debug_8_c;The Butcher;;;;;;;;;;;;;x
+mta_debug_8_d;Back;;;;;;;;;;;;;x
+# Happy Child / The Dragon-King / Conqueror
+mta_debug_9_desc;Which?;;;;;;;;;;;;;x
+mta_debug_9_a;Happy Child;;;;;;;;;;;;;x
+mta_debug_9_b;The Dragon-[debug_bloodline_founder.GetTitle];;;;;;;;;;;;;x
+mta_debug_9_c;Conqueror;;;;;;;;;;;;;x
+mta_debug_9_d;Back;;;;;;;;;;;;;x
+# Warrior-Philosopher / L'il Warrior Philosopher / The Perfect Knight
+mta_debug_10_desc;Which?;;;;;;;;;;;;;x
+mta_debug_10_a;Warrior-Philosopher;;;;;;;;;;;;;x
+mta_debug_10_b;L'il Warrior Philosopher;;;;;;;;;;;;;x
+mta_debug_10_c;The Perfect Knight;;;;;;;;;;;;;x
+mta_debug_10_d;Back;;;;;;;;;;;;;x
+
+# Peace / Construction / Hybrid
+mta_debug_11_desc;Narrow it down further...;;;;;;;;;;;;;x
+mta_debug_11_a;Protector, Benefactor, Blessed Child;;;;;;;;;;;;;x
+mta_debug_11_b;Architect, Castellan, Carpenter;;;;;;;;;;;;;x
+mta_debug_11_c;Hybrid;;;;;;;;;;;;;x
+mta_debug_11_d;Back;;;;;;;;;;;;;x
+# Protector / Benefactor / Blessed Child
+mta_debug_12_desc;Which?;;;;;;;;;;;;;x
+mta_debug_12_a;Protector;;;;;;;;;;;;;x
+mta_debug_12_b;Benefactor;;;;;;;;;;;;;x
+mta_debug_12_c;Blessed Child;;;;;;;;;;;;;x
+mta_debug_12_d;Back;;;;;;;;;;;;;x
+# Architect / Castellan / Carpenter
+mta_debug_13_desc;Which?;;;;;;;;;;;;;x
+mta_debug_13_a;Architect;;;;;;;;;;;;;x
+mta_debug_13_b;Castellan;;;;;;;;;;;;;x
+mta_debug_13_c;Carpenter;;;;;;;;;;;;;x
+mta_debug_13_d;Back;;;;;;;;;;;;;x
+
+# Hybrid
+mta_debug_14_desc;Narrow it down further...;;;;;;;;;;;;;x
+mta_debug_14_a;Vile Blood, Murder Peace, Murder Builder;;;;;;;;;;;;;x
+mta_debug_14_b;Peace Architect, Peace Castellan, Peace Monumental;;;;;;;;;;;;;x
+mta_debug_14_c;Hybrid Builder;;;;;;;;;;;;;x
+mta_debug_14_d;Back;;;;;;;;;;;;;x
+# Vile Blood / Murder Peace / Murder Builder
+mta_debug_15_desc;Which?;;;;;;;;;;;;;x
+mta_debug_15_a;Vile Blood;;;;;;;;;;;;;x
+mta_debug_15_b;Murder Peace;;;;;;;;;;;;;x
+mta_debug_15_c;Murder Builder;;;;;;;;;;;;;x
+mta_debug_15_d;Back;;;;;;;;;;;;;x
+# Peace Architect / Peace Castellan / Peace Monumental
+mta_debug_16_desc;Which?;;;;;;;;;;;;;x
+mta_debug_16_a;Peace Architect;;;;;;;;;;;;;x
+mta_debug_16_b;Peace Castellan;;;;;;;;;;;;;x
+mta_debug_16_c;Peace Monumental;;;;;;;;;;;;;x
+mta_debug_16_d;Back;;;;;;;;;;;;;x
+
+# Technology Points
+mta_debug_20_desc;What type of technology?;;;;;;;;;;;;;x
+mta_debug_20_a;All;;;;;;;;;;;;;x
+mta_debug_20_b;Military;;;;;;;;;;;;;x
+mta_debug_20_c;Economic;;;;;;;;;;;;;x
+mta_debug_20_d;Cultural;;;;;;;;;;;;;x
+
+# Create Artifact
+mta_debug_29_desc;What type of artifact?;;;;;;;;;;;;;x
+mta_debug_29_a;Crown Jewels;;;;;;;;;;;;;x
+mta_debug_29_b;Weapon;;;;;;;;;;;;;x
+mta_debug_29_c;Armour;;;;;;;;;;;;;x
+mta_debug_29_d;Cancel;;;;;;;;;;;;;x
+
+# Crown Jewels, Page 1
+mta_debug_30_desc;What religion type of crown jewels?;;;;;;;;;;;;;x
+mta_debug_30_a;Christian/Jewish;;;;;;;;;;;;;x
+mta_debug_30_b;Muslim/African;;;;;;;;;;;;;x
+mta_debug_30_c;Indian;;;;;;;;;;;;;x
+mta_debug_30_d;More;;;;;;;;;;;;;x
+
+# Crown Jewels, Page 2
+mta_debug_31_desc;What religion type of crown jewels?;;;;;;;;;;;;;x
+mta_debug_31_a;Zoroastrian/Zun;;;;;;;;;;;;;x
+mta_debug_31_b;Norse;;;;;;;;;;;;;x
+mta_debug_31_c;Pagan;;;;;;;;;;;;;x
+mta_debug_31_d;Back;;;;;;;;;;;;;x
+
+# Weapons, Page 1
+mta_debug_32_desc;What type of weapon?;;;;;;;;;;;;;x
+mta_debug_32_a;Swords;;;;;;;;;;;;;x
+mta_debug_32_b;Scimitars;;;;;;;;;;;;;x
+mta_debug_32_c;Lances;;;;;;;;;;;;;x
+mta_debug_32_d;More;;;;;;;;;;;;;x
+
+# Weapons, Page 2
+mta_debug_33_desc;What type of weapon?;;;;;;;;;;;;;x
+mta_debug_33_a;Axes;;;;;;;;;;;;;x
+mta_debug_33_b;Maces;;;;;;;;;;;;;x
+mta_debug_33_c;Bows;;;;;;;;;;;;;x
+mta_debug_33_d;Back;;;;;;;;;;;;;x
+
+# Armour
+mta_debug_34_desc;What tier of armour?;;;;;;;;;;;;;x
+mta_debug_34_a;Tier 1: Chain Mail;;;;;;;;;;;;;x
+mta_debug_34_b;Tier 2: Splint Mail;;;;;;;;;;;;;x
+mta_debug_34_c;Tier 3 ...;;;;;;;;;;;;;x
+mta_debug_34_d;Tier 4 ...;;;;;;;;;;;;;x
+
+# Swords
+mta_debug_35_desc;What tier of sword?;;;;;;;;;;;;;x
+mta_debug_35_a;Tier 1: Arming Sword;;;;;;;;;;;;;x
+mta_debug_35_b;Tier 2: Longsword;;;;;;;;;;;;;x
+mta_debug_35_c;Tier 3 ...;;;;;;;;;;;;;x
+mta_debug_35_d;Tier 4 ...;;;;;;;;;;;;;x
+
+# Scimitars
+mta_debug_36_desc;What tier of scimitar?;;;;;;;;;;;;;x
+mta_debug_36_a;Tier 1: Scimitar;;;;;;;;;;;;;x
+mta_debug_36_b;Tier 2: Fine Scimitar;;;;;;;;;;;;;x
+mta_debug_36_c;Tier 3 ...;;;;;;;;;;;;;x
+mta_debug_36_d;Tier 4 ...;;;;;;;;;;;;;x
+
+# Lances
+mta_debug_37_desc;What tier of lance?;;;;;;;;;;;;;x
+mta_debug_37_a;Tier 1: Lance;;;;;;;;;;;;;x
+mta_debug_37_b;Tier 2: Twohanded Lance;;;;;;;;;;;;;x
+mta_debug_37_c;Tier 3 ...;;;;;;;;;;;;;x
+mta_debug_37_d;Tier 4 ...;;;;;;;;;;;;;x
+
+# Axes
+mta_debug_38_desc;What tier of axe?;;;;;;;;;;;;;x
+mta_debug_38_a;Tier 1: Throwing Axe;;;;;;;;;;;;;x
+mta_debug_38_b;Tier 2: Battle Axe;;;;;;;;;;;;;x
+mta_debug_38_c;Tier 3 ...;;;;;;;;;;;;;x
+mta_debug_38_d;Tier 4 ...;;;;;;;;;;;;;x
+
+# Maces
+mta_debug_39_desc;What tier of mace?;;;;;;;;;;;;;x
+mta_debug_39_a;Tier 1: Mace;;;;;;;;;;;;;x
+mta_debug_39_b;Tier 2: Iron Mace;;;;;;;;;;;;;x
+mta_debug_39_c;Tier 3 ...;;;;;;;;;;;;;x
+mta_debug_39_d;Tier 4 ...;;;;;;;;;;;;;x
+
+# Bows
+mta_debug_40_desc;What tier of bow?;;;;;;;;;;;;;x
+mta_debug_40_a;Tier 1: Self Bow;;;;;;;;;;;;;x
+mta_debug_40_b;Tier 2: Composite Bow;;;;;;;;;;;;;x
+mta_debug_40_c;Tier 3 ...;;;;;;;;;;;;;x
+mta_debug_40_d;Tier 4 ...;;;;;;;;;;;;;x
+
+# Armour, Tier 3
+mta_debug_41_desc;Which armour?;;;;;;;;;;;;;x
+mta_debug_41_a;Guardian;;;;;;;;;;;;;x
+mta_debug_41_b;Champion;;;;;;;;;;;;;x
+mta_debug_41_c;Warden;;;;;;;;;;;;;x
+
+# Armour, Tier 4
+mta_debug_42_desc;Which armour?;;;;;;;;;;;;;x
+mta_debug_42_a;Angelic Guardian;;;;;;;;;;;;;x
+mta_debug_42_b;Green Armor;;;;;;;;;;;;;x
+mta_debug_42_c;Immortal;;;;;;;;;;;;;x
+
+# Crown Jewels, Christian/Jewish
+mta_debug_43_desc;What artifact type of crown jewel?;;;;;;;;;;;;;x
+mta_debug_43_a;Crown;;;;;;;;;;;;;x
+mta_debug_43_b;Scepter;;;;;;;;;;;;;x
+mta_debug_43_c;Ceremonial Weapon;;;;;;;;;;;;;x
+
+# Crown Jewels, Muslim/African
+mta_debug_44_desc;What artifact type of crown jewel?;;;;;;;;;;;;;x
+mta_debug_44_a;Ceremonial Weapon;;;;;;;;;;;;;x
+mta_debug_44_b;Wrist;;;;;;;;;;;;;x
+
+# Crown Jewels, Indian
+mta_debug_45_desc;What artifact type of crown jewel?;;;;;;;;;;;;;x
+mta_debug_45_a;Ceremonial Weapon;;;;;;;;;;;;;x
+mta_debug_45_b;Necklace;;;;;;;;;;;;;x
+
+# Crown Jewels, Zoroastrian/Zun
+mta_debug_46_desc;What artifact type of crown jewel?;;;;;;;;;;;;;x
+mta_debug_46_a;Ceremonial Weapon;;;;;;;;;;;;;x
+mta_debug_46_b;Crown;;;;;;;;;;;;;x
+
+# Crown Jewels, Norse
+mta_debug_47_desc;What artifact type of crown jewel?;;;;;;;;;;;;;x
+mta_debug_47_a;Ceremonial Weapon;;;;;;;;;;;;;x
+mta_debug_47_b;Crown;;;;;;;;;;;;;x
+
+# Crown Jewels, Pagan
+mta_debug_48_desc;What artifact type of crown jewel?;;;;;;;;;;;;;x
+mta_debug_48_a;Ceremonial Weapon;;;;;;;;;;;;;x
+mta_debug_48_b;Crown;;;;;;;;;;;;;x
+
+# Swords, Tier 3
+mta_debug_49_desc;Which sword?;;;;;;;;;;;;;x
+mta_debug_49_a;Heartseeker;;;;;;;;;;;;;x
+mta_debug_49_b;Vengeance;;;;;;;;;;;;;x
+mta_debug_49_c;Fury;;;;;;;;;;;;;x
+
+# Swords, Tier 4
+mta_debug_50_desc;Which sword?;;;;;;;;;;;;;x
+mta_debug_50_a;Dragonseeker;;;;;;;;;;;;;x
+mta_debug_50_b;Heaven's Vengeance;;;;;;;;;;;;;x
+mta_debug_50_c;God's Fury;;;;;;;;;;;;;x
+
+# Scimitars, Tier 3
+mta_debug_51_desc;Which scimitar?;;;;;;;;;;;;;x
+mta_debug_51_a;The Golden Scimitar;;;;;;;;;;;;;x
+mta_debug_51_b;Scimitar of Fortune;;;;;;;;;;;;;x
+mta_debug_51_c;Scimitar of Conquest;;;;;;;;;;;;;x
+
+# Scimitars, Tier 4
+mta_debug_52_desc;Which scimitar?;;;;;;;;;;;;;x
+mta_debug_52_a;Golden Vengeance;;;;;;;;;;;;;x
+mta_debug_52_b;Scimitar of the Night;;;;;;;;;;;;;x
+mta_debug_52_c;Scimitar of Death;;;;;;;;;;;;;x
+
+# Lances, Tier 3
+mta_debug_53_desc;Which lance?;;;;;;;;;;;;;x
+mta_debug_53_a;The Impaler;;;;;;;;;;;;;x
+mta_debug_53_b;The Trident;;;;;;;;;;;;;x
+mta_debug_53_c;The Piercer;;;;;;;;;;;;;x
+
+# Lances, Tier 4
+mta_debug_54_desc;Which lance?;;;;;;;;;;;;;x
+mta_debug_54_a;Bleeding Lance;;;;;;;;;;;;;x
+mta_debug_54_b;Death Strike;;;;;;;;;;;;;x
+mta_debug_54_c;Ascalon;;;;;;;;;;;;;x
+
+# Axes, Tier 3
+mta_debug_55_desc;Which axe?;;;;;;;;;;;;;x
+mta_debug_55_a;Marauder;;;;;;;;;;;;;x
+mta_debug_55_b;Ravager;;;;;;;;;;;;;x
+mta_debug_55_c;Cleaver;;;;;;;;;;;;;x
+
+# Axes, Tier 4
+mta_debug_56_desc;Which axe?;;;;;;;;;;;;;x
+mta_debug_56_a;Darkbringer;;;;;;;;;;;;;x
+mta_debug_56_b;Heaven's Devastator;;;;;;;;;;;;;x
+mta_debug_56_c;The Dragon Cleaver;;;;;;;;;;;;;x
+
+# Maces, Tier 3
+mta_debug_57_desc;Which mace?;;;;;;;;;;;;;x
+mta_debug_57_a;The Foe Hammer;;;;;;;;;;;;;x
+mta_debug_57_b;The Bone Breaker;;;;;;;;;;;;;x
+mta_debug_57_c;The Shatterer;;;;;;;;;;;;;x
+
+# Maces, Tier 4
+mta_debug_58_desc;Which mace?;;;;;;;;;;;;;x
+mta_debug_58_a;The Skullcrusher;;;;;;;;;;;;;x
+mta_debug_58_b;The Twilight Hammer;;;;;;;;;;;;;x
+mta_debug_58_c;The Giant Shatterer;;;;;;;;;;;;;x
+
+# Bows, Tier 3
+mta_debug_59_desc;Which bow?;;;;;;;;;;;;;x
+mta_debug_59_a;Silent Wind;;;;;;;;;;;;;x
+mta_debug_59_b;Lightning;;;;;;;;;;;;;x
+mta_debug_59_c;Eagle;;;;;;;;;;;;;x
+
+# Bows, Tier 4
+mta_debug_60_desc;Which bow?;;;;;;;;;;;;;x
+mta_debug_60_a;Death Wind;;;;;;;;;;;;;x
+mta_debug_60_b;Lightning Strike;;;;;;;;;;;;;x
+mta_debug_60_c;Ice Eagle;;;;;;;;;;;;;x
+
+### RELIGION MODIFIERS ###
+mta_religious_resurgence;[This.GetName] Resurgence;;;;;;;;;;;;;x
+mta_religious_decline;[This.GetName] Decline;;;;;;;;;;;;;x
+
+### EVENT MODIFIERS ###
+debug_health_modifier;Healthful;;;;;;;;;;;;;x
+debug_bad_health_modifier;Grave Health;;;;;;;;;;;;;x

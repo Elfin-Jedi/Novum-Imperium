@@ -1,0 +1,135 @@
+
+kuru_ec_opinion_title_fanatical_servant = {
+	opinion = 250
+	obedient = yes
+}
+kuru_ec_opinion_title_master_of_fanatical_servant = {
+	opinion = 50
+}
+
+kuru_ec_received_education = {
+	opinion = 5
+}
+kuru_ec_received_good_education = {
+	opinion = 10
+}
+kuru_ec_received_excellent_education = {
+	opinion = 15
+}
+
+kuru_ec_murdered_pet = {
+	opinion = -250
+	crime = yes
+
+	prison_reason = yes
+	banish_reason = yes
+	execute_reason = yes
+}
+
+kuru_ec_murdered_spouse = {
+	opinion = -105
+	crime = yes
+
+	prison_reason = yes
+	banish_reason = yes
+	execute_reason = yes
+}
+kuru_ec_murdered_child = {
+	opinion = -75
+	crime = yes
+
+	prison_reason = yes
+	banish_reason = yes
+	execute_reason = yes
+}
+kuru_ec_murdered_parent = {
+	opinion = -75
+	crime = yes
+
+	prison_reason = yes
+	banish_reason = yes
+	execute_reason = yes
+}
+kuru_ec_murdered_sibling = {
+	opinion = -40
+	crime = yes
+
+	prison_reason = yes
+	banish_reason = yes
+	execute_reason = yes
+}
+kuru_ec_murdered_vassal = {
+	opinion = -10
+	crime = yes
+
+	prison_reason = yes
+	banish_reason = yes
+	execute_reason = yes
+}
+kuru_ec_murdered_lover = {
+	opinion = -20
+}
+kuru_ec_murdered_friend = {
+	opinion = -15
+}
+kuru_ec_murdered_rival = {
+	opinion = 15
+}
+
+kuru_ec_kidnapped_me = {
+	opinion = -75
+	crime = yes
+
+	prison_reason = yes
+	banish_reason = yes
+	execute_reason = yes
+}
+kuru_ec_kidnapped_spouse = {
+	opinion = -50
+	crime = yes
+
+	prison_reason = yes
+	banish_reason = yes
+	execute_reason = yes
+}
+kuru_ec_kidnapped_child = {
+	opinion = -40
+	crime = yes
+
+	prison_reason = yes
+	banish_reason = yes
+	execute_reason = yes
+}
+kuru_ec_kidnapped_parent = {
+	opinion = -40
+	crime = yes
+
+	prison_reason = yes
+	banish_reason = yes
+	execute_reason = yes
+}
+kuru_ec_kidnapped_sibling = {
+	opinion = -20
+	crime = yes
+
+	prison_reason = yes
+	banish_reason = yes
+	execute_reason = yes
+}
+kuru_ec_kidnapped_vassal = {
+	opinion = -10
+	crime = yes
+
+	prison_reason = yes
+	banish_reason = yes
+	execute_reason = yes
+}
+kuru_ec_kidnapped_lover = {
+	opinion = -10
+}
+kuru_ec_kidnapped_friend = {
+	opinion = -5
+}
+kuru_ec_kidnapped_rival = {
+	opinion = 5
+}

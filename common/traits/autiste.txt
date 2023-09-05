@@ -1,0 +1,28 @@
+autiste = {
+
+      ruler_designer_cost = -40
+
+
+
+inherit_chance = 15
+both_parent_has_trait_inherit_chance = 50
+random = yes
+birth = 25
+
+  diplomacy = -4
+  learning = 5
+
+  opposites = {
+    trait = psychopath02
+    trait = sociopath
+    trait = concentre
+    trait = bipolaire
+  }
+
+
+  vassal_opinion = -10
+  general_opinion = -10
+  sex_appeal_opinion = -10
+  ai_rationality = -10
+
+}

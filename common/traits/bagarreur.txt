@@ -1,0 +1,31 @@
+bagarreur = {
+
+      ruler_designer_cost = 15
+
+
+personality = yes
+random = yes
+birth = 100
+
+  diplomacy = -2
+  martial = 3
+  combat_rating = 5
+
+  opposites = {
+			nonviolent
+            craven         
+  }
+  
+  tribal_opinion = 10
+  opposite_opinion = -10
+  general_opinion = -5
+  ai_rationality = 35
+  ai_zeal = 35
+  ai_greed = 35
+  ai_ambition = 35
+  
+
+command_modifier = {
+	damage = 0.1
+    }
+}

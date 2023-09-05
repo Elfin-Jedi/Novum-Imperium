@@ -1,0 +1,445 @@
+
+### ARAB SONGS
+## PLAY MORE FOR ARABS
+## PLAY IN THE HOLY LAND
+
+song = {
+	name = "Leprosy.ogg"
+	song_name = "Leprosy"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+		modifier = {
+			factor = 1.4
+			culture_group = arabic
+		}
+	}		
+}
+
+song = {
+	name = "Saladin.ogg"
+	song_name = "Saladin"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+		modifier = {
+			factor = 1.4
+			culture_group = arabic
+		}
+	}		
+}
+
+## CRUSADER WAR SONGS
+
+song = {
+	name = "KerakCastle.ogg"
+	song_name = "Kerak Castle"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			religion_group = christian
+		}
+		modifier = {
+			factor = 2
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}		
+}
+song = {
+	name = "Fireballs.ogg"
+	song_name = "Fireballs"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.25
+			religion_group = christian
+		}
+		modifier = {
+			factor = 2.25
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}		
+}
+song = {
+	name = "SecondDayOfWar.ogg"
+	song_name = "The Second Day of War"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.25
+			religion_group = christian
+		}
+		modifier = {
+			factor = 2
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}		
+}
+song = {
+	name = "Crusaders.ogg"
+	song_name = "Crusaders"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.75
+			religion_group = christian
+		}
+		modifier = {
+			factor = 1.75
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}		
+}
+song = {
+	name = "AfterGodfrey.ogg"
+	song_name = "After Godfrey"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			religion_group = christian
+		}
+		modifier = {
+			factor = 2
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}		
+}
+song = {
+	name = "Swordplay.ogg"
+	song_name = "Swordplay"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.25
+			religion_group = christian
+		}
+		modifier = {
+			factor = 2.5
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}		
+}
+song = {
+	name = "Ambush.ogg"
+	song_name = "Ambush"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2.5
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}		
+}
+
+## Christian Specific Songs
+
+song = {
+	name = "PathToHeaven.ogg"
+	song_name = "Path To Heaven"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.75
+			religion_group = christian
+		}
+		modifier = {
+			factor = 1.5
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+	}		
+}
+
+song = {
+	name = "MyLord.ogg"
+	song_name = "My Lord"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.75
+			religion_group = christian
+		}
+		modifier = {
+			factor = 1.25
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+	}		
+}
+
+song = {
+	name = "BurningThePast.ogg"
+	song_name = "Burning The Past"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.75
+			religion_group = christian
+		}
+		modifier = {
+			factor = 1.5
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+	}		
+}
+
+song = {
+	name = "Washing.ogg"
+	song_name = "Washing"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			religion_group = christian
+		}
+		modifier = {
+			factor = 1.5
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+	}		
+}
+
+## General Holy Land Songs
+
+song = {
+	name = "Terms.ogg"
+	song_name = "Terms"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2.25
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+	}		
+}
+
+song = {
+	name = "KingsFall.ogg"
+	song_name = "KingsFall"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2.25
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion_group = christian }
+		}
+	}		
+}
+song = {
+	name = "DoorIntoJerusalem.ogg"
+	song_name = "Door Into Jerusalem"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2.25
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+	}		
+}
+song = {
+	name = "WallBreached.ogg"
+	song_name = "Wall Breached"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2.25
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}
+	}		
+}
+song = {
+	name = "France1184.ogg"
+	song_name = "France 1184"
+	
+	chance = {
+		factor = 1.5
+		modifier = {
+			factor = 2.25
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+	}		
+}
+
+song = {
+	name = "ToMessina.ogg"
+	song_name = "To Messina"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2.25
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+	}		
+}
+
+song = {
+	name = "NewWorld.ogg"
+	song_name = "New World"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2.25
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+	}		
+}
+
+song = {
+	name = "ShipWrecked.ogg"
+	song_name = "Ship Wrecked"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2.25
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+	}		
+}
+
+song = {
+	name = "ToJerusalem.ogg"
+	song_name = "To Jerusalem"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2.25
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+	}		
+}
+
+song = {
+	name = "ThePilgrimRoad.ogg"
+	song_name = "The Pilgrim Road"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2.5
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+	}		
+}
+
+song = {
+	name = "Ibelin.ogg"
+	song_name = "Ibelin"
+	
+	chance = {
+		factor = 1.5
+		modifier = {
+			factor = 2.25
+			location = {
+				region = world_middle_east_jerusalem
+			}
+		}
+	}		
+}

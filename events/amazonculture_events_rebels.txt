@@ -1,0 +1,1271 @@
+
+## created rebels for amazonian cultures, piggybacked off vanilla characters 
+	character_event = { # replaces vanilla dude with lady rebel
+		id = AmzCul.6950
+		hide_window = yes
+		ai = yes
+		
+		mean_time_to_happen = { 
+			years = 500 
+			modifier = {			
+				factor = 10		# unlikely in feminist societies
+				any_demesne_title = { 
+					OR = {
+						has_law = true_cognatic_succession 
+						has_law = enatic_cognatic_succession 
+						has_law = enatic_succession
+					}
+				}
+			}
+			modifier = {			
+				factor = 0.001	# 6 months		
+				trait = peasant_leader	
+			}
+			modifier = {			
+				factor = 0.001	# 6 months		
+				has_global_flag = testing_amz_rebels_flag
+			}
+			modifier = {			
+				factor = 0.5		
+				trait = wroth
+			}
+			modifier = {			
+				factor = 0.5		
+				trait = cruel 
+			}
+			modifier = {
+				factor = 0.5
+				any_demesne_province = { revolt_risk >= 0.10 }
+			}
+			modifier = {
+				factor = 0.5
+				any_demesne_province = { revolt_risk >= 0.05 }
+			}
+			modifier = {			
+				factor = 1.5		
+				trait = patient
+			}
+			modifier = {			
+				factor = 1.5		
+				trait = kind 
+			}
+			modifier = {			
+				factor = 2	
+				is_tribal = yes 
+			}
+			modifier = {			
+				factor = 0.75		
+				religion_allows_female_temple_holders = no 
+			}
+		}
+		
+		trigger = {
+			independent = yes
+			OR = {
+				tier = COUNT				# boring counts
+				AND = {						# boring nomads
+					tier = KING
+					is_nomadic = yes
+				}
+				AND = {						# dukes without counts 
+					tier = DUKE
+					NOT = { any_vassal = { tier = COUNT } }
+				}
+			}
+			NOR = {
+				prestige > 500
+				wealth > 250
+				piety > 500
+			}
+			is_female = no 
+			war = no 
+			is_landed = yes 
+			NOR = {
+				has_game_rule = { 		
+					name = culture_freq_amz
+					value = never_amz
+				}
+				has_game_rule = { 
+					name = succession_law_amz
+					value = enatic_cognatic_amz
+				}
+				has_game_rule = { 
+					name = succession_law_amz
+					value = enatic_amz
+				}
+			}
+			OR = {
+				AND = {
+					NOR = { 
+						culture = themiskyran_amz 
+						has_global_flag = themiskyran_reborn_flag
+					}
+					OR = {
+						AND = {
+							capital_scope = { de_jure_liege_or_above = k_trebizond }
+							k_trebizond = { has_holder = no }
+						}
+						AND = {
+							capital_scope = { de_jure_liege_or_above = k_anatolia }
+							k_anatolia = { has_holder = no }
+						}
+					}
+					
+				}
+				AND = {
+					NOR = { 
+						culture = valkyrie_amz 
+						has_global_flag = valkyrie_reborn_flag
+					}
+					OR = {
+						AND = {
+							capital_scope = { de_jure_liege_or_above = k_sweden }
+							k_sweden = { has_holder = no }
+						}
+						AND = {
+							capital_scope = { de_jure_liege_or_above = k_norway }
+							k_norway = { has_holder = no }
+						}
+					}
+				}
+				AND = {
+					NOR = { 
+						culture = scythian_amz 
+						has_global_flag = scythian_reborn_flag
+					}
+					OR = {
+						AND = {
+							capital_scope = { de_jure_liege_or_above = k_crimea }
+							k_crimea = { has_holder = no }
+						}
+						AND = {
+							capital_scope = { de_jure_liege_or_above = k_alania }
+							k_alania = { has_holder = no }
+						}
+					}
+				}
+				AND = {
+					NOR = { 
+						culture = parthian_amz 
+						has_global_flag = parthian_reborn_flag
+					}
+					OR = {
+						AND = {
+							capital_scope = { de_jure_liege_or_above = k_khorasan }
+							k_khorasan = { has_holder = no }
+						}
+						AND = {
+							capital_scope = { de_jure_liege_or_above = k_khiva }
+							k_khiva = { has_holder = no }
+						}
+					}
+				}
+				AND = {
+					NOR = { 
+						culture = kushite_amz 
+						has_global_flag = kushite_reborn_flag
+					}
+					OR = {
+						AND = {
+							capital_scope = { de_jure_liege_or_above = k_nubia }
+							k_nubia = { has_holder = no }
+						}
+						AND = {
+							capital_scope = { de_jure_liege_or_above = k_egypt }
+							k_egypt = { has_holder = no }
+						}
+					}
+				}
+				AND = {
+					NOR = { 
+						culture = carthaginian_amz 
+						has_global_flag = carthaginian_reborn_flag
+					}
+					OR = {
+						AND = {
+							capital_scope = { de_jure_liege_or_above = k_africa }
+							k_africa = { has_holder = no }
+						}
+						AND = {
+							capital_scope = { de_jure_liege_or_above = k_mauretania }
+							k_mauretania = { has_holder = no }
+						}
+					}
+				}
+				AND = {
+					NOR = { 
+						culture = etruscan_amz 
+						has_global_flag = etruscan_reborn_flag
+					}
+					OR = {
+						AND = {
+							capital_scope = { de_jure_liege_or_above = k_italy }
+							k_italy = { has_holder = no }
+						}
+						AND = {
+							capital_scope = { de_jure_liege_or_above = k_romagna }
+							k_romagna = { has_holder = no }
+						}
+					}
+				}
+				AND = {
+					NOR = { 
+						culture = pritani_amz 
+						has_global_flag = pritani_reborn_flag
+					}
+					OR = {
+						AND = {
+							capital_scope = { de_jure_liege_or_above = k_wales }
+							k_wales = { has_holder = no }
+						}
+						AND = {
+							capital_scope = { de_jure_liege_or_above = k_scotland }
+							k_scotland = { has_holder = no }
+						}
+					}
+				}
+				AND = {
+					NOR = { 
+						culture = illyrian_amz 
+						has_global_flag = illyrian_reborn_flag
+					}
+					OR = {
+						AND = {
+							capital_scope = { de_jure_liege_or_above = k_serbia }
+							k_serbia = { has_holder = no }
+						}
+						AND = {
+							capital_scope = { de_jure_liege_or_above = k_croatia }
+							k_croatia = { has_holder = no }
+						}
+					}
+				}
+				AND = {
+					NOR = { 
+						culture = valascan_amz 
+						has_global_flag = valascan_reborn_flag
+					}
+					OR = {
+						AND = {
+							capital_scope = { de_jure_liege_or_above = k_bohemia }
+							k_bohemia = { has_holder = no }
+						}
+						AND = {
+							capital_scope = { de_jure_liege_or_above = k_poland }
+							k_poland = { has_holder = no }
+						}
+					}
+				}
+			}
+		}
+	
+		option = {
+			name = EVTOPTAAmzCul.6950
+			ai_chance = { factor = 10 }
+			
+			create_random_soldier = {
+				random_traits = yes
+				dynasty = none
+				female = yes
+				age = 16
+				religion = ROOT
+				culture = ROOT
+				trait = brave
+				attributes = {
+					martial = 6
+					intrigue = 6
+					diplomacy = 6
+					stewardship = 6
+					learning = 6
+				}
+			}
+			new_character = {		# make a super fantastic amazonian 
+				save_event_target_as = amazonian_replacement_target
+				set_character_flag = fantastic_amazonian_maiden_flag
+				remove_all_negative_congenital_traits_effect = yes
+				set_immune_to_pruning = yes
+				remove_trait = weak
+				remove_trait = slow
+				remove_trait = imbecile
+				remove_trait = dull
+				remove_trait = dwarf
+				remove_trait = giant
+				remove_trait = hunchback
+				remove_trait = clubfooted
+				remove_trait = craven
+				remove_trait = paranoid
+				remove_trait = mystic
+				remove_trait = duelist
+				remove_trait = hunter
+				remove_trait = strategist
+				remove_trait = misguided_warrior
+				remove_trait = tough_soldier
+				remove_trait = skilled_tactician
+				add_trait = brilliant_strategist
+				add_trait = ambitious
+				random_list = {
+					10 = {
+						add_trait = robust
+					}
+					10 = {
+						add_trait = strong
+					}
+					10 = {
+						health = 1
+					}
+				}
+				random_list = {
+					1 = {
+						add_age = 0
+					}
+					1 = {
+						add_age = 1
+					}
+					1 = {
+						add_age = 2
+					}
+					1 = {
+						add_age = 3
+					}
+				}
+				random_list = {
+					10 = {
+						add_trait = narrow_flank_leader
+					}
+					10 = {
+						add_trait = defensive_leader
+					}
+					10 = {
+						add_trait = experimenter
+					}
+					10 = {
+						add_trait = flanker
+					}
+					10 = {
+						add_trait = heavy_infantry_leader
+					}
+					10 = {
+						add_trait = inspiring_leader
+					}
+					10 = {
+						add_trait = organizer
+					}
+					10 = {
+						add_trait = siege_leader
+					}
+					10 = {
+						add_trait = trickster
+					}
+					10 = {
+						add_trait = aggressive_leader
+					}
+				}
+				random_list = {
+					20 = {
+						add_trait = brave
+						add_trait = poet
+						change_martial = 2
+						give_nickname = nick_the_fearless
+					}
+					20 = {
+						add_trait = unyielding_leader
+						remove_trait = wroth
+						add_trait = patient
+						change_martial = 2
+						give_nickname = nick_the_defender
+					}
+					20 = {
+						add_trait = shrewd
+						add_trait = brave
+						change_martial = 2
+						give_nickname = nick_the_brave
+					}
+					20 = {
+						add_trait = genius
+						add_trait = socializer
+						add_trait = poet
+						change_martial = 4
+						give_nickname = nick_the_noble
+					}
+					20 = {
+						remove_trait = humble
+						add_trait = proud
+						add_trait = duelist
+						change_martial = 2
+						give_nickname = nick_the_proud
+					}
+					20 = {
+						add_trait = hunter
+						add_trait = shrewd
+						change_martial = 3
+						give_nickname = nick_the_hunter
+					}
+					20 = {
+						remove_trait = homosexual
+						add_trait = brave
+						add_trait = wroth
+						change_martial = 2
+						give_nickname = nick_the_she_devil 
+					}
+					20 = {
+						add_trait = homosexual
+						add_trait = brave
+						change_martial = 3
+						give_nickname = nick_warrior_princess 
+					}				
+				}
+				if = {
+					limit = { 
+						OR = { 
+							liege = { capital_scope = { de_jure_liege_or_above = k_trebizond } }
+							liege = { capital_scope = { de_jure_liege_or_above = k_anatolia } }
+						}
+					}
+					culture = themiskyran_amz
+					set_graphical_culture = greek
+					set_global_flag = themiskyran_reborn_flag
+				}
+				if = {
+					limit = { 
+						OR = { 
+							liege = { capital_scope = { de_jure_liege_or_above = k_sweden } }
+							liege = { capital_scope = { de_jure_liege_or_above = k_norway } }
+						}
+					}
+					culture = valkyrie_amz
+					set_graphical_culture = norse
+					set_global_flag = valkyrie_reborn_flag
+				}
+				if = {
+					limit = { 
+						OR = { 
+							liege = { capital_scope = { de_jure_liege_or_above = k_crimea } }
+							liege = { capital_scope = { de_jure_liege_or_above = k_alania } }
+						}
+					}
+					culture = scythian_amz
+					set_graphical_culture = severian
+					set_global_flag = scythian_reborn_flag
+				}
+				if = {
+					limit = { 
+						OR = { 
+							liege = { capital_scope = { de_jure_liege_or_above = k_khorasan } }
+							liege = { capital_scope = { de_jure_liege_or_above = k_khiva } }
+						}
+					}
+					culture = parthian_amz
+					set_graphical_culture = persian
+					set_global_flag = parthian_reborn_flag
+				}
+				if = {
+					limit = { 
+						OR = { 
+							liege = { capital_scope = { de_jure_liege_or_above = k_nubia } }
+							liege = { capital_scope = { de_jure_liege_or_above = k_egypt } }
+						}
+					}
+					culture = kushite_amz
+					set_graphical_culture = egyptian_arabic
+					set_global_flag = kushite_reborn_flag
+				}
+				if = {
+					limit = { 
+						OR = { 
+							liege = { capital_scope = { de_jure_liege_or_above = k_africa } }
+							liege = { capital_scope = { de_jure_liege_or_above = k_mauretania } }
+						}
+					}
+					culture = carthaginian_amz
+					set_graphical_culture = levantine_arabic
+					set_global_flag = carthaginian_reborn_flag
+				}
+				if = {
+					limit = { 
+						OR = { 
+							liege = { capital_scope = { de_jure_liege_or_above = k_italy } }
+							liege = { capital_scope = { de_jure_liege_or_above = k_romagna } }
+						}
+					}
+					culture = etruscan_amz
+					set_graphical_culture = roman
+					set_global_flag = etruscan_reborn_flag
+				}
+				if = {
+					limit = { 
+						OR = { 
+							liege = { capital_scope = { de_jure_liege_or_above = k_wales } }
+							liege = { capital_scope = { de_jure_liege_or_above = k_scotland } }
+						}
+					}
+					culture = pritani_amz
+					set_graphical_culture = welsh
+					set_global_flag = pritani_reborn_flag
+				}
+				if = {
+					limit = { 
+						OR = { 
+							liege = { capital_scope = { de_jure_liege_or_above = k_serbia } }
+							liege = { capital_scope = { de_jure_liege_or_above = k_croatia } }
+						}
+					}
+					culture = illyrian_amz
+					set_graphical_culture = serbian
+					set_global_flag = illyrian_reborn_flag
+				}
+				if = {
+					limit = { 
+						OR = { 
+							liege = { capital_scope = { de_jure_liege_or_above = k_bohemia } }
+							liege = { capital_scope = { de_jure_liege_or_above = k_poland } }
+						}
+					}
+					culture = valascan_amz
+					set_graphical_culture = bohemian
+					set_global_flag = valascan_reborn_flag
+				}
+				add_trait = amazonian_leader
+				random = {
+					chance = 50
+					add_trait = fair
+				}
+				random = {
+					chance = 10
+					add_trait = genius
+				}
+				random = {
+					chance = 30
+					add_trait = quick
+				}
+				character_event = { id = AmzCul.69500 days = 2 }	# ping 
+			}
+			capital_scope = {
+				ROOT = {
+					spawn_unit = {
+						owner = THIS
+						province = PREV
+						home = PREV
+						troops = {
+							light_infantry = { 1000 1000 }
+							horse_archers = { 200 200 }
+							archers = { 1000 1000 }
+							light_cavalry = { 500 500 }
+						}
+						reinforces = yes
+						attrition = 0.5
+						cannot_inherit = no
+						disband_on_peace = no
+						merge = no
+						maintenance_multiplier = 0.0
+					}
+					spawn_unit = {
+						owner = THIS
+						province = PREV
+						home = PREV
+						troops = {
+							light_infantry = { 1000 1000 }
+							horse_archers = { 200 200 }
+							archers = { 1000 1000 }
+							light_cavalry = { 500 500 }
+						}
+						reinforces = yes
+						attrition = 0.5
+						cannot_inherit = no
+						disband_on_peace = no
+						merge = no
+						maintenance_multiplier = 0.0
+					}
+					spawn_unit = {
+						owner = THIS
+						province = PREV
+						home = PREV
+						troops = {
+							light_infantry = { 1000 1000 }
+							horse_archers = { 200 200 }
+							archers = { 1000 1000 }
+							light_cavalry = { 500 500 }
+						}
+						reinforces = yes
+						attrition = 0.5
+						cannot_inherit = no
+						disband_on_peace = no
+						merge = no
+						maintenance_multiplier = 0.0
+					}
+				}
+			}
+			abdicate_to = event_target:amazonian_replacement_target
+			death = {
+				death_reason = death_execution_beheading  
+				killer = event_target:amazonian_replacement_target
+			}
+		}
+	}
+
+character_event = {		# ping event for new amazonian rebel 
+	id = AmzCul.69500
+	hide_window = yes
+	
+	is_triggered_only = yes
+			
+	option = {	# gain amz traits and claims 
+		name = EVTOPTAAmzCul.69500
+		add_character_modifier = { 
+			name = trailblazer_modifier    
+			duration = -1
+		}
+		add_trait = is_amazonian
+		add_character_modifier = { 
+			name = amazonian_centre_modifier    
+			duration = -1
+		}
+		remove_tributary = suzerain
+		capital_scope = { culture = ROOT }
+		wealth = 69
+		prestige = 690
+		piety = 690
+		add_artifact = amazonian_pitchfork 				# powerful trident
+		if = {
+			limit = {
+				AND = {
+					culture = themiskyran_amz
+					capital_scope = { de_jure_liege_or_above = k_trebizond }
+					k_trebizond = {
+						has_holder = no
+					}
+				}
+			}
+			k_trebizond = { usurp_title = ROOT }
+		}
+		if = {
+			limit = {
+				AND = {
+					culture = themiskyran_amz
+					capital_scope = { de_jure_liege_or_above = k_anatolia }
+					k_anatolia = {
+						has_holder = no
+					}
+				}
+			}
+			k_anatolia = { usurp_title = ROOT }
+		}
+		if = {
+			limit = {
+				AND = {
+					culture = valkyrie_amz
+					capital_scope = { de_jure_liege_or_above = k_sweden }
+					k_sweden = {
+						has_holder = no
+					}
+				}
+			}
+			k_sweden = { usurp_title = ROOT }
+		}
+		if = {
+			limit = {
+				AND = {
+					culture = valkyrie_amz
+					capital_scope = { de_jure_liege_or_above = k_norway }
+					k_norway = {
+						has_holder = no
+					}
+				}
+			}
+			k_norway = { usurp_title = ROOT }
+		}
+		if = {
+			limit = {
+				AND = {
+					culture = scythian_amz
+					capital_scope = { de_jure_liege_or_above = k_crimea }
+					k_crimea = {
+						has_holder = no
+					}
+				}
+			}
+			k_crimea = { usurp_title = ROOT }
+		}
+		if = {
+			limit = {
+				AND = {
+					culture = scythian_amz
+					capital_scope = { de_jure_liege_or_above = k_alania }
+					k_alania = {
+						has_holder = no
+					}
+				}
+			}
+			k_alania = { usurp_title = ROOT }
+		}
+		if = {
+			limit = {
+				AND = {
+					culture = parthian_amz
+					capital_scope = { de_jure_liege_or_above = k_khorasan }
+					k_khorasan = {
+						has_holder = no
+					}
+				}
+			}
+			k_khorasan = { usurp_title = ROOT }
+		}
+		if = {
+			limit = {
+				AND = {
+					culture = parthian_amz
+					capital_scope = { de_jure_liege_or_above = k_khiva }
+					k_khiva = {
+						has_holder = no
+					}
+				}
+			}
+			k_khiva = { usurp_title = ROOT }
+		}
+		if = {
+			limit = {
+				AND = {
+					culture = kushite_amz
+					capital_scope = { de_jure_liege_or_above = k_nubia }
+					k_nubia = {
+						has_holder = no
+					}
+				}
+			}
+			k_nubia = { usurp_title = ROOT }
+		}
+		if = {
+			limit = {
+				AND = {
+					culture = kushite_amz
+					capital_scope = { de_jure_liege_or_above = k_egypt }
+					k_egypt = {
+						has_holder = no
+					}
+				}
+			}
+			k_egypt = { usurp_title = ROOT }
+		}
+		if = {
+			limit = {
+				AND = {
+					culture = carthaginian_amz
+					capital_scope = { de_jure_liege_or_above = k_africa }
+					k_africa = {
+						has_holder = no
+					}
+				}
+			}
+			k_africa = { usurp_title = ROOT }
+		}
+		if = {
+			limit = {
+				AND = {
+					culture = carthaginian_amz
+					capital_scope = { de_jure_liege_or_above = k_mauretania }
+					k_mauretania = {
+						has_holder = no
+					}
+				}
+			}
+			k_mauretania = { usurp_title = ROOT }
+		}
+		if = {
+			limit = {
+				AND = {
+					culture = etruscan_amz
+					capital_scope = { de_jure_liege_or_above = k_italy }
+					k_italy = {
+						has_holder = no
+					}
+				}
+			}
+			k_italy = { usurp_title = ROOT }
+		}
+		if = {
+			limit = {
+				AND = {
+					culture = etruscan_amz
+					capital_scope = { de_jure_liege_or_above = k_romagna }
+					k_romagna = {
+						has_holder = no
+					}
+				}
+			}
+			k_romagna = { usurp_title = ROOT }
+		}
+		if = {
+			limit = {
+				AND = {
+					culture = pritani_amz
+					capital_scope = { de_jure_liege_or_above = k_wales }
+					k_wales = {
+						has_holder = no
+					}
+				}
+			}
+			k_wales = { usurp_title = ROOT }
+		}
+		if = {
+			limit = {
+				AND = {
+					culture = pritani_amz
+					capital_scope = { de_jure_liege_or_above = k_scotland }
+					k_scotland = {
+						has_holder = no
+					}
+				}
+			}
+			k_scotland = { usurp_title = ROOT }
+		}
+		if = {
+			limit = {
+				AND = {
+					culture = illyrian_amz
+					capital_scope = { de_jure_liege_or_above = k_serbia }
+					k_serbia = {
+						has_holder = no
+					}
+				}
+			}
+			k_serbia = { usurp_title = ROOT }
+		}
+		if = {
+			limit = {
+				AND = {
+					culture = illyrian_amz
+					capital_scope = { de_jure_liege_or_above = k_croatia }
+					k_croatia = {
+						has_holder = no
+					}
+				}
+			}
+			k_croatia = { usurp_title = ROOT }
+		}
+		if = {
+			limit = {
+				AND = {
+					culture = valascan_amz
+					capital_scope = { de_jure_liege_or_above = k_bohemia }
+					k_bohemia = {
+						has_holder = no
+					}
+				}
+			}
+			k_bohemia = { usurp_title = ROOT }
+		}
+		if = {
+			limit = {
+				AND = {
+					culture = valascan_amz
+					capital_scope = { de_jure_liege_or_above = k_poland }
+					k_poland = {
+						has_holder = no
+					}
+				}
+			}
+			k_poland = { usurp_title = ROOT }
+		}
+		if = {
+			limit = { culture = themiskyran_amz }
+			set_global_flag = themiskyran_reborn_flag
+			create_bloodline = {
+				type = themiskyran_warrior_maiden 					# warrior maiden 
+			}
+		}
+		if = {
+			limit = { culture = valkyrie_amz }
+			set_global_flag = valkyrie_reborn_flag
+			create_bloodline = {
+				type = valkyrian_warrior_maiden 					# warrior maiden 
+			}
+		}
+		if = {
+			limit = { culture = scythian_amz }
+			set_global_flag = scythian_reborn_flag
+			create_bloodline = {
+				type = scythian_warrior_maiden 					# warrior maiden 
+			}
+		}
+		if = {
+			limit = { culture = parthian_amz }
+			set_global_flag = parthian_reborn_flag
+			create_bloodline = {
+				type = parthian_warrior_maiden 					# warrior maiden 
+			}
+		}
+		if = {
+			limit = { culture = kushite_amz }
+			set_global_flag = kushite_reborn_flag
+			create_bloodline = {
+				type = kushite_warrior_maiden 					# warrior maiden 
+			}
+		}
+		if = {
+			limit = { culture = carthaginian_amz }
+			set_global_flag = carthaginian_reborn_flag
+			create_bloodline = {
+				type = carthaginian_warrior_maiden 					# warrior maiden 
+			}
+		}
+		if = {
+			limit = { culture = etruscan_amz }
+			set_global_flag = etruscan_reborn_flag
+			create_bloodline = {
+				type = etruscan_warrior_maiden 					# warrior maiden 
+			}
+		}
+		if = {
+			limit = { culture = pritani_amz }
+			set_global_flag = pritani_reborn_flag
+			create_bloodline = {
+				type = pritani_warrior_maiden 					# warrior maiden 
+			}
+		}
+		if = {
+			limit = { culture = illyrian_amz }
+			set_global_flag = illyrian_reborn_flag
+			create_bloodline = {
+				type = illyrian_warrior_maiden 					# warrior maiden 
+			}
+		}
+		if = {
+			limit = { culture = valascan_amz }
+			set_global_flag = valascan_reborn_flag
+			create_bloodline = {
+				type = valascan_warrior_maiden 					# warrior maiden 
+			}
+		}
+		if = {								# notify players 
+			limit = { culture = themiskyran_amz }
+			any_player = {
+				limit = { 
+					OR = { 
+						any_realm_province = { region = world_europe_south_east } 
+						any_realm_province = { region = world_asia_minor } 
+						any_realm_province = { region = world_middle_east_jerusalem } 
+					}
+				}
+				narrative_event = { id = AmzCul.6951 days = 5 }
+			}
+		}
+		if = {
+			limit = { culture = valkyrie_amz }
+			any_player = {
+				limit = { 
+					OR = { 
+						any_realm_province = { region = world_europe_north } 
+						any_realm_province = { region = custom_eastern_baltic } 
+						any_realm_province = { region = world_europe_west_germania } 
+					}
+				}
+				narrative_event = { id = AmzCul.6952 days = 5 }
+			}
+		}
+		if = {
+			limit = { culture = scythian_amz }
+			any_player = {
+				limit = { 
+					OR = { 
+						any_realm_province = { region = world_steppe_west } 
+						any_realm_province = { region = world_europe_east } 
+						any_realm_province = { region = world_europe_south_east } 
+						any_realm_province = { region = world_asia_minor } 
+					}
+				}
+				narrative_event = { id = AmzCul.6953 days = 5 }
+			}
+		}
+		if = {
+			limit = { culture = parthian_amz }
+			any_player = {
+				limit = { 
+					OR = { 
+						any_realm_province = { region = world_persia } 
+						any_realm_province = { region = world_europe_south_east } 
+						any_realm_province = { region = world_india_rajastan } 
+						any_realm_province = { region = world_middle_east } 
+						any_realm_province = { region = world_asia_minor } 
+					}
+				}
+				narrative_event = { id = AmzCul.6954 days = 5 }
+			}
+		}
+		if = {
+			limit = { culture = kushite_amz }
+			any_player = {
+				limit = { 
+					OR = { 
+						any_realm_province = { region = world_africa_east } 
+						any_realm_province = { region = world_africa_north } 
+						any_realm_province = { region = world_middle_east } 
+					}
+				}
+				narrative_event = { id = AmzCul.6955 days = 5 }
+			}
+		}
+		if = {
+			limit = { culture = carthaginian_amz }
+			any_player = {
+				limit = { 
+					OR = { 
+						any_realm_province = { region = world_africa_north } 
+						any_realm_province = { region = world_europe_south_italy } 
+						any_realm_province = { region = world_europe_west_iberia } 
+					}
+				}
+				narrative_event = { id = AmzCul.6956 days = 5 }
+			}
+		}
+		if = {
+			limit = { culture = etruscan_amz }
+			any_player = {
+				limit = { 
+					OR = { 
+						any_realm_province = { region = world_europe_south } 
+						any_realm_province = { region = world_europe_west_francia } 
+						any_realm_province = { region = world_europe_west_germania }  
+					}
+				}
+				narrative_event = { id = AmzCul.6957 days = 5 }
+			}
+		}
+		if = {
+			limit = { culture = pritani_amz }
+			any_player = {
+				limit = { 
+					OR = { 
+						any_realm_province = { region = world_europe_west_brittania  } 
+						any_realm_province = { region = world_europe_west_francia }  
+					}
+				}
+				narrative_event = { id = AmzCul.6958 days = 5 }
+			}
+		}
+		if = {
+			limit = { culture = illyrian_amz }
+			any_player = {
+				limit = { 
+					OR = { 
+						any_realm_province = { region = world_europe_south_east } 
+						any_realm_province = { region = world_europe_south_italy } 
+					}
+				}
+				narrative_event = { id = AmzCul.6959 days = 5 }
+			}
+		}
+		if = {
+			limit = { culture = valascan_amz }
+			any_player = {
+				limit = { 
+					OR = { 
+						any_realm_province = { region = world_europe_west_germania } 
+						any_realm_province = { region = world_europe_east } 
+					}
+				}
+				narrative_event = { id = AmzCul.6960 days = 5 }
+			}
+		}
+	}
+}
+
+
+narrative_event = {		# player gets event that themiskyran army has appeared 
+	id = AmzCul.6951
+	title = EVTTITLAmzCul.6951
+	desc = EVTDESCAmzCul.6951
+	picture = GFX_evt_peasants
+	border = GFX_event_narrative_frame_intrigue
+	portrait = FROM
+	
+	is_triggered_only = yes 
+	
+	immediate = {
+		sound_effect = assassins_occupy_infidel_holding
+	}
+		
+	option = {	# dayum, gurl
+		name = EVTOPTAAmzCul.6951
+		ai_chance = { factor = 10 }
+	}
+}
+
+narrative_event = {		# player gets event that valkyrian army has appeared 
+	id = AmzCul.6952
+	title = EVTTITLAmzCul.6952
+	desc = EVTDESCAmzCul.6952
+	picture = GFX_evt_peasants
+	border = GFX_event_narrative_frame_intrigue
+	portrait = FROM
+	
+	is_triggered_only = yes  
+	
+	immediate = {
+		sound_effect = assassins_occupy_infidel_holding
+	}
+		
+	option = {	# dayum, gurl
+		name = EVTOPTAAmzCul.6952
+		ai_chance = { factor = 10 }
+	}
+}
+
+narrative_event = {		# player gets event that scythian army has appeared 
+	id = AmzCul.6953
+	title = EVTTITLAmzCul.6953
+	desc = EVTDESCAmzCul.6953
+	picture = GFX_evt_peasants
+	border = GFX_event_narrative_frame_intrigue
+	portrait = FROM
+	
+	is_triggered_only = yes  
+	
+	immediate = {
+		sound_effect = assassins_occupy_infidel_holding
+	}
+		
+	option = {	# dayum, gurl
+		name = EVTOPTAAmzCul.6953
+		ai_chance = { factor = 10 }
+	}
+}
+
+narrative_event = {		# player gets event that parthian army has appeared 
+	id = AmzCul.6954
+	title = EVTTITLAmzCul.6954
+	desc = EVTDESCAmzCul.6954
+	picture = GFX_evt_peasants
+	border = GFX_event_narrative_frame_intrigue
+	portrait = FROM
+	
+	is_triggered_only = yes 
+	
+	immediate = {
+		sound_effect = assassins_occupy_infidel_holding
+	} 
+		
+	option = {	# dayum, gurl
+		name = EVTOPTAAmzCul.6954
+		ai_chance = { factor = 10 }
+	}
+}
+
+narrative_event = {		# player gets event that kushite army has appeared 
+	id = AmzCul.6955
+	title = EVTTITLAmzCul.6955
+	desc = EVTDESCAmzCul.6955
+	picture = GFX_evt_peasants
+	border = GFX_event_narrative_frame_intrigue
+	portrait = FROM
+	
+	is_triggered_only = yes  
+	
+	immediate = {
+		sound_effect = assassins_occupy_infidel_holding
+	}
+		
+	option = {	# dayum, gurl
+		name = EVTOPTAAmzCul.6955
+		ai_chance = { factor = 10 }
+	}
+}
+
+narrative_event = {		# player gets event that carthaginian army has appeared 
+	id = AmzCul.6956
+	title = EVTTITLAmzCul.6956
+	desc = EVTDESCAmzCul.6956
+	picture = GFX_evt_peasants
+	border = GFX_event_narrative_frame_intrigue
+	portrait = FROM
+	
+	is_triggered_only = yes  
+	
+	immediate = {
+		sound_effect = assassins_occupy_infidel_holding
+	}
+		
+	option = {	# dayum, gurl
+		name = EVTOPTAAmzCul.6956
+		ai_chance = { factor = 10 }
+	}
+}
+
+narrative_event = {		# player gets event that etruscan army has appeared 
+	id = AmzCul.6957
+	title = EVTTITLAmzCul.6957
+	desc = EVTDESCAmzCul.6957
+	picture = GFX_evt_peasants
+	border = GFX_event_narrative_frame_intrigue
+	portrait = FROM
+	
+	is_triggered_only = yes  
+	
+	immediate = {
+		sound_effect = assassins_occupy_infidel_holding
+	}
+		
+	option = {	# dayum, gurl
+		name = EVTOPTAAmzCul.6957
+		ai_chance = { factor = 10 }
+	}
+}
+
+narrative_event = {		# player gets event that pritani army has appeared 
+	id = AmzCul.6958
+	title = EVTTITLAmzCul.6958
+	desc = EVTDESCAmzCul.6958
+	picture = GFX_evt_peasants
+	border = GFX_event_narrative_frame_intrigue
+	portrait = FROM
+	
+	is_triggered_only = yes 
+	
+	immediate = {
+		sound_effect = assassins_occupy_infidel_holding
+	} 
+		
+	option = {	# dayum, gurl
+		name = EVTOPTAAmzCul.6958
+		ai_chance = { factor = 10 }
+	}
+}
+
+narrative_event = {		# player gets event that illyrian army has appeared 
+	id = AmzCul.6959
+	title = EVTTITLAmzCul.6959
+	desc = EVTDESCAmzCul.6959
+	picture = GFX_evt_peasants
+	border = GFX_event_narrative_frame_intrigue
+	portrait = FROM
+	
+	is_triggered_only = yes  
+	
+	immediate = {
+		sound_effect = assassins_occupy_infidel_holding
+	}
+		
+	option = {	# dayum, gurl
+		name = EVTOPTAAmzCul.6959
+		ai_chance = { factor = 10 }
+	}
+}
+
+narrative_event = {		# player gets event that valascan army has appeared 
+	id = AmzCul.6960
+	title = EVTTITLAmzCul.6960
+	desc = EVTDESCAmzCul.6960
+	picture = GFX_evt_peasants
+	border = GFX_event_narrative_frame_intrigue
+	portrait = FROM
+	
+	is_triggered_only = yes  
+	
+	immediate = {
+		sound_effect = assassins_occupy_infidel_holding
+	} 
+		
+	option = {	# dayum, gurl
+		name = EVTOPTAAmzCul.6960
+		ai_chance = { factor = 10 }
+	}
+}
+

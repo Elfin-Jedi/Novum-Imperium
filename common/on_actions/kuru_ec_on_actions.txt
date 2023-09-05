@@ -1,0 +1,21 @@
+
+# character
+on_birth = {
+	events = {
+		kuru_ec_charevt.0005 # Child born of mystic descent
+	}
+}
+
+# Any leader in battle on losing side is ROOT - opponent army leader is FROM
+on_battle_lost = {
+	events = {
+		kuru_ec_charevt.0008 # Loser is imprisoned
+	}
+}
+
+# Fires for all characters presumed to be in the Holding at the time. Siege winner unit owner in the 'new_character' scope, lost holding title in FROM, local character in ROOT.
+on_siege_over_loc_chars = {
+	events = {
+		kuru_ec_charevt.0009 # Character is imprisoned
+	}
+}

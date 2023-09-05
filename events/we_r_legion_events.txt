@@ -1,0 +1,132 @@
+namespace = we_r_legion_events
+character_event = {
+	id = we_r_legion_events.0
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		real_tier = EMPEROR
+		any_demesne_title = {
+			real_tier = EMPEROR
+			has_law = we_r_legion_laws_1
+		}
+		NAND = {
+			has_earmarked_regiments = legion_1
+			has_earmarked_regiments = legion_2
+			has_earmarked_regiments = legion_3
+			has_earmarked_regiments = legion_4
+			has_earmarked_regiments = legion_5
+		}
+	}
+
+	immediate = {
+		capital_scope = {
+			holder_scope = {
+				spawn_unit = {
+					owner = THIS
+					province = PREV
+					leader = none
+					troops = {
+						light_infantry = { 600 600 }
+						heavy_infantry = { 4800 4800 }
+						light_cavalry = { 100 100 }
+						knights = { 50 50 }
+					}
+					attrition = 1.0
+					reinforcing = yes
+					reinforce_rate_multiplier = 0.3
+					maintenance_multiplier = 1.0
+					earmark = legion_1
+					merge = yes
+				}
+				spawn_unit = {
+					owner = THIS
+					province = PREV
+					leader = none
+					troops = {
+						light_infantry = { 600 600 }
+						heavy_infantry = { 4800 4800 }
+						light_cavalry = { 100 100 }
+						knights = { 50 50 }
+					}
+					attrition = 1.0
+					reinforcing = yes
+					reinforce_rate_multiplier = 0.3
+					maintenance_multiplier = 1.0
+					earmark = legion_2
+					merge = yes
+				}
+				spawn_unit = {
+					owner = THIS
+					province = PREV
+					leader = none
+					troops = {
+						light_infantry = { 600 600 }
+						heavy_infantry = { 4800 4800 }
+						light_cavalry = { 100 100 }
+						knights = { 50 50 }
+					}
+					attrition = 1.0
+					reinforcing = yes
+					reinforce_rate_multiplier = 0.3
+					maintenance_multiplier = 1.0
+					earmark = legion_3
+					merge = yes
+				}
+				spawn_unit = {
+					owner = THIS
+					province = PREV
+					leader = none
+					troops = {
+						light_infantry = { 600 600 }
+						heavy_infantry = { 4800 4800 }
+						light_cavalry = { 100 100 }
+						knights = { 50 50 }
+					}
+					attrition = 1.0
+					reinforcing = yes
+					reinforce_rate_multiplier = 0.3
+					maintenance_multiplier = 1.0
+					earmark = legion_4
+					merge = yes
+				}
+				spawn_unit = {
+					owner = THIS
+					province = PREV
+					leader = none
+					troops = {
+						light_infantry = { 600 600 }
+						heavy_infantry = { 4800 4800 }
+						light_cavalry = { 100 100 }
+						knights = { 50 50 }
+					}
+					attrition = 1.0
+					reinforcing = yes
+					reinforce_rate_multiplier = 0.3
+					maintenance_multiplier = 1.0
+					earmark = legion_5
+					merge = yes
+				}
+			}
+		}
+	}
+}
+character_event = {
+	id = we_r_legion_events.1
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_demesne_title = {
+			has_law = we_r_legion_laws_0
+		}
+	}
+
+	immediate = {
+		disband_event_forces = legion_1
+		disband_event_forces = legion_2
+		disband_event_forces = legion_3
+		disband_event_forces = legion_4
+		disband_event_forces = legion_5
+	}
+}

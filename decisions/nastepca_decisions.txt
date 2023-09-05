@@ -1,0 +1,1309 @@
+targetted_decisions = {
+
+	nastepca = {
+		filter = all
+		ai_target_filter = all
+		ai = no
+
+		from_potential = {
+			ai = no
+		}
+		potential = {
+		}
+		allow = {
+		}
+		effect = {
+			ROOT = {
+				save_event_target_as = wybrany
+			}
+			FROM = {
+				character_event = { id = nastepca.1 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+plot_decisions = {
+	checking_smierc = {
+		is_high_prio = yes
+		ai = no
+
+		from_potential = {
+			has_game_rule = {
+				name = nastepca_multi
+				value = nastepca_singleplayer
+			}
+			gracz_trigger = yes
+		}
+		potential = {
+			has_game_rule = {
+				name = nastepca_multi
+				value = nastepca_singleplayer
+			}
+			gracz_trigger = yes
+		}
+		allow = {
+		}
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz1
+					}
+					any_character = {
+						has_character_flag = smierc1
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc1
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz2
+					}
+					any_character = {
+						has_character_flag = smierc2
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc2
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz3
+					}
+					any_character = {
+						has_character_flag = smierc3
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc3
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz4
+					}
+					any_character = {
+						has_character_flag = smierc4
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc4
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz5
+					}
+					any_character = {
+						has_character_flag = smierc5
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc5
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz6
+					}
+					any_character = {
+						has_character_flag = smierc6
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc6
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz7
+					}
+					any_character = {
+						has_character_flag = smierc7
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc7
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz8
+					}
+					any_character = {
+						has_character_flag = smierc8
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc8
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz9
+					}
+					any_character = {
+						has_character_flag = smierc9
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc9
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz10
+					}
+					any_character = {
+						has_character_flag = smierc10
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc10
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz11
+					}
+					any_character = {
+						has_character_flag = smierc11
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc11
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz12
+					}
+					any_character = {
+						has_character_flag = smierc12
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc12
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz13
+					}
+					any_character = {
+						has_character_flag = smierc13
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc13
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz14
+					}
+					any_character = {
+						has_character_flag = smierc14
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc14
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz15
+					}
+					any_character = {
+						has_character_flag = smierc15
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc15
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz16
+					}
+					any_character = {
+						has_character_flag = smierc16
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc16
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz17
+					}
+					any_character = {
+						has_character_flag = smierc17
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc17
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz18
+					}
+					any_character = {
+						has_character_flag = smierc18
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc18
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz19
+					}
+					any_character = {
+						has_character_flag = smierc19
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc19
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz20
+					}
+					any_character = {
+						has_character_flag = smierc20
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc20
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz21
+					}
+					any_character = {
+						has_character_flag = smierc21
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc21
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz22
+					}
+					any_character = {
+						has_character_flag = smierc22
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc22
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz23
+					}
+					any_character = {
+						has_character_flag = smierc23
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc23
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz24
+					}
+					any_character = {
+						has_character_flag = smierc24
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc24
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz25
+					}
+					any_character = {
+						has_character_flag = smierc25
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc25
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz26
+					}
+					any_character = {
+						has_character_flag = smierc26
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc26
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz27
+					}
+					any_character = {
+						has_character_flag = smierc27
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc27
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz28
+					}
+					any_character = {
+						has_character_flag = smierc28
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc28
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz29
+					}
+					any_character = {
+						has_character_flag = smierc29
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc29
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz30
+					}
+					any_character = {
+						has_character_flag = smierc30
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc30
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz31
+					}
+					any_character = {
+						has_character_flag = smierc31
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc31
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz32
+					}
+					any_character = {
+						has_character_flag = smierc32
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc32
+						}
+						save_event_target_as = toten
+					}
+				}
+				character_event = { id = nastepca.5 }
+			}
+			else = {
+				character_event = { id = nastepca.6 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	reseting_smierc = {
+		is_high_prio = yes
+		ai = no
+
+		from_potential = {
+			has_game_rule = {
+				name = nastepca_multi
+				value = nastepca_singleplayer
+			}
+			gracz_trigger = yes
+		}
+		potential = {
+			has_game_rule = {
+				name = nastepca_multi
+				value = nastepca_singleplayer
+			}
+			gracz_trigger = yes
+		}
+		allow = {
+		}
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz1
+					}
+					any_character = {
+						has_character_flag = smierc1
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc1
+						}
+						clr_character_flag = smierc1
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz2
+					}
+					any_character = {
+						has_character_flag = smierc2
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc2
+						}
+						clr_character_flag = smierc2
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz3
+					}
+					any_character = {
+						has_character_flag = smierc3
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc3
+						}
+						clr_character_flag = smierc3
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz4
+					}
+					any_character = {
+						has_character_flag = smierc4
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc4
+						}
+						clr_character_flag = smierc4
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz5
+					}
+					any_character = {
+						has_character_flag = smierc5
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc5
+						}
+						clr_character_flag = smierc5
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz6
+					}
+					any_character = {
+						has_character_flag = smierc6
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc6
+						}
+						clr_character_flag = smierc6
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz7
+					}
+					any_character = {
+						has_character_flag = smierc7
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc7
+						}
+						clr_character_flag = smierc7
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz8
+					}
+					any_character = {
+						has_character_flag = smierc8
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc8
+						}
+						clr_character_flag = smierc8
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz9
+					}
+					any_character = {
+						has_character_flag = smierc9
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc9
+						}
+						clr_character_flag = smierc9
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz10
+					}
+					any_character = {
+						has_character_flag = smierc10
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc10
+						}
+						clr_character_flag = smierc10
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz11
+					}
+					any_character = {
+						has_character_flag = smierc11
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc11
+						}
+						clr_character_flag = smierc11
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz12
+					}
+					any_character = {
+						has_character_flag = smierc12
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc12
+						}
+						clr_character_flag = smierc12
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz13
+					}
+					any_character = {
+						has_character_flag = smierc13
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc13
+						}
+						clr_character_flag = smierc13
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz14
+					}
+					any_character = {
+						has_character_flag = smierc14
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc14
+						}
+						clr_character_flag = smierc14
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz15
+					}
+					any_character = {
+						has_character_flag = smierc15
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc15
+						}
+						clr_character_flag = smierc15
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz16
+					}
+					any_character = {
+						has_character_flag = smierc16
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc16
+						}
+						clr_character_flag = smierc16
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz17
+					}
+					any_character = {
+						has_character_flag = smierc17
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc17
+						}
+						clr_character_flag = smierc17
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz18
+					}
+					any_character = {
+						has_character_flag = smierc18
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc18
+						}
+						clr_character_flag = smierc18
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz19
+					}
+					any_character = {
+						has_character_flag = smierc19
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc19
+						}
+						clr_character_flag = smierc19
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz20
+					}
+					any_character = {
+						has_character_flag = smierc20
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc20
+						}
+						clr_character_flag = smierc20
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz21
+					}
+					any_character = {
+						has_character_flag = smierc21
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc21
+						}
+						clr_character_flag = smierc21
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz22
+					}
+					any_character = {
+						has_character_flag = smierc22
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc22
+						}
+						clr_character_flag = smierc22
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz23
+					}
+					any_character = {
+						has_character_flag = smierc23
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc23
+						}
+						clr_character_flag = smierc23
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz24
+					}
+					any_character = {
+						has_character_flag = smierc24
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc24
+						}
+						clr_character_flag = smierc24
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz25
+					}
+					any_character = {
+						has_character_flag = smierc25
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc25
+						}
+						clr_character_flag = smierc25
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz26
+					}
+					any_character = {
+						has_character_flag = smierc26
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc26
+						}
+						clr_character_flag = smierc26
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz27
+					}
+					any_character = {
+						has_character_flag = smierc27
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc27
+						}
+						clr_character_flag = smierc27
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz28
+					}
+					any_character = {
+						has_character_flag = smierc28
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc28
+						}
+						clr_character_flag = smierc28
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz29
+					}
+					any_character = {
+						has_character_flag = smierc29
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc29
+						}
+						clr_character_flag = smierc29
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz30
+					}
+					any_character = {
+						has_character_flag = smierc30
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc30
+						}
+						clr_character_flag = smierc30
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz31
+					}
+					any_character = {
+						has_character_flag = smierc31
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc31
+						}
+						clr_character_flag = smierc31
+					}
+				}
+				
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_character_flag = gracz32
+					}
+					any_character = {
+						has_character_flag = smierc32
+					}
+				}
+				any_character = {
+					if = {
+						limit = {
+							has_character_flag = smierc32
+						}
+						clr_character_flag = smierc32
+					}
+				}
+				
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

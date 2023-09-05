@@ -1,0 +1,554 @@
+#CODE;NAME;;;;;;;;;;;;;x
+#CODE_desc;DESCRIPTION;;;;;;;;;;;;;x
+
+bloodlines_enable;Show Bloodlines Menu;;;;;;;;;;;;;x
+bloodlines_enable_desc;Show the bloodlines menu.;;;;;;;;;;;;;x
+
+bloodlines_disable;Hide Bloodline Menu;;;;;;;;;;;;;x
+bloodlines_disable_desc;Hide the bloodlines menu.;;;;;;;;;;;;;x
+
+bloodlines_remove_bloodlines;--------Remove All Bloodlines;;;;;;;;;;;;;x
+bloodlines_remove_bloodlines_desc;Removes all bloodlines from character, including unique ones such as Carolingian blood bloodline;;;;;;;;;;;;;x
+
+bloodlines_remove_created_bloodlines;--------Remove All Created Bloodlines;;;;;;;;;;;;;x
+bloodlines_remove_created_bloodlines_desc;Removes all created bloodlines from character, wont remove saintly bloodlines or ancestor veneration bloodlines since they aren't flagged as such by the game.;;;;;;;;;;;;;x
+
+bloodlines_pure_murder_enable;----Show Pure Murder Bloodlines;;;;;;;;;;;;;x
+bloodlines_pure_murder_enable_desc;Show Pure Murder Bloodlines;;;;;;;;;;;;;x
+
+bloodlines_pure_murder_disable;----Hide Pure Murder Bloodlines;;;;;;;;;;;;;x
+bloodlines_pure_murder_disable_desc;Hide Pure Murder Bloodlines;;;;;;;;;;;;;x
+
+add_pure_murder_1;--------Add Happy Child Bloodline;;;;;;;;;;;;;x
+add_pure_murder_1_desc;Adds the "Happy Child" bloodline;;;;;;;;;;;;;x
+
+remove_pure_murder_1;------------Remove Happy Child Bloodline;;;;;;;;;;;;;x
+remove_pure_murder_1_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_pure_murder_2;--------Add Macabre Banquet Bloodline;;;;;;;;;;;;;x
+add_pure_murder_2_desc;Adds the "Macabre Banquet" bloodline;;;;;;;;;;;;;x
+
+remove_pure_murder_2;------------Remove Macabre Banquet Bloodline;;;;;;;;;;;;;x
+remove_pure_murder_2_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_pure_murder_3;--------Add Silent Killer Bloodline;;;;;;;;;;;;;x
+add_pure_murder_3_desc;Adds the "Silent Killer" bloodline;;;;;;;;;;;;;x
+
+remove_pure_murder_3;------------Remove Silent Killer Bloodline;;;;;;;;;;;;;x
+remove_pure_murder_3_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_pure_murder_4;--------Add The Butcher Bloodline;;;;;;;;;;;;;x
+add_pure_murder_4_desc;Adds "The Butcher" bloodline;;;;;;;;;;;;;x
+
+remove_pure_murder_4;------------Remove The Butcher Bloodline;;;;;;;;;;;;;x
+remove_pure_murder_4_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_pure_murder_5;--------Add The Dragon King Bloodline;;;;;;;;;;;;;x
+add_pure_murder_5_desc;Adds "The Dragon King" bloodline;;;;;;;;;;;;;x
+
+remove_pure_murder_5;------------Remove The Dragon King Bloodline;;;;;;;;;;;;;x
+remove_pure_murder_5_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+bloodlines_pure_war_enable;----Show Pure War Bloodlines;;;;;;;;;;;;;x
+bloodlines_pure_war_enable_desc;Show Pure War Bloodlines;;;;;;;;;;;;;x
+
+bloodlines_pure_war_disable;----Hide Pure War Bloodlines;;;;;;;;;;;;;x
+bloodlines_pure_war_disable_desc;Hide Pure War Bloodlines;;;;;;;;;;;;;x
+
+add_pure_war_1;--------Add The Li'l Warrior Philosopher Bloodline;;;;;;;;;;;;;x
+add_pure_war_1_desc;Adds "The Li'l Warrior Philosopher" bloodline;;;;;;;;;;;;;x
+
+remove_pure_war_1;------------Remove The Li'l Warrior Philosopher Bloodline;;;;;;;;;;;;;x
+remove_pure_war_1_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_pure_war_2;--------Add The Perfect Knight Bloodline;;;;;;;;;;;;;x
+add_pure_war_2_desc;Adds "The Perfect Knight" bloodline;;;;;;;;;;;;;x
+
+remove_pure_war_2;------------Remove The Perfect Knight Bloodline;;;;;;;;;;;;;x
+remove_pure_war_2_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_pure_war_3;--------Add The Conqueror Bloodline;;;;;;;;;;;;;x
+add_pure_war_3_desc;Adds "The Conqueror" bloodline;;;;;;;;;;;;;x
+
+remove_pure_war_3;------------Remove The Conqueror Bloodline;;;;;;;;;;;;;x
+remove_pure_war_3_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_pure_war_4;--------Add The Warrior Philosopher Bloodline;;;;;;;;;;;;;x
+add_pure_war_4_desc;Adds "The Warrior Philosopher" bloodline;;;;;;;;;;;;;x
+
+remove_pure_war_4;------------Remove The Warrior Philosopher Bloodline;;;;;;;;;;;;;x
+remove_pure_war_4_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+bloodlines_pure_peace_enable;----Show Pure Peace Bloodlines;;;;;;;;;;;;;x
+bloodlines_pure_peace_enable_desc;Show Pure Peace Bloodlines;;;;;;;;;;;;;x
+
+bloodlines_pure_peace_disable;----Hide Pure Peace Bloodlines;;;;;;;;;;;;;x
+bloodlines_pure_peace_disable_desc;Hide Pure Peace Bloodlines;;;;;;;;;;;;;x
+
+add_pure_peace_1;--------Add The Blessed Child Bloodline;;;;;;;;;;;;;x
+add_pure_peace_1_desc;Adds "The Blessed Child Bloodline";;;;;;;;;;;;;x
+
+remove_pure_peace_1;------------Remove The Blessed Child Bloodline;;;;;;;;;;;;;x
+remove_pure_peace_1_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_pure_peace_2;--------Add The Protector Bloodline;;;;;;;;;;;;;x
+add_pure_peace_2_desc;Adds "The Protector Bloodline";;;;;;;;;;;;;x
+
+remove_pure_peace_2;------------Remove The Protector Bloodline;;;;;;;;;;;;;x
+remove_pure_peace_2_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_pure_peace_3;--------Add The Benefactor Bloodline ;;;;;;;;;;;;;x
+add_pure_peace_3_desc;Adds "The Benefactor Bloodline";;;;;;;;;;;;;x
+
+remove_pure_peace_3;------------Remove The Benefactor Bloodline ;;;;;;;;;;;;;x
+remove_pure_peace_3_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+bloodlines_pure_building_enable;----Show Pure Building Bloodlines;;;;;;;;;;;;;x
+bloodlines_pure_building_enable_desc;Show Pure Building Bloodlines;;;;;;;;;;;;;x
+
+bloodlines_pure_building_disable;----Hide Pure Building Bloodlines;;;;;;;;;;;;;x
+bloodlines_pure_building_disable_desc;Hide Pure Building Bloodlines;;;;;;;;;;;;;x
+
+add_pure_building_1;--------Add The Architect Bloodline;;;;;;;;;;;;;x
+add_pure_building_1_desc;Adds "The Architect Bloodline";;;;;;;;;;;;;x
+
+remove_pure_building_1;------------Remove The Architect Bloodline;;;;;;;;;;;;;x
+remove_pure_building_1_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_pure_building_2;--------Add The Castellan Bloodline;;;;;;;;;;;;;x
+add_pure_building_2_desc;Adds "The Castellan Bloodline";;;;;;;;;;;;;x
+
+remove_pure_building_2;------------Remove The Castellan Bloodline;;;;;;;;;;;;;x
+remove_pure_building_2_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_pure_building_3;--------Add The Carpenter Bloodline;;;;;;;;;;;;;x
+add_pure_building_3_desc;Adds "The Carpenter Bloodline";;;;;;;;;;;;;x
+
+remove_pure_building_3;------------Remove The Carpenter Bloodline;;;;;;;;;;;;;x
+remove_pure_building_3_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+bloodlines_hybrid_enable;----Show Hybrid Bloodlines;;;;;;;;;;;;;x
+bloodlines_hybrid_enable_desc;Show Hybrid Bloodlines;;;;;;;;;;;;;x
+
+bloodlines_hybrid_disable;----Hide Hybrid Bloodlines;;;;;;;;;;;;;x
+bloodlines_hybrid_disable_desc;Hide Hybrid Bloodlines;;;;;;;;;;;;;x
+
+add_hybrid_1;--------Add The Murder/War Bloodline;;;;;;;;;;;;;x
+add_hybrid_1_desc;Adds "The Murder/War Bloodline";;;;;;;;;;;;;x
+
+remove_hybrid_1;------------Remove The Murder/War Bloodline;;;;;;;;;;;;;x
+remove_hybrid_1_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_hybrid_2;--------Add The Murder/Peace Bloodline;;;;;;;;;;;;;x
+add_hybrid_2_desc;Adds "The Murder/Peace Bloodline";;;;;;;;;;;;;x
+
+remove_hybrid_2;------------Remove The Murder/Peace Bloodline;;;;;;;;;;;;;x
+remove_hybrid_2_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_hybrid_3;--------Add The Builder Bloodline;;;;;;;;;;;;;x
+add_hybrid_3_desc;Adds "The Builder Bloodline";;;;;;;;;;;;;x
+
+remove_hybrid_3;------------Remove Builder Bloodline;;;;;;;;;;;;;x
+remove_hybrid_3_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_hybrid_4;--------Add The Murder/Builder Bloodline;;;;;;;;;;;;;x
+add_hybrid_4_desc;Adds "The Murder/Builder Bloodline";;;;;;;;;;;;;x
+
+remove_hybrid_4;------------Remove Murder/Builder Bloodline;;;;;;;;;;;;;x
+remove_hybrid_4_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_hybrid_5;--------Add The Peace/Architect Bloodline;;;;;;;;;;;;;x
+add_hybrid_5_desc;Adds "The Peace/Architect Bloodline";;;;;;;;;;;;;x
+
+remove_hybrid_5;------------Remove Peace/Architect Bloodline;;;;;;;;;;;;;x
+remove_hybrid_5_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_hybrid_6;--------Add The Peace/Castellan Bloodline;;;;;;;;;;;;;x
+add_hybrid_6_desc;Adds "The Peace/Castellan Bloodline";;;;;;;;;;;;;x
+
+remove_hybrid_6;------------Remove Peace/Castellan Bloodline;;;;;;;;;;;;;x
+remove_hybrid_6_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_hybrid_7;--------Add The Peace/Monumental Bloodline;;;;;;;;;;;;;x
+add_hybrid_7_desc;Adds "The Peace/Monumental Bloodline";;;;;;;;;;;;;x
+
+remove_hybrid_7;------------Remove The Peace/Monumental Bloodline;;;;;;;;;;;;;x
+remove_hybrid_7_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+bloodlines_event_enable;----Show Event-based Bloodlines;;;;;;;;;;;;;x
+bloodlines_event_enable_desc;Show Event-based Bloodlines;;;;;;;;;;;;;x
+
+bloodlines_event_disable;----Hide Event-based Bloodlines;;;;;;;;;;;;;x
+bloodlines_event_disable_desc;Hide Event-based Bloodlines;;;;;;;;;;;;;x
+
+add_event_1;--------Add The Family Bloodline;;;;;;;;;;;;;x
+add_event_1_desc;Adds "The Family Bloodline";;;;;;;;;;;;;x
+
+remove_event_1;------------Remove Family Bloodline;;;;;;;;;;;;;x
+remove_event_1_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_event_2;--------Add The Philosopher Bloodline;;;;;;;;;;;;;x
+add_event_2_desc;Adds "The Philosopher Bloodline";;;;;;;;;;;;;x
+
+remove_event_2;------------Remove Philosopher Bloodline;;;;;;;;;;;;;x
+remove_event_2_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_event_3;--------Add The Benevolence Bloodline;;;;;;;;;;;;;x
+add_event_3_desc;Adds "The Benevolence Bloodline";;;;;;;;;;;;;x
+
+remove_event_3;------------Remove Benevolence Bloodline;;;;;;;;;;;;;x
+remove_event_3_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_event_4;--------Add The Ruthlessness Bloodline;;;;;;;;;;;;;x
+add_event_4_desc;Adds "The Ruthlessness Bloodline";;;;;;;;;;;;;x
+
+remove_event_4;------------Remove Ruthlessness Bloodline;;;;;;;;;;;;;x
+remove_event_4_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_event_5;--------Add The Theology Bloodline;;;;;;;;;;;;;x
+add_event_5_desc;Adds "The Theology Bloodline";;;;;;;;;;;;;x
+
+remove_event_5;------------Remove Theology Bloodline;;;;;;;;;;;;;x
+remove_event_5_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_event_6;--------Add The Zeal Bloodline;;;;;;;;;;;;;x
+add_event_6_desc;Adds "The Zeal Bloodline";;;;;;;;;;;;;x
+
+remove_event_6;------------Remove Zeal Bloodline;;;;;;;;;;;;;x
+remove_event_6_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+bloodlines_special_enable;----Show Special Bloodlines;;;;;;;;;;;;;x
+bloodlines_special_enable_desc;Show Special Bloodlines;;;;;;;;;;;;;x
+
+bloodlines_special_disable;----Hide Special Bloodlines;;;;;;;;;;;;;x
+bloodlines_special_disable_desc;Hide Special Bloodlines;;;;;;;;;;;;;x
+
+add_special_1;--------Add The Heir to Alexander Bloodline;;;;;;;;;;;;;x
+add_special_1_desc;Adds "The Heir to Alexander Bloodline";;;;;;;;;;;;;x
+
+remove_special_1;------------Remove Heir to Alexander Bloodline;;;;;;;;;;;;;x
+remove_special_1_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_special_2;--------Add The Ashoka Bloodline;;;;;;;;;;;;;x
+add_special_2_desc;Adds "The Ashoka Bloodline";;;;;;;;;;;;;x
+
+remove_special_2;------------Remove Ashoka Bloodline;;;;;;;;;;;;;x
+remove_special_2_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_special_3;--------Add The Immortality Bloodline;;;;;;;;;;;;;x
+add_special_3_desc;Adds "The Immortality Bloodline";;;;;;;;;;;;;x
+
+remove_special_3;------------Remove Immortality Bloodline;;;;;;;;;;;;;x
+remove_special_3_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_special_4;--------Add The Chinese Imperial Bloodline;;;;;;;;;;;;;x
+add_special_4_desc;Adds "The Chinese Imperial Bloodline";;;;;;;;;;;;;x
+
+remove_special_4;------------Remove Chinese Imperial Bloodline;;;;;;;;;;;;;x
+remove_special_4_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_special_5;--------Add The Matilde Bloodline;;;;;;;;;;;;;x
+add_special_5_desc;Adds "The Matilde Bloodline";;;;;;;;;;;;;x
+
+remove_special_5;------------Remove Matilde Bloodline;;;;;;;;;;;;;x
+remove_special_5_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_special_6;--------Add The True Matilde Bloodline;;;;;;;;;;;;;x
+add_special_6_desc;Adds "The True Matilde Bloodline";;;;;;;;;;;;;x
+
+remove_special_6;------------Remove True Matilde Bloodline;;;;;;;;;;;;;x
+remove_special_6_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_special_7;--------Add The Samrat Chakravartin Bloodline;;;;;;;;;;;;;x
+add_special_7_desc;Adds "The Samrat Chakravartin Bloodline";;;;;;;;;;;;;x
+
+remove_special_7;------------Remove Samrat Chakravartin Bloodline;;;;;;;;;;;;;x
+remove_special_7_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_special_8;--------Add The Saoshyant Bloodline;;;;;;;;;;;;;x
+add_special_8_desc;Adds "The Saoshyant Bloodline";;;;;;;;;;;;;x
+
+remove_special_8;------------Remove Saoshyant Bloodline;;;;;;;;;;;;;x
+remove_special_8_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_special_9;--------Add The Restored Israel Bloodline;;;;;;;;;;;;;x
+add_special_9_desc;Adds "The Restored Israel Bloodline";;;;;;;;;;;;;x
+
+remove_special_9;------------Remove Restored Israel Bloodline;;;;;;;;;;;;;x
+remove_special_9_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_special_10;--------Add The Roman Emperor Bloodline;;;;;;;;;;;;;x
+add_special_10_desc;Adds "The Roman Emperor Bloodline";;;;;;;;;;;;;x
+
+remove_special_10;------------Remove Roman Emperor Bloodline;;;;;;;;;;;;;x
+remove_special_10_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_special_11;--------Add The Blood of Phalaris Bloodline;;;;;;;;;;;;;x
+add_special_11_desc;Adds "The Blood of Phalaris Bloodline";;;;;;;;;;;;;x
+
+remove_special_11;------------Remove Blood of Phalaris Bloodline;;;;;;;;;;;;;x
+remove_special_11_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_special_12;--------Adds Teuta's Bloodline;;;;;;;;;;;;;x
+add_special_12_desc;Adds "Teuta's Bloodline";;;;;;;;;;;;;x
+
+remove_special_12;------------Remove Teuta's Bloodline;;;;;;;;;;;;;x
+remove_special_12_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_special_13;--------Add The Child of Destiny Bloodline;;;;;;;;;;;;;x
+add_special_13_desc;Adds "The Child of Destiny Bloodline";;;;;;;;;;;;;x
+
+remove_special_13;------------Remove Child of Destiny Bloodline;;;;;;;;;;;;;x
+remove_special_13_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_special_14;--------Add The Seaking/Queen Bloodline;;;;;;;;;;;;;x
+add_special_14_desc;Adds "The Seaking/Queen Bloodline";;;;;;;;;;;;;x
+
+remove_special_14;------------Remove Seaking/Queen Bloodline;;;;;;;;;;;;;x
+remove_special_14_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_special_15;--------Add The Bloodthirsty Bloodline;;;;;;;;;;;;;x
+add_special_15_desc;Adds "The Bloodthirsty Bloodline";;;;;;;;;;;;;x
+
+remove_special_15;------------Remove Bloodthirsty Bloodline;;;;;;;;;;;;;x
+remove_special_15_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_special_16;--------Add The Duelist Bloodline;;;;;;;;;;;;;x
+add_special_16_desc;Adds "The Duelist Bloodline";;;;;;;;;;;;;x
+
+remove_special_16;------------Remove Duelist Bloodline;;;;;;;;;;;;;x
+remove_special_16_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_special_17;--------Add The Slavic Union Emperor Bloodline;;;;;;;;;;;;;x
+add_special_17_desc;Adds "The Slavic Union Emperor Bloodline";;;;;;;;;;;;;x
+
+remove_special_17;------------Remove Slavic Union Emperor Bloodline;;;;;;;;;;;;;x
+remove_special_17_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+bloodlines_crusade_enable;----Show Crusade Bloodlines;;;;;;;;;;;;;x
+bloodlines_crusade_enable_desc;Show Crusade Bloodlines;;;;;;;;;;;;;x
+
+bloodlines_crusade_disable;----Hide Crusade Bloodlines;;;;;;;;;;;;;x
+bloodlines_crusade_disable_desc;Hide Crusade Bloodlines;;;;;;;;;;;;;x
+
+add_crusade_1;--------Add The Grand Crusader Bloodline;;;;;;;;;;;;;x
+add_crusade_1_desc;Adds "The Grand Crusader Bloodline";;;;;;;;;;;;;x
+
+remove_crusade_1;------------Remove Grand Crusader Bloodline;;;;;;;;;;;;;x
+remove_crusade_1_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_crusade_2;--------Add The Crusader Commander Bloodline;;;;;;;;;;;;;x
+add_crusade_2_desc;Adds "The Crusader Commander Bloodline";;;;;;;;;;;;;x
+
+remove_crusade_2;------------Remove Crusader Commander Bloodline;;;;;;;;;;;;;x
+remove_crusade_2_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_crusade_3;--------Add The Crusade Lord Bloodline;;;;;;;;;;;;;x
+add_crusade_3_desc;Adds "The Crusade Lord Bloodline";;;;;;;;;;;;;x
+
+remove_crusade_3;------------Remove Crusade Lord Bloodline;;;;;;;;;;;;;x
+remove_crusade_3_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_crusade_4;--------Add The Lord of Outremer Bloodline;;;;;;;;;;;;;x
+add_crusade_4_desc;Adds "The Lord of Outremer Bloodline";;;;;;;;;;;;;x
+
+remove_crusade_4;------------Remove Lord of Outremer Bloodline;;;;;;;;;;;;;x
+remove_crusade_4_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_crusade_5;--------Add The Children's Crusade Bloodline;;;;;;;;;;;;;x
+add_crusade_5_desc;Adds "The Children's Crusade Bloodline";;;;;;;;;;;;;x
+
+remove_crusade_5;------------Remove Children's Crusade Bloodline;;;;;;;;;;;;;x
+remove_crusade_5_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_crusade_6;--------Add The Destroyer of Byzantium Bloodline;;;;;;;;;;;;;x
+add_crusade_6_desc;Adds "The Destroyer of Byzantium Bloodline";;;;;;;;;;;;;x
+
+remove_crusade_6;------------Remove Destroyer of Byzantium Bloodline;;;;;;;;;;;;;x
+remove_crusade_6_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_crusade_7;--------Add The Northern Crusade Bloodline;;;;;;;;;;;;;x
+add_crusade_7_desc;Adds "The Northern Crusade Bloodline";;;;;;;;;;;;;x
+
+remove_crusade_7;------------Remove Northern Crusade Bloodline;;;;;;;;;;;;;x
+remove_crusade_7_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_crusade_8;--------Add The Reconquista Bloodline;;;;;;;;;;;;;x
+add_crusade_8_desc;Adds "The Reconquista Bloodline";;;;;;;;;;;;;x
+
+remove_crusade_8;------------Remove Reconquista Bloodline;;;;;;;;;;;;;x
+remove_crusade_8_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_crusade_9;--------Add The Reconquista Cid Bloodline;;;;;;;;;;;;;x
+add_crusade_9_desc;Adds "The Reconquista Cid Bloodline";;;;;;;;;;;;;x
+
+remove_crusade_9;------------Remove Reconquista Cid Bloodline;;;;;;;;;;;;;x
+remove_crusade_9_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_crusade_10;--------Add Boudica Bloodline;;;;;;;;;;;;;x
+add_crusade_10_desc;Adds "The Boudica Bloodline";;;;;;;;;;;;;x
+
+remove_crusade_10;------------Remove Boudica Bloodline;;;;;;;;;;;;;x
+remove_crusade_10_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+bloodlines_saint_enable;----Show Saintly Bloodlines;;;;;;;;;;;;;x
+bloodlines_saint_enable_desc;Show Saintly Bloodlines;;;;;;;;;;;;;x
+
+bloodlines_saint_disable;----Hide Saintly Bloodlines;;;;;;;;;;;;;x
+bloodlines_saint_disable_desc;Hide Saintly Bloodlines;;;;;;;;;;;;;x
+
+add_saint_1;--------Add The Defender of the Faith Bloodline;;;;;;;;;;;;;x
+add_saint_1_desc;Adds "The Defender of the Faith Bloodline";;;;;;;;;;;;;x
+
+remove_saint_1;------------Remove Defender of the Faith Bloodline;;;;;;;;;;;;;x
+remove_saint_1_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_saint_2;--------Add The Monastic Saintly Bloodline;;;;;;;;;;;;;x
+add_saint_2_desc;Adds "The Monastic Saintly Bloodline";;;;;;;;;;;;;x
+
+remove_saint_2;------------Remove Monastic Saintly Bloodline;;;;;;;;;;;;;x
+remove_saint_2_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_saint_3;--------Add The Cultural Saintly Bloodline;;;;;;;;;;;;;x
+add_saint_3_desc;Adds "The Cultural Saintly Bloodline";;;;;;;;;;;;;x
+
+remove_saint_3;------------Remove Cultural Saintly Bloodline;;;;;;;;;;;;;x
+remove_saint_3_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_saint_4;--------Add The Saintly Inquisitional Bloodline;;;;;;;;;;;;;x
+add_saint_4_desc;Adds "The Inquisitional Bloodline";;;;;;;;;;;;;x
+
+remove_saint_4;------------Remove Saintly Inquisitional Bloodline;;;;;;;;;;;;;x
+remove_saint_4_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_saint_5;--------Add The Saintly Jewish Bloodline;;;;;;;;;;;;;x
+add_saint_5_desc;Adds "The Saintly Jewish Bloodline";;;;;;;;;;;;;x
+
+remove_saint_5;------------Remove Saintly Jewish Bloodline;;;;;;;;;;;;;x
+remove_saint_5_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_saint_6;--------Add The Saintly Theologians Bloodline;;;;;;;;;;;;;x
+add_saint_6_desc;Adds "The Saintly Theologians Bloodline";;;;;;;;;;;;;x
+
+remove_saint_6;------------Remove Saintly Theologians  Bloodline;;;;;;;;;;;;;x
+remove_saint_6_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_saint_7;--------Add The Wicked Saintly Bloodline Bloodline;;;;;;;;;;;;;x
+add_saint_7_desc;Adds "The Wicked Saintly Bloodline Bloodline";;;;;;;;;;;;;x
+
+remove_saint_7;------------Remove Wicked Saintly Bloodline  Bloodline;;;;;;;;;;;;;x
+remove_saint_7_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+bloodlines_ances_enable;----Show Ancestor Veneration Bloodlines;;;;;;;;;;;;;x
+bloodlines_ances_enable_desc;Show Ancestor Veneration Bloodlines;;;;;;;;;;;;;x
+
+bloodlines_ances_disable;----Hide Ancestor Veneration Bloodlines;;;;;;;;;;;;;x
+bloodlines_ances_disable_desc;Hide Ancestor Veneration Bloodlines;;;;;;;;;;;;;x
+
+add_ances_1;--------Add The Great Heroes Bloodline;;;;;;;;;;;;;x
+add_ances_1_desc;Adds "The Great Heroes Bloodline";;;;;;;;;;;;;x
+
+remove_ances_1;------------Remove Great Heroes Bloodline;;;;;;;;;;;;;x
+remove_ances_1_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_ances_2;--------Add The Bastard Bloodline;;;;;;;;;;;;;x
+add_ances_2_desc;Adds "The Bastard Bloodline";;;;;;;;;;;;;x
+
+remove_ances_2;------------Remove Bastard Bloodline;;;;;;;;;;;;;x
+remove_ances_2_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_ances_3;--------Add The Sky Burial Bloodline;;;;;;;;;;;;;x
+add_ances_3_desc;Adds "The Sky Burial Bloodline";;;;;;;;;;;;;x
+
+remove_ances_3;------------Remove Sky Burial Bloodline;;;;;;;;;;;;;x
+remove_ances_3_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_ances_4;--------Add The Mercenary Bloodline;;;;;;;;;;;;;x
+add_ances_4_desc;Adds "The Mercenary Bloodline";;;;;;;;;;;;;x
+
+remove_ances_4;------------Remove Mercenary Bloodline;;;;;;;;;;;;;x
+remove_ances_4_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_ances_5;--------Add The Tanistry Bloodline;;;;;;;;;;;;;x
+add_ances_5_desc;Adds "The Tanistry Bloodline";;;;;;;;;;;;;x
+
+remove_ances_5;------------Remove Tanistry Bloodline;;;;;;;;;;;;;x
+remove_ances_5_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_ances_6;--------Add The Raiding Bloodline;;;;;;;;;;;;;x
+add_ances_6_desc;Adds "The Raiding Bloodline";;;;;;;;;;;;;x
+
+remove_ances_6;------------Remove Raiding Bloodline;;;;;;;;;;;;;x
+remove_ances_6_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_ances_7;--------Add The Dueling Bloodline;;;;;;;;;;;;;x
+add_ances_7_desc;Adds "The Dueling Bloodline";;;;;;;;;;;;;x
+
+remove_ances_7;------------Remove Dueling Bloodline;;;;;;;;;;;;;x
+remove_ances_7_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+bloodlines_lodge_enable;----Show Warrior Lodge Bloodlines;;;;;;;;;;;;;x
+bloodlines_lodge_enable_desc;Show Warrior Lodge Bloodlines;;;;;;;;;;;;;x
+
+bloodlines_lodge_disable;----Hide Warrior Lodge Bloodlines;;;;;;;;;;;;;x
+bloodlines_lodge_disable_desc;Hide Warrior Lodge Bloodlines;;;;;;;;;;;;;x
+
+add_lodge_1;--------Add The Legendary Eagle Hunter Bloodline;;;;;;;;;;;;;x
+add_lodge_1_desc;Adds "The Legendary Eagle Hunter Bloodline";;;;;;;;;;;;;x
+
+remove_lodge_1;------------Remove Legendary Eagle Hunter Bloodline;;;;;;;;;;;;;x
+remove_lodge_1_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_lodge_2;--------Add The Legendary Dog Hunter Bloodline;;;;;;;;;;;;;x
+add_lodge_2_desc;Adds "The Legendary Dog Hunter Bloodline";;;;;;;;;;;;;x
+
+remove_lodge_2;------------Remove Legendary Dog Hunter Bloodline;;;;;;;;;;;;;x
+remove_lodge_2_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_lodge_3;--------Add The Legendary Battle Survivor Bloodline;;;;;;;;;;;;;x
+add_lodge_3_desc;Adds "The Legendary Battle Survivor Bloodline";;;;;;;;;;;;;x
+
+remove_lodge_3;------------Remove Legendary Battle Survivor Bloodline;;;;;;;;;;;;;x
+remove_lodge_3_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_lodge_4;--------Add The Legendary Leader Bloodline;;;;;;;;;;;;;x
+add_lodge_4_desc;Adds "The Legendary Leader Bloodline";;;;;;;;;;;;;x
+
+remove_lodge_4;------------Remove Legendary Leader Bloodline;;;;;;;;;;;;;x
+remove_lodge_4_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_lodge_5;--------Add The Legendary Warrior Bloodline;;;;;;;;;;;;;x
+add_lodge_5_desc;Adds "The Legendary Warrior Bloodline";;;;;;;;;;;;;x
+
+remove_lodge_5;------------Remove Legendary Warrior Bloodline;;;;;;;;;;;;;x
+remove_lodge_5_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_lodge_6;--------Add The Legendary Soldier Bloodline;;;;;;;;;;;;;x
+add_lodge_6_desc;Adds "The Legendary Soldier Bloodline";;;;;;;;;;;;;x
+
+remove_lodge_6;------------Remove Legendary Soldier Bloodline;;;;;;;;;;;;;x
+remove_lodge_6_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_lodge_7;--------Add The Legendary Battle Bard Bloodline;;;;;;;;;;;;;x
+add_lodge_7_desc;Adds "The Legendary Battle Bard Bloodline";;;;;;;;;;;;;x
+
+remove_lodge_7;------------Remove Legendary Battle Bard Bloodline;;;;;;;;;;;;;x
+remove_lodge_7_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_lodge_8;--------Add The Legendary Commander Bloodline;;;;;;;;;;;;;x
+add_lodge_8_desc;Adds "The Legendary Commander Bloodline";;;;;;;;;;;;;x
+
+remove_lodge_8;------------Remove Legendary Commander Bloodline;;;;;;;;;;;;;x
+remove_lodge_8_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_lodge_9;--------Add The Legendary Captor Bloodline;;;;;;;;;;;;;x
+add_lodge_9_desc;Adds "The Legendary Captor Bloodline";;;;;;;;;;;;;x
+
+remove_lodge_9;------------Remove Legendary Captor Bloodline;;;;;;;;;;;;;x
+remove_lodge_9_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x
+
+add_lodge_10;--------Add The Legendary Raider Bloodline;;;;;;;;;;;;;x
+add_lodge_10_desc;Adds "The Legendary Raider Bloodline";;;;;;;;;;;;;x
+
+remove_lodge_10;------------Remove Legendary Raider Bloodline;;;;;;;;;;;;;x
+remove_lodge_10_desc;Removes all bloodlines of this type;;;;;;;;;;;;;x

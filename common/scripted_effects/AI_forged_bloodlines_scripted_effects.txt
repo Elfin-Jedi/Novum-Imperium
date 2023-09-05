@@ -1,0 +1,123 @@
+AI_forged_bloodlines_helper_efect = {
+	trigger_switch = {
+		on_trigger = diplomacy
+		18 = { change_variable = { which = bloodline_peaceful_years value = 3 } }
+		12 = { change_variable = { which = bloodline_peaceful_years value = 1 } }
+	}
+	trigger_switch = {
+		on_trigger = intrigue
+		18 = { change_variable = { which = bloodline_murdered_people value = 3 } }
+		12 = { change_variable = { which = bloodline_murdered_people value = 1 } }
+	}
+	if = {
+		limit = {
+			OR = {
+				is_nomadic = yes
+				is_tribal = yes
+			}
+		}
+		trigger_switch = {
+			on_trigger = martial 
+			20 = {
+				change_variable = { which = bloodline_won_wars value = 3 }
+			}
+			15 = {
+				change_variable = { which = bloodline_won_wars value = 2 }
+			}
+			10 = {
+				change_variable = { which = bloodline_won_wars value = 1 }
+			}
+		}
+	}
+	else = {
+		trigger_switch = {
+			on_trigger = martial 
+			18 = {
+				change_variable = { which = bloodline_built_holdings value = 2 }
+				change_variable = { which = bloodline_built_castles value = 2 }
+			}
+			12 = {
+				change_variable = { which = bloodline_built_holdings value = 1 }
+				change_variable = { which = bloodline_built_castles value = 1 }
+			}
+		}
+		trigger_switch = {
+			on_trigger = stewardship
+			18 = {
+				change_variable = { which = bloodline_built_holdings value = 2 }
+				change_variable = { which = bloodline_built_cities value = 2 }
+			}
+			12 = {
+				change_variable = { which = bloodline_built_holdings value = 1 }
+				change_variable = { which = bloodline_built_cities value = 1 }
+			}
+		}
+		trigger_switch = {
+			on_trigger = learning
+			18 = {
+				change_variable = { which = bloodline_built_holdings value = 2 }
+				change_variable = { which = bloodline_built_temples value = 2 }
+			}
+			12 = {
+				change_variable = { which = bloodline_built_holdings value = 1 }
+				change_variable = { which = bloodline_built_temples value = 1 }
+			}
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				trait = cruel
+				trait = lunatic
+				trait = possessed
+			}
+		}
+		change_variable = { which = bloodline_murdered_people value = 1 }
+	}
+	if = {
+		limit = {
+			OR = {
+				trait = cannibal
+				trait = impaler
+			}
+		}
+		change_variable = { which = bloodline_murdered_people value = 1 }
+	}
+	if = {
+		limit = {
+			OR = {
+				trait = charitable
+				trait = craven
+				trait = kind
+			}
+		}
+		change_variable = { which = bloodline_peaceful_years value = 1 }
+	}
+	if = {
+		limit = {
+			trait = architect
+		}
+		change_variable = { which = bloodline_built_holdings value = 1 }
+		change_variable = { which = bloodline_built_castles value = 1 }
+	}
+	if = {
+		limit = {
+			OR = {
+				trait = administrator
+				trait = gardener
+			}
+		}
+		change_variable = { which = bloodline_built_holdings value = 1 }
+		change_variable = { which = bloodline_built_cities value = 1 }
+	}
+	if = {
+		limit = {
+			OR = {
+				trait = theologian
+				trait = mystic
+			}
+		}
+		change_variable = { which = bloodline_built_holdings value = 1 }
+		change_variable = { which = bloodline_built_temples value = 1 }
+	}
+}

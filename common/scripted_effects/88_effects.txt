@@ -1,0 +1,46 @@
+ungracz_effect = {
+	clr_character_flag = gracz1
+	clr_character_flag = gracz2
+	clr_character_flag = gracz3
+	clr_character_flag = gracz4
+	clr_character_flag = gracz5
+	clr_character_flag = gracz6
+	clr_character_flag = gracz7
+	clr_character_flag = gracz8
+	clr_character_flag = gracz9
+	clr_character_flag = gracz10
+	clr_character_flag = gracz11
+	clr_character_flag = gracz12
+	clr_character_flag = gracz13
+	clr_character_flag = gracz14
+	clr_character_flag = gracz15
+	clr_character_flag = gracz16
+	clr_character_flag = gracz17
+	clr_character_flag = gracz18
+	clr_character_flag = gracz19
+	clr_character_flag = gracz20
+	clr_character_flag = gracz21
+	clr_character_flag = gracz22
+	clr_character_flag = gracz23
+	clr_character_flag = gracz24
+	clr_character_flag = gracz25
+	clr_character_flag = gracz26
+	clr_character_flag = gracz27
+	clr_character_flag = gracz28
+	clr_character_flag = gracz29
+	clr_character_flag = gracz30
+	clr_character_flag = gracz31
+	clr_character_flag = gracz32
+}
+create_heir_title_effect = {
+	create_title = {
+  		tier = DUKE
+ 		name = "Landless"
+ 		holder = THIS
+		landless = yes
+	}
+	new_title = {
+		set_title_flag = title_for_landless
+		set_coa = k_nastepcadummy
+	}
+}

@@ -1,0 +1,2366 @@
+namespace = MTA_Debug
+
+# Create Cadet Dynasty
+character_event = {
+	id = MTA_Debug.1
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { dynasty = event_target:cadet_dynasty_founder }
+	}
+
+	immediate = {
+		any_child_even_if_dead = {
+			limit = { 
+				dynasty = ROOT 
+				NOT = { trait = bastard }
+			}
+			character_event = { id = MTA_Debug.1 }
+		}
+		dynasty = event_target:cadet_dynasty_founder
+		recalc_succession = yes
+	}
+}
+
+# Create Bloodline
+character_event = {
+	id = MTA_Debug.2
+	desc = mta_debug_2_desc
+	picture = GFX_evt_bloodlines
+	has_dlc = "Holy Fury"
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_2_a # Event Chain
+		character_event = { id = MTA_Debug.3 }
+	}
+
+	option = {
+		name = mta_debug_2_b # Murder, Conquest
+		character_event = { id = MTA_Debug.7 }
+	}
+
+	option = {
+		name = mta_debug_2_c # Peace, Builder, Hybrid
+		character_event = { id = MTA_Debug.11 }
+	}
+
+	option = {
+		name = mta_debug_2_d # Cancel
+	}
+}
+
+# Event Chain
+character_event = {
+	id = MTA_Debug.3
+	desc = mta_debug_3_desc
+	picture = GFX_evt_bloodlines
+	has_dlc = "Holy Fury"
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_3_a # Benevolent, Family
+		character_event = { id = MTA_Debug.4 }
+	}
+
+	option = {
+		name = mta_debug_3_b # Theologian, Technology
+		character_event = { id = MTA_Debug.5 }
+	}
+
+	option = {
+		name = mta_debug_3_c # Zealot, Ruthless
+		character_event = { id = MTA_Debug.6 }
+	}
+
+	option = {
+		name = mta_debug_3_d # Back
+		character_event = { id = MTA_Debug.2 }
+	}
+}
+
+# Benevolent / Family
+character_event = {
+	id = MTA_Debug.4
+	desc = mta_debug_4_desc
+	picture = GFX_evt_bloodlines
+	has_dlc = "Holy Fury"
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_4_a # Benevolent
+		event_target:debug_bloodline_founder = {
+			if = { 
+				limit = { 
+					this_has_cool_nickname_trigger = no 
+					this_has_super_cool_nickname_trigger = no 
+				}
+				THIS = { give_nickname = nick_the_benevolent }
+			}
+			if = { 
+				limit = { is_female = no }
+				create_bloodline = {
+					type = event_benevolent_bloodline_01
+				}		
+			}
+			if = { 
+				limit = { is_female = yes }
+				create_bloodline = {
+					type = event_benevolent_bloodline_01
+					inheritance = matrilineal
+				}		
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_4_b # Family
+		event_target:debug_bloodline_founder = {
+			if = { 
+				limit = { 
+					this_has_cool_nickname_trigger = no 
+					this_has_super_cool_nickname_trigger = no 
+					is_female = no
+				}
+				THIS = { give_nickname = nick_the_grand_patriarch }
+			}
+			if = { 
+				limit = { 
+					this_has_cool_nickname_trigger = no 
+					this_has_super_cool_nickname_trigger = no 
+					is_female = yes
+				}
+				THIS = { give_nickname = nick_the_grand_matriarch }
+			}
+			if = { 
+				limit = { is_female = no }
+				create_bloodline = {
+					type = event_family_bloodline_01
+				}		
+			}
+			if = { 
+				limit = { is_female = yes }
+				create_bloodline = {
+					type = event_family_bloodline_01
+					inheritance = matrilineal
+				}		
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_4_d # Back
+		character_event = { id = MTA_Debug.3 }
+	}
+}
+
+# Theologian / Technology
+character_event = {
+	id = MTA_Debug.5
+	desc = mta_debug_5_desc
+	picture = GFX_evt_bloodlines
+	has_dlc = "Holy Fury"
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_5_a # Theologian
+		event_target:debug_bloodline_founder = {
+			if = { 
+				limit = { 
+					this_has_cool_nickname_trigger = no 
+					this_has_super_cool_nickname_trigger = no 
+				}
+				THIS = { give_nickname = nick_the_theologian }
+			}
+			if = { 
+				limit = { religion_group = christian }
+				if = { 
+					limit = { is_female = no }
+					create_bloodline = {
+						type = event_religion_peaceful_bloodline_01
+					}		
+				}
+				if = { 
+					limit = { is_female = yes }
+					create_bloodline = {
+						type = event_religion_peaceful_bloodline_01
+						inheritance = matrilineal
+					}		
+				}
+			}
+			else_if = { 
+				limit = { religion_group = muslim }
+				if = { 
+					limit = { is_female = no }
+					create_bloodline = {
+						type = event_religion_peaceful_bloodline_02
+					}		
+				}
+				if = { 
+					limit = { is_female = yes }
+					create_bloodline = {
+						type = event_religion_peaceful_bloodline_02
+						inheritance = matrilineal
+					}		
+				}
+			}
+			else_if = { 
+				limit = { religion_group = jewish_group }
+				if = { 
+					limit = { is_female = no }
+					create_bloodline = {
+						type = event_religion_peaceful_bloodline_03
+					}		
+				}
+				if = { 
+					limit = { is_female = yes }
+					create_bloodline = {
+						type = event_religion_peaceful_bloodline_03
+						inheritance = matrilineal
+					}		
+				}
+			}
+			else_if = { 
+				limit = { religion_group = pagan_group }
+				if = { 
+					limit = { is_female = no }
+					create_bloodline = {
+						type = event_religion_peaceful_bloodline_04
+					}		
+				}
+				if = { 
+					limit = { is_female = yes }
+					create_bloodline = {
+						type = event_religion_peaceful_bloodline_04
+						inheritance = matrilineal
+					}		
+				}
+			}
+			else_if = { 
+				limit = { religion_group = zoroastrian_group }
+				if = { 
+					limit = { is_female = no }
+					create_bloodline = {
+						type = event_religion_peaceful_bloodline_05
+					}		
+				}
+				if = { 
+					limit = { is_female = yes }
+					create_bloodline = {
+						type = event_religion_peaceful_bloodline_05
+						inheritance = matrilineal
+					}		
+				}
+			}
+			else_if = { 
+				limit = { religion_group = indian_group }
+				if = { 
+					limit = { is_female = no }
+					create_bloodline = {
+						type = event_religion_peaceful_bloodline_06
+					}		
+				}
+				if = { 
+					limit = { is_female = yes }
+					create_bloodline = {
+						type = event_religion_peaceful_bloodline_06
+						inheritance = matrilineal
+					}		
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_5_b # Technology
+		event_target:debug_bloodline_founder = {
+			if = { 
+				limit = { 
+					this_has_cool_nickname_trigger = no 
+					this_has_super_cool_nickname_trigger = no 
+				}
+				THIS = { give_nickname = nick_the_philosopher }
+			}
+			if = { 
+				limit = { is_female = no }
+				create_bloodline = {
+					type = event_technology_bloodline_01
+				}		
+			}
+			if = { 
+				limit = { is_female = yes }
+				create_bloodline = {
+					type = event_technology_bloodline_01
+					inheritance = matrilineal
+				}		
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_5_d # Back
+		character_event = { id = MTA_Debug.3 }
+	}
+}
+
+# Zealot / Ruthless
+character_event = {
+	id = MTA_Debug.6
+	desc = mta_debug_6_desc
+	picture = GFX_evt_bloodlines
+	has_dlc = "Holy Fury"
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_6_a # Zealot
+		event_target:debug_bloodline_founder = {
+			if = { 
+				limit = { 
+					this_has_cool_nickname_trigger = no 
+					this_has_super_cool_nickname_trigger = no 
+				}
+				THIS = { give_nickname = nick_the_zealot }
+			}
+			if = { 
+				limit = { religion_group = christian }
+				if = { 
+					limit = { is_female = no }
+					create_bloodline = {
+						type = event_religion_aggressive_bloodline_01
+					}		
+				}
+				if = { 
+					limit = { is_female = yes }
+					create_bloodline = {
+						type = event_religion_aggressive_bloodline_01
+						inheritance = matrilineal
+					}		
+				}
+			}
+			else_if = { 
+				limit = { religion_group = muslim }
+				if = { 
+					limit = { is_female = no }
+					create_bloodline = {
+						type = event_religion_aggressive_bloodline_02
+					}		
+				}
+				if = { 
+					limit = { is_female = yes }
+					create_bloodline = {
+						type = event_religion_aggressive_bloodline_02
+						inheritance = matrilineal
+					}		
+				}
+			}
+			else_if = { 
+				limit = { religion_group = jewish_group }
+				if = { 
+					limit = { is_female = no }
+					create_bloodline = {
+						type = event_religion_aggressive_bloodline_03
+					}		
+				}
+				if = { 
+					limit = { is_female = yes }
+					create_bloodline = {
+						type = event_religion_aggressive_bloodline_03
+						inheritance = matrilineal
+					}		
+				}
+			}
+			else_if = { 
+				limit = { religion_group = pagan_group }
+				if = { 
+					limit = { is_female = no }
+					create_bloodline = {
+						type = event_religion_aggressive_bloodline_04
+					}		
+				}
+				if = { 
+					limit = { is_female = yes }
+					create_bloodline = {
+						type = event_religion_aggressive_bloodline_04
+						inheritance = matrilineal
+					}		
+				}
+			}
+			else_if = { 
+				limit = { religion_group = zoroastrian_group }
+				if = { 
+					limit = { is_female = no }
+					create_bloodline = {
+						type = event_religion_aggressive_bloodline_05
+					}		
+				}
+				if = { 
+					limit = { is_female = yes }
+					create_bloodline = {
+						type = event_religion_aggressive_bloodline_05
+						inheritance = matrilineal
+					}		
+				}
+			}
+			else_if = { 
+				limit = { religion_group = indian_group }
+				if = { 
+					limit = { is_female = no }
+					create_bloodline = {
+						type = event_religion_aggressive_bloodline_06
+					}		
+				}
+				if = { 
+					limit = { is_female = yes }
+					create_bloodline = {
+						type = event_religion_aggressive_bloodline_06
+						inheritance = matrilineal
+					}		
+				}
+			}
+			if = { 
+				limit = { has_global_flag = EMF }
+				set_bloodline_founder_religion_flag_effect = yes
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_6_b # Ruthless
+		event_target:debug_bloodline_founder = {
+			if = { 
+				limit = { 
+					this_has_cool_nickname_trigger = no 
+					this_has_super_cool_nickname_trigger = no 
+				}
+				THIS = { give_nickname = nick_the_ruthless }
+			}
+			if = { 
+				limit = { is_female = no }
+				create_bloodline = {
+					type = event_ruthless_bloodline_01
+				}		
+			}
+			if = { 
+				limit = { is_female = yes }
+				create_bloodline = {
+					type = event_ruthless_bloodline_01
+					inheritance = matrilineal
+				}		
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_6_d # Back
+		character_event = { id = MTA_Debug.3 }
+	}
+}
+
+# Murder / Conquest
+character_event = {
+	id = MTA_Debug.7
+	desc = mta_debug_7_desc
+	picture = GFX_evt_bloodlines
+	has_dlc = "Holy Fury"
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_7_a # Macabre Banquet, Silent Killer, The Butcher
+		character_event = { id = MTA_Debug.8 }
+	}
+
+	option = {
+		name = mta_debug_7_b # Happy Child, The Dragon-King, Conqueror
+		character_event = { id = MTA_Debug.9 }
+	}
+
+	option = {
+		name = mta_debug_7_c # Warrior-Philosopher, L'il Warrior Philosopher, The Perfect Knight
+		character_event = { id = MTA_Debug.10 }
+	}
+
+	option = {
+		name = mta_debug_7_d # Back
+		character_event = { id = MTA_Debug.2 }
+	}
+}
+
+# Macabre Banquet / Silent Killer / The Butcher
+character_event = {
+	id = MTA_Debug.8
+	desc = mta_debug_8_desc
+	picture = GFX_evt_bloodlines
+	has_dlc = "Holy Fury"
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_8_a # Macabre Banquet
+		event_target:debug_bloodline_founder = {
+			custom_tooltip = { text = TT_EVTOPTAHF24027 }
+			if = { 
+				limit = { NOT = { trait = cruel } } 
+				add_trait = cruel
+			}
+			if = { 
+				limit = { NOT = { trait = lunatic } } 
+				random = { 
+					chance = 5 
+					add_trait = lunatic
+				}
+			}
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+					culture_group = latin
+				}
+				THIS = { give_nickname = nick_the_ferrante }
+			}
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+					NOT = { culture_group = latin }
+				}
+				THIS = { give_nickname = nick_the_iron_heart }
+			}
+			tooltip = { #Show bloodline effects
+				create_bloodline = {
+					type = pure_murder_bloodline_02
+				}		
+			}
+			hidden_tooltip = {
+				if = { 
+					limit = { is_female = no }
+					create_bloodline = {
+						type = pure_murder_bloodline_02
+					}		
+				}
+				if = { 
+					limit = { is_female = yes }
+					create_bloodline = {
+						type = pure_murder_bloodline_02
+						inheritance = matrilineal
+					}		
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_8_b # Silent Killer
+		event_target:debug_bloodline_founder = {
+			custom_tooltip = { text = TT_EVTOPTBHF24027 }
+			if = { 
+				limit = { NOT = { trait = paranoid } } 
+				add_trait = paranoid
+			}
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+					is_female = no
+				}
+				THIS = { give_nickname = nick_the_pale_spider }
+			}
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+					is_female = yes
+				}
+				THIS = { give_nickname = nick_the_grim_mistress }
+			}
+			tooltip = { #Show bloodline effects
+				create_bloodline = {
+					type = pure_murder_bloodline_03
+				}		
+			}
+			hidden_tooltip = {
+				if = { 
+					limit = { is_female = no }
+					create_bloodline = {
+						type = pure_murder_bloodline_03
+					}		
+				}
+				if = { 
+					limit = { is_female = yes }
+					create_bloodline = {
+						type = pure_murder_bloodline_03
+						inheritance = matrilineal
+					}		
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_8_c # The Butcher
+		event_target:debug_bloodline_founder = {
+			custom_tooltip = { text = TT_EVTOPTCHF24027 }
+			if = { 
+				limit = { NOT = { trait = cruel } } 
+				add_trait = cruel
+			}
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+					is_female = no
+				}
+				THIS = { give_nickname = nick_the_ripper }
+			}
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+					is_female = yes
+				}
+				THIS = { give_nickname = nick_the_black_widow }
+			}
+			tooltip = { #Show bloodline effects
+				create_bloodline = {
+					type = pure_murder_bloodline_04
+				}		
+			}
+			hidden_tooltip = {
+				if = { 
+					limit = { is_female = no }
+					create_bloodline = {
+						type = pure_murder_bloodline_04
+					}		
+				}
+				if = { 
+					limit = { is_female = yes }
+					create_bloodline = {
+						type = pure_murder_bloodline_04
+						inheritance = matrilineal
+					}		
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_8_d # Back
+		character_event = { id = MTA_Debug.7 }
+	}
+}
+
+# Happy Child / The Dragon-King / Conqueror
+character_event = {
+	id = MTA_Debug.9
+	desc = mta_debug_9_desc
+	picture = GFX_evt_bloodlines
+	has_dlc = "Holy Fury"
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_9_a # Happy Child
+		event_target:debug_bloodline_founder = {
+			if = { 
+				limit = { NOT = { trait = cruel } } 
+				add_trait = cruel
+			}
+			hidden_tooltip = {
+				if = { 
+					limit = { this_has_super_cool_nickname_trigger = no }
+					random_list = { 
+						10 = { 
+							give_nickname = nick_the_deaths_child 
+						} 
+						10 = { 
+							give_nickname = nick_the_snakeling 
+						} 
+						10 = { 
+							give_nickname = nick_the_little_spider 
+						} 
+						10 = { 
+							give_nickname = nick_the_eerie 
+						} 
+						10 = { 
+							give_nickname = nick_the_little_nightmare 
+						}
+					}
+				}
+			}
+			if = { 
+				limit = { is_female = no }
+				create_bloodline = {
+					type = pure_murder_bloodline_01
+				}		
+			}
+			if = { 
+				limit = { is_female = yes }
+				create_bloodline = {
+					type = pure_murder_bloodline_01
+					inheritance = matrilineal
+				}		
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_9_b # The Dragon-King
+		event_target:debug_bloodline_founder = {
+			custom_tooltip = { text = TT_EVTOPTZHF24027 }
+			if = { 
+				limit = { NOT = { trait = cannibal_trait } } 
+				add_trait = cannibal_trait
+			}
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+					is_female = no
+				}
+				THIS = { give_nickname = nick_the_dragon }
+			}
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+					is_female = yes
+				}
+				THIS = { give_nickname = nick_the_dragoness }
+			}
+			tooltip = { #Show bloodline effects
+				create_bloodline = {
+					type = pure_murder_bloodline_05
+				}		
+			}
+			hidden_tooltip = {
+				if = { 
+					limit = { is_female = no }
+					create_bloodline = {
+						type = pure_murder_bloodline_05
+					}		
+				}
+				if = { 
+					limit = { is_female = yes }
+					create_bloodline = {
+						type = pure_murder_bloodline_05
+						inheritance = matrilineal
+					}		
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_9_c # Conqueror
+		event_target:debug_bloodline_founder = {
+			custom_tooltip = { text = TT_EVTOPTBHF24033 }
+			if = { 
+				limit = { NOT = { trait = wroth } } 
+				add_trait = wroth
+			}
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+					is_female = no
+				}
+				THIS = { give_nickname = nick_the_bloodhound }
+			}
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+					is_female = yes
+				}
+				THIS = { give_nickname = nick_the_fury }
+			}
+			tooltip = { #Show bloodline effects
+				create_bloodline = {
+					type = pure_war_bloodline_03
+				}		
+			}
+			hidden_tooltip = {
+				if = { 
+					limit = { is_female = no }
+					create_bloodline = {
+						type = pure_war_bloodline_03
+					}		
+				}
+				if = { 
+					limit = { is_female = yes }
+					create_bloodline = {
+						type = pure_war_bloodline_03
+						inheritance = matrilineal
+					}		
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_9_d # Back
+		character_event = { id = MTA_Debug.7 }
+	}
+}
+
+# Warrior-Philosopher / L'il Warrior Philosopher / The Perfect Knight
+character_event = {
+	id = MTA_Debug.10
+	desc = mta_debug_10_desc
+	picture = GFX_evt_bloodlines
+	has_dlc = "Holy Fury"
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_10_a # Warrior-Philosopher
+		event_target:debug_bloodline_founder = {
+			custom_tooltip = { text = TT_EVTOPTCHF24033 }
+			if = { 
+				limit = { NOT = { trait = diligent } } 
+				add_trait = diligent
+			}
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+				}
+				THIS = { give_nickname = nick_the_warrior_philosopher }
+			}
+			tooltip = { #Show bloodline effects
+				create_bloodline = {
+					type = pure_war_bloodline_04
+				}		
+			}
+			hidden_tooltip = {
+				if = { 
+					limit = { is_female = no }
+					create_bloodline = {
+						type = pure_war_bloodline_04
+					}		
+				}
+				if = { 
+					limit = { is_female = yes }
+					create_bloodline = {
+						type = pure_war_bloodline_04
+						inheritance = matrilineal
+					}		
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_10_b # L'il Warrior Philosopher
+		event_target:debug_bloodline_founder = {
+			if = { 
+				limit = { NOT = { trait = brave } } 
+				add_trait = brave
+			}
+			hidden_tooltip = { 
+				if = { 
+					limit = { this_has_super_cool_nickname_trigger = no }
+					random_list = { 
+						10 = { 
+							give_nickname = nick_the_young_eagle 
+						} 
+						10 = { 
+							give_nickname = nick_the_green_warrior 
+						} 
+						10 = { 
+							give_nickname = nick_the_warrior_child 
+						} 
+						10 = { 
+							give_nickname = nick_the_young_conqueror 
+						}
+					}
+				}
+			}
+			if = { 
+				limit = { is_female = no }
+				create_bloodline = {
+					type = pure_war_bloodline_01
+				}		
+			}
+			if = { 
+				limit = { is_female = yes }
+				create_bloodline = {
+					type = pure_war_bloodline_01
+					inheritance = matrilineal
+				}		
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_10_c # The Perfect Knight
+		event_target:debug_bloodline_founder = {
+			custom_tooltip = { text = TT_EVTOPTAHF24033 }
+			if = { 
+				limit = { NOT = { trait = brave } } 
+				add_trait = brave
+			}
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+					is_female = no
+				}
+				THIS = { give_nickname = nick_the_white_knight }
+			}
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+					is_female = yes
+				}
+				THIS = { give_nickname = nick_the_virago }
+			}
+			hidden_tooltip = {
+				add_artifact = crown_winged_helmet
+				new_artifact = {
+					set_description = crown_winged_helmet_bloodline_desc_1
+					set_name = crown_winged_helmet_bloodline_name_1
+				}
+			}
+			if = { 
+				limit = { is_female = no }
+				create_bloodline = {
+					type = pure_war_bloodline_02
+				}		
+			}
+			if = { 
+				limit = { is_female = yes }
+				create_bloodline = {
+					type = pure_war_bloodline_02
+					inheritance = matrilineal
+				}		
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_10_d # Back
+		character_event = { id = MTA_Debug.7 }
+	}
+}
+
+# Peace / Construction / Hybrid
+character_event = {
+	id = MTA_Debug.11
+	desc = mta_debug_11_desc
+	picture = GFX_evt_bloodlines
+	has_dlc = "Holy Fury"
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_11_a # Protector, Benefactor, Blessed Child
+		character_event = { id = MTA_Debug.12 }
+	}
+
+	option = {
+		name = mta_debug_11_b # Architect, Castellan, Carpenter
+		character_event = { id = MTA_Debug.13 }
+	}
+
+	option = {
+		name = mta_debug_11_c # Hybrid
+		character_event = { id = MTA_Debug.14 }
+	}
+
+	option = {
+		name = mta_debug_11_d # Back
+		character_event = { id = MTA_Debug.2 }
+	}
+}
+
+# Protector / Benefactor / Blessed Child
+character_event = {
+	id = MTA_Debug.12
+	desc = mta_debug_12_desc
+	picture = GFX_evt_bloodlines
+	has_dlc = "Holy Fury"
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_12_a # Protector
+		event_target:debug_bloodline_founder = {
+			if = { 
+				limit = { NOT = { trait = kind } } 
+				add_trait = kind
+			}
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+				}
+				THIS = { give_nickname = nick_the_peace_maker }
+			}
+			if = { 
+				limit = { is_female = no }
+				create_bloodline = {
+					type = pure_peace_bloodline_02
+				}		
+			}
+			if = { 
+				limit = { is_female = yes }
+				create_bloodline = {
+					type = pure_peace_bloodline_02
+					inheritance = matrilineal
+				}		
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_12_b # Benefactor
+		event_target:debug_bloodline_founder = {
+			if = { 
+				limit = { NOT = { trait = charitable } } 
+				add_trait = charitable
+			}
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+				}
+				THIS = { give_nickname = nick_the_munificent }
+			}
+			if = { 
+				limit = { is_female = no }
+				create_bloodline = {
+					type = pure_peace_bloodline_03
+				}		
+			}
+			if = { 
+				limit = { is_female = yes }
+				create_bloodline = {
+					type = pure_peace_bloodline_03
+					inheritance = matrilineal
+				}		
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_12_c # Blessed Child
+		event_target:debug_bloodline_founder = {
+			if = { 
+				limit = { NOT = { trait = kind } } 
+				add_trait = kind
+			}
+			hidden_tooltip = { 
+				if = { 
+					limit = { this_has_super_cool_nickname_trigger = no }
+					random_list = { 
+						10 = { 
+							trigger = { religion_group = christian }
+							give_nickname = nick_the_angel 
+						} 
+						10 = { 
+							give_nickname = nick_the_pure 
+						} 
+						10 = { 
+							give_nickname = nick_the_celestial 
+						} 
+						10 = { 
+							give_nickname = nick_the_radiant 
+						} 
+						10 = { 
+							give_nickname = nick_the_innocent 
+						}
+					}
+				}
+			}
+			if = { 
+				limit = { is_female = no }
+				create_bloodline = {
+					type = pure_peace_bloodline_01
+				}		
+			}
+			if = { 
+				limit = { is_female = yes }
+				create_bloodline = {
+					type = pure_peace_bloodline_01
+					inheritance = matrilineal
+				}		
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_10_d # Back
+		character_event = { id = MTA_Debug.11 }
+	}
+}
+
+# Architect / Castellan / Carpenter
+character_event = {
+	id = MTA_Debug.13
+	desc = mta_debug_13_desc
+	picture = GFX_evt_bloodlines
+	has_dlc = "Holy Fury"
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_13_a # Architect
+		event_target:debug_bloodline_founder = {
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+				}
+				THIS = { give_nickname = nick_the_architect }
+			}
+			if = { 
+				limit = { is_female = no }
+				create_bloodline = {
+					type = pure_architect_bloodline_01
+				}		
+			}
+			if = { 
+				limit = { is_female = yes }
+				create_bloodline = {
+					type = pure_architect_bloodline_01
+					inheritance = matrilineal
+				}		
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_13_b # Castellan
+		event_target:debug_bloodline_founder = {
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+				}
+				THIS = { give_nickname = nick_the_castellan }
+			}
+			if = { 
+				limit = { is_female = no }
+				create_bloodline = {
+					type = pure_castellan_bloodline_01
+				}		
+			}
+			if = { 
+				limit = { is_female = yes }
+				create_bloodline = {
+					type = pure_castellan_bloodline_01
+					inheritance = matrilineal
+				}		
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_13_c # Carpenter
+		event_target:debug_bloodline_founder = {
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+					religion_group = christian
+				}
+				THIS = { give_nickname = nick_the_carpenter }
+			}
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+					NOT = { religion_group = christian }
+				}
+				THIS = { give_nickname = nick_the_grandiose }
+			}
+			if = { 
+				limit = { is_female = no }
+				create_bloodline = {
+					type = pure_monumental_bloodline_01
+				}		
+			}
+			if = { 
+				limit = { is_female = yes }
+				create_bloodline = {
+					type = pure_monumental_bloodline_01
+					inheritance = matrilineal
+				}		
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_13_d # Back
+		character_event = { id = MTA_Debug.11 }
+	}
+}
+
+# Hybrid
+character_event = {
+	id = MTA_Debug.14
+	desc = mta_debug_11_desc
+	picture = GFX_evt_bloodlines
+	has_dlc = "Holy Fury"
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_14_a # Vile Blood, Murder Peace, Murder Builder
+		character_event = { id = MTA_Debug.15 }
+	}
+
+	option = {
+		name = mta_debug_14_b # Peace Architect, Peace Castellan, Peace Monumental
+		character_event = { id = MTA_Debug.16 }
+	}
+
+	option = {
+		name = mta_debug_14_c # The Builder
+		event_target:debug_bloodline_founder = {
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+				}
+				THIS = { give_nickname = nick_the_founder }
+			}
+			if = { 
+				limit = { is_female = no }
+				create_bloodline = {
+					type = hybrid_builder_bloodline_01
+				}		
+			}
+			if = { 
+				limit = { is_female = yes }
+				create_bloodline = {
+					type = hybrid_builder_bloodline_01
+					inheritance = matrilineal
+				}		
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_14_d # Back
+		character_event = { id = MTA_Debug.11 }
+	}
+}
+
+# Vile Blood / Murder Peace / Murder Builder
+character_event = {
+	id = MTA_Debug.15
+	desc = mta_debug_15_desc
+	picture = GFX_evt_bloodlines
+	has_dlc = "Holy Fury"
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_15_a # Vile Blood
+		event_target:debug_bloodline_founder = {
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+				}
+				THIS = { give_nickname = nick_the_griffin }
+			}
+			if = { 
+				limit = { is_female = no }
+				create_bloodline = {
+					type = hybrid_murder_war_bloodline_01
+				}		
+			}
+			if = { 
+				limit = { is_female = yes }
+				create_bloodline = {
+					type = hybrid_murder_war_bloodline_01
+					inheritance = matrilineal
+				}		
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_15_b # Murder Peace
+		event_target:debug_bloodline_founder = {
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+				}
+				THIS = { give_nickname = nick_the_compassionate }
+			}
+			if = { 
+				limit = { is_female = no }
+				create_bloodline = {
+					type = hybrid_murder_peace_bloodline_01
+				}		
+			}
+			if = { 
+				limit = { is_female = yes }
+				create_bloodline = {
+					type = hybrid_murder_peace_bloodline_01
+					inheritance = matrilineal
+				}		
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_15_c # Murder Builder
+		event_target:debug_bloodline_founder = {
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+				}
+				THIS = { give_nickname = nick_the_bloodlime }
+			}
+			if = { 
+				limit = { is_female = no }
+				create_bloodline = {
+					type = hybrid_murder_builder_bloodline_01
+				}		
+			}
+			if = { 
+				limit = { is_female = yes }
+				create_bloodline = {
+					type = hybrid_murder_builder_bloodline_01
+					inheritance = matrilineal
+				}		
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_15_d # Back
+		character_event = { id = MTA_Debug.14 }
+	}
+}
+
+# Peace Architect / Peace Castellan / Peace Monumental
+character_event = {
+	id = MTA_Debug.16
+	desc = mta_debug_16_desc
+	picture = GFX_evt_bloodlines
+	has_dlc = "Holy Fury"
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_16_a # Peace Architect
+		event_target:debug_bloodline_founder = {
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+				}
+				THIS = { give_nickname = nick_the_patron_of_arts }
+			}
+			if = { 
+				limit = { is_female = no }
+				create_bloodline = {
+					type = hybrid_peace_architect_bloodline_01
+				}		
+			}
+			if = { 
+				limit = { is_female = yes }
+				create_bloodline = {
+					type = hybrid_peace_architect_bloodline_01
+					inheritance = matrilineal
+				}		
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_16_b # Peace Castellan
+		event_target:debug_bloodline_founder = {
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+				}
+				THIS = { give_nickname = nick_the_bastion_of_capital }
+			}
+			if = { 
+				limit = { is_female = no }
+				create_bloodline = {
+					type = hybrid_peace_castellan_bloodline_01
+				}		
+			}
+			if = { 
+				limit = { is_female = yes }
+				create_bloodline = {
+					type = hybrid_peace_castellan_bloodline_01
+					inheritance = matrilineal
+				}		
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_16_c # Peace Monumental
+		event_target:debug_bloodline_founder = {
+			if = { 
+				limit = { 
+					this_has_super_cool_nickname_trigger = no 
+				}
+				THIS = { give_nickname = nick_the_holy_mason }
+			}
+			if = { 
+				limit = { is_female = no }
+				create_bloodline = {
+					type = hybrid_peace_monumental_bloodline_01
+				}		
+			}
+			if = { 
+				limit = { is_female = yes }
+				create_bloodline = {
+					type = hybrid_peace_monumental_bloodline_01
+					inheritance = matrilineal
+				}		
+			}
+		}
+	}
+
+	option = {
+		name = mta_debug_16_d # Back
+		character_event = { id = MTA_Debug.14 }
+	}
+}
+
+# Technology Points
+character_event = {
+	id = MTA_Debug.20
+	desc = mta_debug_20_desc
+	picture = GFX_evt_castle_construction
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_20_a # All
+		event_target:debug_technology_points = {
+			military_techpoints = 300
+			economy_techpoints = 300
+			culture_techpoints = 300
+		}
+	}
+
+	option = {
+		name = mta_debug_20_b # Military
+		event_target:debug_technology_points = { military_techpoints = 300 }
+	}
+
+	option = {
+		name = mta_debug_20_c # Economic
+		event_target:debug_technology_points = { economy_techpoints = 300 }
+	}
+
+	option = {
+		name = mta_debug_20_d # Cultural
+		event_target:debug_technology_points = { culture_techpoints = 300 }
+	}
+}
+
+# Create Artifact
+character_event = {
+	id = MTA_Debug.29
+	desc = mta_debug_29_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_29_a # Crown Jewels
+		trigger = { always = no }
+		character_event = { id = MTA_Debug.30 }
+	}
+
+	option = {
+		name = mta_debug_29_b # Weapons
+		character_event = { id = MTA_Debug.32 }
+	}
+
+	option = {
+		name = mta_debug_29_c # Armour
+		character_event = { id = MTA_Debug.34 }
+	}
+
+	option = {
+		name = mta_debug_29_d # Cancel
+	}
+}
+
+# Crown Jewels, Page 1
+character_event = {
+	id = MTA_Debug.30
+	desc = mta_debug_30_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_30_a # Christian/Jewish
+		character_event = { id = MTA_Debug.43 }
+	}
+
+	option = {
+		name = mta_debug_30_b # Muslim/West African
+		character_event = { id = MTA_Debug.44 }
+	}
+
+	option = {
+		name = mta_debug_30_c # Indian
+		character_event = { id = MTA_Debug.45 }
+	}
+
+	option = {
+		name = mta_debug_30_d # More
+		character_event = { id = MTA_Debug.31 }
+	}
+}
+
+# Crown Jewels, Page 2
+character_event = {
+	id = MTA_Debug.31
+	desc = mta_debug_31_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_31_a # Zoroastrian/Zun
+		character_event = { id = MTA_Debug.46 }
+	}
+
+	option = {
+		name = mta_debug_31_b # Norse
+		character_event = { id = MTA_Debug.47 }
+	}
+
+	option = {
+		name = mta_debug_31_c # Pagan
+		character_event = { id = MTA_Debug.48 }
+	}
+
+	option = {
+		name = mta_debug_31_d # Back
+		character_event = { id = MTA_Debug.30 }
+	}
+}
+
+# Weapons, Page 1
+character_event = {
+	id = MTA_Debug.32
+	desc = mta_debug_32_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_32_a # Swords
+		character_event = { id = MTA_Debug.35 }
+	}
+
+	option = {
+		name = mta_debug_32_b # Scimitars
+		character_event = { id = MTA_Debug.36 }
+	}
+
+	option = {
+		name = mta_debug_32_c # Lances
+		character_event = { id = MTA_Debug.37 }
+	}
+
+	option = {
+		name = mta_debug_32_d # More
+		character_event = { id = MTA_Debug.33 }
+	}
+}
+
+# Weapons, Page 2
+character_event = {
+	id = MTA_Debug.33
+	desc = mta_debug_33_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_33_a # Axes
+		character_event = { id = MTA_Debug.38 }
+	}
+
+	option = {
+		name = mta_debug_33_b # Maces
+		character_event = { id = MTA_Debug.39 }
+	}
+
+	option = {
+		name = mta_debug_33_c # Bows
+		character_event = { id = MTA_Debug.40 }
+	}
+
+	option = {
+		name = mta_debug_33_d # Back
+		character_event = { id = MTA_Debug.32 }
+	}
+}
+
+# Armour
+character_event = {
+	id = MTA_Debug.34
+	desc = mta_debug_34_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_34_a # Tier 1
+		event_target:debug_item_target = {
+			add_artifact = armor_tier_1
+		}
+	}
+
+	option = {
+		name = mta_debug_34_b # Tier 2
+		event_target:debug_item_target = {
+			add_artifact = armor_tier_2
+		}
+	}
+
+	option = {
+		name = mta_debug_34_c # Tier 3
+		character_event = { id = MTA_Debug.41 }
+		custom_tooltip = { text = mta_debug_more_options_TT }
+	}
+
+	option = {
+		name = mta_debug_34_d # Tier 4
+		character_event = { id = MTA_Debug.42 }
+		custom_tooltip = { text = mta_debug_more_options_TT }
+	}
+}
+
+# Swords
+character_event = {
+	id = MTA_Debug.35
+	desc = mta_debug_35_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_35_a # Tier 1
+		event_target:debug_item_target = {
+			add_artifact = sword_tier_1_new
+		}
+	}
+
+	option = {
+		name = mta_debug_35_b # Tier 2
+		event_target:debug_item_target = {
+			add_artifact = sword_tier_2_new
+		}
+	}
+
+	option = {
+		name = mta_debug_35_c # Tier 3
+		character_event = { id = MTA_Debug.49 }
+		custom_tooltip = { text = mta_debug_more_options_TT }
+	}
+
+	option = {
+		name = mta_debug_35_d # Tier 4
+		character_event = { id = MTA_Debug.50 }
+		custom_tooltip = { text = mta_debug_more_options_TT }
+	}
+}
+
+# Scimitars
+character_event = {
+	id = MTA_Debug.36
+	desc = mta_debug_36_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_36_a # Tier 1
+		event_target:debug_item_target = {
+			add_artifact = scimitar_tier_1_new
+		}
+	}
+
+	option = {
+		name = mta_debug_36_b # Tier 2
+		event_target:debug_item_target = {
+			add_artifact = scimitar_tier_2_new
+		}
+	}
+
+	option = {
+		name = mta_debug_36_c # Tier 3
+		character_event = { id = MTA_Debug.51 }
+		custom_tooltip = { text = mta_debug_more_options_TT }
+	}
+
+	option = {
+		name = mta_debug_36_d # Tier 4
+		character_event = { id = MTA_Debug.52 }
+		custom_tooltip = { text = mta_debug_more_options_TT }
+	}
+}
+
+# Lances
+character_event = {
+	id = MTA_Debug.37
+	desc = mta_debug_37_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_37_a # Tier 1
+		event_target:debug_item_target = {
+			add_artifact = lance_tier_1_new
+		}
+	}
+
+	option = {
+		name = mta_debug_37_b # Tier 2
+		event_target:debug_item_target = {
+			add_artifact = lance_tier_2_new
+		}
+	}
+
+	option = {
+		name = mta_debug_37_c # Tier 3
+		character_event = { id = MTA_Debug.53 }
+		custom_tooltip = { text = mta_debug_more_options_TT }
+	}
+
+	option = {
+		name = mta_debug_37_d # Tier 4
+		character_event = { id = MTA_Debug.54 }
+		custom_tooltip = { text = mta_debug_more_options_TT }
+	}
+}
+
+# Axes
+character_event = {
+	id = MTA_Debug.38
+	desc = mta_debug_38_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_38_a # Tier 1
+		event_target:debug_item_target = {
+			add_artifact = axe_tier_1_new
+		}
+	}
+
+	option = {
+		name = mta_debug_38_b # Tier 2
+		event_target:debug_item_target = {
+			add_artifact = axe_tier_2_new
+		}
+	}
+
+	option = {
+		name = mta_debug_38_c # Tier 3
+		character_event = { id = MTA_Debug.55 }
+		custom_tooltip = { text = mta_debug_more_options_TT }
+	}
+
+	option = {
+		name = mta_debug_38_d # Tier 4
+		character_event = { id = MTA_Debug.56 }
+		custom_tooltip = { text = mta_debug_more_options_TT }
+	}
+}
+
+# Maces
+character_event = {
+	id = MTA_Debug.39
+	desc = mta_debug_39_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_39_a # Tier 1
+		event_target:debug_item_target = {
+			add_artifact = mace_tier_1_new
+		}
+	}
+
+	option = {
+		name = mta_debug_39_b # Tier 2
+		event_target:debug_item_target = {
+			add_artifact = mace_tier_2_new
+		}
+	}
+
+	option = {
+		name = mta_debug_39_c # Tier 3
+		character_event = { id = MTA_Debug.57 }
+		custom_tooltip = { text = mta_debug_more_options_TT }
+	}
+
+	option = {
+		name = mta_debug_39_d # Tier 4
+		character_event = { id = MTA_Debug.58 }
+		custom_tooltip = { text = mta_debug_more_options_TT }
+	}
+}
+
+# Bows
+character_event = {
+	id = MTA_Debug.40
+	desc = mta_debug_40_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_40_a # Tier 1
+		event_target:debug_item_target = {
+			add_artifact = bow_tier_1_new
+		}
+	}
+
+	option = {
+		name = mta_debug_40_b # Tier 2
+		event_target:debug_item_target = {
+			add_artifact = bow_tier_2_new
+		}
+	}
+
+	option = {
+		name = mta_debug_40_c # Tier 3
+		character_event = { id = MTA_Debug.59 }
+		custom_tooltip = { text = mta_debug_more_options_TT }
+	}
+
+	option = {
+		name = mta_debug_40_d # Tier 4
+		character_event = { id = MTA_Debug.60 }
+		custom_tooltip = { text = mta_debug_more_options_TT }
+	}
+}
+
+# Armour, Tier 3
+character_event = {
+	id = MTA_Debug.41
+	desc = mta_debug_41_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_41_a
+		event_target:debug_item_target = {
+			add_artifact = armor_tier_3_guardian
+		}
+	}
+
+	option = {
+		name = mta_debug_41_b
+		event_target:debug_item_target = {
+			add_artifact = armor_tier_3_champion
+		}
+	}
+
+	option = {
+		name = mta_debug_41_c
+		event_target:debug_item_target = {
+			add_artifact = armor_tier_3_warden
+		}
+	}
+}
+
+# Armour, Tier 4
+character_event = {
+	id = MTA_Debug.42
+	desc = mta_debug_42_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_42_a
+		event_target:debug_item_target = {
+			add_artifact = armor_tier_4_guardian
+		}
+	}
+
+	option = {
+		name = mta_debug_42_b
+		event_target:debug_item_target = {
+			add_artifact = armor_tier_4_champion
+		}
+	}
+
+	option = {
+		name = mta_debug_42_c
+		event_target:debug_item_target = {
+			add_artifact = armor_tier_4_warden
+		}
+	}
+}
+
+# Crown Jewels, Christian/Jewish
+character_event = {
+	id = MTA_Debug.43
+	desc = mta_debug_43_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_43_a # Crown
+	}
+
+	option = {
+		name = mta_debug_43_b # Scepter
+	}
+
+	option = {
+		name = mta_debug_43_c # Ceremonial Weapon
+	}
+}
+
+# Crown Jewels, Muslim/West African
+character_event = {
+	id = MTA_Debug.44
+	desc = mta_debug_44_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_44_a # Ceremonial Weapon
+	}
+
+	option = {
+		name = mta_debug_44_b # Wrist
+	}
+}
+
+# Crown Jewels, Indian
+character_event = {
+	id = MTA_Debug.45
+	desc = mta_debug_45_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_45_a # Ceremonial Weapon
+	}
+
+	option = {
+		name = mta_debug_45_b # Necklace
+	}
+}
+
+# Crown Jewels, Zoroastrian/Zun
+character_event = {
+	id = MTA_Debug.46
+	desc = mta_debug_46_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_46_a # Ceremonial Weapon
+	}
+
+	option = {
+		name = mta_debug_46_b # Crown
+	}
+}
+
+# Crown Jewels, Norse
+character_event = {
+	id = MTA_Debug.47
+	desc = mta_debug_47_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_47_a # Ceremonial Weapon
+	}
+
+	option = {
+		name = mta_debug_47_b # Crown
+	}
+}
+
+# Crown Jewels, Pagan
+character_event = {
+	id = MTA_Debug.48
+	desc = mta_debug_48_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_48_a # Ceremonial Weapon
+	}
+
+	option = {
+		name = mta_debug_48_b # Crown
+	}
+}
+
+# Swords, Tier 3
+character_event = {
+	id = MTA_Debug.49
+	desc = mta_debug_49_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_49_a
+		event_target:debug_item_target = {
+			add_artifact = sword_tier_3_heartseeker
+		}
+	}
+
+	option = {
+		name = mta_debug_49_b
+		event_target:debug_item_target = {
+			add_artifact = sword_tier_3_vengeance
+		}
+	}
+
+	option = {
+		name = mta_debug_49_c
+		event_target:debug_item_target = {
+			add_artifact = sword_tier_3_fury
+		}
+	}
+}
+
+# Swords, Tier 4
+character_event = {
+	id = MTA_Debug.50
+	desc = mta_debug_50_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_50_a
+		event_target:debug_item_target = {
+			add_artifact = sword_tier_4_heartseeker
+		}
+	}
+
+	option = {
+		name = mta_debug_50_b
+		event_target:debug_item_target = {
+			add_artifact = sword_tier_4_vengeance
+		}
+	}
+
+	option = {
+		name = mta_debug_50_c
+		event_target:debug_item_target = {
+			add_artifact = sword_tier_4_fury
+		}
+	}
+}
+
+# Scimitars, Tier 3
+character_event = {
+	id = MTA_Debug.51
+	desc = mta_debug_51_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_51_a
+		event_target:debug_item_target = {
+			add_artifact = scimitar_tier_3_golden
+		}
+	}
+
+	option = {
+		name = mta_debug_51_b
+		event_target:debug_item_target = {
+			add_artifact = scimitar_tier_3_fortune
+		}
+	}
+
+	option = {
+		name = mta_debug_51_c
+		event_target:debug_item_target = {
+			add_artifact = scimitar_tier_3_conquest
+		}
+	}
+}
+
+# Scimitars, Tier 4
+character_event = {
+	id = MTA_Debug.52
+	desc = mta_debug_52_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_52_a
+		event_target:debug_item_target = {
+			add_artifact = scimitar_tier_4_golden
+		}
+	}
+
+	option = {
+		name = mta_debug_52_b
+		event_target:debug_item_target = {
+			add_artifact = scimitar_tier_4_fortune
+		}
+	}
+
+	option = {
+		name = mta_debug_52_c
+		event_target:debug_item_target = {
+			add_artifact = scimitar_tier_4_conquest
+		}
+	}
+}
+
+# Lances, Tier 3
+character_event = {
+	id = MTA_Debug.53
+	desc = mta_debug_53_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_53_a
+		event_target:debug_item_target = {
+			add_artifact = lance_tier_3_impaler
+		}
+	}
+
+	option = {
+		name = mta_debug_53_b
+		event_target:debug_item_target = {
+			add_artifact = lance_tier_3_trident
+		}
+	}
+
+	option = {
+		name = mta_debug_53_c
+		event_target:debug_item_target = {
+			add_artifact = lance_tier_3_piercer
+		}
+	}
+}
+
+# Lances, Tier 4
+character_event = {
+	id = MTA_Debug.54
+	desc = mta_debug_54_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_54_a
+		event_target:debug_item_target = {
+			add_artifact = lance_tier_4_trident
+		}
+	}
+
+	option = {
+		name = mta_debug_54_b
+		event_target:debug_item_target = {
+			add_artifact = lance_tier_4_piercer
+		}
+	}
+
+	option = {
+		name = mta_debug_54_c
+		event_target:debug_item_target = {
+			add_artifact = lance_tier_4_impaler
+		}
+	}
+}
+
+# Axes, Tier 3
+character_event = {
+	id = MTA_Debug.55
+	desc = mta_debug_55_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_55_a
+		event_target:debug_item_target = {
+			add_artifact = axe_tier_3_marauder
+		}
+	}
+
+	option = {
+		name = mta_debug_55_b
+		event_target:debug_item_target = {
+			add_artifact = axe_tier_3_ravager
+		}
+	}
+
+	option = {
+		name = mta_debug_55_c
+		event_target:debug_item_target = {
+			add_artifact = axe_tier_3_cleaver
+		}
+	}
+}
+
+# Axes, Tier 4
+character_event = {
+	id = MTA_Debug.56
+	desc = mta_debug_56_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_56_a
+		event_target:debug_item_target = {
+			add_artifact = axe_tier_4_marauder
+		}
+	}
+
+	option = {
+		name = mta_debug_56_b
+		event_target:debug_item_target = {
+			add_artifact = axe_tier_4_ravager
+		}
+	}
+
+	option = {
+		name = mta_debug_56_c
+		event_target:debug_item_target = {
+			add_artifact = axe_tier_4_cleaver
+		}
+	}
+}
+
+# Maces, Tier 3
+character_event = {
+	id = MTA_Debug.57
+	desc = mta_debug_57_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_57_a
+		event_target:debug_item_target = {
+			add_artifact = mace_tier_3_foe_hammer
+		}
+	}
+
+	option = {
+		name = mta_debug_57_b
+		event_target:debug_item_target = {
+			add_artifact = mace_tier_3_bone_breaker
+		}
+	}
+
+	option = {
+		name = mta_debug_57_c
+		event_target:debug_item_target = {
+			add_artifact = mace_tier_3_shatterer
+		}
+	}
+}
+
+# Maces, Tier 4
+character_event = {
+	id = MTA_Debug.58
+	desc = mta_debug_58_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_58_a
+		event_target:debug_item_target = {
+			add_artifact = mace_tier_4_foe_hammer
+		}
+	}
+
+	option = {
+		name = mta_debug_58_b
+		event_target:debug_item_target = {
+			add_artifact = mace_tier_4_bone_breaker
+		}
+	}
+
+	option = {
+		name = mta_debug_58_c
+		event_target:debug_item_target = {
+			add_artifact = mace_tier_4_shatterer
+		}
+	}
+}
+
+# Bows, Tier 3
+character_event = {
+	id = MTA_Debug.59
+	desc = mta_debug_59_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_59_a
+		event_target:debug_item_target = {
+			add_artifact = bow_tier_3_silent_wind
+		}
+	}
+
+	option = {
+		name = mta_debug_59_b
+		event_target:debug_item_target = {
+			add_artifact = bow_tier_3_lightning
+		}
+	}
+
+	option = {
+		name = mta_debug_59_c
+		event_target:debug_item_target = {
+			add_artifact = bow_tier_3_eagle
+		}
+	}
+}
+
+# Bows, Tier 4
+character_event = {
+	id = MTA_Debug.60
+	desc = mta_debug_60_desc
+	picture = GFX_evt_armory
+
+	is_triggered_only = yes
+
+	option = {
+		name = mta_debug_60_a
+		event_target:debug_item_target = {
+			add_artifact = bow_tier_4_silent_wind
+		}
+	}
+
+	option = {
+		name = mta_debug_60_b
+		event_target:debug_item_target = {
+			add_artifact = bow_tier_4_lightning
+		}
+	}
+
+	option = {
+		name = mta_debug_60_c
+		event_target:debug_item_target = {
+			add_artifact = bow_tier_4_eagle
+		}
+	}
+}

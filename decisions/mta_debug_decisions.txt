@@ -1,0 +1,1872 @@
+targetted_decisions = {
+	mta_disable_debug_cheats = {
+		ai = no 
+		
+		filter = self
+
+		potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				multiplayer = no
+			}
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			hidden_tooltip = {
+				set_variable = { which = global_debug_cheats value = 0 }
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_disable_debug_cheats_all_MP = {
+		ai = no 
+		
+		filter = self
+
+		potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats_all_MP value = 1 }
+			is_multiplayer_host_character = yes
+			multiplayer = yes
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			hidden_tooltip = {
+				set_variable = { which = global_debug_cheats_all_MP value = 0 }
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_enable_debug_cheats = {
+		ai = no 
+		
+		filter = self
+
+		potential = {
+			ai = no
+			NOT = { check_variable = { which = global_debug_cheats value = 1 } }
+			OR = {
+				is_multiplayer_host_character = yes
+				multiplayer = no
+			}
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			hidden_tooltip = {
+				set_variable = { which = global_debug_cheats value = 1 }
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_enable_debug_cheats_all_MP = {
+		ai = no 
+		
+		filter = self
+
+		potential = {
+			ai = no
+			NOT = { check_variable = { which = global_debug_cheats_all_MP value = 1 } }
+			is_multiplayer_host_character = yes
+			multiplayer = yes
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			hidden_tooltip = {
+				set_variable = { which = global_debug_cheats_all_MP value = 1 }
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	mta_rename_character = {
+		ai = no 
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			ai = yes
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			prompt_name = { player = FROM type = RENAME_CHARACTER_MESSAGE }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_set_player_character = {
+		ai = no 
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			ai = yes
+			is_playable = yes
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			hidden_tooltip = { FROM = { set_player_character = ROOT } }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	mta_create_cadet_dynasty = {
+		ai = no 
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			ai = yes
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			hidden_tooltip = {
+				dynasty = father_bastard
+				set_dynasty_flag = mta_cadet_dynasty
+				save_event_target_as = cadet_dynasty_founder
+				any_child_even_if_dead = {
+					limit = { NOT = { trait = bastard } }
+					character_event = { id = MTA_Debug.1 }
+				}
+				recalc_succession = yes
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	mta_create_artifact = {
+		ai = no 
+
+		filter = all_including_me
+
+		from_potential = {
+			ai = no
+			OR = {
+				has_dlc = "Jade Dragon"
+				has_dlc = "Mystics"
+			}
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			#always = yes
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			save_event_target_as = debug_item_target
+			FROM = { character_event = { id = MTA_Debug.29 } }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	mta_create_bloodline = {
+		ai = no 
+
+		filter = all_including_me
+
+		from_potential = {
+			ai = no
+			has_dlc = "Holy Fury"
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			#always = yes
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			save_event_target_as = debug_bloodline_founder
+			FROM = { character_event = { id = MTA_Debug.2 } }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	mta_debug_technology = {
+		ai = no 
+
+		filter = all_including_me
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			#always = yes
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			save_event_target_as = debug_technology_points
+			FROM = { character_event = { id = MTA_Debug.20 } }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	mta_lower_imperial_decay = {
+		ai = no 
+		
+		filter = all_including_me
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+			has_global_flag = EMF
+		}
+
+		potential = {
+			tier = EMPEROR
+		}
+
+		allow = {
+			tier = EMPEROR
+			custom_tooltip = {
+				text = mta_HAS_AT_LEAST_1_DECAY
+				hidden_tooltip = {
+					primary_title = { check_variable = { which = "imperial_decay" value >= 1 } }
+				}
+			}
+		}
+
+		effect = {
+			ROOT = {
+				custom_tooltip = { text = mta_IMPERIAL_DECAY_MINUS_5 }
+				hidden_tooltip = {
+					primary_title = {
+						set_variable = { which = imperial_decay_change value = -5 }
+					}
+					character_event = { id = emf_imperial.1852 } # change the decay modifier
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_debug_health = {
+		ai = no 
+		
+		filter = all_including_me
+		
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			#always = yes
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			add_character_modifier = { name = debug_health_modifier years = 5 }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	mta_debug_bad_health = {
+		ai = no 
+		
+		filter = all_including_me
+		
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			OR = {
+				character = FROM
+				ai = yes
+			}
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			add_character_modifier = { name = debug_bad_health_modifier years = 5 }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_debug_like_me = {
+		ai = no 
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			ai = yes
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			hidden_tooltip = {
+				opinion = {
+					who = FROM
+					modifier = opinion_wildly_impressed
+					years = 10
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_debug_like_me_obedience = {
+		ai = no 
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			ai = yes
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			hidden_tooltip = {
+				opinion = {
+					who = FROM
+					modifier = opinion_loyal_servant
+					years = 100
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_debug_loyal_vassals = {
+		ai = no 
+		
+		filter = all_including_me
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			#always = yes
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_realm_lord = {
+					opinion = {
+						who = ROOT
+						modifier = opinion_loyal_vassal
+						years = 10
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_debug_loyal_vassals_obedience = {
+		ai = no 
+		
+		filter = all_including_me
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			#always = yes
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			hidden_tooltip = {
+				any_realm_lord = {
+					opinion = {
+						who = ROOT
+						modifier = opinion_loyal_servant
+						years = 100
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_debug_impregnate = {
+		ai = no 
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+			is_marriage_adult = yes
+		}
+
+		potential = {
+			NOT = { character = FROM }
+			is_opposite_sex = FROM
+			is_marriage_adult = yes
+		}
+
+		allow = {
+			conditional_tooltip = {
+				limit = {
+					FROM = { is_female = no }
+					ROOT = { is_female = yes }
+				}
+				ROOT = { is_pregnant = no }
+			}
+			conditional_tooltip = {
+				limit = {
+					ROOT = { is_female = no }
+					FROM = { is_female = yes }
+				}
+				FROM = { is_pregnant = no }
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					FROM = { is_female = no }
+					ROOT = { is_female = yes }
+				}
+				ROOT = { 
+					show_scope_change = no
+					impregnate = FROM 
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { is_female = no }
+					FROM = { is_female = yes }
+				}
+				FROM = { 
+					show_scope_change = no
+					impregnate = ROOT 
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_debug_impregnate_cuckoo = {
+		ai = no 
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+			is_marriage_adult = yes
+		}
+
+		potential = {
+			NOT = { character = FROM }
+			is_opposite_sex = FROM
+			is_marriage_adult = yes
+			NOT = {
+				any_spouse = {
+					character = FROM
+				}
+			}
+		}
+
+		allow = {
+			conditional_tooltip = {
+				limit = {
+					FROM = { is_female = no }
+					ROOT = { is_female = yes }
+				}
+				ROOT = { is_pregnant = no }
+			}
+			conditional_tooltip = {
+				limit = {
+					ROOT = { is_female = no }
+					FROM = { is_female = yes }
+				}
+				FROM = { is_pregnant = no }
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					FROM = { is_female = no }
+					ROOT = { is_female = yes }
+				}
+				ROOT = { 
+					show_scope_change = no
+					impregnate_cuckoo = FROM 
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { is_female = no }
+					FROM = { is_female = yes }
+				}
+				FROM = { 
+					show_scope_change = no
+					impregnate_cuckoo = ROOT 
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	mta_debug_impregnate_spouse = {
+		ai = no 
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			NOT = { character = FROM }
+			is_married = yes
+			is_marriage_adult = yes
+			spouse = { is_marriage_adult = yes }
+			is_opposite_sex = spouse
+			NOT = {
+				any_spouse = {
+					character = FROM
+				}
+			}
+		}
+
+		allow = {
+			is_married = yes
+			conditional_tooltip = {
+				limit = {
+					is_female = no
+					spouse = { is_female = yes }
+				}
+				spouse = { is_pregnant = no }
+			}
+			conditional_tooltip = {
+				limit = {
+					is_female = yes
+					spouse = { is_female = no }
+				}
+				is_pregnant = no
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					is_female = no
+					spouse = { is_female = yes }
+				}
+				spouse = { 
+					show_scope_change = no
+					impregnate = ROOT 
+				}
+			}
+			if = {
+				limit = {
+					is_female = yes
+					spouse = { is_female = no }
+				}
+				impregnate = spouse
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_debug_imprison = {
+		ai = no 
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			ai = yes
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			hidden_tooltip = { imprison = FROM }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_debug_mass_imprison = {
+		ai = no 
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			ai = yes
+			is_ruler = yes
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			hidden_tooltip = {
+				imprison = FROM
+				
+				any_realm_character = {
+					limit = { NOT = { character = FROM } }
+					imprison = FROM
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_debug_convert_to_from_culture = {
+		ai = no 
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			ai = yes
+			NOT = { culture = FROM }
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			hidden_tooltip = { culture = FROM }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_debug_convert_to_from_religion = {
+		ai = no 
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			ai = yes
+			NOT = { religion = FROM }
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			hidden_tooltip = { religion = FROM }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_debug_secretly_convert_to_from_religion = {
+		ai = no 
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+			has_secret_religion = yes
+		}
+
+		potential = {
+			ai = yes
+			has_secret_religion = no
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			hidden_tooltip = { 
+				set_secret_religion = FROM
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_debug_clear_secret_religion = {
+		ai = no 
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			ai = yes
+			has_secret_religion = yes
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			hidden_tooltip = { 
+				clear_secret_religion = yes
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_debug_take_artifact = {
+		ai = no 
+		
+		filter = all_including_me
+		
+		third_party_filter = artifacts
+		third_party = ROOT
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			ai = yes
+			NOT = { character = from }
+		}
+
+		allow = {
+			num_of_artifacts = 1
+		}
+
+		effect = {
+			FROM = { save_event_target_as = artifact_taker }
+			hidden_tooltip = {
+				FROMFROM = {
+					transfer_artifact = {
+						from = ROOT
+						to = event_target:artifact_taker
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	mta_debug_destroy_artifact = {
+		ai = no 
+		
+		filter = all_including_me
+		
+		third_party_filter = artifacts
+		third_party = ROOT
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			# always = yes
+		}
+
+		allow = {
+			num_of_artifacts = 1
+		}
+
+		effect = {
+			FROMFROM = { 
+				show_scope_change = no
+				unsafe_destroy_artifact = yes 
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_debug_take_landed_titles = {
+		ai = no 
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			ai = yes
+			is_ruler = yes
+			is_landed = yes
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			any_landed_title = {
+				show_scope_change = no
+				
+				limit = { 
+					owner = { character = ROOT } 
+					is_titular = no
+				}
+				gain_title = FROM
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	mta_debug_shatter_realm = {
+		ai = no 
+
+		filter = independent_rulers
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			ai = yes
+			OR = {
+				tier = EMPEROR
+				tier = KING
+			}
+		}
+
+		allow = {
+			OR = {
+				tier = EMPEROR
+				tier = KING
+			}
+		}
+
+		effect = {
+			any_demesne_title = {
+				limit = {
+					higher_tier_than = DUKE
+					NOR = {
+						controls_religion = yes
+						clan = yes
+					}
+				}
+				unsafe_destroy_landed_title = THIS
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	mta_debug_tributary = {
+		ai = no 
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			ai = yes
+			independent = yes
+			is_playable = yes
+			NOT = {
+				any_war = { 
+					OR = { 
+						AND = { 
+							any_attacker = { character = ROOT } 
+							any_defender = { character = FROM } 
+						}
+						AND = { 
+							any_defender = { character = ROOT } 
+							any_attacker = { character = FROM } 
+						}
+					}  
+				}
+			}
+		}
+
+		allow = {
+			independent = yes
+			is_tributary = no
+		}
+
+		effect = {
+			FROM = { 
+				show_scope_change = no
+				make_tributary = { who = PREV percentage = 0.4 } 
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_debug_independence = {
+		ai = no 
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			ai = yes
+			independent = no
+			is_ruler = yes
+		}
+
+		allow = {
+			#always = yes
+		}
+
+		effect = {
+			set_defacto_liege = THIS
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_debug_vassalise = {
+		ai = no 
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			ai = yes
+			independent = yes
+			is_ruler = yes
+			NOT = {
+				any_war = { 
+					OR = { 
+						AND = { 
+							any_attacker = { character = ROOT } 
+							any_defender = { character = FROM } 
+						}
+						AND = { 
+							any_defender = { character = ROOT } 
+							any_attacker = { character = FROM } 
+						}
+					}  
+				}
+			}
+		}
+
+		allow = {
+			lower_tier_than = FROM
+		}
+
+		effect = {
+			set_defacto_liege = FROM
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+
+
+title_decisions = {
+
+	mta_debug_take_title = {
+		ai = no 
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			holder_scope = { ai = yes }
+		}
+
+		allow = {
+			has_holder = yes
+		}
+
+		effect = {
+			gain_title = FROM
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	mta_debug_add_claim_strong = {
+		ai = no 
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			
+		}
+
+		allow = {
+			
+		}
+
+		effect = {
+			add_claim = FROM
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	mta_debug_add_claim_weak_pressed = {
+		ai = no 
+
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+
+		potential = {
+			
+		}
+
+		allow = {
+			
+		}
+
+		effect = {
+			add_weak_pressed_claim = FROM
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	mta_debug_convert_county_to_from_culture = {
+		ai = no
+		only_playable = yes
+	
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		
+		potential = {
+			tier = COUNT
+		}
+		
+		allow = {
+			ROOT = {
+				location = { 
+					show_scope_change = no
+					NOT = { culture = FROM } 
+				}
+			}
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				location = { 
+					culture = FROM 
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	mta_debug_convert_county_to_from_religion = {
+		ai = no
+		only_playable = yes
+	
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		
+		potential = {
+			tier = COUNT
+		}
+		
+		allow = {
+			ROOT = {
+				location = { 
+					show_scope_change = no
+					NOT = { religion = FROM } 
+				}
+			}
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				location = { 
+					religion = FROM 
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_debug_raise_moral_authority = {
+		ai = no
+		only_playable = yes
+	
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		
+		potential = {
+			tier = COUNT
+		}
+		
+		allow = {
+			ROOT = {
+				location = {
+					show_scope_change = no
+					religion = ROOT
+				}
+			}
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				location = { 
+					random_playable_ruler = { 
+						limit = { religion = PREV }	
+						religion_authority = {
+							modifier = mta_religious_resurgence
+							years = 20
+						}
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	mta_debug_lower_moral_authority = {
+		ai = no
+		only_playable = yes
+	
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		
+		potential = {
+			tier = COUNT
+		}
+		
+		allow = {
+			ROOT = {
+				location = {
+					show_scope_change = no
+					religion = ROOT
+				}
+			}
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				location = { 
+					random_playable_ruler = { 
+						limit = { religion = PREV }	
+						religion_authority = {
+							modifier = mta_religious_decline
+							years = 20
+						}
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	mta_debug_add_holding_slot = {
+		ai = no
+		only_playable = yes
+	
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		
+		potential = {
+			tier = COUNT
+		}
+		
+		allow = {
+			ROOT = {
+				location = {
+					show_scope_change = no
+					NOT = { num_of_max_settlements = 7 }
+				}
+			}
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				location = { 
+					show_scope_change = no
+					add_holding_slot = 1
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	mta_debug_remove_holding_slot = {
+		ai = no
+		only_playable = yes
+	
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		
+		potential = {
+			tier = COUNT
+		}
+		
+		allow = {
+			ROOT = {
+				location = {
+					show_scope_change = no
+					NOT = { num_of_max_settlements <= 1 }
+					NOT = { num_of_empty_holdings < 1 }
+				}
+			}
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				location = { 
+					show_scope_change = no
+					add_holding_slot = -1
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+settlement_decisions = {
+	mta_debug_replenish_levies = {
+		ai = no
+		only_playable = yes
+	
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		
+		potential = {
+			tier = BARON
+		}
+		
+		allow = {
+			NOT = { holding_total_levy_percent = 1 }
+		}
+		
+		effect = {
+			hidden_tooltip = { refill_holding_levy = yes }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	mta_debug_destroy_settlement = {
+		ai = no
+		only_playable = yes
+	
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		
+		potential = {
+			tier = BARON
+		}
+		
+		allow = {
+			tier = BARON
+		}
+		
+		effect = {
+			hidden_tooltip = { destroy_settlement = THIS }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

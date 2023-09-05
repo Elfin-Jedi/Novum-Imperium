@@ -1,0 +1,224 @@
+# -*- ck2.artifacts -*-
+
+antiquity_book_poetry = {
+	picture = "GFX_classic_of_poetry" #ToDo Check and find appropriate picture
+	flags = { antiquity_book book inventory }
+	slot = library
+	#stacking = no
+	quality = 3
+	
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.1
+	learning = 3
+	
+	active = {
+		learning = 6
+	}
+}
+antiquity_book_play = {
+	picture = "GFX_book_illiad"  
+	flags = { antiquity_book book inventory }
+	slot = library
+	#stacking = no
+	quality = 3
+	
+	intrigue = 3
+	stewardship = 1
+	monthly_character_prestige = 0.1
+	
+	active = {
+		intrigue = 3
+		learning = 6
+	}
+}
+antiquity_book_medicine = {
+	picture = "GFX_book_health_01"  
+	flags = { antiquity_book book inventory }
+	slot = library
+	#stacking = no
+	quality = 3
+	
+	health = 0.5
+	fertility = 0.15
+	monthly_character_prestige = 0.1
+	
+	active = {
+		learning = 6
+	}
+}
+antiquity_book_philosophy = {
+	picture = "GFX_book_honor_root_1"
+	flags = { antiquity_book book inventory }  
+	slot = library
+	#stacking = no
+	quality = 3
+	
+	vassal_opinion = 3
+	general_opinion = 2
+	monthly_character_prestige = 0.2
+	
+	active = {
+		learning = 6
+	}
+}
+antiquity_book_architecture = {
+	picture = "GFX_book_architect_01"
+	flags = { antiquity_book book inventory } 
+	slot = library
+	stacking = no
+	quality = 3
+	
+	tech_growth_modifier_economy = 0.1
+	build_cost_modifier = -0.1
+	build_time_modifier = -0.1
+	monthly_character_prestige = 0.1
+	
+	active = {
+		learning = 6
+	}
+}
+antiquity_book_history = {
+	picture = "GFX_book_honor_root_1"
+	flags = { antiquity_book book inventory }  
+	slot = library
+	#stacking = no
+	quality = 1
+	
+	intrigue = 3
+	diplomacy = 3
+	martial = 3
+	monthly_character_prestige = 0.1
+	
+	active = {
+		learning = 6
+	}
+}
+antiquity_book_astronomy = {
+	picture = "GFX_book_learnblank_02"
+	flags = { antiquity_book book inventory } 
+	slot = library
+	#stacking = no
+	quality = 3
+	
+	learning = 3
+	christian_opinion = 3
+	general_opinion = 2
+	
+	active = {
+		learning = 6
+	}
+}
+antiquity_book_fake  = {
+	picture = "GFX_book_cook_roman"
+	flags = { fake_book book }
+	slot = library
+	#stacking = no
+	quality = 1
+	
+	learning = 1
+	intrigue = 1 
+	#monthly_character_prestige = -0.1
+	#general_opinion = -1
+	
+	active = {
+		learning = 6
+	}
+}
+
+terrible_armor = { # NOTE: Cannot be acquired, only reason it's not removed is to ensure vanilla compatibility
+	picture = "GFX_rusty_chain_mail"
+	flags = { armor_set armor created }
+	slot = torso
+	stacking = no
+	quality = 1
+	
+	combat_rating = 1
+	
+	active = {
+		is_adult = yes
+	}
+}
+
+zweihander_sword = {
+	picture = "GFX_zweihander_sword"
+	flags = { combat_weapon weapon sword created }
+	slot = mainhand
+	stacking = no
+	quality = 4
+	
+	combat_rating = 15
+	vassal_opinion = 5
+	duelist_opinion = 5
+	command_modifier = {
+		morale_offence = 0.1
+		morale_defence = 0.1
+	}
+	
+	active = {
+		is_adult = yes
+		OR = {
+			culture_group = north_germanic
+			culture_group = central_germanic
+			culture_group = west_germanic
+			culture_group = latin
+			culture_group = iberian
+			culture_group = italian_group
+			culture_group = celtic
+		}
+		OR = { # Need both because Robust should override Delicate/Weak disqualification and Strong/Burly should override Feeble disqualification
+			NOT = { is_weak_trigger = yes }
+			is_strong_trigger = yes
+		}
+		
+		custom_tooltip = {
+			text = "rtp_sword_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_strong_vs_light_ct"
+		}
+		custom_tooltip = {
+			text = "rtp_no_offhand_ct"
+
+			NOT = {
+				any_artifact = {
+					has_artifact_flag = offhand
+					is_artifact_equipped = yes
+				}
+			}
+		}
+	}
+	
+	allowed_gift = {
+		OR = {
+			culture_group = north_germanic
+			culture_group = central_germanic
+			culture_group = west_germanic
+			culture_group = latin
+			culture_group = iberian
+			culture_group = italian_group
+			culture_group = celtic
+		}
+		OR = { # Need both because Robust should override Delicate/Weak disqualification and Strong/Burly should override Feeble disqualification
+			NOT = { is_weak_trigger = yes }
+			is_strong_trigger = yes
+		}
+	}
+}
+
+#The default name and desccription refer to Cathedral, but this can be overwrritten at spawn
+wonder_artifact_bells = {
+	picture = "GFX_relic_box_iron"
+	flags = { religious bells cathedral_part }
+	stacking = no
+	quality = 3
+	
+	monthly_character_prestige = 0.5
+	
+	active = {
+		NOR = {
+			religion_group = christian
+			religion_scope = { has_religion_feature = religion_syncretic_christian }
+		}
+	}
+}
+

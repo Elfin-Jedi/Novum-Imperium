@@ -1,0 +1,585 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+#CODE;ENGLISH;;;;;;;;;;;;;x
+
+
+
+
+
+
+# ################
+# character_events
+# ################
+
+# -------
+# General
+# -------
+
+EVTOPT_kuru_ec_charevt_dismiss_thats_interesting_news;That's interesting news....;;;;;;;;;;;;;x
+EVTOPT_kuru_ec_charevt_dismiss_thats_interesting_news_desc;That's interesting news....;;;;;;;;;;;;;x
+
+# -----------------
+# Using Mods Events
+# -----------------
+
+EVTOPT_kuru_ec_charevt_yes;Yes!;;;;;;;;;;;;;x
+EVTOPT_kuru_ec_charevt_yes_desc;Other decisions will take this modification into account.;;;;;;;;;;;;;x
+
+EVTOPT_kuru_ec_charevt_no;No.;;;;;;;;;;;;;x
+EVTOPT_kuru_ec_charevt_no_desc;Other decisions will ignore this modification.;;;;;;;;;;;;;x
+
+EVTOPT_kuru_ec_charevt_nevermind;Nevermind.;;;;;;;;;;;;;x
+EVTOPT_kuru_ec_charevt_nevermind_desc;On second thought...;;;;;;;;;;;;;x
+
+EVTTITLE_kuru_ec_charevt_0001;Faiterial's Buildings Mod;;;;;;;;;;;;;x
+EVTDESC_kuru_ec_charevt_0001;Is the realm using the Faiterial's Buildings Mod?;;;;;;;;;;;;;x
+
+EVTTITLE_kuru_ec_charevt_0002;New Buildings and Effects Mod;;;;;;;;;;;;;x
+EVTDESC_kuru_ec_charevt_0002;Is the realm using the New Buildings and Effects Mod?;;;;;;;;;;;;;x
+
+EVTTITLE_kuru_ec_charevt_0003;Peachy's Buildings Mod;;;;;;;;;;;;;x
+EVTDESC_kuru_ec_charevt_0003;Is the realm using the Peachy's Buildings Mod?;;;;;;;;;;;;;x
+
+EVTTITLE_kuru_ec_charevt_0004;Your Personal Castle Mod;;;;;;;;;;;;;x
+EVTDESC_kuru_ec_charevt_0004;Is the realm using the Your Personal Castle Mod?;;;;;;;;;;;;;x
+
+EVTTITLE_kuru_ec_charevt_0005;Birth of Mystic Descent;;;;;;;;;;;;;x
+EVTDESC_kuru_ec_charevt_0005;A child was born of mystic descent!;;;;;;;;;;;;;x
+
+EVTTITLE_kuru_ec_charevt_0010;Spawn Army;;;;;;;;;;;;;x
+EVTDESC_kuru_ec_charevt_0010;We shall summon the populace to join our righteous cause!;;;;;;;;;;;;;x
+
+EVTOPT_kuru_ec_0010_army_5000;Raise an army of 5000 men.;;;;;;;;;;;;;x
+EVTOPT_kuru_ec_0010_army_5000_desc;5000 men will answer the call in this character's location.;;;;;;;;;;;;;x
+
+# ------------------------
+# Fanatical Servant Events
+# ------------------------
+
+EVTTITLE_kuru_ec_charevt_0006;Fanatical Assassination;;;;;;;;;;;;;x
+EVTDESC_kuru_ec_charevt_0006;[target_puppetmaster.GetFullName] commanded [target_servant.GetFullName] to assassinate [target_victim.GetFullName].;;;;;;;;;;;;;x
+
+EVTTITLE_kuru_ec_charevt_0007;Fanatical Kidnapping;;;;;;;;;;;;;x
+EVTDESC_kuru_ec_charevt_0007;[target_puppetmaster.GetFullName] commanded [target_servant.GetFullName] to kidnap [target_victim.GetFullName].;;;;;;;;;;;;;x
+
+EVTOPT_kuru_ec_charevt_fanatical_servant_well_done;Well done, my good and faithful servant!;;;;;;;;;;;;;x
+
+
+
+
+
+
+# ###############
+# event_modifiers
+# ###############
+
+kuru_ec_extraordinary_ruler;Extraordinary Ruler;;;;;;;;;;;;;x
+kuru_ec_extraordinary_ruler_desc;This character can personally manage a larger number of holdings.;;;;;;;;;;;;;x
+
+kuru_ec_extraordinary_leader;Extraordinary Leader;;;;;;;;;;;;;x
+kuru_ec_extraordinary_leader_desc;This character is an extraordinary military leader.;;;;;;;;;;;;;x
+
+kuru_ec_extraordinary_builder;Extraordinary Builder;;;;;;;;;;;;;x
+kuru_ec_extraordinary_builder_desc;This character can build with extraordinary speed.;;;;;;;;;;;;;x
+
+kuru_ec_extraordinary_plotter;Extraordinary Plotter;;;;;;;;;;;;;x
+kuru_ec_extraordinary_plotter_desc;This character is a genius of intrigue.;;;;;;;;;;;;;x
+
+kuru_ec_quick_reinforcements;Quick Reinforcements;;;;;;;;;;;;;x
+kuru_ec_quick_reinforcements_desc;This character is able to quickly reinforce the ranks of garrisons and levies.;;;;;;;;;;;;;x
+
+kuru_ec_bodyguard;Personal Bodyguard;;;;;;;;;;;;;x
+kuru_ec_bodyguard_desc;This character has a personal bodyguard providing a bonus to defensive plots.;;;;;;;;;;;;;x
+
+kuru_ec_mystic_descent;Mystic Descent;;;;;;;;;;;;;x
+kuru_ec_mystic_descent_desc;This character is of mystic descent.;;;;;;;;;;;;;x
+
+kuru_ec_unstable_province;Unstable Province;;;;;;;;;;;;;x
+kuru_ec_unstable_province_desc;This province is highly unstable and likely to revolt.;;;;;;;;;;;;;x
+
+kuru_ec_hated_ruler;Hated Ruler;;;;;;;;;;;;;x
+kuru_ec_hated_ruler_desc;This character is hated by his subjects and they are likely to revolt.;;;;;;;;;;;;;x
+
+kuru_ec_universally_despised;Universally Despised;;;;;;;;;;;;;x
+kuru_ec_universally_despised_desc;This character is universally despised.;;;;;;;;;;;;;x
+
+kuru_ec_ruthless_imprisoner;Ruthless Imprisoner;;;;;;;;;;;;;x
+kuru_ec_ruthless_imprisoner_desc;Drastically increases the odds of capturing prisoners when winning sieges or battles.;;;;;;;;;;;;;x
+
+
+
+
+
+
+# #####
+# flags
+# #####
+
+kuru_ec_flag_mc_war_target;Divine Will: War Target;;;;;;;;;;;;;x
+kuru_ec_flag_mc_war_target_desc;Designates a title as a war target for Divine Will.;;;;;;;;;;;;;x
+
+kuru_ec_has_fully_upgraded_hospital;Has Fully Upgraded Hospital;;;;;;;;;;;;;x
+kuru_ec_has_fully_upgraded_hospital_desc;Signifies that the hospital has been fully upgraded in this province.;;;;;;;;;;;;;x
+
+kuru_ec_has_fully_upgraded_fort;Has Fully Upgraded Fort;;;;;;;;;;;;;x
+kuru_ec_has_fully_upgraded_fort_desc;Signifies that the fort has been fully upgraded in this province.;;;;;;;;;;;;;x
+
+kuru_ec_has_fully_upgraded_trade_post;Has Fully Upgraded Trade Post;;;;;;;;;;;;;x
+kuru_ec_has_fully_upgraded_trade_post_desc;Signifies that the trade post has been fully upgraded in this province.;;;;;;;;;;;;;x
+
+kuru_ec_flag_using_mods_faiterials_buildings;Faiterial's Buildings Mod;;;;;;;;;;;;;x
+kuru_ec_flag_using_mods_faiterials_buildings_desc;The realm is using the Faiterial's Buildings Mod.;;;;;;;;;;;;;x
+
+kuru_ec_flag_using_mods_new_buildings_and_effects;New Buildings and Effects Mod;;;;;;;;;;;;;x
+kuru_ec_flag_using_mods_new_buildings_and_effects_desc;The realm is using the New Buildings and Effects Mod.;;;;;;;;;;;;;x
+
+kuru_ec_flag_using_mods_peachys_buildings;Peachy's Buildings Mod;;;;;;;;;;;;;x
+kuru_ec_flag_using_mods_peachys_buildings_desc;The realm is using the Peachy's Buildings Mod.;;;;;;;;;;;;;x
+
+kuru_ec_flag_using_mods_your_personal_castle;Your Personal Castle Mod;;;;;;;;;;;;;x
+kuru_ec_flag_using_mods_your_personal_castle_desc;The realm is using the Your Personal Castle Mod.;;;;;;;;;;;;;x
+
+kuru_ec_flag_proposing_holding_upgrades;Proposing Holding Upgrades;;;;;;;;;;;;;x
+kuru_ec_flag_proposing_holding_upgrades_desc;The steward is proposing holding upgrades.;;;;;;;;;;;;;x
+
+kuru_ec_flag_divine_will;Divine Will;;;;;;;;;;;;;x
+kuru_ec_flag_divine_will_desc;The world is subject to divine will.;;;;;;;;;;;;;x
+
+kuru_ec_flag_minor_title_title_fanatical_servant;Fanatical Servant;;;;;;;;;;;;;x
+kuru_ec_flag_minor_title_title_fanatical_servant_desc;The player is allowed to award a minor title called Fanatical Servant.;;;;;;;;;;;;;x
+
+kuru_ec_open_society_membership;Open Society Membership;;;;;;;;;;;;;x
+kuru_ec_open_society_membership_desc;The player may invite other characters to join or leave the society.;;;;;;;;;;;;;x
+
+
+
+
+
+
+# #################
+# holding_decisions
+# #################
+
+# ---------------
+# Capital Holding
+# ---------------
+
+kuru_ec_upgrade_family_palace;Upgrade Family Palace;;;;;;;;;;;;;x
+kuru_ec_upgrade_family_palace_desc;Upgrades the family palace for your patrician family.;;;;;;;;;;;;;x
+
+kuru_ec_add_settlement;Add Settlement;;;;;;;;;;;;;x
+kuru_ec_add_settlement_desc;Add a constructible settlement to [Root.Location.GetName].;;;;;;;;;;;;;x
+
+# Wonders
+
+kuru_ec_wonder_finish_stage;Finish Wonder Stage;;;;;;;;;;;;;x
+kuru_ec_wonder_finish_stage_desc;Finishes the current stage of the wonder being constructed in this province.;;;;;;;;;;;;;x
+
+kuru_ec_wonder_finish_upgrade;Finish Wonder Upgrade;;;;;;;;;;;;;x
+kuru_ec_wonder_finish_upgrade_desc;Finishes the current upgrade of the wonder being constructed in this province.;;;;;;;;;;;;;x
+
+kuru_ec_wonder_add_upgrade_slot;Add Wonder Upgrade Slot;;;;;;;;;;;;;x
+kuru_ec_wonder_add_upgrade_slot_desc;Adds another upgrade slot to the wonder in this province.;;;;;;;;;;;;;x
+
+# ------------------------------------------------
+# Build Extra Holding (Hospital, Fort, Trade Post)
+# ------------------------------------------------
+
+kuru_ec_build_hospital;Build Hospital;;;;;;;;;;;;;x
+kuru_ec_build_hospital_desc;[Root.Holder.GetFullName] builds a hospital in this province.;;;;;;;;;;;;;x
+
+kuru_ec_build_fort;Build Fort;;;;;;;;;;;;;x
+kuru_ec_build_fort_desc;[Root.Holder.GetFullName] builds a fort in this province.;;;;;;;;;;;;;x
+
+kuru_ec_mc_build_fort;Mind Control: Build Fort;;;;;;;;;;;;;x
+kuru_ec_mc_build_fort_desc;The mind-controlled character builds a fort in this province.;;;;;;;;;;;;;x
+
+kuru_ec_build_trade_post;Build Trade Post;;;;;;;;;;;;;x
+kuru_ec_build_trade_post_desc;[Root.Holder.GetFullName] builds a trade post in this province.;;;;;;;;;;;;;x
+
+kuru_ec_mc_build_trade_post;Mind Control: Build Trade Post;;;;;;;;;;;;;x
+kuru_ec_mc_build_trade_post_desc;The mind-controlled character builds a trade post in this province.;;;;;;;;;;;;;x
+
+# --------------------------------------------------
+# Upgrade Extra Holding (Hospital, Fort, Trade Post)
+# --------------------------------------------------
+
+kuru_ec_upgrade_hospital;Upgrade Hospital;;;;;;;;;;;;;x
+kuru_ec_upgrade_hospital_desc;Upgrades the hospital in this province.;;;;;;;;;;;;;x
+
+kuru_ec_upgrade_hospital_orig;Upgrade Hospital;;;;;;;;;;;;;x
+kuru_ec_upgrade_hospital_orig_desc;Upgrades the hospital in this province.;;;;;;;;;;;;;x
+
+kuru_ec_upgrade_fort;Upgrade Fort;;;;;;;;;;;;;x
+kuru_ec_upgrade_fort_desc;Upgrades the fort in this province.;;;;;;;;;;;;;x
+
+kuru_ec_upgrade_trade_post;Upgrade Trade Post;;;;;;;;;;;;;x
+kuru_ec_upgrade_trade_post_desc;Upgrades the trade post in this province.;;;;;;;;;;;;;x
+
+# --------------------------------------------------------
+# Destroy/Seize Extra Holding (Hospital, Fort, Trade Post)
+# --------------------------------------------------------
+
+kuru_ec_destroy_hospital;Destroy Hospital;;;;;;;;;;;;;x
+kuru_ec_destroy_hospital_desc;Destroys the hospital in this province.;;;;;;;;;;;;;x
+
+kuru_ec_destroy_hospital_orig;Destroy Hospital;;;;;;;;;;;;;x
+kuru_ec_destroy_hospital_orig_desc;Destroys the hospital in this province.;;;;;;;;;;;;;x
+
+kuru_ec_destroy_fort;Destroy Fort;;;;;;;;;;;;;x
+kuru_ec_destroy_fort_desc;Destroys the fort in this province: ([Root.GetName]).;;;;;;;;;;;;;x
+
+kuru_ec_seize_fort;Seize Fort;;;;;;;;;;;;;x
+kuru_ec_seize_fort_desc;[From.GetFullName] seizes the fort in this province.;;;;;;;;;;;;;x
+
+kuru_ec_mc_seize_fort;Mind Control: Seize Fort;;;;;;;;;;;;;x
+kuru_ec_mc_seize_fort_desc;The mind-controlled character seizes the fort in this province.;;;;;;;;;;;;;x
+
+kuru_ec_destroy_trade_post;Destroy Trade Post;;;;;;;;;;;;;x
+kuru_ec_destroy_trade_post_desc;Destroys the trade post in this province.;;;;;;;;;;;;;x
+
+kuru_ec_seize_trade_post;Seize Trade Post;;;;;;;;;;;;;x
+kuru_ec_seize_trade_post_desc;[From.GetFullName] seizes the trade post in this province.;;;;;;;;;;;;;x
+
+kuru_ec_mc_seize_trade_post;Mind Control: Seize Trade Post;;;;;;;;;;;;;x
+kuru_ec_mc_seize_trade_post_desc;The mind-controlled character seizes the trade post in this province.;;;;;;;;;;;;;x
+
+# -------
+# Holding
+# -------
+
+kuru_ec_upgrade_holding;Upgrade Holding;;;;;;;;;;;;;x
+kuru_ec_upgrade_holding_desc;Upgrade this holding with all supported buildings.;;;;;;;;;;;;;x
+
+
+
+
+
+# ############
+# minor_titles
+# ############
+
+kuru_ec_title_fanatical_servant;Fanatical Servant;;;;;;;;;;;;;x
+kuru_ec_title_fanatical_servant_desc;An honorary title for a fanatical servant who will do whatever must be done for the realm.;;;;;;;;;;;;;x
+
+
+
+
+
+# ########
+# opinions
+# ########
+
+kuru_ec_opinion_title_fanatical_servant;Fanatical Servant;;;;;;;;;;;;;x
+kuru_ec_opinion_title_fanatical_servant_desc;This servant will do whatever must be done for the realm.;;;;;;;;;;;;;x
+
+kuru_ec_opinion_title_master_of_fanatical_servant;Master of Fanatical Servant;;;;;;;;;;;;;x
+kuru_ec_opinion_title_master_of_fanatical_servant_desc;The needs of the realm require that this servant is expendable.;;;;;;;;;;;;;x
+
+kuru_ec_received_education;Received Education;;;;;;;;;;;;;x
+kuru_ec_received_education_desc;This character is grateful for receiving an education.;;;;;;;;;;;;;x
+
+kuru_ec_received_good_education;Received Good Education;;;;;;;;;;;;;x
+kuru_ec_received_good_education_desc;This character is grateful for receiving a good education.;;;;;;;;;;;;;x
+
+kuru_ec_received_excellent_education;Received Excellent Education;;;;;;;;;;;;;x
+kuru_ec_received_excellent_education_desc;This character is grateful for receiving an excellent education.;;;;;;;;;;;;;x
+
+kuru_ec_murdered_pet;Murdered Pet;;;;;;;;;;;;;x
+kuru_ec_murdered_pet_desc;Murdered Pet;;;;;;;;;;;;;x
+
+kuru_ec_murdered_spouse;Murdered Spouse;;;;;;;;;;;;;x
+kuru_ec_murdered_spouse_desc;Murdered Spouse;;;;;;;;;;;;;x
+
+kuru_ec_murdered_child;Murdered Child;;;;;;;;;;;;;x
+kuru_ec_murdered_child_desc;Murdered Child;;;;;;;;;;;;;x
+
+kuru_ec_murdered_parent;Murdered Parent;;;;;;;;;;;;;x
+kuru_ec_murdered_parent_desc;Murdered Parent;;;;;;;;;;;;;x
+
+kuru_ec_murdered_sibling;Murdered Sibling;;;;;;;;;;;;;x
+kuru_ec_murdered_sibling_desc;Murdered Sibling;;;;;;;;;;;;;x
+
+kuru_ec_murdered_vassal;Murdered Vassal;;;;;;;;;;;;;x
+kuru_ec_murdered_vassal_desc;Murdered Vassal;;;;;;;;;;;;;x
+
+kuru_ec_murdered_lover;Murdered Lover;;;;;;;;;;;;;x
+kuru_ec_murdered_lover_desc;Murdered Lover;;;;;;;;;;;;;x
+
+kuru_ec_murdered_friend;Murdered Friend;;;;;;;;;;;;;x
+kuru_ec_murdered_friend_desc;Murdered Friend;;;;;;;;;;;;;x
+
+kuru_ec_murdered_rival;Murdered Rival;;;;;;;;;;;;;x
+kuru_ec_murdered_rival_desc;Murdered Rival;;;;;;;;;;;;;x
+
+kuru_ec_kidnapped_me;Kidnapped Me;;;;;;;;;;;;;x
+kuru_ec_kidnapped_me_desc;Kidnapped Me;;;;;;;;;;;;;x
+
+kuru_ec_kidnapped_spouse;Kidnapped Spouse;;;;;;;;;;;;;x
+kuru_ec_kidnapped_spouse_desc;Kidnapped Spouse;;;;;;;;;;;;;x
+
+kuru_ec_kidnapped_child;Kidnapped Child;;;;;;;;;;;;;x
+kuru_ec_kidnapped_child_desc;Kidnapped Child;;;;;;;;;;;;;x
+
+kuru_ec_kidnapped_parent;Kidnapped Parent;;;;;;;;;;;;;x
+kuru_ec_kidnapped_parent_desc;Kidnapped Parent;;;;;;;;;;;;;x
+
+kuru_ec_kidnapped_sibling;Kidnapped Sibling;;;;;;;;;;;;;x
+kuru_ec_kidnapped_sibling_desc;Kidnapped Sibling;;;;;;;;;;;;;x
+
+kuru_ec_kidnapped_vassal;Kidnapped Vassal;;;;;;;;;;;;;x
+kuru_ec_kidnapped_vassal_desc;Kidnapped Vassal;;;;;;;;;;;;;x
+
+kuru_ec_kidnapped_lover;Kidnapped Lover;;;;;;;;;;;;;x
+kuru_ec_kidnapped_lover_desc;Kidnapped Lover;;;;;;;;;;;;;x
+
+kuru_ec_kidnapped_friend;Kidnapped Friend;;;;;;;;;;;;;x
+kuru_ec_kidnapped_friend_desc;Kidnapped Friend;;;;;;;;;;;;;x
+
+kuru_ec_kidnapped_rival;Kidnapped Rival;;;;;;;;;;;;;x
+kuru_ec_kidnapped_rival_desc;Kidnapped Rival;;;;;;;;;;;;;x
+
+
+
+
+
+# ###################
+# targetted_decisions
+# ###################
+
+# ------
+# Player
+# ------
+
+kuru_ec_remove_claims_on_me_all;Remove Claims on Me;;;;;;;;;;;;;x
+kuru_ec_remove_claims_on_me_all_desc;Remove all claims against titles held or controlled by [From.GetFullName].;;;;;;;;;;;;;x
+
+# ----------
+# Chancellor
+# ----------
+
+kuru_ec_mc_fabriacte_claim;Encourage Fabrication;;;;;;;;;;;;;x
+kuru_ec_mc_fabriacte_claim_desc;[Root.GetFullName] will spend some money in bribes to encourage the fabrication of the claim.;;;;;;;;;;;;;x
+
+kuru_ec_summon_female_courtier;Summon Female Courtier;;;;;;;;;;;;;x
+kuru_ec_summon_female_courtier_desc;[Root.GetFullName] shall summon a female character to the court of [From.GetFullName].;;;;;;;;;;;;;x
+
+# -------
+# Steward
+# -------
+
+kuru_ec_propose_holding_upgrades;Propose Holding Upgrades;;;;;;;;;;;;;x
+kuru_ec_propose_holding_upgrades_desc;[From.GetFullName] directs [Root.GetFullName] to provide extra options for holding upgrades.;;;;;;;;;;;;;x
+
+kuru_ec_stop_proposing_holding_upgrades;Stop Proposing Holding Upgrades;;;;;;;;;;;;;x
+kuru_ec_stop_proposing_holding_upgrades_desc;[From.GetFullName] directs [Root.GetFullName] to refrain from proposing extra options for holding upgrades.;;;;;;;;;;;;;x
+
+kuru_ec_discuss_building_options;Discuss Building Options;;;;;;;;;;;;;x
+kuru_ec_discuss_building_options_desc;[From.GetFullName] wishes to discuss some building modifications with [Root.GetFullName].;;;;;;;;;;;;;x
+
+# ---------
+# Spymaster
+# ---------
+
+kuru_ec_enable_cheats;Play Dirty;;;;;;;;;;;;;x
+kuru_ec_enable_cheats_desc;Enables cheat options.;;;;;;;;;;;;;x
+
+kuru_ec_disable_cheats;Play Nice;;;;;;;;;;;;;x
+kuru_ec_disable_cheats_desc;Disables cheat options.;;;;;;;;;;;;;x
+
+kuru_ec_hire_fanatical_servant;Hire Fanatical Servant;;;;;;;;;;;;;x
+kuru_ec_hire_fanatical_servant_desc;[Root.GetFullName] shall appoint a fanatical servant to the court of [From.GetFullName].;;;;;;;;;;;;;x
+
+# ---------
+# Spiritual
+# ---------
+
+kuru_ec_pray_for_divine_will;Pray for Divine Will;;;;;;;;;;;;;x
+kuru_ec_pray_for_divine_will_desc;[Root.GetFullName] shall pray for Divine Will to shape the world.;;;;;;;;;;;;;x
+
+kuru_ec_pray_for_free_will;Pray for Free Will;;;;;;;;;;;;;x
+kuru_ec_pray_for_free_will_desc;[Root.GetFullName] stops praying for Divine Will to shape the world, instead praying that Free Will once again be given full reign.;;;;;;;;;;;;;x
+
+kuru_ec_mc_shatter_world;Divine Will: Shatter World;;;;;;;;;;;;;x
+kuru_ec_mc_shatter_world_desc;Abolishes every landed title above the rank of Count, and removes all claims.;;;;;;;;;;;;;x
+
+# ---------
+# Commander
+# ---------
+
+kuru_ec_summon_army;Summon an Army;;;;;;;;;;;;;x
+kuru_ec_summon_army_desc;We shall raise up an army to join the righteous cause of [Root.GetFullName]!;;;;;;;;;;;;;x
+
+# ----------
+# Apprentice
+# ----------
+
+kuru_ec_remove_cooldown_acquire_ingredients;More Ingredients;;;;;;;;;;;;;x
+kuru_ec_remove_cooldown_acquire_ingredients_desc;No need to wait to start the Acquire Ingredients quest again!;;;;;;;;;;;;;x
+
+kuru_ec_remove_cooldown_stargazing;More Stargazing;;;;;;;;;;;;;x
+kuru_ec_remove_cooldown_stargazing_desc;No need to wait to start the Stargazing quest again!;;;;;;;;;;;;;x
+
+kuru_ec_open_society_membership;Open Society Membership;;;;;;;;;;;;;x
+kuru_ec_open_society_membership_desc;[From.GetFullName] may invite other characters to join or leave the society.;;;;;;;;;;;;;x
+
+kuru_ec_close_society_membership;Close Society Membership;;;;;;;;;;;;;x
+kuru_ec_close_society_membership_desc;[From.GetFullName] may no longer invite other characters to join or leave the society.;;;;;;;;;;;;;x
+
+# ----------------------
+# Divine Will Instrument
+# ----------------------
+
+kuru_ec_submit_to_divine_will;Submit to Divine Will;;;;;;;;;;;;;x
+kuru_ec_submit_to_divine_will_desc;[Root.GetFullName] becomes the chosen instrument of Divine Will.;;;;;;;;;;;;;x
+
+kuru_ec_regain_free_will;Regain Free Will;;;;;;;;;;;;;x
+kuru_ec_regain_free_will_desc;[Root.GetFullName] regains Free Will and is no longer the chosen instrument of Divine Will.;;;;;;;;;;;;;x
+
+kuru_ec_mc_go_to_war;Divine Will: Go to War;;;;;;;;;;;;;x
+kuru_ec_mc_go_to_war_desc;[Root.GetFullName] will go to war to pursue a designated war target.;;;;;;;;;;;;;x
+
+kuru_ec_mc_declare_independence;Divine Will: Declare Independence;;;;;;;;;;;;;x
+kuru_ec_mc_declare_independence_desc;[Root.GetFullName] will fight [Root.Liege.GetFullName] for independence.;;;;;;;;;;;;;x
+
+# -----------------
+# Fanatical Servant
+# -----------------
+
+kuru_ec_fanatical_assassination;Fanatical Assassination;;;;;;;;;;;;;x
+kuru_ec_fanatical_assassination_desc;[Root.GetFullName] will be assassinated by a fanatical servant of [From.GetFullName].;;;;;;;;;;;;;x
+
+kuru_ec_fanatical_kidnapping;Fanatical Kidnapping;;;;;;;;;;;;;x
+kuru_ec_fanatical_kidnapping_desc;[Root.GetFullName] will be kidnapped by a fanatical servant of [From.GetFullName].;;;;;;;;;;;;;x
+
+kuru_ec_fanatical_murder_pet;Fanatical Pet Slaying;;;;;;;;;;;;;x
+kuru_ec_fanatical_murder_pet_desc;A beloved pet of [Root.GetFullName] will be slain by a fanatical servant of [From.GetFullName]... in a most unforgivable manner.;;;;;;;;;;;;;x
+
+# ------
+# Anyone
+# ------
+
+kuru_ec_improve_education;Improve Education;;;;;;;;;;;;;x
+kuru_ec_improve_education_desc;[From.GetFullName] pays to improve the education of [From.GetHerHis] courtier [Root.GetFullName].;;;;;;;;;;;;;x
+
+kuru_ec_make_saintly;Divine Will: Make Saintly;;;;;;;;;;;;;x
+kuru_ec_make_saintly_desc;[Root.GetFullName] approaches godliness.;;;;;;;;;;;;;x
+
+kuru_ec_make_wicked;Divine Will: Make Wicked;;;;;;;;;;;;;x
+kuru_ec_make_wicked_desc;[Root.GetFullName] falls from grace.;;;;;;;;;;;;;x
+
+kuru_ec_improve_dna;Divine Will: Improve DNA;;;;;;;;;;;;;x
+kuru_ec_improve_dna_desc;[Root.GetFullName] will be fairer and stronger... and will know it!;;;;;;;;;;;;;x
+
+kuru_ec_degrade_dna;Divine Will: Degrade DNA;;;;;;;;;;;;;x
+kuru_ec_degrade_dna_desc;[Root.GetFullName] will hit every branch of the ugly tree on his debilitating fall.;;;;;;;;;;;;;x
+
+kuru_ec_improve_lifestyle;Divine Will: Improve Lifestyle;;;;;;;;;;;;;x
+kuru_ec_improve_lifestyle_desc;[Root.GetFullName] will care more about fitness, learning, and hygiene.;;;;;;;;;;;;;x
+
+kuru_ec_degrade_lifestyle;Divine Will: Degrade Lifestyle;;;;;;;;;;;;;x
+kuru_ec_degrade_lifestyle_desc;[Root.GetFullName] will stop caring about fitness, learning, and hygiene.;;;;;;;;;;;;;x
+
+kuru_ec_improve_behavior;Divine Will: Improve Behavior;;;;;;;;;;;;;x
+kuru_ec_improve_behavior_desc;[Root.GetFullName] will be a better companion.;;;;;;;;;;;;;x
+
+kuru_ec_degrade_behavior;Divine Will: Degrade Behavior;;;;;;;;;;;;;x
+kuru_ec_degrade_behavior_desc;[Root.GetFullName] will be a worse companion.;;;;;;;;;;;;;x
+
+kuru_ec_set_extraordinary_builder;Extraordinary Builder;;;;;;;;;;;;;x
+kuru_ec_set_extraordinary_builder_desc;Allows [Root.GetFullName] to build with extraordinary speed.;;;;;;;;;;;;;x
+
+kuru_ec_remove_extraordinary_builder;Normal Builder;;;;;;;;;;;;;x
+kuru_ec_remove_extraordinary_builder_desc;Makes [Root.GetFullName] build at normal speed.;;;;;;;;;;;;;x
+
+kuru_ec_set_extraordinary_plotter;Extraordinary Plotter;;;;;;;;;;;;;x
+kuru_ec_set_extraordinary_plotter_desc;Makes [Root.GetFullName] a genius when it comes to plotting.;;;;;;;;;;;;;x
+
+kuru_ec_remove_extraordinary_plotter;Normal Plotter;;;;;;;;;;;;;x
+kuru_ec_remove_extraordinary_plotter_desc;Makes [Root.GetFullName] plot at normal capacity.;;;;;;;;;;;;;x
+
+kuru_ec_set_quick_reinforcements;Quick Reinforcements;;;;;;;;;;;;;x
+kuru_ec_set_quick_reinforcements_desc;Greatly enhances the reinforcement speed for the armies of [Root.GetFullName].;;;;;;;;;;;;;x
+
+kuru_ec_remove_quick_reinforcements;Normal Reinforcements;;;;;;;;;;;;;x
+kuru_ec_remove_quick_reinforcements_desc;Normalizes the reinforcement speed for the armies of [Root.GetFullName].;;;;;;;;;;;;;x
+
+kuru_ec_set_bodyguard;Assign Bodyguard;;;;;;;;;;;;;x
+kuru_ec_set_bodyguard_desc;Assigns a bodyguard to [Root.GetFullName] for protection against hostile plots.;;;;;;;;;;;;;x
+
+kuru_ec_remove_bodyguard;Remove Bodyguard;;;;;;;;;;;;;x
+kuru_ec_remove_bodyguard_desc;Removes the bodyguard from [Root.GetFullName].;;;;;;;;;;;;;x
+
+kuru_ec_set_extraordinary_ruler;Extraordinary Ruler;;;;;;;;;;;;;x
+kuru_ec_set_extraordinary_ruler_desc;Allows [Root.GetFullName] to personally manage a larger number of holdings.;;;;;;;;;;;;;x
+
+kuru_ec_remove_extraordinary_ruler;Normal Ruler;;;;;;;;;;;;;x
+kuru_ec_remove_extraordinary_ruler_desc;Makes [Root.GetFullName] able to personally manage the normal number of holdings.;;;;;;;;;;;;;x
+
+kuru_ec_set_extraordinary_leader;Extraordinary Leader;;;;;;;;;;;;;x
+kuru_ec_set_extraordinary_leader_desc;Makes [Root.GetFullName] an extraordinary military leader.;;;;;;;;;;;;;x
+
+kuru_ec_remove_extraordinary_leader;Normal Leader;;;;;;;;;;;;;x
+kuru_ec_remove_extraordinary_leader_desc;Makes [Root.GetFullName] a normal military leader.;;;;;;;;;;;;;x
+
+kuru_ec_renounce_claims_on_me;Renounce Claims on Me;;;;;;;;;;;;;x
+kuru_ec_renounce_claims_on_me_desc;[Root.GetFullName] renounces all claims against titles held or controlled by [From.GetFullName].;;;;;;;;;;;;;x
+
+kuru_ec_renounce_all_claims;Renounce All Claims;;;;;;;;;;;;;x
+kuru_ec_renounce_all_claims_desc;[Root.GetFullName] renounces all claims against any titles.;;;;;;;;;;;;;x
+
+kuru_ec_provide_an_heir;Provide an Heir;;;;;;;;;;;;;x
+kuru_ec_provide_an_heir_desc;[Root.GetFullName] will provide an heir for her spouse.;;;;;;;;;;;;;x
+
+kuru_ec_diplomatic_servitude;Diplomatic Servitude;;;;;;;;;;;;;x
+kuru_ec_diplomatic_servitude_desc;[Root.GetFullName] will generally agree to the diplomatic overtures from [From.GetFullName].;;;;;;;;;;;;;x
+
+kuru_ec_diplomatic_freedom;Diplomatic Freedom;;;;;;;;;;;;;x
+kuru_ec_diplomatic_freedom_desc;[Root.GetFullName] will not necessarily agree to diplomatic overtures from [From.GetFullName].;;;;;;;;;;;;;x
+
+kuru_ec_invite_to_society;Invite to Society;;;;;;;;;;;;;x
+kuru_ec_invite_to_society_desc;[From.GetFullName] invites [Root.GetFullName] to join the society.;;;;;;;;;;;;;x
+
+kuru_ec_leave_society;Leave Society;;;;;;;;;;;;;x
+kuru_ec_leave_society_desc;[From.GetFullName] encourages [Root.GetFullName] to leave the society.;;;;;;;;;;;;;x
+
+kuru_ec_reveal_society_membership;Reveal Society Membership;;;;;;;;;;;;;x
+kuru_ec_reveal_society_membership_desc;The society membership of [Root.GetFullName] shall be revealed to the world.;;;;;;;;;;;;;x
+
+
+
+
+
+
+# ###############
+# title_decisions
+# ###############
+
+kuru_ec_abolish_title;Abolish Title;;;;;;;;;;;;;x
+kuru_ec_abolish_title_desc;Abolish the title [This.GetFullName].;;;;;;;;;;;;;x
+
+kuru_ec_mc_set_war_target;Divine Will: Set War Target;;;;;;;;;;;;;x
+kuru_ec_mc_set_war_target_desc;Sets the title [Root.GetFullName] as the war target for Divine Will.;;;;;;;;;;;;;x
+
+kuru_ec_mc_clear_war_target;Divine Will: Clear War Target;;;;;;;;;;;;;x
+kuru_ec_mc_clear_war_target_desc;Clears the title [Root.GetFullName] of its Divine Will war target designation.;;;;;;;;;;;;;x
+
+kuru_ec_mc_add_claim;Divine Will: Add Claim;;;;;;;;;;;;;x
+kuru_ec_mc_add_claim_desc;The character who has submitted to Divine Will gets a strong claim on the title [Root.GetFullName].;;;;;;;;;;;;;x
+
+kuru_ec_mc_take_title;Divine Will: Take Title;;;;;;;;;;;;;x
+kuru_ec_mc_take_title_desc;The character who has submitted to Divine Will takes the title [Root.GetFullName].;;;;;;;;;;;;;x
+
+kuru_ec_mc_war_claim_attacker_wins;Divine Will: Attacker Wins;;;;;;;;;;;;;x
+kuru_ec_mc_war_claim_attacker_wins_desc;The attacker against the title [Root.GetFullName] shall be victorious.;;;;;;;;;;;;;x
+
+kuru_ec_mc_war_claim_defender_wins;Divine Will: Defender Wins;;;;;;;;;;;;;x
+kuru_ec_mc_war_claim_defender_wins_desc;The defender of the title [Root.GetFullName] shall be victorious.;;;;;;;;;;;;;x
+
+kuru_ec_mc_war_claim_whitepeace;Divine Will: White Peace;;;;;;;;;;;;;x
+kuru_ec_mc_war_claim_whitepeace_desc;The war for the title [Root.GetFullName] shall end inconclusively.;;;;;;;;;;;;;x
+
+kuru_ec_mc_war_claim_invalid;Divine Will: Invalidate War;;;;;;;;;;;;;x
+kuru_ec_mc_war_claim_invalid_desc;The war for the title [Root.GetFullName] shall end immediately.;;;;;;;;;;;;;x
+
+kuru_ec_mc_destabilize_province;Divine Will: Destabilize Province;;;;;;;;;;;;;x
+kuru_ec_mc_destabilize_province_desc;Destabilizes the [Root.GetFullBaseName] for a month, making rebellion extremely likely.;;;;;;;;;;;;;x

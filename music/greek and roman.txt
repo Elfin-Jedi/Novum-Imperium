@@ -1,0 +1,1033 @@
+song = {
+	name = "Civilization V OST Alexander Peace Theme Epitaph of Seikilos.ogg"
+	song_name = "Epitaph of Seikilos"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { culture = greek }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Civilization V OST Alexander War Theme Epitaph of Seikilos.ogg"
+	song_name = "Epitaph of Seikilos"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { culture = greek }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Ancient Greek Music - Greek Temple.ogg"
+	song_name = "Greek Temple"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { culture = greek }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Ancient Greek war music - Winds of Ithaca.ogg"
+	song_name = "Winds of Ithaca"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { culture = greek }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "The Companions (Ancient Macedon Battle Music - Alexander the Great).ogg"
+	song_name = "The Companions"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { culture = greek }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Sons of Constantinople (Byzantine Empire Battle Music).ogg"
+	song_name = "Sons of Constantinople"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { culture = greek }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Thermopylae (Spartan Battle Music).ogg"
+	song_name = "Thermopylae"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { culture = greek }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Greek Byzantine orthodox chant Agni Parthene (Lyric Video).ogg"
+	song_name = "Agni Parthene"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = greek }
+			NOT = { religion = orthodox }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Civilization V OST Theodora Peace Theme Phos Hilaron.ogg"
+	song_name = "Phos Hilaron"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { culture = greek }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Civilization V OST Theodora War Theme Phos Hilaron.ogg"
+	song_name = "Phos Hilaron"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { culture = greek }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Ancient Byzantine Music - Byzantium.ogg"
+	song_name = "Byzantium"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { culture = greek }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Assassin's Creed Revelations (The Complete Recordings) OST - Byzantium (Track 17).ogg"
+	song_name = "Byzantium"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { culture = greek }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Assassin's Creed Odyssey Legend of the Eagle Bearer (Main Theme) The Flight.ogg"
+	song_name = "Legend of the Eagle Bearer"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { culture = greek }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Byzantium medieval style original song for classical guitar.ogg"
+	song_name = "Byzantium, but with a guitar and not related to the others"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { culture = greek }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "The Four Lads - Istanbul (not Constantinople).ogg"
+	song_name = "Istanbul (not Constantinople)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { culture = greek }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Civilization V OST Augustus Caesar Peace Theme Ancient Roman Melody Fragments.ogg"
+	song_name = "Ancient Roman Melody Fragments"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Civilization V OST Augustus Caesar War Theme Ancient Roman Melody Fragments.ogg"
+	song_name = "Ancient Roman Melody Fragments"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Epic Roman Music - Rising Legion.ogg"
+	song_name = "Rising Legion"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Under Siege (Ancient Epic Battle Music).ogg"
+	song_name = "Under Siege"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Assassins Creed Legion Unofficial Theme.ogg"
+	song_name = "Legion"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Epic Roman Music - Pax Romana.ogg"
+	song_name = "Pax Romana"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Epic Roman Music - Augustus Caesar.ogg"
+	song_name = "Augustus Caesar"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Ancient Roman Music - The Roman Empire.ogg"
+	song_name = "The Roman Empire"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Epic Roman Music - Julius Caesar.ogg"
+	song_name = "Julius Caesar"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Ancient Roman Music - Centurions.ogg"
+	song_name = "Centurions"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Ancient Roman Music - Roman Republic.ogg"
+	song_name = "Roman Republic"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Epic Roman Music - The Senate.ogg"
+	song_name = "The Senate"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Epic Roman Music - Mark Antony.ogg"
+	song_name = "Mark Antony"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Mattia Turzo - Victory Of Eagles POWERFUL EPIC UPLIFTING MUSIC.ogg"
+	song_name = "Victory Of Eagles"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Two Steps From Hell - Final Days of Rome (feat Felicia Farerre).ogg"
+	song_name = "Final Days of Rome"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Imperia (Total War Rome II OST).ogg"
+	song_name = "Imperia"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Rome Total War Soundtrack - Journey to Rome part 2.ogg"
+	song_name = "Journey to Rome 2"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "05 The Battle Has Begun Caesar's Theme Jeff Beal HBO Series Rome OST.ogg"
+	song_name = "The Battle Has Begun"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Epic Rome - e-soundtrax.ogg"
+	song_name = "Epic Rome"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Stellaris Soundtrack - Creation and Beyond.ogg"
+	song_name = "Creation and Beyond"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Lorde - Everybody Wants to Rule the World (Assassin's Creed Unity).ogg"
+	song_name = "Everybody Wants to Rule the World"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Rome Theme - Ancient (Civilization 6 OST) Magna Mater.ogg"
+	song_name = "Magna Mater (Ancient)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 2
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Rome Theme - Medieval (Civilization 6 OST)Magna Mater.ogg"
+	song_name = "Magna Mater (Medieval)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Rome Theme - Industrial (Civilization 6 OST)Magna Mater.ogg"
+	song_name = "Magna Mater (Industrial)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 0.5
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Rome Theme - Atomic (Civilization 6 OST) Magna Mater.ogg"
+	song_name = "Magna Mater (Atomic)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { religion = hellenic_pagan_reformed }
+			NOT = { religion = hellenic_pagan }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Greece Theme - Ancient (Civilization 6 OST) Epitaph of Seikilos.ogg"
+	song_name = "Epitaph of Seikilos (Ancient)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { culture = greek }
+		}
+		modifier = {
+			factor = 2
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Greece Theme - Medieval (Civilization 6 OST) Epitaph of Seikilos.ogg"
+	song_name = "Epitaph of Seikilos (Medieval)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { culture = greek }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Greece Theme - Industrial (Civilization 6 OST) Epitaph of Seikilos.ogg"
+	song_name = "Epitaph of Seikilos (Industrial)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { culture = greek }
+		}
+		modifier = {
+			factor = 0.5
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Greece Theme - Atomic (Civilization 6 OST) Epitaph of Seikilos.ogg"
+	song_name = "Epitaph of Seikilos (Atomic)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { culture = greek }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Macedon Theme - Ancient (Civilization 6 OST) Tino Mori.ogg"
+	song_name = "Tino Mori (Ancient)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { culture = greek }
+		}
+		modifier = {
+			factor = 2
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Macedon Theme - Medieval (Civilization 6 OST) Tino Mori.ogg"
+	song_name = "Tino Mori (Medieval)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { culture = greek }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Macedon Theme - Industrial (Civilization 6 OST)Tino Mori.ogg"
+	song_name = "Tino Mori (Industrial)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { culture = greek }
+		}
+		modifier = {
+			factor = 0.5
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Macedon Theme - Atomic (Civilization 6 OST) Tino Mori.ogg"
+	song_name = "Tino Mori (Atomic)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = roman }
+			NOT = { culture = greek }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 2
+}

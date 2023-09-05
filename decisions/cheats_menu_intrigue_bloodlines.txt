@@ -1,0 +1,7225 @@
+decisions = {
+
+	bloodlines_enable = {
+		
+		potential = {
+			ai = no
+			NOT = {has_character_flag = bloodlines_enabled}
+			has_character_flag = cheats_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 set_character_flag = bloodlines_enabled
+			 clr_character_flag = bloodlines_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+
+	bloodlines_disable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 clr_character_flag = bloodlines_enabled
+			 set_character_flag = bloodlines_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+
+    ################
+    ##CHEAT bloodlines##
+	################
+	
+	bloodlines_remove_bloodlines = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			any_owned_bloodline = {
+				NOT = { has_bloodline_flag = created_bloodline }
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				destroy_bloodline = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}	
+	bloodlines_remove_created_bloodlines = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = created_bloodline
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = created_bloodline
+				}
+				destroy_bloodline = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	##Pure Murder Bloodlines##
+
+	bloodlines_pure_murder_enable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			NOT = {has_character_flag = bloodlines_pure_murder_enabled}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 set_character_flag = bloodlines_pure_murder_enabled
+			 clr_character_flag = bloodlines_pure_murder_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+
+	bloodlines_pure_murder_disable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			has_character_flag = bloodlines_pure_murder_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 clr_character_flag = bloodlines_pure_murder_enabled
+			 set_character_flag = bloodlines_pure_murder_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Happy Child#
+	
+	add_pure_murder_1 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_murder_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = pure_murder_bloodline_01
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_pure_murder_1 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_murder_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_murder_child
+				has_bloodline_flag = bloodline_murderous
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_murder_child
+					has_bloodline_flag = bloodline_murderous
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Macabre Banquet#
+	
+	add_pure_murder_2 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_murder_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = pure_murder_bloodline_02
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_pure_murder_2 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_murder_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_macabre_banquet
+				has_bloodline_flag = bloodline_murderous
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_macabre_banquet
+					has_bloodline_flag = bloodline_murderous
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Silent Killer#
+	
+	add_pure_murder_3 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_murder_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = pure_murder_bloodline_03
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_pure_murder_3 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_murder_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_murder_deflection
+				has_bloodline_flag = bloodline_murderous
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_murder_deflection
+					has_bloodline_flag = bloodline_murderous
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	#The Butcher#
+	
+	add_pure_murder_4 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_murder_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = pure_murder_bloodline_04
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_pure_murder_4 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_murder_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_murder_stalk
+				has_bloodline_flag = bloodline_murderous
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_murder_stalk
+					has_bloodline_flag = bloodline_murderous
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#The Dragon King#
+	
+	add_pure_murder_5 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_murder_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = pure_murder_bloodline_05
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_pure_murder_5 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_murder_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_murder_burn
+				has_bloodline_flag = bloodline_dragon
+				has_bloodline_flag = bloodline_murderous
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_murder_burn
+					has_bloodline_flag = bloodline_dragon
+					has_bloodline_flag = bloodline_murderous
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	##Pure War Bloodlines##
+	
+	bloodlines_pure_war_enable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			NOT = {has_character_flag = bloodlines_pure_war_enabled}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 set_character_flag = bloodlines_pure_war_enabled
+			 clr_character_flag = bloodlines_pure_war_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+
+	bloodlines_pure_war_disable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			has_character_flag = bloodlines_pure_war_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 clr_character_flag = bloodlines_pure_war_enabled
+			 set_character_flag = bloodlines_pure_war_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#The Li'l Warrior Philosopher#
+	
+	add_pure_war_1 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_war_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = pure_war_bloodline_01
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_pure_war_1 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_war_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_heroes
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_heroes
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#The Perfect Knight#
+	
+	add_pure_war_2 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_war_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = pure_war_bloodline_02
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_pure_war_2 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_war_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_knights
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_knights
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#The Conqueror#
+	
+	add_pure_war_3 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_war_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = pure_war_bloodline_03
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_pure_war_3 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_war_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_reaver
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_reaver
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#The Warrior Philosopher#
+	
+	add_pure_war_4 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_war_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = pure_war_bloodline_04
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_pure_war_4 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_war_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_drill
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_drill
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	##Pure Peace Bloodlines##
+	
+	bloodlines_pure_peace_enable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			NOT = {has_character_flag = bloodlines_pure_peace_enabled}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 set_character_flag = bloodlines_pure_peace_enabled
+			 clr_character_flag = bloodlines_pure_peace_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+
+	bloodlines_pure_peace_disable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			has_character_flag = bloodlines_pure_peace_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 clr_character_flag = bloodlines_pure_peace_enabled
+			 set_character_flag = bloodlines_pure_peace_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Blessed Child Bloodline#
+	
+	add_pure_peace_1 = {
+		
+		potential = {
+		    	ai = no
+           		has_character_flag = cheats_enabled
+        		has_character_flag = bloodlines_enabled
+				has_character_flag = bloodlines_pure_peace_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = pure_peace_bloodline_01
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        	}
+	}
+	
+	remove_pure_peace_1 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_peace_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_less_factions
+				has_bloodline_flag = peace_bloodline_1
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_less_factions
+					has_bloodline_flag = peace_bloodline_1
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        	ai_will_do = {
+            	factor = 0
+        	}
+	}
+	
+	#Protector Bloodline#
+	
+	add_pure_peace_2 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_peace_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = pure_peace_bloodline_02
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        	}
+	}
+	
+	remove_pure_peace_2 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_peace_enabled
+			any_owned_bloodline = {
+			has_bloodline_flag = bloodline_less_factions
+			has_bloodline_flag = peace_bloodline_2
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_less_factions
+					has_bloodline_flag = peace_bloodline_2
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Benefactor Bloodline#
+	
+	add_pure_peace_3 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_peace_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+           		create_bloodline = { 
+				type = pure_peace_bloodline_03
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        	}
+	}
+	
+	remove_pure_peace_3 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_peace_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_endearing
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_endearing
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	##Pure building Bloodlines##
+	
+	bloodlines_pure_building_enable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			NOT = {has_character_flag = bloodlines_pure_building_enabled}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 set_character_flag = bloodlines_pure_building_enabled
+			 clr_character_flag = bloodlines_pure_building_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+
+	bloodlines_pure_building_disable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			has_character_flag = bloodlines_pure_building_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 clr_character_flag = bloodlines_pure_building_enabled
+			 set_character_flag = bloodlines_pure_building_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#The Architect Bloodline#
+	
+	add_pure_building_1 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_building_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = pure_architect_bloodline_01
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_pure_building_1 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       			has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_building_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_architect
+				has_bloodline_flag = bloodline_building_1
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_architect
+					has_bloodline_flag = bloodline_building_1
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#The Castellan Bloodline#
+	
+	add_pure_building_2 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_building_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = pure_castellan_bloodline_01
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_pure_building_2 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_building_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_castellan
+				has_bloodline_flag = bloodline_building_2
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_castellan
+					has_bloodline_flag = bloodline_building_2
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#The Carpenter Bloodline#
+	
+	add_pure_building_3 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_building_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = pure_monumental_bloodline_01
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_pure_building_3 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_pure_building_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_monumental
+				has_bloodline_flag = bloodline_building_3
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_monumental
+					has_bloodline_flag = bloodline_building_3
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	##Hybrid Bloodlines##
+	
+	bloodlines_hybrid_enable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			NOT = {has_character_flag = bloodlines_hybrid_enabled}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 set_character_flag = bloodlines_hybrid_enabled
+			 clr_character_flag = bloodlines_hybrid_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+
+	bloodlines_hybrid_disable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			has_character_flag = bloodlines_hybrid_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 clr_character_flag = bloodlines_hybrid_enabled
+			 set_character_flag = bloodlines_hybrid_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Murder/War#
+	
+	add_hybrid_1 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_hybrid_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = hybrid_murder_war_bloodline_01
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_hybrid_1 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_hybrid_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_faster_claims
+				has_bloodline_flag = bloodline_faster_dissent
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_faster_claims
+					has_bloodline_flag = bloodline_faster_dissent
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Murder/Peace Bloodline#
+	
+	add_hybrid_2 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_hybrid_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = hybrid_murder_peace_bloodline_01
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_hybrid_2 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_hybrid_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_dismantle_factions
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_dismantle_factions
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Builder Bloodline#
+	
+	add_hybrid_3 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_hybrid_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = hybrid_builder_bloodline_01
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_hybrid_3 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_hybrid_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_builder_combo
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_builder_combo
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Murder/Builder Bloodline#
+	
+	add_hybrid_4 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_hybrid_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = hybrid_murder_builder_bloodline_01
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_hybrid_4 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_hybrid_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_blood_building
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_blood_building
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Peace Architect Bloodline#
+	
+	add_hybrid_5 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_hybrid_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = hybrid_peace_architect_bloodline_01
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_hybrid_5 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_hybrid_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_architect
+				has_bloodline_flag = bloodline_peace_prosperity
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_architect
+					has_bloodline_flag = bloodline_peace_prosperity
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Peace Castellan Bloodline#
+	
+	add_hybrid_6 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_hybrid_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = hybrid_peace_castellan_bloodline_01
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_hybrid_6 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_hybrid_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_castellan
+				has_bloodline_flag = bloodline_peace_prosperity
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_castellan
+					has_bloodline_flag = bloodline_peace_prosperity
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Peace Monumental Bloodline#
+	
+	add_hybrid_7 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_hybrid_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = hybrid_peace_monumental_bloodline_01
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_hybrid_7 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_hybrid_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_monumental
+				has_bloodline_flag = bloodline_peace_prosperity
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_monumental
+					has_bloodline_flag = bloodline_peace_prosperity
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	##Event-based Bloodlines##
+	
+	bloodlines_event_enable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			NOT = {has_character_flag = bloodlines_event_enabled}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 set_character_flag = bloodlines_event_enabled
+			 clr_character_flag = bloodlines_event_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+
+	bloodlines_event_disable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			has_character_flag = bloodlines_event_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 clr_character_flag = bloodlines_event_enabled
+			 set_character_flag = bloodlines_event_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Family Bloodline#
+	
+	add_event_1 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_event_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = event_family_bloodline_01
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_event_1 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_event_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_dynastic_meddling
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_dynastic_meddling
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Philosopher Bloodline#
+	
+	add_event_2 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_event_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = event_technology_bloodline_01
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_event_2 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_event_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_more_philosophers
+				has_bloodline_flag = bloodline_wandering_artists
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_more_philosophers
+					has_bloodline_flag = bloodline_wandering_artists
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Benevolence Bloodline#
+	
+	add_event_3 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_event_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = event_benevolent_bloodline_01
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_event_3 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_event_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_event_3
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_event_3
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Ruthlessness Bloodline#
+	
+	add_event_4 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_event_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = event_ruthless_bloodline_01
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_event_4 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_event_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_revocation_plot
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_revocation_plot
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Theology Bloodline#
+	
+	add_event_5 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_event_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+ 			if = {
+				limit = {
+					religion_group = christian
+				}
+				create_bloodline = { 
+					type = event_religion_peaceful_bloodline_01
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = muslim
+				}
+				create_bloodline = { 
+					type = event_religion_peaceful_bloodline_02
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = jewish
+				}
+				create_bloodline = { 
+					type = event_religion_peaceful_bloodline_03
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = pagan_group
+				}
+				create_bloodline = { 
+					type = event_religion_peaceful_bloodline_04
+				}
+			}	
+			else_if = {
+				limit = {
+					religion_group = zoroastrian_group
+				}
+				create_bloodline = { 
+					type = event_religion_peaceful_bloodline_05
+				}
+			}			
+			else_if = {
+				limit = {
+					religion_group = indian_group
+				}
+				create_bloodline = { 
+					type = event_religion_peaceful_bloodline_06
+				}
+			}	
+			else = {
+				create_bloodline = { 
+					type = event_religion_peaceful_bloodline_01
+				}
+			}				
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_event_5 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_event_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_more_philosophers
+				NOT = { has_bloodline_flag = bloodline_wandering_artists }
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_more_philosophers
+					NOT = { has_bloodline_flag = bloodline_wandering_artists }
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Zeal Bloodline#
+	
+	add_event_6 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_event_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			if = {
+				limit = {
+					religion_group = christian
+				}
+				create_bloodline = { 
+					type = event_religion_aggressive_bloodline_01
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = muslim
+				}
+				create_bloodline = { 
+					type = event_religion_aggressive_bloodline_02
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = jewish
+				}
+				create_bloodline = { 
+					type = event_religion_aggressive_bloodline_03
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = pagan_group
+				}
+				create_bloodline = { 
+					type = event_religion_aggressive_bloodline_04
+				}
+			}	
+			else_if = {
+				limit = {
+					religion_group = zoroastrian_group
+				}
+				create_bloodline = { 
+					type = event_religion_aggressive_bloodline_05
+				}
+			}			
+			else_if = {
+				limit = {
+					religion_group = indian_group
+				}
+				create_bloodline = { 
+					type = event_religion_aggressive_bloodline_06
+				}
+			}	
+			else = {
+				create_bloodline = { 
+					type = event_religion_aggressive_bloodline_01
+				}
+			}				
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_event_6 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_event_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_better_inquisition
+				has_bloodline_flag = bloodline_religious_liberation
+				NOT = { has_bloodline_flag = bloodline_great_conquerors }
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_better_inquisition
+					has_bloodline_flag = bloodline_religious_liberation
+					NOT = { has_bloodline_flag = bloodline_great_conquerors }
+			}
+			destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	##Special Bloodlines##
+	
+	bloodlines_special_enable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			NOT = {has_character_flag = bloodlines_special_enabled}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 set_character_flag = bloodlines_special_enabled
+			 clr_character_flag = bloodlines_special_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+
+	bloodlines_special_disable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			has_character_flag = bloodlines_special_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 clr_character_flag = bloodlines_special_enabled
+			 set_character_flag = bloodlines_special_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Heir to Alexander Bloodline#
+	
+	add_special_1 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = alexander_bloodline_01
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_special_1 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       			has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_ambition
+				has_bloodline_flag = bloodline_great_conquerors
+				has_bloodline_flag = bloodline_alexander
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_ambition
+					has_bloodline_flag = bloodline_great_conquerors
+					has_bloodline_flag = bloodline_alexander
+				}
+			destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Ashoka Bloodline#
+	
+	add_special_2 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = ashoka_bloodline_01
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_special_2 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_great_conquerors
+				has_bloodline_flag = bloodline_better_inquisition
+				has_bloodline_flag = bloodline_religious_liberation
+				has_bloodline_flag = bloodline_ashoka
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_great_conquerors
+					has_bloodline_flag = bloodline_better_inquisition
+					has_bloodline_flag = bloodline_religious_liberation
+					has_bloodline_flag = bloodline_ashoka
+				}
+			destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Immortality Bloodline#
+	
+	add_special_3 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = immortal_bloodline_01
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_special_3 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_ambition
+				has_bloodline_flag = bloodline_murderous
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+				has_bloodline_flag = bloodline_ambition
+				has_bloodline_flag = bloodline_murderous
+				}
+			destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Chinese Imperial Bloodline#
+	
+	add_special_4 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = chinese_imperial_bloodline_01
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_special_4 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_chinese_imperial
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_chinese_imperial
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Matilde Bloodline#
+	
+	add_special_5 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			If = {
+				limit = {
+					is_female = yes
+				}
+				create_bloodline = { 
+					type = matilde_bloodline
+				}
+			}
+			Else = {
+				create_bloodline = { 
+					type = matilde_male_bloodline
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_special_5 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_easy_monks
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_easy_monks
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+
+	#True Matilde Bloodline#
+	
+	add_special_6 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = true_matilde_bloodline
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_special_6 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_easy_monks
+				has_bloodline_flag = matilde_bloodline				
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_easy_monks
+					has_bloodline_flag = matilde_bloodline
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Samrat Chakravartin Bloodline#
+	
+	add_special_7 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			If = {
+				limit = {
+					is_female = yes
+				}
+				create_bloodline = { 
+					type = samrat_chakravartin_female
+				}
+			}
+			Else = {
+				create_bloodline = { 
+					type = samrat_chakravartin_male
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_special_7 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = samrat_chakravartin_bloodline				
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = samrat_chakravartin_bloodline
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	#Saoshyant Bloodline#
+	
+	add_special_8 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			If = {
+				limit = {
+					is_female = yes
+				}
+				create_bloodline = { 
+					type = saoshyant_female
+				}
+			}
+			Else = {
+				create_bloodline = { 
+					type = saoshyant_male
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_special_8 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_saoshyant				
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_saoshyant
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Restored Israel Bloodline#
+	
+	add_special_9 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			If = {
+				limit = {
+					is_female = yes
+				}
+				create_bloodline = { 
+					type = israel_female
+				}
+			}
+			Else = {
+				create_bloodline = { 
+					type = israel_male
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_special_9 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = jewish_loans				
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = jewish_loans
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Roman Emperor Bloodline#
+	
+	add_special_10 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			If = {
+				limit = {
+					is_female = yes
+				}
+				create_bloodline = { 
+					type = roman_emperor_female
+				}
+			}
+			Else = {
+				create_bloodline = { 
+					type = roman_emperor_male
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_special_10 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_faster_roman				
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_faster_roman
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Blood of Phalaris Bloodline (male)#
+	
+	add_special_11 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+			is_female = no
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			If = {
+				limit = {
+					is_female = no
+				}
+				create_bloodline = { 
+					type = phalaris_male
+				}
+			}
+			Else = {
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_special_11 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_brazen_bull				
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_brazen_bull
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+
+	#Teuta's Bloodline (female) #
+	
+	add_special_12 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+			is_female = yes
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			If = {
+				limit = {
+					is_female = yes
+				}
+				create_bloodline = { 
+					type = teuta_female
+				}
+			}
+			Else = {
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_special_12 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = teuta_bloodline
+				has_bloodline_flag = bloodline_spawned_ships				
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = teuta_bloodline
+					has_bloodline_flag = bloodline_spawned_ships
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Child of Destiny Bloodline#
+	
+	add_special_13 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			If = {
+				limit = {
+					is_female = yes
+				}
+				create_bloodline = { 
+					type = child_of_destiny_female
+				}
+			}
+			Else = {
+				create_bloodline = { 
+					type = child_of_destiny_male
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_special_13 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = founder_invasions
+				has_bloodline_flag = bloodline_ambition	
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = founder_invasions
+					has_bloodline_flag = bloodline_ambition
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Seaking/Queen Bloodline#
+	
+	add_special_14 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			If = {
+				limit = {
+					is_female = yes
+				}
+				create_bloodline = { 
+					type = seaqueen_bloodline
+				}
+			}
+			Else = {
+				create_bloodline = { 
+					type = seaking_bloodline
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_special_14 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = more_raiders_bloodline
+				
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = more_raiders_bloodline
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+
+	#Bloodthirsty Bloodline#
+	
+	add_special_15 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			If = {
+				limit = {
+					is_female = yes
+				}
+				create_bloodline = { 
+					type = bloodthirsty_female_bloodline
+				}
+			}
+			Else = {
+				create_bloodline = { 
+					type = bloodthirsty_male_bloodline
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_special_15 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_created_bloodthirsty
+				has_bloodline_flag = bloodline_prestige_sacrifice
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_created_bloodthirsty
+					has_bloodline_flag = bloodline_prestige_sacrifice
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Duelist Bloodline#
+	
+	add_special_16 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			If = {
+				limit = {
+					is_female = yes
+				}
+				create_bloodline = { 
+					type = duelist_female
+				}
+			}
+			Else = {
+				create_bloodline = { 
+					type = duelist_male
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_special_16 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = duelist_bloodline
+				
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = duelist_bloodline
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Slavic Union Emperor Bloodline#
+	
+	add_special_17 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			If = {
+				limit = {
+					is_female = yes
+				}
+				create_bloodline = { 
+					type = lcr_female
+				}
+			}
+			Else = {
+				create_bloodline = { 
+					type = lcr_male
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_special_17 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_special_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_lcr
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_lcr
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+
+	##Crusader Bloodlines##
+
+	bloodlines_crusade_enable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			NOT = {has_character_flag = bloodlines_crusade_enabled}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 set_character_flag = bloodlines_crusade_enabled
+			 clr_character_flag = bloodlines_crusade_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+
+	bloodlines_crusade_disable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			has_character_flag = bloodlines_crusade_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 clr_character_flag = bloodlines_crusade_enabled
+			 set_character_flag = bloodlines_crusade_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Grand Crusader Bloodline#
+	
+	add_crusade_1 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_crusade_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = grand_crusader
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_crusade_1 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_crusade_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = grand_crusader_bloodline
+				has_bloodline_flag = crusader_bloodline
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = grand_crusader_bloodline
+					has_bloodline_flag = crusader_bloodline
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Crusader Commander Bloodline#
+	
+	add_crusade_2 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_crusade_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = crusader_commander
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_crusade_2 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_crusade_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = battle_survivor_bloodline
+				has_bloodline_flag = crusader_bloodline
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = battle_survivor_bloodline
+					has_bloodline_flag = crusader_bloodline
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Crusade Lord Bloodline#
+	
+	add_crusade_3 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_crusade_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = crusade_lord
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_crusade_3 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_crusade_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = crusade_lord_bloodline
+				has_bloodline_flag = crusader_bloodline
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = crusade_lord_bloodline
+					has_bloodline_flag = crusader_bloodline
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Lord of Outremer Bloodline#
+	
+	add_crusade_4 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_crusade_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = lord_of_outremer
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_crusade_4 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_crusade_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = inquisitional_bloodline
+				has_bloodline_flag = crusader_bloodline
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = inquisitional_bloodline
+					has_bloodline_flag = crusader_bloodline
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Children's Crusade Bloodline#
+	
+	add_crusade_5 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_crusade_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = crusader_kid_bloodline
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_crusade_5 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_crusade_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = crusade_lord_bloodline
+				has_bloodline_flag = crusader_kid_bloodline
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = crusade_lord_bloodline
+					has_bloodline_flag = crusader_kid_bloodline
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Destroyer of Byzantium Bloodline#
+	
+	add_crusade_6 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_crusade_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = destroyer_of_byzantium
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_crusade_6 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_crusade_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_blinding
+				has_bloodline_flag = bloodline_castration
+				has_bloodline_flag = crusader_bloodline
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_blinding
+					has_bloodline_flag = bloodline_castration
+					has_bloodline_flag = crusader_bloodline
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Northern Crusade Bloodline#
+	
+	add_crusade_7 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_crusade_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = northern_crusade_bloodline
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_crusade_7 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_crusade_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = northern_crusade_bloodline
+				has_bloodline_flag = crusader_bloodline
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = northern_crusade_bloodline
+					has_bloodline_flag = crusader_bloodline
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Reconquista Bloodline#
+	
+	add_crusade_8 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_crusade_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = reconquista_bloodline
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_crusade_8 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_crusade_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = reconquista_bloodline
+				has_bloodline_flag = cheap_reconquista
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = reconquista_bloodline
+					has_bloodline_flag = cheap_reconquista
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Reconquista Cid Bloodline#
+	
+	add_crusade_9 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_crusade_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = reconquista_cid_bloodline
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_crusade_9 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_crusade_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = reconquista_bloodline
+				has_bloodline_flag = crusader_bloodline
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = reconquista_bloodline
+					has_bloodline_flag = crusader_bloodline
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Boudica Bloodline#
+	
+	add_crusade_10 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_crusade_enabled
+			is_female = yes
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+            create_bloodline = { 
+				type = boudica
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	
+	remove_crusade_10 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_crusade_enabled		
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_ambition
+				has_bloodline_flag = bloodline_boudica
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_ambition
+					has_bloodline_flag = bloodline_boudica
+			}
+			destroy_bloodline = yes
+		}
+	}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	##Saintly Bloodlines##
+
+	bloodlines_saint_enable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			NOT = {has_character_flag = bloodlines_saint_enabled}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 set_character_flag = bloodlines_saint_enabled
+			 clr_character_flag = bloodlines_saint_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+
+	bloodlines_saint_disable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			has_character_flag = bloodlines_saint_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 clr_character_flag = bloodlines_saint_enabled
+			 set_character_flag = bloodlines_saint_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Defender of the Faith Bloodline#
+	
+	add_saint_1 = {
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_saint_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			#Christian Groups
+			if = {
+				limit = {
+					OR = {
+						religion = orthodox
+						religion = iconoclast
+						religion = paulician
+						religion = monothelite
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_orthodox_01
+				}
+			}
+			else_if = {
+				limit = {
+					religion = coptic
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_coptic_01
+				}
+			}
+			else_if = {
+				limit = {
+					religion = nestorian
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_nestorian_01
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = christian
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_catholic_01
+				}
+			}
+			#Pagan Groups
+			else_if = {
+				limit = {
+					OR = {
+						religion = norse_pagan
+						religion = norse_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_germanic_01
+				}
+			}
+						else_if = {
+				limit = {
+					OR = {
+						religion = baltic_pagan
+						religion = baltic_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_romuva_01
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = slavic_pagan
+						religion = slavic_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_slavic_01
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = tengri_pagan
+						religion = tengri_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_tengri_01
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = finnish_pagan
+						religion = finnish_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_suomenusko_01
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = aztec
+						religion = aztec_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_aztec_01
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = west_african_pagan
+						religion = west_african_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_african_01
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = zun_pagan
+						religion = zun_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_zun_01
+				}
+			}	
+			else_if = {
+				limit = {
+					OR = {
+						religion = hellenic_pagan
+						religion = hellenic_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_hellenic_01
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = bon
+						religion = bon_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_bon_01
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = pagan_group
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_germanic_01
+				}
+			}
+			else = {
+				create_bloodline = { 
+					type = saintly_bloodline_catholic_01
+				}
+			}
+			if = {
+				limit = {
+					religion_group = christian
+				}
+				new_bloodline = {
+					set_name = saintly_bloodline_01
+					set_description = saintly_bloodline_description
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = pagan_group
+				}
+				new_bloodline = {
+					set_name = blessed_bloodline_01
+					set_description = blessed_bloodline_description
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_saint_1 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_saint_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = defender_of_the_faith
+				OR = { 
+					has_bloodline_flag = saintly_bloodline 
+					has_bloodline_flag = ancestor_worship_bloodline 
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {			
+			any_owned_bloodline = {
+				limit = {		
+					has_bloodline_flag = defender_of_the_faith
+					OR = {
+						has_bloodline_flag = saintly_bloodline 
+						has_bloodline_flag = ancestor_worship_bloodline 
+					}
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	
+	#Monastic Saintly Bloodline#
+	
+	add_saint_2 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_saint_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			#Christian Groups
+			if = {
+				limit = {
+					religion = orthodox
+				}
+				root = {
+					create_bloodline = { 
+						type = saintly_bloodline_orthodox_02
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					religion = coptic
+				}
+				root = {
+					create_bloodline = { 
+						type = saintly_bloodline_coptic_02
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					religion = nestorian
+				}
+				root = {
+					create_bloodline = { 
+						type = saintly_bloodline_nestorian_02
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = christian
+				}
+				root = {
+					create_bloodline = { 
+						type = saintly_bloodline_catholic_02
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					religion = hellenic_pagan_reformed
+				}
+				root = {
+					create_bloodline = { 
+						type = saintly_bloodline_hellenic_02
+					}
+				}
+			}
+			else = {
+				root = {
+					create_bloodline = { 
+						type = saintly_bloodline_catholic_02
+					}
+				}
+			}
+			if = {
+				limit = {
+					religion_group = christian
+				}
+				new_bloodline = {
+					set_name = saintly_bloodline_02
+					set_description = saintly_bloodline_description
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = pagan_group
+				}
+				new_bloodline = {
+					set_name = blessed_bloodline_02
+					set_description = blessed_bloodline_description
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_saint_2 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_saint_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = monastic_saintly_bloodline
+				OR = { 
+					has_bloodline_flag = saintly_bloodline 
+					has_bloodline_flag = ancestor_worship_bloodline 
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {			
+			any_owned_bloodline = {
+				limit = {		
+					has_bloodline_flag = monastic_saintly_bloodline
+					OR = {
+						has_bloodline_flag = saintly_bloodline 
+						has_bloodline_flag = ancestor_worship_bloodline 
+					}
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Cultural Saintly Bloodline#
+	
+	add_saint_3 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_saint_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			#Christian Groups
+			if = {
+				limit = {
+					religion = orthodox
+					religion = iconoclast
+					religion = paulician
+					religion = monothelite
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_orthodox_03
+				}
+			}
+			else_if = {
+				limit = {
+					religion = coptic
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_coptic_03
+				}
+			}
+			else_if = {
+				limit = {
+					religion = nestorian
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_nestorian_03
+				}
+			}
+			else_if = {
+				limit = {
+					religion = christian
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_catholic_03
+				}
+			}
+			#Pagan Groups
+			else_if = {
+				limit = {
+					OR = {
+						religion = norse_pagan
+						religion = norse_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_germanic_03
+				}
+			}
+						else_if = {
+				limit = {
+					OR = {
+						religion = baltic_pagan
+						religion = baltic_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_romuva_03
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = slavic_pagan
+						religion = slavic_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_slavic_03
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = tengri_pagan
+						religion = tengri_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_tengri_03
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = finnish_pagan
+						religion = finnish_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_suomenusko_03
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = aztec
+						religion = aztec_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_aztec_03
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = west_african_pagan
+						religion = west_african_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_african_03
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = zun_pagan
+						religion = zun_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_zun_03
+				}
+			}	
+			else_if = {
+				limit = {
+					OR = {
+						religion = hellenic_pagan
+						religion = hellenic_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_hellenic_03
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = bon
+						religion = bon_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_bon_03
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = pagan_group
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_germanic_03
+				}
+			}
+			else = {
+				create_bloodline = { 
+					type = saintly_bloodline_catholic_03
+				}
+			}
+			if = {
+				limit = {
+					religion_group = christian
+				}
+				new_bloodline = {
+					set_name = saintly_bloodline_03
+					set_description = saintly_bloodline_description
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = pagan_group
+				}
+				new_bloodline = {
+					set_name = blessed_bloodline_03
+					set_description = blessed_bloodline_description
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_saint_3 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_saint_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = cultural_saintly_bloodline
+				OR = { 
+					has_bloodline_flag = saintly_bloodline 
+					has_bloodline_flag = ancestor_worship_bloodline 
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {			
+			any_owned_bloodline = {
+				limit = {		
+					has_bloodline_flag = cultural_saintly_bloodline
+					OR = {
+						has_bloodline_flag = saintly_bloodline 
+						has_bloodline_flag = ancestor_worship_bloodline 
+					}
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Inquisitional Bloodline#
+	
+	add_saint_4 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_saint_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			#Christian Groups
+			if = {
+				limit = {
+					OR = {
+						religion = orthodox
+						religion = iconoclast
+						religion = paulician
+						religion = monothelite
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_orthodox_04
+				}
+			}
+			else_if = {
+				limit = {
+					religion = coptic
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_coptic_04
+				}
+			}
+			else_if = {
+				limit = {
+					religion = nestorian
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_nestorian_04
+				}
+			}
+			else_if = {
+				limit = {
+					religion = christian
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_catholic_04
+				}
+			}
+			#Pagan Groups
+			else_if = {
+				limit = {
+					OR = {
+						religion = norse_pagan
+						religion = norse_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_germanic_04
+				}
+			}
+						else_if = {
+				limit = {
+					OR = {
+						religion = baltic_pagan
+						religion = baltic_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_romuva_04
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = slavic_pagan
+						religion = slavic_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_slavic_04
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = tengri_pagan
+						religion = tengri_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_tengri_04
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = finnish_pagan
+						religion = finnish_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_suomenusko_04
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = aztec
+						religion = aztec_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_aztec_04
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = west_african_pagan
+						religion = west_african_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_african_04
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = zun_pagan
+						religion = zun_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_zun_04
+				}
+			}	
+			else_if = {
+				limit = {
+					OR = {
+						religion = hellenic_pagan
+						religion = hellenic_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_hellenic_04
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = bon
+						religion = bon_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_bon_04
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = pagan_group
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_germanic_04
+				}
+			}
+			else = {
+				create_bloodline = { 
+					type = saintly_bloodline_catholic_04
+				}
+			}
+			if = {
+				limit = {
+					religion_group = christian
+				}
+				new_bloodline = {
+					set_name = saintly_bloodline_04
+					set_description = saintly_bloodline_description
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = pagan_group
+				}
+				new_bloodline = {
+					set_name = blessed_bloodline_04
+					set_description = blessed_bloodline_description
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_saint_4 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_saint_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = inquisitional_saintly_bloodline
+				OR = { 
+					has_bloodline_flag = saintly_bloodline 
+					has_bloodline_flag = ancestor_worship_bloodline 
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {			
+			any_owned_bloodline = {
+				limit = {		
+					has_bloodline_flag = inquisitional_saintly_bloodline
+					OR = {
+						has_bloodline_flag = saintly_bloodline 
+						has_bloodline_flag = ancestor_worship_bloodline 
+					}
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Jewish Bloodline#
+	
+	add_saint_5 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_saint_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			#Christian Groups
+			if = {
+				limit = {
+					religion = orthodox
+					religion = iconoclast
+					religion = paulician
+					religion = monothelite
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_orthodox_05
+				}
+			}
+			else_if = {
+				limit = {
+					religion = coptic
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_coptic_05
+				}
+			}
+			else_if = {
+				limit = {
+					religion = nestorian
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_nestorian_05
+				}
+			}
+			else_if = {
+				limit = {
+					religion = christian
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_catholic_05
+				}
+			}
+			#Pagan Groups
+			else_if = {
+				limit = {
+					OR = {
+						religion = norse_pagan
+						religion = norse_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_germanic_05
+				}
+			}
+						else_if = {
+				limit = {
+					OR = {
+						religion = baltic_pagan
+						religion = baltic_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_romuva_05
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = slavic_pagan
+						religion = slavic_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_slavic_05
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = tengri_pagan
+						religion = tengri_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_tengri_05
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = finnish_pagan
+						religion = finnish_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_suomenusko_05
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = aztec
+						religion = aztec_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_aztec_05
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = west_african_pagan
+						religion = west_african_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_african_05
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = zun_pagan
+						religion = zun_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_zun_05
+				}
+			}	
+			else_if = {
+				limit = {
+					OR = {
+						religion = hellenic_pagan
+						religion = hellenic_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_hellenic_05
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = bon
+						religion = bon_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_bon_05
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = pagan_group
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_germanic_05
+				}
+			}
+			else = {
+				create_bloodline = { 
+					type = saintly_bloodline_catholic_05
+				}
+			}
+			if = {
+				limit = {
+					religion_group = christian
+				}
+				new_bloodline = {
+					set_name = saintly_bloodline_05
+					set_description = saintly_bloodline_description
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = pagan_group
+				}
+				new_bloodline = {
+					set_name = blessed_bloodline_05
+					set_description = blessed_bloodline_description
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_saint_5 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_saint_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = jewish_saintly_bloodline
+				OR = { 
+					has_bloodline_flag = saintly_bloodline 
+					has_bloodline_flag = ancestor_worship_bloodline 
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {			
+			any_owned_bloodline = {
+				limit = {		
+					has_bloodline_flag = jewish_saintly_bloodline
+					OR = {
+						has_bloodline_flag = saintly_bloodline 
+						has_bloodline_flag = ancestor_worship_bloodline 
+					}
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Theologians Bloodline#
+	
+	add_saint_6 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_saint_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			#Christian Groups
+			if = {
+				limit = {
+					OR = {
+						religion = orthodox
+						religion = iconoclast
+						religion = paulician
+						religion = monothelite
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_orthodox_06
+				}
+			}
+			else_if = {
+				limit = {
+					religion = coptic
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_coptic_06
+				}
+			}
+			else_if = {
+				limit = {
+					religion = nestorian
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_nestorian_06
+				}
+			}
+			else_if = {
+				limit = {
+					religion = christian
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_catholic_06
+				}
+			}
+			#Pagan Groups
+			else_if = {
+				limit = {
+					OR = {
+						religion = norse_pagan
+						religion = norse_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_germanic_06
+				}
+			}
+						else_if = {
+				limit = {
+					OR = {
+						religion = baltic_pagan
+						religion = baltic_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_romuva_06
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = slavic_pagan
+						religion = slavic_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_slavic_06
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = tengri_pagan
+						religion = tengri_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_tengri_06
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = finnish_pagan
+						religion = finnish_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_suomenusko_06
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = aztec
+						religion = aztec_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_aztec_06
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = west_african_pagan
+						religion = west_african_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_african_06
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = zun_pagan
+						religion = zun_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_zun_06
+				}
+			}	
+			else_if = {
+				limit = {
+					OR = {
+						religion = hellenic_pagan
+						religion = hellenic_pagan_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_hellenic_06
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						religion = bon
+						religion = bon_reformed
+					}
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_bon_06
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = pagan_group
+				}
+				create_bloodline = { 
+					type = saintly_bloodline_germanic_06
+				}
+			}
+			else = {
+				create_bloodline = { 
+					type = saintly_bloodline_catholic_06
+				}
+			}
+			if = {
+				limit = {
+					religion_group = christian
+				}
+				new_bloodline = {
+					set_name = saintly_bloodline_06
+					set_description = saintly_bloodline_description
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = pagan_group
+				}
+				new_bloodline = {
+					set_name = blessed_bloodline_06
+					set_description = blessed_bloodline_description
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_saint_6 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_saint_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = theologian_saintly_bloodline
+				OR = { 
+					has_bloodline_flag = saintly_bloodline 
+					has_bloodline_flag = ancestor_worship_bloodline 
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {			
+			any_owned_bloodline = {
+				limit = {		
+					has_bloodline_flag = theologian_saintly_bloodline
+					OR = {
+						has_bloodline_flag = saintly_bloodline 
+						has_bloodline_flag = ancestor_worship_bloodline 
+					}
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Wicked Saintly Bloodline#
+	
+	add_saint_7 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_saint_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			create_bloodline = { 
+				type = saintly_bloodline_07
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_saint_7 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_saint_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = wicked_saint
+				has_bloodline_flag = saintly_bloodline 
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {			
+			any_owned_bloodline = {
+				limit = {		
+					has_bloodline_flag = wicked_saint
+					has_bloodline_flag = saintly_bloodline 
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	##Ancestor Veneration Bloodlines##
+	
+	bloodlines_ances_enable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			NOT = {has_character_flag = bloodlines_ances_enabled}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 set_character_flag = bloodlines_ances_enabled
+			 clr_character_flag = bloodlines_ances_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+
+	bloodlines_ances_disable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			has_character_flag = bloodlines_ances_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 clr_character_flag = bloodlines_ances_enabled
+			 set_character_flag = bloodlines_ances_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Great Heroes Bloodline#
+	
+	add_ances_1 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_ances_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			create_bloodline = { 
+				type = ancestor_worship_bloodline_01
+			}
+			new_bloodline = {
+					set_name = blessed_bloodline_06
+					set_description = blessed_bloodline_description
+			}
+			set_special_character_title = BLESSED_TITLE
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_ances_1 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_ances_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = ancestor_worship_bloodline
+				has_bloodline_flag = bloodline_heroes
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = ancestor_worship_bloodline
+					has_bloodline_flag = bloodline_heroes
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Bastard Bloodline#
+	
+	add_ances_2 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_ances_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			create_bloodline = { 
+				type = ancestor_worship_bloodline_02
+			}
+			new_bloodline = {
+					set_name = blessed_bloodline_01
+					set_description = blessed_bloodline_description
+			}
+			set_special_character_title = BLESSED_TITLE
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_ances_2 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_ances_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = ancestor_worship_bloodline
+				has_bloodline_flag = bloodline_legitimize
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = ancestor_worship_bloodline
+					has_bloodline_flag = bloodline_legitimize
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Sky Burial Bloodline#
+	
+	add_ances_3 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_ances_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			create_bloodline = { 
+				type = ancestor_worship_bloodline_03
+			}
+			new_bloodline = {
+					set_name = blessed_bloodline_01
+					set_description = blessed_bloodline_description
+			}
+			set_special_character_title = BLESSED_TITLE
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_ances_3 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_ances_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = ancestor_worship_bloodline
+				has_bloodline_flag = bloodline_sky_burial
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			create_bloodline = { 
+				type = ancestor_worship_bloodline_03
+			}
+			new_bloodline = {
+					set_name = blessed_bloodline_01
+					set_description = blessed_bloodline_description
+			}
+			set_special_character_title = BLESSED_TITLE
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Mercenary Bloodline#
+	
+	add_ances_4 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_ances_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			create_bloodline = { 
+				type = ancestor_worship_bloodline_04
+			}
+			new_bloodline = {
+					set_name = blessed_bloodline_01
+					set_description = blessed_bloodline_description
+			}
+			set_special_character_title = BLESSED_TITLE
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_ances_4 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_ances_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = ancestor_worship_bloodline
+				has_bloodline_flag = bloodline_mercenary_traditions
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = ancestor_worship_bloodline
+					has_bloodline_flag = bloodline_mercenary_traditions
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Tanistry Bloodline#
+	
+	add_ances_5 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_ances_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			create_bloodline = { 
+				type = ancestor_worship_bloodline_05
+			}
+			new_bloodline = {
+					set_name = blessed_bloodline_01
+					set_description = blessed_bloodline_description
+			}
+			set_special_character_title = BLESSED_TITLE
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_ances_5 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_ances_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = ancestor_worship_bloodline
+				has_bloodline_flag = bloodline_tanistry
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = ancestor_worship_bloodline
+					has_bloodline_flag = bloodline_tanistry
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Raiding Bloodline#
+	
+	add_ances_6 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_ances_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			create_bloodline = { 
+				type = ancestor_worship_bloodline_06
+			}
+			new_bloodline = {
+					set_name = blessed_bloodline_01
+					set_description = blessed_bloodline_description
+			}
+			set_special_character_title = BLESSED_TITLE
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_ances_6 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_ances_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = ancestor_worship_bloodline
+				has_bloodline_flag = more_raiders_bloodline
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = ancestor_worship_bloodline
+					has_bloodline_flag = more_raiders_bloodline
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Dueling Bloodline#
+	
+	add_ances_7 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_ances_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			create_bloodline = { 
+				type = ancestor_worship_bloodline_07
+			}
+			new_bloodline = {
+					set_name = blessed_bloodline_01
+					set_description = blessed_bloodline_description
+			}
+			set_special_character_title = BLESSED_TITLE
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_ances_7 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_ances_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = ancestor_worship_bloodline
+				has_bloodline_flag = duelist_bloodline
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = ancestor_worship_bloodline
+					has_bloodline_flag = duelist_bloodline
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	##Warrior Lodge Bloodlines##
+
+	bloodlines_lodge_enable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			NOT = {has_character_flag = bloodlines_lodge_enabled}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 set_character_flag = bloodlines_lodge_enabled
+			 clr_character_flag = bloodlines_lodge_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+
+	bloodlines_lodge_disable = {
+		
+		potential = {
+			ai = no
+			has_character_flag = bloodlines_enabled
+			has_character_flag = cheats_enabled
+			has_character_flag = bloodlines_lodge_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			 clr_character_flag = bloodlines_lodge_enabled
+			 set_character_flag = bloodlines_lodge_disabled
+		}
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Legendary Eagle Hunter	(tengri)#
+	
+	add_lodge_1 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_lodge_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			If = {
+				limit = {
+					is_female = yes
+				}
+				create_bloodline = { 
+					type = legendary_eagle_hunter_female
+				}
+				random_list = {
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_eagle_hunter_A
+							set_description = bloodline_desc_legendary_eagle_hunter
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_eagle_hunter_B
+							set_description = bloodline_desc_legendary_eagle_hunter
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_eagle_hunter_C
+							set_description = bloodline_desc_legendary_eagle_hunter
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_eagle_hunter_D
+							set_description = bloodline_desc_legendary_eagle_hunter
+						} 
+					}
+				}
+				
+			}
+			Else = {
+				create_bloodline = { 
+					type = legendary_eagle_hunter_male
+				}
+				random_list = {
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_eagle_hunter_A
+							set_description = bloodline_desc_legendary_eagle_hunter
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_eagle_hunter_B
+							set_description = bloodline_desc_legendary_eagle_hunter
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_eagle_hunter_C
+							set_description = bloodline_desc_legendary_eagle_hunter
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_eagle_hunter_D
+							set_description = bloodline_desc_legendary_eagle_hunter
+						} 
+					}
+				}
+				
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_lodge_1 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_lodge_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_pet_eagle
+				has_bloodline_flag = legendary_warrior_lodge_bloodline
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_pet_eagle
+					has_bloodline_flag = legendary_warrior_lodge_bloodline
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Legendary Dog Hunter#
+	
+	add_lodge_2 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_lodge_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			If = {
+				limit = {
+					is_female = yes
+				}
+				create_bloodline = { 
+					type = legendary_dog_hunter_female
+				}
+				random_list = {
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_dog_hunter_A
+							set_description = bloodline_desc_legendary_dog_hunter
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_dog_hunter_B
+							set_description = bloodline_desc_legendary_dog_hunter
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_dog_hunter_C
+							set_description = bloodline_desc_legendary_dog_hunter
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_dog_hunter_D
+							set_description = bloodline_desc_legendary_dog_hunter
+						} 
+					}
+				}
+				
+			}
+			Else = {
+				create_bloodline = { 
+					type = legendary_dog_hunter_male
+				}
+				random_list = {
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_dog_hunter_A
+							set_description = bloodline_desc_legendary_dog_hunter
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_dog_hunter_B
+							set_description = bloodline_desc_legendary_dog_hunter
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_dog_hunter_C
+							set_description = bloodline_desc_legendary_dog_hunter
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_dog_hunter_D
+							set_description = bloodline_desc_legendary_dog_hunter
+						} 
+					}
+				}
+				
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_lodge_2 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_lodge_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_pet_dog
+				has_bloodline_flag = legendary_warrior_lodge_bloodline
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_pet_dog
+					has_bloodline_flag = legendary_warrior_lodge_bloodline
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Legendary Battle Survivor#
+	
+	add_lodge_3 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_lodge_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			If = {
+				limit = {
+					is_female = yes
+				}
+				create_bloodline = { 
+					type = legendary_battle_survivor_female
+				}
+				random_list = {
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_battle_survivor_A
+							set_description = bloodline_desc_legendary_battle_survivor
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_battle_survivor_B
+							set_description = bloodline_desc_legendary_battle_survivor
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_battle_survivor_C
+							set_description = bloodline_desc_legendary_battle_survivor
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_battle_survivor_D
+							set_description = bloodline_desc_legendary_battle_survivor
+						} 
+					}
+				}
+				
+			}
+			Else = {
+				create_bloodline = { 
+					type = legendary_battle_survivor_male
+				}
+				random_list = {
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_battle_survivor_A
+							set_description = bloodline_desc_legendary_battle_survivor
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_battle_survivor_B
+							set_description = bloodline_desc_legendary_battle_survivor
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_battle_survivor_C
+							set_description = bloodline_desc_legendary_battle_survivor
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_battle_survivor_D
+							set_description = bloodline_desc_legendary_battle_survivor
+						} 
+					}
+				}
+				
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_lodge_3 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_lodge_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = battle_survivor_bloodline
+				has_bloodline_flag = legendary_warrior_lodge_bloodline
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = battle_survivor_bloodline
+					has_bloodline_flag = legendary_warrior_lodge_bloodline
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Legendary Leader#
+	
+	add_lodge_4 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_lodge_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			If = {
+				limit = {
+					is_female = yes
+				}
+				create_bloodline = { 
+					type = legendary_leader_female
+				}
+				random_list = {
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_leader_A
+							set_description = bloodline_desc_legendary_leader
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_leader_B
+							set_description = bloodline_desc_legendary_leader
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_leader_C
+							set_description = bloodline_desc_legendary_leader
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_leader_D
+							set_description = bloodline_desc_legendary_leader
+						} 
+					}
+				}
+				
+			}
+			Else = {
+				create_bloodline = { 
+					type = legendary_leader_male
+				}
+				random_list = {
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_leader_A
+							set_description = bloodline_desc_legendary_leader
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_leader_B
+							set_description = bloodline_desc_legendary_leader
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_leader_C
+							set_description = bloodline_desc_legendary_leader
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_leader_D
+							set_description = bloodline_desc_legendary_leader
+						} 
+					}
+				}
+				
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_lodge_4 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_lodge_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_loyalist
+				has_bloodline_flag = legendary_warrior_lodge_bloodline
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_loyalist
+					has_bloodline_flag = legendary_warrior_lodge_bloodline
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Legendary Warrior#
+	
+	add_lodge_5 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_lodge_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			If = {
+				limit = {
+					is_female = yes
+				}
+				create_bloodline = { 
+					type = legendary_warrior_female
+				}
+				random_list = {
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_warrior_A
+							set_description = bloodline_desc_legendary_warrior
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_warrior_B
+							set_description = bloodline_desc_legendary_warrior
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_warrior_C
+							set_description = bloodline_desc_legendary_warrior
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_warrior_D
+							set_description = bloodline_desc_legendary_warrior
+						} 
+					}
+				}
+				
+			}
+			Else = {
+				create_bloodline = { 
+					type = legendary_warrior_male
+				}
+				random_list = {
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_warrior_A
+							set_description = bloodline_desc_legendary_warrior
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_warrior_B
+							set_description = bloodline_desc_legendary_warrior
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_warrior_C
+							set_description = bloodline_desc_legendary_warrior
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_warrior_D
+							set_description = bloodline_desc_legendary_warrior
+						} 
+					}
+				}
+				
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_lodge_5 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_lodge_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_legendary_warrior
+				has_bloodline_flag = legendary_warrior_lodge_bloodline
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_legendary_warrior
+					has_bloodline_flag = legendary_warrior_lodge_bloodline
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Legendary Soldier#
+	
+	add_lodge_6 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_lodge_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			If = {
+				limit = {
+					is_female = yes
+				}
+				create_bloodline = { 
+					type = legendary_soldier_female
+				}
+				random_list = {
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_soldier_A
+							set_description = bloodline_desc_legendary_soldier
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_soldier_B
+							set_description = bloodline_desc_legendary_soldier
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_soldier_C
+							set_description = bloodline_desc_legendary_soldier
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_soldier_D
+							set_description = bloodline_desc_legendary_soldier
+						} 
+					}
+				}
+				
+			}
+			Else = {
+				create_bloodline = { 
+					type = legendary_soldier_male
+				}
+				random_list = {
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_soldier_A
+							set_description = bloodline_desc_legendary_soldier
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_soldier_B
+							set_description = bloodline_desc_legendary_soldier
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_soldier_C
+							set_description = bloodline_desc_legendary_soldier
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_soldier_D
+							set_description = bloodline_desc_legendary_soldier
+						} 
+					}
+				}
+				
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_lodge_6 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_lodge_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_artisan_craftsmen
+				has_bloodline_flag = legendary_warrior_lodge_bloodline
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_artisan_craftsmen
+					has_bloodline_flag = legendary_warrior_lodge_bloodline
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Legendary Battle Bard#
+	
+	add_lodge_7 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_lodge_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			If = {
+				limit = {
+					is_female = yes
+				}
+				create_bloodline = { 
+					type = legendary_battle_bard_female
+				}
+				random_list = {
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_battle_bard_A
+							set_description = bloodline_desc_legendary_battle_bard
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_battle_bard_B
+							set_description = bloodline_desc_legendary_battle_bard
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_battle_bard_C
+							set_description = bloodline_desc_legendary_battle_bard
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_battle_bard_D
+							set_description = bloodline_desc_legendary_battle_bard
+						} 
+					}
+				}
+				
+			}
+			Else = {
+				create_bloodline = { 
+					type = legendary_battle_bard_male
+				}
+				random_list = {
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_battle_bard_A
+							set_description = bloodline_desc_legendary_battle_bard
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_battle_bard_B
+							set_description = bloodline_desc_legendary_battle_bard
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_battle_bard_C
+							set_description = bloodline_desc_legendary_battle_bard
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_battle_bard_D
+							set_description = bloodline_desc_legendary_battle_bard
+						} 
+					}
+				}
+				
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_lodge_7 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_lodge_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_battle_bards
+				has_bloodline_flag = legendary_warrior_lodge_bloodline
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_battle_bards
+					has_bloodline_flag = legendary_warrior_lodge_bloodline
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Legendary Commander#
+	
+	add_lodge_8 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_lodge_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			If = {
+				limit = {
+					is_female = yes
+				}
+				create_bloodline = { 
+					type = legendary_commander_female
+				}
+				random_list = {
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_commander_A
+							set_description = bloodline_desc_legendary_commander
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_commander_B
+							set_description = bloodline_desc_legendary_commander
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_commander_C
+							set_description = bloodline_desc_legendary_commander
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_commander_D
+							set_description = bloodline_desc_legendary_commander
+						} 
+					}
+				}
+				
+			}
+			Else = {
+				create_bloodline = { 
+					type = legendary_commander_male
+				}
+				random_list = {
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_commander_A
+							set_description = bloodline_desc_legendary_commander
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_commander_B
+							set_description = bloodline_desc_legendary_commander
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_commander_C
+							set_description = bloodline_desc_legendary_commander
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_commander_D
+							set_description = bloodline_desc_legendary_commander
+						} 
+					}
+				}				
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_lodge_8 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_lodge_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_inspire_commanders
+				has_bloodline_flag = legendary_warrior_lodge_bloodline
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_inspire_commanders
+					has_bloodline_flag = legendary_warrior_lodge_bloodline
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Legendary Captor#
+	
+	add_lodge_9 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_lodge_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			If = {
+				limit = {
+					is_female = yes
+				}
+				create_bloodline = { 
+					type = legendary_captor_female
+				}
+				random_list = {
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_captor_A
+							set_description = bloodline_desc_legendary_captor
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_captor_B
+							set_description = bloodline_desc_legendary_captor
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_captor_C
+							set_description = bloodline_desc_legendary_captor
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_captor_D
+							set_description = bloodline_desc_legendary_captor
+						} 
+					}
+				}	
+			}
+			Else = {
+				create_bloodline = { 
+					type = legendary_captor_male
+				}
+				random_list = {
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_captor_A
+							set_description = bloodline_desc_legendary_captor
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_captor_B
+							set_description = bloodline_desc_legendary_captor
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_captor_C
+							set_description = bloodline_desc_legendary_captor
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_captor_D
+							set_description = bloodline_desc_legendary_captor
+						} 
+					}
+				}
+				
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_lodge_9 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_lodge_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_fearsome
+				has_bloodline_flag = legendary_warrior_lodge_bloodline
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_fearsome
+					has_bloodline_flag = legendary_warrior_lodge_bloodline
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	
+	#Legendary Raider#
+	
+	add_lodge_10 = {
+		
+		potential = {
+		    ai = no
+           	has_character_flag = cheats_enabled
+        	has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_lodge_enabled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			If = {
+				limit = {
+					is_female = yes
+				}
+				create_bloodline = { 
+					type = legendary_raider_female
+				}		
+				random_list = {
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_raider_A
+							set_description = bloodline_desc_legendary_raider
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_raider_B
+							set_description = bloodline_desc_legendary_raider
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_raider_C
+							set_description = bloodline_desc_legendary_raider
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_raider_D
+							set_description = bloodline_desc_legendary_raider
+						} 
+					}
+				}
+			}
+			Else = {
+				create_bloodline = { 
+					type = legendary_raider_male
+				}
+				random_list = {
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_raider_A
+							set_description = bloodline_desc_legendary_raider
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_raider_B
+							set_description = bloodline_desc_legendary_raider
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_raider_C
+							set_description = bloodline_desc_legendary_raider
+						} 
+					}
+					25 = { 
+						new_bloodline = {
+							set_name = bloodline_legendary_raider_D
+							set_description = bloodline_desc_legendary_raider
+						} 
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+        }
+	}
+	remove_lodge_10 = {
+		
+		potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+       		has_character_flag = bloodlines_enabled
+			has_character_flag = bloodlines_lodge_enabled
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_reaver
+				has_bloodline_flag = legendary_warrior_lodge_bloodline
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_owned_bloodline = {
+				limit = {
+					has_bloodline_flag = bloodline_reaver
+					has_bloodline_flag = legendary_warrior_lodge_bloodline
+				}
+				destroy_bloodline = yes
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+	}
+}
+
+
+

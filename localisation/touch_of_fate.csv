@@ -1,0 +1,78 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+##
+tf_grant_destiny;Grant Destiny;;;;;;;;;;;;;x
+tf_grant_destiny_desc;Force §G[Root.GetDynName]§! to become a §GChild of Destiny§!.;;;;;;;;;;;;;x
+tf_grant_destiny_me;Grant Destiny;;;;;;;;;;;;;x
+tf_grant_destiny_me_desc;Force §Gyourself§! to become a §GChild of Destiny§!.;;;;;;;;;;;;;x
+##
+tf_grant_demon;Grant Demonhood;;;;;;;;;;;;;x
+tf_grant_demon_desc;Force §G[Root.GetDynName]§! to become a §RDemon Child§!.;;;;;;;;;;;;;x
+tf_grant_demon_me;Grant Demonhood;;;;;;;;;;;;;x
+tf_grant_demon_me_desc;Force §Gyourself§! to become a §RDemon Child§!.;;;;;;;;;;;;;x
+##
+tf_grant_wolf;Grant Wolf Blood;;;;;;;;;;;;;x
+tf_grant_wolf_desc;Force §G[Root.GetDynName]§! to become a §KWolf Child§!.;;;;;;;;;;;;;x
+tf_grant_wolf_me;Grant Wolf Blood;;;;;;;;;;;;;x
+tf_grant_wolf_me_desc;Force §Gyourself§! to become a §KWolf Child§!.;;;;;;;;;;;;;x
+##
+tf_grant_conq;Grant Conqueror's Will;;;;;;;;;;;;;x
+tf_grant_conq_desc;Force §G[Root.GetDynName]§! to become a §BGreat Conqueror§!.;;;;;;;;;;;;;x
+tf_grant_conq_me;Grant Conqueror's Will;;;;;;;;;;;;;x
+tf_grant_conq_me_desc;Force §Gyourself§! to become a §BGreat Conqueror§!.;;;;;;;;;;;;;x
+##
+tf_grant_immortal;Grant Immortality;;;;;;;;;;;;;x
+tf_grant_immortal_desc;Force §G[Root.GetDynName]§! to become §YImmortal§!.;;;;;;;;;;;;;x
+tf_grant_immortal_me;Grant Immortality;;;;;;;;;;;;;x
+tf_grant_immortal_me_desc;Force §Gyourself§! to become §YImmortal§!.;;;;;;;;;;;;;x
+##
+tf_toggle_off;Hide Touch of Fate;;;;;;;;;;;;;x
+tf_toggle_off_desc;Hides all 'Touch of Fate' decisions in interaction menu.;;;;;;;;;;;;;x
+tf_toggle_on;Show Touch of Fate;;;;;;;;;;;;;x
+tf_toggle_on_desc;Show 'Touch of Fate 'decisions in interaction menu.;;;;;;;;;;;;;x
+##
+tf_childdestiny;Destined;;;;;;;;;;;;;x
+tf_childdestiny_desc;This character is meant for great things.;;;;;;;;;;;;;x
+tf_demonchild;Demonic;;;;;;;;;;;;;x
+tf_demonchild_desc;This character is meant for terrible things.;;;;;;;;;;;;;x
+tf_wolfkid;Wolfblooded;;;;;;;;;;;;;x
+tf_wolfkid_desc;This character hears the call of the wild.;;;;;;;;;;;;;x
+tf_greatconq;Subjugator;;;;;;;;;;;;;x
+tf_greatconq_desc;This character is meant for WAR.;;;;;;;;;;;;;x
+##
+RULE_TOUCH_OF_FATE;Touch of Fate;;;;;;;;;;;;;x
+##
+RULE_TOUCH_OF_FATE_DECISION_A;Touch of Fate - Child of Destiny decision;;;;;;;;;;;;;x
+RULE_TOUCH_OF_FATE_A_ON_DESC;Player can §Gforce any child to become a Child of Destiny§! by choosing the 'Grant Destiny' option in the interaction menu.;;;;;;;;;;;;;x
+RULE_TOUCH_OF_FATE_A_OFF_DESC;Child of Destiny targeted decision cheat is disabled.;;;;;;;;;;;;;x
+##
+RULE_TOUCH_OF_FATE_DECISION_B;Touch of Fate - Demon Child decision;;;;;;;;;;;;;x
+RULE_TOUCH_OF_FATE_B_ON_DESC;Player can §Rforce any child to become a Demon Child§! by choosing the 'Grant Demonhood' option in the interaction menu.;;;;;;;;;;;;;x
+RULE_TOUCH_OF_FATE_B_OFF_DESC;Demon Child targeted decision cheat is disabled.;;;;;;;;;;;;;x
+##
+RULE_TOUCH_OF_FATE_TRAIT_A;Touch of Fate - 'Destined' Trait;;;;;;;;;;;;;x
+RULE_TOUCH_OF_FATE_TRAITA_ON_DESC;Children of Destiny §Gwill§! be given the neutral trait '§GDestined§!' in order to make them more identifiable.;;;;;;;;;;;;;x
+RULE_TOUCH_OF_FATE_TRAITA_OFF_DESC;Children of Destiny will not be given an identifying trait.;;;;;;;;;;;;;x
+##
+RULE_TOUCH_OF_FATE_TRAIT_B;Touch of Fate - 'Demonic' Trait;;;;;;;;;;;;;x
+RULE_TOUCH_OF_FATE_TRAITB_ON_DESC;Demon Children §Rwill§! be given the neutral trait '§RDemonic§!' in order to make them more identifiable.;;;;;;;;;;;;;x
+RULE_TOUCH_OF_FATE_TRAITB_OFF_DESC;Demon Children will not be given an identifying trait.;;;;;;;;;;;;;x
+##
+RULE_TOUCH_OF_FATE_DECISION_C;Touch of Fate - Wolf Child decision;;;;;;;;;;;;;x
+RULE_TOUCH_OF_FATE_C_ON_DESC;Player can §Kforce any child to become a Wolf Child§! by choosing the 'Grant Wolf Blood' option in the interaction menu.;;;;;;;;;;;;;x
+RULE_TOUCH_OF_FATE_C_OFF_DESC;Wolf Child targeted decision cheat is disabled.;;;;;;;;;;;;;x
+##
+RULE_TOUCH_OF_FATE_DECISION_D;Touch of Fate - Great Conqueror decision;;;;;;;;;;;;;x
+RULE_TOUCH_OF_FATE_D_ON_DESC;Player can §Bforce any character to become a Great Conqueror§! by choosing the 'Grant Conqueror's Will' option in the interaction menu.;;;;;;;;;;;;;x
+RULE_TOUCH_OF_FATE_D_OFF_DESC;Great Conqueror targeted decision cheat is disabled.;;;;;;;;;;;;;x
+##
+RULE_TOUCH_OF_FATE_TRAIT_C;Touch of Fate - 'Wolfblooded' Trait;;;;;;;;;;;;;x
+RULE_TOUCH_OF_FATE_TRAITC_ON_DESC;Wolf Children §Kwill§! be given the neutral trait '§KWolfblooded§!' in order to make them more identifiable.;;;;;;;;;;;;;x
+RULE_TOUCH_OF_FATE_TRAITC_OFF_DESC;Wolf Children will not be given an identifying trait.;;;;;;;;;;;;;x
+##
+RULE_TOUCH_OF_FATE_TRAIT_D;Touch of Fate - 'Subjugator' Trait;;;;;;;;;;;;;x
+RULE_TOUCH_OF_FATE_TRAITD_ON_DESC;Great Conquerors §Bwill§! be given the neutral trait '§BSubjugator§!' in order to make them more identifiable.;;;;;;;;;;;;;x
+RULE_TOUCH_OF_FATE_TRAITD_OFF_DESC;Great Conquerors will not be given an identifying trait.;;;;;;;;;;;;;x
+##
+RULE_TOUCH_OF_FATE_DECISION_E;Touch of Fate - Immortality decision;;;;;;;;;;;;;x
+RULE_TOUCH_OF_FATE_E_ON_DESC;Player can §Gforce any character to become Immortal§! by choosing the 'Grant Immortality' option in the interaction menu.;;;;;;;;;;;;;x
+RULE_TOUCH_OF_FATE_E_OFF_DESC;Immortality targeted decision cheat is disabled.;;;;;;;;;;;;;x

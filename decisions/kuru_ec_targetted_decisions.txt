@@ -1,0 +1,2102 @@
+targetted_decisions = {
+	kuru_ec_improve_education = {
+		ai = no
+		filter = court
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			is_adult = yes
+			NOT = {
+				OR = {
+					trait = grey_eminence
+					trait = brilliant_strategist
+					trait = midas_touched
+					trait = elusive_shadow
+					trait = mastermind_theologian
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			trigger_switch = {
+				on_trigger = trait
+
+				# Diplomacy
+				naive_appeaser = {
+					remove_trait = naive_appeaser
+					add_trait = underhanded_rogue
+					FROM = { wealth = -25 }
+					opinion = {
+						modifier = kuru_ec_received_education
+						who = FROM
+						years = 5
+					}
+				}
+				underhanded_rogue = {
+					remove_trait = underhanded_rogue
+					add_trait = charismatic_negotiator
+					FROM = { wealth = -50 }
+					opinion = {
+						modifier = kuru_ec_received_good_education
+						who = FROM
+						years = 10
+					}
+				}
+				charismatic_negotiator = {
+					remove_trait = charismatic_negotiator
+					add_trait = grey_eminence
+					FROM = { wealth = -75 }
+					opinion = {
+						modifier = kuru_ec_received_excellent_education
+						who = FROM
+						years = 15
+					}
+				}
+
+				# Martial
+				misguided_warrior = {
+					remove_trait = misguided_warrior
+					add_trait = tough_soldier
+					FROM = { wealth = -25 }
+					opinion = {
+						modifier = kuru_ec_received_education
+						who = FROM
+						years = 5
+					}
+				}
+				tough_soldier = {
+					remove_trait = tough_soldier
+					add_trait = skilled_tactician
+					FROM = { wealth = -50 }
+					opinion = {
+						modifier = kuru_ec_received_good_education
+						who = FROM
+						years = 10
+					}
+				}
+				skilled_tactician = {
+					remove_trait = skilled_tactician
+					add_trait = brilliant_strategist
+					FROM = { wealth = -75 }
+					opinion = {
+						modifier = kuru_ec_received_excellent_education
+						who = FROM
+						years = 15
+					}
+				}
+
+				# Stewardship
+				indulgent_wastrel = {
+					remove_trait = indulgent_wastrel
+					add_trait = thrifty_clerk
+					FROM = { wealth = -25 }
+					opinion = {
+						modifier = kuru_ec_received_education
+						who = FROM
+						years = 5
+					}
+				}
+				thrifty_clerk = {
+					remove_trait = thrifty_clerk
+					add_trait = fortune_builder
+					FROM = { wealth = -50 }
+					opinion = {
+						modifier = kuru_ec_received_good_education
+						who = FROM
+						years = 10
+					}
+				}
+				fortune_builder = {
+					remove_trait = fortune_builder
+					add_trait = midas_touched
+					FROM = { wealth = -75 }
+					opinion = {
+						modifier = kuru_ec_received_excellent_education
+						who = FROM
+						years = 15
+					}
+				}
+
+				# Intrigue
+				amateurish_plotter = {
+					remove_trait = amateurish_plotter
+					add_trait = flamboyant_schemer
+					FROM = { wealth = -25 }
+					opinion = {
+						modifier = kuru_ec_received_education
+						who = FROM
+						years = 5
+					}
+				}
+				flamboyant_schemer = {
+					remove_trait = flamboyant_schemer
+					add_trait = intricate_webweaver
+					FROM = { wealth = -50 }
+					opinion = {
+						modifier = kuru_ec_received_good_education
+						who = FROM
+						years = 10
+					}
+				}
+				intricate_webweaver = {
+					remove_trait = intricate_webweaver
+					add_trait = elusive_shadow
+					FROM = { wealth = -75 }
+					opinion = {
+						modifier = kuru_ec_received_excellent_education
+						who = FROM
+						years = 15
+					}
+				}
+
+				# Learning
+				detached_priest = {
+					remove_trait = detached_priest
+					add_trait = martial_cleric
+					FROM = { wealth = -25 }
+					opinion = {
+						modifier = kuru_ec_received_education
+						who = FROM
+						years = 5
+					}
+				}
+				martial_cleric = {
+					remove_trait = martial_cleric
+					add_trait = scholarly_theologian
+					FROM = { wealth = -50 }
+					opinion = {
+						modifier = kuru_ec_received_good_education
+						who = FROM
+						years = 10
+					}
+				}
+				scholarly_theologian = {
+					remove_trait = scholarly_theologian
+					add_trait = mastermind_theologian
+					FROM = { wealth = -75 }
+					opinion = {
+						modifier = kuru_ec_received_excellent_education
+						who = FROM
+						years = 15
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_propose_holding_upgrades = {
+		ai = no
+		filter = court
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+			NOT = {
+				has_character_flag = kuru_ec_flag_proposing_holding_upgrades
+			}
+		}
+		potential = {
+			ai = yes
+			has_job_title = job_treasurer
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				FROM = {
+					set_character_flag = kuru_ec_flag_proposing_holding_upgrades
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_stop_proposing_holding_upgrades = {
+		ai = no
+		filter = court
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+			has_character_flag = kuru_ec_flag_proposing_holding_upgrades
+		}
+		potential = {
+			ai = yes
+			has_job_title = job_treasurer
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				FROM = {
+					clr_character_flag = kuru_ec_flag_proposing_holding_upgrades
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_discuss_building_options = {
+		ai = no
+		filter = court
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			ai = yes
+			has_job_title = job_treasurer
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			FROM = {
+				character_event = { id = kuru_ec_charevt.0001 }
+				character_event = { id = kuru_ec_charevt.0002 }
+				character_event = { id = kuru_ec_charevt.0003 }
+				character_event = { id = kuru_ec_charevt.0004 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_enable_cheats = {
+		ai = no
+		filter = court
+
+		from_potential = {
+			ai = no
+			NOT = {
+				has_character_flag = cheats_enabled
+			}
+		}
+		potential = {
+			ai = yes
+			has_job_title = job_spymaster
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				FROM = {
+					clr_character_flag = cheats_disabled
+					set_character_flag = cheats_enabled
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_disable_cheats = {
+		ai = no
+		filter = court
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			ai = yes
+			has_job_title = job_spymaster
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				FROM = {
+					clr_character_flag = cheats_enabled
+					set_character_flag = cheats_disabled
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_hire_fanatical_servant = {
+		ai = no
+		filter = court
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+			NOT = {
+				has_global_flag = kuru_ec_flag_minor_title_title_fanatical_servant
+			}
+		}
+		potential = {
+			ai = yes
+			has_job_title = job_spymaster
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				set_global_flag = kuru_ec_flag_minor_title_title_fanatical_servant
+				create_character = {
+					random_traits = no
+					religion = FROM
+					culture = FROM
+					race = FROM
+					employer = FROM
+					dynasty = none
+					female = yes
+					female = yes
+					attributes = {
+						martial = 15
+						diplomacy = 8
+						stewardship = 9
+						intrigue = 20
+						learning = 12
+					}
+					health = 6
+					fertility = 0.8
+					trait = elusive_shadow
+					trait = quick
+					trait = strong
+					trait = schemer
+					trait = diligent
+					trait = patient
+					trait = brave
+					trait = deceitful
+					trait = paranoid
+					trait = shy
+					trait = zealous
+				}
+				new_character = {
+					add_trait = nun
+					add_trait = in_hiding
+					add_character_modifier = {
+						name = kuru_ec_extraordinary_plotter
+						duration = -1
+					}
+					set_defacto_liege = FROM
+					give_minor_title = kuru_ec_title_fanatical_servant
+				}
+			}
+			FROM = {
+				wealth = -50
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_mc_fabriacte_claim = {
+		ai = no
+		filter = court
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			ai = yes
+			has_job_action = action_fabricate_claims
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			wealth = -50
+			character_event = { id = 913 days = 0 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_summon_female_courtier = {
+		ai = no
+		filter = court
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			ai = yes
+			has_job_title = job_chancellor
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			create_character = {
+				random_traits = yes
+				religion = FROM
+				culture = FROM
+				race = FROM
+				employer = FROM
+				dynasty = none
+				female = yes
+				attributes = {
+					martial = 10
+					diplomacy = 10
+					stewardship = 10
+					intrigue = 10
+					learning = 10
+				}
+				health = 6
+				fertility = 0.8
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_pray_for_divine_will = {
+		ai = no
+		filter = court
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+
+			NOT = {
+				has_character_flag = mind_control_enabled
+				#has_global_flag = kuru_ec_flag_divine_will
+			}
+		}
+		potential = {
+			ai = yes
+			has_job_title = job_spiritual
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				FROM = {
+					set_character_flag = mind_control_enabled
+				}
+				#set_global_flag = kuru_ec_flag_divine_will
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_pray_for_free_will = {
+		ai = no
+		filter = court
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+
+			has_character_flag = mind_control_enabled
+			#has_global_flag = kuru_ec_flag_divine_will
+		}
+		potential = {
+			ai = yes
+			has_job_title = job_spiritual
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				any_character = {
+					clr_character_flag = mind_controlled
+				}
+
+				FROM = {
+					clr_character_flag = mind_control_enabled
+				}
+				#clr_global_flag = kuru_ec_flag_divine_will
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_mc_shatter_world = {
+		ai = no
+		filter = court
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+
+			has_character_flag = mind_control_enabled
+			#has_global_flag = kuru_ec_flag_divine_will
+		}
+		potential = {
+			ai = yes
+			has_job_title = job_spiritual
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				any_title = {
+					limit = {
+						is_titular = no
+						temporary = no
+						higher_tier_than = COUNT
+					}
+					owner = {
+						destroy_landed_title = PREV
+						# add_pressed_claim = PREV
+					}
+					any_claimant = {
+						remove_claim = PREV
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_set_extraordinary_builder = {
+		ai = no
+		filter = all_including_me
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			always = yes
+			NOT = {
+				has_character_modifier = kuru_ec_extraordinary_builder
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			add_character_modifier = {
+				name = kuru_ec_extraordinary_builder
+				duration = -1
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_remove_extraordinary_builder = {
+		ai = no
+		filter = all_including_me
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			always = yes
+			has_character_modifier = kuru_ec_extraordinary_builder
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			remove_character_modifier = kuru_ec_extraordinary_builder
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_set_extraordinary_plotter = {
+		ai = no
+		filter = all_including_me
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			always = yes
+			NOT = {
+				has_character_modifier = kuru_ec_extraordinary_plotter
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			add_character_modifier = {
+				name = kuru_ec_extraordinary_plotter
+				duration = -1
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_remove_extraordinary_plotter = {
+		ai = no
+		filter = all_including_me
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			always = yes
+			has_character_modifier = kuru_ec_extraordinary_plotter
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			remove_character_modifier = kuru_ec_extraordinary_plotter
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_set_quick_reinforcements = {
+		ai = no
+		filter = all_including_me
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			always = yes
+			NOT = {
+				has_character_modifier = kuru_ec_quick_reinforcements
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			add_character_modifier = {
+				name = kuru_ec_quick_reinforcements
+				duration = -1
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_remove_quick_reinforcements = {
+		ai = no
+		filter = all_including_me
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			has_character_modifier = kuru_ec_quick_reinforcements
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			remove_character_modifier = kuru_ec_quick_reinforcements
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_set_bodyguard = {
+		ai = no
+		filter = all_including_me
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			NOT = {
+				has_character_modifier = kuru_ec_bodyguard
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			add_character_modifier = {
+				name = kuru_ec_bodyguard
+				duration = -1
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_remove_bodyguard = {
+		ai = no
+		filter = all_including_me
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			has_character_modifier = kuru_ec_bodyguard
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			remove_character_modifier = kuru_ec_bodyguard
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_set_extraordinary_ruler = {
+		ai = no
+		filter = all_including_me
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			NOT = {
+				has_character_modifier = kuru_ec_extraordinary_ruler
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			add_character_modifier = {
+				name = kuru_ec_extraordinary_ruler
+				duration = -1
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_remove_extraordinary_ruler = {
+		ai = no
+		filter = all_including_me
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			has_character_modifier = kuru_ec_extraordinary_ruler
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			remove_character_modifier = kuru_ec_extraordinary_ruler
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_set_extraordinary_leader = {
+		ai = no
+		filter = all_including_me
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			NOT = {
+				has_character_modifier = kuru_ec_extraordinary_leader
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			add_character_modifier = {
+				name = kuru_ec_extraordinary_leader
+				duration = -1
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_remove_extraordinary_leader = {
+		ai = no
+		filter = all_including_me
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			has_character_modifier = kuru_ec_extraordinary_leader
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			remove_character_modifier = kuru_ec_extraordinary_leader
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_renounce_claims_on_me = {
+		ai = no
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			ai = yes
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_claim = {
+				limit = {
+					has_holder = yes
+					OR = {
+						owner = { character = FROM }
+						owner = { is_liege_or_above = FROM }
+					}
+				}
+				ROOT = {
+					remove_claim = PREV
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_remove_claims_on_me_all = {
+		ai = no
+		filter = self
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			always = yes
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_title = {
+				limit = {
+					has_holder = yes
+					OR = {
+						owner = { character = ROOT }
+						owner = { is_liege_or_above = ROOT }
+					}
+				}
+				any_claimant = {
+					remove_claim = PREV
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_renounce_all_claims = {
+		ai = no
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			ai = yes
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_claim = {
+				remove_claim = ROOT
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_provide_an_heir = {
+		ai = no
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			ai = yes
+			is_female = yes
+			is_married = yes
+			is_pregnant = no
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			spouse = {
+				ROOT = {
+					impregnate = PREV
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_diplomatic_servitude = {
+		ai = no
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			ai = yes
+			NOT = {
+				has_opinion_modifier = {
+					modifier = opinion_loyal_servant
+					who = FROM
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			opinion = {
+				modifier = opinion_loyal_servant
+				who = FROM
+				months = 1200
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_diplomatic_freedom = {
+		ai = no
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			ai = yes
+			has_opinion_modifier = {
+				modifier = opinion_loyal_servant
+				who = FROM
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			remove_opinion = {
+				modifier = opinion_loyal_servant
+				who = FROM
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_remove_cooldown_acquire_ingredients = {
+		ai = no
+		filter = court
+
+		from_potential = {
+			ai = no
+			has_dlc = "Mystics"
+			has_character_flag = cheats_enabled
+			has_character_modifier = acquire_ingredients_decision_cooldown_timer
+		}
+		potential = {
+			ai = yes
+			has_minor_title = title_hermetics_apprentice
+		}
+		allow = {
+			FROM = {
+				NOT = {
+					has_character_flag = apprentice_hermetic_gathering
+				}
+			}
+		}
+		effect = {
+			hidden_tooltip = {
+				FROM = {
+					remove_character_modifier = acquire_ingredients_decision_cooldown_timer
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_remove_cooldown_stargazing = {
+		ai = no
+		filter = court
+
+		from_potential = {
+			ai = no
+			has_dlc = "Mystics"
+			has_character_flag = cheats_enabled
+			has_character_modifier = stargazing_timer
+		}
+		potential = {
+			ai = yes
+			has_minor_title = title_hermetics_apprentice
+		}
+		allow = {
+			FROM = {
+				NOT = {
+					has_character_flag = inviting_guests_to_stargazing_timer
+					has_character_modifier = inviting_to_stargazing
+				}
+			}
+		}
+		effect = {
+			hidden_tooltip = {
+				FROM = {
+					remove_character_modifier = stargazing_timer
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_invite_to_society = {
+		ai = no
+
+		from_potential = {
+			ai = no
+			has_dlc = "Mystics"
+			is_in_society = yes
+			has_character_flag = cheats_enabled
+			has_character_flag = kuru_ec_open_society_membership
+		}
+		potential = {
+			ai = yes
+			NOT = {
+				is_in_society = yes
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				FROM = {
+					society = {
+						save_event_target_as = target_society
+					}
+				}
+			}
+			ROOT = {
+				join_society = event_target:target_society
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_leave_society = {
+		ai = no
+
+		from_potential = {
+			ai = no
+			has_dlc = "Mystics"
+			is_in_society = yes
+			has_character_flag = cheats_enabled
+			has_character_flag = kuru_ec_open_society_membership
+		}
+		potential = {
+			ai = yes
+			is_in_society = yes
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			ROOT = {
+				leave_society = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_reveal_society_membership = {
+		ai = no
+
+		from_potential = {
+			ai = no
+			has_dlc = "Mystics"
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			ai = yes
+			is_in_society = yes
+			NOT = {
+				is_society_discovered_real = yes
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			ROOT = {
+				set_discovered_society = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_open_society_membership = {
+		ai = no
+		filter = court
+
+		from_potential = {
+			ai = no
+			has_dlc = "Mystics"
+			has_character_flag = cheats_enabled
+			NOT = {
+				has_character_flag = kuru_ec_open_society_membership
+			}
+		}
+		potential = {
+			ai = yes
+			has_minor_title = title_hermetics_apprentice
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				FROM = {
+					set_character_flag = kuru_ec_open_society_membership
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_close_society_membership = {
+		ai = no
+		filter = court
+
+		from_potential = {
+			ai = no
+			has_dlc = "Mystics"
+			has_character_flag = cheats_enabled
+			has_character_flag = kuru_ec_open_society_membership
+		}
+		potential = {
+			ai = yes
+			has_minor_title = title_hermetics_apprentice
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				FROM = {
+					clr_character_flag = kuru_ec_open_society_membership
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_submit_to_divine_will = {
+		ai = no
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+
+			has_character_flag = mind_control_enabled
+			#has_global_flag = kuru_ec_flag_divine_will
+		}
+		potential = {
+			ai = yes
+			NOT = {
+				has_character_flag = mind_controlled
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				any_character = {
+					clr_character_flag = mind_controlled
+				}
+				ROOT = {
+					set_character_flag = mind_controlled
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_regain_free_will = {
+		ai = no
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+
+			has_character_flag = mind_control_enabled
+			#has_global_flag = kuru_ec_flag_divine_will
+		}
+		potential = {
+			ai = yes
+			has_character_flag = mind_controlled
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				ROOT = {
+					clr_character_flag = mind_controlled
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_mc_go_to_war = {
+		ai = no
+
+		from_potential = {
+			ai = no
+
+			has_character_flag = mind_control_enabled
+			#has_global_flag = kuru_ec_flag_divine_will
+		}
+		potential = {
+			ai = yes
+			has_character_flag = mind_controlled
+			#any_title = {
+			#	has_title_flag = kuru_ec_flag_mc_war_target
+			#}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			any_title = {
+				limit = {
+					has_holder = yes
+					has_title_flag = kuru_ec_flag_mc_war_target
+					NOT = {
+						OR = {
+							owner = { character = ROOT }
+							owner = { is_liege_or_above = ROOT }
+						}
+					}
+				}
+				save_event_target_as = target_title
+				ROOT = {
+					add_claim = event_target:target_title
+				}
+				owner = {
+					top_liege = {
+						save_event_target_as = target_liege
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							is_liege_or_above = event_target:target_liege
+						}
+					}
+					ROOT = {
+						set_defacto_liege = ROOT
+					}
+				}
+				ROOT = {
+					war = {
+						target = event_target:target_liege
+						casus_belli = claim
+						thirdparty_title = event_target:target_title
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_mc_declare_independence = {
+		ai = no
+
+		from_potential = {
+			ai = no
+			has_dlc = "Jade Dragon"
+
+			has_character_flag = mind_control_enabled
+			#has_global_flag = kuru_ec_flag_divine_will
+		}
+		potential = {
+			ai = yes
+			has_character_flag = mind_controlled
+			independent = no
+			is_landed = yes
+			primary_title = {
+				higher_tier_than = BARON
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			ROOT = {
+				liege = {
+					save_event_target_as = target_liege
+				}
+				set_defacto_liege = ROOT
+			}
+			event_target:target_liege = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							ROOT = {
+								tier = COUNT
+							}
+						}
+						prestige = 250
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tier = DUKE
+							}
+						}
+						prestige = 1000
+					}
+					if = {
+						limit = {
+							ROOT = {
+								tier = KING
+							}
+						}
+						prestige = 2500
+					}
+				}
+				war = {
+					target = ROOT
+					casus_belli = force_vassalization
+					infamy = 0
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_fanatical_assassination = {
+		ai = no
+
+		from_potential = {
+			ai = no
+			has_global_flag = kuru_ec_flag_minor_title_title_fanatical_servant
+		}
+		potential = {
+			ai = yes
+			NOT = {
+				has_minor_title = kuru_ec_title_fanatical_servant
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				save_event_target_as = target_victim
+				FROM = {
+					save_event_target_as = target_puppetmaster
+					any_courtier = {
+						limit = {
+							has_minor_title = kuru_ec_title_fanatical_servant
+						}
+						save_event_target_as = target_servant
+					}
+				}
+			}
+			FROM = {
+				character_event = { id = kuru_ec_charevt.0006 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_fanatical_kidnapping = {
+		ai = no
+
+		from_potential = {
+			ai = no
+			has_global_flag = kuru_ec_flag_minor_title_title_fanatical_servant
+		}
+		potential = {
+			ai = yes
+			NOT = {
+				has_minor_title = kuru_ec_title_fanatical_servant
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				save_event_target_as = target_victim
+				FROM = {
+					save_event_target_as = target_puppetmaster
+					any_courtier = {
+						limit = {
+							has_minor_title = kuru_ec_title_fanatical_servant
+						}
+						save_event_target_as = target_servant
+					}
+				}
+			}
+			FROM = {
+				character_event = { id = kuru_ec_charevt.0007 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_fanatical_murder_pet = {
+		ai = no
+
+		from_potential = {
+			ai = no
+			has_global_flag = kuru_ec_flag_minor_title_title_fanatical_servant
+		}
+		potential = {
+			ai = yes
+			NOT = {
+				has_minor_title = kuru_ec_title_fanatical_servant
+			}
+			NOT = {
+				has_opinion_modifier = {
+					modifier = kuru_ec_murdered_pet
+					who = FROM
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			opinion = {
+				modifier = kuru_ec_murdered_pet
+				who = FROM
+				years = 5
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_summon_army = {
+		ai = no
+		filter = court
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+		}
+		potential = {
+			ai = yes
+			OR = {
+				has_job_title = yes
+				has_minor_title = title_commander
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			location = {
+				save_event_target_as = target_location
+			}
+			FROM = {
+				save_event_target_as = target_owner
+				character_event = { id = kuru_ec_charevt.0010 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_make_saintly = {
+		ai = no
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+
+			has_character_flag = mind_control_enabled
+			#has_global_flag = kuru_ec_flag_divine_will
+		}
+		potential = {
+			OR = {
+				trait = lustful
+				trait = gluttonous
+				trait = greedy
+				trait = slothful
+				trait = wroth
+				trait = proud
+				trait = envious
+				trait = cruel
+
+				NOT = {
+					trait = chaste
+					trait = temperate
+					trait = charitable
+					trait = diligent
+					trait = patient
+					trait = humble
+					trait = kind
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			#hidden_tooltip = {
+				remove_trait = lustful
+				remove_trait = gluttonous
+				remove_trait = greedy
+				remove_trait = slothful
+				remove_trait = wroth
+				remove_trait = proud
+				remove_trait = envious
+				remove_trait = cruel
+
+				add_trait = chaste
+				add_trait = temperate
+				add_trait = charitable
+				add_trait = diligent
+				add_trait = patient
+				add_trait = humble
+				add_trait = kind
+			#}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_make_wicked = {
+		ai = no
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+
+			has_character_flag = mind_control_enabled
+			#has_global_flag = kuru_ec_flag_divine_will
+		}
+		potential = {
+			OR = {
+				trait = chaste
+				trait = temperate
+				trait = charitable
+				trait = diligent
+				trait = patient
+				trait = humble
+				trait = kind
+
+				NOT = {
+					trait = lustful
+					trait = gluttonous
+					trait = greedy
+					trait = slothful
+					trait = wroth
+					trait = proud
+					trait = envious
+					trait = cruel
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			#hidden_tooltip = {
+				remove_trait = chaste
+				remove_trait = temperate
+				remove_trait = charitable
+				remove_trait = diligent
+				remove_trait = patient
+				remove_trait = humble
+				remove_trait = kind
+
+				add_trait = lustful
+				add_trait = gluttonous
+				add_trait = greedy
+				add_trait = slothful
+				add_trait = wroth
+				add_trait = proud
+				add_trait = envious
+				#add_trait = cruel
+			#}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_improve_dna = {
+		ai = no
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+
+			has_character_flag = mind_control_enabled
+			#has_global_flag = kuru_ec_flag_divine_will
+		}
+		potential = {
+			OR = {
+				trait = ugly
+				trait = imbecile
+				trait = slow
+				trait = quick
+				trait = weak
+
+				NOT = {
+					trait = fair
+					trait = genius
+					trait = strong
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			#hidden_tooltip = {
+				remove_trait = ugly
+				remove_trait = imbecile
+				remove_trait = slow
+				remove_trait = quick
+				remove_trait = weak
+
+				add_trait = fair
+				add_trait = genius
+				add_trait = strong
+			#}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_degrade_dna = {
+		ai = no
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+
+			has_character_flag = mind_control_enabled
+			#has_global_flag = kuru_ec_flag_divine_will
+		}
+		potential = {
+			OR = {
+				trait = fair
+				trait = slow
+				trait = quick
+				trait = genius
+				trait = strong
+
+				NOT = {
+					trait = ugly
+					trait = imbecile
+					trait = weak
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			#hidden_tooltip = {
+				remove_trait = fair
+				remove_trait = slow
+				remove_trait = genius
+				remove_trait = quick
+				remove_trait = strong
+
+				add_trait = ugly
+				add_trait = imbecile
+				add_trait = weak
+			#}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_improve_lifestyle = {
+		ai = no
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+
+			has_character_flag = mind_control_enabled
+			#has_global_flag = kuru_ec_flag_divine_will
+		}
+		potential = {
+			OR = {
+				trait = feeble
+				trait = sturdy
+				trait = dull
+				trait = uncouth
+
+				NOT = {
+					trait = brawny
+					trait = shrewd
+					trait = groomed
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			#hidden_tooltip = {
+				remove_trait = feeble
+				remove_trait = sturdy
+				remove_trait = dull
+				remove_trait = uncouth
+
+				add_trait = brawny
+				add_trait = shrewd
+				add_trait = groomed
+			#}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_degrade_lifestyle = {
+		ai = no
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+
+			has_character_flag = mind_control_enabled
+			#has_global_flag = kuru_ec_flag_divine_will
+		}
+		potential = {
+			OR = {
+				trait = brawny
+				trait = sturdy
+				trait = shrewd
+				trait = groomed
+
+				NOT = {
+					trait = feeble
+					trait = dull
+					trait = uncouth
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			#hidden_tooltip = {
+				remove_trait = brawny
+				remove_trait = sturdy
+				remove_trait = shrewd
+				remove_trait = groomed
+
+				add_trait = feeble
+				add_trait = dull
+				add_trait = uncouth
+			#}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_improve_behavior = {
+		ai = no
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+
+			has_character_flag = mind_control_enabled
+			#has_global_flag = kuru_ec_flag_divine_will
+		}
+		potential = {
+			OR = {
+				trait = arbitrary
+				trait = craven
+				trait = shy
+				
+				NOT = {
+					trait = just
+					trait = brave
+					trait = gregarious
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			#hidden_tooltip = {
+				remove_trait = arbitrary
+				remove_trait = craven
+				remove_trait = shy
+
+				add_trait = just
+				add_trait = brave
+				add_trait = gregarious
+			#}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kuru_ec_degrade_behavior = {
+		ai = no
+
+		from_potential = {
+			ai = no
+			has_character_flag = cheats_enabled
+
+			has_character_flag = mind_control_enabled
+			#has_global_flag = kuru_ec_flag_divine_will
+		}
+		potential = {
+			OR = {
+				trait = just
+				trait = brave
+				trait = gregarious
+				
+				NOT = {
+					trait = arbitrary
+					trait = craven
+					trait = shy
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			#hidden_tooltip = {
+				remove_trait = just
+				remove_trait = brave
+				remove_trait = gregarious
+
+				add_trait = arbitrary
+				add_trait = craven
+				add_trait = shy
+			#}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

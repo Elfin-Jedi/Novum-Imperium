@@ -1,0 +1,593 @@
+namespace = kuru_ec_charevt
+
+character_event = {
+	id = kuru_ec_charevt.0001
+
+	is_triggered_only = yes
+	ai = no
+
+	title = EVTTITLE_kuru_ec_charevt_0001
+	desc = EVTDESC_kuru_ec_charevt_0001
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+
+	option = {
+		name = { text = EVTOPT_kuru_ec_charevt_yes }
+		set_global_flag = kuru_ec_flag_using_mods_faiterials_buildings
+	}
+	option = {
+		name = { text = EVTOPT_kuru_ec_charevt_no }
+		clr_global_flag = kuru_ec_flag_using_mods_faiterials_buildings
+	}
+}
+character_event = {
+	id = kuru_ec_charevt.0002
+
+	is_triggered_only = yes
+	ai = no
+
+	title = EVTTITLE_kuru_ec_charevt_0002
+	desc = EVTDESC_kuru_ec_charevt_0002
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+
+	option = {
+		name = { text = EVTOPT_kuru_ec_charevt_yes }
+		set_global_flag = kuru_ec_flag_using_mods_new_buildings_and_effects
+	}
+	option = {
+		name = { text = EVTOPT_kuru_ec_charevt_no }
+		clr_global_flag = kuru_ec_flag_using_mods_new_buildings_and_effects
+	}
+}
+character_event = {
+	id = kuru_ec_charevt.0003
+
+	is_triggered_only = yes
+	ai = no
+
+	title = EVTTITLE_kuru_ec_charevt_0003
+	desc = EVTDESC_kuru_ec_charevt_0003
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+
+	option = {
+		name = { text = EVTOPT_kuru_ec_charevt_yes }
+		set_global_flag = kuru_ec_flag_using_mods_peachys_buildings
+	}
+	option = {
+		name = { text = EVTOPT_kuru_ec_charevt_no }
+		clr_global_flag = kuru_ec_flag_using_mods_peachys_buildings
+	}
+}
+character_event = {
+	id = kuru_ec_charevt.0004
+
+	is_triggered_only = yes
+	ai = no
+
+	title = EVTTITLE_kuru_ec_charevt_0004
+	desc = EVTDESC_kuru_ec_charevt_0004
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_economy
+
+	option = {
+		name = { text = EVTOPT_kuru_ec_charevt_yes }
+		set_global_flag = kuru_ec_flag_using_mods_your_personal_castle
+	}
+	option = {
+		name = { text = EVTOPT_kuru_ec_charevt_no }
+		clr_global_flag = kuru_ec_flag_using_mods_your_personal_castle
+	}
+}
+
+# Birth of mystic descent
+character_event = {
+	id = kuru_ec_charevt.0005
+
+	is_triggered_only = yes
+	hide_window = no
+
+	trigger = {
+		OR = {
+			father_even_if_dead = {
+				has_character_modifier = kuru_ec_mystic_descent
+			}
+			mother_even_if_dead = {
+				has_character_modifier = kuru_ec_mystic_descent
+			}
+		}
+	}
+
+	title = EVTTITLE_kuru_ec_charevt_0005
+	desc = EVTDESC_kuru_ec_charevt_0005
+	picture = GFX_evt_pregnancy
+	border = GFX_event_normal_frame_religion
+
+	option = {
+		name = { text = EVTOPT_kuru_ec_charevt_dismiss_thats_interesting_news }
+		add_character_modifier = {
+			name = kuru_ec_mystic_descent
+			duration = -1
+		}
+	}
+}
+
+# Fanatical Assassination
+character_event = {
+	id = kuru_ec_charevt.0006
+
+	is_triggered_only = yes
+	ai = no
+
+	title = EVTTITLE_kuru_ec_charevt_0006
+	desc = EVTDESC_kuru_ec_charevt_0006
+	picture = GFX_evt_whispers
+	border = GFX_event_normal_frame_intrigue
+
+	immediate = {
+		hidden_tooltip = {
+			event_target:target_victim = {
+				random_list = {
+					1 = {
+						death = {
+							death_reason = death_murder
+							killer = event_target:target_puppetmaster
+						}
+
+						# Spouse knows
+						any_spouse = {
+							opinion = {
+								modifier = kuru_ec_murdered_spouse
+								who = event_target:target_puppetmaster
+							}
+							opinion = {
+								modifier = kuru_ec_murdered_spouse
+								who = event_target:target_servant
+							}
+						}
+						# Father knows
+						father = {
+							opinion = {
+								modifier = kuru_ec_murdered_child
+								who = event_target:target_puppetmaster
+							}
+							opinion = {
+								modifier = kuru_ec_murdered_child
+								who = event_target:target_servant
+							}
+						}
+						# Mother knows
+						mother = {
+							opinion = {
+								modifier = kuru_ec_murdered_child
+								who = event_target:target_puppetmaster
+							}
+							opinion = {
+								modifier = kuru_ec_murdered_child
+								who = event_target:target_servant
+							}
+						}
+						# Child knows
+						any_child = {
+							opinion = {
+								modifier = kuru_ec_murdered_parent
+								who = event_target:target_puppetmaster
+							}
+							opinion = {
+								modifier = kuru_ec_murdered_parent
+								who = event_target:target_servant
+							}
+						}
+						# Sibling knows
+						any_sibling = {
+							opinion = {
+								modifier = kuru_ec_murdered_sibling
+								who = event_target:target_puppetmaster
+							}
+							opinion = {
+								modifier = kuru_ec_murdered_sibling
+								who = event_target:target_servant
+							}
+						}
+						# Lover knows
+						any_lover = {
+							opinion = {
+								modifier = kuru_ec_murdered_lover
+								who = event_target:target_puppetmaster
+								years = 10
+							}
+							opinion = {
+								modifier = kuru_ec_murdered_lover
+								who = event_target:target_servant
+								years = 10
+							}
+						}
+						# Friend knows
+						any_friend = {
+							opinion = {
+								modifier = kuru_ec_murdered_friend
+								who = event_target:target_puppetmaster
+								years = 10
+							}
+							opinion = {
+								modifier = kuru_ec_murdered_friend
+								who = event_target:target_servant
+								years = 10
+							}
+						}
+						# Rival knows
+						any_rival = {
+							opinion = {
+								modifier = kuru_ec_murdered_rival
+								who = event_target:target_puppetmaster
+								years = 10
+							}
+							opinion = {
+								modifier = kuru_ec_murdered_rival
+								who = event_target:target_servant
+								years = 10
+							}
+						}
+					}
+					9 = {
+						death = {
+							death_reason = death_murder_unknown
+							killer = event_target:target_puppetmaster
+						}
+					}
+				}
+			}
+			recalc_succession = yes
+		}
+	}
+	option = {
+		name = { text = EVTOPT_kuru_ec_charevt_fanatical_servant_well_done }
+	}
+}
+# Fanatical Kidnapping
+character_event = {
+	id = kuru_ec_charevt.0007
+
+	is_triggered_only = yes
+	ai = no
+
+	title = EVTTITLE_kuru_ec_charevt_0007
+	desc = EVTDESC_kuru_ec_charevt_0007
+	picture = GFX_evt_whispers
+	border = GFX_event_normal_frame_intrigue
+
+	immediate = {
+		hidden_tooltip = {
+			event_target:target_victim = {
+				imprison = event_target:target_puppetmaster
+
+				# Self knows
+				opinion = {
+					modifier = kuru_ec_kidnapped_me
+					who = event_target:target_puppetmaster
+					years = 10
+				}
+				# Spouse knows
+				any_spouse = {
+					opinion = {
+						modifier = kuru_ec_kidnapped_spouse
+						who = event_target:target_puppetmaster
+						years = 10
+					}
+					opinion = {
+						modifier = kuru_ec_kidnapped_spouse
+						who = event_target:target_servant
+						years = 10
+					}
+				}
+				# Father knows
+				father = {
+					opinion = {
+						modifier = kuru_ec_kidnapped_child
+						who = event_target:target_puppetmaster
+						years = 10
+					}
+					opinion = {
+						modifier = kuru_ec_kidnapped_child
+						who = event_target:target_servant
+						years = 10
+					}
+				}
+				# Mother knows
+				mother = {
+					opinion = {
+						modifier = kuru_ec_kidnapped_child
+						who = event_target:target_puppetmaster
+						years = 10
+					}
+					opinion = {
+						modifier = kuru_ec_kidnapped_child
+						who = event_target:target_servant
+						years = 10
+					}
+				}
+				# Child knows
+				any_child = {
+					opinion = {
+						modifier = kuru_ec_kidnapped_parent
+						who = event_target:target_puppetmaster
+						years = 10
+					}
+					opinion = {
+						modifier = kuru_ec_kidnapped_parent
+						who = event_target:target_servant
+						years = 10
+					}
+				}
+				# Sibling knows
+				any_sibling = {
+					opinion = {
+						modifier = kuru_ec_kidnapped_sibling
+						who = event_target:target_puppetmaster
+						years = 10
+					}
+					opinion = {
+						modifier = kuru_ec_kidnapped_sibling
+						who = event_target:target_servant
+						years = 10
+					}
+				}
+				# Lover knows
+				any_lover = {
+					opinion = {
+						modifier = kuru_ec_kidnapped_lover
+						who = event_target:target_puppetmaster
+						years = 10
+					}
+					opinion = {
+						modifier = kuru_ec_kidnapped_lover
+						who = event_target:target_servant
+						years = 10
+					}
+				}
+				# Friend knows
+				any_friend = {
+					opinion = {
+						modifier = kuru_ec_kidnapped_friend
+						who = event_target:target_puppetmaster
+						years = 10
+					}
+					opinion = {
+						modifier = kuru_ec_kidnapped_friend
+						who = event_target:target_servant
+						years = 10
+					}
+				}
+				# Rival knows
+				any_rival = {
+					opinion = {
+						modifier = kuru_ec_kidnapped_rival
+						who = event_target:target_puppetmaster
+						years = 10
+					}
+					opinion = {
+						modifier = kuru_ec_kidnapped_rival
+						who = event_target:target_servant
+						years = 10
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = { text = EVTOPT_kuru_ec_charevt_fanatical_servant_well_done }
+	}
+}
+
+# On-action battle_lost: Imprisoned by the enemy
+# Any leader in battle on losing side is ROOT - opponent army leader is FROM
+character_event = {
+	id = kuru_ec_charevt.0008
+	desc = EVTDESC250
+	picture = GFX_evt_into_the_dungeon
+	border = GFX_event_normal_frame_war
+
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = {
+			has_character_modifier = kuru_ec_ruthless_imprisoner
+		}
+		is_alive = yes
+		prisoner = no
+		NOT = {
+			character = FROM
+		}
+	}
+
+	weight_multiplier = {
+		days = 1
+
+		modifier = {
+			factor = 100
+		}
+	}
+	
+	immediate = {
+		imprison = FROM
+	}
+
+	option = {
+		name = CURSES
+		hidden_tooltip = {
+			FROM = {
+				character_event = { 
+					id = 50020 # imprisoned_events.txt
+				}
+			}
+		}
+	}
+}
+
+# On-action on_siege_over_loc_chars : Imprisoned by the enemy
+# Imprisoned by the winner. Fired from 'on_siege_over_loc_chars'.
+# Siege winner unit owner in the 'new_character' scope, lost holding title in FROM, local character in ROOT.
+character_event = {
+	id = kuru_ec_charevt.0009
+	picture = GFX_evt_siege
+	
+	desc = EVTDESC62100
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		new_character = {
+			has_character_modifier = kuru_ec_ruthless_imprisoner
+			NOT = { has_landed_title = e_rebels }
+			rebel = no
+			NOT = { # Handled by SSI.61
+				OR = {
+					has_landed_title = e_mexikha
+					any_liege = {
+						has_landed_title = e_mexikha
+					}
+				}
+			}
+		}
+		
+		OR = {
+			is_ruler = yes
+			AND = {
+				is_female = yes
+				NOT = { age = 40 }
+			}
+			
+			host = {
+				OR = {
+					is_close_relative = ROOT
+					any_spouse = {
+						character = ROOT
+					}
+					any_consort = {
+						character = ROOT
+					}
+				}
+			}
+			new_character = {
+				ROOT = {
+					prisoner = yes
+					employer = {
+						character = PREVPREV
+					}
+				}
+			}
+			
+			AND = {
+				new_character = {
+					ROOT = {
+						host = {
+							top_liege = {
+								war_with = PREVPREVPREV
+							}
+						}
+					}
+				}
+				
+				host = {
+					top_liege = {
+						is_close_relative = ROOT
+					}
+				}
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 2
+			is_female = yes
+			new_character = {
+				OR = {
+					religion_group = pagan_group
+					religion_group = zoroastrian_group
+				}
+			}
+		}
+		modifier = {
+			factor = 4 # Free prisoner
+			new_character = {
+				ROOT = {
+					prisoner = yes
+					employer = {
+						character = PREVPREV
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA62100
+		trigger = {
+			center_flank_leader = {
+				mercenary = no
+			}
+		}
+		new_character = {
+			ROOT = {
+				imprison = PREV
+			}
+		}
+		hidden_tooltip = {
+			new_character = {
+				character_event = { id = 62101 }
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTA62100
+		trigger = {
+			center_flank_leader = {
+				mercenary = yes
+			}
+		}
+		center_flank_leader = {
+			ROOT = {
+				imprison = PREV
+			}
+		}
+	}
+}
+
+# Spawn army
+character_event = {
+	id = kuru_ec_charevt.0010
+
+	title = EVTTITLE_kuru_ec_charevt_0010
+	desc = EVTDESC_kuru_ec_charevt_0010
+	picture = GFX_evt_ch_01
+	border = GFX_event_normal_frame_war
+
+	is_triggered_only = yes
+
+	option = {
+		name = { text = EVTOPT_kuru_ec_charevt_nevermind }
+	}
+
+	option = {
+		name = { text = EVTOPT_kuru_ec_0010_army_5000 }
+		spawn_unit = {
+			province = event_target:target_location
+			owner = event_target:target_owner
+			leader = none
+			disband_on_peace = no
+			troops = {
+				light_cavalry = { 1000 1000 }
+				light_infantry = { 1000 1000 }
+				pikemen = { 500 500 }
+				horse_archers = { 500 500 }
+				heavy_infantry = { 500 500 }
+				knights = { 500 500 }
+				archers = { 1000 1000 }
+			}
+		}
+	}
+}

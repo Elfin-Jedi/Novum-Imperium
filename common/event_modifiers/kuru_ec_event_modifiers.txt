@@ -1,0 +1,96 @@
+
+# Allows character to build structures in one day
+kuru_ec_extraordinary_builder = {
+	build_time_modifier = -1
+	icon = 12
+}
+
+# Greatly increases the character's plot power
+kuru_ec_extraordinary_plotter = {
+	plot_power_modifier = 0.75
+	assassinate_chance_modifier = 0.75
+	arrest_chance_modifier = 0.75
+	murder_plot_power_modifier = 0.75
+	icon = 14
+}
+
+# Greatly increases the reinforcement rate of levies
+kuru_ec_quick_reinforcements = {
+	levy_reinforce_rate = 2.5
+	icon = 13
+}
+
+# Increases leadership capability
+kuru_ec_extraordinary_leader = {
+	command_modifier = {
+		speed = 0.5
+		pursue = 0.5
+		retreat = 0.5
+		morale_offence = 0.5
+		morale_defence = 0.5
+		defence = 0.5
+		damage = 0.5
+		siege = 0.5
+	}
+	icon = 13
+}
+
+# Hires a bodyguard that protects the character from hostile plots
+kuru_ec_bodyguard = {
+	defensive_plot_power_modifier = 0.75
+	plot_discovery_chance = 0.75
+	combat_rating = 50
+	icon = 14
+}
+
+# Increases the maximum demesne size of the ruler
+kuru_ec_extraordinary_ruler = {
+	demesne_size = 25
+	threat_decay_speed = 2.5
+	retinuesize_perc = 0.25
+	retinue_maintenence_cost = -0.25
+	horde_maintenence_cost = -0.25
+	icon = 7
+}
+
+# An inheritable characteristic that marks descendants of a player
+kuru_ec_mystic_descent = {
+	same_opinion = 25
+	child_opinion = 25
+	sex_appeal_opinion = 10
+
+	diplomacy = 5
+	martial = 5
+	stewardship = 5
+	intrigue = 5
+	learning = 5
+
+	add_prestige_modifier = 0.1
+	add_piety_modifier = 0.1
+
+	icon = 9
+}
+
+# Makes it extremely likely that a province will revolt
+kuru_ec_unstable_province = {
+	local_revolt_risk = 2
+	icon = 72
+}
+
+# Makes it extremely likely that a character's provinces will revolt
+kuru_ec_hated_ruler = {
+	global_revolt_risk = 2
+	icon = 72
+}
+
+# Makes this character hated by all
+kuru_ec_universally_despised = {
+	general_opinion = -100;
+	icon = 90;
+}
+
+# Drastically increases the likelihood of taking prisoners after sieges and battles
+kuru_ec_ruthless_imprisoner = {
+	arrest_chance_modifier = 0.75
+	icon = 37
+}

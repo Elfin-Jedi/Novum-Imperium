@@ -1,0 +1,622 @@
+
+title_decisions = {
+
+	add_new_holding_slot2 = {					# adds second
+		ai_check_interval = 36
+		is_high_prio = yes
+		ai_target_filter = sub_realm_owned
+		
+		from_potential = {
+			is_nomadic = no
+			is_tribal = no
+			higher_tier_than = BARON
+		}
+		
+		potential = {		# title potential
+			tier = COUNT
+			location = {
+				owner = {
+					OR = {
+						character = FROM
+						any_liege = { character = FROM }		
+					}
+				}
+				has_empty_holding = no
+				num_of_max_settlements == 1
+			}
+		}
+		
+		allow = {
+			FROM = {
+				prisoner = no
+				NOT = { is_inaccessible_trigger = yes }
+				prestige = 200
+				TECH_CONSTRUCTION = 1
+			}
+		}
+		
+		effect = {
+			FROM = {
+				prestige = -200
+			}
+			location = {
+				add_holding_slot = 1
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	add_new_holding_slot3 = {					# adds third
+		ai_check_interval = 36
+		is_high_prio = yes
+		ai_target_filter = sub_realm_owned
+		
+		from_potential = {
+			is_nomadic = no
+			is_tribal = no
+			higher_tier_than = BARON
+		}
+		
+		potential = {		# title potential
+			tier = COUNT
+			location = {
+				owner = {
+					OR = {
+						character = FROM
+						any_liege = { character = FROM }		
+					}
+				}
+				has_empty_holding = no
+				num_of_max_settlements == 2
+			}
+		}
+		
+		allow = {
+			FROM = {
+				prisoner = no
+				NOT = { is_inaccessible_trigger = yes }
+				prestige = 400
+				TECH_CONSTRUCTION = 2
+			}
+		}
+		
+		effect = {
+			FROM = {
+				prestige = -400
+			}
+			location = {
+				add_holding_slot = 1
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	add_new_holding_slot4 = {					# adds fourth
+		ai_check_interval = 36
+		is_high_prio = yes
+		ai_target_filter = sub_realm_owned
+		
+		from_potential = {
+			is_nomadic = no
+			is_tribal = no
+			higher_tier_than = BARON
+		}
+		
+		potential = {		# title potential
+			tier = COUNT
+			location = {
+				owner = {
+					OR = {
+						character = FROM
+						any_liege = { character = FROM }		
+					}
+				}
+				has_empty_holding = no
+				num_of_max_settlements == 3
+			}
+		}
+		
+		allow = {
+			FROM = {
+				prisoner = no
+				NOT = { is_inaccessible_trigger = yes }
+				prestige = 600
+				TECH_CONSTRUCTION = 3
+			}
+		}
+		
+		effect = {
+			FROM = {
+				prestige = -600
+			}
+			location = {
+				add_holding_slot = 1
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	add_new_holding_slot5 = {					# adds fifth
+		ai_check_interval = 36
+		is_high_prio = yes
+		ai_target_filter = sub_realm_owned
+		
+		from_potential = {
+			is_nomadic = no
+			is_tribal = no
+			higher_tier_than = BARON
+		}
+		
+		potential = {		# title potential
+			tier = COUNT
+			location = {
+				owner = {
+					OR = {
+						character = FROM
+						any_liege = { character = FROM }		
+					}
+				}
+				has_empty_holding = no
+				num_of_max_settlements == 4
+			}
+		}
+		
+		allow = {
+			FROM = {
+				prisoner = no
+				NOT = { is_inaccessible_trigger = yes }
+				prestige = 800
+				TECH_CONSTRUCTION = 4
+			}
+		}
+		
+		effect = {
+			FROM = {
+				prestige = -800
+			}
+			location = {
+				add_holding_slot = 1
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	add_new_holding_slot6 = {					# adds sixth
+		ai_check_interval = 36
+		is_high_prio = yes
+		ai_target_filter = sub_realm_owned
+		
+		from_potential = {
+			is_nomadic = no
+			is_tribal = no
+			higher_tier_than = BARON
+		}
+		
+		potential = {		# title potential
+			tier = COUNT
+			location = {
+				owner = {
+					OR = {
+						character = FROM
+						any_liege = { character = FROM }		
+					}
+				}
+				has_empty_holding = no
+				num_of_max_settlements == 5
+			}
+		}
+		
+		allow = {
+			FROM = {
+				prisoner = no
+				NOT = { is_inaccessible_trigger = yes }
+				prestige = 1000
+				TECH_CONSTRUCTION = 5
+			}
+		}
+		
+		effect = {
+			FROM = {
+				prestige = -1000
+			}
+			location = {
+				add_holding_slot = 1
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	add_new_holding_slot7 = {					# adds seventh
+		ai_check_interval = 36
+		is_high_prio = yes
+		ai_target_filter = sub_realm_owned
+		
+		from_potential = {
+			is_nomadic = no
+			is_tribal = no
+			higher_tier_than = BARON
+		}
+		
+		potential = {		# title potential
+			tier = COUNT
+			location = {
+				owner = {
+					OR = {
+						character = FROM
+						any_liege = { character = FROM }		
+					}
+				}
+				has_empty_holding = no
+				num_of_max_settlements == 6
+			}
+		}
+		
+		allow = {
+			FROM = {
+				prisoner = no
+				NOT = { is_inaccessible_trigger = yes }
+				prestige = 1200
+				TECH_CONSTRUCTION = 6
+			}
+		}
+		
+		effect = {
+			FROM = {
+				prestige = -1200
+			}
+			location = {
+				add_holding_slot = 1
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+#### for tribals 
+
+
+	add_new_tribal_holding_slot2 = {					# adds second
+		ai_check_interval = 36
+		is_high_prio = yes
+		ai_target_filter = capital
+		
+		from_potential = {
+			is_nomadic = no
+			is_tribal = yes
+			higher_tier_than = BARON
+		}
+		
+		potential = {		# title potential
+			tier = COUNT
+			location = {
+				is_capital = yes
+				num_of_max_settlements == 1
+				owner = { character = FROM }
+			}
+		}
+		
+		allow = {
+			FROM = {
+				prisoner = no
+				NOT = { is_inaccessible_trigger = yes }
+				prestige = 150
+			}
+			location = {
+				is_capital = yes
+			}
+		}
+		
+		effect = {
+			FROM = {
+				prestige = -150
+			}
+			location = {
+				add_holding_slot = 1
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	add_new_tribal_holding_slot3 = {					# adds third
+		ai_check_interval = 36
+		is_high_prio = yes
+		ai_target_filter = capital
+		
+		from_potential = {
+			is_nomadic = no
+			is_tribal = yes
+			higher_tier_than = BARON
+		}
+		
+		potential = {		# title potential
+			tier = COUNT
+			location = {
+				is_capital = yes
+				num_of_max_settlements == 2
+				owner = { character = FROM }
+			}
+		}
+		
+		allow = {
+			FROM = {
+				prisoner = no
+				NOT = { is_inaccessible_trigger = yes }
+				prestige = 300
+			}
+			location = {
+				is_capital = yes
+			}
+		}
+		
+		effect = {
+			FROM = {
+				prestige = -300
+			}
+			location = {
+				add_holding_slot = 1
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	add_new_tribal_holding_slot4 = {					# adds fourth
+		ai_check_interval = 36
+		is_high_prio = yes
+		ai_target_filter = capital
+		
+		from_potential = {
+			is_nomadic = no
+			is_tribal = yes
+			higher_tier_than = BARON
+		}
+		
+		potential = {		# title potential
+			tier = COUNT
+			location = {
+				is_capital = yes
+				num_of_max_settlements == 3
+				owner = { character = FROM }
+			}
+		}
+		
+		allow = {
+			FROM = {
+				prisoner = no
+				NOT = { is_inaccessible_trigger = yes }
+				prestige = 450
+			}
+			location = {
+				is_capital = yes
+			}
+		}
+		
+		effect = {
+			FROM = {
+				prestige = -450
+			}
+			location = {
+				add_holding_slot = 1
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	add_new_tribal_holding_slot5 = {					# adds fifth
+		ai_check_interval = 36
+		is_high_prio = yes
+		ai_target_filter = capital
+		
+		from_potential = {
+			is_nomadic = no
+			is_tribal = yes
+			higher_tier_than = BARON
+		}
+		
+		potential = {		# title potential
+			tier = COUNT
+			location = {
+				is_capital = yes
+				num_of_max_settlements == 4
+				owner = { character = FROM }
+			}
+		}
+		
+		allow = {
+			FROM = {
+				prisoner = no
+				NOT = { is_inaccessible_trigger = yes }
+				prestige = 600
+			}
+			location = {
+				is_capital = yes
+			}
+		}
+		
+		effect = {
+			FROM = {
+				prestige = -600
+			}
+			location = {
+				add_holding_slot = 1
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	add_new_tribal_holding_slot6 = {					# adds sixth
+		ai_check_interval = 36
+		is_high_prio = yes
+		ai_target_filter = capital
+		
+		from_potential = {
+			is_nomadic = no
+			is_tribal = yes
+			higher_tier_than = BARON
+		}
+		
+		potential = {		# title potential
+			tier = COUNT
+			location = {
+				is_capital = yes
+				num_of_max_settlements == 5
+				owner = { character = FROM }
+			}
+		}
+		
+		allow = {
+			FROM = {
+				prisoner = no
+				NOT = { is_inaccessible_trigger = yes }
+				prestige = 750
+			}
+			location = {
+				is_capital = yes
+			}
+		}
+		
+		effect = {
+			FROM = {
+				prestige = -750
+			}
+			location = {
+				add_holding_slot = 1
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	add_new_tribal_holding_slot7 = {					# adds seventh
+		ai_check_interval = 36
+		is_high_prio = yes
+		ai_target_filter = capital
+		
+		from_potential = {
+			is_nomadic = no
+			is_tribal = yes
+			higher_tier_than = BARON
+		}
+		
+		potential = {		# title potential
+			tier = COUNT
+			location = {
+				is_capital = yes
+				num_of_max_settlements == 6
+				owner = { character = FROM }
+			}
+		}
+		
+		allow = {
+			FROM = {
+				prisoner = no
+				NOT = { is_inaccessible_trigger = yes }
+				prestige = 900
+			}
+			location = {
+				is_capital = yes
+			}
+		}
+		
+		effect = {
+			FROM = {
+				prestige = -900
+			}
+			location = {
+				add_holding_slot = 1
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+} # closed decision bracket, don't remove	
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+
+kuru_ec_title_fanatical_servant = {
+	realm_in_name = yes
+	dignity = 0.10
+	grant_limit = 1
+
+	monthly_prestige = 0.1
+
+	is_unique = yes
+
+	allowed_to_hold = {
+		#has_global_flag = kuru_ec_flag_minor_title_fanatical_servant
+		is_adult = yes
+		NOT = {
+			trait = incapable
+		}
+		has_minor_title = no
+		is_ruler = no
+		is_married = no
+	}
+	allowed_to_grant = {
+		ai = no
+		has_global_flag = kuru_ec_flag_minor_title_title_fanatical_servant
+	}
+
+	gain_effect = {
+		opinion = {
+			who = FROM
+			modifier = kuru_ec_opinion_title_fanatical_servant
+		}
+		FROM = {
+			opinion = {
+				who = PREV
+				modifier = kuru_ec_opinion_title_master_of_fanatical_servant
+			}
+		}
+	}
+	lose_effect = {
+		clr_global_flag = kuru_ec_flag_minor_title_title_fanatical_servant
+		death = {
+			death_reason = death_suicide
+		}
+	}
+	retire_effect = {
+		clr_global_flag = kuru_ec_flag_minor_title_title_fanatical_servant
+		death = {
+			death_reason = suicide
+		}
+	}
+	death_effect = {
+		clr_global_flag = kuru_ec_flag_minor_title_title_fanatical_servant
+	}
+}

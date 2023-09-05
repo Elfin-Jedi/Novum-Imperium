@@ -1,0 +1,1001 @@
+# FROM is the taker
+# ROOT is the target
+targetted_decisions = {
+	
+	debug_play_as = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+		}
+		allow = {
+		}
+		effect = {
+			FROM = {
+				set_player_character = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_vassalize = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+			lower_tier_than = FROM
+		}
+		allow = {
+		}
+		effect = {
+			set_defacto_liege = FROM
+			move_character = FROM
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_become_independent = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+			is_landed = yes
+			independent = no
+		}
+		allow = {
+		}
+		effect = {
+			set_defacto_liege = THIS
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	debug_become_independent_self = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+		}
+		allow = {
+			independent = no
+		}
+		effect = {
+			set_defacto_liege = THIS
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_imprison = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+			
+		}
+		allow = {
+		}
+		effect = {
+			imprison = FROM
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_usurp = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+			OR = { 
+				lower_tier_than = FROM
+				tier = FROM
+			}
+		}
+		allow = {
+			is_landed = yes
+		}
+		effect = {
+			any_demesne_title = {
+				usurp_title_plus_barony_if_unlanded_and_vassals = FROM
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_convert_religion = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+			NOT = { religion = FROM }
+		}
+		allow = {
+		}
+		effect = {
+			unsafe_religion = FROM
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_convert_culture = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+			NOT = { culture = FROM }
+		}
+		allow = {
+		}
+		effect = {
+			culture = FROM
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_kill = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+		}
+		allow = {
+		}
+		effect = {
+			death = { death_reason = death_execution killer = FROM } 
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	debug_kill_self = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+		}
+		allow = {
+		}
+		effect = {
+			death = { death_reason = death_execution killer = FROM } 
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_give_boost = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+		}
+		allow = {
+		}
+		effect = {
+			piety = 500
+			prestige = 500
+			wealth = 500
+			change_diplomacy = 1
+			change_stewardship = 1
+			change_martial = 1
+			change_intrigue = 1
+			change_learning = 1
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_give_malus = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+		}
+		allow = {
+		}
+		effect = {
+			piety = -500
+			prestige = -500
+			wealth = -100
+			change_diplomacy = -1
+			change_stewardship = -1
+			change_martial = -1
+			change_intrigue = -1
+			change_learning = -1
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_elevate = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+			dynasty = none
+		}
+		allow = {
+		}
+		effect = {
+			hidden_tooltip = {
+				create_character = {
+					dynasty = random
+				}
+				
+				new_character = {
+					ROOT = {
+						dynasty = PREV
+					}
+					dynasty = none
+				}
+				random_courtier = {
+					limit = {
+						dynasty = none
+					}
+					new_character = {
+						dynasty = PREV
+					}	
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_make_rival = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+			NOT = { is_rival = FROM }
+		}
+		allow = {
+		}
+		effect = {
+			add_rival = FROM
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_make_friend = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+			NOT = { is_friend = FROM }
+		}
+		allow = {
+		}
+		effect = {
+			add_friend = FROM
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_cancel_objectives = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+		}
+		allow = {
+		}
+		effect = {
+			ROOT = {
+				clear_focus = yes
+				cancel_ambition = yes
+				cancel_plot  = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	debug_cancel_objectives_self = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+		}
+		allow = {
+		}
+		effect = {
+			ROOT = {
+				clear_focus = yes
+				cancel_ambition = yes
+				cancel_plot  = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	# Allows to debug why characters don't show up in the councillor list
+	debug_become_spiritual = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+		}
+		allow = {
+			can_be_spiritual_trigger = yes
+		}
+		effect = {
+			
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_gain_society_currency_trivial = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+		}
+		allow = {
+			is_in_society = yes
+		}
+		effect = {
+			add_society_currency_trivial_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_gain_society_currency_minor = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+		}
+		allow = {
+			is_in_society = yes
+		}
+		effect = {
+			add_society_currency_minor_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_gain_society_currency_medium = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+		}
+		allow = {
+			is_in_society = yes
+		}
+		effect = {
+			add_society_currency_medium_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_gain_society_currency_major = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+		}
+		allow = {
+			is_in_society = yes
+		}
+		effect = {
+			add_society_currency_major_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_gain_society_currency_massive = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+		}
+		allow = {
+			is_in_society = yes
+		}
+		effect = {
+			add_society_currency_massive_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_increase_moral_authority = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+			NOT = { religion_authority = 1 }
+		}
+		allow = {}
+		effect = {
+			religion_authority = { modifier = debug_increase } 
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	debug_increase_moral_authority_self = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+			NOT = { religion_authority = 1 }
+		}
+		allow = {}
+		effect = {
+			religion_authority = { modifier = debug_increase } 
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_decrease_moral_authority = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+			religion_authority = 0.01
+		}
+		allow = {}
+		effect = {
+			religion_authority = { modifier = debug_decrease } 
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	debug_decrease_moral_authority = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+			religion_authority = 0.01
+		}
+		allow = {}
+		effect = {
+			religion_authority = { modifier = debug_decrease } 
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	
+	debug_become_king = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+			tier = DUKE
+			NOT = { tier = KING }
+		}
+		allow = {
+			independent = yes
+		}
+		effect = {
+			primary_title = {
+				create_title = {
+					tier = KING
+					landless = no
+					temporary = no
+					custom_created = yes
+					culture = ROOT
+					holder = ROOT
+					base_title = THIS
+					copy_title_laws = yes
+				}
+
+				hidden_tooltip = {
+					empire = {
+						ROOT = {
+							primary_title = {
+								de_jure_liege = PREVPREV
+							}
+						}
+					}
+
+					ROOT = {
+						primary_title = {
+							holder_scope = {
+								any_title_under = {
+									limit = {
+										tier = DUKE
+										kingdom = {
+											has_holder = no
+										}
+									}
+									de_jure_liege = PREVPREV
+								}
+								any_title_under = {
+									limit = {
+										tier = COUNT
+										location = {
+											duchy = {
+												kingdom = {
+													has_holder = no
+												}
+												
+												NOT = { de_jure_liege_or_above = PREVPREVPREVPREV }
+												ROOT = {
+													completely_controls = PREV
+												}
+											}
+										}
+									}
+									location = {
+										duchy = {
+											de_jure_liege = PREVPREVPREVPREV
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+			}
+			custom_tooltip = { text = form_new_kingdom_tooltip }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_become_emperor = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		potential = {
+			tier = KING
+			NOT = { tier = EMPEROR }
+		}
+		allow = {
+			independent = yes
+		}
+		effect = {
+			primary_title = {
+				create_title = {
+					tier = EMPEROR
+					landless = no
+					temporary = no
+					custom_created = yes
+					culture = ROOT
+					holder = ROOT
+					base_title = THIS
+					copy_title_laws = yes
+				}
+
+				hidden_tooltip = {
+					ROOT = {
+						primary_title = {
+							holder_scope = {
+								any_title_under = {
+									limit = {
+										tier = KING
+										empire = {
+											has_holder = no
+										}
+									}
+									de_jure_liege = PREVPREV
+								}
+								any_title_under = {
+									limit = {
+										tier = DUKE
+										location = {
+											kingdom = {
+												empire = {
+													has_holder = no
+												}
+												
+												NOT = { de_jure_liege_or_above = PREVPREVPREVPREV }
+												ROOT = {
+													completely_controls = PREV
+												}
+											}
+										}
+									}
+									location = {
+										kingdom = {
+											de_jure_liege = PREVPREVPREVPREV
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			custom_tooltip = { text = form_new_empire_tooltip }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_convert_realm_characters_religion = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		allow = {}
+		effect = {
+			any_realm_character = {
+				religion = FROM
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_convert_realm_characters_culture = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		allow = {}
+		effect = {
+			any_realm_character = {
+				culture = FROM
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_convert_realm_provinves_religion = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		allow = {}
+		effect = {
+			any_realm_province = {
+				religion = FROM
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_convert_realm_provinves_culture = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
+		allow = {}
+		effect = {
+			any_realm_province = {
+				culture = FROM
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

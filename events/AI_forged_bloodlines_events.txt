@@ -1,0 +1,52 @@
+namespace = AI_forged_bloodlines
+
+character_event = {
+	id = AI_forged_bloodlines.1
+	
+	hide_window = yes
+	is_triggered_only = yes
+	only_playable = yes
+	has_dlc = "Holy Fury"
+	
+	only_independent = yes
+	capable_only = yes
+	ai = yes
+	
+	
+	trigger = {
+		higher_real_tier_than = DUKE
+		OR = {
+			prestige = 2000
+			AND = {
+				prestige = 1000
+				is_adult = no
+			}
+		}
+		NOR = {
+			trait = content
+			any_dynasty_member = {
+				ai = no
+			}
+			any_owned_bloodline = {
+				always = yes
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				has_ambition = obj_forge_bloodline
+			}
+			AI_forged_bloodlines_helper_efect = yes
+		}
+		else = {
+			add_ambition = obj_forge_bloodline
+			character_event = { 
+				id = HF.24052 
+				days = 800 
+				random = 800 
+			}
+		}
+	}
+}

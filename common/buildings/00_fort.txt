@@ -1,0 +1,167 @@
+ # Triggers are in Province scope. The From Scope contains the settlement holder (character)
+ # start trigger is in title scope.
+ 
+ # forts do not have any buildings - for modding purposes only
+
+fort = {
+	rtp_ladders_b = {
+		desc = "rtp_ladders_b_desc"
+		add_number_to_name = no
+
+		trigger = {
+			always = no
+		}
+		
+		build_time = 7
+		gold_cost = 1
+
+		ai_creation_factor = 100
+	}
+
+	rtp_catapult_b = {
+		desc = "rtp_catapult_b_desc"
+		add_number_to_name = no
+
+		prerequisites = {
+			rtp_ladders_b
+		}
+
+		trigger = {
+			always = no
+		}
+
+		build_time = 7
+		gold_cost = 1
+
+		ai_creation_factor = 100
+	}
+
+	rtp_battering_ram_b = {
+		desc = "rtp_battering_ram_b_desc"
+		add_number_to_name = no
+
+		prerequisites = {
+			rtp_ladders_b
+			rtp_catapult_b
+		}
+
+		trigger = {
+			always = no
+		}
+
+		build_time = 7
+		gold_cost = 1
+
+		ai_creation_factor = 100
+	}
+
+	rtp_bricole_b = {
+		desc = "rtp_bricole_b_desc"
+		add_number_to_name = no
+
+		prerequisites = {
+			rtp_ladders_b
+			rtp_catapult_b
+			rtp_battering_ram_b
+		}
+
+		trigger = {
+			always = no
+		}
+
+		build_time = 7
+		gold_cost = 1
+
+		ai_creation_factor = 100
+	}
+
+	rtp_siege_towers_b = {
+		desc = "rtp_siege_towers_b_desc"
+		add_number_to_name = no
+
+		prerequisites = {
+			rtp_ladders_b
+			rtp_catapult_b
+			rtp_battering_ram_b
+			rtp_bricole_b
+		}
+
+		trigger = {
+			always = no
+		}
+
+		build_time = 7
+		gold_cost = 1
+
+		ai_creation_factor = 100
+	}
+
+	rtp_ballistas_b = {
+		desc = "rtp_ballistas_b_desc"
+		add_number_to_name = no
+
+		prerequisites = {
+			rtp_ladders_b
+			rtp_catapult_b
+			rtp_battering_ram_b
+			rtp_bricole_b
+			rtp_siege_towers_b
+		}
+
+		trigger = {
+			always = no
+		}
+
+		build_time = 7
+		gold_cost = 1
+
+		ai_creation_factor = 100
+	}
+
+	rtp_trebuchet_b = {
+		desc = "rtp_trebuchet_b_desc"
+		add_number_to_name = no
+
+		prerequisites = {
+			rtp_ladders_b
+			rtp_catapult_b
+			rtp_battering_ram_b
+			rtp_bricole_b
+			rtp_siege_towers_b
+			rtp_ballistas_b
+		}
+
+		trigger = {
+			always = no
+		}
+
+		build_time = 7
+		gold_cost = 1
+
+		ai_creation_factor = 100
+	}
+
+	rtp_bombard_b = {
+		desc = "rtp_bombard_b_desc"
+		add_number_to_name = no
+
+		prerequisites = {
+			rtp_ladders_b
+			rtp_catapult_b
+			rtp_battering_ram_b
+			rtp_bricole_b
+			rtp_siege_towers_b
+			rtp_ballistas_b
+			rtp_trebuchet_b
+		}
+
+		trigger = {
+			always = no
+		}
+
+		build_time = 7
+		gold_cost = 1
+
+		ai_creation_factor = 100
+	}
+}

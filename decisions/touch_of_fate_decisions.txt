@@ -1,0 +1,501 @@
+#Touch of Fate v1.2 by bbcode/caesartheroman
+
+# tf_grant_destiny			Player force any character (0-16yrs) into Child of Destiny event chain
+# tf_grant_destiny_me		Player force self (0-16yrs) into Child of Destiny event chain
+# tf_grant_demon			Player force any character (0-16yrs) into Demon Child event chain
+# tf_grant_demon_me			Player force self (0-16yrs) into Demon Child event chain
+# tf_grant_wolf				Player force any character (0-16yrs) into Wolf Child event chain
+# tf_grant_wolf_me			Player force self (0-16yrs) into Wolf Child event chain
+# tf_grant_conq				Player force any character to become Great Conqueror
+# tf_grant_conq_me			Player force self to become Great Conqueror
+
+# tf_toggle_off				Hide ToF decisions
+# tf_toggle_on				Show ToF Decisions
+
+targetted_decisions = {
+
+	tf_grant_destiny = {
+		diplomacy_icon = GFX_TF_Destiny_Decision
+		ai_target_filter = none
+		ai = no
+		
+		from_potential = {
+			ai = no
+			NOT = {
+				has_character_flag = tf_hidemenu
+			}
+		}
+		allow = {
+			age = 0
+			NOT = {
+				age = 16
+			}
+		}
+		potential = {
+			has_dlc = "Holy Fury"
+			has_game_rule = {
+				name = child_of_destiny
+				value = on
+			}
+			has_game_rule = {
+				name = touch_of_fate_decision_a
+				value = on
+			}
+			AND = {
+				age = 0
+				NOT = {
+					age = 16
+				}
+			}
+			NOT = {
+				has_character_flag = is_child_of_destiny 
+			}
+			NOT = {
+				has_game_rule = {							### Compatibility fix for my 'World of Destiny' mod
+					name = world_of_destiny_decision
+					value = on
+				}
+			}
+		}
+		effect = {
+			ROOT = {
+				character_event = { id = TOF.1 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	tf_grant_destiny_me = {
+		diplomacy_icon = GFX_TF_Destiny_Decision
+		filter = self
+		ai_target_filter = none
+		ai = no
+		
+		allow = {
+			age = 0
+			NOT = {
+				age = 16
+			}
+		}
+		potential = {
+			ai = no
+			NOT = {
+				has_character_flag = tf_hidemenu
+			}
+			has_dlc = "Holy Fury"
+			has_game_rule = {
+				name = child_of_destiny
+				value = on
+			}
+			has_game_rule = {
+				name = touch_of_fate_decision_a
+				value = on
+			}
+			AND = {
+				age = 0
+				NOT = {
+					age = 16
+				}
+			}
+			NOT = {
+				has_character_flag = is_child_of_destiny 
+			}
+			NOT = {
+				has_game_rule = {							### Compatibility fix for my 'World of Destiny' mod
+					name = world_of_destiny_decision
+					value = on
+				}
+			}
+		}
+		effect = {
+			FROM = {
+				character_event = { id = TOF.1 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	tf_grant_demon = {
+		diplomacy_icon = GFX_TF_Demon_Decision
+		ai_target_filter = none
+		ai = no
+		
+		from_potential = {
+			ai = no
+			NOT = {
+				has_character_flag = tf_hidemenu
+			}
+		}
+		allow = {
+			age = 0
+			NOT = {
+				age = 16
+			}
+		}
+		potential = {
+			has_dlc = "Sons of Abraham"
+			has_game_rule = {
+				name = touch_of_fate_decision_b
+				value = on
+			}
+			AND = {
+				age = 0
+				NOT = {
+					age = 16
+				}
+			}
+			NOT = {
+				has_character_flag = demon_child_non_pagan 
+			}
+		}
+		effect = {
+			ROOT = {
+				character_event = { id = TOF.2 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	tf_grant_demon_me = {
+		diplomacy_icon = GFX_TF_Demon_Decision
+		filter = self
+		ai_target_filter = none
+		ai = no
+		
+		allow = {
+			age = 0
+			NOT = {
+				age = 16
+			}
+		}
+		potential = {
+			NOT = {
+				has_character_flag = tf_hidemenu
+			}
+			has_dlc = "Sons of Abraham"
+			has_game_rule = {
+				name = touch_of_fate_decision_b
+				value = on
+			}
+			AND = {
+				age = 0
+				NOT = {
+					age = 16
+				}
+			}
+			NOT = {
+				has_character_flag = demon_child_non_pagan
+			}
+		}
+		effect = {
+			FROM = {
+				character_event = { id = TOF.2 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	tf_grant_wolf = {
+		diplomacy_icon = GFX_TF_Wolf_Decision
+		ai_target_filter = none
+		ai = no
+		
+		from_potential = {
+			ai = no
+			NOT = {
+				has_character_flag = tf_hidemenu
+			}
+		}
+		allow = {
+			age = 0
+			NOT = {
+				age = 16
+			}
+		}
+		potential = {
+			has_dlc = "Horse Lords"
+			has_game_rule = {
+				name = touch_of_fate_decision_c
+				value = on
+			}
+			AND = {
+				age = 0
+				NOT = {
+					age = 16
+				}
+			}
+			NOT = {
+				has_character_modifier = wolf_child
+				has_character_modifier = wolf_blood
+			}
+		}
+		effect = {
+			ROOT = {
+				character_event = { id = TOF.3 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	tf_grant_wolf_me = {
+		diplomacy_icon = GFX_TF_Wolf_Decision
+		filter = self
+		ai_target_filter = none
+		ai = no
+		
+		from_potential = {
+			ai = no
+		}
+		allow = {
+			age = 0
+			NOT = {
+				age = 16
+			}
+		}
+		potential = {
+			NOT = {
+				has_character_flag = tf_hidemenu
+			}
+			has_dlc = "Horse Lords"
+			has_game_rule = {
+				name = touch_of_fate_decision_c
+				value = on
+			}
+			AND = {
+				age = 0
+				NOT = {
+					age = 16
+				}
+			}
+			NOT = {
+				has_character_modifier = wolf_child
+				has_character_modifier = wolf_blood
+			}
+		}
+		effect = {
+			ROOT = {
+				character_event = { id = TOF.3 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	tf_grant_conq = {
+		diplomacy_icon = GFX_TF_Conq_Decision
+		ai_target_filter = none
+		ai = no
+		
+		from_potential = {
+			ai = no
+			NOT = {
+				has_character_flag = tf_hidemenu
+			}
+		}
+		potential = {
+			has_dlc = "Holy Fury"
+			has_game_rule = {
+				name = touch_of_fate_decision_d
+				value = on
+			}
+			NOT = {
+				has_character_flag = great_conqueror
+			}
+		}
+		effect = {
+			ROOT = {
+				character_event = { id = TOF.4 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	tf_grant_conq_me = {
+		diplomacy_icon = GFX_TF_Conq_Decision
+		filter = self
+		ai_target_filter = none
+		ai = no
+		
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			NOT = {
+				has_character_flag = tf_hidemenu
+			}
+			has_dlc = "Holy Fury"
+			has_game_rule = {
+				name = touch_of_fate_decision_d
+				value = on
+			}
+			NOT = {
+				has_character_flag = great_conqueror
+			}
+		}
+		effect = {
+			ROOT = {
+				character_event = { id = TOF.4 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	tf_grant_immortal = {
+		diplomacy_icon = GFX_TF_Immortal_Decision
+		ai_target_filter = none
+		ai = no
+		
+		from_potential = {
+			ai = no
+			NOT = {
+				has_character_flag = tf_hidemenu
+			}
+		}
+		potential = {
+			has_game_rule = {
+				name = touch_of_fate_decision_e
+				value = on
+			}
+			NOT = {
+				trait = immortal
+			}
+		}
+		effect = {
+			ROOT = {
+				add_trait = immortal
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	tf_grant_immortal_me = {
+		diplomacy_icon = GFX_TF_Immortal_Decision
+		filter = self
+		ai_target_filter = none
+		ai = no
+		
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			NOT = {
+				has_character_flag = tf_hidemenu
+			}
+			has_game_rule = {
+				name = touch_of_fate_decision_e
+				value = on
+			}
+			NOT = {
+				trait = immortal
+			}
+		}
+		effect = {
+			ROOT = {
+				add_trait = immortal
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	tf_toggle_off = {
+		diplomacy_icon = GFX_TF_Hand_Decision
+		filter = self
+		ai_target_filter = none
+		ai = no
+		
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			NOT = {
+				has_character_flag = tf_hidemenu
+			}
+		}
+		effect = {
+			ROOT = {
+				set_character_flag = tf_hidemenu
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	tf_toggle_on = {
+		diplomacy_icon = GFX_TF_Hand_Decision
+		filter = self
+		ai_target_filter = none
+		ai = no
+		
+		from_potential = {
+			ai = no
+		}
+		potential = {
+				has_character_flag = tf_hidemenu
+		}
+		effect = {
+			ROOT = {
+				clr_character_flag = tf_hidemenu
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+}

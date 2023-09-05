@@ -1,0 +1,60 @@
+targetted_decisions = {
+	
+	change_character = {
+		filter = all
+		
+		from_potential = {
+			ai = no
+		}
+		potential = {
+		    ai = yes
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			if = {
+				limit = { ROOT = {is_landed = no} }
+				
+				grant_title_no_opinion = c_landless_t
+				
+				if = {
+					limit = {
+						dynasty = none
+					}
+					dynasty = 19930
+					set_government_type = rtp_lowborn_g
+					primary_title = {
+						gender_succ = true_cognatic
+						add_law = {
+							law = rtp_lowborn_succ
+							cooldown = no
+							opinion_effect = no
+						}
+					}
+				}
+				else = {
+					set_government_type = rtp_noble_g
+					primary_title = {
+						gender_succ = true_cognatic
+						add_law = {
+							law = rtp_family_election_succ
+							cooldown = no
+							opinion_effect = no
+						}
+					}
+				}
+				FROM = {
+						set_player_character = ROOT
+				}
+			}
+			FROM = { set_player_character = ROOT }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

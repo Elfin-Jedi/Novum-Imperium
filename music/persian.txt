@@ -1,0 +1,294 @@
+song = {
+	name = "Civilization V OST Darius Peace Theme Morghe Sahar.ogg"
+	song_name = "Morghe Sahar"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion_group = zoroastrian_group }
+			NOT = { culture_group = iranian }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Civilization V OST Darius War Theme Morghe Sahar.ogg"
+	song_name = "Morghe Sahar"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion_group = zoroastrian_group }
+			NOT = { culture_group = iranian }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "At the Gates of Babylon REMASTERED.ogg"
+	song_name = "At the Gates of Babylon"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion_group = zoroastrian_group }
+			NOT = { culture_group = iranian }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Faolan - Princess of Persia [Traditional Persian Music].ogg"
+	song_name = "Princess of Persia"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion_group = zoroastrian_group }
+			NOT = { culture_group = iranian }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Dark Flower - PersianEastern Music - Arrival Of The Prince.ogg"
+	song_name = "Arrival Of The Prince"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion_group = zoroastrian_group }
+			NOT = { culture_group = iranian }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.4
+}
+song = {
+	name = "The Persian Raider Epic Fantasy Music.ogg"
+	song_name = "The Persian Raider"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion_group = zoroastrian_group }
+			NOT = { culture_group = iranian }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Vangelis Dedes - Persian Warlord (Epic Ethnic Action Drama).ogg"
+	song_name = "Persian Warlord"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion_group = zoroastrian_group }
+			NOT = { culture_group = iranian }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Persia Theme - Ancient (Civilization 6 OST) Kereshmeh Reng-e Shalakhu.ogg"
+	song_name = "Kereshmeh; Reng-e Shalakhu (Ancient)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion_group = zoroastrian_group }
+			NOT = { culture_group = iranian }
+		}
+		modifier = {
+			factor = 2
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Persia Theme - Medieval (Civilization 6 OST) Kereshmeh Reng-e Shalakhu.ogg"
+	song_name = "Kereshmeh; Reng-e Shalakhu (Medieval)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion_group = zoroastrian_group }
+			NOT = { culture_group = iranian }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Persia Theme - Industrial (Civilization 6 OST) Kereshmeh Reng-e Shalakhu.ogg"
+	song_name = "Kereshmeh; Reng-e Shalakhu (Industrial)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion_group = zoroastrian_group }
+			NOT = { culture_group = iranian }
+		}
+		modifier = {
+			factor = 0.5
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Persia Theme - Atomic (Civilization 6 OST) Kereshmeh Reng-e Shalakhu.ogg"
+	song_name = "Kereshmeh; Reng-e Shalakhu (Atomic)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion_group = zoroastrian_group }
+			NOT = { culture_group = iranian }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Ancient Arabian Music - Scheherazade.ogg"
+	song_name = "Scheherazade"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion_group = zoroastrian_group }
+			NOT = { culture_group = iranian }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Arabian Battle Music - Guardians of the Desert Palace.ogg"
+	song_name = "Guardians of the Desert Palace"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion_group = zoroastrian_group }
+			NOT = { culture_group = iranian }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Liberating The World - Alexander The Great King Of The Greeks Orchestral Epic Music Album.ogg"
+	song_name = "Liberating The World"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion_group = zoroastrian_group }
+			NOT = { culture_group = iranian }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 2
+}

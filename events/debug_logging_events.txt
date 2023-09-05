@@ -1,0 +1,157 @@
+namespace = debug
+
+# on_death
+character_event = {
+	id = debug.1
+	
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		log="(DEBUG) [Root.GetBestName] [Root.GetDeathReason] at age [Root.GetAgeYears] in [Root.Location.GetName]."
+	}
+}
+
+# on_new_holder
+character_event = {
+	id = debug.2
+	
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		log="(DEBUG) [Root.GetBestName] is the new holder of [From.GetName], previously owned by [FromFrom.GetBestName]."
+	}
+}
+
+# on_new_holder_inheritance
+character_event = {
+	id = debug.3
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		log="(DEBUG) [Root.GetBestName] has inherited [From.GetName] from [FromFrom.GetBestName]."
+	}
+}
+
+# on_new_holder_usurpation
+character_event = {
+	id = debug.4
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		log="(DEBUG) [Root.GetBestName] has usurped [From.GetName] from [FromFrom.GetBestName]."
+	}
+}
+
+# on_exiled
+character_event = {
+	id = debug.5
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		log="(DEBUG) [Root.GetBestName] has been exiled."
+	}
+}
+
+# on_create_title
+character_event = {
+	id = debug.6
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		log="(DEBUG) [Root.GetBestName] has created the title [From.GetName]."
+	}
+}
+
+# on_county_religion_change
+character_event = {
+	id = debug.7
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		log="(DEBUG) Province [Root.GetName] ([Root.GetID]) has changed religion from [From.Religion.GetName] to [Root.Religion.GetName]."
+	}
+}
+
+# on_vassal_accepts_religious_conversion # FROMFROM is the demander. FROM is the vassal. ROOT is the character.
+character_event = {
+	id = debug.8
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		log="(DEBUG) [Root.GetBestName] has accepted religious conversion from [FromFrom.GetBestName] to [Root.Religion.GetName]."
+	}
+}
+
+# on_war_started
+character_event = {
+	id = debug.9
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		log="(DEBUG) [From.GetBestName] is attacking [Root.GetBestName]."
+	}
+}
+
+# on_war_ended_victory
+character_event = {
+	id = debug.10
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		log="(DEBUG) [From.GetBestName] has won the war over [Root.GetBestName]."
+	}
+}
+
+# on_war_ended_invalid
+character_event = {
+	id = debug.11
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		log="(DEBUG) [From.GetBestName] war with [Root.GetBestName] has become invalid."
+	}
+}
+
+# on_war_ended_whitepeace
+character_event = {
+	id = debug.12
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		log="(DEBUG) [From.GetBestName] war with [Root.GetBestName] has ended in whitepeace."
+	}
+}
+
+# on_war_ended_defeat
+character_event = {
+	id = debug.13
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		log="(DEBUG) [From.GetBestName] has lost the war to [Root.GetBestName]."
+	}
+}
