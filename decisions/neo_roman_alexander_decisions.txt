@@ -40,7 +40,7 @@ decisions = {
 				destroy_landed_title = THIS
 			}
 			
-			activate_title = { e_persia status = no } #Stops the player re-creating Persia after gaining the Argead Empire
+			#activate_title = { e_persia status = no } #Stops the player re-creating Persia after gaining the Argead Empire
 			set_global_flag = restored_alexandrian_empire
 			narrative_event = { id = NIR.03 }
 			any_playable_ruler = { limit = { ai = no } narrative_event = { id = NIR.03 } }

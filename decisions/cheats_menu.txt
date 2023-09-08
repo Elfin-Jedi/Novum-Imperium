@@ -692,7 +692,7 @@ targetted_decisions = {
 			always = yes
 		}
 		effect = {
-			 FROM { add_consort = ROOT }
+			 FROM = { add_consort = ROOT }
 		}
 		revoke_allowed = {
 			always = no
