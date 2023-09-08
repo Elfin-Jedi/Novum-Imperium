@@ -1,0 +1,410 @@
+namespace = DAQIN
+
+character_event = { #An epic poem in the style of ye olden tymes. Who to imitate?
+	id = DAQIN.00570
+	title = DAQIN.00570.title
+	desc = DAQIN.00570.desc
+	picture = GFX_evt_bloodlines
+	
+	is_triggered_only = yes
+	
+	option = { #One of the Western Heroes.
+		name = DAQIN.00570.OPTA
+		scaled_wealth = {
+			value = -0.4
+			min = -50
+			max = -500
+		}
+		if = {
+			limit = { is_female = no }
+			character_event = { id = DAQIN.00571 days = 10 }
+		}
+		else = { character_event = { id = DAQIN.00572 days = 10 } }
+	}
+	option = { #One of the Eastern Heroes.
+		name = DAQIN.00570.OPTB
+		scaled_wealth = {
+			value = -0.4
+			min = -50
+			max = -500
+		}
+		if = {
+			limit = { is_female = no }
+			character_event = { id = DAQIN.00573 days = 10 }
+		}
+		else = { character_event = { id = DAQIN.00574 days = 10 } }
+	}
+	option = { #None
+		name = DAQIN.00570.OPTC
+		tiered_prestige_negative_effect = yes
+	}
+}
+
+
+character_event = { #Which western hero? Male.
+	id = DAQIN.00571
+	title = DAQIN.00571.title
+	desc = DAQIN.00571.desc
+	picture = GFX_evt_hellenic_temple
+	
+	is_triggered_only = yes
+	
+	option = { #Odysseus, the cunning.
+		name = DAQIN.00571.OPTA
+		character_event = { id = DAQIN.00576 }
+	}
+	option = { #Achilles, the strong!
+		name = DAQIN.00571.OPTB
+		character_event = { id = DAQIN.00577 }
+	}
+	option = { #Diomedes, founder of many cities.
+		name = DAQIN.00571.OPTC
+		character_event = { id = DAQIN.00578 }
+	}
+}
+
+character_event = { #Which western hero? is_female.
+	id = DAQIN.00572
+	title = DAQIN.00572.title
+	desc = DAQIN.00572.desc
+	picture = GFX_evt_byzantine_princess
+	
+	is_triggered_only = yes
+	
+	option = { #Medea, the sorceress.
+		name = DAQIN.00572.OPTA
+		character_event = { id = DAQIN.00579 }
+	}
+	option = { #Atalanta, the warrior!
+		name = DAQIN.00572.OPTB
+		character_event = { id = DAQIN.00581 }
+	}
+	option = { #Circe, seductress and mystic.
+		name = DAQIN.00572.OPTC
+		character_event = { id = DAQIN.00582 }
+	}
+}
+
+character_event = { #Which eastern hero? Male.
+	id = DAQIN.00573
+	title = DAQIN.00573.title
+	desc = DAQIN.00573.desc
+	picture = GFX_evt_china_rebel_general
+	
+	is_triggered_only = yes
+	
+	option = { #Zhuge Liang, the Crouching Dragon
+		name = DAQIN.00573.OPTA
+		character_event = { id = DAQIN.00583 }
+	}
+	option = { #Sun Ce, the little conquerer
+		name = DAQIN.00573.OPTB
+		character_event = { id = DAQIN.00584 }
+	}
+	option = { #Cao Cao, Chosen of Heaven
+		name = DAQIN.00573.OPTC
+		character_event = { id = DAQIN.00585 }
+	}
+}
+
+character_event = { #Which eastern hero? is_female. [Kinda placeholder, more reading required]
+	id = DAQIN.00574
+	title = DAQIN.00574.title
+	desc = DAQIN.00574.desc
+	picture = GFX_evt_daughter_asking_mother_hf
+	
+	is_triggered_only = yes
+	
+	option = { #Tai Si, the matron.
+		name = DAQIN.00574.OPTA
+		character_event = { id = DAQIN.00586 }
+	}
+	option = { #Hua Mulan, the warrior!
+		name = DAQIN.00574.OPTB
+		character_event = { id = DAQIN.00587 }
+	}
+	option = { #Lady Xian, the diplomat.
+		name = DAQIN.00574.OPTC
+		character_event = { id = DAQIN.00588 }
+	}
+	option = { #Daji, the fox spirit.
+		name = DAQIN.00574.OPTD
+		trigger = {
+			ROOT = {
+				is_evil_trigger = yes
+				society_is_devil_worshiper = yes
+			}
+		}
+		character_event = { id = DAQIN.00589 }
+	}
+}
+
+character_event = { #Comission resolution
+	id = DAQIN.00575
+	title = DAQIN.00575.title
+	desc = DAQIN.00575.desc
+	picture = GFX_evt_open_book_hf
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00575.OPTA
+		add_character_modifier = {
+			name = wol_respected_ruler
+			years = 5
+		}
+		if = {
+			limit = { tier = EMPEROR }
+			prestige = 1000
+		}
+		else_if = {
+			limit = { tier = DUKE }
+			prestige = 500
+		}
+		else_if = { 
+			limit = { tier = KING }
+			prestige = 700
+		}
+		else = { prestige = 200 }
+	}
+}
+
+##HERO BIO'S, BECAUSE EDUTAINMENT##
+character_event = { #Odysseus
+	id = DAQIN.00576
+	title = DAQIN.00576.title
+	desc = DAQIN.00576.desc
+	picture = GFX_evt_hellenic_temple
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00576.OPTA
+		change_intrigue = 2
+		character_event = { id = DAQIN.00575 days = 60 random = 40 }
+	}
+	option = { 
+		name = DAQIN.00576.OPTB
+		character_event = { id = DAQIN.00571 }
+	}
+}
+character_event = { #Achilles
+	id = DAQIN.00577
+	title = DAQIN.00577.title
+	desc = DAQIN.00577.desc
+	picture = GFX_evt_hellenic_temple
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00577.OPTA
+		change_martial = 2
+		character_event = { id = DAQIN.00575 days = 60 random = 40 }
+	}
+	option = {
+		name = DAQIN.00577.OPTB
+		character_event = { id = DAQIN.00571 }
+	}
+}
+character_event = { #Diomedes
+	id = DAQIN.00578
+	title = DAQIN.00578.title
+	desc = DAQIN.00578.desc
+	picture = GFX_evt_hellenic_temple
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00578.OPTA
+		change_stewardship = 2
+		character_event = { id = DAQIN.00575 days = 60 random = 40 }
+	}
+	option = {
+		name = DAQIN.00578.OPTB
+		character_event = { id = DAQIN.00571 }
+	}
+}
+character_event = { #Medea
+	id = DAQIN.00579
+	title = DAQIN.00579.title
+	desc = DAQIN.00579.desc
+	picture = GFX_evt_byzantine_princess
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00579.OPTA
+		change_intrigue = 2
+		character_event = { id = DAQIN.00575 days = 60 random = 40 }
+	}
+	option = {
+		name = DAQIN.00579.OPTB
+		character_event = { id = DAQIN.00572 } 
+	}
+}
+character_event = { #Atalanta
+	id = DAQIN.00581
+	title = DAQIN.00581.title
+	desc = DAQIN.00581.desc
+	picture = GFX_evt_byzantine_princess
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00581.OPTA
+		change_martial = 2
+		character_event = { id = DAQIN.00575 days = 60 random = 40 }
+	}
+	option = {
+		name = DAQIN.00581.OPTB
+		character_event = { id = DAQIN.00572 } 
+	}
+}
+character_event = { #Circe
+	id = DAQIN.00582
+	title = DAQIN.00582.title
+	desc = DAQIN.00582.desc
+	picture = GFX_evt_byzantine_princess
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00583.OPTA
+		change_learning = 2
+		character_event = { id = DAQIN.00575 days = 60 random = 40 }
+	}
+	option = {
+		name = DAQIN.00582.OPTB
+		character_event = { id = DAQIN.00572 } 
+	}
+}
+character_event = { #Zhuge Liang
+	id = DAQIN.00583
+	title = DAQIN.00583.title
+	desc = DAQIN.00583.desc
+	picture = GFX_evt_china_rebel_general
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00583.OPTA
+		change_learning = 2
+		character_event = { id = DAQIN.00575 days = 60 random = 40 }
+	}
+	option = { 
+		name = DAQIN.00583.OPTB
+		character_event = { id = DAQIN.00573 }
+	}
+}
+character_event = { #Sun Ce
+	id = DAQIN.00584
+	title = DAQIN.00584.title
+	desc = DAQIN.00584.desc
+	picture = GFX_evt_china_rebel_general
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00584.OPTA
+		change_martial = 2
+		character_event = { id = DAQIN.00575 days = 60 random = 40 }
+	}
+	option = { 
+		name = DAQIN.00584.OPTB
+		character_event = { id = DAQIN.00573 }
+	}
+}
+character_event = { #Cao Cao
+	id = DAQIN.00585
+	title = DAQIN.00585.title
+	desc = DAQIN.00585.desc
+	picture = GFX_evt_china_rebel_general
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00585.OPTA
+		change_intrigue = 2
+		character_event = { id = DAQIN.00575 days = 60 random = 40 }
+	}
+	option = { 
+		name = DAQIN.00585.OPTB
+		character_event = { id = DAQIN.00573 } 
+	}
+}
+character_event = { #Tai Shi
+	id = DAQIN.00586
+	title = DAQIN.00586.title
+	desc = DAQIN.00586.desc
+	picture = GFX_evt_china_diplomatic_success
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00586.OPTA
+		fertility = 0.5
+		add_trait = groomed
+		character_event = { id = DAQIN.00575 days = 60 random = 40 }
+	}
+	option = { 
+		name = DAQIN.00586.OPTB
+		character_event = { id = DAQIN.00574 }
+	}
+}
+character_event = { #Hua Mulan
+	id = DAQIN.00587
+	title = DAQIN.00587.title
+	desc = DAQIN.00587.desc
+	picture = GFX_evt_china_diplomatic_success
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00587.OPTA
+		change_martial = 2
+		character_event = { id = DAQIN.00575 days = 60 random = 40 }
+	}
+	option = { 
+		name = DAQIN.00587.OPTB
+		character_event = { id = DAQIN.00574 } 
+	}
+}
+character_event = { #Lady Xian
+	id = DAQIN.00588
+	title = DAQIN.00588.title
+	desc = DAQIN.00588.desc
+	picture = GFX_evt_china_diplomatic_success
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00588.OPTA
+		change_diplomacy = 2
+		character_event = { id = DAQIN.00575 days = 60 random = 40 }
+	}
+	option = { 
+		name = DAQIN.00588.OPTB
+		character_event = { id = DAQIN.00574 }
+	}
+}
+
+character_event = { #Daji
+	id = DAQIN.00589
+	title = DAQIN.00589.title
+	desc = DAQIN.00589.desc
+	picture = GFX_evt_dark_love
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00589.OPTA
+		change_intrigue = 2
+		piety = -100
+		add_society_currency_medium_effect = yes
+		character_event = { id = DAQIN.00575 days = 60 random = 40 }
+	}
+	option = { 
+		name = DAQIN.00589.OPTB
+		character_event = { id = DAQIN.00574 }
+	}
+} 

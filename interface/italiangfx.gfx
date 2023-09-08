@@ -1,483 +1,268 @@
-objectTypes = {
+spriteTypes = {
 
-	#######################################################
-	#######################################################
-	#####											  #####
-	#####			Italian Unit Pack				  #####
-	#####											  #####
-	#######################################################
-	#######################################################
-
-	################################################
-	#### HEAVY_INFANTRY ############################
-	################################################
-	pdxmesh = {
-		name = "italiangfx_HEAVY_INFANTRY_late"
-		file = "gfx\models\itup_heavy_infantry.mesh"
-
-		animation = { id = "attack"		type = "itup_infantry_attack_animation" }
-		animation = { id = "idle"		type = "itup_infantry_idle_animation" }
-		animation = { id = "move"		type = "itup_infantry_moving_animation" }
-
-		scale = 1.0f
+##Catholic##
+	
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_westerngfx"
+		texturefile = "gfx\\interface\\western_temple_catholic.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_westerngfx_looted"
+		texturefile = "gfx\\interface\\western_temple_catholic_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
 	}
 
-	pdxmesh = {
-		name = "italiangfx_HEAVY_INFANTRY"
-		file = "gfx\models\itup_pikeman.mesh"
-
-		animation = { id = "attack"		type = "itup_infantry_attack_animation" }
-		animation = { id = "idle"		type = "itup_infantry_idle_animation" }
-		animation = { id = "move"		type = "itup_infantry_moving_animation" }
-
-		scale = 1.0f
+##Orthodox##
+	
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_orthodoxholygfx"
+		texturefile = "gfx\\interface\\western_temple_orthodox.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_orthodoxholygfx_looted"
+		texturefile = "gfx\\interface\\western_temple_orthodox_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
 	}
 
-	pdxmesh = {
-		name = "italiangfx_HEAVY_INFANTRY_weapon"
-		file = "gfx\models\Attachments\itup_sword.mesh"
-		scale = 1.0f
+##Coptic##
+	
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_copticgfx"
+		texturefile = "gfx\\interface\\western_temple_coptic.tga"
+		noOfFrames = 1
+		norefcount = yes
 	}
 
-	pdxmesh = {
-		name = "italiangfx_HEAVY_INFANTRY_weapon_early"
-		file = "gfx\models\Attachments\fraup_early_sword.mesh"
-		scale = 1.0f
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_copticgfx_looted"
+		texturefile = "gfx\\interface\\western_temple_coptic_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
 	}
 
-	pdxmesh = {
-		name = "italiangfx_HEAVY_INFANTRY_helmet"
-		file = "gfx\models\dummyhelmet.mesh"
-		scale = 1.0f
+##Jewish##	
+	
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_jewishgfx"
+		texturefile = "gfx\\interface\\western_temple_jewish.tga"
+		noOfFrames = 1
+		norefcount = yes
 	}
 
-	pdxmesh = {
-		name = "italiangfx_HEAVY_INFANTRY_shield"
-		file = "gfx\models\Attachments\itup_heavy_shield.mesh"
-		scale = 1.0f
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_jewishgfx_looted"
+		texturefile = "gfx\\interface\\western_temple_jewish_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
 	}
 
-	pdxmesh = {
-		name = "italiangfx_HEAVY_INFANTRY_shield_early"
-		file = "gfx\models\Attachments\gerup_early_pike_shield.mesh"
-		scale = 1.0f
+##Muslim##
+
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_muslimgfx"
+		texturefile = "gfx\\interface\\western_temple_muslim.tga"
+		noOfFrames = 1
+		norefcount = yes
 	}
 
-	pdxmesh = {
-		name = "romangfx_HEAVY_INFANTRY"
-		file = "gfx\models\fraup_early_heavy_infantry.mesh"
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_muslimgfx_looted"
+		texturefile = "gfx\\interface\\western_temple_muslim_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+##Zoroastrian##
 
-		animation = { id = "attack"		type = "fraup_infantry_attack_animation" }
-		animation = { id = "idle"		type = "fraup_infantry_idle_animation" }
-		animation = { id = "move"		type = "fraup_infantry_moving_animation" }
-
-		scale = 1.0f
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_persiangfx"
+		texturefile = "gfx\\interface\\western_temple_zoro.tga"
+		noOfFrames = 1
+		norefcount = yes
 	}
 
-	pdxmesh = {
-		name = "romangfx_HEAVY_INFANTRY_weapon"
-		file = "gfx\models\Attachments\fraup_early_sword.mesh"
-		scale = 0.8f
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_persiangfx_looted"
+		texturefile = "gfx\\interface\\western_temple_zoro_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
 	}
 
-	pdxmesh = {
-		name = "romangfx_HEAVY_INFANTRY_shield"
-		file = "gfx\models\Attachments\gerup_early_pike_shield.mesh"
-		scale = 1.0f
+##Unreformed pagan##
+
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_norsegfx"
+		texturefile = "gfx\\interface\\western_shrine_pagan.tga"
+		noOfFrames = 1
+		norefcount = yes
 	}
 
-	pdxmesh = {
-		name = "romangfx_HEAVY_INFANTRY_helmet"
-		file = "gfx\models\dummyhelmet.mesh"
-		scale = 1.0f
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_norsegfx_looted"
+		texturefile = "gfx\\interface\\western_shrine_pagan_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_pagangfx"
+		texturefile = "gfx\\interface\\western_shrine_pagan.tga"
+		noOfFrames = 1
+		norefcount = yes
 	}
 
-	pdxmesh = {
-		name = "frankishgfx_HEAVY_INFANTRY"
-		file = "gfx\models\itup_pikeman.mesh"
-
-		animation = { id = "attack"		type = "itup_infantry_attack_animation" }
-		animation = { id = "idle"		type = "itup_infantry_idle_animation" }
-		animation = { id = "move"		type = "itup_infantry_moving_animation" }
-
-		scale = 1.0f
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_pagangfx_looted"
+		texturefile = "gfx\\interface\\western_shrine_pagan_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_africangfx"
+		texturefile = "gfx\\interface\\western_shrine_pagan.tga"
+		noOfFrames = 1
+		norefcount = yes
 	}
 
-	pdxmesh = {
-		name = "frankishgfx_HEAVY_INFANTRY_late"
-		file = "gfx\models\itup_heavy_infantry.mesh"
-
-		animation = { id = "attack"		type = "itup_infantry_attack_animation" }
-		animation = { id = "idle"		type = "itup_infantry_idle_animation" }
-		animation = { id = "move"		type = "itup_infantry_moving_animation" }
-
-		scale = 1.0f
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_africangfx_looted"
+		texturefile = "gfx\\interface\\western_shrine_pagan_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_mongolgfx"
+		texturefile = "gfx\\interface\\western_shrine_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
 	}
 
-	pdxmesh = {
-		name = "frankishgfx_HEAVY_INFANTRY_weapon"
-		file = "gfx\models\Attachments\itup_sword.mesh"
-		scale = 1.0f
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_mongolgfx_looted"
+		texturefile = "gfx\\interface\\western_shrine_mongol_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_hellenicgfx"
+		texturefile = "gfx\\interface\\western_shrine_hellenic.tga"
+		noOfFrames = 1
+		norefcount = yes
 	}
 
-	pdxmesh = {
-		name = "frankishgfx_HEAVY_INFANTRY_shield"
-		file = "gfx\models\Attachments\fraup_early_heavy_shield.mesh"
-		scale = 1.0f
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_hellenicgfx_looted"
+		texturefile = "gfx\\interface\\western_shrine_hellenic_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_zunistgfx"
+		texturefile = "gfx\\interface\\western_shrine_zun.tga"
+		noOfFrames = 1
+		norefcount = yes
 	}
 
-	################################################
-	#### LIGHT_INFANTRY ############################
-	################################################
-	pdxmesh = {
-		name = "italiangfx_LIGHT_INFANTRY"
-		file = "gfx\models\itup_light_infantry.mesh"
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_zunistgfx_looted"
+		texturefile = "gfx\\interface\\western_shrine_zun_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+##Reformed pagan##
 
-		animation = { id = "attack"		type = "itup_infantry_attack_animation" }
-		animation = { id = "idle"		type = "itup_infantry_idle_animation" }
-		animation = { id = "move"		type = "itup_infantry_moving_animation" }
-
-		scale = 1.0f
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_reformednorsegfx"
+		texturefile = "gfx\\interface\\western_temple_pagan.tga"
+		noOfFrames = 1
+		norefcount = yes
 	}
 
-	pdxmesh = {
-		name = "italiangfx_LIGHT_INFANTRY_weapon"
-		file = "gfx\models\Attachments\itup_sword.mesh"
-
-		scale = 0.9f
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_reformednorsegfx_looted"
+		texturefile = "gfx\\interface\\western_temple_pagan_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_reformedpagangfx"
+		texturefile = "gfx\\interface\\western_temple_pagan.tga"
+		noOfFrames = 1
+		norefcount = yes
 	}
 
-	pdxmesh = {
-		name = "italiangfx_LIGHT_INFANTRY_shield"
-		file = "gfx\models\Attachments\itup_light_shield.mesh"
-		scale = 1.0f
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_reformedpagangfx_looted"
+		texturefile = "gfx\\interface\\western_temple_pagan_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_reformedafricangfx"
+		texturefile = "gfx\\interface\\western_temple_african.tga"
+		noOfFrames = 1
+		norefcount = yes
 	}
 
-	pdxmesh = {
-		name = "italiangfx_LIGHT_INFANTRY_helmet"
-		file = "gfx\models\dummyhelmet.mesh"
-		scale = 1.0f
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_reformedafricangfx_looted"
+		texturefile = "gfx\\interface\\western_temple_african_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_reformedmongolgfx"
+		texturefile = "gfx\\interface\\western_temple_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
 	}
 
-	################################################
-	#### PIKEMEN ###################################
-	################################################
-	pdxmesh = {
-		name = "italiangfx_PIKEMEN"
-		file = "gfx\models\itup_light_cavalry.mesh"
-
-		animation = { id = "attack"		type = "itup_pikeman_attack_animation" }
-		animation = { id = "idle"		type = "itup_pikeman_idle_animation" }
-		animation = { id = "move"		type = "itup_pikeman_moving_animation" }
-
-		scale = 1.0f
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_reformedmongolgfx_looted"
+		texturefile = "gfx\\interface\\western_temple_mongol_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_reformedhellenicgfx"
+		texturefile = "gfx\\interface\\western_temple_hellenic.tga"
+		noOfFrames = 1
+		norefcount = yes
 	}
 
-	pdxmesh = {
-		name = "italiangfx_PIKEMEN_late"
-		file = "gfx\models\itup_pikeman.mesh"
-
-		animation = { id = "attack"		type = "itup_pikeman_attack_animation" }
-		animation = { id = "idle"		type = "itup_pikeman_idle_animation" }
-		animation = { id = "move"		type = "itup_pikeman_moving_animation" }
-
-		scale = 1.0f
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_reformedhellenicgfx_looted"
+		texturefile = "gfx\\interface\\western_temple_hellenic_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_reformedzunistgfx"
+		texturefile = "gfx\\interface\\western_temple_zoro.tga"
+		noOfFrames = 1
+		norefcount = yes
 	}
 
-	pdxmesh = {
-		name = "italiangfx_PIKEMEN_weapon"
-		file = "gfx\models\Attachments\itup_spear.mesh"
-		scale = 0.8f
-	}
-
-	pdxmesh = {
-		name = "italiangfx_PIKEMEN_shield"
-		file = "gfx\models\Attachments\itup_pikeman_shield.mesh"
-		scale = 1.0f
-	}
-
-	pdxmesh = {
-		name = "italiangfx_PIKEMEN_helmet"
-		file = "gfx\models\dummyhelmet.mesh"
-		scale = 1.0f
-	}
-
-	pdxmesh = {
-		name = "romangfx_PIKEMEN"
-		file = "gfx\models\fraup_early_heavy_infantry.mesh"
-
-		animation = { id = "attack"		type = "fraup_pikeman_attack_animation" }
-		animation = { id = "idle"		type = "fraup_pikeman_idle_animation" }
-		animation = { id = "move"		type = "fraup_pikeman_moving_animation" }
-
-		scale = 1.0f
-	}
-
-	pdxmesh = {
-		name = "romangfx_PIKEMEN_weapon"
-		file = "gfx\models\Attachments\itup_spear.mesh"
-		scale = 0.8f
-	}
-
-	pdxmesh = {
-		name = "romangfx_PIKEMEN_shield"
-		file = "gfx\models\Attachments\gerup_early_pike_shield.mesh"
-		scale = 1.0f
-	}
-
-	pdxmesh = {
-		name = "romangfx_PIKEMEN_helmet"
-		file = "gfx\models\dummyhelmet.mesh"
-		scale = 1.0f
-	}
-
-	################################################
-	#### ARCHERS ###################################
-	################################################
-	pdxmesh = {
-		name = "italiangfx_ARCHERS"
-		file = "gfx\models\itup_archer.mesh"
-
-		animation = { id = "attack"		type = "itup_archer_attack_animation" }
-		animation = { id = "idle"		type = "itup_archer_idle_animation" }
-		animation = { id = "move"		type = "itup_archer_moving_animation" }
-
-		scale = 1.0f
-	}
-
-	pdxmesh = {
-		name = "italiangfx_ARCHERS_weapon"
-		file = "gfx\models\Attachments\itup_arrow.mesh"
-
-		animation = { id = "attack"		type = "itup_arrow_attack_animation" }
-		animation = { id = "idle"		type = "itup_arrow_idle_animation" }
-		animation = { id = "move"		type = "itup_arrow_moving_animation" }
-
-		scale = 0.8f
-	}
-
-	pdxmesh = {
-		name = "italiangfx_ARCHERS_shield"
-		file = "gfx\models\Attachments\itup_bow.mesh"
-
-		animation = { id = "attack"		type = "itup_bow_attack_animation" }
-		animation = { id = "idle"		type = "itup_bow_idle_animation" }
-		animation = { id = "move"		type = "itup_bow_moving_animation" }
-
-		scale = 1.0f
-	}
-
-	pdxmesh = {
-		name = "italiangfx_ARCHERS_helmet"
-		file = "gfx\models\dummyhelmet.mesh"
-		scale = 1.0f
-	}
-
-	################################################
-	#### KNIGHTS ###################################
-	################################################
-	pdxmesh = {
-		name = "italiangfx_KNIGHTS"
-		file = "gfx\models\itup_heavy_horse.mesh"
-
-		animation = { id = "attack"		type = "itup_horse_attack_animation" }
-		animation = { id = "idle"		type = "itup_horse_idle_animation" }
-		animation = { id = "move"		type = "itup_horse_moving_animation" }
-
-		scale = 0.9
-	}
-
-	pdxmesh = {
-		name = "italiangfx_KNIGHTS_rider"
-		file = "gfx\models\fraup_early_heavy_cavalry.mesh"
-
-		animation = { id = "attack"		type = "fraup_heavy_cavalry_attack_animation" }
-		animation = { id = "idle"		type = "fraup_heavy_cavalry_idle_animation" }
-		animation = { id = "move"		type = "fraup_heavy_cavalry_moving_animation" }
-
-		scale = 0.9
-	}
-
-	pdxmesh = {
-		name = "italiangfx_KNIGHTS_rider_late"
-		file = "gfx\models\itup_heavy_infantry.mesh"
-
-		animation = { id = "attack"		type = "itup_heavy_cavalry_attack_animation" }
-		animation = { id = "idle"		type = "itup_heavy_cavalry_idle_animation" }
-		animation = { id = "move"		type = "itup_heavy_cavalry_moving_animation" }
-
-		scale = 0.9
-	}
-
-	pdxmesh = {
-		name = "italiangfx_KNIGHTS_weapon"
-		file = "gfx\models\Attachments\itup_sword.mesh"
-
-		scale = 0.9
-	}
-
-	pdxmesh = {
-		name = "italiangfx_KNIGHTS_shield"
-		file = "gfx\models\Attachments\itup_heavy_shield.mesh"
-		scale = 0.9
-	}
-
-	pdxmesh = {
-		name = "italiangfx_KNIGHTS_helmet"
-		file = "gfx\models\dummyhelmet.mesh"
-		scale = 1.0f
-	}
-
-	pdxmesh = {
-		name = "italiangfx_KNIGHTS_helmet_late"
-		file = "gfx\models\dummyhelmet.mesh"
-		scale = 1.0f
-	}
-
-	pdxmesh = {
-		name = "frankishgfx_KNIGHTS"
-		file = "gfx\models\fraup_early_heavy_horse.mesh"
-
-		animation = { id = "attack"		type = "fraup_horse_attack_animation" }
-		animation = { id = "idle"		type = "fraup_horse_idle_animation" }
-		animation = { id = "move"		type = "fraup_horse_moving_animation" }
-
-		scale = 0.9
-	}
-
-	pdxmesh = {
-		name = "frankishgfx_KNIGHTS_rider_late"
-		file = "gfx\models\itup_heavy_cavalry.mesh"
-
-		animation = { id = "attack"		type = "itup_light_cavalry_attack_animation" }
-		animation = { id = "idle"		type = "itup_heavy_cavalry_idle_animation" }
-		animation = { id = "move"		type = "itup_heavy_cavalry_moving_animation" }
-
-		scale = 0.9
-	}
-
-	pdxmesh = {
-		name = "frankishgfx_KNIGHTS_weapon_late"
-		file = "gfx\models\Attachments\fraup_early_spear.mesh"
-		scale = 1.0f
-	}
-
-	pdxmesh = {
-		name = "frankishgfx_KNIGHTS_shield_late"
-		file = "gfx\models\Attachments\itup_heavy_shield.mesh"
-		scale = 0.9
-	}
-
-	pdxmesh = {
-		name = "frankishgfx_KNIGHTS_helmet_late"
-		file = "gfx\models\dummyhelmet.mesh"
-		scale = 1.0f
-	}
-
-	pdxmesh = {
-		name = "romangfx_KNIGHTS_rider"
-		file = "gfx\models\fraup_early_heavy_cavalry.mesh"
-
-		animation = { id = "attack"		type = "fraup_heavy_cavalry_attack_animation" }
-		animation = { id = "idle"		type = "fraup_heavy_cavalry_idle_animation" }
-		animation = { id = "move"		type = "fraup_heavy_cavalry_moving_animation" }
-
-		scale = 0.9
-	}
-
-	pdxmesh = {
-		name = "romangfx_KNIGHTS_helmet"
-		file = "gfx\models\dummyhelmet.mesh"
-		scale = 1.0f
-	}
-
-	################################################
-	#### LIGHT_CAVALRY #############################
-	################################################
-	pdxmesh = {
-		name = "italiangfx_LIGHT_CAVALRY"
-		file = "gfx\models\itup_light_horse.mesh"
-
-		animation = { id = "attack"		type = "itup_horse_attack_animation" }
-		animation = { id = "idle"		type = "itup_horse_idle_animation" }
-		animation = { id = "move"		type = "itup_horse_moving_animation" }
-
-		scale = 0.9f
-	}
-
-	pdxmesh = {
-		name = "italiangfx_LIGHT_CAVALRY_rider"
-		file = "gfx\models\itup_light_cavalry.mesh"
-
-		animation = { id = "attack"		type = "itup_light_cavalry_attack_animation" }
-		animation = { id = "idle"		type = "itup_light_cavalry_idle_animation" }
-		animation = { id = "move"		type = "itup_light_cavalry_moving_animation" }
-
-		scale = 0.9f
-	}
-
-	pdxmesh = {
-		name = "italiangfx_LIGHT_CAVALRY_weapon"
-		file = "gfx\models\Attachments\itup_spear.mesh"
-		scale = 0.8f
-	}
-
-	pdxmesh = {
-		name = "italiangfx_LIGHT_CAVALRY_helmet"
-		file = "gfx\models\dummyhelmet.mesh"
-		scale = 1.0f
-	}
-
-	################################################
-	#### horse_archers #############################
-	################################################
-	pdxmesh = {
-		name = "italiangfx_horse_archers"
-		file = "gfx\models\itup_light_horse.mesh"
-
-		animation = { id = "attack"		type = "itup_horse_attack_animation" }
-		animation = { id = "idle"		type = "itup_horse_idle_animation" }
-		animation = { id = "move"		type = "itup_horse_moving_animation" }
-
-		scale = 0.9f
-	}
-
-	pdxmesh = {
-		name = "italiangfx_horse_archers_rider"
-		file = "gfx\models\itup_mounted_archer.mesh"
-
-		animation = { id = "attack"		type = "itup_mounted_archer_attack_animation" }
-		animation = { id = "idle"		type = "itup_mounted_archer_idle_animation" }
-		animation = { id = "move"		type = "itup_mounted_archer_moving_animation" }
-
-		scale = 0.9f
-	}
-
-	pdxmesh = {
-		name = "italiangfx_horse_archers_weapon"
-		file = "gfx\models\Attachments\itup_arrow.mesh"
-
-		animation = { id = "attack"		type = "itup_arrow_attack_animation" }
-		animation = { id = "idle"		type = "itup_arrow_idle_animation" }
-		animation = { id = "move"		type = "itup_arrow_moving_animation" }
-
-		scale = 0.75f
-	}
-
-	pdxmesh = {
-		name = "italiangfx_horse_archers_shield"
-		file = "gfx\models\Attachments\itup_bow.mesh"
-
-		animation = { id = "attack"		type = "itup_bow_attack_animation" }
-		animation = { id = "idle"		type = "itup_bow_idle_animation" }
-		animation = { id = "move"		type = "itup_bow_moving_animation" }
-
-		scale = 0.9f
-	}
-
-	pdxmesh = {
-		name = "italiangfx_horse_archers_helmet"
-		file = "gfx\models\dummyhelmet.mesh"
-		scale = 1.0f
+	spriteType = {
+		name = "GFX_settlement_temple_italiangfx_reformedzunistgfx_looted"
+		texturefile = "gfx\\interface\\western_temple_zoro_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
 	}
 }

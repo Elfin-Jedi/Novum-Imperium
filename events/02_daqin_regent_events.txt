@@ -1,0 +1,248 @@
+namespace = DAQIN
+
+character_event = { #Economic troubles
+	id = DAQIN.01221
+	desc = DAQIN.01221.D
+	picture = GFX_evt_stressed_ruler
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_economy
+	
+	option = { #Try to fix it
+		name = DAQIN.01221.OPTA
+		random_list = {
+			20 = { #Succeed
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+				liege = { letter_event = { id = DAQIN.00226 } }
+				modifier = {
+					factor = 2
+					stewardship = 12
+				}
+				modifier = {
+					factor = 3
+					stewardship = 16
+				}
+				modifier = {
+					factor = 4
+					stewardship = 21
+				}
+				modifier = {
+					factor = 5
+					stewardship = 30
+				}
+			}
+			30 = { #Fail
+				custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT }
+				liege = { letter_event = { id = DAQIN.00221 } }
+				modifier = {
+					factor = 2
+					stewardship < 9
+				}
+				modifier = {
+					factor = 2
+					trait = greedy
+				}
+			}
+		}
+	}
+}
+
+character_event = { #Peasant troubles
+	id = DAQIN.01222
+	desc = DAQIN.01222.D
+	picture = GFX_evt_peasants
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	option = { #Try to fix it
+		name = DAQIN.01222.OPTA
+		random_list = {
+			20 = { #Succeed
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+				liege = { letter_event = { id = DAQIN.00226 } }
+				modifier = {
+					factor = 2
+					intrigue = 12
+				}
+				modifier = {
+					factor = 3
+					intrigue = 16
+				}
+				modifier = {
+					factor = 4
+					intrigue = 21
+				}
+				modifier = {
+					factor = 5
+					intrigue = 30
+				}
+			}
+			30 = { #Fail
+				custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT }
+				liege = { letter_event = { id = DAQIN.00222 } }
+				modifier = {
+					factor = 2
+					intrigue < 9
+				}
+				modifier = {
+					factor = 2
+					is_playable = no #Courtiers command less respect and influence than actual landed chars
+				}
+			}
+		}
+	}
+}
+
+character_event = { #Spiritual troubles
+	id = DAQIN.01223
+	desc = DAQIN.01223.D
+	picture = GFX_evt_sickness_hf
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_religion
+	
+	option = { #Try to fix it
+		name = DAQIN.01223.OPTA
+		random_list = {
+			20 = { #Succeed
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+				liege = { letter_event = { id = DAQIN.00226 } }
+				modifier = {
+					factor = 2
+					learning = 12
+				}
+				modifier = {
+					factor = 3
+					learning = 16
+				}
+				modifier = {
+					factor = 4
+					learning = 21
+				}
+				modifier = {
+					factor = 5
+					learning = 30
+				}
+				modifier = {
+					factor = 2
+					is_ascetic_trigger = yes #Monks, nuns, etc
+				}
+			}
+			30 = { #Fail
+				custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT }
+				liege = { letter_event = { id = DAQIN.00223 } }
+				modifier = {
+					factor = 2
+					learning < 9
+				}
+				modifier = {
+					factor = 2
+					has_bad_priest_trait_trigger = yes
+				}
+			}
+		}
+	}
+}
+
+character_event = { #Military troubles
+	id = DAQIN.01224
+	desc = DAQIN.01224.D
+	picture = GFX_evt_viking_battle_oldgods
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_war
+	
+	option = { #Try to fix it
+		name = DAQIN.01224.OPTA
+		random_list = {
+			20 = { #Succeed
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+				liege = { letter_event = { id = DAQIN.00226 } }
+				modifier = {
+					factor = 2
+					martial = 12
+				}
+				modifier = {
+					factor = 3
+					martial = 16
+				}
+				modifier = {
+					factor = 4
+					martial = 21
+				}
+				modifier = {
+					factor = 5
+					martial = 30
+				}
+			}
+			30 = { #Fail
+				custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT }
+				liege = { letter_event = { id = DAQIN.00224 } }
+				modifier = {
+					factor = 2
+					martial < 9
+				}
+				modifier = {
+					factor = 2
+					has_any_leadership_trait_trigger = no
+				}
+			}
+		}
+	}
+}
+
+character_event = { #Cultural troubles
+	id = DAQIN.01225
+	desc = DAQIN.01225.D
+	picture = GFX_evt_upsetting_letter
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_religion
+	
+	option = { #Try to fix it
+		name = DAQIN.01225.OPTA
+		random_list = {
+			20 = { #Succeed
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+				liege = { letter_event = { id = DAQIN.00226 } }
+				modifier = {
+					factor = 2
+					diplomacy = 12
+				}
+				modifier = {
+					factor = 3
+					diplomacy = 16
+				}
+				modifier = {
+					factor = 4
+					diplomacy = 21
+				}
+				modifier = {
+					factor = 5
+					diplomacy = 30
+				}
+			}
+			30 = { #Fail
+				custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT }
+				liege = { letter_event = { id = DAQIN.00225 } }
+				modifier = {
+					factor = 2
+					diplomacy < 9
+				}
+				modifier = {
+					factor = 2
+					trait = zealous
+				}	
+			}
+		}
+	}
+}
+
+character_event = { #No troubles!
+	id = DAQIN.01226
+	desc = DAQIN.01226.D
+	picture = GFX_evt_relaxed_ruler
+	is_triggered_only = yes
+	border = GFX_event_normal_frame_economy
+	
+	option = { 
+		name = DAQIN.01226.OPTA
+		liege = { letter_event = { id = DAQIN.00226 } }
+	}
+}

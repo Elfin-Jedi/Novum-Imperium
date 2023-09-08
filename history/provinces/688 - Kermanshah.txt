@@ -1,28 +1,33 @@
-# -*- ck2.history.provinces -*-
-
 # 688 - Kermanshah (Used to be Al Miqdadiyah)
 
 # County Title
 title = c_kermanshah
 
 # Settlements
-max_settlements = 4
-b_kermanshah = castle
+max_settlements = 6
+b_javanroud = castle
+b_kermanshah = temple
 b_hulwan = city
-b_kangivar = temple
-b_mahalkufa = castle
+b_mahalkufa = city
+
+#b_paveh = castle
+#b_kangavar = castle
+#b_kuzaran = castle
+#b_ravansar = castle
 
 #Misc
-culture = persian
-religion = sunni
+culture = kurdish
+religion = nestorian
 
 # History
-910.1.1 = {
-	culture = kurdish
+300.1.1 = {
+	build_wonder = wonder_kermanshah_rock
+	set_wonder_stage = 4
 }
-1049.1.1 = {
-	remove_settlement = b_hulwan
+600.1.1 = {
+	set_wonder_stage = 3
 }
-1220.1.1 = {
-	remove_settlement = b_kangivar
+900.1.1 = { religion = sunni }
+1066.1.1 = {
+	b_paveh = castle
 }

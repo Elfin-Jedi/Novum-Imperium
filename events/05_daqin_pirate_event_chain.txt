@@ -1,0 +1,379 @@
+namespace = DAQIN
+
+##captured by pirates##
+character_event = { #set-up: out travelling, board a ship.
+	id = DAQIN.00530
+	title = DAQIN.00530.title
+	desc = DAQIN.00530.desc
+	picture = GFX_evt_merchant_ship_at_sea_republic
+	
+	is_triggered_only = yes
+	
+	option = { #Everything goes dark...
+		name = DAQIN.00530.OPTA
+		character_event = { id = DAQIN.00531 }
+	}
+}
+
+character_event = { #awaken on a pirate ship
+	id = DAQIN.00531
+	title = DAQIN.00531.title
+	desc = DAQIN.00531.desc
+	picture = GFX_evt_ship_voyage_hf
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = { #Try to fight them. All of them.
+		name = DAQIN.00531.OPTA
+		tooltip_info = combat_rating
+		random_list = {
+			10 = { #You are a God of War!
+				modifier = {
+					factor = 10
+					trait = duelist
+				}
+				modifier = { ##This is interesting, why didn't I use the duellist triggers here? How strange.
+					factor = 2
+					combat_rating = 60
+				}
+				modifier = {
+					factor = 2
+					combat_rating = 20
+				}
+				modifier = {
+					factor = 3
+					combat_rating = 40
+				}
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+				character_event = { id = DAQIN.00532 }
+				
+			}
+			20 = { #What were you expecting?
+				modifier = {
+					factor = 2
+					combat_rating < 10
+				}
+				custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT }
+				character_event = { id = DAQIN.00533 }
+			}
+		}
+	}
+	option = { #Sneak away and get to shore.
+		name = DAQIN.00531.OPTB
+		random_list = {
+			15 = {
+				modifier = {
+					factor = 2
+					is_good_intrigue_character_score = yes
+				}
+				character_event = { id = DAQIN.00534 }
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+			}
+			10 = {
+				character_event = { id = DAQIN.00533 }
+				custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT }
+			}
+		}
+	}
+	option = { #Attempt to seduce the Captain
+		name = DAQIN.00531.OPTC
+		trigger = {
+			is_female = yes
+			NOT = { is_unattractive_trigger = yes }
+			age < 40
+		}
+		random_list = { #Outcome based on intrigue and attraction score.
+			60 = {  
+				modifier = {
+					factor = 2
+					is_good_intrigue_character_score = yes
+				}
+				modifier = {
+					factor = 3
+					is_attractive_trigger = yes
+					NOT = { age = 30 }
+				}
+				modifier = {
+					factor = 2
+					has_attractive_trait_trigger = yes
+				}
+				modifier = {
+					factor = 5
+					trait = seductress
+				}
+				character_event = { id = DAQIN.00535 } #Success
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+			}
+			40 = {  
+				is_bad_intrigue_character_score = yes
+				modifier = {
+					factor = 25
+					age = 40
+				}
+				modifier = {
+					factor = 2
+					has_unattractive_trait_trigger = yes
+				}
+				custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT }
+				character_event = { id = DAQIN.00533 } #Failure
+			}
+		}
+	}
+	option = { #You remember an old story about Caesar...
+		name = DAQIN.00531.OPTD
+		trigger = { trait = poet }
+		tooltip_info = poet
+		character_event = { id = DAQIN.00536 }
+	}
+}
+
+character_event = { #fight pirates victory
+	id = DAQIN.00532
+	title = DAQIN.00532.title
+	desc = DAQIN.00532.desc
+	picture = GFX_evt_cornered_duel_hf
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = { #how fantastic.
+		name = DAQIN.00532.OPTA
+		prestige = 200
+		increase_battle_experience_effect = yes
+		random = {
+			chance = 30
+			add_trait = wounded
+		}
+		add_blood_splatter_effect = yes
+	}
+	option = { #thank the gods
+		name = DAQIN.00532.OPTB
+		prestige = 200
+		add_trait = zealous
+		increase_battle_experience_effect = yes
+		random = {
+			chance = 30
+			add_trait = wounded
+		}
+		add_blood_splatter_effect = yes
+	}
+}
+
+character_event = { #pirate escape loss
+	id = DAQIN.00533
+	title = DAQIN.00533.title
+	desc = DAQIN.00533.desc
+	picture = GFX_evt_prisoner_hf
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = { #how embarassing. Pay ransom.
+		name = DAQIN.00533.OPTA
+		add_trait = wounded
+		if = {
+			limit = { tier = KING }
+			wealth = -300
+			prestige = -200
+		}
+		else_if = {
+			limit = { tier = DUKE }
+			wealth = -200
+			prestige = -100
+		}
+		else_if = {
+			limit = { tier = EMPEROR }
+			wealth = -500
+			prestige = -500
+		}
+		else = {
+			wealth = -75
+			prestige = -50
+		}
+	}
+}
+
+character_event = { #pirate sneak victory
+	id = DAQIN.00534
+	title = DAQIN.00534.title
+	desc = DAQIN.00534.desc
+	picture = GFX_evt_jailbreak
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = { #And not a drop of blood spilled...
+		name = DAQIN.00534.OPTA
+		prestige = 50
+		piety = 100
+	}
+	option = { #And sink their ship, too!
+		name = DAQIN.00534.OPTB
+		prestige = 50
+		wealth = 50
+		if = {
+			limit = { trait = patient }
+			random = {
+				chance = 50
+				remove_trait = patient
+			}
+		}
+		else = { add_trait = wroth }
+	}
+	option = { #Take some cargo
+		name = DAQIN.00534.OPTB
+		trigger = { intrigue = 20 }
+		tooltip_info = intrigue
+		hidden_tooltip = {
+			prestige = 50
+			piety = 50
+			ship_cargo_loot = yes #Not strictly necessary but it's such a long list it's kept to itself to stop this file being unbelievably huge. Also because I want to test making scripted effects.
+		}
+	}
+}
+
+character_event = { #pirate seduce victory
+	id = DAQIN.00535
+	title = DAQIN.00535.title
+	desc = DAQIN.00535.desc
+	picture = GFX_evt_homage_hf
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = { #Kiss and run
+		name = DAQIN.00535.OPTA
+		character_event = { id = DAQIN.00537 }
+	}
+	option = { #Join me at court!
+		name = DAQIN.00535.OPTB
+#		trigger = { NOT = { trait = homosexual } } #A gay character is probably lying, but there's no bisexual trait in the game, so let the player decide.
+		create_character = {
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 25
+			trait = intricate_webweaver
+			trait = strong
+			trait = fair
+			trait = pirate
+			trait = brave
+		}
+		character_event = { id = DAQIN.00538 }
+		
+		hidden_tooltip = {
+			new_character = {
+				add_lover = ROOT
+				opinion = {
+					who = ROOT
+					modifier = opinion_seduced_lustful_worship
+					years = 30
+				}
+				random = {
+					chance = 25
+					character_event = { id = 6359 days = 15 random = 5 } #Gives lover's pox
+				}
+			}
+			
+			# Chance of impregnation
+			if = {
+				limit = { ROOT = { is_female = yes } } #They will be, but juuuust to make sure.
+				ROOT = { character_event = { id = WoL.97 } }
+			}
+		}
+	}
+	option = { #slit his throat
+		name = DAQIN.00535.OPTC
+		character_event = { id = DAQIN.00539 }
+		add_trait = deceitful
+	}
+}
+
+character_event = { #pirate caesar imitation
+	id = DAQIN.00536
+	title = DAQIN.00536.title
+	desc = DAQIN.00536.desc
+	picture = GFX_evt_heads_on_pikes_hf
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00536.OPTA
+		add_character_modifier = {
+			name = renowned_hero
+			years = 5
+		}
+		prestige = 200
+		if = {
+			limit = { NOT = { trait = shrewd } }
+			random = {
+				chance = 20
+				add_trait = shrewd
+			}
+		}
+	}
+}
+
+character_event = { #pirate captain kiss shore
+	id = DAQIN.00537
+	title = DAQIN.00537.title
+	desc = DAQIN.00537.desc
+	picture = GFX_evt_pleasing_letter
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = { #Oh Captain, my Captain...
+		name = DAQIN.00537.OPTA
+		add_character_modifier = {
+			name = lovers_memento
+			duration = -1
+		}
+		remove_trait = cynical
+	}
+}
+character_event = { #pirate captain lover shore
+	id = DAQIN.00538
+	title = DAQIN.00538.title
+	desc = DAQIN.00538.desc
+	picture = GFX_evt_lovers
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00538.OPTA
+		piety = -50
+	}
+}
+character_event = { #pirate captain throat slice
+	id = DAQIN.00539
+	title = DAQIN.00539.title
+	desc = DAQIN.00539.desc
+	picture = GFX_evt_slit_throat_hf
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = { #Pirate scum.
+		name = DAQIN.00539.OPTA
+		add_trait = patient
+		prestige = 200
+		if = {
+			limit = { has_education_intrigue_trigger = yes }
+			upgrade_education_effect = yes
+		}
+	}
+	option = { #It has to be this way.
+		name = DAQIN.00539.OPTB
+		if = {
+			limit = { has_education_intrigue_trigger = yes }
+			upgrade_education_effect = yes
+		}
+		add_trait = just
+		prestige = 200
+	}
+}

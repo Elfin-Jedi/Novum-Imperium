@@ -1,0 +1,352 @@
+song = {
+	name = "Cora_Mitote_Peace.ogg"
+	song_name = "Cora Mitote"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = mesoamerican }
+			NOT = { religion = aztec_reformed }
+			NOT = { religion = aztec }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Cora_Mitote_War.ogg"
+	song_name = "Cora Mitote"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = mesoamerican }
+			NOT = { religion = aztec_reformed }
+			NOT = { religion = aztec }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Aztec Theme - Medieval (Civilization 6 OST) Traditional Nahua music.ogg"
+	song_name = "Traditional Nahua Music (Medieval)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = mesoamerican }
+			NOT = { religion = aztec_reformed }
+			NOT = { religion = aztec }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Epic Jungle Music - Aztec Empire.ogg"
+	song_name = "Aztec Empire"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = mesoamerican }
+			NOT = { religion = aztec_reformed }
+			NOT = { religion = aztec }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.4
+}
+song = {
+	name = "Dark Jungle Music - Aztec Temple.ogg"
+	song_name = "Aztec Temple"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = mesoamerican }
+			NOT = { religion = aztec_reformed }
+			NOT = { religion = aztec }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.4
+}
+song = {
+	name = "Epic Jungle Music - Jaws of the Jaguar.ogg"
+	song_name = "Jaws of the Jaguar"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = mesoamerican }
+			NOT = { religion = aztec_reformed }
+			NOT = { religion = aztec }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.4
+}
+song = {
+	name = "Tribal Jungle Music - Aztec Jungle.ogg"
+	song_name = "Aztec Jungle"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = mesoamerican }
+			NOT = { religion = aztec_reformed }
+			NOT = { religion = aztec }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.4
+}
+song = {
+	name = "AZTEC JAGUARS - Ancient Armies - Epic War Music.ogg"
+	song_name = "Aztec Jaguars"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = mesoamerican }
+			NOT = { religion = aztec_reformed }
+			NOT = { religion = aztec }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.3
+}
+song = {
+	name = "Aztec Music - Sacred Jungle.ogg"
+	song_name = "Sacred Jungle"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = mesoamerican }
+			NOT = { religion = aztec_reformed }
+			NOT = { religion = aztec }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.4
+}
+song = {
+	name = "Songs for the Soul - Tonantzin (Aztec Mother Goddess).ogg"
+	song_name = "Tonantzin"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = mesoamerican }
+			NOT = { religion = aztec_reformed }
+			NOT = { religion = aztec }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.4
+}
+song = {
+	name = "Ancient Aztec and Mayan traditional music by Ricardo Tlalli Lozano Song Jaguars Path.ogg"
+	song_name = "Jaguars Path"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = mesoamerican }
+			NOT = { religion = aztec_reformed }
+			NOT = { religion = aztec }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.4
+}
+song = {
+	name = "Aztec Theme - Atomic (Civilization 6 OST) Traditional Nahua music.ogg"
+	song_name = "Traditional Nahua Music (Atomic)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = mesoamerican }
+			NOT = { religion = aztec_reformed }
+			NOT = { religion = aztec }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Aztec Theme - Ancient (Civilization 6 OST) Traditional Nahua music.ogg"
+	song_name = "Traditional Nahua Music (Ancient)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = mesoamerican }
+			NOT = { religion = aztec_reformed }
+			NOT = { religion = aztec }
+		}
+		modifier = {
+			factor = 2
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.4
+}
+song = {
+	name = "Aztec Theme - Industrial (Civilization 6 OST) Traditional Nahua music.ogg"
+	song_name = "Traditional Nahua Music (Industrial)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = mesoamerican }
+			NOT = { religion = aztec_reformed }
+			NOT = { religion = aztec }
+		}
+		modifier = {
+			factor = 0.5
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Lost in the Jungle (Jungle Ambient Music).ogg"
+	song_name = "Lost in the Jungle"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = mesoamerican }
+			NOT = { religion = aztec_reformed }
+			NOT = { religion = aztec }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.4
+}
+song = {
+	name = "Jojo's Bizarre Adventure- Awaken(Pillar Men Theme).ogg"
+	song_name = "Awaken"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = mesoamerican }
+			NOT = { religion = aztec_reformed }
+			NOT = { religion = aztec }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 2
+}

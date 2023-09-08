@@ -1,0 +1,98 @@
+namespace = DAQIN
+
+##Sinogreek/Sinoroman tombola##
+character_event = { #tombola for cultural flavour events
+	id = DAQIN.00500
+	hide_window = yes
+	
+	only_playable = yes
+	
+	ai = no #It's not worth giving it to the AI, not substantive enough consequences. Intrepid modders can change this themselves.
+	culture_group = great_qin
+	only_capable = yes
+	prisoner = no
+#	war = no #Have to be at peace ##Disabled. War does not mean your ruler isn't doing people things! Late game wars are constant with revolts etc.
+	min_age = 16 #has to be an adult (maybe have children flavour? Probably not though.)
+	
+	is_triggered_only = yes #fired from pulse
+	
+	immediate = {
+		random_list = {
+			10 = { #new fashions
+				modifier = {
+					factor = 2
+					has_focus = focus_seduction
+				}
+				character_event = { id = DAQIN.00501 days = 300 random = 200 }
+			}
+			10 = { #new board games
+				modifier = {
+					factor = 2
+					has_focus = focus_carousing
+				}
+				character_event = { id = DAQIN.00502 days = 300 random = 200 }
+			}
+			10 = { #captured by pirates
+				modifier = {
+					factor = 2
+					has_focus = focus_intrigue #More likely to be hanging around shady sorts, very intrigue-focused event
+				}
+				modifier = {
+					factor = 0
+					capital_scope = { is_coastal = no }
+				}
+				character_event = { id = DAQIN.00530 days = 300 random = 200 }
+			}
+			10 = { #religious conflicts
+				modifier = {
+					factor = 2
+					has_focus = focus_theology
+				}
+				modifier = {
+					factor = 0.4
+					OR = {
+						religion = manichean
+						religion = nestorian
+					}
+				}
+				modifier = {
+					factor = 0.8
+					OR = {
+						trait = sympathy_indian
+						trait = sympathy_christendom
+					}
+				}
+				character_event = { id = DAQIN.00540 days = 300 random = 200 }
+			}
+			10 = { #gunpowder and fireworks
+				modifier = {
+					factor = 2
+					has_focus = focus_war
+				}
+				character_event = { id = DAQIN.00551 days = 300 random = 200 }
+			}
+			10 = { #silkworms or glassworks?
+				modifier = {
+					factor = 2
+					has_focus = focus_business
+				}
+				character_event = { id = DAQIN.00550 days = 300 random = 200 }
+			}
+			10 = { #delicious food, and some history
+				modifier = {
+					factor = 2
+					has_focus = focus_family #Could be carousing, but family is what makes you fat and a lot are good, at-home things. Family dinner, maybe.
+				}
+				character_event = { id = DAQIN.00510 days = 300 random = 200 }
+			}
+			10 = { #comission art or an epic
+				modifier = {
+					factor = 2
+					has_focus = focus_rulership
+				}
+				character_event = { id = DAQIN.00570 days = 300 random = 200 }
+			}
+			10 = {} #nothing
+		}
+	}
+}

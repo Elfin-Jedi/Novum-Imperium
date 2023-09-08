@@ -1,7 +1,8 @@
 bloodofwalakrios= {
 	inheritance = patrilineal
         romanoindian_opinion = 5
-        greek_opinion = 5
+        #greek_opinion = 5
+	vieti_krioticism_opinion = 5
         plot_power_modifier = 0.10
 	allow_bastards = yes
 	picture = GFX_bloodlines_symbol_bloodthirsty
@@ -50,6 +51,7 @@ indoroman_ultimus_romanorum = {
 	hereclemasculist_pagan_opinion = 5
 	vieti_mithras_pagan_opinion = 5
 	romist_pagan_opinion = 5
+	vieti_krioticism_opinion = 5
 	inheritance = patrilineal
 	allow_bastards = yes
 	flags = { founder_invasions bloodline_drill created_bloodline }

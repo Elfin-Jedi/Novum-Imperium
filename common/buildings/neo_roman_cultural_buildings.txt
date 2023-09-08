@@ -1,0 +1,379 @@
+castle = {
+	#Frankokratian Stables
+	ca_culture_frankokratian_1 = {
+		desc = ca_culture_frankokratian_desc
+		potential = {
+			OR = {
+				culture = latinokratian
+				culture = frankokratian
+				has_building = ca_culture_frankokratian_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = latinokratian
+					culture = frankokratian
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = {
+					culture = latinokratian
+					culture = frankokratian
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		knights = 20
+		horse_archers = 10
+		knights_offensive = 0.075
+		knights_defensive = 0.075
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	ca_culture_frankokratian_2 = {
+		desc = ca_culture_frankokratian_desc
+		potential = {
+			OR = {
+				culture = latinokratian
+				culture = frankokratian
+				has_building = ca_culture_frankokratian_1
+				has_building = ca_culture_frankokratian_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = latinokratian
+					culture = frankokratian
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+					culture = latinokratian
+					culture = frankokratian
+				}
+			}
+		}
+		upgrades_from = ca_culture_frankokratian_1
+		gold_cost = 300
+		build_time = 1095
+		
+		ai_creation_factor = 100
+		knights = 20
+		horse_archers = 20
+		knights_offensive = 0.075
+		knights_defensive = 0.075
+		extra_tech_building_start = 0.8
+	
+	}
+	ca_culture_frankokratian_3 = {
+		desc = ca_culture_frankokratian_desc
+		potential = {
+			OR = {
+				culture = latinokratian
+				culture = frankokratian
+				has_building = ca_culture_frankokratian_1
+				has_building = ca_culture_frankokratian_2
+				has_building = ca_culture_frankokratian_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = latinokratian
+					culture = frankokratian
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+					culture = latinokratian
+					culture = frankokratian
+				}
+			}
+		}
+		upgrades_from = ca_culture_frankokratian_2
+		gold_cost = 400
+		build_time = 2190
+		knights = 25
+		horse_archers = 25
+		horse_archers_offensive = 0.075
+		horse_archers_defensive = 0.075
+		ai_creation_factor = 99
+		extra_tech_building_start = 0.8
+	
+	}
+	ca_culture_frankokratian_4 = {
+		desc = ca_culture_frankokratian_desc
+		potential = {
+			OR = {
+				culture = latinokratian
+				culture = frankokratian
+				has_building = ca_culture_frankokratian_1
+				has_building = ca_culture_frankokratian_2
+				has_building = ca_culture_frankokratian_3
+				has_building = ca_culture_frankokratian_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture = latinokratian
+					culture = frankokratian
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+					culture = latinokratian
+					culture = frankokratian
+				}
+			}
+		}
+		upgrades_from = ca_culture_frankokratian_3
+		gold_cost = 500
+		build_time = 2190
+		knights = 40
+		horse_archers = 20
+		knights_offensive = 0.075
+		knights_defensive = 0.075
+		ai_creation_factor = 98
+		extra_tech_building_start = 0.8
+	
+	}
+	
+	##African Legion
+	ca_culture_african_romance_1 = {
+		desc = ca_culture_african_romance_desc
+		potential = {
+			OR = {
+				culture = african_romance
+				has_building = ca_culture_african_romance_1
+			}
+		}
+		is_active_trigger = { ROOT = { culture = african_romance} }
+		
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = { culture = african_romance }
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		camel_cavalry = 15 
+		pikemen = 15
+		pikemen_defensive = 0.075
+		camel_cavalry_offensive = 0.075
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	ca_culture_african_romance_2 = {
+		desc = ca_culture_african_romance_desc
+		potential = {
+			OR = {
+				culture = african_romance
+				has_building = ca_culture_african_romance_1
+				has_building = ca_culture_african_romance_2
+			}
+		}
+		is_active_trigger = { ROOT = { culture = african_romance } } 
+		
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = { culture = african_romance }
+		}
+		upgrades_from = ca_culture_african_romance_1
+		gold_cost = 300
+		build_time = 1095
+		
+		ai_creation_factor = 100
+		camel_cavalry = 20 
+		pikemen = 20
+		pikemen_defensive = 0.075
+		camel_cavalry_offensive = 0.075
+		extra_tech_building_start = 0.8
+	
+	}
+	ca_culture_african_romance_3 = {
+		desc = ca_culture_african_romance_desc
+		potential = {
+			OR = {
+				culture = african_romance
+				has_building = ca_culture_african_romance_1
+				has_building = ca_culture_african_romance_2
+				has_building = ca_culture_african_romance_3
+			}
+		}
+		is_active_trigger = { ROOT = { culture = african_romance } } 
+		
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = { culture = african_romance }
+		}
+		upgrades_from = ca_culture_african_romance_2
+		gold_cost = 400
+		build_time = 2190
+		camel_cavalry = 25 
+		pikemen = 25
+		pikemen_defensive = 0.075
+		camel_cavalry_offensive = 0.075
+		ai_creation_factor = 99
+		extra_tech_building_start = 0.8
+	
+	}
+	ca_culture_african_romance_4 = {
+		desc = ca_culture_african_romance_desc
+		potential = {
+			OR = {
+				culture = african_romance
+				has_building = ca_culture_african_romance_1
+				has_building = ca_culture_african_romance_2
+				has_building = ca_culture_african_romance_3
+				has_building = ca_culture_african_romance_4
+			}
+		}
+		is_active_trigger = { ROOT = { culture = african_romance } } 
+		
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = { culture = african_romance }
+		}
+		upgrades_from = ca_culture_african_romance_3
+		gold_cost = 500
+		build_time = 2190
+		camel_cavalry = 30 
+		pikemen = 30
+		pikemen_defensive = 0.075
+		camel_cavalry_offensive = 0.075
+		ai_creation_factor = 98
+		extra_tech_building_start = 0.8
+	
+	}
+	
+	##Persian Hoplites
+	ca_culture_pontic_1 = {
+		desc = ca_culture_pontic_desc
+		potential = {
+			OR = {
+				culture = pontic
+				has_building = ca_culture_pontic_1
+			}
+		}
+		is_active_trigger = { ROOT = { culture = pontic} }
+		
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = { culture = pontic }
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		pikemen = 20
+		horse_archers = 10
+		pikemen_defensive = 0.1
+		pikemen_offensive = 0.1
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	ca_culture_pontic_2 = {
+		desc = ca_culture_pontic_desc
+		potential = {
+			OR = {
+				culture = pontic
+				has_building = ca_culture_pontic_1
+				has_building = ca_culture_pontic_2
+			}
+		}
+		is_active_trigger = { ROOT = { culture = pontic } } 
+		
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = { culture = pontic }
+		}
+		upgrades_from = ca_culture_pontic_1
+		gold_cost = 300
+		build_time = 1095
+		
+		ai_creation_factor = 100
+		pikemen = 40
+		horse_archers = 10
+		pikemen_defensive = 0.1
+		pikemen_offensive = 0.1
+		extra_tech_building_start = 0.8
+	
+	}
+	ca_culture_pontic_3 = {
+		desc = ca_culture_pontic_desc
+		potential = {
+			OR = {
+				culture = pontic
+				has_building = ca_culture_pontic_1
+				has_building = ca_culture_pontic_2
+				has_building = ca_culture_pontic_3
+			}
+		}
+		is_active_trigger = { ROOT = { culture = pontic } } 
+		
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = { culture = pontic }
+		}
+		upgrades_from = ca_culture_pontic_2
+		gold_cost = 400
+		build_time = 2190
+		pikemen = 30
+		horse_archers = 30
+		horse_archers_offensive = 0.1
+		horse_archers_morale = 0.1
+		ai_creation_factor = 99
+		extra_tech_building_start = 0.8
+	
+	}
+	ca_culture_pontic_4 = {
+		desc = ca_culture_pontic_desc
+		potential = {
+			OR = {
+				culture = pontic
+				has_building = ca_culture_pontic_1
+				has_building = ca_culture_pontic_2
+				has_building = ca_culture_pontic_3
+				has_building = ca_culture_pontic_4
+			}
+		}
+		is_active_trigger = { ROOT = { culture = pontic } } 
+		
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = { culture = pontic }
+		}
+		upgrades_from = ca_culture_pontic_3
+		gold_cost = 500
+		build_time = 2190
+		pikemen = 30
+		horse_archers = 30
+		horse_archers_offensive = 0.1
+		horse_archers_morale = 0.1
+		ai_creation_factor = 98
+		extra_tech_building_start = 0.8
+	
+	}
+}

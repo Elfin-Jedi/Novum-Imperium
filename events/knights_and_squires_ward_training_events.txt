@@ -1,0 +1,176 @@
+namespace = wardtraining
+
+#Training Ward
+character_event = {
+	id = wardtraining.100
+	desc = EVTDESCwardtraining.100
+	picture = GFX_event_squire
+	is_triggered_only = yes
+	option = {
+		name = knightlynvm
+		}
+	option = {
+		name = EVTOPTBknightly.100
+		FROM = { add_character_modifier = { modifier = trained_ward duration = 365 } }
+		hidden_tooltip = {
+			random_list = {
+				5 = {
+				modifier = {
+					factor = 2.75
+					ROOT = { martial = 15 } 
+				}
+				modifier = {
+					factor = 3
+					ROOT = { martial = 20 } 
+				}
+				modifier = {
+					factor = 1.5
+					ROOT = { martial = 12 }
+				}				
+				modifier = {
+					factor = 1.75
+					ROOT = { martial = 9 } 
+				} 
+				modifier = {
+					factor = 1.5
+					ROOT = { trait = strong }
+				} 
+				modifier = {
+					factor = 1.5
+					ROOT = { trait = genius }
+				} 
+				modifier = {
+					factor = 3.75
+					ROOT = { trait = duelist }
+				} 
+				character_event = { id = wardtraining.101 days = 2 } 
+				}
+				5 = { 
+				modifier = {
+					factor = 1.25
+					ROOT = { NOT = { martial = 8 } }
+				}
+				modifier = {
+					factor = 1.35
+					ROOT = { NOT = { martial = 6 } }
+				}
+				modifier = {
+					factor = 1.5
+					ROOT = { NOT = { martial = 4 } }
+				}				
+				modifier = {
+					factor = 2
+					ROOT = { NOT = { martial = 2 } }
+				} 
+				modifier = {
+					factor = 1.2
+					ROOT = { NOT = { trait = strong } }
+				} 
+				modifier = {
+					factor = 1.25
+					ROOT = { trait = wounded }
+				} 
+				modifier = {
+					factor = 1.2
+					ROOT = { trait = stressed }
+				} 
+				modifier = {
+					factor = 1.75
+					ROOT = { trait = depressed }
+				} 
+				modifier = {
+					factor = 1.75
+					ROOT = { trait = weak }
+				} 
+				modifier = {
+					factor = 1.5
+					FROM = { trait = weak }
+				} 
+				modifier = {
+					factor = 1.5
+					FROM = { trait = stressed }
+				} 
+				modifier = {
+					factor = 1.5
+					FROM = { trait = depressed }
+				} 
+				modifier = {
+					factor = 1.5
+					FROM = { trait = wounded }
+				} 
+				character_event = { id = wardtraining.102 days = 2 } 
+				}
+			}
+		}
+	}
+}
+#Training successful
+character_event = {
+	id = wardtraining.101
+	desc = EVTDESCwardtraining.101
+	picture = GFX_event_squire
+	is_triggered_only = yes
+
+
+	option = {
+		name = EVTOPTAwardtraining.110
+		ROOT = {
+			random = {
+				chance = 10
+				change_martial = 1
+			}
+		
+		}
+		FROMFROM = {
+			random = {
+				chance = 50
+				change_martial = 1
+			}
+			IF = {
+				limit = { martial = 10 }
+			random = {
+				chance = 10
+				add_trait = duelist
+				}
+			}
+			random = {
+				chance = 5
+				add_trait = robust
+			}
+			random = {
+				chance = 15
+				add_friend = ROOT
+			}
+		
+		}
+	}
+}
+#Training didn't go so well
+character_event = {
+	id = wardtraining.102
+	desc = EVTDESCwardtraining.102
+	picture = GFX_event_squire
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAwardtraining.102
+		FROMFROM = {
+			random = {
+				chance = 25
+				change_martial = -1
+			}
+			random = {
+				chance = 5 
+				add_trait = stressed
+			}
+			random = {
+				chance = 10 
+				add_trait = wounded
+			}
+			random = {
+				chance = 10
+				add_rival = ROOT
+			}
+		}
+	}
+}

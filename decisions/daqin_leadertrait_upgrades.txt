@@ -1,0 +1,107 @@
+targeted_decisions = {
+
+	way_of_dog_upgrade = {
+		ai_check_interval = 24
+		filter = self
+		ai_target_filter = self
+		
+		potential = {
+			culture_group = great_qin
+			OR = {
+				trait = winter_soldier
+				trait = experimenter
+			}
+			NOT = { trait = logistics_expert }
+		}
+		
+		allow = {
+			OR = {
+				trait = winter_soldier
+				trait = experimenter
+			}
+		}
+		
+		effect = {
+			remove_trait = winter_soldier
+			remove_trait = experimenter
+			add_trait = logistics_expert
+		}
+	}
+	
+	way_of_dragon_upgrade = {
+		ai_check_interval = 24
+		filter = self
+		ai_target_filter = self
+		
+		potential = {
+			culture_group = great_qin
+			OR = {
+				trait = misguided_warrior
+				trait = tough_soldier
+				trait = skilled_tactician
+				trait = brilliant_strategist
+			}
+			NOT = { trait = master_of_flame }
+		}
+		
+		allow = { can_have_more_leadership_traits = yes }
+		
+		effect = { add_trait = master_of_flame }
+	}
+	
+	way_of_leopard_upgrade = {
+		ai_check_interval = 24
+		filter = self
+		ai_target_filter = self
+		
+		potential = {
+			culture_group = great_qin
+			OR = {
+				trait = rough_terrain_leader
+				trait = siege_leader
+			}
+			NOT = { trait = sapper }
+		}
+		
+		allow = {
+			OR = {
+				trait = rough_terrain_leader
+				trait = siege_leader
+			}
+		}
+		
+		effect = {
+			remove_trait = rough_terrain_leader
+			remove_trait = siege_leader
+			add_trait = sapper
+		}
+	}
+	
+	way_of_tiger_upgrade = {
+		ai_check_interval = 24
+		filter = self
+		ai_target_filter = self
+		
+		potential = {
+			culture_group = great_qin
+			OR = {
+				trait = flanker
+				trait = organizer
+			}
+			NOT = { trait = levy_coordinator }
+		}
+		
+		allow = {
+			OR = {
+				trait = flanker
+				trait = organizer
+			}
+		}
+		
+		effect = {
+			remove_trait = flanker
+			remove_trait = organizer
+			add_trait = levy_coordinator
+		}
+	}
+}

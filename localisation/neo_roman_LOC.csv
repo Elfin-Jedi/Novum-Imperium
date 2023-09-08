@@ -1,0 +1,160 @@
+#CODE;ENGLISH;;;;;;;;;;;;;x
+
+## Titles ##
+e_third_rome;Third Roman Empire;;;;;;;;;;;;;x
+e_argead_empire;Argead Empire;;;;;;;;;;;;;x
+e_roman_republic;Roman Republic;;;;;;;;;;;;;x
+k_african_exarchate;Exarchate of Africa;;;;;;;;;;;;;x
+
+## Title Adjectives ##
+e_third_rome_adj;Roman;;;;;;;;;;;;;x
+e_argead_empire_adj;Hellenic;;;;;;;;;;;;;x
+e_roman_republic_adj;Roman;;;;;;;;;;;;;x
+k_african_exarchate_adj;African;;;;;;;;;;;;;x
+
+## Cultures and Cultural FOA##
+pontic;Pontic;;;;;;;;;;;;;x
+african_romance;African Romance;;;;;;;;;;;;;x
+latinokratian;Latinokratian;;;;;;;;;;;;;x
+frankokratian;Frankokratian;;;;;;;;;;;;;x
+
+## Decisions ##
+romanise_hre;Romanise the HRE;;;;;;;;;;;;;x
+romanise_hre_desc;Many centuries ago, Rome was felled by Germanic barbarians. You have been crowned Emperor of all the Romans, and yet so many of your subjects resemble these barbarians more so than the noble Romans of old. You will change this - and finally be both Holy AND Roman!;;;;;;;;;;;;;x
+romanise_hre_desc_extra;This will upset your Germanic vassals.;;;;;;;;;;;;;x
+adopt_roman_culture_hre;Adopt Roman Culture;;;;;;;;;;;;;x
+adopt_roman_culture_hre_desc;The Romans were the apex of civilisation. I should live as they did.;;;;;;;;;;;;;x
+unify_roman_empire;Unite the Roman Pretenders;;;;;;;;;;;;;x
+unify_roman_empire_desc;Since the fall of Rome in the West, both the Empire of the Greeks in Constantinople and the so-called 'Holy Roman Empire' have claimed to be the true successor to the Roman legacy. Should someone hold both titles at once, they would be inarguably Emperor of all the Romans, and their realm inarguably the Roman Empire!;;;;;;;;;;;;;x
+form_third_rome;Form the Third Rome;;;;;;;;;;;;;x
+form_third_rome_desc;Our Orthodox brethren in Constantinople have fallen. It stands to us now to take up the mantle of Rome, as we are the foremost bastion of Orthodoxy.;;;;;;;;;;;;;x
+select_tsar;Select Tsar;;;;;;;;;;;;;x
+select_tsar_desc;Select this character to be Tsar of the Third Rome. This will grant them independence and make you their suzerain, so ensure you've granted them all the land and vassals you want them to have beforehand.;;;;;;;;;;;;;x
+form_latin_empire;Form Latin Empire;;;;;;;;;;;;;x
+form_latin_empire_desc;The Latin Empire can actually be created from the titles menu - crazy, huh? This decision is still here as an artifact from when I didn't know about that! If it's been re-introduced and you're reading this, drop a comment on the mod's Steam page!;;;;;;;;;;;;;x
+consolidate_latinokratia;Consolidate Latinokratia;;;;;;;;;;;;;x
+consolidate_latinokratia_desc;Only when the last vestiges of Greek rule and the anti-Papal heresy of the so-called 'Orthodox' Christianity are wiped away can we truly declare our work to be done. We have been changed by the experience, as have the people we ruled... perhaps something new can come from these ashes?;;;;;;;;;;;;;x
+adopt_latinokratian_culture;Adopt Latinokratian Culture;;;;;;;;;;;;;x
+adopt_latinokratian_culture_desc;A unique culture has developed among the lords of the Latin Empire. Perhaps I should follow suit?;;;;;;;;;;;;;x
+claim_alexanders_legacy;Claim Alexander's Legacy;;;;;;;;;;;;;x
+claim_alexanders_legacy_desc;Alexander the Great led the Hellenic world as far East as India and the Steppe - and achieved apotheosis for these efforts, becoming a minor God. If Persia can be bought under your rule and the false 'Greeks' who so proudly bare the trappings of Roman barbarians displased so you can honour the Gods as piously as Alexander did, they might call you as great as him!;;;;;;;;;;;;;x
+restore_roman_republic;Restore the Roman Republic;;;;;;;;;;;;;x
+restore_roman_republic_desc;While the rest of Europe may have forgotten that the ruler of Rome was never supposed to wear a crown, we have not. Our republican values still run strong, and their culture is kept alive in our realm. With all of the Italian peninsula secured, we could declare ourselves Rome reborn!;;;;;;;;;;;;;x
+restore_roman_republic_desc_extra;A powerful Roman pretender may not take this sitting down.;;;;;;;;;;;;;x
+promote_roman_culture_republic;Promote a Roman Renaissance;;;;;;;;;;;;;x
+promote_roman_culture_republic_desc;The Eternal City and it's Empire are a source of great inspiration to everyone, from artists and philosophers to soldiers and statesmen. With a sizeable investment we could help fund the rediscovery and adoption of the Roman way of life, so that the second great Republic to rule Rome might leave as large and bright a mark on the world as the first.;;;;;;;;;;;;;x
+adopt_roman_culture_republic;Adopt Roman Culture;;;;;;;;;;;;;x
+adopt_roman_culture_republic_desc;The greatness of the Roman culture is all around us, funded by the Patricians. How could I choose to live in barbarity when such beauty is available to me?;;;;;;;;;;;;;x
+declare_african_exarchate;Declare the Reformation of the African Exarchate;;;;;;;;;;;;;x
+declare_african_exarchate_desc;Many centuries ago, the general Belisarius under orders from Justinian the Great led a campaign to reclaim Italy and Africa. The land was lost to the Muslim conquests, and no Christian has ruled it since - until now! Our realm is part of Christendom, and the borders of the last Christians in Africa are ours too!;;;;;;;;;;;;;x
+promote_african_romance;Promote African Romance;;;;;;;;;;;;;x
+promote_african_romance_desc;While they are stretched few and far between, there are still remnants of the Latin-speaking Romanised populations of Africa. Their common tongue and prediliction for Christianity would certainly make them easier to rule than the Arabs. Perhaps we should raise their culture to a position of prominance?;;;;;;;;;;;;;x
+adopt_african_romance;Adopt African Romance;;;;;;;;;;;;;x
+adopt_african_romance_desc;Adopt the African Romance culture.;;;;;;;;;;;;;x
+
+## Tooltips ##
+latium_renaissance_upgrade.TT;The Roman Renaissance will bring permanent improvements to all of the counties of §YLatium§! - Rome foremost among them.;;;;;;;;;;;;;x
+select_tsar_TT;You will select a character of your dynasty to be the §YTsar of the Third Roman Empire§!. This will unlock a targeted decision, usable at your liesure.;;;;;;;;;;;;;x
+play_as_tsar_TT;You will play as the new Tsar of Third Rome!;;;;;;;;;;;;;x
+german_hate_TT;Your vassals of §YWestern and Central Germanic culture§! will be upset with you.;;;;;;;;;;;;;x
+
+## Events ##
+NIR.01.T;The African Exarchate;;;;;;;;;;;;;x
+NIR.01.D;Though long ago thought lost at the hands of the Muslim Conquests, the cultural and religious descendants of Rome have reconquered Africa! While the gradually Kingdom of Africa has long been recognised by the other rulers of the world, the [Root.GetTitle] of Africa has declared that they are the continuation of the African Exarchate, the province established by Justinian in the wake of his attempts to restore the Roman Empire. This has bought a great deal of stability to the realm, as the people no longer see themselves as being ruled by an invader but restored to a great power. The Byzantine Emperor has already sent envoys to oversee their re-integration to the Empire, and the world waits with baited breath to see if this small attempt at an Renovatio Imperii Romanorum from outside of the Byzantines is true in it's intention, or a convenient excuse to justify a land grab...;;;;;;;;;;;;;x
+NIR.01.OPTA;An unexpected development!;;;;;;;;;;;;;x
+NIR.01.OPTB;I hereby join the glorious Roman Empire!;;;;;;;;;;;;;x
+NIR.01.OPTC;We will be better off independent.;;;;;;;;;;;;;x
+NIR.02.D;Nestled away in the more rural areas of Africa are the final remnants of the latin-speaking populations of old Roman Africa. While small in number they have nonetheless been embraced by the new Christian rulers in the region, and local nobles and commoners alike are beginning to adopt their language and customs.;;;;;;;;;;;;;x
+NIR.02.OPTA;I shall do so too.;;;;;;;;;;;;;x
+NIR.02.OPTB;Interesting, but not for me.;;;;;;;;;;;;;x
+NIR.03.T;The New Alexander;;;;;;;;;;;;;x
+NIR.03.D;For the first time in over a millenia, Persia is completely ruled completely by a Greek. While the murmurings of Zoroastrianism had always existed in the region, none could have predicted that the old faith that would rise up to dominate the region would be Hellenic paganism. With an Empire stretching from Greece to India, many are proclaiming [Root.GetTitledFirstNameWithNick] to be the new Alexander Argead, better known as Alexander the Great, a reputation that [Root.GetSheHe] is eager to encourage. While their name will most certainly go down in history, and the Hellenic priests already speak of their Apotheosis, there are yet more worlds to conquer! Could this be the dawn of a new Hellenistic Age?;;;;;;;;;;;;;x
+NIR.03.OPTA;Nothing is impossible to he who will try.;;;;;;;;;;;;;x
+NIR.03.OPTB;The world will never be the same.;;;;;;;;;;;;;x
+NIR.04.D;Alexander was famously fond of Persian culture, even taking on the title of Shahanshah. If we look to the past, we can see this legacy in places like Pontus, where Greek and Persian cultures began to blend. As you rule over so many Persian vassals, perhaps adopting some of their culture and getting back to the pre-Roman Greek roots could do some good?;;;;;;;;;;;;;x
+NIR.04.OPTA;Yes, that sounds sensible.;;;;;;;;;;;;;x
+NIR.04.OPTB;I will not forsake my roots.;;;;;;;;;;;;;x
+NIR.05.T;Holy AND Roman;;;;;;;;;;;;;x
+NIR.05.D;Some whisper that the Holy Roman Empire is neither Holy, nor Roman, nor an Empire. This snide insinuation has forever lost it's punch, as Holy Roman [Root.GetEmperorEmpress] [Root.GetFirstNameWithNick], ruling from Rome as the Emperors of old, has begun to promote and endorse Roman culture. Latin is once more becoming the common tongue as well as that of clergy and rulers, once great Roman monuments are being restored, and even old Roman ways of life are making a return. While the Latin populations of Italy are delighted, the largely Germanic vassals of the HRE's heartland are boiling with resentment to their [Root.GetEmperorEmpress] - whispers of conspiracy and rebellion abound. While the problem of Roman legitimacy is still not solved, with those in the East continuing not to recognise the HRE as being legitmately Roman, the 'Empire of the Franks' certainly seems to be looking a lot less like the Western Empire of Charlemagne and a lot more like the Western Empire of Valentinian.;;;;;;;;;;;;;x
+NIR.05.OPTA;I have bought back Rome's eternal light.;;;;;;;;;;;;;x
+NIR.05.OPTB;Fascinating!;;;;;;;;;;;;;x
+NIR.05.OPTC;This whole thing reeks of appeasement.;;;;;;;;;;;;;x
+NIR.06.T;Renovatio Imperii Romanorum;;;;;;;;;;;;;x
+NIR.06.D;Diocletian, in the year 286, divided the Roman Empire in two. Several ambitious Emperors ruled over both halves, becoming the sole Emperor of the Romans, up until Thedosius, who divided the Empire permanently, never to be reunited. \n Now, however, this changes. [Root.GetFirstNameWithNick] now holds the crowns of both the Holy Roman Empire, the Empire proclaimed to be the Roman Empire in the West by the Pope, and the Empire of Constantinople which claims legitimacy from succession of the Eastern Empire. No matter what one believes, the two now being the one and the same makes one thing undeniable: there is now only one sole Roman [Root.GetEmperorEmpress], ruling over one sole and united Roman Empire! May it never again be divided, nor the guiding light of Roman civilisation ever be smothered by ignorance and barbarity!;;;;;;;;;;;;;x
+NIR.06.OPTA;Hail Caesar!;;;;;;;;;;;;;x
+NIR.06.OPTB;Hail Caesar!;;;;;;;;;;;;;x
+NIR.07.T;The Latin Empire Triumphant;;;;;;;;;;;;;x
+NIR.07.D;The Byzantine Empire has long since perished under the Latin crusaders, but there were always dreams of the Greeks to restore their so-called 'Roman Empire' to life. Now, those dreams have been crushed once and for all. The Latins march through Constantinople in triumph, celebrating their victory over those who attempted so often to undermine the authority of the Vicar of Christ. The [Root.GetEmperorEmpress] is presented with gifts from The Pope and all of Christendom. A new crown sits atop [Root.GetHerHis] head, and a new sword rests by [Root.GetHerHis] side, the boons of victory displayed to a cheering crowd. \n With the Latin Empire now here to stay, both the Greeks and Latins are beginning to see themselves as something different..;;;;;;;;;;;;;x
+NIR.07.OPTA;I am truly blessed.;;;;;;;;;;;;;x
+NIR.07.OPTB;They are truly blessed.;;;;;;;;;;;;;x
+NIR.07.OPTC;This is the darkest hour.;;;;;;;;;;;;;x
+NIR.07.OPTD;Oh no! Anyway...;;;;;;;;;;;;;x
+NIR.08.T;Senatus Populesque Romanus;;;;;;;;;;;;;x
+NIR.08.D;Once more, all of Italy is under the rule of the Roman Republic. Having adopted Roman culture and customs, the nascant Merchant Republics of Italy have been unified by the self-styled Roman Republic. The Princeps has assured not just his subjects but the entire world of their dedication to the true values of the Romans, back before they were corrupted and twisted into treating their dictators like Kings. \n This upset to the feudal status-quo of the world has the potential to be as transformative for Europe now as the emerging Roman Republic was back then. Only time will tell if it will be destroyed by a rival like Hannibal, be destroyed by infighting and dictatorship as the old Republic was, or create a new Pax Romana.;;;;;;;;;;;;;x
+NIR.08.OPTA;I am First among Equals.;;;;;;;;;;;;;x
+NIR.08.OPTB;Are they allowed to do that?;;;;;;;;;;;;;x
+NIR.08.OPTC;They are not Rome! I am!;;;;;;;;;;;;;x
+NIR.09.D;Who do they think they are?! Those lowborn upstarts in Italy, declaring themselves to be the successors of Rome. You, and you alone, are the Emperor of the Romans! They have no claim, they have no RIGHT! You mull over your options on your throne, the sound of the footfall of your army's drill march reaching your ears...;;;;;;;;;;;;;x
+NIR.09.OPTA;Issue an ultimatum.;;;;;;;;;;;;;x
+NIR.09.OPTB;Swallow your pride.;;;;;;;;;;;;;x
+NIR.10.D;A courier bursts into the forum with an urgent message. To interrupt the Princeps must mean it is most urgent indeed. You take his parchment, and scan over the message - [From.GetTitledName] is demanding that you hand control of the entire Italian peninsula over to [From.GetHerHim]. The Senate is speechless, awaiting your response.;;;;;;;;;;;;;x
+NIR.10.OPTA;We cannot risk war. Comply.;;;;;;;;;;;;;x
+NIR.10.OPTB;We will not surrender our Republic.;;;;;;;;;;;;;x
+NIR.11.T;Render Unto Caesar;;;;;;;;;;;;;x
+NIR.11.D;In a shocking turn of events, the Roman Republic has been willingly dissolved. All administrative powers have been transferred, and the Republic reduced down to a fraction of it's former size. Already the troops of the so-called 'Emperor of the Romans' line Italy's streets, ready to re-assert Imperial authority should any lingering notions of republicanism lead to violent resistance. \n There has certainly been a reclaimation of Italy for 'rightful Romans', but this was not what any of the previously triumphant and joyous denizens of Italia had imagined.;;;;;;;;;;;;;x
+NIR.11.OPTA;Well that was short-lived.;;;;;;;;;;;;;x
+NIR.11.OPTB;They know their place.;;;;;;;;;;;;;x
+NIR.12.D;The pompous 'Princeps' has refused to hand over Italy, continuing to swan about in a toga! Italy thinks itself Roman, does it? You shall show them what it means to belong to Rome!;;;;;;;;;;;;;x
+NIR.12.OPTA;They will regret this!;;;;;;;;;;;;;x
+NIR.13.T;The Roman Rebirth;;;;;;;;;;;;;x
+NIR.13.D;Rome, the Eternal City. Once a shadow of it's former self, the city is becoming revitalised thanks to the efforts of the new Merchant Republic which rules it. Thousands upon thousands of ducats have been given to the arts, Rome's long and grand history capturing the imagination of the artistically minded. Sculptures, architectural designs, paintings - all begin to fill not only the houses of the wealthy but the streets as well. Latin has once more become a popular tongue, and it has become the fashion to do as the Romans do - their dress, their culture, their very way of life. With the fading strength of the Papacy and of Kings thanks to the triumphant republic, there are new philosophies that underpin the re-emerging Roman culture: romanitas, republicanism, and a whole slew of new ideas inspired by the ancient works of Greek and Roman writers who lived during the golden age of democracy. Rome, and the Roman spirit, is truly reborn!;;;;;;;;;;;;;x
+NIR.13.OPTA;Esto Perpetua;;;;;;;;;;;;;x
+NIR.13.OPTB;Esto Perpetua;;;;;;;;;;;;;x
+NIR.13.OPTC;Esto Perpetua;;;;;;;;;;;;;x
+NIR.14.D;You stand poised to bring about the Third Rome, now that Constantinople and it's surrounding area are under your control. The only question remains whether you will declare yourself to be the Tsar of this new Empire, or whether you will choose a worthy successor of your lineage to lead it while you focus on the Motherland.;;;;;;;;;;;;;x
+NIR.14.OPTA;I will become the Tsar of Rome;;;;;;;;;;;;;x
+NIR.14.OPTB;I will select a Tsar.;;;;;;;;;;;;;x
+NIR.15.D;You consider your candidate for Tsardom. Are they worthy of becoming the Tsar of Rome?;;;;;;;;;;;;;x
+NIR.15.OPTA;Yes, they will be Tsar.;;;;;;;;;;;;;x
+NIR.15.OPTB;On second thought...;;;;;;;;;;;;;x
+NIR.16.T;The Third Rome;;;;;;;;;;;;;x
+NIR.16.D;Since the fall of the Byzantines, all was thought lost for the dream of Rome and it's Christian faith in the East, but those fortunes have changed with the intervention of the Rus. The new Tsar claims succession by religion, being the last bastion of Orthodoxy left in the world, vowing to rule over the entire Roman Empire in the East. This 'Third Rome', so named for coming after the Roman Empire in Rome and the Roman Empire in Constantinople, is seen as being folly by many, claiming a legacy they hold no stake on. \n In any event, a new Empire rules over the East, with the full backing of the powerful Russian state. Will they succeed in bringing together all of Christendom and beyond under one rule where their predecessors failed?;;;;;;;;;;;;;x
+NIR.16.OPTA;I will fight the dying of the light!;;;;;;;;;;;;;x
+NIR.16.OPTB;May their reign be prosperous.;;;;;;;;;;;;;x
+NIR.16.OPTC;If only I could be inside their head...;;;;;;;;;;;;;x
+NIR.17.D;You are the Tsar of the Roman Empire!;;;;;;;;;;;;;x
+NIR.17.OPTA;Hear me and obey!;;;;;;;;;;;;;x
+NIR.18.D;You are no longer the Tsar of the Roman Empire.;;;;;;;;;;;;;x
+NIR.18.OPTA;A tragedy.;;;;;;;;;;;;;x
+
+## Retinues and Buildings ##
+RETTYPE_CUL_AFRICANROMANCE;African Legion;;;;;;;;;;;;;x
+RETTYPE_CUL_PONTIC;Silver Shields;;;;;;;;;;;;;x
+RETTYPE_CUL_LATINOKRATIAN;Latin Cataphracts;;;;;;;;;;;;;x
+ca_culture_frankokratian_1;Jousting Hippodrome;;;;;;;;;;;;;x
+ca_culture_frankokratian_2;Jousting Hippodrome;;;;;;;;;;;;;x
+ca_culture_frankokratian_3;Jousting Hippodrome;;;;;;;;;;;;;x
+ca_culture_frankokratian_4;Jousting Hippodrome;;;;;;;;;;;;;x
+ca_culture_frankokratian_desc;The Hippodromes used for races are an easy place to practise jousting and horse-mounted archery.;;;;;;;;;;;;;x
+ca_culture_pontic_1;Hoplite Barracks;;;;;;;;;;;;;x
+ca_culture_pontic_2;Hoplite Barracks;;;;;;;;;;;;;x
+ca_culture_pontic_3;Hoplite Barracks;;;;;;;;;;;;;x
+ca_culture_pontic_4;Hoplite Barracks;;;;;;;;;;;;;x
+ca_culture_pontic_desc;Hoplites, the true warriors of the Hellenes! Our phalanx can once more form the core of our armies, and Persian-style horse archers can support them.;;;;;;;;;;;;;x
+ca_culture_african_romance_1;African Legionary Station;;;;;;;;;;;;;x
+ca_culture_african_romance_2;African Legionary Station;;;;;;;;;;;;;x
+ca_culture_african_romance_3;African Legionary Station;;;;;;;;;;;;;x
+ca_culture_african_romance_4;African Legionary Station;;;;;;;;;;;;;x
+ca_culture_african_romance_desc;The African Legion is a combination of the camels favoured by Bedouins and the pikemen popular among nearby Italy. These stations allow them to train together.;;;;;;;;;;;;;x
+
+## Traits, Bloodlines & Misc ##
+tsar;Tsar;;;;;;;;;;;;;x
+tsar_desc;This [Root.GetManWoman] has been crowned Tsar of the Third Roman Empire, by grace of God.;;;;;;;;;;;;;x
+roman_hre_bloodline;Augustine Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
+roman_hre_bloodline_desc;[This.GetFirstNameWithNick] revitalised the Holy Roman Empire by spreading Roman Culture.;;;;;;;;;;;;;x
+third_rome_bloodline;Imperial Purple Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
+third_rome_bloodline_desc;The first Emperor of the Third Rome and bastion of Orthodoxy, [This.GetFirstNameWithNick]'s descendents are said to have blood that flows imperial purple.;;;;;;;;;;;;;x
+renaissance_bloodline;Renaissance Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
+renaissance_bloodline_desc;[This.GetFirstNameWithNick] oversaw the transition of the Italian peninsula to the rule of the Roman Republic, ensuring the continued flourishing of the Roman Renaissance.;;;;;;;;;;;;;x
+title_prince_russian;Tsarevich;Tsarevich;Tsarevich;;Tsarevich;;;;;;;;;x
+title_prince_female_russian;Tsarevna;Tsarevna;Tsarevna;;Tsarevna;;;;;;;;;x

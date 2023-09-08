@@ -2417,6 +2417,7 @@ letter_event = {	#TARGET INFORMED ABOUT DEATH, ASSASSIN WAS DISCOVERED
 
 				if = {
 					limit = {
+						NOT = { lifestyle_traits = 1 }
 						NOT = { has_character_flag = da_assassin_refused }
 					}
 					random = {
@@ -2505,6 +2506,7 @@ letter_event = {	#TARGET INFORMED ABOUT DEATH, ASSASSIN WAS NOT DISCOVERED
 			
 				if = {
 					limit = {
+						NOT = { lifestyle_traits = 1 }
 						NOT = { has_character_flag = da_assassin_refused }
 					}
 					random = {

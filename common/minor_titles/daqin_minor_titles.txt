@@ -1,0 +1,514 @@
+#MINOR TITLES FOR DAQIN AND FULIN
+##MINISTERS##
+title_praefectus_household = {
+	dignity = 0.10
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.075
+	monthly_prestige = 0.75
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		is_landed = no
+		is_adult = yes
+		hidden_tooltip = {
+			OR = { 
+				male_can_hold_minor_title_trigger = yes
+				female_can_hold_minor_title_trigger = yes
+			}
+		}
+	}
+	allowed_to_grant = { government = western_chinese_government }
+	message = yes
+}
+
+title_praefectus_coaches = {
+	dignity = 0.10
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.075
+	monthly_prestige = 0.75
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		OR = {
+			trait = hunter
+			trait = cavalry_leader
+			martial = 12
+		}
+		is_adult = yes
+		higher_tier_than = COUNT
+		hidden_tooltip = {
+			OR = { 
+				male_can_hold_minor_title_trigger = yes
+				female_can_hold_minor_title_trigger = yes
+			}
+		}
+	}
+	allowed_to_grant = { government = western_chinese_government }
+	message = yes
+}
+
+title_praefectus_guards = {
+	dignity = 0.10
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.075
+	monthly_prestige = 0.75
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		is_adult = yes
+		hidden_tooltip = {
+			OR = { 
+				male_can_hold_minor_title_trigger = yes
+				female_can_hold_minor_title_trigger = yes
+			}
+		}
+		higher_tier_than = COUNT
+		combat_rating = 20
+	}
+	allowed_to_grant = { government = western_chinese_government }
+	message = yes
+}
+title_praefectus_prisons = {
+	dignity = 0.10
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 5
+	
+	monthly_salary = 0.075
+	monthly_prestige = 0.5
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		is_adult = yes
+		OR = {
+			trait = just
+			trait = arbitrary
+		}
+		higher_tier_than = COUNT
+		hidden_tooltip = {
+			OR = { 
+				male_can_hold_minor_title_trigger = yes
+				female_can_hold_minor_title_trigger = yes
+			}
+		}
+	}
+	allowed_to_grant = { government = western_chinese_government }
+	message = yes
+}
+title_praefectus_herald = {
+	dignity = 0.10
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 5
+	
+	monthly_salary = 0.075
+	monthly_prestige = 0.5
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		is_adult = yes
+		OR = {
+			trait = erudite
+			diplomacy = 12
+		}
+		higher_tier_than = COUNT
+		hidden_tooltip = {
+			OR = { 
+				male_can_hold_minor_title_trigger = yes
+				female_can_hold_minor_title_trigger = yes
+			}
+		}
+	}
+	allowed_to_grant = { government = western_chinese_government }
+	message = yes
+}
+title_praefectus_agriculture = {
+	dignity = 0.10
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 5
+	
+	monthly_salary = 0.075
+	monthly_prestige = 0.5
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		is_adult = yes
+		OR = {
+			trait = administrator
+			stewardship = 12
+			learning = 12
+		}
+		higher_tier_than = COUNT
+		hidden_tooltip = {
+			OR = { 
+				male_can_hold_minor_title_trigger = yes
+				female_can_hold_minor_title_trigger = yes
+			}
+		}
+	}
+	allowed_to_grant = { government = western_chinese_government }
+	message = yes
+}
+title_praefectus_urban = {
+	dignity = 0.10
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 5
+	
+	monthly_salary = 0.075
+	monthly_prestige = 0.5
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		higher_tier_than = COUNT
+		is_adult = yes
+		intrigue = 12
+		hidden_tooltip = {
+			OR = { 
+				male_can_hold_minor_title_trigger = yes
+				female_can_hold_minor_title_trigger = yes
+			}
+		}
+	}
+	allowed_to_grant = { government = western_chinese_government }
+	message = yes
+}
+title_praefectus_aquaducts = {
+	dignity = 0.10
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.075
+	monthly_prestige = 0.75
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		is_adult = yes
+		OR = {
+			trait = architect
+			stewardship = 12
+		}
+		higher_tier_than = COUNT
+		hidden_tooltip = {
+			OR = { 
+				male_can_hold_minor_title_trigger = yes
+				female_can_hold_minor_title_trigger = yes
+			}
+		}
+	}
+	allowed_to_grant = { government = western_chinese_government }
+	message = yes
+}
+
+##FAMILIAL TITLES##
+title_fav_beauty = { #second favoured of the Emperor's concubines.
+	dignity = 5.0
+	grant_limit = 1
+	opinion_effect = 30
+	show_as_title = yes
+	
+	monthly_salary = 0.05
+	monthly_prestige = 0.5
+	
+	allowed_to_hold = {
+		OR = {
+			is_lover = FROM
+			is_concubine = FROM
+		}
+	}
+	
+	allowed_to_grant = { government = western_chinese_government }
+}
+
+title_brilliant_companion = { #favourite concubine.
+	dignity = 5.0
+	grant_limit = 1
+	opinion_effect = 30
+	show_as_title = yes
+	
+	monthly_salary = 0.075
+	monthly_prestige = 0.6
+	
+	allowed_to_hold = {
+		OR = {
+			is_lover = FROM
+			is_concubine = FROM
+			is_married = FROM
+		}
+	}
+	
+	allowed_to_grant = { government = western_chinese_government }
+}
+
+title_taizi = { #Heir-Apparent
+	dignity = 6.0
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 30
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.25
+	monthly_piety = 0.25
+	
+	counts_as_purple_born = yes
+	
+	show_as_title = yes
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		hidden_tooltip = {
+			OR = { 
+				male_can_hold_minor_title_trigger = yes
+				female_can_hold_minor_title_trigger = yes
+				has_law = true_cognatic_succession
+			}
+		}
+		is_close_relative = FROM
+		NOR = {
+			trait = monk
+			trait = nun
+			trait = eunuch
+		}
+		is_theocracy = no
+	}
+	
+	allowed_to_grant = { government = western_chinese_government }
+	message = yes
+}
+
+title_kaisa = { #Transliteration of Caesar.
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.15
+	monthly_piety = 0.10
+	
+	show_as_title = yes
+	
+	is_unique = yes
+	
+	allowed_to_hold = { is_close_relative = FROM }
+	
+	allowed_to_grant = { government = western_chinese_government }
+	message = yes
+}
+
+##COURTLY TITLES##
+
+title_great_qin_eunuch = { #Differentiates from other court eunuchs.
+	dignity = 0.050
+	grant_limit = 1
+	opinion_effect = 30
+	
+	monthly_salary = 0.02
+	monthly_prestige = 0.35
+	
+	show_as_title = yes
+	
+	allowed_to_hold = { trait = eunuch }
+	
+	allowed_to_grant = { government = western_chinese_government }
+	message = yes
+}
+
+title_grand_pedagogue = { #a mix of the Roman pedagogue who would train children and the Grand Tutor of the Han courts.
+	dignity = 0.1
+	grant_limit = 3
+	opinion_effect = 10
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.25
+	is_unique = yes
+	
+	allowed_to_hold = {
+		learning = 12
+		age = 40
+	}
+	
+	allowed_to_grant = { government = western_chinese_government }
+}
+
+title_fulin_patrikos = { #Some possible Chinese equivalents, but very tied to Roman culture.
+	dignity = 2.0
+	grant_limit = 10
+	opinion_effect = 5
+	
+	show_as_title = yes
+	
+	monthly_salary = 0.03
+	monthly_prestige = 0.125
+	
+	allowed_to_hold = {
+		NOR = { 
+			family = FROM
+			is_close_relative = FROM
+			has_minor_title = title_excellency
+		}
+		is_adult = yes
+	}
+	
+	allowed_to_grant = {
+		government = western_chinese_government
+		has_landed_title = e_fulin
+		has_game_rule = {
+			name = daqin_minor_titles_rule
+			value = unrestricted
+		}
+	}
+	message = yes
+}
+
+title_fulin_hypatos = { #As Patrikos.
+	dignity = 1.0
+	grant_limit = 20
+	opinion_effect = 5
+	
+	monthly_salary = 0.03
+	monthly_prestige = 0.0625
+	
+	allowed_to_hold = {
+		NOR = { 
+			family = FROM
+			is_close_relative = FROM
+			has_minor_title = title_excellency
+		}
+		is_adult = yes
+	}
+	
+	allowed_to_grant = {
+		government = western_chinese_government
+		has_landed_title = e_fulin
+		has_game_rule = {
+			name = daqin_minor_titles_rule
+			value = unrestricted
+		}
+	}
+	message = yes
+}
+title_daqin_patrician = { #Some possible Chinese equivalents, but very tied to Roman culture.
+	dignity = 2.0
+	grant_limit = 10
+	opinion_effect = 5
+	
+	show_as_title = yes
+	
+	monthly_salary = 0.03
+	monthly_prestige = 0.125
+	
+	allowed_to_hold = {
+		NOR = { 
+			family = FROM
+			is_close_relative = FROM
+			has_minor_title = title_excellency
+		}
+		is_adult = yes
+	}
+	
+	allowed_to_grant = {
+		government = western_chinese_government
+		has_landed_title = e_daqin
+		has_game_rule = {
+			name = daqin_minor_titles_rule
+			value = unrestricted
+		}
+	}
+	message = yes
+}
+
+title_daqin_consul = { #As Patrician.
+	dignity = 1.0
+	grant_limit = 20
+	opinion_effect = 5
+	
+	monthly_salary = 0.03
+	monthly_prestige = 0.0625
+	
+	allowed_to_hold = {
+		NOR = { 
+			family = FROM
+			is_close_relative = FROM
+			has_minor_title = title_excellency
+		}
+		is_adult = yes
+	}
+	
+	allowed_to_grant = {
+		government = western_chinese_government
+		has_landed_title = e_daqin
+		has_game_rule = {
+			name = daqin_minor_titles_rule
+			value = unrestricted
+		}
+	}
+	message = yes
+}
+
+title_excellency = { #A generic blended title
+	dignity = 3.0
+	grant_limit = 5
+	opinion_effect = 10
+	
+	monthly_salary = 0.005
+	monthly_prestige = 0.25
+	
+	show_as_title = yes
+	
+	allowed_to_hold = {
+		NOR = {
+			has_minor_title = title_fulin_hypatos
+			has_minor_title = title_fulin_patrikos
+			has_minor_title = title_daqin_consul
+			has_minor_title = title_daqin_patrician
+		}
+		is_adult = yes
+	}
+	
+	allowed_to_grant = { government = western_chinese_government }
+}

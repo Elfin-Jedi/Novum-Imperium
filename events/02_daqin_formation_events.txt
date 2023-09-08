@@ -1,0 +1,79 @@
+namespace = DAQIN
+
+narrative_event = { #Fulin is formed
+	id = DAQIN.00201
+	title = DAQIN.00201.title
+	desc = DAQIN.00201.desc
+	picture = GFX_evt_china_expansionist
+	border =  GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes #triggered by decision
+	
+	immediate = {
+		set_government_type = western_chinese_government
+	}
+	
+	option = {
+		name = DAQIN.00201.OPTA
+		add_artifact = jian_sword
+		give_nickname = nick_the_roaring_flame
+		if = {
+			limit = { is_female = no }
+			create_bloodline = { type = fulin_founder_bloodline }
+		}
+		if = { 
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = fulin_founder_bloodline
+				inheritance = matrilineal
+			}		
+		}
+		add_trait = restitutor #Stops a tyrant who forms Fulin from immediately losing it
+	}
+}
+
+narrative_event = { #Daqin is formed
+	id = DAQIN.00202
+	title = DAQIN.00202.title
+	desc = DAQIN.00202.desc
+	picture = GFX_evt_rome_restored_byzantine
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes #On decision
+	
+	option = {
+		name = DAQIN.00202.OPTA
+		add_artifact = chinese_dragon_amulet
+		if = {
+			limit = { has_nickname = no }
+			give_nickname = nick_the_dragon
+		}
+		add_trait = restitutor
+		primary_title = {
+			show_scope_change = no
+			any_direct_de_jure_vassal = { de_jure_liege = e_daqin }
+			e_daqin = {
+				show_scope_change = no
+				grant_title = ROOT
+				make_primary_title = yes
+				copy_title_laws = e_fulin
+				copy_title_history = e_fulin
+				add_law = succ_primogeniture
+				add_law = ze_administration_laws_2
+			}
+		}
+		any_demesne_title = {
+			limit = {
+				NOT = {
+					title = e_daqin
+				}
+				tier = EMPEROR
+			}
+			destroy_landed_title = THIS
+		}
+		e_fulin = { unsafe_destroy_landed_title = THIS }
+		activate_title = { title = e_fulin status = no }
+	}
+	
+	after = { set_government_type = western_chinese_government }
+}

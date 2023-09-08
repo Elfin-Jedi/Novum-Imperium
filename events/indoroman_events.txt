@@ -107,9 +107,14 @@ narrative_event = {
 					trait="lunatic"
 					trait="brilliant_strategist"
 					trait="organizer"
+					trait = sympathy_pagans
 					historical = yes
 				}
 				new_character = {
+				add_character_modifier = { 
+		        name = ire_charge_the_west
+		        duration = -1
+		        }
 				give_nickname = nick_dogdays
 				set_government_type = indoroman_imperial_government
 				add_artifact = crown_indoroman
@@ -195,7 +200,7 @@ narrative_event = {
 					set_title_landless = { title = THIS status = yes }
 					set_title_flag = temporary_landless_title
 		            add_law = crown_authority_2
-	                add_law = succ_byzantine_elective
+	                add_law = succ_vieti_elective
 	                add_law = centralization_3
 	                add_law = imperial_administration
 	                add_law = ze_administration_laws_2
@@ -203,6 +208,7 @@ narrative_event = {
 	                add_law = revoke_title_law_1
 					add_law = status_of_women_4
 					add_law = out_of_realm_inheritance_law_1
+					gender_succ = cognatic_succession
 						if = {
 							limit = {
 								has_dlc = "Zeus"
@@ -262,21 +268,21 @@ narrative_event = {
 	        culture = romanoindian
 	        random_traits = yes
 	        trait = brave
-	        religion = vieti_orthodox
+	        religion = hereclemasculist_pagan
 	        }
 			create_random_soldier = {
 	        dynasty = none
 	        culture = romanoindian
 	        random_traits = yes
 	        trait = brave
-	        religion = vieti_orthodox
+	        religion = hereclemasculist_pagan
 	        }
 			create_random_soldier = {
 	        dynasty = none
 	        culture = romanoindian
 	        random_traits = yes
 	        trait = content
-	        religion = vieti_orthodox
+	        religion = vieti_mithras_pagan
 	        }
 			create_random_soldier = {
 	        dynasty = none
@@ -319,19 +325,43 @@ narrative_event = {
 	        religion = vieti_orthodox
 	        }
 			spawn_good_commander_effect = yes
+			new_character = {
+			religion = vieti_mithras_pagan
+			}
 			spawn_good_commander_effect = yes
+			new_character = {
+			religion = hereclemasculist_pagan
+			}
 			spawn_good_commander_effect = yes
+			new_character = {
+			religion = hereclemasculist_pagan
+			}
 			spawn_good_commander_effect = yes
 	        spawn_great_commander_effect = yes
+			new_character = {
+			religion = hereclemasculist_pagan
+			}
 		    spawn_great_commander_effect = yes
 		    spawn_fantastic_commander_effect = yes
-		    spawn_elder_effect = yes
+			spawn_elder_effect = yes
+			new_character = {
+			health = 3
+			religion = hereclemasculist_pagan
+			}
+			spawn_elder_effect = yes
 			new_character = {
 			health = 2
+			religion = hereclemasculist_pagan
 			}
 		    spawn_elder_effect = yes
 			new_character = {
 			health = 2
+			religion = romist_pagan
+			}
+		    spawn_elder_effect = yes
+			new_character = {
+			health = 2
+			religion = romist_pagan
 			}
 			spawn_elder_effect = yes
 			new_character = {
@@ -340,6 +370,7 @@ narrative_event = {
 		    spawn_elder_effect = yes
 			new_character = {
 			health = 2
+			religion = hereclemasculist_pagan
 			}
 			spawn_elder_effect = yes
 			new_character = {
@@ -573,6 +604,7 @@ character_event = {
 		new_character = {
 		wealth = 250
 		fertility = 1
+		health = 3
 		set_character_flag = mighty_brit_khan
 		add_friend = PREV
 		add_friend = event_target:walakrios_kun
@@ -1257,6 +1289,78 @@ character_event = {
 	}
 	
 	immediate = {
+	any_vassal = {
+	any_demesne_title = { add_law = status_of_women_4 } 
+	primary_title = { gender_succ = true_cognatic }
+	any_vassal = {
+	any_demesne_title = { add_law = status_of_women_4 } 
+	primary_title = { gender_succ = true_cognatic }
+	}
+	}
+	random_list = {
+	1 = {
+	create_random_priest = {
+				random_traits = yes
+				dynasty = actually_culture
+				religion = romist_pagan
+				female = no
+				attributes = {
+					diplomacy = 2
+					learning = 8
+					stewardship = 2
+					intrigue = 2
+					martial = 2
+				}
+				trait = mystic
+			}
+			new_character = {
+			health = 1
+			}
+			create_random_steward = {
+				random_traits = yes
+				dynasty = actually_culture
+				religion = vieti_mithras_pagan
+				female = no
+				attributes = {
+					diplomacy = 2
+					learning = 2
+					stewardship = 8
+					intrigue = 2
+					martial = 2
+				}
+				trait = administrator
+			}
+			new_character = {
+			health = 1
+			}
+	}
+	1 = {
+	spawn_great_commander_effect = yes
+	new_character = {
+	health = 1
+	religion = hereclemasculist_pagan
+	}
+	spawn_great_commander_effect = yes
+	new_character = {
+	health = 1
+	religion = hereclemasculist_pagan
+	}
+	create_random_soldier = {
+	random_traits = yes
+	dynasty = actually_culture
+	religion = hereclemasculist_pagan
+	culture = romanoindian
+	female = 50
+	trait = skilled_tactician
+	trait = strong
+	trait = quick
+	trait = cruel
+	}
+	new_character = {
+	health = 1
+	}
+	}
+	}
 	any_demesne_title = {
 		limit = {
 		can_be_given_away = yes
@@ -1269,7 +1373,53 @@ character_event = {
 			}
 			new_character = {
 			grant_title = PREV
+			random_list = {
+	2 = {
+	religion = vieti_orthodox
+	}
+	2 = {
+	religion = hereclemasculist_pagan
+	}
+	2 = {
+	religion = vieti_mithras_pagan
+	}
+	1 = {
+	religion = romist_pagan
+	}
+	}
+	}
+	}
+	random_demesne_title = {
+		limit = {
+		NOR = {
+		title = c_bikrampur
+		title = c_karmanta
+		}
+		can_be_given_away = yes
+		tier = count
+		}
+		create_random_soldier = {
+			random_traits = yes
+			female = 22
+			culture = romanoindian
 			}
+			new_character = {
+			grant_title = PREV
+			random_list = {
+	2 = {
+	religion = vieti_orthodox
+	}
+	2 = {
+	religion = hereclemasculist_pagan
+	}
+	2 = {
+	religion = vieti_mithras_pagan
+	}
+	1 = {
+	religion = romist_pagan
+	}
+	}
+	}
 	}
 	}
 }
@@ -1344,6 +1494,7 @@ character_event = {
 		name = madman_of_deccan
 		duration = -1
 		}
+		remove_character_modifier = ire_charge_the_west
 		change_infamy = {
 		value = -10000
 		}
@@ -1372,6 +1523,53 @@ character_event = {
 	}
 	
 	immediate = {
+	add_character_modifier = { 
+	name = britannican_taxation_methods
+	years = 40
+	inherit = yes
+	stacking = yes
+	}
+	create_random_soldier = {
+	dynasty = none
+	female = yes
+	culture = romanoindian
+	random_traits = yes
+	trait = brave
+	#trait = strong
+	trait = quick
+	religion = hereclemasculist_pagan
+	}
+		
+			new_character = {
+			#will_not_marry_effect = yes
+			d_hyperborean_amazons = {
+			grant_title = PREV
+			gender_succ = enatic
+			add_law = status_of_women_4
+			}
+			add_artifact = spatha_tier_2_new
+			add_artifact = indoroman_lamellar
+			add_artifact = bow_tier_2_new
+			add_trait = strong
+			add_trait = content
+			add_trait = lustful
+			add_trait = shrewd
+			primary_title = { gender_succ = true_cognatic }
+			any_demesne_title = { add_law = status_of_women_4 } 
+			set_defacto_liege = PREV
+			wealth = 70
+		}
+		random_demesne_title = {
+		limit = {
+		can_be_given_away = yes
+		tier = count
+		}
+			new_character = {
+			grant_title = PREV
+			religion = hereclemasculist_pagan
+			culture = romanoindian
+	}
+	}
 		e_britannica = {
 		clr_title_flag = temporary_landless_title
 		}
@@ -1687,11 +1885,19 @@ character_event = {
 	prestige = 400
 	culture = romanoindian
 	k_vietia = {
-	succession = feudal_elective
+	add_law = succ_vieti_elective
 	grant_title = PREV
 	}
 	k_romala = {
-	succession = feudal_elective
+	add_law = succ_vieti_elective
+	grant_title = PREV
+	}
+	d_occiromalus = {
+	add_law = succ_vieti_elective
+	grant_title = PREV
+	}
+	d_solromalus = {
+	add_law = succ_vieti_elective
 	grant_title = PREV
 	}
 	activate_title = { title = k_arcadi status = yes }
@@ -2317,7 +2523,7 @@ character_event = {
 		set_title_landless = { title = THIS status = yes }
 		set_title_flag = temporary_landless_title
 	    grant_title = event_target:the_gr8_khan
-	    succession = feudal_elective
+	    add_law = succ_vieti_elective
 		add_law = revoke_title_law_1
 		set_title_landless = { title = THIS status = yes }
 		set_title_flag = temporary_landless_title
@@ -2593,7 +2799,7 @@ any_character = {
 		set_title_landless = { title = THIS status = yes }
 		set_title_flag = temporary_landless_title
 	    grant_title = event_target:wallys_wild_walakriotic_ride
-	    succession = feudal_elective
+	    add_law = succ_vieti_elective
 		add_law = revoke_title_law_1
 		set_title_landless = { title = THIS status = yes }
 		set_title_flag = temporary_landless_title
@@ -2746,7 +2952,7 @@ any_character = {
 		set_title_landless = { title = THIS status = yes }
 		set_title_flag = temporary_landless_title
 	    grant_title = event_target:the_gr8_khan
-	    succession = feudal_elective
+	    add_law = succ_vieti_elective
 		add_law = revoke_title_law_1
 		set_title_landless = { title = THIS status = yes }
 		set_title_flag = temporary_landless_title
@@ -3025,7 +3231,7 @@ any_character = {
 		set_title_landless = { title = THIS status = yes }
 		set_title_flag = temporary_landless_title
 	    grant_title = event_target:wallys_wild_walakriotic_ride
-	    succession = feudal_elective
+	    add_law = succ_vieti_elective
 		add_law = revoke_title_law_1
 		set_title_landless = { title = THIS status = yes }
 		set_title_flag = temporary_landless_title
@@ -3179,7 +3385,7 @@ any_character = {
 		set_title_landless = { title = THIS status = yes }
 		set_title_flag = temporary_landless_title
 	    grant_title = event_target:the_gr8_khan
-	    succession = feudal_elective
+	    add_law = succ_vieti_elective
 		add_law = revoke_title_law_1
 		set_title_landless = { title = THIS status = yes }
 		set_title_flag = temporary_landless_title
@@ -3455,7 +3661,7 @@ any_character = {
 		set_title_landless = { title = THIS status = yes }
 		set_title_flag = temporary_landless_title
 	    grant_title = event_target:wallys_wild_walakriotic_ride
-	    succession = feudal_elective
+	    add_law = succ_vieti_elective
 		add_law = revoke_title_law_1
 		set_title_landless = { title = THIS status = yes }
 		set_title_flag = temporary_landless_title
@@ -3580,6 +3786,30 @@ any_character = {
 		custom_tooltip = { text = ir_sad_generals }
 		custom_tooltip = { text = ir_disable_expeditions }
 		prestige = 100
+		hidden_tooltip = {
+		set_global_flag = indorome_consolidatio
+		create_random_soldier = {
+	    dynasty = none
+	    culture = romanoindian
+	    random_traits = yes
+	    trait = brave
+	    religion = vieti_orthodox
+	    }
+		
+		new_character = {
+			d_thidelepean_iuniores = {
+			grant_title = PREV
+			}
+			add_artifact = spatha_tier_1_new
+			add_artifact = lance_tier_1_new
+			add_artifact = indoroman_lamellar
+			add_trait = content
+			primary_title = { gender_succ = true_cognatic }
+			any_demesne_title = { add_law = status_of_women_4 } 
+			set_defacto_liege = PREV
+			wealth = 40
+		}
+		}
 		if = {
 		limit = {
 		trait = lunatic
@@ -10955,6 +11185,7 @@ narrative_event = {
 		has_character_flag = hektorios_hardrada
 		}
 		save_event_target_as = hektorios_moment
+		religion = vieti_orthodox
 		wealth = 300
 		character_event = { id = indoromans.43 days = 10 }
 		spawn_fantastic_commander_effect = yes
@@ -10989,7 +11220,7 @@ narrative_event = {
 		set_title_landless = { title = THIS status = yes }
 		set_title_flag = temporary_landless_title
 	    grant_title = event_target:hektorios_moment
-	    succession = feudal_elective
+	    add_law = succ_vieti_elective
 		add_law = revoke_title_law_1
 		set_title_landless = { title = THIS status = yes }
 		set_title_flag = temporary_landless_title
@@ -11097,6 +11328,7 @@ narrative_event = {
 		has_character_flag = hektorios_hardrada
 		}
 		save_event_target_as = hektorios_moment
+		religion = vieti_orthodox
 		wealth = 300
 		character_event = { id = indoromans.43 days = 10 }
 		spawn_fantastic_commander_effect = yes
@@ -11131,7 +11363,7 @@ narrative_event = {
 		set_title_landless = { title = THIS status = yes }
 		set_title_flag = temporary_landless_title
 	    grant_title = event_target:hektorios_moment
-	    succession = feudal_elective
+	    add_law = succ_vieti_elective
 		add_law = revoke_title_law_1
 		set_title_landless = { title = THIS status = yes }
 		set_title_flag = temporary_landless_title
@@ -11267,6 +11499,18 @@ character_event = {
 	is_triggered_only = yes
 	
 	immediate = {
+	spawn_great_commander_effect = yes
+	new_character = {
+	religion = hereclemasculist_pagan
+	}
+	spawn_fantastic_commander_effect = yes
+	new_character = {
+	religion = hereclemasculist_pagan
+	}
+	spawn_fantastic_commander_effect = yes
+	new_character = {
+	religion = vieti_mithras_pagan
+	}
 
 	}
 	
@@ -11938,8 +12182,7 @@ narrative_event = {
 					attributes = {
 						martial=9
 					}
-					health = 2
-					fertility = 1.1
+					fertility = 1.5
 					#religion="hellenic_pagan"
 					religion="hereclemasculist_pagan"
 					culture="romanoindian"
@@ -11956,9 +12199,11 @@ narrative_event = {
 					historical = yes
 				}
 				new_character = {
+				health = 4
 				add_artifact = spatha_tier_2_new
 				add_artifact = spatha_tier_1_new
 				add_artifact = indoroman_lamellar
+				add_artifact = vieti_pure_latin_texts
 				add_claim = e_indo_roman_empire
 				d_chadican_uprising = {
 	            grant_title = new_character
@@ -14210,6 +14455,74 @@ character_event = {
                 remove_holding_modifier = recently_conquered
                 refill_holding_levy = yes
             }
+	}
+	}
+}
+
+character_event = {
+	id = indoromans.2220
+	hide_window = yes	
+	#min_age = 7
+	
+	trigger = {
+		is_female = no
+		has_landed_title = d_hyperborean_amazons
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+	create_random_soldier = {
+	dynasty = none
+	female = yes
+	culture = romanoindian
+	random_traits = yes
+	trait = brave
+	#trait = strong
+	religion = hereclemasculist_pagan
+	}
+	new_character = {
+	d_hyperborean_amazons = {
+	grant_title = PREV
+	gender_succ = enatic
+	add_law = status_of_women_4
+	}
+	}
+	abdicate_to = new_character
+	new_character = {
+	add_artifact = bow_tier_1_new
+	create_random_soldier = {
+	random_traits = yes
+	dynasty = actually_culture
+	religion = hereclemasculist_pagan
+	culture = romanoindian
+	female = yes
+	trait = skilled_tactician
+	trait = strong
+	trait = quick
+	trait = cruel
+	trait = homosexual
+	}
+	create_random_soldier = {
+	random_traits = yes
+	dynasty = actually_culture
+	religion = hereclemasculist_pagan
+	culture = romanoindian
+	female = yes
+	trait = just
+	trait = robust
+	trait = brave
+	}
+	create_random_soldier = {
+	random_traits = yes
+	dynasty = actually_culture
+	religion = hereclemasculist_pagan
+	culture = romanoindian
+	female = yes
+	trait = brave
+	}
 	}
 	}
 }

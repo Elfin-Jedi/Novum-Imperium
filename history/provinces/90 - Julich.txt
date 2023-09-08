@@ -4,24 +4,34 @@
 title = c_julich
 
 # Settlements
-max_settlements = 5
-
+max_settlements = 4
 b_julich = castle
-b_duren = city
+b_aachen = city
+b_prum = temple
 
-#b_steinfeld = temple 
-#b_zulpich = city 
-#b_arenberg = castle
-
-#b_hengebach = castle
-#b_schleiden = castle
+#b_roermond = city
+#b_geldern = castle
+#b_duren = castle
+#b_moers = castle
+#b_monschau = temple
 
 # Misc
-culture = franconian
+culture = old_frankish
 religion = catholic
 
 # History
-1070.1.1= { b_steinfeld = temple }
-1166.1.1= { b_arenberg = castle }
-1170.1.1 = { culture = german }
-1278.1.1= { b_zulpich = city }
+
+769.1.1 = {
+	build_wonder = wonder_julich_cathedral
+	set_wonder_stage = 1
+}
+
+790.1.1 = { 
+	culture = german 
+	set_wonder_stage = 2
+}
+
+
+820.1.1 = {
+	set_wonder_stage = 3
+}

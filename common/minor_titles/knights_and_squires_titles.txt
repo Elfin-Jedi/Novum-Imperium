@@ -1,0 +1,23 @@
+title_knight = {
+	show_as_title = yes
+	realm_in_name = yes
+	dignity = 1.75
+	grant_limit = 100
+	revoke_allowed = no
+
+	monthly_salary = 0.80
+	monthly_prestige = 0.50
+	
+	allowed_to_grant = {
+		always = no
+	}
+	allowed_to_hold = {
+		trait = knight
+	}
+	
+	gain_effect = {	}
+	# lose_effect = { }
+
+	message = no
+}
+

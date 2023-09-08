@@ -1,0 +1,661 @@
+﻿song = {
+	name = "crusaderkings2_maintitle.ogg"
+	song_name = "Crusader Kings 2 Maintitle"
+	
+	chance = {
+		modifier = {
+			factor = 1
+		}		
+	}
+	 
+}
+
+song = {
+	name = "avemaria.ogg"
+	song_name = "Ave Maria"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = catholic }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+	}
+	 
+}
+
+song = {
+	name = "confiteor.ogg"
+	song_name = "Confiteor"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = catholic }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+	}
+	 
+}
+
+song = {
+	name = "dapacemdomine.ogg"
+	song_name = "Da Pacem Domine"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = catholic }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+	}
+	 
+}
+
+song = {
+	name = "deumverum.ogg"
+	song_name = "Deum Verum"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = catholic }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+	}
+	 
+}
+
+song = {
+	name = "deusinadjutoriummeumintende.ogg"
+	song_name = "Deus in adjutorium meum intende"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = catholic }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+	}
+	 
+}
+
+song = {
+	name = "diesirae.ogg"
+	song_name = "Dies Irae"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = catholic }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+	}
+	 
+}
+
+song = {
+	name = "kyrieeleison.ogg"
+	song_name = "Kyrie Eleison"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion_group = christian }
+		}		
+	}
+	 
+}
+
+song = {
+	name = "magnificat.ogg"
+	song_name = "Magnificat"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = catholic }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+	}
+	 
+}
+
+song = {
+	name = "paternoster.ogg"
+	song_name = "Pater Noster"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = catholic }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+	}
+	 
+}
+
+song = {
+	name = "agnusdei.ogg"
+	song_name = "Agnus Dei"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = catholic }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+	}
+	 
+}
+
+song = {
+	name = "sanctedei.ogg"
+	song_name = "Sancte Dei"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = catholic }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+	}
+	 
+}
+
+song = {
+	name = "caritasdei.ogg"
+	song_name = "Caritas Dei"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = catholic }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+		modifier = {
+			factor = 1.5 
+			trait = humble 
+		}
+	}
+	 
+}
+
+song = {
+	name = "eduxitdominus.ogg"
+	song_name = "Eduxit Dominus"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = catholic }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+	}
+	 
+}
+
+song = {
+	name = "laetareierusalem.ogg"
+	song_name = "Laetare Ierusalem"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = catholic }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+	}
+	 
+}
+
+
+
+song = {
+	name = "misericordiadomini.ogg"
+	song_name = "Misericordia Domini"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = catholic }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+	}
+	 
+}
+
+song = {
+	name = "venisanctespiritus.ogg"
+	song_name = "Veni Sancte spiritus"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = catholic }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+		modifier = {
+			factor = 1.5
+			trait = theologian
+		}
+	}
+	 
+}
+
+song = {
+	name = "innominedomini.ogg"
+	song_name = "In Nomine Domini"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = catholic }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian}
+		}
+		modifier = {
+			factor = 1.5
+			trait = crusader
+		}
+	}
+	 
+}
+
+song = {
+	name = "alleluianativitasperotin.ogg"
+	song_name = "Alleluia Nativitas- magister Perotinus"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = catholic }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+		modifier = {
+			factor = 0.1 
+			NOT = { year_of_birth = 1100 }
+		}
+	}
+	 
+}
+
+song = {
+	name = "sederuntprincipesperotin.ogg"
+	song_name = "Sederunt Principes-magister Perotinus"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = catholic }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+		modifier = {
+			factor = 0.1 
+			NOT = { year_of_birth = 1100 }
+		}
+	}
+	 
+}
+
+song = {
+	name = "videruntomnesperotin.ogg"
+	song_name = "Viderunt Omnes-magister Perotinus"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = catholic }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+		modifier = {
+			factor = 0.1 
+			NOT = { year_of_birth = 1100 }
+		}
+	}
+	 
+}
+
+song = {
+	name = "dominusdixitadme.ogg"
+	song_name = "Dominus Dixit ad me"
+	
+	chance = {
+		factor = 3 
+		modifier = {
+			factor = 0
+			NOT = {	religion_group = christian }
+		}		
+	}
+	 
+}
+
+song = {
+	name = "tecumprincipium.ogg"
+	song_name = "Tecum Principium"
+	
+	chance = {
+		factor = 3 
+		modifier = {
+			factor = 0
+			NOT = {	religion_group = christian }
+		}		
+	}
+	 
+}
+
+
+song = {
+	name = agniparthenedespina.ogg
+	song_name = "Agni Parthene Despina"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = orthodox }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+	}
+	 
+}
+song ={
+	name = deutelaoi.ogg
+	song_name = "Deute Laoi"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = orthodox }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+	}
+	 
+}
+		
+song = { 
+	name = oairontinamartiantoukosmou.ogg
+	song_name = "O Airon Tin Amartian Tou Kosmou"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = orthodox }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+	}
+	 
+}
+		
+song = {
+	name = doxastetonarchontaapotousouranous.ogg
+	song_name = "Doxaste Aon Archonta Apo Tous Ouranous"
+	
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = orthodox }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+	}
+	 
+}
+	
+song = {
+	name = tiypermachostratigo.ogg
+	song_name = "Ti Ypermacho Stratigo"
+	chance = {
+		factor = 2 
+		modifier = {
+			factor = 0
+			NOT = {	religion = orthodox }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {religion_group = christian }
+		}
+	}
+	 
+}
+		
+song = {
+	name = in_taberna_quando_sumus.ogg
+	song_name = "In Taberna Quando Sumus"
+	
+	chance = {
+		factor = 2
+		modifier = { 
+		factor = 0.5
+		calc_true_if = {
+			amount = 2
+			trait = chaste
+			trait = temperate 
+			trait = diligent
+			trait = zealous
+		}
+		}
+	
+	}
+	 
+}
+
+
+song = { 
+	name = los_set_gotxs.ogg
+	song_name = "Los Set Gotxs"
+	chance = {
+		factor = 1
+		modifier = {
+		factor = 2 
+		trait = poet }
+	}
+	 
+}
+		
+song = {
+	name = miri_it_is_while_sumer_ilast.ogg
+	song_name = "Miri It is while Sumer Ilast"
+	chance = {
+		factor = 1
+		modifier = {
+		factor = 2 
+		trait = poet }
+	}
+	 
+}
+		
+song = {
+	name = o_que_da_guerra_levou_cavaleiros.ogg
+	song_name = "O que da Guerra Levou Cavaleiros"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2 
+			trait = poet 
+		}
+		modifier = {
+			factor = 2 
+			any_war = { using_cb = crusade}
+		}
+	}
+	 
+}
+		
+song = {
+	name = palastinalied.ogg
+	song_name = "Palastinalied"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2 
+			calc_true_if = {
+				amount = 2
+				culture = germanic
+				religion = catholic
+				is_adult = yes
+				any_war = { using_cb = crusade}
+			} 
+		}
+	}
+	 
+}
+
+		
+song = {
+	name = tempus_est_iocundus.ogg
+	song_name = "Tempus est Iocundus"
+	chance = {
+		factor = 3 } }
+		
+song = {
+	name = tres_mocas_cantavan_damor.ogg
+	song_name = "Tres Mocas cantavan d'Amor"
+	chance = {
+		factor = 1
+		modifier = {
+		factor = 2 
+		trait = poet }
+	}
+	 
+}
+
+
+song = { 	
+	name = chanson_de_guillaume.ogg
+	song_name = "Chanson de Guillaume"
+	chance = {
+		factor = 1
+		modifier = {
+		factor = 2 
+		trait = poet }
+	}
+	 
+}
+		
+song = { 
+	name = ja_nuns_hons_pris.ogg
+	song_name = "Ja nuns hons Pris"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3 
+			calc_true_if = {
+			amount = 4
+				trait = poet
+				culture = english
+				culture = norman
+				culture = french 
+				culture = breton
+				culture = saxon
+				year_of_birth = 1250
+				}
+		}
+				
+				
+			
+	}
+	 
+}
+		
+
+
+
+
+
+
+
+
+
+
+

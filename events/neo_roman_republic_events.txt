@@ -1,0 +1,278 @@
+namespace = NIR
+
+narrative_event = { #Roman Republic restored
+	id = NIR.08
+	title = NIR.08.T
+	desc = NIR.08.D
+	picture = GFX_evt_rome_restored_byzantine
+	
+	is_triggered_only = yes
+	
+	option = { #I'm the new Consul, hurray!
+		name = NIR.08.OPTA
+		trigger = { has_landed_title = e_italy }
+		hidden_tooltip = {
+			if = { #Hellenic Resurgence
+				limit = {
+					ai = no #It does some weird things with the holy sites
+					religion_group = christian
+					has_game_rule = {
+						name = hellenism_rule
+						value = on
+					}
+					OR = {
+						culture = greek 
+						culture = italian
+						culture = roman
+					}
+				}
+				character_event = { id = HF.23106 days = 155 } #This is the normal Hellenism event chain. It calls it an Empire a lot but needs must.		
+			}
+			if = { #Burn and Rebuild Rome.
+				limit = {
+					333 = { any_province_holding = { holding_type = temple count = 2 } } #Check if Gengis Khan or whomever hasn't already leveled the place down.
+				}
+				333 = { province_event = { id = NIR.081 days = 90 } } #Pings the province
+			}
+		}
+		prestige = 500
+		if = { 
+			limit = { is_female = no }
+			create_bloodline = {
+				type = renaissance_bloodline
+			}
+		}
+		if = {
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = renaissance_bloodline
+				inheritance = matrilineal
+			}		
+		}
+		sound_effect = bloodline_added
+	}
+	option = { #Are they allowed to do that?
+		name = NIR.08.OPTB
+		trigger = {
+			NOR = {
+				has_landed_title = e_hre
+				has_landed_title = e_italy
+				has_landed_title = e_byzantium
+			}
+		}
+	}
+	option = { #Roman Pretenders are upset
+		name = NIR.08.OPTC
+		trigger = {
+			OR = {
+				has_landed_title = e_hre
+				has_landed_title = e_byzantium
+			}
+		}
+		prestige = -500
+		character_event = { id = NIR.09 days = 60 random = 20 } #Deliberation over Republican pretenders
+	}
+}
+
+province_event = { #Event to trigger Rome burning on Republican take-over
+	id = NIR.081
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = { e_italy = { holder_scope = { character_event = { id = HF.23101 } } } } #This just results in the regular Rome burning event chain
+}
+
+character_event = { #Powerful Roman Pretender deliberates what to do
+	id = NIR.09
+	desc = NIR.09.D
+	picture = GFX_evt_suspicious_noble
+	
+	is_triggered_only = yes
+	
+	trigger = { e_italy = { owner = { government = merchant_republic_government } } } #Stops the Byz and HRE both asking and then fighting each other
+	
+	option = { #Issue ultimatum
+		name = NIR.09.OPTA
+		trigger = {
+			OR = {
+				ai = no #Players always get the option
+				AND = {
+					war = no
+					realm_size = 200 #Make sure they're big enough to want to fight
+					wealth = 100 #Ensure they've got enough money to actually fight a war if it comes to it
+					NOR = {
+						trait = craven #Cowards never fight
+						trait = content #Contents never strive for it
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 20
+			modifier = { ai_ambition = 20 factor = 2 } #Ambitious sorts will covet Italy
+			modifier = { has_education_martial_trigger = yes factor = 2 } #Soldiers by trade will want to pick a fight
+			modifier = { trait = envious factor = 1.5 } #Covetous
+		}
+		e_italy = { owner = { character_event = { id = NIR.10 } } }
+	}
+	
+	option = { #Gnash your teeth and do nothing
+		name = NIR.09.OPTB
+		prestige = -200
+		ai_chance = { factor = 10 }
+	}
+}
+
+character_event = { #Republican Doge recieves ultimatum
+	id = NIR.10
+	desc = NIR.10.D
+	picture = GFX_evt_throne_room_byzantine
+	
+	is_triggered_only = yes
+	
+	trigger = { e_italy = { owner = { government = merchant_republic_government } } } #Just to be extra sure if it's handed over nothing breaks
+	
+	option = { #Hand your title over
+		name = NIR.10.OPTA
+		prestige = -500
+		trait = craven
+		FROM = {
+			usurp_title = e_italy
+			opinion = {
+				who = ROOT
+				modifier = opinion_restored_to_rome #This is supposed to be for the Pope but you ARE restoring one of the Roman pretenders to Rome, so it works
+			}
+			reverse_opinion = {
+				who = ROOT
+				opinion = opinion_subjugated
+			}
+		}
+		e_italy = {
+			set_name = "Italia"
+			adjective = "Italian"
+			set_coa = e_italy
+		}
+		narrative_event = { id = NIR.11 }
+		any_playable_ruler = { limit = { ai = no } narrative_event = { id = NIR.11 } }
+	}
+	
+	option = { #Don't hand the title over
+		name = NIR.10.OPTB
+		trait = brave
+		FROM = {
+			reverse_opinion = {
+				who = ROOT
+				opinion = promised_to_depose_me
+			}
+			opinion = {
+				who = ROOT
+				opinion = opinion_promsied_to_depose_him
+			}
+			character_event = { id = NIR.12 }
+		}
+	}
+}
+
+narrative_event = { #Doge hands over Italy to Roman Pretender, notify everyone
+	id = NIR.11
+	title = NIR.11.T
+	desc = NIR.11.D
+	picture = GFX_evt_rome_falls
+	
+	is_triggered_only = yes
+	
+	option = { #Well that was short lived
+		name = NIR.11.OPTA
+		trigger = { NOT = { has_landed_title = e_italy } }
+	}
+	option = { #Hurray
+		name = NIR.11.OPTB
+		trigger = { has_landed_title = e_italy }
+		prestige = 500
+	}
+}
+character_event = { #Doge refuses, Pretender granted claim
+	id = NIR.12
+	desc = NIR.12.D
+	picture = GFX_evt_suspicious_noble
+	
+	is_triggered_only = yes
+	
+	option = { #He will regret this!
+		name = NIR.12.OPTA
+		add_pressed_claim = e_italy
+	}
+}
+
+narrative_event = { #Roman Republican Renaissance is here!
+	id = NIR.13
+	title = NIR.13.T
+	desc = NIR.13.D
+	picture = GFX_evt_market_byzantine
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NIR.13.OPTA
+		trigger = { has_landed_title = c_roma }
+		custom_tooltip = { text = latium_renaissance_upgrade.TT }
+		hidden_tooltip = {
+			province = {
+				333 = {
+					add_province_modifier = {
+						modifier = focused_traders
+						duration = -1
+					}
+					add_province_modifier = {
+						modifier = scholar_foundation_province
+						duration = -1
+					}
+					add_province_modifier = {
+						modifier = center_of_worship_province #Rome exclusive for all the damn temples there! Plus, y'know... it's Rome, it is that.
+						duration = -1
+					}
+					increase_prosperity_effect = yes
+				}
+				243 = { #Orvieto
+					add_province_modifier = {
+						modifier = focused_traders
+						duration = -1
+					}
+					add_province_modifier = {
+						modifier = scholar_foundation_province
+						duration = -1
+					}
+					increase_prosperity_effect = yes
+					add_holding_slot = 1
+				}
+				332 = { #Orbotello
+					add_province_modifier = {
+						modifier = focused_traders
+						duration = -1
+					}
+					add_province_modifier = {
+						modifier = scholar_foundation_province
+						duration = -1
+					}
+					increase_prosperity_effect = yes
+					add_holding_slot = 1
+				}
+			}
+		}
+		add_artifact = magnificent_painting
+		prestige = 750
+	}
+	option = {
+		name = NIR.13.OPTB
+		trigger = { 
+			independent = no
+			government = merchant_republic_government
+		}
+		prestige = 200
+	}
+	option = {
+		name = NIR.13.OPTC
+		trigger = { NOT = { government = merchant_republic_government } } #Everyone else
+	}
+}

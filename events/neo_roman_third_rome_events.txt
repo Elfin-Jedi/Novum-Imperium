@@ -1,0 +1,220 @@
+namespace = NIR
+
+character_event = { #Become tsar or set up puppet tsar?
+	id = NIR.14
+	desc = NIR.14.D
+	pictire = GFX_evt_powerful_ruler
+	
+	is_triggered_only = yes
+	
+	
+	option = { #Become tsar
+		name = NIR.14.OPTA
+		clr_character_flag = selecting_tsar_flag
+		set_global_flag = third_rome_formed
+		wealth = -1000
+		primary_title = {
+			show_scope_change = no
+			e_third_rome = {
+				show_scope_change = no
+				grant_title = ROOT
+				copy_title_laws = PREV
+				add_law = succ_primogeniture
+			}
+		}
+		any_demesne_title = {
+			limit = {
+				tier = EMPEROR
+				NOT = { title = e_third_rome }
+			}
+			destroy_landed_title = THIS
+		}
+		k_orthodox = { #Restores the Ecumenical Patriarch if he's gone walkabouts
+			owner = {
+				grant_title_no_opinion = b_hagiasophia
+				set_defacto_liege = ROOT
+			}
+		}
+		add_trait = tsar
+		give_nickname = nick_the_glorious
+		if = { 
+			limit = { is_female = no }
+			create_bloodline = {
+				type = third_rome_bloodline
+			}
+		}
+		if = {
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = third_rome_bloodline
+				inheritance = matrilineal
+			}		
+		}
+		sound_effect = bloodline_added
+		
+		narrative_event = { id = NIR.16 } #Declaration event
+		any_playable_ruler = {
+			limit = { ai = no }
+			narrative_event = { id = NIR.16 } #Declaration event
+		}
+	}
+	option = { #Select a tsar
+		name = NIR.14.OPTB
+		trigger = { ai = no } #I don't trust the AI with this
+		custom_tooltip = { text = select_tsar_TT }
+	}
+}
+	
+character_event = { #tsar confirmation
+	id = NIR.15
+	desc = NIR.15.D
+	pictire = GFX_evt_monk
+	
+	is_triggered_only = yes
+	
+	option = { #Yes, they will be the tsar
+		name = NIR.15.OPTA
+		clr_character_flag = selecting_tsar_flag
+		set_global_flag = third_rome_formed
+		wealth = -1000
+		event_target:tsar_candidate = {
+			primary_title = {
+				show_scope_change = no
+				e_third_rome = {
+					show_scope_change = no
+					grant_title = PREVPREV
+					add_law = ze_administration_2
+					add_law = vice_royalty_2
+					add_law = succ_primogeniture
+				}
+			}
+			add_trait = tsar
+			give_nickname = nick_the_glorious
+			if = { 
+				limit = { is_female = no }
+				create_bloodline = {
+					type = third_rome_bloodline
+				}
+			}
+			if = {
+				limit = { is_female = yes }
+				create_bloodline = {
+					type = third_rome_bloodline
+					inheritance = matrilineal
+				}		
+			}
+			sound_effect = bloodline_added
+			set_defacto_liege = THIS #Render the new tsar independent
+		}
+		
+		ROOT = { make_tributary = { who = event_target:tsar_candidate tributary_type = permanent } } #Makes Russia the suzerign for the young Rome - it's a puppet state, sort of
+		
+		k_orthodox = { #Restores the Ecumenical Patriarch if he's gone walkabouts
+			owner = {
+				grant_title_no_opinion = b_hagiasophia
+				set_defacto_liege = event_target:tsar_candidate
+			}
+		}
+		
+		narrative_event = { id = NIR.16 } #Declaration event
+		
+		any_playable_ruler = {
+			limit = { ai = no }
+			narrative_event = { id = NIR.16 } #Declaration event
+		}
+	}
+	option = { #Wait, go back.
+		name = NIR.15.OPTB
+		set_character_flag = selecting_tsar_flag
+	}
+}
+
+narrative_event = { #Third Rome declaration
+	id = NIR.16
+	title = NIR.16.T
+	desc = NIR.16.D
+	picture = GFX_evt_hagia_sofia
+	
+	is_triggered_only = yes
+	
+	option = { #You're the tsar, hurray
+		name = NIR.16.OPTA
+		trigger = { has_landed_title = e_third_rome }
+		prestige = 500
+		piety = 500
+	}
+	option = { #Interesting
+		name = NIR.16.OPTB
+		trigger = { NOT = { has_landed_title = e_third_rome } }
+	}
+	option = { #Play as the tsar
+		name = NIR.16.OPTC
+		trigger = {
+			ai = no #Players only
+			OR = { #Be the one deciding the tsar
+				has_landed_title = e_russia
+				has_landed_title = e_russian_empire
+			}
+			event_target:tsar_candidate = { ai = yes } #Can't take over another player, obviously
+		}
+		custom_tooltip = { text = play_as_tsar_TT }
+		set_player_character = event_target:tsar_candidate
+	}
+}
+
+character_event = { #tsar Trait Gained
+	id = NIR.17
+	desc = NIR.17.D
+	picture = GFX_evt_prospering_province
+	
+	only_playable = yes
+	has_global_flag = third_rome_formed
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_landed_title = e_third_rome	
+		NOT = { trait = tsar }
+		is_alive = yes
+	}
+	option = {
+		name = NIR.17.OPTA
+		add_trait = tsar
+		prestige = 150
+	}
+}
+
+character_event = { #tsar trait lost
+	id = NIR.18
+	desc = NIR.18.D
+	picture = GFX_evt_drunk
+	
+	only_playable = yes
+	has_global_flag = third_rome_formed
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = tsar
+		NOT = { has_landed_title = e_third_rome	}
+		is_alive = yes
+	}
+	option = {
+		name = NIR.18.OPTA
+		remove_trait = tsar
+		prestige = -150
+	}
+}
+
+character_event = { #On usurpation, sends the appropriate events to each party
+	id = NIR.19
+	hide_window = yes
+	
+	only_playable = yes
+	has_global_flag = third_rome_formed
+	
+	immediate = {
+		ROOT = { character_event = { id = NIR.17 } } #Usurper - i.e. new tsar
+		FROMFROM = { character_event = { id = NIR.18 } } #Usurpee - i.e. old tsar
+	}
+}

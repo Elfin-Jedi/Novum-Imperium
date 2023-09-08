@@ -1,0 +1,321 @@
+decisions = {
+#	form_latin_empire = { #This is the formation of the Latin Empire if the Crusade doesn't happen but you hold the land anyways
+#		only_independent = yes
+#		
+#		is_high_prio = yes ## Turns out you can just... create the Latin Empire title, no crusade needed, in the base game. This is marked out for now.
+#		ai_check_interval = 120
+#		
+#		potential = {
+#			capital_scope = { province = 496 } #Byzantion - i.e. Constantinople
+#			tier = KING #Must be exactly King tier. Dukes aren't stronk enough, emperors already have imperial problems. This excludes the Byzantine Emperor, too.
+#			culture_group = latin
+#			OR = {
+#				religion = fraticelli
+#				religion = catholic
+#			}
+#			NOT = { cultue = roman } #This is theoretically possible in this mod, so nip that in the bud
+#			is_heretic = no
+#		}
+#		
+#		allow = {
+#			completely_controls = d_thrace #Duchy of Constantinople
+#			prestige = 5000 #Need to be a very famous man
+#			piety = 1000
+#			wealth = 1000
+#			religion_authority = 0.6 #Catholicism needs to be strong enough
+#		}
+#		
+#		effect = {
+#			piety = -1000 #Ultimately you ARE attacking fellow Christians
+#			activate_title = { e_latin_empire status = yes }
+#			primary_title = {
+#				show_scope_change = no
+#				e_latin_empire = {
+#					show_scope_change = no
+#					grant_title = ROOT
+#					copy_title_laws = PREV
+#					copy_title_history = PREV
+#					add_law = ze_administration_2
+#					add_law = vice_royalty_2
+#				}
+#			}
+#			
+#			revoke_allowed = { always = no }
+#			
+#			narrative_event = { id = HF.49008 } #Grants the bloodline and whatnot, shouldn't crack Byzantium
+#		}
+#	}
+	
+	consolidate_latinokratia = {
+		only_independent = yes
+		
+		is_high_prio = yes
+		ai_check_interval = 120
+		
+		potential = {
+			has_landed_title = e_latin_empire
+			culture_group = latin
+			NOR = {
+				has_global_flag = latinokratia_consolidated
+				culture = roman
+			}
+			OR = {
+				religion = catholic
+				religion = fraticelli
+			}
+			is_heretic = no
+		}
+		allow = {
+#			capital_scope = { province = 496 } #Byzantion, i.e.Constantinople ##Is there a reason it has to be Constantinople?
+			completely_controls_region = world_asia_minor
+			completely_controls = k_byzantium #This is Greece
+			completely_controls = k_epirus
+			religion_authority = 0.8
+			orthodox = { religion_authority <= 0.25 } #20% is the baseline for just being an organised religion, even dead religions have 20%. 25% gives leeway.
+			war = no
+			prestige = 4000 
+#			#This will become very difficult to do if the Rus has been baptised and there's no Byzantine holdouts for the Muslims to holy war. Ask for feedback.
+		}
+		effect = {
+			set_global_flag = latinokratia_consolidated
+			any_title = {
+				limit = {
+					tier = KING
+					region = world_asia_minor
+				}
+				de_jure_liege = e_latin_empire
+			}
+			
+			revoke_allowed = { always = no }
+			
+			activate_title = { title = e_byzantium status = no }
+			narrative_event = { id = NIR.07 } #Declaration event
+			any_playable_ruler = { limit = { ai = no } narrative_event = { id = NIR.07 } }
+		}
+	}
+}
+
+targetted_decisions = {
+	adopt_latinokratian_culture = { #Includes Frankokratian based on conditional
+		only_playable = yes
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			top_liege = { #Top Liege in this instance is almost always going to be the Latin Emperor, who must have converted
+				OR = {
+					culture = frankokratian
+					culture = latinokratian
+				}
+			}
+			
+			has_global_flag = latinokratia_consolidated
+			
+			OR = { #Be either...
+				AND = { #A latin in Asia Minor
+					culture_group = latin
+					capital_scope = { region = world_asia_minor } #Ensures Latins outside of de jure Byzantium don't flip over
+				}
+				AND = { #Or a Catholic Greek with a Catholic Latin liege
+					culture_group = byzantine
+					OR = {
+						religion = catholic
+						religion = fraticelli
+					}
+					liege = {
+						culture_group = latin
+						OR = {
+							religion = catholic
+							religion = fraticelli
+						}
+					}
+				}
+			}
+			
+			NOR = { #Don't have already converted
+				culture = roman #Stops constant cycling of Latinokratian/Roman from decision adoption
+				culture = latinokratian
+				culture = frankokratian
+			}
+			
+			OR = { #Be Catholic or be under a Catholic
+				religion = catholic
+				religion = fraticelli
+				top_liege = {
+					OR = {
+						religion = catholic
+						religion = fraticelli
+					}
+				}
+			}
+			
+			OR = { #Be ruling over Greeks or have a converted liege
+				any_demesne_province = { culture_group = byzantine }
+				liege = { 
+					OR = {
+						culture = frankokratian
+						culture = latinokratian
+					}
+				}
+			}
+		}
+		allow = {
+			OR = {
+				prestige = 1000
+				top_liege = { culture = latinokratian }
+				top_liege = { culture = frankokratian }
+				capital_scope = { culture = latinokratian }
+				capital_scope = { culture = frankokratian }
+			}
+		}
+		effect = {
+			if = {
+				limit = { top_liege = { culture = frankokratian } }
+				hidden_tooltip = {
+					any_courtier = {
+						limit = {
+							culture = ROOT
+							employer = { character = ROOT }
+							dynasty = ROOT
+						}
+						culture = frankokratian
+					}
+					any_demesne_province = {
+						limit = {
+							culture_group = ROOT
+						}
+						culture = frankokratian
+					}
+					if = {
+						limit = {
+							capital_scope = { culture_group = byzantine }
+						}
+						capital_scope = { culture = frankokratian }
+					}
+				}
+				culture = frankokratian
+			}
+			else = {
+				hidden_tooltip = {
+					any_courtier = {
+						limit = {
+							culture = ROOT
+							employer = { character = ROOT }
+							dynasty = ROOT
+						}
+						culture = latinokratian
+					}
+					any_demesne_province = {
+						limit = {
+							culture_group = ROOT
+						}
+						culture = latinokratian
+					}
+					if = {
+						limit = {
+							capital_scope = { culture_group = byzantine }
+						}
+						capital_scope = { culture = latinokratian }
+					}
+				}
+				culture = latinokratian
+			}
+		}
+		revoke_allowed = { always = no }
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 30
+				top_liege = {
+					has_landed_title = e_latin_empire
+					OR = {
+						culture = latinokratian
+						culture = frankokratian
+					}
+				}
+			}
+			modifier = {
+				factor = 2.0
+				liege = {
+					OR = {
+						culture = latinokratian
+						culture = frankokratian
+					}
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = latinokratian
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = latinokratian
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = latinokratian
+				}
+			}
+			modifier = {
+				factor = 1.25
+				num_culture_realm_provs = {
+					value = 8
+					culture = latinokratian
+				}
+			}
+			modifier = {
+				factor = 1.5
+				num_culture_realm_provs = {
+					value = 10
+					culture = latinokratian
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = frankokratian
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = frankokratian
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = frankokratian
+				}
+			}
+			modifier = {
+				factor = 1.25
+				num_culture_realm_provs = {
+					value = 8
+					culture = frankokratian
+				}
+			}
+			modifier = {
+				factor = 1.5
+				num_culture_realm_provs = {
+					value = 10
+					culture = frankokratian
+				}
+			}
+		}
+	}
+}

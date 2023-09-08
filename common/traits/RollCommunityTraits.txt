@@ -480,6 +480,22 @@ messianic = {
 
 ### Fertility ###
 
+fertile = {
+	birth = 100
+	inherit_chance = 25
+
+	fertility = 0.10
+	ruler_designer_cost = 7
+	
+	opposites =  {
+		fertile_1
+		fertile_2
+		infertile
+		infertile_1
+		infertile_2
+	}
+}
+
 fertile_1 = {
 	birth = 75
 	inherit_chance = 20
@@ -506,6 +522,22 @@ fertile_2 = {
 	opposites =  {
 		fertile
 		fertile_1
+		infertile
+		infertile_1
+		infertile_2
+	}
+}
+
+infertile = {
+	birth = 100
+	inherit_chance = 25
+
+	fertility = -0.10
+	ruler_designer_cost = -4
+	
+	opposites =  {
+		fertile_1
+		fertile_2
 		infertile
 		infertile_1
 		infertile_2
@@ -681,6 +713,27 @@ tall = {
 	female_insult = INSULT_FREAK
 	child_insult = INSULT_TROLL
 	male_insult_adj = INSULT_MONSTROUS
+}
+
+short = {
+	birth = 50
+	inherit_chance = 15
+	
+	opposites =  {
+		dwarf
+		giant
+		tall
+	}
+	
+	combat_rating = -5
+	
+	vassal_opinion = -3
+	tribal_opinion = -8
+	sex_appeal_opinion = -5
+	ruler_designer_cost = -8
+	
+	male_insult_adj = INSULT_LITTLE
+	female_insult_adj = INSULT_LITTLE
 }
 
 ### voice ###

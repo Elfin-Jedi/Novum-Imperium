@@ -1,0 +1,20 @@
+k_prince_sicily = {
+	color = { 0 45 112 }
+	
+	capital = 340 # Palermo
+	culture = norman
+	
+	greco-norman = "Principality of Sicilia"
+	
+	short_name = yes
+	
+	title = "Prince"
+	title_female = "Princess"
+	
+	allow = {
+        OR = {
+                religion = catholic
+                is_heresy_of = catholic
+        }
+	}
+}

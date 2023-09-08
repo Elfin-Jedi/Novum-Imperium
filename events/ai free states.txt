@@ -1,0 +1,42 @@
+namespace = FGE
+narrative_event = {
+	id = FGE.0003
+	title = FGETitle.0003
+	desc = FGEDesc.0003
+  	picture = GFX_evt_anarchy
+	hide_window = yes
+	trigger = {
+		prestige = 250
+		any_vassal = {
+			FROM = THIS
+			or = {
+				opinion = {
+					who = liege
+					value <= -50
+				}
+				liege = {
+					not = { religion = THIS }
+				}
+				relative_power_to_liege >= 0.75
+				liege = {
+					over_vassal_limit
+				}
+					
+			}
+			}
+		}
+	}
+	MTTH = 1
+	option = {
+		name = FGE.0003A
+		set_defacto_liege = THIS
+			FROM = {
+				make_tributary = {
+				who = ROOT
+				tributary_type = free_imperial_city_trib
+				}
+			}
+		}
+	}
+
+}

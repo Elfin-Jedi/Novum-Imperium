@@ -1,0 +1,40 @@
+on_yearly_pulse = {
+	events = {
+		DAQIN.00303 #Slaps the Emperor for trying to go on Kow-Tow. This won't be long enough if your capital is East of Persia, but the player's shouldn't be.
+	}
+}
+on_bi_yearly_pulse = {
+	events = {
+		DAQIN.00302 #Checks the Emperor isn't a prick.
+		DAQIN.00307 #Checks to see if someone restored the Empire
+		DAQIN.00500 #Great Qin cultural flavour tombola
+	}
+}
+on_new_holder_inheritance = {
+	events = {
+		DAQIN.00301 #Keeps the Emperor with the Great Qin government
+		DAQIN.00304 #If the Emperor is a child, breaks the Mandate
+	}
+}
+
+on_new_holder = {
+	events = {
+		DAQIN.00301 #Keeps the Emperor with the Great Qin government
+	}
+}
+on_new_holder_usurpation = { #This checks whenever a title changes hands through war - or pressing the usurp button, I THINK, I'm not sure on that last one
+	events = {
+		DAQIN.00306 #Restitutor Event
+	}
+}
+
+on_five_year_pulse = {
+	events = {
+		DAQIN.00106 #Sinogreek conversion events
+		DAQIN.00101 #Sinogreek pops
+		DAQIN.00203 #Holiday event
+	}
+	western_dragon_stuff = {
+		DAQIN.00400
+	}
+}

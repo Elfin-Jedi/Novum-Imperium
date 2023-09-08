@@ -1,0 +1,80 @@
+giant_armor = {
+	martial = 1
+	combat_rating = 15
+	monthly_character_prestige = 0.5
+	command_modifier = { 
+		defence = 0.05 
+	}
+	
+	active = {
+		is_adult = yes
+		trait = giant
+	}
+	quality = 3
+	flags = { armor_set armor armor_tier_3 }
+	stacking = no
+	picture = "GFX_giant_armor"
+	slot = torso
+}
+goliath_armor = {
+	martial = 2
+	combat_rating = 15
+	monthly_character_prestige = 1
+	brave_opinion = 5
+	command_modifier = { 
+		defence = 0.05 
+	}
+	
+	active = {
+		is_adult = yes
+		trait = giant
+		trait = strong
+		OR = {
+			culture = greco-norman
+			culture = norman
+		}
+	}
+	allowed_gift = { 
+		OR = {
+			culture = greco-norman
+			culture = norman
+		}
+	}
+	quality = 4
+	flags = { armor_set armor armor_tier_4 }
+	stacking = no
+	picture = "GFX_goliath_armor"
+	slot = torso
+}
+hubris = {
+	monthly_character_prestige = 0.2
+	martial = 1
+	intrigue = -1
+	combat_rating = 20
+	vassal_opinion = 5
+	quality = 4
+	active = {
+		is_adult = yes
+	}
+	flags = { weapon }
+	stacking = no
+	picture = "GFX_sword_hubris"
+	slot = weapon
+}
+prince_sicily_crown = {
+	short_reign_length = -1
+	monthly_character_prestige = 0.15
+	quality = 2
+	active = { 
+		is_feudal = yes
+		has_landed_title = k_prince_sicily 
+	}
+	flags = { religious unique crown jewelry crown_jewel }
+	picture = "GFX_gold_circlet"
+	slot = crown	
+	stacking = no
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}

@@ -1,0 +1,251 @@
+government_flavor = {
+	name = gov_confederate_slavicgovernmenttweakfeudher
+	graphics = GFX_evt_camaraderie
+	priority = 5
+	trigger = {
+		has_landed_title = e_lechczechrus
+		NOT = { has_law = succ_hre_elective }
+		capital_scope = {
+			holding_type = castle 
+		}
+		government = confederate_government
+		calc_true_if = {
+			amount = 6
+			has_law = law_voting_power_1
+			has_law = banish_voting_power_1
+			has_law = execution_voting_power_1
+			has_law = revoke_title_voting_power_1
+			has_law = grant_title_voting_power_1
+			has_law = imprison_voting_power_1
+			has_law = war_voting_power_1		
+		}
+			}
+					
+}
+
+government_flavor = {
+	name = gov_confederate_slavicgovernmenttmediumfeudher
+	graphics = GFX_evt_camaraderie
+	priority = 5
+	trigger = {
+		has_landed_title = e_lechczechrus
+		NOT = { has_law = succ_hre_elective }
+		capital_scope = {
+			holding_type = castle 
+		}
+		government = confederate_government
+		OR = {
+			NOT = { has_dlc = "Conclave" }
+			calc_true_if = {
+				amount = 2
+				has_law = banish_voting_power_0
+				has_law = execution_voting_power_0
+				has_law = revoke_title_voting_power_0
+				has_law = grant_title_voting_power_0
+				has_law = imprison_voting_power_0
+				has_law = war_voting_power_0
+			}
+		}
+		NOT = {
+			calc_true_if = {
+				amount = 7
+				has_law = law_voting_power_0
+				has_law = banish_voting_power_0
+				has_law = execution_voting_power_0
+				has_law = revoke_title_voting_power_0
+				has_law = grant_title_voting_power_0
+				has_law = imprison_voting_power_0
+				has_law = war_voting_power_0
+			}			
+		}
+			}
+					
+}
+
+government_flavor = {
+	name = gov_confederate_slavicgovernmenttabsolutefeudher
+	graphics = GFX_evt_camaraderie
+	priority = 5
+	trigger = {
+		has_landed_title = e_lechczechrus
+		capital_scope = {
+			holding_type = castle 
+		}
+		NOT = { has_law = succ_hre_elective }
+		government = confederate_government
+		has_law = law_voting_power_0
+		has_law = banish_voting_power_0
+		has_law = execution_voting_power_0
+		has_law = revoke_title_voting_power_0
+		has_law = grant_title_voting_power_0
+		has_law = imprison_voting_power_0
+		has_law = war_voting_power_0	
+			}
+					
+}
+
+government_flavor = {
+	name = gov_confederate_slavicgovernmenttweakcit
+	graphics = GFX_evt_gathering_of_minds
+	priority = 5
+	trigger = {
+		has_landed_title = e_lechczechrus
+		capital_scope = {
+			holding_type = city 
+		}
+		government = confederate_government
+		calc_true_if = {
+			amount = 6
+			has_law = law_voting_power_1
+			has_law = banish_voting_power_1
+			has_law = execution_voting_power_1
+			has_law = revoke_title_voting_power_1
+			has_law = grant_title_voting_power_1
+			has_law = imprison_voting_power_1
+			has_law = war_voting_power_1		
+		}
+			}
+					
+}
+
+government_flavor = {
+	name = gov_confederate_slavicgovernmenttmediumcit
+	graphics = GFX_evt_gathering_of_minds
+	priority = 5
+	trigger = {
+		has_landed_title = e_lechczechrus
+		capital_scope = {
+			holding_type = city 
+		}
+		government = confederate_government
+		OR = {
+			NOT = { has_dlc = "Conclave" }
+			calc_true_if = {
+				amount = 2
+				has_law = banish_voting_power_0
+				has_law = execution_voting_power_0
+				has_law = revoke_title_voting_power_0
+				has_law = grant_title_voting_power_0
+				has_law = imprison_voting_power_0
+				has_law = war_voting_power_0
+			}
+		}
+		NOT = {
+			calc_true_if = {
+				amount = 7
+				has_law = law_voting_power_0
+				has_law = banish_voting_power_0
+				has_law = execution_voting_power_0
+				has_law = revoke_title_voting_power_0
+				has_law = grant_title_voting_power_0
+				has_law = imprison_voting_power_0
+				has_law = war_voting_power_0
+			}			
+		}
+			}
+					
+}
+
+government_flavor = {
+	name = gov_confederate_slavicgovernmenttabsolutecit
+	graphics = GFX_evt_gathering_of_minds
+	priority = 5
+	trigger = {
+		has_landed_title = e_lechczechrus
+		capital_scope = {
+			holding_type = city 
+		}
+		government = confederate_government
+		has_law = law_voting_power_0
+		has_law = banish_voting_power_0
+		has_law = execution_voting_power_0
+		has_law = revoke_title_voting_power_0
+		has_law = grant_title_voting_power_0
+		has_law = imprison_voting_power_0
+		has_law = war_voting_power_0	
+			}
+					
+}
+
+government_flavor = {
+	name = gov_confederate_slavicgovernmenttweaktem
+	graphics = GFX_evt_church_council
+	priority = 5
+	trigger = {
+		has_landed_title = e_lechczechrus
+		capital_scope = {
+			holding_type = temple 
+		}
+		government = confederate_government
+		calc_true_if = {
+			amount = 6
+			has_law = law_voting_power_1
+			has_law = banish_voting_power_1
+			has_law = execution_voting_power_1
+			has_law = revoke_title_voting_power_1
+			has_law = grant_title_voting_power_1
+			has_law = imprison_voting_power_1
+			has_law = war_voting_power_1		
+		}
+			}
+					
+}
+
+government_flavor = {
+	name = gov_confederate_slavicgovernmenttmediumtem
+	graphics = GFX_evt_church_council
+	priority = 5
+	trigger = {
+		has_landed_title = e_lechczechrus
+		capital_scope = {
+			holding_type = temple 
+		}
+		government = confederate_government
+		OR = {
+			NOT = { has_dlc = "Conclave" }
+			calc_true_if = {
+				amount = 2
+				has_law = banish_voting_power_0
+				has_law = execution_voting_power_0
+				has_law = revoke_title_voting_power_0
+				has_law = grant_title_voting_power_0
+				has_law = imprison_voting_power_0
+				has_law = war_voting_power_0
+			}
+		}
+		NOT = {
+			calc_true_if = {
+				amount = 7
+				has_law = law_voting_power_0
+				has_law = banish_voting_power_0
+				has_law = execution_voting_power_0
+				has_law = revoke_title_voting_power_0
+				has_law = grant_title_voting_power_0
+				has_law = imprison_voting_power_0
+				has_law = war_voting_power_0
+			}			
+		}
+			}
+					
+}
+
+government_flavor = {
+	name = gov_confederate_slavicgovernmenttabsolutetem
+	graphics = GFX_evt_church_council
+	priority = 5
+	trigger = {
+		has_landed_title = e_lechczechrus
+		capital_scope = {
+			holding_type = temple 
+		}
+		government = confederate_government
+		has_law = law_voting_power_0
+		has_law = banish_voting_power_0
+		has_law = execution_voting_power_0
+		has_law = revoke_title_voting_power_0
+		has_law = grant_title_voting_power_0
+		has_law = imprison_voting_power_0
+		has_law = war_voting_power_0	
+			}
+					
+}

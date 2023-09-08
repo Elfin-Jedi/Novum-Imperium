@@ -137,6 +137,27 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_indocarnifex_male_headgear"
+		texturefile = "gfx\\characters\\indoroman_portraits\\indocarnifex_male_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+	}
+		
+	spriteType = {
+		name = "GFX_indocarnifex_male_clothes"
+		texturefile = "gfx\\characters\\indoroman_portraits\\indocarnifex_male_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+	}
+	
+		spriteType = {
+		name = "GFX_indocarnifex_male_headgear_behind"
+		texturefile = "gfx\\characters\\indoroman_portraits\\indocarnifex_male_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+	}
+	
+	spriteType = {
 		name = "GFX_indoromancelestial_male_headgear"
 		texturefile = "gfx\\characters\\indoroman_portraits\\indoromancelestial_male_headgear.dds"
 		noOfFrames = 12
@@ -241,6 +262,34 @@ spriteTypes = {
 		# Correct rank
 		allow_property_values = {
 		5 = { portrait_has_trait = indo_roman_augustus }
+		}
+	}
+	
+	portraitType = {
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_indo_carnifex_male_clothing_male"
+		
+		weight = {
+			additive_modifier = {
+                value = 1000000
+                portrait_clothing = yes
+				OR = {
+					portrait_has_trait = vieti_carnifex
+				}
+			}
+		}
+		
+		layer = { 
+			"GFX_indoroman_male_clothes_behind:p3:c0"
+			"GFX_indocarnifex_male_headgear_behind:p5:c1"
+			"GFX_indocarnifex_male_headgear_mid:p5:c3"	
+			"GFX_indocarnifex_male_headgear:p5:c5"
+			"GFX_indocarnifex_male_clothes:p3:c2"
+		}
+		
+		# Correct rank
+		allow_property_values = {
+		5 = { portrait_has_trait = vieti_carnifex }
 		}
 	}
 	

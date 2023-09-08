@@ -1,0 +1,219 @@
+
+song = {
+	name = "auxiliaries.ogg"
+	song_name = "Auxiliaries"
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = {	culture = roman }
+			NOT = {	culture = greek }
+		}		
+	}
+}
+song = {
+	name = "barbariansapproaching.ogg"
+	song_name = "Barbarians Approaching"
+	
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = {	culture_group = altaic }
+			NOT = {	culture_group = central_germanic }
+		}
+	}
+}
+song = {
+	name = "citizens.ogg"
+	song_name = "Citizens"
+	
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = {	culture = roman }
+			NOT = {	culture = greek }
+		}		
+	}
+}
+song = {
+	name = "elysianfields.ogg"
+	song_name = "Elysian Fields"
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = {	culture = roman }
+			NOT = {	culture = greek }
+		}		
+	}
+}
+song = {
+	name = "grief.ogg"
+	song_name = "Grief"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = {	culture = roman }
+			NOT = {	culture = greek }
+		}		
+	}
+}
+song = {
+	name = "imperator.ogg"
+	song_name = "Imperator"
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = {	culture = roman }
+			NOT = {	culture = greek }
+		}		
+	}
+}
+song = {
+	name = "legionsofrome.ogg"
+	song_name "Legions of Rome"
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = {	culture = roman }
+			NOT = {	culture = greek }
+		}		
+	}
+}
+song = {
+	name = "ridingtobattle.ogg"
+	song_name = "Riding to Battle"
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = {	culture = roman }
+			NOT = {	culture = greek }
+		}		
+	}
+}
+song = {
+	name = "rockandrome.ogg"
+	song_name = "Rock and Rome"
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = {	culture = roman }
+			NOT = {	culture = greek }
+		}		
+	}
+}
+song = {
+	name = "romegoestowar.ogg"
+	song_name = "Rome Goes To War"
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = {	culture = roman }
+			NOT = {	culture = greek }
+		}		
+	}
+}
+song = {
+	name = "romeisthelight.ogg"
+	song_name = "Rome is the Light"
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = {	culture = roman }
+			NOT = {	culture = greek }
+		}		
+	}
+}
+song = {
+	name = "thebattleofzama.ogg"
+	song_name = "The Battle of Zama"
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = {	culture = roman }
+			NOT = {	culture = greek }
+		}		
+	}
+}
+song = {
+	name = "thefield.ogg"
+	song_name = "The Field"
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = {	culture = roman }
+			NOT = {	culture = greek }
+		}		
+	}
+}
+song = {
+	name = "thesenate.ogg"
+	song_name = "The Senate"
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = {	culture = roman }
+			NOT = {	culture = greek }
+		}		
+	}
+}
+song = {
+	name = "tovictory.ogg"
+	song_name = "To Victory"
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = {	culture = roman }
+			NOT = {	culture = greek }
+		}		
+	}
+}
+song = {
+	name = "traderoutes.ogg"
+	song_name = "All Traderoutes Lead to Rome"
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = {	culture = roman }
+			NOT = {	culture = greek }
+		}		
+	}
+}
+song = {
+	name = "vaevictus.ogg"
+	song_name = " Vae Victis"
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = {	culture = roman }
+			NOT = {	culture = greek }
+		}		
+	}
+}
+song = {
+	name = "victorious_finale.ogg"
+	song_name = "Victorious - Rome Finale"
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = {	culture = roman }
+			NOT = {	culture = greek }
+		}		
+	}
+}

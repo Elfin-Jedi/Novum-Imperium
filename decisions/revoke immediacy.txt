@@ -1,0 +1,46 @@
+targetted_decisions = {
+	revoke_immediacy = {
+	    diplomacy_icon = GFX_GRANT_VICE_ROYALTY_INTERACTION_icon
+		from_potential = {
+			government = confederate_government
+		}
+		potential = {
+		is_tributary = {
+			type = free_imperial_city_trib
+			suzerain = FROM
+		}
+		is_ruler = yes
+		}
+		allow = {
+		FROM = {
+		piety = 250
+		war = no
+		}
+			ROOT = {
+				is_foe = FROM
+				war = no
+				NOT = {
+					has_opinion_modifier = {
+						who = FROM
+						name = granted_immediacy
+					}
+				}
+			}
+		}
+		effect = {
+			set_defacto_liege = FROM
+			FROM = { piety = -250 }
+			opinion = {
+				name = revoked_immediacy
+				who = FROM
+				years = 10
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

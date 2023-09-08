@@ -162,7 +162,7 @@ character_event = {
 				}
 				modifier = {
 					factor = 2
-					FROMFROM = { trait = silver_tongue_lifestyle }
+					FROMFROM = { trait = silver_tongue }
 				}
 				modifier = {
 					factor = 1.25
@@ -503,10 +503,17 @@ character_event = {		#INTRIGUER IS SUCCESSFUL - POSSIBLE NEW TRAIT
 
 		hidden_tooltip = {
 
-			random = {
-				chance = 33
-				character_event = { id = darkages.72143 }
-			}		
+			if = { 
+				limit = {
+					NOT = { lifestyle_traits = 1 }
+				}	
+				random = {
+					chance = 33
+					character_event = { id = darkages.72143 }
+				}
+				
+			}
+		
 		}		
 		
 	}	
@@ -590,6 +597,7 @@ character_event = {		#ADD NEW TRAIT - SILVER TONGUE
 	is_triggered_only = yes
 	
 	trigger = {
+		NOT = { lifestyle_traits = 1 }
 	}
 	
 	immediate = {
@@ -602,7 +610,7 @@ character_event = {		#ADD NEW TRAIT - SILVER TONGUE
 			factor = 50
 		}
 		change_intrigue = 1
-		add_trait = silver_tongue_lifestyle
+		add_trait = silver_tongue
 		prestige = 50
 		
 		if = {
@@ -722,7 +730,7 @@ character_event = {		#ATTEMPT TO GAIN SUPPORT FOR FRAME - DIPLOMATIC
 				}
 				modifier = {
 					factor = 2
-					trait = silver_tongue_lifestyle
+					trait = silver_tongue
 				}				
 				modifier = {
 					factor = 1.5
@@ -940,7 +948,7 @@ character_event = {		#ATTEMPT TO GAIN SUPPORT FOR FRAME - MILITARY
 				}
 				modifier = {
 					factor = 2
-					trait = silver_tongue_lifestyle
+					trait = silver_tongue
 				}				
 				modifier = {
 					factor = 1.5
@@ -1154,7 +1162,7 @@ character_event = {		#ATTEMPT TO GAIN SUPPORT FOR FRAME - INTRIGUE
 				}
 				modifier = {
 					factor = 2
-					trait = silver_tongue_lifestyle
+					trait = silver_tongue
 				}				
 				modifier = {
 					factor = 1.5
@@ -1368,7 +1376,7 @@ character_event = {		#ATTEMPT TO GAIN SUPPORT FOR FRAME - RELIGION
 				}
 				modifier = {
 					factor = 2
-					trait = silver_tongue_lifestyle
+					trait = silver_tongue
 				}				
 				modifier = {
 					factor = 1.5

@@ -568,7 +568,7 @@ targetted_decisions = {
 					intrigue = 15
 					trait = socializer
 					trait = gregarious
-					trait = silver_tongue_lifestyle
+					trait = silver_tongue
 					trait = schemer
 					trait = grey_eminence
 					trait = elusive_shadow					
@@ -659,7 +659,7 @@ targetted_decisions = {
 			modifier = {
 				factor = 2
 				FROM = {
-					trait = silver_tongue_lifestyle
+					trait = silver_tongue
 				}
 			}
 			modifier = {
@@ -1388,7 +1388,7 @@ targetted_decisions = {
 			}			
 			modifier = {
 				factor = 3
-				FROM = { trait = silver_tongue_lifestyle }
+				FROM = { trait = silver_tongue }
 			}
 			modifier = {
 				factor = 1.5
@@ -1953,7 +1953,7 @@ targetted_decisions = {
 			}			
 			modifier = {
 				factor = 3
-				FROM = { trait = silver_tongue_lifestyle }
+				FROM = { trait = silver_tongue }
 			}
 			modifier = {
 				factor = 1.5
@@ -2070,7 +2070,7 @@ targetted_decisions = {
 					OR = {
 						is_rival = ROOT
 						trait = schemer
-						trait = silver_tongue_lifestyle
+						trait = silver_tongue
 						trait = envious
 						diplomacy = 15
 						intrigue = 12
@@ -2196,7 +2196,7 @@ targetted_decisions = {
 				OR = {
 					diplomacy = 12
 					intrigue = 12
-					trait = silver_tongue_lifestyle
+					trait = silver_tongue
 					trait = schemer
 					has_focus = focus_intrigue
 				}
@@ -2345,7 +2345,7 @@ targetted_decisions = {
 				OR = {
 					trait = deceitful
 					trait = arbitrary
-					trait = silver_tongue_lifestyle
+					trait = silver_tongue
 					trait = schemer
 					intrigue = 15
 					realm_intrigue = 35

@@ -1,0 +1,232 @@
+decisions = {
+	declare_african_exarchate = {
+		only_independent = yes
+		
+		is_high_prio = yes
+		ai_check_interval = 120
+		
+		potential = {
+			capital_scope = { region = world_africa_north }
+			OR = {
+				culture_group = latin
+				culture_group = byzantine #Maybe should only be Greek, but PDX put them all as Byzantine so Byzantine it is
+			}
+			NOR = {
+				tier = EMPEROR
+				has_global_flag = african_exarchate_declared
+				has_global_flag = rome_restored
+			}
+			religion_group = christian
+			e_byzantium = { has_holder = yes } #Byzantine Empire has to exist to be an Exarchate of
+		}
+		
+		allow = {
+			has_landed_title = k_africa #Not required to own all of it, since it contains a lot of tripolotania that the Exarchate historically didn't
+			capital_scope = { religion = ROOT } #Capital has to be converted to your (necessarily Christian) faith
+			completely_controls = d_mallorca
+			completely_controls = k_sardinia
+		}
+		
+		effect = {
+			set_global_flag = african_exarchate_declared
+			primary_title = {
+				show_scope_change = no
+				k_african_exarchate = {
+					show_scope_change = no
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}
+			any_demesne_title = {
+				limit = {
+					tier = KING
+					NOT = { title = k_african_exarchate }
+				}
+				destroy_landed_title = THIS
+			}
+			
+			d_tunis = { de_jure_liege = k_african_exarchate }
+			d_tripolitania = { de_jure_liege = k_african_exarchate }
+			d_syrte = { de_jure_liege = k_african_exarchate }
+			d_jerid = { de_jure_liege = k_african_exarchate }
+			d_cyrenaica = { de_jure_liege = k_african_exarchate }
+			d_kabylia = { de_jure_liege = k_african_exarchate }
+			d_mzab = { de_jure_liege = k_african_exarchate }
+			d_sardinia = { de_jure_liege = k_african_exarchate }
+			d_corsica = { de_jure_liege = k_african_exarchate }
+			d_mallorca = { de_jure_liege = k_african_exarchate }
+			
+			if = { #Owning the kingdom the baleric isles belong to means you get to make it part of the Exarchate
+				limit = { has_landed_title = k_valencia }
+				d_valencia = { de_jure_liege = k_african_exarchate }
+				d_murcia = { de_jure_liege = k_african_exarchate }
+			}
+			if = {
+				limit = {
+					OR = {
+						has_landed_title = d_sicily
+						completely_controls = d_sicily
+					}
+				}
+				d_sicily = { de_jure_liege = k_african_exarchate } #Can steal Sicily from... Sicily (Naples, now), since I've seen some things include it
+				k_sicily = {
+					set_name = "Naples"
+					adjective = "Neapolitan" #Not setting the CoA since it's specifically the family crest of a French family, wouldn't make sense
+				} #Could maybe use Naples proper instead but if nobody has Sicily it would have nobody to grant it to, which means it can't ever be made. Big problems.
+			}
+			k_african_exarchate = { de_jure_liege = e_byzantium } #It ends up being part of the Republic otherwise, which is very not correct.
+			
+			narrative_event = { id = NIR.01 } #The event for forming the Exarchate, and choosing to swear loyalty to Byzantium or not
+			any_playable_ruler = { limit = { ai = no } narrative_event = { id = NIR.01 } }
+		}
+	}
+	
+	promote_african_romance = { #Might make this a random event.
+		only_independent = yes
+		
+		is_high_prio = yes
+		ai_check_interval = 120 #AI checks once every 10 years. Doesn't need to be very often.
+		
+		potential = {
+			capital_scope = { region = world_africa_north }
+			OR = {
+				culture_group = latin
+				culture_group = iberian
+			}
+			religion_group = christian
+			NOT = { has_global_flag = african_romance_emerged }
+		}
+		
+		allow = { #This doesn't feel restrictive enough...
+			ruled_years = 10
+			capital_scope = { religion = ROOT }
+			war = no
+		}
+		
+		effect = {
+			capital_scope = { culture = african_romance }
+			character_event = { id = NIR.02 } #Announcement + adoption event
+			any_vassal = { character_event = { id = NIR.02 } } #And for vassals
+			set_global_flag = african_romance_emerged
+		}
+	}
+}
+
+targetted_decisions = {
+	adopt_african_romance = {
+		only_playable = yes
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			capital_scope = { region = world_africa_north }
+			has_global_flag = african_romance_emerged
+			
+			OR = {
+				culture_group = latin
+				AND = {
+					culture_group = arabic
+					religion_group = christian
+					liege = {
+						culture_group = latin
+						religion_group = christian
+					}
+				}
+			}
+			NOR = {
+				culture = roman #Stops constant cycling of African Romance/Roman from decision adoption
+				culture = african_romance
+			}
+			OR = {
+				any_realm_province = { culture_group = arabic }
+				top_liege = { culture = african_romance }
+			}
+			OR = {
+				ai = no
+				top_liege = { culture = african_romance }
+			}
+			NOT = { government = chinese_imperial_government }
+		}
+		allow = {
+			OR = {
+				prestige = 1000
+				top_liege = { culture = african_romance }
+				capital_scope = { culture = african_romance }
+			}
+		}
+		effect = {
+			hidden_tooltip = {
+				any_courtier = {
+					limit = {
+						culture = ROOT
+						employer = { character = ROOT }
+						dynasty = ROOT
+					}
+					culture = african_romance
+				}
+				any_demesne_province = {
+					limit = { culture_group = ROOT }
+					culture = african_romance
+				}
+				if = {
+					limit = { capital_scope = { culture_group = arabic } }
+					capital_scope = { culture = african_romance }
+				}
+			}
+			culture = african_romance
+		}
+		revoke_allowed = { always = no }
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 30
+				top_liege = {
+					culture = african_romance
+					has_landed_title = k_african_exarchate #Eager to Latinise for Rome
+				}
+			}
+			modifier = {
+				factor = 2.0
+				liege = { culture = african_romance }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = african_romance
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = african_romance
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = african_romance
+				}
+			}
+			modifier = {
+				factor = 1.25
+				num_culture_realm_provs = {
+					value = 8
+					culture = african_romance
+				}
+			}
+			modifier = {
+				factor = 1.5
+				num_culture_realm_provs = {
+					value = 10
+					culture = african_romance
+				}
+			}
+		}
+	}
+}

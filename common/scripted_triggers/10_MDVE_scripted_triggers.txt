@@ -1,3 +1,10 @@
+is_enslaved = {
+	custom_tooltip = {
+		text = custom_is_enslaved
+		trait = slave_trait
+	}
+}
+
 slavery_trigger = {
 	conditional_tooltip = {
 		OR = {
@@ -40,7 +47,7 @@ slavery_trigger = {
 				text = slavery_enabled_government
 				OR = {
 					is_nomadic = yes
-					government = imperial_government
+					government = roman_imperial_government
 					OR = {
 						government = adventurer_government
 						primary_title = { has_title_flag = adventurer_title }

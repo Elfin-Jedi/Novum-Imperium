@@ -1,0 +1,124 @@
+decisions = {
+
+leave_confederation_decision = {
+		is_high_prio = yes
+		ai_check_interval = 6
+		filter = all
+		from_potential = {
+		}
+		potential = {
+			independent = no
+			is_ruler = yes
+			NOT = { tier = BARON }
+			NOT = {
+			any_demesne_title = {
+				is_vice_royalty = yes
+			}
+			}
+			NOT = {
+				has_opinion_modifier = {
+					who = liege
+					name = revoked_immediacy
+				}
+			}
+			liege = {
+				government = confederate_government
+				independent = yes
+				OR = {
+					NOT = { de_jure_vassal_or_below = ROOT }
+					ROOT = {
+						OR = {
+							has_landed_title = k_switzerland
+							has_landed_title = k_hansa
+						}
+					}
+				#	AND = {
+				#		AI = yes
+				#		FROM = {
+				#			AI = no
+				#		}
+				#	}
+				}	
+			}
+		}
+		allow = {
+			independent = no
+			war = no
+			liege = {
+				war = no
+				government = confederate_government
+				NOT = { has_truce = ROOT }
+			}
+			not = { has_truce = LIEGE }
+		}
+		effect = {
+			hidden_tooltip = {
+			liege = {
+			letter_event = {
+				id = FGE.0001
+				days = 1
+			}
+			}
+			}
+			custom_tooltip = {
+			text = conftribselfa
+			set_defacto_liege = THIS
+			}
+		}
+		ai_will_do = {
+			factor = 0.2
+			modifier = {
+				factor = 0
+				opinion = {
+					who = liege
+					value >= 1
+				}
+			}
+			modifier = {
+				factor = 2
+				opinion = {
+					who = liege
+					value <= -50
+				}
+			}
+			modifier = {
+				factor = 4
+				opinion = {
+					who = liege
+					value <= -100
+				}
+			}
+			modifier = {
+				factor = 4
+				liege = {
+					has_regent = yes
+				}
+			}
+			modifier = {
+				factor = 4
+				liege = {
+					not = { religion = ROOT }
+				}
+			}
+			modifier = {
+				factor = 4
+				liege = {
+					wealth <= 0
+				}
+			}
+			modifier = {
+				factor = 1.5
+				relative_power_to_liege >= 0.25
+			}
+			modifier = {
+				factor = 2
+				relative_power_to_liege >= 0.5
+			}
+			modifier = {
+				factor = 4
+				relative_power_to_liege >= 0.75
+			}
+		}
+}
+
+}

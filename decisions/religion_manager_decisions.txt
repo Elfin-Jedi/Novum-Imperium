@@ -1,0 +1,1419 @@
+decisions = {
+	rm_show = {
+		potential = {
+			NOT = {
+				has_global_flag = rm_flag
+			}
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			set_global_flag = rm_flag
+		}
+	}
+	
+	rm_hide = {
+		potential = {
+			has_global_flag = rm_flag
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			clr_global_flag = rm_flag
+		}
+	}
+
+	rm_set_peace_piety_gain = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_peace_piety_gain = 1
+			}
+		}
+	}
+	
+	rm_set_peace_piety_gain_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_peace_piety_gain = 0
+			}
+		}
+	}
+	
+	rm_set_pacifist = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_pacifist = yes
+			}
+		}
+	}
+	
+	rm_set_pacifist_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_pacifist = no
+			}
+		}
+	}
+	
+	rm_set_convert_other_groups = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_convert_other_groups = 1
+			}
+		}
+	}
+	
+	rm_set_convert_other_groups_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_convert_other_groups = 0
+			}
+		}
+	}
+	
+	rm_set_convert_same_group = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_convert_same_group = 1
+			}
+		}
+	}
+	
+	rm_set_convert_same_group_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_convert_same_group = 0
+			}
+		}
+	}
+	
+	rm_set_peace_prestige_loss = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_peace_prestige_loss = yes
+			}
+		}
+	}
+	
+	rm_set_peace_prestige_loss_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_peace_prestige_loss = no
+			}
+		}
+	}
+	
+	rm_set_ai_aggression = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_ai_aggression = 1
+			}
+		}
+	}
+	
+	rm_set_ai_aggression_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_ai_aggression = 0
+			}
+		}
+	}
+	
+	rm_set_unit_modifier = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_unit_modifier = {
+					horse_archers_offensive = 1
+				}
+			}
+		}
+	}
+	
+	rm_set_unit_modifier_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_unit_modifier = {
+					horse_archers_offensive = 0
+				}
+			}
+		}
+	}
+	
+	rm_set_unit_home_modifier = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_unit_modifier = {
+					horse_archers_offensive = 1
+				}
+			}
+		}
+	}
+	
+	rm_set_unit_home_modifier_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_unit_modifier = {
+					horse_archers_offensive = 0
+				}
+			}
+		}
+	}
+	
+	rm_set_hard_to_convert = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_hard_to_convert = yes
+			}
+		}
+	}
+	
+	rm_set_hard_to_convert_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_hard_to_convert = no
+			}
+		}
+	}
+	
+	rm_set_raised_vassal_opinion_loss = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_raised_vassal_opinion_loss = yes
+			}
+		}
+	}
+	
+	rm_set_raised_vassal_opinion_loss_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_raised_vassal_opinion_loss = no
+			}
+		}
+	}
+	
+	rm_set_piety_loss_for_attacking_same_religion = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_piety_loss_for_attacking_same_religion = yes
+			}
+		}
+	}
+	
+	rm_set_piety_loss_for_attacking_same_religion_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_piety_loss_for_attacking_same_religion = no
+			}
+		}
+	}
+	
+	rm_set_max_wives = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_max_wives = 4
+			}
+		}
+	}
+	
+	rm_set_max_wives_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_max_wives = 1
+			}
+		}
+	}
+	
+	rm_set_max_consorts = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_max_consorts = 3
+			}
+		}
+	}
+	
+	rm_set_max_consorts_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_max_consorts = 0
+			}
+		}
+	}
+	
+	rm_set_feminist = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_feminist = yes
+			}
+		}
+	}
+	
+	rm_set_feminist_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_feminist = no
+			}
+		}
+	}
+	
+	rm_set_heir_designation = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_heir_designation = yes
+			}
+		}
+	}
+	
+	rm_set_heir_designation_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_heir_designation = no
+			}
+		}
+	}
+	
+	rm_set_short_reign_opinion_year_mult = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_short_reign_opinion_year_mult = 1
+			}
+		}
+	}
+	
+	rm_set_short_reign_opinion_year_mult_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_short_reign_opinion_year_mult = 0
+			}
+		}
+	}
+	
+	rm_set_jizya_tax = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_jizya_tax = yes
+			}
+		}
+	}
+	
+	rm_set_jizya_tax_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_jizya_tax = no
+			}
+		}
+	}
+	
+	set_can_retire_to_monastery = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_can_retire_to_monastery = yes
+			}
+		}
+	}
+	
+	rm_set_can_retire_to_monastery_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_can_retire_to_monastery = no
+			}
+		}
+	}
+	
+	rm_set_can_excommunicate = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_can_excommunicate = yes
+			}
+		}
+	}
+	
+	rm_sset_can_excommunicate_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_can_excommunicate = no
+			}
+		}
+	}
+	
+	rm_set_can_grant_divorce = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_can_grant_divorce = yes
+			}
+		}
+	}
+	
+	rm_set_can_grant_divorce_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_can_grant_divorce = no
+			}
+		}
+	}
+	
+	rm_set_can_grant_invasion_cb = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_can_grant_invasion_cb = yes
+			}
+		}
+	}
+	
+	rm_set_can_grant_invasion_cb_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_can_grant_invasion_cb = no
+			}
+		}
+	}
+	
+	rm_set_can_grant_claim = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_can_grant_claim = yes
+			}
+		}
+	}
+	
+	rm_set_can_grant_claim_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_can_grant_claim = no
+			}
+		}
+	}
+	
+	rm_set_can_call_crusade = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_can_call_crusade = yes
+			}
+		}
+	}
+	
+	rm_set_can_call_crusade_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_can_call_crusade = no
+			}
+		}
+	}
+	
+	rm_set_pc_marriage = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_pc_marriage = yes
+			}
+		}
+	}
+	
+	rm_set_pc_marriage_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_pc_marriage = no
+			}
+		}
+	}
+	
+	rm_set_bs_marriage = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_bs_marriage = yes
+			}
+		}
+	}
+	
+	rm_set_bs_marriage_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_bs_marriage = no
+			}
+		}
+	}
+	
+	rm_set_psc_marriage = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_psc_marriage = yes
+			}
+		}
+	}
+	
+	rm_set_psc_marriage_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_psc_marriage = no
+			}
+		}
+	}
+	
+	rm_set_cousin_marriage = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_cousin_marriage = yes
+			}
+		}
+	}
+	
+	rm_set_cousin_marriage_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_cousin_marriage = no
+			}
+		}
+	}
+	
+	rm_set_seafaring = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_seafaring = yes
+			}
+		}
+	}
+	
+	rm_set_seafaring_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_seafaring = no
+			}
+		}
+	}
+	
+	rm_set_allow_looting = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_allow_looting = yes
+			}
+		}
+	}
+	
+	rm_set_allow_looting_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_allow_looting = no
+			}
+		}
+	}
+	
+	rm_set_allow_rivermovement = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_allow_rivermovement = yes
+			}
+		}
+	}
+	
+	rm_set_allow_rivermovement_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_allow_rivermovement = no
+			}
+		}
+	}
+	
+	rm_set_autocephaly = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_autocephaly = yes
+			}
+		}
+	}
+	
+	rm_set_autocephaly_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_autocephaly = no
+			}
+		}
+	}
+	
+	rm_set_pentarchy = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_pentarchy = yes
+			}
+		}
+	}
+	
+	rm_set_pentarchy_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_pentarchy = no
+			}
+		}
+	}
+	
+	rm_set_divine_blood = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_divine_blood = yes
+			}
+		}
+	}
+	
+	rm_set_divine_blood_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_divine_blood = no
+			}
+		}
+	}
+	
+	rm_set_uses_decadence = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_uses_decadence = yes
+			}
+		}
+	}
+	
+	rm_set_uses_decadence_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_uses_decadence = no
+			}
+		}
+	}
+	
+	rm_set_can_have_antipopes = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_can_have_antipopes = yes
+			}
+		}
+	}
+	
+	rm_set_can_have_antipopes_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_can_have_antipopes = no
+			}
+		}
+	}
+	
+	rm_set_priests_can_marry = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_priests_can_marry = yes
+			}
+		}
+	}
+	
+	rm_set_priests_can_marry_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_priests_can_marry = no
+			}
+		}
+	}
+	
+	rm_set_priests_can_inherit = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_priests_can_inherit = yes
+			}
+		}
+	}
+	
+	rm_set_priests_can_inherit_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_priests_can_inherit = no
+			}
+		}
+	}
+	
+	rm_set_ignores_defensive_attrition = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_ignores_defensive_attrition = yes
+			}
+		}
+	}
+	
+	rm_set_ignores_defensive_attrition_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_ignores_defensive_attrition = no
+			}
+		}
+	}
+	
+	rm_set_character_modifier = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_character_modifier = {
+					stewardship = 1
+				}
+			}
+		}
+	}
+	
+	rm_set_character_modifier_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_character_modifier = {
+					stewardship = 0
+				}
+			}
+		}
+	}
+	
+	rm_set_defensive_attrition = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_defensive_attrition = yes
+			}
+		}
+	}
+	
+	rm_set_defensive_attrition_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_defensive_attrition = no
+			}
+		}
+	}
+	
+	rm_set_female_temple_holders = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_female_temple_holders = yes
+			}
+		}
+	}
+	
+	rm_set_female_temple_holders_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_female_temple_holders = no
+			}
+		}
+	}
+	
+	rm_set_male_temple_holders = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_male_temple_holders = yes
+			}
+		}
+	}
+	
+	rm_set_male_temple_holders_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_male_temple_holders = no
+			}
+		}
+	}
+	
+	rm_set_allows_matrilineal_marriage = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_allows_matrilineal_marriage = yes
+			}
+		}
+	}
+	
+	rm_set_allows_matrilineal_marriage_no = {
+		potential = { has_global_flag = rm_flag
+			ai = no
+		}
+		
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			religion_scope = {
+				set_allows_matrilineal_marriage = no
+			}
+		}
+	}
+}

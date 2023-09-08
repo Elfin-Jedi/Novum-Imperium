@@ -1,5 +1,3 @@
-# -*- ck2.bloodlines -*-
-
 samrat_chakravartin_male = {
 	hindu_opinion = 5
 	jain_opinion = 5
@@ -29,10 +27,10 @@ samrat_chakravartin_female = {
 }
 
 saoshyant_male = {
-	monthly_character_piety = 0.2
+	monthly_character_piety = 1
 	church_opinion = 10
 	command_modifier = {
-		religious_enemy = 0.15
+		religious_enemy = 0.3
 	}
 	inheritance = patrilineal
 	allow_bastards = yes
@@ -44,52 +42,52 @@ saoshyant_male = {
 }
 
 saoshyant_female = {
-	monthly_character_piety = 0.2
+	monthly_character_piety = 1
 	church_opinion = 10
 	command_modifier = {
-		religious_enemy = 0.15
+		religious_enemy = 0.3
 	}
 	inheritance = matrilineal
 	allow_bastards = yes
 	picture = GFX_bloodlines_symbol_zoroastrian
-	flags = { created_bloodline bloodline_saoshyant }
+	flags = { created_bloodline bloodline_saoshyant}
 	active = {
 		religion = zoroastrian
 	}
 }
 
 israel_male = {
-	bloodline_effect_inquisitional = 1
+	bloodline_effect_israel_loans = 1
 	church_opinion = 10
 	command_modifier = {
-		religious_enemy = 0.15
+		religious_enemy = 0.3
 	}
 	inheritance = patrilineal
 	allow_bastards = yes
 	picture = GFX_bloodlines_symbol_jewish
-	flags = { inquisitional_bloodline created_bloodline }
+	flags = { jewish_loans created_bloodline }
 	active = {
 		religion_group = jewish_group
 	}
 }
 
 israel_female = {
-	bloodline_effect_inquisitional = 1
+	bloodline_effect_israel_loans = 1
 	church_opinion = 10
 	command_modifier = {
-		religious_enemy = 0.15
+		religious_enemy = 0.3
 	}
 	inheritance = matrilineal
 	allow_bastards = yes
 	picture = GFX_bloodlines_symbol_jewish
-	flags = { inquisitional_bloodline created_bloodline }
+	flags = { jewish_loans created_bloodline }
 	active = {
 		religion_group = jewish_group
 	}
 }
 
 roman_emperor_male = {
-	monthly_character_prestige = 0.2
+	monthly_character_prestige = 0.25
 	bloodline_effect_roman_culture = 1
 	christian_opinion = 5
 	hellenic_pagan_opinion = 5
@@ -107,7 +105,7 @@ roman_emperor_male = {
 }
 
 roman_emperor_female = {
-	monthly_character_prestige = 0.2
+	monthly_character_prestige = 0.25
 	bloodline_effect_roman_culture = 1
 	christian_opinion = 5
 	hellenic_pagan_opinion = 5
@@ -138,14 +136,13 @@ phalaris_male = {
 		OR = {
 			culture_group = byzantine
 			culture_group = latin
-			culture_group = italian_group
 			religion_openly_hellenic_or_reformed_trigger = yes
 		}
 	}
 }
 
 teuta_female = {
-	#sea_queen_opinion = 10
+	sea_queen_opinion = 10
 	south_slavic_opinion = 10
 	greek_opinion = -10
 	roman_opinion = -10
@@ -170,9 +167,9 @@ teuta_female = {
 
 child_of_destiny_male = {
 	vassal_opinion = 5
-	combat_rating = 5
+	combat_rating = 10
 	command_modifier = {
-		damage = 0.05
+		damage = 0.1
 	}
 	bloodline_effect_ambition = 1
 	inheritance = patrilineal
@@ -183,9 +180,9 @@ child_of_destiny_male = {
 
 child_of_destiny_female = {
 	vassal_opinion = 5
-	combat_rating = 5
+	combat_rating = 10
 	command_modifier = {
-		damage = 0.05
+		damage = 0.1
 	}
 	bloodline_effect_ambition = 1
 	inheritance = matrilineal
@@ -195,9 +192,9 @@ child_of_destiny_female = {
 }
 
 seaking_bloodline = { #Spawned tribal raider troops are more numerous.
-	combat_rating = 1
-	#seaking_opinion = 5
-	#sea_queen_opinion = 5
+	combat_rating = 3
+	seaking_opinion = 5
+	sea_queen_opinion = 5
 	inheritance = patrilineal
 	allow_bastards = yes
 	bloodline_effect_more_raiders = 1
@@ -217,9 +214,9 @@ seaking_bloodline = { #Spawned tribal raider troops are more numerous.
 }
 
 seaqueen_bloodline = {
-	combat_rating = 1
-	#seaking_opinion = 5
-	#sea_queen_opinion = 5
+	combat_rating = 3
+	seaking_opinion = 5
+	sea_queen_opinion = 5
 	inheritance = matrilineal
 	allow_bastards = yes
 	bloodline_effect_more_raiders = 1
@@ -239,42 +236,48 @@ seaqueen_bloodline = {
 }
 
 bloodthirsty_male_bloodline = {
-	#bloodthirsty_gods_1_opinion = 5
-	#bloodthirsty_gods_2_opinion = 5
-	#bloodthirsty_gods_3_opinion = 5
+	bloodthirsty_gods_1_opinion = 5
+	bloodthirsty_gods_2_opinion = 5
+	bloodthirsty_gods_3_opinion = 5
 	inheritance = patrilineal
 	allow_bastards = yes
 	bloodline_effect_prestige_sacrifice = 1 #Gain prestige on top of piety when sacrificing people to the gods by decision.
-	monthly_character_piety = 0.2
+	monthly_character_piety = 0.3
 	picture = GFX_bloodlines_symbol_bloodthirsty
 	active = {
-		emf_ritual_sacrifice_religion = yes
+		OR = {
+			has_religion_feature = religion_ritual_sacrifice
+			religion_openly_aztec_or_reformed_trigger = yes
+		}
 	}
 	flags = { bloodline_created_bloodthirsty bloodline_prestige_sacrifice created_bloodline }
 }
 
 bloodthirsty_female_bloodline = {
-	#bloodthirsty_gods_1_opinion = 5
-	#bloodthirsty_gods_2_opinion = 5
-	#bloodthirsty_gods_3_opinion = 5
+	bloodthirsty_gods_1_opinion = 5
+	bloodthirsty_gods_2_opinion = 5
+	bloodthirsty_gods_3_opinion = 5
 	inheritance = matrilineal
 	allow_bastards = yes
 	bloodline_effect_prestige_sacrifice = 1 #Gain prestige on top of piety when sacrificing people to the gods by decision.
-	monthly_character_piety = 0.2
+	monthly_character_piety = 0.3
 	picture = GFX_bloodlines_symbol_bloodthirsty
 	active = {
-		emf_ritual_sacrifice_religion = yes
+		OR = {
+			has_religion_feature = religion_ritual_sacrifice
+			religion_openly_aztec_or_reformed_trigger = yes
+		}
 	}
 	flags = { bloodline_created_bloodthirsty bloodline_prestige_sacrifice created_bloodline }
 }
 
 duelist_male = {
 	monthly_character_prestige = 0.1
-	combat_rating = 10
+	combat_rating = 20
 	bloodline_effect_duel = 1
 	command_modifier = {
-		morale_offence = 0.01
-		morale_defence = 0.01
+		morale_offence = 0.015
+		morale_defence = 0.015
 	}
 	inheritance = patrilineal
 	allow_bastards = yes
@@ -284,11 +287,11 @@ duelist_male = {
 
 duelist_female = {
 	monthly_character_prestige = 0.1
-	combat_rating = 10
+	combat_rating = 20
 	bloodline_effect_duel = 1
 	command_modifier = {
-		morale_offence = 0.01
-		morale_defence = 0.01
+		morale_offence = 0.015
+		morale_defence = 0.015
 	}
 	inheritance = matrilineal
 	allow_bastards = yes
@@ -298,36 +301,24 @@ duelist_female = {
 
 lcr_male = {
 	monthly_character_prestige = 0.1
-	combat_rating = 2
+	combat_rating = 5
 	east_slavic_opinion = 5
 	west_slavic_opinion = 5
 	inheritance = patrilineal
 	allow_bastards = yes
 	picture = GFX_bloodlines_placeholder_symbol_2
 	flags = { created_bloodline bloodline_lcr }
-	active = {
-		OR = {
-			culture_group = west_slavic
-			culture_group = east_slavic
-		}
-	}
 }
 
 lcr_female = {
 	monthly_character_prestige = 0.1
-	combat_rating = 2
+	combat_rating = 5
 	east_slavic_opinion = 5
 	west_slavic_opinion = 5
 	inheritance = matrilineal
 	allow_bastards = yes
 	picture = GFX_bloodlines_placeholder_symbol_2
 	flags = { created_bloodline bloodline_lcr }
-	active = {
-		OR = {
-			culture_group = west_slavic
-			culture_group = east_slavic
-		}
-	}
 }
 
 
@@ -335,7 +326,7 @@ lcr_female = {
 grand_crusader = {
 	monthly_character_prestige = 0.2
 	christian_opinion = 5
-	combat_rating = 2
+	combat_rating = 5
 	bloodline_effect_grand_crusader = 1
 	inheritance = patrilineal
 	allow_bastards = yes
@@ -356,7 +347,7 @@ grand_crusader = {
 
 crusader_commander = {
 	monthly_character_prestige = 0.2
-	combat_rating = 5
+	combat_rating = 10
 	bloodline_effect_battle_survivor = 1
 	inheritance = patrilineal
 	allow_bastards = yes
@@ -378,7 +369,7 @@ crusader_commander = {
 crusade_lord = {
 	monthly_character_prestige = 0.1
 	christian_opinion = 5
-	combat_rating = 2
+	combat_rating = 5
 	bloodline_effect_crusade_lord = 1
 	inheritance = patrilineal
 	allow_bastards = yes
@@ -398,10 +389,10 @@ crusade_lord = {
 }
 
 lord_of_outremer = {
-	monthly_character_prestige = 0.2
-	combat_rating = 5
+	monthly_character_prestige = 0.3
+	combat_rating = 10
 	command_modifier = {
-		religious_enemy = 0.1
+		religious_enemy = 0.2
 	}
 	christian_opinion = 5
 	bloodline_effect_inquisitional = 1
@@ -424,7 +415,7 @@ lord_of_outremer = {
 
 crusader_kid_bloodline = {
 	monthly_character_piety = 0.15
-	combat_rating = 2
+	combat_rating = 5
 	christian_opinion = 5
 	bloodline_effect_crusade_lord = 1
 	inheritance = patrilineal
@@ -461,7 +452,7 @@ destroyer_of_byzantium = {
 northern_crusade_bloodline = {
 	monthly_character_prestige = 0.2
 	command_modifier = {
-		religious_enemy = 0.05
+		religious_enemy = 0.1
 	}
 	bloodline_effect_teutonic_vassals = 1
 	bloodline_effect_teutonic_guards = 1
@@ -481,12 +472,12 @@ reconquista_bloodline = {
 	iberian_opinion = 5
 	monthly_character_piety = 0.1
 	monthly_character_prestige = 0.2
-	#bloodline_effect_cheap_reconquista = 1
+	bloodline_effect_cheap_reconquista = 1
 	active = {
 		culture_group = iberian
 		religion_group = christian
 	}
-	flags = { created_bloodline reconquista_bloodline } # cheap_reconquista }
+	flags = { created_bloodline reconquista_bloodline cheap_reconquista }
 }
 
 reconquista_cid_bloodline = {
@@ -497,8 +488,8 @@ reconquista_cid_bloodline = {
 	andalusian_arabic_opinion = 5
 	monthly_character_prestige = 0.2
 	command_modifier = {
-		morale_offence = 0.015
-		morale_defence = 0.015
+		morale_offence = 0.03
+		morale_defence = 0.03
 	}
 	active = {
 		OR = {
@@ -511,9 +502,9 @@ reconquista_cid_bloodline = {
 
 #earned by a female celtic ruler who successfully gains e_britannia
 boudica = {
-	combat_rating = 2
+	combat_rating = 5
 	celtic_opinion = 5
-	light_infantry_morale = 0.02
+	light_infantry_morale = 0.05
 	monthly_character_prestige = 0.1
 	inheritance = matrilineal
 	allow_bastards = yes
@@ -527,7 +518,7 @@ pure_murder_bloodline_01 = {
 	picture = GFX_bloodlines_symbol_murder_child
 	inheritance = patrilineal
 	allow_bastards = yes
-	plot_power_modifier = 0.07
+	plot_power_modifier = 0.15
 	vassal_opinion = -4
 	bloodline_effect_murder_child = 1
 	flags = { created_bloodline bloodline_murder_child bloodline_murderous }
@@ -537,7 +528,7 @@ pure_murder_bloodline_02 = {
 	picture = GFX_bloodlines_symbol_murder_jester
 	inheritance = patrilineal
 	allow_bastards = yes
-	defensive_plot_power_modifier = 0.05
+	defensive_plot_power_modifier = 0.1
 	vassal_opinion = -6
 	bloodline_effect_macabre_banquet = 1
 	flags = { created_bloodline bloodline_macabre_banquet bloodline_murderous }
@@ -546,7 +537,7 @@ pure_murder_bloodline_02 = {
 pure_murder_bloodline_03 = {
 	picture = GFX_bloodlines_symbol_murder_rose
 	inheritance = patrilineal
-	arrest_chance_modifier = 0.05
+	arrest_chance_modifier = 0.1
 	allow_bastards = yes
 	bloodline_effect_murder_deflection = 1
 	flags = { created_bloodline bloodline_murder_deflection bloodline_murderous }
@@ -556,7 +547,7 @@ pure_murder_bloodline_04 = {
 	picture = GFX_bloodlines_symbol_murder
 	inheritance = patrilineal
 	allow_bastards = yes
-	plot_power_modifier = 0.05
+	plot_power_modifier = 0.1
 	vassal_opinion = -4
 	bloodline_effect_murder_stalk = 1
 	flags = { created_bloodline bloodline_murder_stalk bloodline_murderous }
@@ -566,7 +557,7 @@ pure_murder_bloodline_05 = {
 	picture = GFX_bloodlines_symbol_ruthless
 	inheritance = patrilineal
 	allow_bastards = yes
-	arrest_chance_modifier = 0.05
+	arrest_chance_modifier = 0.1
 	vassal_opinion = -4
 	bloodline_effect_murder_burn = 1
 	flags = { created_bloodline bloodline_murder_burn bloodline_murderous bloodline_dragon }
@@ -578,10 +569,10 @@ pure_war_bloodline_01 = {
 	inheritance = patrilineal
 	allow_bastards = yes
 	bloodline_effect_great_heroes_appear = 1
-	combat_rating = 3
+	combat_rating = 6
 	command_modifier = {
-		morale_offence = 0.02
-		morale_defence = 0.02
+		morale_offence = 0.05
+		morale_defence = 0.05
 	}
 	flags = { created_bloodline bloodline_heroes }
 }
@@ -590,10 +581,10 @@ pure_war_bloodline_02 = {
 	picture = GFX_bloodlines_symbol_war_knight
 	inheritance = patrilineal
 	allow_bastards = yes
-	combat_rating = 2
+	combat_rating = 4
 	monthly_character_piety = 0.05
 	command_modifier = {
-		cavalry = 0.05
+		cavalry = 0.10
 	}
 	bloodline_effect_knights = 1
 	active = {
@@ -606,10 +597,10 @@ pure_war_bloodline_03 = {
 	picture = GFX_bloodlines_symbol_war
 	inheritance = patrilineal
 	allow_bastards = yes
-	combat_rating = 2
-	levy_reinforce_rate = 0.02
+	combat_rating = 5
+	levy_reinforce_rate = 0.05
 	command_modifier = {
-		center = 0.02
+		center = 0.05
 	}
 	bloodline_effect_reaver = 1
 	flags = { created_bloodline bloodline_reaver }
@@ -619,10 +610,10 @@ pure_war_bloodline_04 = {
 	picture = GFX_bloodlines_placeholder_symbol
 	inheritance = patrilineal
 	allow_bastards = yes
-	combat_rating = 1
+	combat_rating = 3
 	command_modifier = {
-		speed = 0.07
-		retreat = 0.02
+		speed = 0.15
+		retreat = 0.05
 	}
 	bloodline_effect_drill = 1
 	flags = { created_bloodline bloodline_drill }
@@ -633,9 +624,9 @@ pure_peace_bloodline_01 = {
 	picture = GFX_bloodlines_symbol_blessed_child
 	inheritance = patrilineal
 	allow_bastards = yes
-	monthly_character_piety = 0.2
+	monthly_character_piety = 0.25
 	vassal_opinion = 4
-	global_revolt_risk = -0.01
+	global_revolt_risk = -0.02
 	bloodline_effect_less_factions = 1
 	flags = { created_bloodline bloodline_less_factions peace_bloodline_1 }
 }
@@ -645,7 +636,7 @@ pure_peace_bloodline_02 = {
 	allow_bastards = yes
 	monthly_character_piety = 0.1
 	vassal_opinion = 4
-	global_revolt_risk = -0.01
+	global_revolt_risk = -0.02
 	bloodline_effect_less_factions = 1
 	flags = { created_bloodline bloodline_less_factions peace_bloodline_2 }
 }
@@ -653,9 +644,9 @@ pure_peace_bloodline_03 = {
 	picture = GFX_bloodlines_symbol_munificent
 	inheritance = patrilineal
 	allow_bastards = yes
-	global_tax_modifier = 0.02
+	global_tax_modifier = 0.05
 	vassal_opinion = 4
-	global_revolt_risk = -0.01
+	global_revolt_risk = -0.02
 	bloodline_effect_endearing = 1
 	flags = { created_bloodline bloodline_endearing }
 }
@@ -666,7 +657,7 @@ pure_architect_bloodline_01 = {
 	inheritance = patrilineal
 	allow_bastards = yes
 	town_opinion = 6
-	city_vassal_tax_modifier = 0.02
+	city_vassal_tax_modifier = 0.05
 	bloodline_effect_architect = 1 
 	active = {
 		NOR = {
@@ -681,7 +672,7 @@ pure_castellan_bloodline_01 = {
 	inheritance = patrilineal
 	allow_bastards = yes
 	castle_opinion = 4
-	castle_vassal_tax_modifier = 0.02
+	castle_vassal_tax_modifier = 0.05
 	bloodline_effect_castellan = 1 
 	active = {
 		NOR = {
@@ -696,7 +687,7 @@ pure_monumental_bloodline_01 = {
 	inheritance = patrilineal
 	allow_bastards = yes
 	church_opinion = 4
-	temple_vassal_tax_modifier = 0.02
+	temple_vassal_tax_modifier = 0.05
 	bloodline_effect_monumental = 1 
 	active = {
 		NOR = {
@@ -713,9 +704,9 @@ hybrid_murder_war_bloodline_01 = {
 	picture = GFX_bloodlines_symbol_murder_war
 	inheritance = patrilineal
 	allow_bastards = yes
-	plot_power_modifier = 0.02
-	combat_rating = 1
-	levy_reinforce_rate = 0.01
+	plot_power_modifier = 0.05
+	combat_rating = 3
+	levy_reinforce_rate = 0.02
 	bloodline_effect_faster_claims = 1 
 	bloodline_effect_faster_dissent = 1 
 	flags = { created_bloodline bloodline_faster_claims bloodline_faster_dissent }
@@ -726,7 +717,7 @@ hybrid_murder_peace_bloodline_01 = {
 	picture = GFX_bloodlines_symbol_murder_peace
 	inheritance = patrilineal
 	allow_bastards = yes
-	arrest_chance_modifier = 0.02
+	arrest_chance_modifier = 0.05
 	global_revolt_risk = -0.01
 	bloodline_effect_dismantle_factions = 1 
 	flags = { created_bloodline bloodline_dismantle_factions }
@@ -737,9 +728,9 @@ hybrid_builder_bloodline_01 = {
 	picture = GFX_bloodlines_symbol_builder
 	inheritance = patrilineal
 	allow_bastards = yes
-	global_tax_modifier = 0.01
-	build_cost_modifier = -0.1
-	build_time_modifier = -0.1
+	global_tax_modifier = 0.02
+	build_cost_modifier = -0.2
+	build_time_modifier = -0.2
 	active = {
 		NOR = {
 			is_nomadic = yes
@@ -773,7 +764,7 @@ hybrid_peace_architect_bloodline_01 = {
 	allow_bastards = yes
 	monthly_character_piety = 0.05
 	town_opinion = 5
-	city_tax_modifier = 0.01
+	city_tax_modifier = 0.03
 	bloodline_effect_architect = 1 
 	bloodline_effect_peace_prosperity = 1
 	active = {
@@ -792,7 +783,7 @@ hybrid_peace_castellan_bloodline_01 = {
 	allow_bastards = yes
 	monthly_character_piety = 0.05
 	castle_opinion = 5
-	castle_tax_modifier = 0.01
+	castle_tax_modifier = 0.03
 	bloodline_effect_castellan = 1 
 	bloodline_effect_peace_prosperity = 1
 	active = {
@@ -811,7 +802,7 @@ hybrid_peace_monumental_bloodline_01 = {
 	allow_bastards = yes
 	monthly_character_piety = 0.05
 	church_opinion = 5
-	temple_tax_modifier = 0.01
+	temple_tax_modifier = 0.03
 	bloodline_effect_monumental = 1 
 	bloodline_effect_peace_prosperity = 1
 	active = {
@@ -829,7 +820,7 @@ event_family_bloodline_01 = {
 	inheritance = patrilineal
 	allow_bastards = yes
 	dynasty_opinion = 5
-	monthly_character_prestige = 0.1
+	monthly_character_prestige = 0.2
 	bloodline_effect_dynastic_meddling = 1
 	flags = { created_bloodline bloodline_dynastic_meddling }
 }
@@ -837,9 +828,9 @@ event_technology_bloodline_01 = {
 	picture = GFX_bloodlines_symbol_technology
 	inheritance = patrilineal
 	allow_bastards = yes
-	#poet_opinion = 10
-	build_time_modifier = -0.07
-	tech_growth_modifier = 0.07
+	poet_opinion = 10
+	build_time_modifier = -0.15
+	tech_growth_modifier = 0.15
 	bloodline_effect_more_philosophers = 1
 	bloodline_effect_wandering_artists = 1
 	flags = { created_bloodline bloodline_more_philosophers bloodline_wandering_artists }
@@ -848,9 +839,9 @@ event_benevolent_bloodline_01 = {
 	picture = GFX_bloodlines_symbol_benevolent
 	inheritance = patrilineal
 	allow_bastards = yes
-	#just_opinion = 25
-	#kind_opinion = 10
-	monthly_character_prestige = 0.1
+	just_opinion = 25
+	kind_opinion = 10
+	monthly_character_prestige = 0.2
 	monthly_character_piety = 0.05
 	flags = { created_bloodline bloodline_event_3 }
 }
@@ -859,8 +850,8 @@ event_ruthless_bloodline_01 = {
 	inheritance = patrilineal
 	allow_bastards = yes
 	vassal_opinion = -10
-	arrest_chance_modifier = 0.07
-	global_revolt_risk = 0.01
+	arrest_chance_modifier = 0.15
+	global_revolt_risk = 0.02
 	bloodline_effect_revocation_plot = 1
 	flags = { created_bloodline bloodline_revocation_plot }
 }
@@ -871,7 +862,7 @@ event_religion_peaceful_bloodline_01 = {
 	inheritance = patrilineal
 	allow_bastards = yes
 	monthly_character_piety = 0.1
-	tech_growth_modifier_culture = 0.02
+	tech_growth_modifier_culture = 0.05
 	church_opinion = 4
 	active = {
 		religion_same_as_bloodline_founder_trigger = yes
@@ -892,11 +883,8 @@ event_religion_aggressive_bloodline_01 = {
 	inheritance = patrilineal
 	allow_bastards = yes
 	monthly_character_piety = 0.15
-	tech_growth_modifier_culture = -0.01
+	tech_growth_modifier_culture = -0.03
 	church_opinion = 8
-	command_modifier = {
-		religious_enemy = 0.1
-	}
 	active = {
 		religion_same_as_bloodline_founder_trigger = yes
 #		custom_tooltip = {
@@ -909,14 +897,15 @@ event_religion_aggressive_bloodline_01 = {
 #		}
 	}
 	bloodline_effect_better_inquisition = 1
-	flags = { created_bloodline bloodline_better_inquisition }
+	bloodline_effect_religious_liberation = 1
+	flags = { created_bloodline bloodline_better_inquisition bloodline_religious_liberation }
 }
 event_religion_peaceful_bloodline_02 = {
 	picture = GFX_bloodlines_symbol_sunni #Muslim
 	inheritance = patrilineal
 	allow_bastards = yes
 	monthly_character_piety = 0.1
-	tech_growth_modifier_culture = 0.02
+	tech_growth_modifier_culture = 0.05
 	church_opinion = 4
 	active = {
 		religion_same_as_bloodline_founder_trigger = yes
@@ -937,11 +926,8 @@ event_religion_aggressive_bloodline_02 = {
 	inheritance = patrilineal
 	allow_bastards = yes
 	monthly_character_piety = 0.15
-	tech_growth_modifier_culture = -0.01
+	tech_growth_modifier_culture = -0.03
 	church_opinion = 8
-	command_modifier = {
-		religious_enemy = 0.1
-	}
 	active = {
 		religion_same_as_bloodline_founder_trigger = yes
 #		custom_tooltip = {
@@ -955,14 +941,14 @@ event_religion_aggressive_bloodline_02 = {
 	}
 	bloodline_effect_better_inquisition = 1
 	bloodline_effect_religious_liberation = 1
-	flags = { created_bloodline bloodline_better_inquisition }
+	flags = { created_bloodline bloodline_better_inquisition bloodline_religious_liberation }
 }
 event_religion_peaceful_bloodline_03 = {
 	picture = GFX_bloodlines_symbol_jewish #Jewish
 	inheritance = patrilineal
 	allow_bastards = yes
 	monthly_character_piety = 0.1
-	tech_growth_modifier_culture = 0.02
+	tech_growth_modifier_culture = 0.05
 	church_opinion = 4
 	active = {
 		religion_same_as_bloodline_founder_trigger = yes
@@ -983,11 +969,8 @@ event_religion_aggressive_bloodline_03 = {
 	inheritance = patrilineal
 	allow_bastards = yes
 	monthly_character_piety = 0.15
-	tech_growth_modifier_culture = -0.01
+	tech_growth_modifier_culture = -0.03
 	church_opinion = 8
-	command_modifier = {
-		religious_enemy = 0.1
-	}
 	active = {
 		religion_same_as_bloodline_founder_trigger = yes
 #		custom_tooltip = {
@@ -1000,14 +983,15 @@ event_religion_aggressive_bloodline_03 = {
 #		}
 	}
 	bloodline_effect_better_inquisition = 1
-	flags = { created_bloodline bloodline_better_inquisition }
+	bloodline_effect_religious_liberation = 1
+	flags = { created_bloodline bloodline_better_inquisition bloodline_religious_liberation }
 }
 event_religion_peaceful_bloodline_04 = {
 	picture = GFX_bloodlines_symbol_pagan #Pagan
 	inheritance = patrilineal
 	allow_bastards = yes
 	monthly_character_piety = 0.1
-	tech_growth_modifier_culture = 0.02
+	tech_growth_modifier_culture = 0.05
 	church_opinion = 4
 	active = {
 		religion_same_as_bloodline_founder_trigger = yes
@@ -1028,11 +1012,8 @@ event_religion_aggressive_bloodline_04 = {
 	inheritance = patrilineal
 	allow_bastards = yes
 	monthly_character_piety = 0.15
-	tech_growth_modifier_culture = -0.01
+	tech_growth_modifier_culture = -0.03
 	church_opinion = 8
-	command_modifier = {
-		religious_enemy = 0.1
-	}
 	active = {
 		religion_same_as_bloodline_founder_trigger = yes
 #		custom_tooltip = {
@@ -1046,14 +1027,14 @@ event_religion_aggressive_bloodline_04 = {
 	}
 	bloodline_effect_better_inquisition = 1
 	bloodline_effect_religious_liberation = 1
-	flags = { created_bloodline bloodline_better_inquisition }
+	flags = { created_bloodline bloodline_better_inquisition bloodline_religious_liberation }
 }
 event_religion_peaceful_bloodline_05 = {
 	picture = GFX_bloodlines_symbol_zoroastrian #Zoroastrian
 	inheritance = patrilineal
 	allow_bastards = yes
 	monthly_character_piety = 0.1
-	tech_growth_modifier_culture = 0.02
+	tech_growth_modifier_culture = 0.05
 	church_opinion = 4
 	active = {
 		religion_same_as_bloodline_founder_trigger = yes
@@ -1074,11 +1055,8 @@ event_religion_aggressive_bloodline_05 = {
 	inheritance = patrilineal
 	allow_bastards = yes
 	monthly_character_piety = 0.15
-	tech_growth_modifier_culture = -0.01
+	tech_growth_modifier_culture = -0.03
 	church_opinion = 8
-	command_modifier = {
-		religious_enemy = 0.1
-	}
 	active = {
 		religion_same_as_bloodline_founder_trigger = yes
 #		custom_tooltip = {
@@ -1091,14 +1069,15 @@ event_religion_aggressive_bloodline_05 = {
 #		}
 	}
 	bloodline_effect_better_inquisition = 1
-	flags = { created_bloodline bloodline_better_inquisition }
+	bloodline_effect_religious_liberation = 1
+	flags = { created_bloodline bloodline_better_inquisition bloodline_religious_liberation }
 }
 event_religion_peaceful_bloodline_06 = {
 	picture = GFX_bloodlines_symbol_hindu #Indian
 	inheritance = patrilineal
 	allow_bastards = yes
 	monthly_character_piety = 0.1
-	tech_growth_modifier_culture = 0.02
+	tech_growth_modifier_culture = 0.05
 	church_opinion = 4
 	active = {
 		religion_same_as_bloodline_founder_trigger = yes
@@ -1119,11 +1098,8 @@ event_religion_aggressive_bloodline_06 = {
 	inheritance = patrilineal
 	allow_bastards = yes
 	monthly_character_piety = 0.15
-	tech_growth_modifier_culture = -0.01
+	tech_growth_modifier_culture = -0.03
 	church_opinion = 8
-	command_modifier = {
-		religious_enemy = 0.1
-	}
 	active = {
 		religion_same_as_bloodline_founder_trigger = yes
 #		custom_tooltip = {
@@ -1136,7 +1112,8 @@ event_religion_aggressive_bloodline_06 = {
 #		}
 	}
 	bloodline_effect_better_inquisition = 1
-	flags = { created_bloodline bloodline_better_inquisition }
+	bloodline_effect_religious_liberation = 1
+	flags = { created_bloodline bloodline_better_inquisition bloodline_religious_liberation }
 }
 
 #Special earned Bloodlines:
@@ -1146,25 +1123,11 @@ alexander_bloodline_01 = {
 	allow_bastards = yes
 	hellenic_pagan_opinion = 5
 	hellenic_pagan_reformed_opinion = 5
-	levy_reinforce_rate = 0.07
-	combat_rating = 5
+	levy_reinforce_rate = 0.15
+	combat_rating = 10
 	monthly_character_prestige = 0.2
 	bloodline_effect_one_invasion = 1
 	flags = { created_bloodline bloodline_ambition bloodline_great_conquerors bloodline_alexander }
-	active = {
-		OR = {
-			culture_group = italian_group
-			culture_group = latin
-			culture_group = byzantine
-			culture_group = arabic
-		}
-		OR = {
-			religion_group = christian
-			religion_group = muslim
-			religion = hellenic_pagan
-			religion = hellenic_pagan_reformed
-		}
-	}
 }
 ashoka_bloodline_01 = {
 	picture = GFX_bloodlines_symbol_ashoka_lion
@@ -1173,14 +1136,12 @@ ashoka_bloodline_01 = {
 	hindu_opinion = 5
 	jain_opinion = 5
 	buddhist_opinion = 10
-	global_revolt_risk = -0.01
-	combat_rating = 2
+	global_revolt_risk = -0.03
+	combat_rating = 5
 	monthly_character_piety = 0.1
 	bloodline_effect_one_invasion = 1
-	flags = { created_bloodline bloodline_great_conquerors bloodline_better_inquisition bloodline_ashoka }
-	active = {
-		has_dharmic_religion_trigger = yes
-	}
+	bloodline_effect_religious_liberation = 1
+	flags = { created_bloodline bloodline_great_conquerors bloodline_better_inquisition bloodline_religious_liberation bloodline_ashoka }
 }
 
 immortal_bloodline_01 = {
@@ -1188,7 +1149,7 @@ immortal_bloodline_01 = {
 	inheritance = patrilineal
 	allow_bastards = yes
 	taoist_opinion = 5
-	health = 0.5
+	health = 1.0
 	monthly_character_prestige = 0.2
 	flags = { created_bloodline bloodline_ambition bloodline_murderous } #Murderous + Ambitious = "There can be only ONE."
 }
@@ -1198,12 +1159,9 @@ chinese_imperial_bloodline_01 = {
 	inheritance = patrilineal
 	allow_bastards = yes
 	taoist_opinion = 5
-	tech_growth_modifier_culture = 0.01
+	tech_growth_modifier_culture = 0.02
 	monthly_character_prestige = 0.2
-	flags = { created_bloodline bloodline_chinese_imperial }
-	active = {
-		emf_is_chinese_imperial_culture = yes
-	}
+	flags = { created_bloodline bloodline_chinese_imperial}
 }
 
 matilde_bloodline = {
@@ -1236,7 +1194,7 @@ matilde_male_bloodline = {
 
 true_matilde_bloodline = {
 	religion_head_opinion = 5
-	italian_group_opinion = 5
+	italian_opinion = 5
 	bloodline_effect_easy_vows = 1
 	monthly_character_piety = 0.05
 	inheritance = matrilineal

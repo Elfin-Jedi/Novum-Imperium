@@ -1,0 +1,77 @@
+targetted_decisions = {
+	grant_immediacy = {
+	    diplomacy_icon = GFX_GRANT_VICE_ROYALTY_INTERACTION_icon
+		from_potential = {
+			government = confederate_government
+			independent = yes
+		}
+		potential = {
+		same_realm = from
+		is_ruler = yes
+		}
+		allow = {
+			FROM = {
+			prestige = 250
+			war = no
+			}
+			ROOT = {
+			war = no
+			NOT = { tier = BARON }
+			NOT = {
+			any_demesne_title = {
+				is_vice_royalty = yes
+			}
+			}
+				NOT = {
+						has_opinion_modifier = {
+							who = FROM
+							name = revoked_immediacy
+						}
+					}
+				}
+		}
+		effect = {
+			custom_tooltip = {
+			text = conftribvassal
+			set_defacto_liege = THIS
+			FROM = {
+				make_tributary = {
+				who = ROOT
+				tributary_type = free_imperial_city_trib
+				}
+			}
+			}
+			ROOT = { prestige = 250 }
+			FROM = { prestige = -250 }
+			opinion = {
+				name = granted_immediacy
+				who = FROM
+				years = 10
+			}
+			any_liege = {
+				if = {
+				limit = {
+					independent = no
+				}
+				opinion = {
+					name = granted_vassal_immediacy
+					who = FROM
+					years = 10
+				}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				AND = {
+				over_vassal_limit <= 0
+				}
+			}
+		}
+	}
+}

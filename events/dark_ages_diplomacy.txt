@@ -294,7 +294,7 @@ character_event = {
 					}				
 					modifier = {
 						factor = 1.75
-						trait = silver_tongue_lifestyle
+						trait = silver_tongue
 					}
 			
 					character_event = { id = darkages.72578 days = 45 random = 45 }
@@ -2724,7 +2724,7 @@ character_event = {
 			NOR = { 
 				has_education_diplomacy_trigger = yes
 				trait = gregarious
-				trait = silver_tongue_lifestyle
+				trait = silver_tongue
 				trait = cheerful
 				trait = socializer
 				diplomacy = 12
@@ -3342,7 +3342,7 @@ character_event = { 		#CALLED FROM TARGETED DECISION
 					}				
 					modifier = {
 						factor = 1.75
-						trait = silver_tongue_lifestyle
+						trait = silver_tongue
 					}				
 					modifier = {
 						factor = 1.35
@@ -3668,7 +3668,7 @@ character_event = { 		#CALLED FROM TARGETED DECISION
 					}				
 					modifier = {
 						factor = 1.75
-						trait = silver_tongue_lifestyle
+						trait = silver_tongue
 					}									
 					modifier = {
 						factor = 1.35
@@ -7750,8 +7750,9 @@ character_event = { 		#SUCCESS INTRIGUE
 		
 		if = {
 			limit = {
-				NOT = { trait = silver_tongue_lifestyle }
-				NOT = { has_character_flag = da_refused_silver_tongue_lifestyle }
+				NOT = { lifestyle_traits = 1 }
+				NOT = { trait = silver_tongue }
+				NOT = { has_character_flag = da_refused_silver_tongue }
 			}
 			hidden_tooltip = {
 				random = {
@@ -7977,14 +7978,14 @@ character_event = { 		#Silver Tongue lifestyle
 	option = {
 		name = EVTOPTA1972702
 
-		add_trait = silver_tongue_lifestyle
+		add_trait = silver_tongue
 
 	}
 	
 	option = {
 		name = EVTOPTB1972702
 		
-		set_character_flag = da_refused_silver_tongue_lifestyle
+		set_character_flag = da_refused_silver_tongue
 
 		
 	}	

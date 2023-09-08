@@ -2976,21 +2976,44 @@ pagan_group = {
 		scripture_name = THE_LEGENDS
 		priest_title = AUGUR
 		
-		priests_can_marry = no
-		priests_can_inherit = no
-		female_temple_holders = yes
-		castes = yes
-		
-		can_call_crusade = no # Cosmopolitan disables crusades
-		join_crusade_if_bordering_hostile = yes
-		
 		aggression = 0.5 # Set based on Cosmopolitan's aggression setting 
 		
 		religious_clothing_head = 12
 		religious_clothing_priest = 11
 		
-		intermarry = hellenic_pagan
-		intermarry = christian
+		priests_can_marry = yes
+		priests_can_inherit = no
+		female_temple_holders = yes
+		castes = yes
+		join_crusade_if_bordering_hostile = yes
+		allow_looting = yes
+		allow_viking_invasion = yes
+		raised_vassal_opinion_loss = no
+		max_consorts = 30
+		women_can_take_consorts = yes
+		independence_war_score_bonus = 100
+		feminist = yes 
+		defensive_attrition = yes
+		has_coa_on_barony_only = yes 
+		uses_jizya_tax = yes
+		rel_head_defense = yes
+		women_can_take_consorts = yes
+		can_call_crusade = yes
+		hard_to_convert = yes 
+		use_new_crusade = yes
+		crusade_cb = new_crusade
+		can_demand_religious_conversion = yes
+		
+		intermarry = pagan_group
+		intermarry = indian_group
+		intermarry = nestorian 
+		intermarry = messalian 
+		intermarry = miaphysite
+		intermarry = yazidi 
+		intermarry = monothelite
+		intermarry = aztec
+		intermarry = zoroastrian_group
+		intermarry = jewish_group
 
 		allow_in_ruler_designer = no
 	}
@@ -3004,7 +3027,7 @@ pagan_group = {
 		reformed = hellenic_pagan_reformed
 
 		icon = 37
-		heresy_icon = 14
+		heresy_icon = 95
 
 		color = { 0.6 0.2 0.1 }
 
@@ -3021,22 +3044,43 @@ pagan_group = {
 		scripture_name = THE_LEGENDS
 		priest_title = AUGUR
 		
-		priests_can_marry = no
+		priests_can_marry = yes
 		priests_can_inherit = no
 		female_temple_holders = yes
 		castes = yes
+		join_crusade_if_bordering_hostile = yes
+		allow_looting = yes
+		allow_viking_invasion = yes
+		raised_vassal_opinion_loss = no
+		max_consorts = 30
+		women_can_take_consorts = yes
+		independence_war_score_bonus = 100
+		feminist = yes 
+		defensive_attrition = yes
+		has_coa_on_barony_only = yes 
+		uses_jizya_tax = yes
+		rel_head_defense = yes
+		women_can_take_consorts = yes
+		hard_to_convert = yes 
+		use_new_crusade = yes
+		can_call_crusade = yes
+		crusade_cb = new_crusade
+		can_demand_religious_conversion = yes
 		
-		intermarry = hellenic_pagan_reformed
-		intermarry = christian
-		intermarry = muslim
+		intermarry = pagan_group
+		intermarry = indian_group
+		intermarry = nestorian 
+		intermarry = messalian 
+		intermarry = miaphysite
+		intermarry = yazidi 
+		intermarry = zoroastrian_group
 		intermarry = jewish_group
 		
 		aggression = 0.5 # Set based on Cosmopolitan's aggression setting 
 
 		religious_clothing_head = 12
 		religious_clothing_priest = 11
-		
-		can_demand_religious_conversion = no
+
 	}
 	
 	bon_reformed = {

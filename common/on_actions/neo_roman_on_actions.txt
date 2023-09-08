@@ -1,0 +1,16 @@
+on_new_holder_inheritance = {
+	events = {
+		NIR.17 #Gives the new tsar the trait
+	}
+}
+
+on_new_holder = {
+	events = {
+		NIR.17 #Gives the new tsar the trait
+	}
+}
+on_new_holder_usurpation = { #This checks whenever a title changes hands through war - or pressing the usurp button, I THINK, I'm not sure on that last one
+	events = {
+		NIR.19 #Removes the trait from the old tsar and gives it to the new one
+	}
+}

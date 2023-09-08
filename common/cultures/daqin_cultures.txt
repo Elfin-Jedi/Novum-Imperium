@@ -1,0 +1,39 @@
+great_qin = { #literal translation of Daqin, name of Rome. Maybe that should be Great Qingese?
+	graphical_cultures = { chinesegfx byzantinegfx romangfx }
+	
+	sinogreek = { #cannot find out how to blind and castrate. Need to find out!
+		graphical_cultures = { chinesegfx byzantinegfx } #chinese preferred, byzantine fallback - Chinese silk important import, Chinese fashion comes with it as cultures blend.
+		color = { 250 130 130 }
+		
+		male_names = {
+			Bo Duoli Kai Sa Kaisa Mie Li Sha Ling Qin Lun Dun Po To Ai Sie Ai-sie Yalishanda Hiyaxinth Auogusite Kelisidian Kangsitandin Feilikesi Adelian Hema Zhulian Jiasiting Ma'erkusi Makesimusi Maikeer Nigulasi Feilipu Feinikesi Lafeier Luoman Saibasidianus Sitefanus Xiaduo Dimoxius Weijier Teluoyi
+		}
+		female_names = {
+			Boa Duolia Kaisara Lia Luna Duna Poa Toa Aia Siea Yalishandala Kasandela Kelisidina Xinxiya Feilixiya Yilina Yisabeila Jade Yuli Kaiselen Mary Meigadalin Aoliweiya Oufeiliya Feinikesi Prilixila Feilisi Rosa Sabine Saileina Sairena Sufeiya Zuoyi Xiadua Anna Amilia
+		}
+		
+		allow_in_ruler_designer = yes
+		used_for_random = no
+		disinherit_from_blinding = yes
+		modifier = default_culture_modifier
+		from_dynasty_prefix = 'An' #questionable inclusion. Common surnmae for Chinese foreigners, chiefly for people between China and Rome; adopted here as part of the blending to mean just "from somewhere".
+	}
+	
+	sinoroman = {
+		graphical_cultures = { romangfx chinesegfx } #roman preferred, chinese fallback - so they'll dress in togas and things; renewed Roman cultural interest means fashion adoption.
+		unit_graphical_cultures = { chinesegfx romangfx southerngfx } #units will remain chinese-looking, if not then Roman, if not then Roman fallback.
+		color = { 130 217 217 }
+		male_names = {
+			Bo Duoli Kai Sa Kaisa Mie Li Sha Ling Qin Lun Dun Po To Ai Sie Ai-sie Yalishanda Hiyaxinth Auogusite Kelisidian Kangsitandin Feilikesi Adelian Hema Zhulian Jiasiting Ma'erkusi Makesimusi Maikeer Nigulasi Feilipu Feinikesi Lafeier Luoman Saibasidianus Sitefanus Xiaduo Dimoxius Weijier Teluoyi
+		}
+		female_names = {
+			Boa Duolia Kaisara Lia Luna Duna Poa Toa Aia Siea Yalishandala Kasandela Kelisidina Xinxiya Feilixiya Yilina Yisabeila Jade Yuli Kaiselen Mary Meigadalin Aoliweiya Oufeiliya Feinikesi Prilixila Feilisi Rosa Sabine Saileina Sairena Sufeiya Zuoyi Xiadua Anna Amilia
+		}
+		parent = sinogreek #prevents negative opinion between the two
+		allow_in_ruler_designer = yes
+		used_for_random = no
+		disinherit_from_blinding = yes
+		modifier = default_culture_modifier
+		from_dynasty_prefix = 'An' #questionable inclusion. Common surnmae for Chinese foreigners, chiefly for people between China and Rome; adopted here as part of the blending to mean just "from somewhere".
+	}
+}

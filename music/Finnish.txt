@@ -1,0 +1,286 @@
+song = {
+	name = "Antti Martikainen - Folktale.ogg"
+	song_name = "Folktale"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = finno_ugric }
+			NOT = { religion = finnish_pagan_reformed }
+			NOT = { religion = finnish_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Finnish Folk Music - Forests of Finland.ogg"
+	song_name = "Forests of Finland"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = finno_ugric }
+			NOT = { religion = finnish_pagan_reformed }
+			NOT = { religion = finnish_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Hedningarna - Juopolle Joutunut (FinnishSwedish Folk Music).ogg"
+	song_name = "Juopolle Joutunut"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = finno_ugric }
+			NOT = { religion = finnish_pagan_reformed }
+			NOT = { religion = finnish_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Hedningarna - Tass'on Nainen.ogg"
+	song_name = "Täss'on Nainen"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = finno_ugric }
+			NOT = { religion = finnish_pagan_reformed }
+			NOT = { religion = finnish_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Loituma - Tahden Lentaessa (Shooting Star).ogg"
+	song_name = "Tähden Lentäessä"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = finno_ugric }
+			NOT = { religion = finnish_pagan_reformed }
+			NOT = { religion = finnish_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Finnish Folk Song, MeNaiset - Kuulin aanen (I Heard the Voice).ogg"
+	song_name = "Kuulin Äänen"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = finno_ugric }
+			NOT = { religion = finnish_pagan_reformed }
+			NOT = { religion = finnish_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Forest Pagan Music - Louhi.ogg"
+	song_name = "Louhi"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = finno_ugric }
+			NOT = { religion = finnish_pagan_reformed }
+			NOT = { religion = finnish_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Forest Pagan Music - Mielikki.ogg"
+	song_name = "Mielikki"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = finno_ugric }
+			NOT = { religion = finnish_pagan_reformed }
+			NOT = { religion = finnish_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Kalevala Hymn (finnish epic).ogg"
+	song_name = "Kalevala Hymn"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = finno_ugric }
+			NOT = { religion = finnish_pagan_reformed }
+			NOT = { religion = finnish_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Aamulla Varhain - Finnish Folk Song.ogg"
+	song_name = "Aamulla Varhain"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = finno_ugric }
+			NOT = { religion = finnish_pagan_reformed }
+			NOT = { religion = finnish_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Ensiferum - Kalevala Melody.ogg"
+	song_name = "Kalevala Melody"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = finno_ugric }
+			NOT = { religion = finnish_pagan_reformed }
+			NOT = { religion = finnish_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "ILMATAR.ogg"
+	song_name = "Ilmatar"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = finno_ugric }
+			NOT = { religion = finnish_pagan_reformed }
+			NOT = { religion = finnish_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Muumimusiikkia (The Moomins Soundtrack Compilation).ogg"
+	song_name = "Muumimusiikkia"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = finno_ugric }
+			NOT = { religion = finnish_pagan_reformed }
+			NOT = { religion = finnish_pagan }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 2
+}

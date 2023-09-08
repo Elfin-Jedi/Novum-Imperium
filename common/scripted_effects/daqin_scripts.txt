@@ -1,0 +1,127 @@
+#This is mostly here because I wanted to see if I could do it.
+
+ship_cargo_loot = {
+#	custom_tooltip = DAQIN.loot.TT
+	random_list = {
+		5 = { 
+			trigger = { ROOT = { NOT = { has_artifact = emerald_scepter } } }
+			add_artifact = emerald_scepter
+		}
+		10 = { 
+			trigger = { ROOT = { NOT = { has_artifact = ruby_scepter } } }
+			add_artifact = ruby_scepter
+		}
+		5 = { 
+			trigger = { ROOT = { NOT = { has_artifact = sword_of_heroes } } }
+			add_artifact = sword_of_heroes
+		}
+		10 = {
+			trigger = { ROOT = { NOT = { has_artifact = golden_sword } } }
+			add_artifact = golden_sword
+		}
+		5 = {
+			trigger = { ROOT = { NOT = { has_artifact = ruby_bracelets } } }
+			add_artifact = ruby_bracelets
+		}
+		5 = {
+			trigger = { ROOT = { NOT = { has_artifact = dagger_of_glory } } }
+			add_artifact = dagger_of_glory
+		}
+		10 = {
+			trigger = { ROOT = { NOT = { has_artifact = bejeweled_dagger } } }
+			add_artifact = bejeweled_dagger
+		}
+		10 = {
+			trigger = { ROOT = { NOT = { has_artifact = golden_bracelets } } }
+			add_artifact = golden_bracelets
+		}
+		5 = {
+			trigger = { ROOT = { NOT = { has_artifact = celestial_necklace } } }
+			add_artifact = celestial_necklace
+		}
+		5 = {
+			trigger = { ROOT = { NOT = { has_artifact = scimitar_tier_3_golden } } }
+			add_artifact = scimitar_tier_3_golden
+		}
+		10 = {
+			trigger = { ROOT = { NOT = { has_artifact = bow_tier_2_new } } }
+			add_artifact = bow_tier_2_new
+		}
+		20 = {
+			trigger = {
+				ROOT = {
+					NOT = { has_artifact = prosthetic_hand_gold }
+					trait = one_handed
+				}
+			}
+			add_artifact = prosthetic_hand_gold
+		}
+		20 = {
+			trigger = {
+				ROOT = {
+					NOT = { has_artifact = prosthetic_hand_metal }
+					trait = one_handed
+				}
+			}
+			add_artifact = prosthetic_hand_metal
+		}
+		20 = {
+			trigger = {
+				ROOT = {
+					NOT = { has_artifact = prosthetic_leg_artifact }
+					trait = one_legged
+				}
+			}
+			add_artifact = prosthetic_leg_artifact
+		}
+		10 = {
+			trigger = { ROOT = { NOT = { has_artifact = loot_axe } } }
+			add_artifact = loot_axe
+		}
+		10 = {
+			trigger = { ROOT = { NOT = { has_artifact = magnificent_painting } } }
+			add_artifact = magnificent_painting
+		}
+		10 = {
+			trigger = { ROOT = { NOT = { has_artifact = avant_garde_painting } } }
+			add_artifact = avant_garde_painting
+		}
+		10 = {
+			trigger = { ROOT = { NOT = { has_artifact = armor_tier_2 } } }
+			add_artifact = armor_tier_2
+		}
+		5 = {
+			trigger = { ROOT = { NOT = { has_artifact = horse_armor_tier_3_ornate_steed } } }
+			add_artifact = horse_armor_tier_3_ornate_steed
+		}
+		5 = {
+			trigger = { ROOT = { NOT = { has_artifact = hermetic_plate_armor } } }
+			add_artifact = hermetic_plate_armor
+		}
+		10 = {
+			trigger = { ROOT = { NOT = { has_artifact = famous_ancient_weapon } } }
+			add_artifact = famous_ancient_weapon
+		}
+		5 = {
+			trigger = { ROOT = { NOT = { has_artifact = zweihander_sword } } }
+			add_artifact = zweihander_sword
+		}
+		20 = { wealth = 100 }
+		10 = { add_chinese_artifact_effect = yes }
+	}
+}
+
+add_caring_overseer_effect = {
+	add_character_modifier = {
+		name = caring_overseer
+		duration = -1
+		stacking = yes
+	}
+}
+add_ruthless_overseer_effect = {
+	add_character_modifier = {
+		name = ruthless_overseer
+		duration = -1
+		stacking = yes
+	}
+}

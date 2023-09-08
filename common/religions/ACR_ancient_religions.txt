@@ -7,11 +7,11 @@ pagan_group = {
 	color = { 0.6 0.0 0.0 } # included here to make validator shut the hell up
 
 	titan_pagan = {
-		graphical_culture = norsegfx
+		graphical_culture = hellenicgfx
 		alternate_start = { always = no }
 
-		icon = 58
-		heresy_icon = 59
+		icon = 37
+		heresy_icon = 95
 		parent = hellenic_pagan
 
 		color = { 0.6 0.2 0.2 }
@@ -37,16 +37,38 @@ pagan_group = {
 			key = "TITAN"
 		}
 
-		can_call_crusade = no
+		priests_can_marry = yes
+		priests_can_inherit = no
+		female_temple_holders = yes
+		castes = yes
+		join_crusade_if_bordering_hostile = yes
+		allow_looting = yes
+		allow_viking_invasion = yes
+		raised_vassal_opinion_loss = no
+		max_consorts = 90
+		women_can_take_consorts = yes
+		independence_war_score_bonus = 100
+		defensive_attrition = yes
+		can_call_crusade = yes
+		has_coa_on_barony_only = yes 
+		uses_jizya_tax = yes
+		rel_head_defense = yes
+		women_can_take_consorts = yes
+		hard_to_convert = yes 
+		use_new_crusade = yes
+		crusade_cb = new_crusade
+		can_demand_religious_conversion = yes
+		
+		intermarry = pagan_group
+		intermarry = indian_group
+		intermarry = yazidi 
+		intermarry = zoroastrian_group
+		intermarry = aztec
+
 		scripture_name = THE_STONES
 		priest_title = AUGUR
-		priests_can_marry = yes
-		female_temple_holders = no
-
-		allow_looting = yes
+	
 		peace_prestige_loss = yes
-		raised_vassal_opinion_loss = no
-		max_consorts = 3
 		psc_marriage = yes
 
 		aggression = 2.0 # AI aggression factor
@@ -58,20 +80,10 @@ pagan_group = {
 
 		character_modifier = {
 			combat_rating = 10
-			martial = 5
-			hellenic_pagan_reformed_opinion = -20
-			hellenic_pagan_opinion = -10
+			martial = 8
+			hellenic_pagan_reformed_opinion = -60
+			hellenic_pagan_opinion = -50
 		}
-
-		intermarry = norse_pagan
-		intermarry = tengri_pagan
-		intermarry = zun_pagan
-		intermarry = aten_pagan
-		intermarry = norse_pagan_reformed
-		intermarry = tengri_pagan_reformed
-		intermarry = zun_pagan_reformed
-
-		can_demand_religious_conversion = no
 	}
 
 	promethean_pagan = {
@@ -83,7 +95,7 @@ pagan_group = {
 		ai_convert_same_group = 2 # always try to convert
 
 		icon = 37
-		heresy_icon = 14
+		heresy_icon = 95
 		parent = hellenic_pagan_reformed
 
 		#pre_reformed = yes
@@ -110,11 +122,6 @@ pagan_group = {
 
 			key = "EXP_RELIGION_HOME_TERRITORY"
 		}
-		character_modifier = {
-			hellenic_pagan_reformed_opinion = 15
-			hellenic_pagan_opinion = 30
-			learning = 4
-		}
 
 		can_call_crusade = no
 		scripture_name = THE_DIALOGUES
@@ -122,23 +129,33 @@ pagan_group = {
 		priests_can_marry = yes
 		female_temple_holders = yes
 
-		hard_to_convert = no
+		hard_to_convert = yes
 		can_demand_religious_conversion = yes
 
 		allow_looting = no
-		peace_piety_gain = 1.0
+		peace_piety_gain = 12.0
 		aggression = 0.75
 		short_reign_opinion_year_mult = 1 # The default is 2
 		has_heir_designation = yes
 		feminist = yes
+		women_can_take_consorts = yes
+		max_consorts = 20
 		attacking_same_religion_piety_loss = yes
+		character_modifier = {
+			learning = 5
+			hellenic_pagan_reformed_opinion = 60
+			hellenic_pagan_opinion = 50
+		}
 
 		religious_clothing_head = 12
 		religious_clothing_priest = 11
 
+		intermarry = pagan_group
+		intermarry = indian_group
+		intermarry = yazidi 
 		intermarry = zoroastrian_group
-		intermarry = egyptian_pagan
-		intermarry = christian
+		intermarry = aztec
+		intermarry = christian 
 		intermarry = muslim
 
 		allow_in_ruler_designer = no
@@ -170,9 +187,11 @@ pagan_group = {
 			THE_FOMORIANS EVIL_BALOR EVIL_BRES GOD_CAILLEACH
 		}
 		
-		priests_can_marry = no
+		priests_can_marry = yes
+		hard_to_convert = yes
+		female_temple_holders = yes
 		priests_can_inherit = no
-		max_consorts = 3
+		max_consorts = 9
 		can_call_crusade = yes
 		join_crusade_if_bordering_hostile = yes
 
@@ -240,10 +259,12 @@ pagan_group = {
 		priests_can_inherit = no
 		feminist = yes
 		defensive_attrition = yes
-		max_consorts = 3
+		max_consorts = 10
 		peace_prestige_loss = yes # Lose Prestige while at peace
 		raised_vassal_opinion_loss = no
 		allow_looting = yes
+		women_can_take_consorts = yes
+		hard_to_convert = yes
 		reformed = celtic_pagan_reformed
 		aggression = 1.5 # AI aggression factor
 		
@@ -256,7 +277,7 @@ pagan_group = {
 
 		intermarry = celtic_pagan_reformed
 		intermarry = britannic_pagan
-		can_demand_religious_conversion = no
+		can_demand_religious_conversion = yes
 	}
 	
 	britannic_pagan = {
@@ -293,7 +314,7 @@ pagan_group = {
 		priests_can_inherit = no
 		investiture = yes
 
-		hard_to_convert = no
+		hard_to_convert = yes
 		attacking_same_religion_piety_loss = yes
 		can_demand_religious_conversion = yes
 

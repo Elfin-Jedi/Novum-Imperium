@@ -1,0 +1,726 @@
+song = {
+	name = "Harald_Bluetooth_Peace.ogg"
+	song_name = "Drømte Mig en Drøm i Nat and Nobilis Humilis"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Harald_Bluetooth_War.ogg"
+	song_name = "Drømte Mig en Drøm i Nat and Nobilis Humilis"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "NYTT LAND - Ragnarok.ogg"
+	song_name = "Ragnarök"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Runahild - Ornedans.ogg"
+	song_name = "Ornedans"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Runahild - Ravnesjel.ogg"
+	song_name = "Ravnesjel"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Runahild - Seidrunar.ogg"
+	song_name = "Seidrunar"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Wardruna - Helvegen.ogg"
+	song_name = "Helvegen"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 1.2
+}
+song = {
+	name = "Wardruna - Isa.ogg"
+	song_name = "Isa"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Wardruna - Helvegen (Skaldic Version).ogg"
+	song_name = "Helvegen (Skaldic Version)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Heilung - Norupo.ogg"
+	song_name = "Norupo"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Fever Ray - If I Had A Heart.ogg"
+	song_name = "If I Had A Heart"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "IHadToChangeTheName.ogg"
+	song_name = "Swinhæleðas"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Assassin's Creed Ragnarok (Unofficial Theme) Ratiljost.ogg"
+	song_name = "Ratiljost"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "NordicViking Music - Folkvangr.ogg"
+	song_name = "Fólkvangr"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Norse Viking Music - Lady of the Dawn (extended version).ogg"
+	song_name = "Lady of the Dawn"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "NordicViking Music - Valhalla Awaits.ogg"
+	song_name = "Valhalla Awaits"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "NordicViking Music - Vidblainn.ogg"
+	song_name = "Víðbláinn"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Wardruna Solringen.ogg"
+	song_name = "Solringen"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "War of the Vikings OST - Age of the Aesir.ogg"
+	song_name = "Age of the Aesir"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "War of the Vikings OST - Vindkaldr.ogg"
+	song_name = "Vindkaldr"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Wardruna - Fehu.ogg"
+	song_name = "Fehu"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Wardruna - Fehu (Skaldic Version).ogg"
+	song_name = "Fehu (Skaldic Version)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Wardruna - Voluspa.ogg"
+	song_name = "Völuspá"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Wardruna - Voluspa (Skaldic Version).ogg"
+	song_name = "Völuspá (Skaldic Version)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Danheim - Reida.ogg"
+	song_name = "Reiða"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Danheim - Hefna.ogg"
+	song_name = "Hefna"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "NordicViking Music - Volur.ogg"
+	song_name = "Völur"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Heilung - Hakkerskaldyr.ogg"
+	song_name = "Hakkerskaldyr"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Heilung - In Maidjan.ogg"
+	song_name = "In Maidjan"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Sowulo - Innra Aecer.ogg"
+	song_name = "Innra Æcer"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Vevaki - Vegtamskvida.ogg"
+	song_name = "Vegtamskviða"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Skogurdottir.ogg"
+	song_name = "Skógurdóttir"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Heilung - Krigsgaldr.ogg"
+	song_name = "Krigsgaldr"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = north_germanic }
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { religion = norse_pagan }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 2
+}

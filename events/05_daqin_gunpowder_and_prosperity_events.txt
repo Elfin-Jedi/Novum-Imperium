@@ -1,0 +1,285 @@
+namespace = DAQIN
+
+##provincial events##
+character_event = { #times are good. Silkworms or glassworks?
+	id = DAQIN.00550
+	title = DAQIN.00550.title
+	desc = DAQIN.00550.desc
+	picture = GFX_evt_emissary_byzantine
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = { #a silkworm farm
+		name = DAQIN.00550.OPTA
+		random_demesne_province = {
+			add_province_modifier = {
+				name = silkworm_farm
+				years = 10
+			}
+		}
+		wealth = -100
+	}
+	option = { #a glassworks
+		name = DAQIN.00550.OPTB
+		random_demesne_province = {
+			add_province_modifier = {
+				name = glassworks
+				years = 10
+			}
+		}
+		wealth = -100
+	}
+	option = { #why not both?
+		name = DAQIN.00550.OPTC
+		random_demesne_province = {
+			add_province_modifier = {
+				name = silkworm_farm
+				years = 10
+			}
+			add_province_modifier = {
+				name = glassworks
+				years = 10
+			}
+		}
+		wealth = -200
+	}
+	option = { #Can't afford, sell it.
+		name = DAQIN.00550.OPTD
+		wealth = 50
+	}
+}
+
+character_event = { #festival coming up. Maybe use fireworks? Keeps peasants happy.
+	id = DAQIN.00551
+	title = DAQIN.00551.title
+	desc = DAQIN.00551.desc
+	picture = GFX_evt_busy_trading_dock_republic
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = { #Yeah, that sounds fun!
+		name = DAQIN.00551.OPTA
+		capital_scope = {
+			add_province_modifier = {
+				name = coronation_improved_trade
+				years = 2
+			}
+		}
+		character_event = { id = DAQIN.00553 days = 20 }
+	}
+	option = { #Better used militarily.
+		name = DAQIN.00551.OPTB
+		random_demesne_province = {
+			add_province_modifier = {
+				name = jd_fireworks_guild
+				years = 10
+			}
+		}
+	}
+	option = { #Make napalm bombs.
+		name = DAQIN.00551.OPTC
+		trigger = {
+			OR = {
+				martial = 25
+				trait = scholar
+			}
+			NOT = { trait = kind }
+		}
+		add_trait = cruel
+		narrative_event = { id = DAQIN.00552 days = 30 random = 10}
+		tooltip_info = martial
+	}
+	option = {	#Bet it has more sciency uses.
+		name = DAQIN.00551.OPTD
+		trigger = {
+			ROOT = {
+				OR = {
+					society = { is_society = hermetics }
+					religion = taoist
+				}
+			}
+		}
+		character_event = { id = DAQIN.00554 days = 30 }
+		random = {
+			chance = 20
+			add_trait = erudite
+		}
+	}
+}
+
+character_event = { #festival day comes
+	id = DAQIN.00553
+	title = DAQIN.00553.title
+	desc = DAQIN.00553.desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = { #Lovely time.
+		name = DAQIN.00553.OPTA
+		capital_scope = {
+			add_province_modifier = {
+				name = coronation_improved_trade
+				years = 2
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = DAQIN.00552
+	title = DAQIN.00552.title
+	desc = DAQIN.00552.D
+	picture = GFX_evt_arson_hf
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00552.OPTA
+		narrative_event = { id = DAQIN.005521 }
+	}
+}
+narrative_event = { #napalm bomb experiments work
+	id = DAQIN.005521
+	title = DAQIN.00552.title
+	desc = DAQIN.005521.D
+	picture = GFX_evt_burning_man_hf
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	
+	option = { #Use it anyway.
+		name = DAQIN.005521.OPTA
+		capital_scope = {
+			add_province_modifier = {
+				name = napalm_bombs
+				years = 10
+			}
+		}
+		add_trait = sapper #Will add it even if you can't normally have anymore leader trait. VERY powerful, and intended.
+	}
+	option = {	#Destroy it, too horrible
+		name = DAQIN.005521.OPTB
+		remove_trait = cruel
+	}
+}
+
+character_event = { #science-ing the fireworks
+	id = DAQIN.00554
+	title = DAQIN.00554.title
+	desc = DAQIN.00554.desc
+	picture = GFX_evt_scientific_experiment
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #High learning/mystic garunteed success.
+		name = DAQIN.00554.OPTA
+		trigger = {
+			trait = mystic
+			learning = 21
+		}
+		random_demesne_province = {
+			add_province_modifier = {
+				name = gunpowder_research
+				years = 10
+			}
+		}
+	}
+	option = { #taking a chance.
+		name = DAQIN.00554.OPTB
+		random_list = {
+			10 = { #Failure!
+				modifier = {
+					factor = 2
+					is_dumb_trigger = yes
+				}
+				modifier = {
+					factor = 2
+					trait = drunkard
+				}
+				modifier = {
+					factor = 2
+					trait = slothful
+				}
+				custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT }
+				character_event = { id = DAQIN.00555 days = 20 random = 5 }
+			}
+			10 = { #Success!
+				modifier = {
+					factor = 2
+					is_smart_trigger = yes
+				}
+				modifier = {
+					factor = 2
+					learning = 15
+				}
+				modifier = {
+					factor = 3
+					trait = mystic
+				}
+				modifier = {
+					factor = 3
+					is_learned_trigger = yes
+				}
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+				character_event = { id = DAQIN.00556 days = 20 random = 5 }
+			}
+		}
+	}
+	option = { #play it safe.
+		name = DAQIN.00554.OPTC
+		military_techpoints = 50
+		economy_techpoints = 50
+		culture_techpoints = 50
+	}
+}
+
+character_event = { #lab explosion
+	id = DAQIN.00555
+	title = DAQIN.00555.title
+	desc = DAQIN.00555.desc
+	picture = GFX_evt_burning_house
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00555.OPTA
+		random = {
+			chance = 60
+			add_trait = wounded
+		}
+		military_techpoints = -30
+		wealth = -100
+	}
+}
+
+character_event = { #new elixer
+	id = DAQIN.00556
+	title = DAQIN.00556.title
+	desc = DAQIN.00556.desc
+	picture = GFX_evt_performing_experiments
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00556.OPTA
+		random_demesne_province = {
+			add_province_modifier = {
+				name = gunpowder_research
+				years = 5
+			}
+		}
+		culture_techpoints = 50
+		random = {
+			chance = 20
+			health = 0.25
+		}
+	}
+}

@@ -1,5 +1,5 @@
 latin = {
-	romanoindian = {
+romanoindian = {
 		graphical_cultures = { romanoindianfx romangfx southerngfx }
 		
 		color = { 0.8 0.3 0.4 }
@@ -40,7 +40,8 @@ latin = {
 		mother_name_chance = 0
 		
 		allow_looting = yes
+		feminist = yes
 
 		modifier = default_culture_modifier
 	}
-}
+	}

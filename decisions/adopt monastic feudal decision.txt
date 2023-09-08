@@ -1,0 +1,67 @@
+decisions = {
+
+adopt_monastic_feudal_decision = {
+		is_high_prio = yes
+		filter = all
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			OR = {
+				AND = {
+						controls_religion = yes
+						religion_group = pagan
+						has_religion_feature = religion_temporal_head
+						is_patrician = no
+						government = feudal_government
+				}
+				
+				AND = {
+						is_patrician = no
+						religion_group = pagan
+						OR = {
+							is_feudal = yes
+							is_theocracy = yes
+						}
+						top_liege = {
+							government = theocratic_feudal_governmenttwo
+						}
+				
+				}
+			}
+			NOT = {
+				government = theocratic_feudal_governmenttwo
+				government = theocratic_feudal_government
+			}
+
+		}
+		allow = {
+			is_patrician = no
+			religion_group = pagan
+			OR = {
+				AND = {
+						controls_religion = yes
+						has_religion_feature = religion_temporal_head
+						government = feudal_government
+				}
+				
+				AND = {
+						OR = {
+							is_feudal = yes
+							is_theocracy = yes
+						}
+						liege = {
+							government = theocratic_feudal_governmenttwo
+						}
+				
+				}
+			}
+		}
+		effect = {
+			ROOT = {
+				set_government_type = theocratic_feudal_governmenttwo
+			}
+		}
+}
+
+}

@@ -350,7 +350,7 @@ indo_roman_return = {
 			is_title_active = d_indo_praetorians
 			}
 			OR = {
-				religion = orthodox
+				religion = vieti_orthodox
 			}
 			has_landed_title = e_indo_roman_empire
 
@@ -410,7 +410,7 @@ indo_roman_return = {
 			NOT = {
 				is_title_active = d_knights_of_saint_thomas
 			}
-			religion = orthodox
+			religion = vieti_orthodox
 			has_landed_title = e_indo_roman_empire
 
 			independent = yes
@@ -514,13 +514,17 @@ indo_roman_return = {
 		                }
 						new_character = {
 						save_event_target_as = invited_character
+						hidden_tooltip = {
+						random_list = {
 						2 = { add_artifact = spatha_tier_1_new }
 		                1 = { add_artifact = spatha_tier_2_new }
+						}
 		                }
 		                random_list = {
 		                2 = { add_artifact = indoroman_lamellar }
 		                1 = { }
 		                }
+						}
 						}
 						}
 						10 = {
@@ -772,14 +776,22 @@ indo_roman_return = {
 		ai_check_interval = 36
 		potential = {
 		NOT = {
-		trait = mystic
+		has_character_modifier = vieti_witch
 		}
-		religion = romist_pagan
+		#NOT = {
+		#trait = mystic
+		#}
 		OR = {
+		religion = vieti_krioticism
+		religion = romist_pagan
+		}
+		OR = {
+		trait = mystic
 		trait = zealous
 		trait = physician
 		}
 		OR = {
+		trait = mystic
 		trait = lunatic
 		trait = possessed
 		}
@@ -787,12 +799,14 @@ indo_roman_return = {
 		age = 14
 		}
 		allow = {
-		religion = romist_pagan
+		#religion = romist_pagan
 		OR = {
+		trait = mystic
 		trait = zealous
 		trait = physician
 		}
 		OR = {
+		trait = mystic
 		trait = lunatic
 		trait = possessed
 		}
@@ -820,6 +834,150 @@ indo_roman_return = {
 		1 = { give_nickname = nick_the_bewitched }
 		2 = { give_nickname = nick_the_twitchy }
 		}
+		}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				OR = {
+					tier = KING
+					tier = EMPEROR
+				}
+			}
+		}
+	}
+	
+	become_a_vieti_divus = {
+		only_playable = yes
+		ai_check_interval = 36
+		potential = {
+		NOT = { has_character_flag = proclaimed_divus }
+		has_common_devilworship_prerequisites = no
+		culture = romanoindian
+		OR = {
+		AND = {
+		religion = vieti_orthodox
+		trait = sympathy_pagans
+		}
+		religion = vieti_krioticism
+		religion = romist_pagan
+		religion = hereclemasculist_pagan
+		religion = vieti_mithras_pagan
+		religion = britannic_hyperborean_pagan
+		}
+		OR = {
+		tier = DUKE
+		tier = KING
+		tier = EMPEROR
+		}
+		
+		age = 14
+		}
+		allow = {
+		is_benevolent_trigger = yes
+		OR = {
+		trait = quick
+		trait = genius
+		trait = brave
+		trait = strong
+		trait = fair
+		}
+		piety = 1000
+		OR = {
+		tier = KING
+		tier = EMPEROR
+		}
+		}
+		effect = {
+		set_character_flag = proclaimed_divus 
+		if = {
+		limit = {
+		is_female = yes
+		}
+		set_special_character_title = VIETI_DIVA
+		}
+		if = {
+		limit = {
+		is_female = no
+		}
+		set_special_character_title = VIETI_DIVUS
+		}
+		piety = -1000
+		add_character_modifier = { 
+	    name = vieti_divus
+	    duration = -1
+	    }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	found_vieti_krioticism = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 16
+		potential = {
+		NOT = { has_global_flag = walakrioticism_founded }
+		OR = {
+		trait = mystic
+		trait = lunatic
+		trait = possessed
+		has_artifact = walakriotic_texts_in_china
+		}
+		OR = {
+		AND = {
+		dynasty = 1069096
+		has_artifact = walakriotic_texts_in_china
+		}
+		has_character_flag = proto_walakriotic_texts
+		}
+		
+		age = 14
+		}
+		allow = {
+		OR = {
+		trait = mystic
+		trait = lunatic
+		trait = possessed
+		has_artifact = walakriotic_texts_in_china
+		}
+		piety = 500
+		}
+		effect = {
+		set_parent_religion = {
+		religion = vieti_krioticism
+		parent = vieti_orthodox
+		}
+	    c_roma = {
+	    set_holy_site = vieti_krioticism
+	    }
+	    c_bikrampur = {
+	    set_holy_site = vieti_krioticism
+	    }
+	    c_dunhuang = {
+	    set_holy_site = vieti_krioticism
+	    }
+	    c_jerusalem = {
+	    set_holy_site = vieti_krioticism
+	    }
+	    c_byzantion = {
+	    set_holy_site = vieti_krioticism
+	    }
+		set_global_flag = walakrioticism_founded
+		piety = -400
+		religion = vieti_krioticism
+		spawn_elder_effect = yes
+		new_character = {
+		health = 2
+		religion = vieti_krioticism
 		}
 		}
 		revoke_allowed = {

@@ -1,0 +1,329 @@
+namespace = DAQIN
+##CONVERSION EVENTS 2: ELECTRIC BOOGALOO##
+
+character_event = {
+	id = DAQIN.00101
+	title = DAQIN.00101.title
+	desc = DAQIN.00101.desc
+	picture = GFX_evt_china_stable
+	
+	only_playable = yes
+	ai = no #The chances of this happening aren't... *0*, the Byzzie AI will sometimes land scholar beauracrats and whatnot, it's just not worth the performance hit. Maybe they'd always suppress it.
+	only_capable = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		any_demesne_province = {
+				NOT = { holding_type = nomad }
+			}
+		OR = { #Either...
+			AND = {
+				culture = han
+				any_demesne_province = { culture = greek }
+			}
+			AND = {
+				culture = greek
+				any_demesne_province = { culture = han }
+			}
+		}
+		NOT = { has_global_flag = sinogreek_emerged } #It'll only pop the once.
+	}
+
+#	weight_multiplier = { #I am at wits fucking end for how to get the weights to make this random to trigger I'm so fucking done working on this fucking mod it's not even fun why did I waste so much time on this
+#		days = 1
+#		
+#		modifier = {
+#			factor = 0.6
+#			trait = stubborn #doesn't like change
+#		}
+#		modifier = {
+#			factor = 5
+#			trait = socializer #enjoys meeting new people
+#		}
+#		modifier = {
+#			factor = 5
+#			trait = gregarious #as above
+#		}
+#		modifier = {
+#			factor = 0.6
+#			trait = shy #doesn't get out much
+#		}
+#		modifier = {
+#			factor = 3
+#			trait = sympathy_indian #blending religion helps to blend cultures. In this case, likely means china-trade courtiers like scholars, beauracrats, etc in court.
+#		}
+#		modifier = {
+#			factor = 3
+#			trait = sympathy_christendom #as above, for those who adopt Taoism/Buddhism/Manicheanism. Mani's can double up on sympathies, in fact, which is fun.
+#		}
+#		modifier = {
+#			factor = 3
+#			OR = {
+#				trait = kow_tow_completed_tier_1
+#				trait = kow_tow_completed_tier_2
+#				trait = kow_tow_completed_tier_3
+#			}
+#		}
+#		modifier = { #These could maybe stack (i.e. they're all 1.2 but having 25 learning means the chance is 1.2x1.2x1.2) but I'll not risk it.
+#			factor = 2
+#			learning = 10 #decent learning
+#		}
+#		modifier = {
+#			factor = 3
+#			learning = 16 #good learning
+#		}
+#		modifier = {
+#			factor = 4
+#			learning = 21 #excellent learning
+#		}
+#		modifier = {
+#			factor = 2
+#			diplomacy = 10 #decent diplomacy
+#		}
+#		modifier = {
+#			factor = 3
+#			diplomacy = 16 #good diplomacy
+#		}
+#		modifier = {
+#			factor = 4
+#			diplomacy = 21 #excellent diplomacy
+#		}
+#		modifier = { #As above, but has to have a silk road post.
+#			factor = 3
+#			any_realm_province = {
+#				silk_road_trade_post_trigger = yes
+#			}	
+#		}
+#		modifier = {
+#			factor = 10 #boosts chance of it firing regardless of other factors if the player wants "faster" melting pots.
+#			OR = {
+#				has_game_rule = {
+#					name = culture_conversion
+#					value = faster_melting_pots
+#				}
+#				has_game_rule = {
+#					name = culture_conversion
+#					value = faster_melting_pots_and_slower_normal
+#				}
+#			}
+#		}
+#	}
+
+	option = { #Seems like a good idea.
+		name = DAQIN.00101.OPTA
+		ROOT = { culture = sinogreek }
+		random_demesne_province = {
+			limit = {
+				OR = {
+					culture = greek
+					culture = han
+				}
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			culture = sinogreek
+		}
+		set_global_flag = sinogreek_emerged
+	}
+	option = { #We should suppress this!. This will effectively kill the event chain... and the entire point of the mod. Unless the player converts later, so it could be a delaying factor.
+		name = DAQIN.00101.OPTB
+		random_demesne_province = {
+			limit = {
+				OR = {
+					culture = greek
+					culture = han
+				}
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			culture = sinogreek
+			any_child = { culture = sinogreek }
+		}
+		set_global_flag = sinogreek_emerged
+	}
+}
+
+character_event = { #conversion tombola time! Remember this only goes off once every 5 years.
+	id = DAQIN.00106
+	hide_window = yes #means it's not shown to the player
+	
+	only_playable = yes
+	culture = sinogreek
+	has_global_flag = sinogreek_emerged
+	only_capable = yes
+	prisoner = no
+
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			30 = {
+				modifier = { #more likely if you're just more about talking to people and getting it done. Should maybe include admin trait but who the hell gets admin?
+					factor = 3
+					trait = diligent
+				}
+				modifier = {
+					factor = 2
+					trait = socializer
+				}
+				modifier = {
+					factor = 2
+					trait = gregarious
+				}
+				modifier = {
+					factor = 2
+					any_realm_province = {
+						silk_road_trade_post_trigger = yes
+					}
+				}
+				random_list = {
+					10 = { #province conversion. Stewardship
+						modifier = {
+							factor = 2
+							stewardship = 15
+						}
+						modifier = { #if there's no provinces to convert, this won't happen.
+							factor = 0
+							NOR = {
+								any_demesne_province = { culture = han }
+								any_demesne_province = { culture = greek }
+							}
+						}
+						character_event = { id = DAQIN.00102 days = 720 random = 400 } #Fire somewhere between just under a year and just over 3 years from now
+					}
+					10 = { #courtier conversion. Learning weighted. This one's kinda questionable honestly.
+						modifier = {
+							factor = 2
+							learning = 15
+						}
+						modifier = { #if there's no courtiers to convert, this won't happen.
+							factor = 0
+							NOR = {
+								any_courtier = { culture = han }
+								any_courtier = { culture = greek }
+							}
+						}
+						character_event = { id = DAQIN.00103 days = 300 random = 150 } #Sometime within the next 6-18 months-ish 
+					}
+					10 = { #vassal conversion. Diplo weighted
+						modifier = {
+							factor = 2
+							diplomacy = 15
+						}
+						modifier = { #if there's no (ai) vassals to convert, this won't happen. Not totally sure this logic is working, but I *think* it is.
+							factor = 0
+							NOR =  {
+								any_vassal = {
+									culture = han
+									ai = yes
+								}
+								any_vassal = {
+									culture = greek
+									ai = yes
+								}
+							}
+						}
+						character_event = { id = DAQIN.00104 days = 720 random = 400 }
+					}
+					fallback = { 
+						character_event = { id = DAQIN.00500 days = 720 random = 400 } #if everyone and everything is sinogreek, shoot off a flavour event.
+					}
+				}
+			}
+			70 = {} #nothing happens
+		}
+	}
+}
+
+character_event = {
+	id = DAQIN.00102
+	title = DAQIN.00102.title
+	desc = DAQIN.00102.desc
+	picture = GFX_evt_china_stable
+
+	#There are no prefilters or filters or triggers. The tombola already filtered everything properly. This blank space feels very odd.
+
+	is_triggered_only = yes #only triggered by the pulse, which automatically filters out not having any appropriate provinces
+	
+	option = {
+		name = DAQIN.00102.OPTA
+		random_demesne_province = {
+			limit = {
+				OR = {
+					culture = greek
+					culture = han
+				}
+			}
+			culture = sinogreek
+		}
+	}
+}
+
+character_event = {
+	id = DAQIN.00103
+	title = DAQIN.00103.title
+	desc = DAQIN.00103.desc
+	picture = GFX_evt_china_stable
+	
+	#Again, no filters. This still feels strange.
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00103.OPTA
+		custom_tooltip = {
+			text = DAQIN.00103.TT
+			any_courtier = { #currently, this converts everyone. Change to random_courtier if you want it to be one by one.
+				limit = {
+					OR = {	
+						culture = greek
+						culture = han
+					}
+				}
+				culture = sinogreek
+			}
+		}
+	}
+}
+
+character_event = {
+	id = DAQIN.00104
+	title = DAQIN.00104.title
+	desc = DAQIN.00104.desc
+	picture = GFX_evt_china_stable
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00104.OPTA
+		random_vassal = {
+			limit = {
+				ai = yes
+				OR = {
+					culture = greek
+					culture = han
+				}
+			}
+			culture = sinogreek
+			hidden_tooltip = {
+				any_courtier = {
+					limit = {
+						is_ruler = no
+						OR = {
+							culture = greek
+							culture = han
+						}
+					}
+					culture = sinogreek
+				}
+			}
+		}
+	}
+}
+
+#There WAS a DAQIN.00105, but it's become redundant alongside the MTTH original events, so has been excised from the mod. It's still in the localisation for posterity, it was just an "I'm Sinogreek" event.
+
+###Possibly Sinoroman conversion events? The Roman culture conversion it's based on always felt kind of anemic.###

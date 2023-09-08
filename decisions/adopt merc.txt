@@ -1,0 +1,25 @@
+decisions = {
+
+adopt_merc_gov_decision = {
+		is_high_prio = yes
+		ai_check_interval = 1
+		filter = all
+		from_potential = {
+		}
+		potential = {
+			mercenary = yes
+			is_patrician = no
+				}
+		allow = {
+			mercenary = yes
+			is_patrician = no
+		}
+		effect = {
+			ROOT = {
+				set_government_type = merc_government
+			}
+		}
+		ai_will_do = 1
+}
+
+}

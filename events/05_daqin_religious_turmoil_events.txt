@@ -1,0 +1,587 @@
+namespace = DAQIN
+
+##religious conflicts##
+character_event = { #some hubbub in the provinces. Less likely for a Manichean/Nestorian ruler.
+	id = DAQIN.00540
+	title = DAQIN.00540.title
+	desc = DAQIN.00540.desc
+	picture = GFX_evt_peasants
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Normal event, Easterners and Christians
+		name = DAQIN.00540.OPTA
+		trigger = { religion_openly_hellenic_or_reformed_trigger = no }
+		character_event = { id = DAQIN.00541 days = 10 }
+	}
+	option = { #Hellenic event, three way tussle
+		name = DAQIN.00540.OPTB
+		trigger = { religion_openly_hellenic_or_reformed_trigger = yes }
+		character_event = { id = DAQIN.00542 days = 10 }
+	}
+	option = { #Refuse event chain
+		name = DAQIN.00540.OPTC
+		random_demesne_province = {
+			add_province_modifier = {
+				name = religious_unrest
+				years = 2
+			}
+		}
+	}
+}
+
+character_event = { #dharmics and christians arguing
+	id = DAQIN.00541
+	title = DAQIN.00541.title
+	desc = DAQIN.00541.desc
+	picture = GFX_evt_heretic
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Take out the troublemakers 
+		name = DAQIN.00541.OPTA
+		trigger = { intrigue = 16 }
+		tooltip_info = intrigue
+		character_event = { id = DAQIN.00544 }
+	}
+	option = { #Let them fight. Mop up the survivors.
+		name = DAQIN.00541.OPTB
+		trigger = { martial = 16 }
+		tooltip_info = martial
+		custom_tooltip = {
+			text = DAQIN.00541.TT #It'll work but stuff will break.
+			character_event = { id = DAQIN.00545 }
+		}
+	}
+	option = { #The Christians have the right of it!
+		name = DAQIN.00541.OPTC
+		trigger = {
+			religion_group = christian
+			NOT = { religion = nestorian }
+		}
+		add_trait = zealous
+		character_event = { id = DAQIN.00546 }
+	}
+	option = { #The Dharmics have the right of it!
+		name = DAQIN.00541.OPTD
+		trigger = {
+			OR = {
+				religion = buddhist
+				religion = taoist
+			}
+		}
+		add_trait = zealous
+		character_event = { id = DAQIN.00546 }
+	}
+	option = { #They're both wrong...
+		name = DAQIN.00541.OPTE
+		trigger = {
+			OR = {
+				religion = manichean
+				religion = nestorian
+##				trait = secretly_hellenic_pagan #Currently gives too many options. Also allows the spread of Hellenism too easily.
+			}
+		}
+		character_event = { id = DAQIN.00568 }
+	}
+	option = { #There must be other options...
+		name = DAQIN.00541.OPTF
+		character_event = { id = DAQIN.00543 }
+	}
+}
+character_event = { #dharmic/xtian other options
+	id = DAQIN.00543
+	title = DAQIN.00541.title #No reason to replace, just more options
+	desc = DAQIN.00541.desc #As above
+	picture = GFX_evt_heretic
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #bribe them
+		name = DAQIN.00543.OPTA
+		scaled_wealth = {
+			value = -0.20
+			min = -10
+			max = -200
+		}
+		character_event = { id = DAQIN.00544 }
+	}
+	option = { #start of Manichean/Nestorian chain.
+		name = DAQIN.00543.OPTB
+		trigger = {
+			trait = theologian #Might change that to just high learning or a learning education
+			NOR = {
+				religion = nestorian
+				religion = manichean
+				trait = secretly_manichean
+				trait = secretly_nestorian
+			}
+		}
+		random_demesne_province = {
+			add_province_modifier = {
+				name = religious_unrest
+				years = 2
+			}
+		}
+		character_event = { id = DAQIN.00560 }
+		tooltip_info = theologian
+	}
+	option = { #send in the guard.
+		name = DAQIN.00543.OPTC
+		custom_tooltip = {
+			text = DAQIN.00543.TT #It'll cost some clout to use your own men for this. Stuff will break.
+			tiered_prestige_negative_effect = yes
+			character_event = { id = DAQIN.00545 }
+		}
+		tiered_prestige_negative_effect = yes
+	}
+	option = { #What were my first options again?
+		name = DAQIN.00543.OPTD
+		character_event = { id = DAQIN.00541 }
+	}
+}
+
+character_event = { #unrest dealt with peacefully. Cooler heads prevail.
+	id = DAQIN.00544
+	title = DAQIN.00544.title
+	desc = DAQIN.00544.desc
+	picture = GFX_evt_outside_tavern_hf
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #All's well that ends well.
+		name = DAQIN.00544.OPTA
+	}
+	option = { #Listen to the calmer xtian preachers
+		name = DAQIN.00544.OPTB
+		random_demesne_province = {
+			add_province_modifier = {
+				name = theological_dialogue
+				years = 1
+			}
+		}
+		character_event = { id = DAQIN.00547 days = 15 random = 5 }
+	}
+	option = { #Listen to the calmer dharmic preachers
+		name = DAQIN.00544.OPTC
+		character_event = { id = DAQIN.00548 days = 15 random = 5 }
+	}
+	option = { #Fringe Christians? Potentially become a heretic.
+		name = DAQIN.00544.OPTD
+		trigger = { 
+			NOT = { trait = zealous }
+			religion_group = christian 
+			learning = 16
+			OR = {
+				trait = cynical
+				trait = theologian
+				piety < 0
+			}
+		}
+		piety = -250 #Even looking is a deeply impious act
+		character_event = { id = DAQIN.00549 days = 15 random = 5 }
+	}
+	
+	after = {
+		random_demesne_province = {
+			add_province_modifier = {
+				name = theological_dialogue
+				years = 1
+			}
+		}
+	}
+	
+}
+character_event = { #unrest dealt with violently. No lingering effects.
+	id = DAQIN.00545
+	title = DAQIN.00545.title
+	desc = DAQIN.00545.desc
+	picture = GFX_evt_hiding_from_pursuers
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = { #We can rebuild.
+		name = DAQIN.00545.OPTA
+		random_demesne_title = {
+			limit = { tier = baron }
+			destroy_random_building = yes	
+		}
+	}
+	option = { #They're only peasants...
+		name = DAQIN.00545.OPTB
+		random_demesne_title = {
+			limit = { tier = baron }
+			destroy_random_building = yes	
+		}
+	}
+}
+character_event = { #unrest dealt with partisan. Deal with suvivors.
+	id = DAQIN.00546
+	title = DAQIN.00546.title
+	desc = DAQIN.00546.desc
+	picture = GFX_evt_less_evil_beheading
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #To the gallows.
+		name = DAQIN.00546.OPTA
+		piety = 50
+		random_demesne_province = {
+			limit = { NOT = { religion = ROOT } }
+			religion = ROOT
+		}
+	}
+	option = { #Banish them.
+		name = DAQIN.00546.OPTB
+		wealth = 20
+		random_demesne_province = {
+			limit = { NOT = { religion = ROOT } }
+			religion = ROOT
+		}
+	}
+	option = { #show mercy.
+		name = DAQIN.00546.OPTC
+		random_demesne_province = {
+			limit = { NOT = { religion = ROOT } }
+			religion = ROOT
+		}
+		if = {
+			limit = { trait = cruel }
+			remove_trait = cruel
+		}
+		else = { add_trait = kind }
+	}
+}
+
+character_event = { #Hellenic variant.
+	id = DAQIN.00542
+	title = DAQIN.00542.title
+	desc = DAQIN.00542.desc
+	picture = GFX_evt_beatification
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Appeal to their better natures. Roman oration.
+		name = DAQIN.00542.OPTA
+		tooltip_info = diplomacy
+		custom_tooltip = {
+			text = DAQIN.00542.TTA
+			random_list = {
+				20 = { #Success.
+					modifier = {
+						factor = 2
+						diplomacy = 10
+					}
+					modifier = {
+						factor = 3
+						diplomacy = 16
+					}
+					modifier = {
+						factor = 5
+						has_education_diplomacy_trigger = yes
+					}
+					modifier = {
+						factor = 3
+						has_lifestyle_diplomacy_trigger = yes
+					}
+					custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+					character_event = { id = DAQIN.00569 } #Unique Hellenic victory, in the "new religion" place because I'm a mess. It kinda belongs there...
+				}
+				10 = { #failure
+					modifier = {
+						factor = 4
+						diplomacy < 5
+					}
+					custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT }
+					character_event = { id = DAQIN.00567 }
+				}
+			}
+		}
+	}
+	option = { #Appeal to history. Diocletian's Persections.
+		name = DAQIN.00542.OPTB
+		tooltip_info = learning
+		custom_tooltip = {
+			text = DAQIN.00542.TTB
+			random_list = {
+				20 = { #Success.
+					modifier = {
+						factor = 2
+						learning = 10
+					}
+					modifier = {
+						factor = 3
+						learning = 16
+					}
+					modifier = {
+						factor = 5
+						has_education_learning_trigger = yes
+					}
+					modifier = {
+						factor = 3
+						has_lifestyle_learning_trigger = yes
+					}
+					custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+					character_event = { id = DAQIN.00569 } #Unique Hellenic victory, in the "new religion" place because I'm a mess. It kinda belongs there...
+				}
+				10 = { #failure
+					modifier = {
+						factor = 4
+						learning < 5
+					}
+					custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT }
+					character_event = { id = DAQIN.00567 }
+				}
+			}
+		}
+	}
+	option = { #Appeal to a common enemy! Jews and Muslims.
+		name = DAQIN.00542.OPTC
+		custom_tooltip = {
+			text = DAQIN.00542.TTC
+			remove_trait = sympathy_islam
+			remove_trait = sympathy_judaism
+			any_demesne_province = {
+				add_province_modifier = {
+					name = zealots_running_amok
+					years = 2
+				}
+			}
+			character_event = { id = DAQIN.00569 } #Using a common enemy has no chance of failure. Gods I'm a cynical b___ch.
+		}
+	}
+	option = { #Sod it, kill them all.
+		name = DAQIN.00542.OPTD
+		custom_tooltip= {
+			text = DAQIN.00542.TTD
+			add_trait = zealous
+			character_event = { id = DAQIN.00546 }
+		}
+	}
+}
+
+character_event = { #Xtian preachers
+	id = DAQIN.00547
+	title = DAQIN.00547.title
+	desc = DAQIN.00547.desc
+	picture = GFX_evt_bishop_byzantine
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Become Catholic
+		name = DAQIN.00547.OPTA
+		trigger = { NOT = { religion = catholic } }
+		piety = -250
+		set_secret_religion = catholic
+	}
+	option = { #Become Orthodox
+		name = DAQIN.00547.OPTB
+		trigger = { NOT = { religion = orthodox } }
+		piety = -250
+		set_secret_religion = orthodox
+	}
+	option = { #Become Miaphysite
+		name = DAQIN.00547.OPTC
+		trigger = { NOT = { religion = miaphysite } }
+		piety = -250
+		set_secret_religion = miaphysite
+	}
+	option = { #Don't convert.
+		name = DAQIN.00547.OPTD
+		piety = 50
+		if = {
+			limit = { NOT = { religion_group = christian } }
+			random = {
+				chance = 50
+				add_trait = sympathy_christendom
+			}
+		}
+	}
+}
+
+character_event = { #dharmic preachers
+	id = DAQIN.00548
+	title = DAQIN.00548.title
+	picture = GFX_evt_dharmic_pilgrims
+	desc = {
+		trigger = { NOT = { offmap_china = { has_status = china_mongol_invasion } } }
+		text = DAQIN.00548.desc
+	}
+	desc = {
+		trigger = { offmap_china = { has_status = china_mongol_invasion } }
+		text = DAQIN.00548.descMongol
+	}
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Become Buddhist
+		name = DAQIN.00548.OPTA
+		trigger = { NOT = { religion = buddhist } }
+		piety = -250
+		set_secret_religion = buddhist
+	}
+	option = { #Become taoist
+		name = DAQIN.00548.OPTB
+		trigger = { NOT = { religion = taoist } }
+		piety = -250
+		set_secret_religion = taoist
+	}
+	option = { #Become ... Tengri?! Special Mongol event.
+		name = DAQIN.00548.OPTC
+		trigger = {
+			NOT = { religion = tengri_pagan }
+			OR = {
+				offmap_china = { has_status = china_mongol_invasion }
+				offmap_china = { offmap_ruler = { dynasty = 1051210 } } #This is Temujin's dynasty, indicating Yuan rule of China
+			}
+		}
+		piety = -250
+		set_secret_religion = tengri_pagan
+	}
+	option = { #Don't convert.
+		name = DAQIN.00548.OPTD
+		piety = 50
+		if = {
+			limit = { NOT = { religion_group = indian_group } }
+			random = {
+				chance = 50
+				add_trait = sympathy_indian
+			}
+		}
+	}
+}
+
+character_event = { #heresy platform
+	id = DAQIN.00549
+	title = DAQIN.00549.title
+	desc = DAQIN.00549.desc
+	picture = GFX_evt_christian_exodus
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Catholic based
+		name = DAQIN.00549.OPTA
+		character_event = { id = DAQIN.005491 }
+	}
+	option = { #Orthodox based
+		name = DAQIN.00549.OPTB
+		character_event = { id = DAQIN.005492 }
+	}
+	option = { #feminist. "Women preachers and priests?"
+		name = DAQIN.00549.OPTC
+		character_event = { id = DAQIN.005493 }
+	}
+	option = { #Don't convert.
+		name = DAQIN.00549.OPTD
+		piety = 50
+	}
+}
+
+character_event = { #catholic heresy choices
+	id = DAQIN.005491
+	title = DAQIN.005491.title
+	desc = DAQIN.005491.desc
+	picture = GFX_evt_christian_exodus
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Become Lollard
+		name = DAQIN.005491.OPTA
+		trigger = { NOT = { religion = lollard } }
+		piety = -250
+		set_secret_religion = lollard
+	}
+	option = { #Become Waldensian
+		name = DAQIN.005491.OPTB
+		trigger = { NOT = { religion = waldensian } }
+		piety = -250
+		set_secret_religion = waldensian
+	}
+	option = { #Become Fraticelli
+		name = DAQIN.005491.OPTC
+		trigger = { NOT = { religion = fraticelli } }
+		piety = -250
+		set_secret_religion = fraticelli
+	}
+	option = { #Other options
+		name = DAQIN.005491.OPTD
+		character_event = { id = DAQIN.00549 }
+	}
+}
+
+character_event = { #orthodox heresy choices
+	id = DAQIN.005492
+	title = DAQIN.005492.title
+	desc = DAQIN.005492.desc
+	picture = GFX_evt_christian_exodus
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Become paulician
+		name = DAQIN.005492.OPTA
+		trigger = { NOT = { religion = paulician } }
+		piety = -250
+		set_secret_religion = paulician
+	}
+	option = { #Become monothelite
+		name = DAQIN.005492.OPTB
+		trigger = { NOT = { religion = monothelite } }
+		piety = -250
+		set_secret_religion = monothelite
+	}
+	option = { #Become iconoclast
+		name = DAQIN.005492.OPTC
+		trigger = { NOT = { religion = iconoclast } }
+		piety = -250
+		set_secret_religion = iconoclast
+	}
+	option = { #Other options
+		name = DAQIN.005492.OPTD
+		character_event = { id = DAQIN.00549 }
+	}
+}
+
+character_event = { #feminist heresy choices
+	id = DAQIN.005493
+	title = DAQIN.005493.title
+	desc = DAQIN.005493.desc
+	picture = GFX_evt_woman_praying_hf
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Become cathar
+		name = DAQIN.005493.OPTA
+		trigger = { NOT = { religion = cathar } }
+		piety = -250
+		set_secret_religion = cathar
+	}
+	option = { #Become bogomilist
+		name = DAQIN.005493.OPTB
+		trigger = { NOT = { religion = bogomilist } }
+		piety = -250
+		set_secret_religion = bogomilist
+	}
+	option = { #Become mazdaki. Not Massalian so that you can't easily become Nestorian. Could theoretically lead to Manichean but LESS likely.
+		name = DAQIN.005493.OPTC
+		trigger = { NOT = { religion = mazdaki } }
+		piety = -250
+		set_secret_religion = mazdaki
+	}
+	option = { #Other options
+		name = DAQIN.005493.OPTD
+		character_event = { id = DAQIN.00549 }
+	}
+}

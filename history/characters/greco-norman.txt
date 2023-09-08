@@ -1,0 +1,205 @@
+80000 = {
+	name="Bohemond"
+	dynasty=80000
+    dna="bdaadrhcebw"
+    prp="fo0jaj00000000000000000000000000000000"	
+	religion="catholic"
+	culture="norman"
+	disallow_random_traits = yes
+	trait="giant"
+	trait="strong"
+	trait="master_warrior"
+	trait="brave"
+	trait="wroth"
+	trait="tough_soldier"
+	trait="aggressive_leader"
+	1016.10.11 = {
+		birth="1016.10.11"
+	}
+	1050.1.1 = {
+		add_lover=90000
+	}
+	1050.3.1 = {
+		add_spouse=90000
+	}
+	1055.1.1 = {
+		effect = { add_artifact = gaint_armor }
+	}
+	1061.1.1 = {
+		give_nickname=nick_the_goliath
+	}	
+	1061.1.1 = {
+		create_bloodline = {
+			type = hervé_bloodline
+		}
+	}
+	1061.1.1 = {
+		death = {
+			death_reason = death_duel_battle
+		}
+	}
+}
+80001 = {
+	name="Armand"
+    dynasty=80000	
+	religion="catholic"
+	culture="norman"
+	father=80000
+	disallow_random_traits = yes
+	trait="bastard"
+	trait="robust"
+	trait="strong"
+	trait="skilled_warrior"
+	trait="brave"
+	trait="wroth"
+	trait="proud"
+	trait="skilled_tactician"
+	trait="heavy_infantry_leader"
+	1042.1.1 = {
+		birth="1042.1.1"
+	}
+	1061.1.1 = {
+		effect = { add_artifact = hubris }
+		effect = { add_artifact = goliath_armor }
+	}	
+	1073.1.1 = {
+		death="1073.1.1"
+	}
+}
+90000 = {
+	name="Philomena"
+	female=yes
+	dynasty=90000
+	religion="orthodox"
+	culture="greek"
+	disallow_random_traits = yes
+	trait="fair"
+	trait="genius"
+	trait="gregarious"
+	trait="lustful"
+	trait="master_diplomat"
+	trait="grey_eminence"
+	1035.8.5 = {
+		birth="1035.8.5"
+	}
+	1050.1.1 = {
+		add_lover=80000
+	}
+	1050.3.1 = {
+		add_spouse=80000
+	}	
+	1075.1.1 = {
+		death="1075.1.1"
+	}
+}
+90001 = {
+	name="Hector" 
+	dynasty=80000
+	dna="djigjrgdebe"
+	prp="wb0c0k00000000000000000000000000000000"
+	religion="catholic"
+	culture="greco-norman"
+	father=80000
+	mother=90000
+	disallow_random_traits = yes
+	trait="twin"
+	trait="fair"
+	trait="genius"
+	trait="just"
+	trait="brave"
+	trait="ambitious"
+	trait="gregarious"
+	trait="diligent"
+	trait="patient"
+	1050.12.20 = {
+		birth="1050.12.20"
+	}	
+	1066.5.1 = {
+		employer =1732
+	}	
+	1066.12.20 = {
+		add_trait="skilled_diplomat"
+		add_trait="charismatic_negotiator"
+	}	
+	1081.4.1 = {
+		death = {
+			death_reason = death_execution_beheading
+			killer = 1742
+		}
+	}
+}
+90002 = {
+	name="Helena"
+	female=yes
+	dynasty=80000
+	dna="dbahavedebg"
+	prp="vg0dgd00000000000000000000000000000000"
+	religion="catholic"
+	culture="greco-norman"
+	father=80000
+	mother=90000
+	disallow_random_traits = yes
+	trait="twin"
+	trait="robust"
+	trait="strong"
+	trait="skilled_warrior"
+	trait="uncouth"
+	trait="arbitrary"
+	trait="brave"
+	1050.12.20 = {
+		birth="1050.12.20"
+	}	
+	1066.5.1 = {
+		employer =1732
+	}	
+	1066.12.20 = {
+		add_trait="skilled_tactician"
+		add_trait="aggressive_leader"
+	}	
+	1070.1.1 = {
+	    remove_trait="skilled_tactician"
+		add_trait="brilliant_strategist"
+	}	
+	1071.1.1 = {
+		remove_trait="skilled_warrior"
+		add_trait="master_warrior"
+	}	
+	1085.1.1 = {
+		death="1085.1.1"
+	}
+}
+90003 = {
+	name="Alexion" 
+	dynasty=80000
+	dna="aacggbhaabo"
+	prp="we0d0k00000000000000000000000000000000"
+	religion="catholic"
+	culture="greco-norman"
+	mother=90002
+	disallow_random_traits = yes
+	trait="robust"
+	trait="strong"
+	1068.8.19 = {
+		birth="1068.8.19"
+	}	
+	1092.1.1 = {
+		death="1092.1.1"
+	}
+}
+90004 = {
+	name="Leto" 
+	dynasty=80000
+	dna="djigjrgdebe"
+	prp="cd0cfk00000000000000000000000000000000"
+	religion="catholic"
+	culture="greco-norman"
+	father=90001
+	disallow_random_traits = yes
+	trait="fair"
+	1070.5.11 = {
+		birth="1070.5.11"
+	}	
+	1092.1.1 = {
+		death="1092.1.1"
+	}
+}

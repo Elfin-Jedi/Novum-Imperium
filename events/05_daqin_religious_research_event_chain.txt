@@ -1,0 +1,962 @@
+namespace = DAQIN
+
+character_event = { #Start of nestorian/manichean event chain
+	id = DAQIN.00560
+	title = DAQIN.00560.title
+	desc = DAQIN.00560.desc
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Actually, maybe something normal.
+		name = DAQIN.00560.OPTA
+		character_event = { id = DAQIN.00541 }
+	}
+	option = { #Many kinds of Christianity
+		name = DAQIN.00560.OPTB
+		set_character_flag = exploring_christianity
+		character_event = { id = DAQIN.00561 days = 60 random = 30 }
+	}
+	option = { #Persia. It's the crossroads of the world.
+		name = DAQIN.00560.OPTC
+		set_character_flag = exploring_mazdan
+		character_event = { id = DAQIN.00561 days = 60 random = 30 }
+	}
+}
+
+character_event = { #Time to hit the books.
+	id = DAQIN.00561
+	title = DAQIN.00561.title
+	desc = DAQIN.00561.desc
+	picture = GFX_evt_monk
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	immediate = { set_variable = { which = local_religion_research value = 0 } }
+	
+	option = { #Get the priests to take a look.
+		name = DAQIN.00561.OPTA
+		piety = -500
+		wealth = -100
+		hidden_tooltip = {
+			random_list = {
+				30 = { #Sabotage work
+					change_variable = { which = local_religion_research value = -1 } ##REMEMBER TO HIDE THIS
+				}
+				50 = { #No progress
+				}
+				20 = { #Good work.
+					change_variable = { which = local_religion_research value = 1 }
+				}
+			}
+		}
+	}
+	option = { #I'm well-read. I can handle this.
+		name = DAQIN.00561.OPTB
+		random_list = {
+			10 = { custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT } } #No progress.
+			10 = { #Good progress.
+				modifier = {
+					factor = 2
+					calc_true_if = {
+						amount == 1
+						is_learned_trigger = yes
+						is_smart_trigger = yes
+					}
+				}
+				modifier = {
+					factor = 3
+					calc_true_if = {
+						amount == 2
+						is_learned_trigger = yes
+						is_smart_trigger = yes
+					}
+				}
+				custom_tooltip = { text = TT_PARTLY_SUCCESFUL_SWAY_EVENT }
+				change_variable = { which = local_religion_research value = 1 }
+			}
+			10 = { #Great progress.
+				modifier = {
+					factor = 3
+					calc_true_if = {
+						amount == 1
+						is_learned_trigger = yes
+						is_smart_trigger = yes
+					}
+				}
+				modifier = {
+					factor = 2
+					calc_true_if = {
+						amount == 2
+						is_learned_trigger = yes
+						is_smart_trigger = yes
+					}
+				}
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+				change_variable = { which = local_religion_research value = 2 }
+			}
+			10= { #Lose track of it all.
+				modifier = {
+					factor = 2
+					is_dumb_trigger = yes
+				}
+				custom_tooltip = { text = TT_DISASTROUS_SWAY_EVENT }
+				change_variable = { which = local_religion_research value = -1 }
+			}
+		}
+	}
+	option = { #Educated for this.
+		name = DAQIN.00561.OPTC
+		trigger = { has_education_learning_trigger = yes }
+		random_list = {
+			10 = { #Good progress
+				modifier = {
+					factor = 10
+					trait = detached_priest
+				}
+				custom_tooltip = { text = TT_PARTLY_SUCCESFUL_SWAY_EVENT }
+				change_variable = { which = local_religion_research value = 1 }
+			}
+			15 = { #Great progress
+				modifier = {
+					factor = 10
+					trait = mastermind_theologian
+				}
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+				change_variable = { which = local_religion_research value = 2 }
+			}
+		}
+	}
+	option = { #Spouse can do this.
+		name = DAQIN.00561.OPTD
+		custom_tooltip = { text = DAQIN.0056X.spouse }
+		trigger = {
+			is_married = yes
+			spouse = { has_education_learning_trigger = yes }
+		}
+		if = { #Spouse who hates you or is a moron will sabotage/screw up your work no matter their skill. Obviously.
+			limit = {
+				spouse = { 
+					OR = {
+						is_rival = ROOT
+						opinion = { who = ROOT value < -60 }
+						is_dumb_trigger = yes
+					}
+				}
+			}
+			change_variable = { which = local_religion_research value = -1 }
+		}
+		else_if = { #Very smart spouse makes great success
+			limit = {
+				spouse = {
+					AND = {
+						is_smart_trigger = yes
+						is_learned_trigger = yes
+					}
+				}
+			}
+			change_variable = { which = local_religion_research value = 2 }
+		}
+		else_if = { #Kinda smart spouse makes good progress
+			limit = {
+				spouse = {
+					OR = {
+						is_smart_trigger = yes
+						is_learned_trigger = yes
+					}
+				}
+			}
+			random_list = {
+				30 = { change_variable = { which = local_religion_research value = 2 } }
+				70 = { change_variable = { which = local_religion_research value = 1 } }
+			}
+		}
+		else = { #spouse with nothing special except education might make progress, or might not. Weighted to 'makes progress' because they're not as busy as the ruler.
+			random_list = {
+				80 = { change_variable = { which = local_religion_research value = 1 } }
+				20 = {}
+			}
+		}
+	}
+	after = { character_event = { id = DAQIN.00562 days = 90 random = 30 } }
+}
+
+character_event = { #poring over the records, stewards set to task.
+	id = DAQIN.00562
+	title = DAQIN.00562.title
+	picture = GFX_evt_scientist
+	border = GFX_event_normal_frame_religion
+	
+	desc = { #It's proving difficult, but chin up!
+		trigger = { check_variable = { which = local_religion_research value == 0 } }
+		text = DAQIN.00562.descNeutral
+	}
+	desc = { #Sabotage? A poor omen...
+		trigger = { check_variable = { which = local_religion_research value == -1 } }
+		text = DAQIN.00562.descBad
+	}
+	desc = { #Progress. At this rate you'll be done in no time.
+		trigger = { check_variable = { which = local_religion_research value == 1 } }
+		text = DAQIN.00562.descGood
+	}
+	desc = { #This is easier than imagined! We're on the right track.
+		trigger = { check_variable = { which = local_religion_research value == 2 } }
+		text = DAQIN.00562.descGreat
+	}
+	
+	is_triggered_only = yes
+	
+	option = { #Leave it to chance.
+		name = DAQIN.00562.OPTA
+		random_list = {
+			20 = {
+				custom_tooltip = { text = TT_PARTLY_SUCCESFUL_SWAY_EVENT }
+				change_variable = { which = local_religion_research value = 1 }
+			}
+			20 = {
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+				change_variable = { which = local_religion_research value = 2 }
+			}
+			40 = { custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT } }
+			20 = {
+				custom_tooltip = { text = TT_DISASTROUS_SWAY_EVENT }
+				change_variable = { which = local_religion_research value = -1 }
+			}
+		}
+	}
+	option = { #personally pitch in
+		name = DAQIN.00562.OPTB
+		add_character_modifier = {
+			name = sleep_deprivation
+			years = 1
+		}
+		scaled_wealth = {
+			value = -0.8
+			min = -50
+			max = -500
+		}
+		prestige = -500
+		random = {
+			chance = 40
+			add_trait = diligent
+		}
+		random_list = {
+			40 = {
+				custom_tooltip = { text = TT_PARTLY_SUCCESFUL_SWAY_EVENT }
+				change_variable = { which = local_religion_research value = 1 }
+			}
+			30 = {
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+				change_variable = { which = local_religion_research value = 2 }
+			}
+			20 = { custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT } }
+			10 = {
+				custom_tooltip = { text = TT_DISASTROUS_SWAY_EVENT }
+				change_variable = { which = local_religion_research value = -1 }
+			}
+		}
+	}
+	option = { #Get your society to help
+		name = DAQIN.00562.OPTC
+		trigger = {
+			ROOT = {
+				society = {
+					is_religious = yes #Monastic societies
+					is_criminal = no #excludes secret religion societies
+				}
+			}
+		}
+		detract_society_currency_medium_effect = yes
+		random_list = {
+			45 = {
+				custom_tooltip = { text = TT_PARTLY_SUCCESFUL_SWAY_EVENT }
+				change_variable = { which = local_religion_research value = 1 }
+			}
+			45 = {
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+				change_variable = { which = local_religion_research value = 2 }
+			}
+			10 = { custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT } }
+		}
+	}
+	option = { #Exceedingly capable spouse
+		name = DAQIN.00562.OPTD
+		custom_tooltip = { text = DAQIN.0056X.spouse }
+		trigger = {
+			is_married = yes
+			spouse = { has_education_stewardship_trigger = yes }
+		}
+		if = { #Spouse who hates you or is a moron will sabotage/screw up your work no matter their skill. Obviously.
+			limit = {
+				spouse = { 
+					OR = {
+						is_rival = ROOT
+						opinion = { who = ROOT value < -60 }
+						is_dumb_trigger = yes
+					}
+				}
+			}
+			change_variable = { which = local_religion_research value = -1 }
+		}
+		else_if = { #admin spouse is exceedingly rare, but auto-succeeds
+			limit = {
+				spouse = { trait = administrator }
+			}
+			change_variable = { which = local_religion_research value = 2 }
+		}
+		else_if = { #Very smart spouse makes great success
+			limit = {
+				spouse = {
+					AND = {
+						is_smart_trigger = yes
+						trait = midas_touched
+						trait = fortune_builder
+					}
+				}
+			}
+			change_variable = { which = local_religion_research value = 2 }
+		}
+		else_if = { #Kinda smart spouse makes good progress
+			limit = {
+				spouse = {
+					OR = {
+						is_smart_trigger = yes
+						trait = midas_touched
+						trait = fortune_builder
+						stewardship = 16
+					}
+				}
+			}
+			random_list = {
+				30 = { change_variable = { which = local_religion_research value = 2 } }
+				70 = { change_variable = { which = local_religion_research value = 1 } }
+			}
+		}
+		else = { #spouse with nothing special except education might make progress, or might not. Weighted to 'makes progress' because they're not as busy as the ruler.
+			random_list = {
+				80 = { change_variable = { which = local_religion_research value = 1 } }
+				20 = {}
+			}
+		}
+	}
+	after = { character_event = { id = DAQIN.00563 days = 90 random = 30 } }
+}
+character_event = { #Ask around East
+	id = DAQIN.00563
+	title = DAQIN.00563.title
+	desc = DAQIN.00563.desc
+	picture = GFX_evt_market_arabic
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Send out your diplomats and spies.
+		name = DAQIN.00563.OPTA
+		add_character_modifier = {
+			name = treasure_hunting_diplomats
+			years = 1
+		}
+		random_list = {
+			25 = {
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+				change_variable = { which = local_religion_research value = 1 }
+			}
+			60 = { custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT } }
+			15 = {
+				custom_tooltip = { text = TT_DISASTROUS_SWAY_EVENT }
+				change_variable = { which = local_religion_research value = -1 }
+			}
+		}
+	}
+	option = { #Talk to them yourself
+		name = DAQIN.00563.OPTB
+		trigger = { NOT = { trait = shy } }
+		random_list = {
+			10 = { 
+				modifier = {
+					factor = 5
+					trait = gregarious
+				}
+				modifier = {
+					factor = 4
+					OR = {
+						any_owned_bloodline = { has_bloodline_flag = bloodline_peace_prosperity }
+						any_owned_bloodline = { has_bloodline_flag = bloodline_less_factions }
+						any_owned_bloodline = { has_bloodline_flag = bloodline_endearing }
+					}
+				}
+				modifier = {
+					factor = 5
+					has_pleasant_personality_trigger = yes
+				}
+				modifier = {
+					factor = 3
+					diplomacy = 16
+				}
+				custom_tooltip = { text = TT_PARTLY_SUCCESFUL_SWAY_EVENT }
+				change_variable = { which = local_religion_research value = 1 }
+			}
+			10 = {}
+			10 = { #mean people more likely to be lied to
+				modifier = {
+					factor = 2
+					has_unpleasant_personality_trigger = yes
+				}
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+				change_variable = { which = local_religion_research value = -1 }
+			}
+			10 = {
+				modifier = {
+					factor = 3
+					trait = gregarious
+				}
+				modifier = {
+					factor = 2
+					OR = {
+						any_owned_bloodline = { has_bloodline_flag = bloodline_peace_prosperity }
+						any_owned_bloodline = { has_bloodline_flag = bloodline_less_factions }
+						any_owned_bloodline = { has_bloodline_flag = bloodline_endearing }
+					}
+				}
+				modifier = {
+					factor = 3
+					has_pleasant_personality_trigger = yes
+				}
+				modifier = {
+					factor = 2
+					diplomacy = 16
+				}
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+				change_variable = { which = local_religion_research value = 2 }
+			}
+		}
+	}
+	option = { #talkative spouse
+		name = DAQIN.00563.OPTC
+		custom_tooltip = { text = DAQIN.0056X.spouse }
+		trigger = {
+			is_married = yes
+			spouse = { has_education_diplomacy_trigger = yes }
+		}
+		if = { #Spouse who hates you or is a moron will sabotage/screw up your work no matter their skill. Obviously.
+			limit = {
+				spouse = { 
+					OR = {
+						is_rival = ROOT
+						opinion = { who = ROOT value < -60 }
+						is_dumb_trigger = yes
+					}
+				}
+			}
+			change_variable = { which = local_religion_research value = -1 }
+		}
+		else_if = { #socialiser spouse is exceedingly rare, but auto-succeeds
+			limit = {
+				spouse = { trait = socializer }
+			}
+			change_variable = { which = local_religion_research value = 2 }
+		}
+		else_if = { #Very social spouse makes great success
+			limit = {
+				spouse = {
+					AND = {
+						is_attractive_trigger = yes
+						has_pleasant_personality_trigger = yes
+						has_bottom_tier_education_trait_trigger = no
+					}
+				}
+			}
+			change_variable = { which = local_religion_research value = 2 }
+		}
+		else_if = { #Kinda social spouse makes good progress
+			limit = {
+				spouse = {
+					calc_true_if = {
+						amount = 2
+						is_attractive_trigger = yes
+						has_pleasant_personality_trigger = yes
+						trait = grey_eminence
+						trait = charismatic_negotiator
+						diplomacy = 16
+					}
+				}
+			}
+			random_list = {
+				30 = { change_variable = { which = local_religion_research value = 2 } }
+				70 = { change_variable = { which = local_religion_research value = 1 } }
+			}
+		}
+		else = { #spouse with nothing special except education might make progress, or might not. Weighted to 'makes progress' because they're not as busy as the ruler.
+			random_list = {
+				15 = { change_variable = { which = local_religion_research value = 1 } }
+				10 = {}
+			}
+		}
+	}
+	option = { #Make them talk (tyrant)
+		name = DAQIN.00563.OPTD
+		tooltip_info_custom = DAQIN.00563.TT
+		trigger = {
+			calc_true_if = {
+				amount = 3
+				ROOT = {
+					any_owned_bloodline = { has_bloodline_flag = bloodline_murderous }
+					society = { devil_worshipper = yes }
+					is_evil_trigger = yes
+					trait = cruel
+					trait = rabies
+					trait = cannibal_trait
+					has_character_modifier = crazy_cannibal
+				}
+			}
+		}
+		random_list = {
+			30 = {
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+				change_variable = { which = local_religion_research value = 2 }
+			}
+			70 = {
+				custom_tooltip = { text = TT_PARTLY_SUCCESFUL_SWAY_EVENT }
+				change_variable = { which = local_religion_research value = 1 }
+			}
+		}
+	}
+	after = { character_event = { id = DAQIN.00564 days = 90 random = 30 } }
+}
+
+character_event = { #Request evidence from China
+	id = DAQIN.00564
+	title = DAQIN.00564.title
+	desc = DAQIN.00564.desc
+	picture = GFX_evt_china_diplomatic_success
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Use grace, good relations with the Emperor
+		name = DAQIN.00564.OPTA
+		trigger = { 
+			has_offmap_currency = { offmap = offmap_china value = 1000 }
+			NOT = { offmap_china = { has_policy = china_isolationist } }
+		}
+		detract_grace_massive_effect = yes
+		change_variable = { which = local_religion_research value = 1 }
+	}
+	option = { #Buy from a trader
+		name = DAQIN.00564.OPTB
+		trigger = { NOT = { offmap_china = { has_policy = china_isolationist } } }
+		scaled_wealth = {
+			value = -0.1
+			min = -10
+			max = -500
+		}
+		random_list = {
+			10 = {
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+				change_variable = { which = local_religion_research value = 1 }
+			}
+			12 = {
+				custom_tooltip = { text = TT_DISASTROUS_SWAY_EVENT }
+				change_variable = { which = local_religion_research value = -1 }
+			}
+			20 = { custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT } }
+		}
+	}
+	option = { #Send spies to steal it
+		name = DAQIN.00564.OPTC
+		custom_tooltip = {
+			text = DAQIN.00564.TT
+			detract_grace_medium_effect = yes
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 3
+						is_good_intrigue_character_score = yes
+					}
+					modifier = {
+						factor = 3
+						OR = {
+							offmap_china = { has_status = china_mongol_invasion }
+							offmap_china = { has_status = china_civil_war }
+							offmap_china = { has_status = china_jurchen_invasion }
+						}
+					}
+					modifier = {
+						factor = 5
+						OR = {
+							offmap_china = { has_status = china_unrest }
+							offmap_china = { has_status = china_famine }
+							offmap_china = { has_status = china_plague }
+						}
+					}
+					custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+					change_variable = { which = local_religion_research value = 1 }
+				}
+				10 = {
+					modifier = {
+						factor = 3
+						is_bad_intrigue_character_score = yes
+					}
+					modifier = {
+						factor = 2
+						offmap_china = { has_status = china_golden_age }
+					}
+					modifier = {
+						factor = 2
+						offmap_china = { has_policy = china_expansionist }
+					}
+					custom_tooltip = { text = TT_DISASTROUS_SWAY_EVENT }
+					detract_grace_massive_effect = yes
+				}
+				10 = {
+					modifier = {
+						factor = 2
+						offmap_china = { has_status = china_isolationist }
+					}
+					custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT }
+				}
+			}
+		}
+	}
+#	option = { #China's isolationist? No chance to get in.
+#		name = DAQIN.00564.OPTD
+#		trigger = { offmap_china = { has_policy = china_isolationist } }
+#	}
+	option = { #We'll be fine.
+		name = DAQIN.00564.OPTE
+#		trigger = { NOT = { offmap_china = { has_policy = china_isolationist } } }
+	}
+	after = { character_event = { id = DAQIN.00565 days = 60 random = 30 } }
+}
+
+character_event = { #Did it work?
+	id = DAQIN.00565
+	title = DAQIN.00565.title
+	desc = DAQIN.00565.desc
+	picture = GFX_evt_library
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+#### NOTE: You can get a maximum of 9 points (2 per step except the last one, which has a max of 1).
+	
+	option = { #failure
+		name = DAQIN.00565.OPTA
+		trigger = { check_variable = { which = local_religion_research value < 4 } }
+		character_event = { id = DAQIN.00567 days = 15 random = 5 }
+	}
+	option = { #success
+		name = DAQIN.00565.OPTB
+		trigger = { check_variable = { which = local_religion_research value = 4 } }
+		character_event = { id = DAQIN.00566 days = 15 random = 5 }
+	}
+	
+	after = { set_variable = { which = local_religion_research value = 0 } }
+}
+
+character_event = { #new religion success
+	id = DAQIN.00566
+	title = DAQIN.00566.title
+	picture = GFX_evt_religious_exultation
+	desc = {
+		trigger = { has_character_flag = exploring_christianity }
+		text = DAQIN.00566.descXtian
+	}
+	desc = {
+		trigger = { has_character_flag = exploring_mazdan }
+		text = DAQIN.00566.descMani
+	}
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Embrace nestorian secretly #NB: Sympathies MIGHT break the game, trying to add sympathy for a religion you have. I'd imagine it will just not add it, but you never know.
+		name = DAQIN.00566.OPTA
+		trigger = { has_character_flag = exploring_christianity }
+		set_secret_religion = nestorian
+		add_trait = sympathy_indian
+		add_trait = sympathy_christendom
+		character_event = { id = DAQIN.00541 days = 30 random = 15 }
+	}
+	option = { #Embrace nestorian openly
+		name = DAQIN.00566.OPTB
+		trigger = { has_character_flag = exploring_christianity }
+		religion = nestorian
+		add_trait = sympathy_indian
+		add_trait = sympathy_christendom
+		character_event = { id = DAQIN.00568 days = 30 random = 15 }
+	}
+	option = { #Embrace manichean secretly
+		name = DAQIN.00566.OPTC
+		trigger = { has_character_flag = exploring_mazdan }
+		set_secret_religion = manichean
+		add_trait = sympathy_indian
+		add_trait = sympathy_christendom
+		add_trait = sympathy_zoroastrianism
+		character_event = { id = DAQIN.00541 days = 30 random = 15 }
+		
+	}
+	option = { #Embrace manichean openly
+		name = DAQIN.00566.OPTD
+		trigger = { has_character_flag = exploring_mazdan }
+		religion = manichean
+		add_trait = sympathy_indian
+		add_trait = sympathy_christendom
+		add_trait = sympathy_zoroastrianism
+		character_event = { id = DAQIN.00568 days = 30 random = 15 }
+	}
+	
+	after = { 
+		clr_character_flag = exploring_christianity
+		clr_character_flag = exploring_mazdan
+	}
+}
+
+character_event = { #Failure...
+	id = DAQIN.00567
+	title = DAQIN.00567.title
+	desc = DAQIN.00567.desc
+	picture = GFX_evt_experiments_failed
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Well. S__t. Maybe next time.
+		name = DAQIN.00567.OPTA
+		random_demesne_province = {
+			add_province_modifier = {
+				name = religious_unrest
+				years = 2
+			}
+		}
+		add_trait = stressed
+		prestige = -200
+	}
+}
+
+character_event = { #Newfound religion. Spread bomb and stop the upheaval! Also works if secretly hellenic.
+	id = DAQIN.00568
+	title = DAQIN.00568.title
+	desc = DAQIN.00568.desc
+	picture = GFX_evt_beatification
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Force conversion. Lingering maluses, stronger conversion.
+		name = DAQIN.00568.OPTA
+		prestige = -500
+		random_demesne_province = {
+			limit = { NOT = { religion = ROOT } }
+			add_province_modifier = {
+				name = religious_tension
+				years = 5
+			}
+			if = {
+				limit = { true_religion_hellenic_pagan_trigger = yes }
+				religion = hellenic_pagan
+			}
+			else = { religion = ROOT }
+			any_neighbor_province = {
+				add_province_modifier = {
+					name = religious_tension
+					years = 5
+				}
+				if = {
+					limit = { true_religion_hellenic_pagan_trigger = yes }
+					random = {
+						chance = 50
+						religion = hellenic_pagan
+					}
+				}
+				else = { 
+					random = {
+						chance = 50
+						religion = ROOT
+					}
+				}
+			}
+		}
+	}
+	option = { #Open a dialogue. Revolt reduction, weaker conversion.
+		name = DAQIN.00568.OPTB
+		random_demesne_province = {
+			limit = { NOT = { religion = ROOT } }
+			add_province_modifier = {
+				name = theological_dialogue
+				years = 2
+			}
+			if = {
+				limit = { true_religion_hellenic_pagan_trigger = yes }
+				random = {
+					chance = 60
+					religion = hellenic_pagan
+				}
+			}
+			else = { 
+				random = {
+					chance = 60
+					religion = ROOT
+				}
+			}
+			any_neighbor_province = {
+				add_province_modifier = {
+					name = theological_dialogue
+					years = 2
+				}
+				if = {
+					limit = { true_religion_hellenic_pagan_trigger = yes }
+					random = {
+						chance = 20
+						religion = hellenic_pagan
+					}
+				}
+				else = { 
+					random = {
+						chance = 20
+						modifier = {
+							factor = 2
+							religion_group = ROOT
+						}
+						religion = ROOT
+					}
+				}
+			}
+		}
+	}
+	option = { #Theologian preaches personally. Like dialogue, but better.
+		name = DAQIN.00568.OPTC
+		trigger = { trait = theologian }
+		tooltip_info = theologian
+		random_demesne_province = {
+			limit = { NOT = { religion = ROOT } }
+			add_province_modifier = {
+				name = theological_dialogue
+				years = 3
+			}
+			if = {
+				limit = { true_religion_hellenic_pagan_trigger = yes }
+				random = {
+					chance = 80
+					religion = hellenic_pagan
+				}
+			}
+			else = { 
+				random = {
+					chance = 80
+					religion = ROOT
+				}
+			}
+			any_neighbor_province = {
+				add_province_modifier = {
+					name = theological_dialogue
+					years = 3
+				}
+				if = {
+					limit = { true_religion_hellenic_pagan_trigger = yes }
+					random = {
+						chance = 30
+						religion = hellenic_pagan
+					}
+				}
+				else = { 
+					random = {
+						chance = 30
+						modifier = {
+							factor = 2
+							religion_group = ROOT
+						}
+						religion = ROOT
+					}
+				}
+			}
+		}
+	}
+	option = { #Fund some temples. Send in the priests. Expensive, no maluses.
+		name = DAQIN.00568.OPTD
+		wealth = -600
+		piety = -200
+		random_demesne_province = {
+			limit = { NOT = { religion = ROOT } }
+			if = {
+				limit = { true_religion_hellenic_pagan_trigger = yes }
+				random = {
+					chance = 40
+					modifier = {
+						factor = 2
+						religion_group = ROOT
+					}
+					religion = hellenic_pagan
+				}
+			}
+			else = { 
+				random = {
+					chance = 40
+					religion = ROOT
+				}
+			}
+			any_neighbor_province = {
+				if = {
+					limit = { true_religion_hellenic_pagan_trigger = yes }
+					random = {
+						chance = 30
+						religion = hellenic_pagan
+					}
+				}
+				else = { 
+					random = {
+						chance = 30
+						modifier = {
+							factor = 2
+							religion_group = ROOT
+						}
+						religion = ROOT
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event = { #Hellenic religious conflict victory
+	id = DAQIN.00569
+	title = DAQIN.00569.title
+	desc = DAQIN.00569.desc
+	picture = GFX_evt_hellenic_temple
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Well that went well.
+		name = DAQIN.00569.OPTA
+		piety = 100
+		random_demesne_province = {
+			limit = { NOT = { religion = ROOT } }
+			random = {
+				chance = 10
+				religion = ROOT
+			}
+		}
+	}
+	option = { #See, we can all be friends.
+		name = DAQIN.00569.OPTA
+		piety = 100
+		random = {
+			chance = 20
+			add_trait = sympathy_indian
+		}
+		random = {
+			chance = 20
+			add_trait = sympathy_christendom
+		}
+		random_demesne_province = {
+			limit = { NOT = { religion = ROOT } }
+			random = {
+				chance = 10
+				religion = ROOT
+			}
+		}
+	}
+}

@@ -1,0 +1,410 @@
+##################################################
+#############THE MANDATE OF HEAVEN################
+##################################################
+namespace = DAQIN
+
+character_event = { #Ensures a new peaceful successor is still the right government type.
+	id = DAQIN.00301
+	hide_window = yes #This is just a quick sneaky to ensure that the Emperor is still the right Gov type, player needn't see.
+	
+	only_playable = yes
+	
+	has_global_flag = fulin_formed
+	
+	is_triggered_only = yes #Triggers on new holders, peaceful or creation (in case the Emperor becomes unlanded and someone re-creates the empire later)
+	
+	trigger = {
+		FROM = { #FROM is the title
+			OR = {
+				title = e_fulin
+				title = e_daqin
+			}
+		}
+	}
+	
+	immediate = {
+		if = { limit = { has_landed_title = e_fulin } e_fulin = { make_primary_title = yes } }
+		else = { e_daqin = { make_primary_title = yes } }
+		set_government_type = western_chinese_government
+	}
+}
+
+character_event = { #Bad Ruler, the start of the Mandate breaking.
+	id = DAQIN.00302
+	title = DAQIN.00302.title
+	desc = DAQIN.00302.desc
+	picture = GFX_evt_china_unrest
+	border = GFX_event_normal_frame_war
+	
+	only_playable = yes #doubles up on inde, but playable is a pre-filter
+	only_independent = yes #if Fulin has somehow become a tributary this won't fire. Makes some sense, the Suzerain is keeping the lid on everything.
+	has_global_flag = fulin_formed #fulin has to be formed for Daqin to form, so this satisfies both.
+	
+	is_triggered_only = yes #fired from a biyearly pulse.
+	
+	trigger = {
+		government = western_chinese_government #Needs to be the Emperor
+		NOR = {
+			has_character_flag = broken_mandate #You can only shatter once a lifetime, once the Mandate is gone it's gone.
+			trait = restitutor #restitutor has claimed the mandate, even a tyrant won't be opposed.
+		}
+		calc_true_if = { #If you meet enough of these, you're considered a bad/weak ruler...
+			amount = 3 #Needs 3 or more of these to be true.
+			has_regent = yes
+			##Out of currency##
+			piety < 0
+			prestige < 0
+			wealth < 0
+			##committed terrible acts##
+			trait = kinslayer
+			trait = familial_kinslayer
+			trait = dynastic_kinslayer
+			has_character_flag = daqin_kowtow
+			has_character_modifier = crazy_cannibal #Eating people so openly tends not to leave a good impression.
+			trait = excommunicated
+			##bad education or stupid##
+			is_dumb_trigger = yes
+			has_bottom_tier_education_trait_trigger = yes
+			##something wrong##
+			trait = leper
+			trait = drunkard
+#			trait = lunatic #Currently cut out. Should be in but it's a fun enough trait.
+			trait = possessed
+			has_severe_disability_trigger = yes
+			##personality defect##
+			is_evil_trigger = yes #Cruel/Arbitrary/Impaler and not their opposites or patient/charitable.
+			##wrong religion or culture##
+			NOR = {
+				culture_group = great_qin
+				culture = roman
+				culture = greek
+				culture = han
+			}
+			AND = {
+				religion_group = zoroastrian_group
+				NOT = { religion = manichean } #Manicheanism was a religion of both east and west, existed in Rome and China.
+			}
+			religion_group = muslim
+			religion_group = jewish_group
+			AND = {
+				religion_group = pagan_group
+				NOT = { religion_openly_hellenic_or_reformed_trigger = yes }
+			}
+			is_heretic = yes
+			religion = jain
+			religion = hindu
+		}
+	}
+	
+	option = { #The warning shot. "Shape up or else!"
+		name = DAQIN.00302.OPTA
+		trigger = { NOT = { has_character_flag = shaky_mandate } }
+		set_character_flag = shaky_mandate
+		custom_tooltip = { text = mandate_explanation.TT }
+	}
+	
+	option = { #Mandate is lost, trigger the shattering
+		name = DAQIN.00302.OPTB
+		trigger = { has_character_flag = shaky_mandate }
+		set_character_flag = broken_mandate
+		clr_character_flag = shaky_mandate
+		narrative_event = { id = DAQIN.00305 days = 1 }
+		any_vassal = {
+			limit = { higher_tier_than = BARON }
+			narrative_event = { id = DAQIN.00305 }
+		}
+	}
+}
+
+character_event = { #"Are you sure?" for rulers of Daqin going to kowtow to China.
+	id = DAQIN.00303
+	title = DAQIN.00303.title
+	desc = DAQIN.00303.desc
+	picture = GFX_evt_china_rebel_general
+	
+	only_playable = yes
+	
+	has_global_flag = rome_restored #Remember that declaring Daqin counts as restoring Rome, since its a kind of Rome
+	has_character_flag = went_on_kow_tow_pilgrimage #This flag gets set the second you make the decision to go, and acts as a pretty quick filter.
+	
+	is_triggered_only = yes #on a yearly pulse
+	
+	trigger = {
+		government = western_chinese_government
+		NOT = { has_character_flag = daqin_kowtow }
+		trait = kow_tow_travels #Trait needs to be included to ensure it doesn't just forever fire for someone who's already been on Kowtow
+	}
+	
+	option = { #Alright, I'll not go.
+		name = DAQIN.00303.OPTA
+		set_character_flag = kow_tow_hide_abort_notification
+		abort_kow_tow_effect = yes
+	}
+	option = { #Going to go anyway. HARSH penalty, can restart the mandate struggle if it's not already gone.
+		name = DAQIN.00303.OPTB
+		prestige = -2000
+		set_character_flag = shaky_mandate
+		set_character_flag = daqin_kowtow
+		remove_trait = restitutor
+		any_vassal = {
+			opinion = {
+				modifier = opinion_deeply_insulted
+				who = ROOT
+				years = 10
+			}
+		}
+	}
+}
+
+character_event = { #Child ruler goes straight into broken mandate
+	id = DAQIN.00304
+	title = DAQIN.00304.title
+	desc = DAQIN.00304.desc
+	picture = GFX_evt_china_civil_war
+	border = GFX_event_normal_frame_war
+	
+	only_playable = yes
+	
+	only_independent = yes
+	has_global_flag = fulin_formed
+	max_age = 12
+	
+	is_triggered_only = yes #On yearly childhood pulse
+	
+	trigger = {
+		government = western_chinese_government
+		OR = {
+			FROM = { title = e_daqin }
+			FROM = { title = e_fulin }
+		}
+	}
+	
+	option = {
+		name = DAQIN.00304.OPTA
+		set_character_flag = broken_mandate
+		narrative_event = { id = DAQIN.00305 days = 1 }
+		any_vassal = {
+			limit = { higher_tier_than = BARON }
+			narrative_event = { id = DAQIN.00305 }
+		}
+	}
+}
+
+narrative_event = { #Mandate Broken! Vassals get claims, and can break away.
+	id = DAQIN.00305
+	title = DAQIN.00305.title
+	desc = DAQIN.00305.desc
+	picture = GFX_evt_china_civil_war
+	border =  GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes #only sent by prior events
+	
+	immediate = {
+		liege = { save_event_target_as = rightful_liege }
+		if = {
+			limit = { has_global_flag = rome_restored } #Restoring Daqin sets the Rome flag. If Rome was restored without Fulin/Daqin, it ceases to be possible, so this won't matter.
+			add_claim = e_daqin
+		}
+		else = { add_claim = e_fulin }
+	}
+	
+	option = {
+		name = DAQIN.00305.OPTA #Righteous Rebellion
+		trigger = { NOT = { government = western_chinese_government } }
+		ROOT = { primary_title = { add_claim = FROM } }
+		set_defacto_liege = THIS
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 2
+				ai_greed = 40
+			}
+			modifier = {
+				factor = 2
+				opinion = { who = liege value < -30 }
+			}
+			modifier = {
+				factor = 10
+				opinion = { who = liege value < -70 }
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 5
+				ai_ambition = 25 #Ambitious characters almost certainly break away
+			}
+		}
+		reverse_opinion = {
+			who = event_target:rightful_liege
+			modifier = opinion_rightful_vassal
+			months = 60
+		}
+	}
+	option = {
+		name = DAQIN.00305.OPTB #Remain loyal!
+		trigger = { NOT = { government = western_chinese_government } }
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 4
+				ai_honor = 20 #kind/trusting/etc rulers will either be more likely to stay
+				NOT = { trait = just } #But it is a just act to rebel
+			}
+			modifier = {
+				factor = 3
+				opinion = { who = liege value = 40 }
+			}
+			modifier = {
+				factor = 10
+				opinion = { who = liege value = 70 }
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					is_friend = event_target:rightful_liege
+					is_lover = event_target:rightful_liege
+				}
+			}
+			modifier = {
+				factor = 5
+				ai_ambition < -25
+			}
+			modifier = {
+				factor = 4
+				trait = craven #Cowards fear rebellion
+			}
+		}
+		reverse_opinion = {
+			who = event_target:rightful_liege
+			modifier = opinion_loyal_vassal
+			months = 60
+		}
+	}
+	option = {
+		name = DAQIN.00305.OPTC
+		trigger = { government = western_chinese_government } #Only the Emperor can select this option
+		prestige = -500
+		custom_tooltip = { text = mandate_reclaiming_explanation.TT }
+	}
+}
+
+narrative_event = { #Usurper takes the Empire - event only fires for the usurper, I'm pretty sure. Pretty sure. It might not.
+	id = DAQIN.00306
+	title = DAQIN.00306.title
+	desc = DAQIN.00306.desc
+	picture = GFX_evt_victory_arch_byzantine
+	border =  GFX_event_narrative_frame_war
+	
+	only_playable = yes
+	has_global_flag = fulin_formed
+	
+	is_triggered_only = yes #triggers when the empire is won through war (or pressing the Usurp button, I think)
+	
+	trigger = {
+		OR = {
+			FROM = { title = e_fulin }
+			FROM = { title = e_daqin }
+		}
+	}
+	
+	immediate = { #New Emperor gets appropriate government
+		if = { limit = { has_landed_title = e_fulin } e_fulin = { make_primary_title = yes } }
+		else = { e_daqin = { make_primary_title = yes } }
+		set_government_type = western_chinese_government
+	}
+	
+	option = {
+		name = DAQIN.00306.OPTA
+		ROOT = { #this is the character doing the usurping
+			add_trait = restitutor
+			if = {
+				limit = { has_nickname = no }
+				give_nickname = nick_the_exalted
+			}
+		}
+		hidden_tooltip = {
+			FROMFROM = { #this is the previous emperor
+				remove_trait = restitutor #No longer has the Mandate
+				random_list = {
+					10 = { give_nickname = nick_the_weak }
+					10 = { give_nickname = nick_the_leechlord }
+					10 = { give_nickname = nick_the_unready }
+					10 = { give_nickname = nick_the_pale_prince }
+					10 = { give_nickname = nick_the_submissive }
+					10 = { give_nickname = nick_the_accursed }
+					10 = { give_nickname = nick_the_ill_ruler }
+					10 = { give_nickname = nick_the_feeble }
+				}
+			}
+		}
+	}
+	
+	after = {
+		if = { #This is to make sure the old ruler has the appropriate government
+			limit = { FROMFROM = { is_ruler = yes } } #Courtiers don't matter
+			FROMFROM = {
+				if = { limit = { religion_group = muslim } set_government_type = muslim_government break = yes } #All Muslims become Iqta, no further action needed
+				if = { limit = { ai = no } set_government_type = feudal_government break = yes } #Players can keep playing no matter what
+				capital_holding = {
+					trigger_switch = { #Sets an appropriate government for their capital holding
+						on_trigger = holding_type
+						castle = { FROMFROM = { set_government_type = feudal_government } }
+						city = { FROMFROM = { set_government_type = republic_government } } #Not a Merchant Republic, that way lies madness
+						tribal = { FROMFROM = { set_government_type = tribal_government } }
+						temple = { FROMFROM = { set_government_type = theocracy_government } }
+					}
+				}
+			}
+		}
+	}
+}
+
+narrative_event = { #Mandate Restored by old emperor
+	id = DAQIN.00307
+	title = DAQIN.00307.title
+	desc = DAQIN.00307.desc
+	picture = GFX_evt_victory_arch_byzantine
+	border =  GFX_event_narrative_frame_war
+	
+	only_playable = yes
+	only_independent = yes
+	has_character_flag = broken_mandate
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		government = western_chinese_government
+		NAND = { #These must BOTH be untrue - any claimant is a non-relative, non-baron ruler
+			e_fulin = {
+				any_claimant = {
+					AND = {
+						NOT = { is_close_relative = ROOT }
+						is_playable = yes
+					}
+				}
+			}
+			e_daqin = {
+				any_claimant = {
+					AND = {
+						NOT = { is_close_relative = ROOT }
+						is_playable = yes
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = DAQIN.00307.OPTA
+		add_trait = restitutor
+		custom_tooltip = {
+			text = kinslayer_removal_explanation.TT #They're not your family anymore, they were removed by their attempted rebellion
+			remove_trait = kinslayer
+			remove_trait = dynastic_kinslayer
+			remove_trait = familial_kinslayer
+		}
+		clr_character_flag = broken_mandate
+	}
+}

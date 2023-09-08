@@ -1,0 +1,58 @@
+namespace = NIR
+
+narrative_event = { #Latinokratia Triumphant
+	id = NIR.07
+	title = NIR.07.T
+	desc = NIR.07.D
+	picture = GFX_evt_hagia_sofia
+	
+	is_triggered_only = yes
+	
+	option = { #I'm the best
+		name = NIR.07.OPTA
+		trigger = { has_landed_title = e_latin_empire }
+		if = {
+			limit = { culture = frankish } #The French get to have their own special culture because they did it historically
+			culture = frankokratian
+			capital_scope = { culture = frankokratian }
+		}
+		else = {
+			culture = latinokratian
+			capital_scope = { culture = latinokratian }
+		}
+		piety = 200
+		prestige = 500
+		add_artifact = zweihander_sword #Fancy sword most players wouldn't see otherwise, usable by the new culture
+		any_character = { #Please sir, how do I do this better, tell me
+			any_artifact = {
+				limit = { artifact_type = iron_crown_of_lombardy }
+				transfer_artifact = {
+					from = PREVPREV
+					to = ROOT
+				}
+			}
+		}
+	}
+	option = { #They're the best
+		name = NIR.07.OPTB
+		trigger = {
+			NOT = { has_landed_title = e_latin_empire }
+			religion = catholic
+		}
+	}
+	option = { #They're the worst!
+		name = NIR.07.OPTC
+		trigger = { religion = orthodox }
+	}
+	option = { #They're certanly a thing
+		name = NIR.07.OPTD
+		trigger = {
+			NOT = {
+				OR = {
+					religion = catholic
+					religion = orthodox
+				}
+			}
+		}
+	}
+}

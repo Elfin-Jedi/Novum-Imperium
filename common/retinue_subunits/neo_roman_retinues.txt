@@ -1,0 +1,76 @@
+# Types:
+# 0 - Light Infantry
+# 1 - Heavy Infantry
+# 2 - Pikemen
+# 3 - Light Cavalry
+# 4 - Heavy Cavalry
+# 5 - Archers
+# 6 - Special troops special_troops = camel_cavalry / special_troops = horse_archers
+
+RETTYPE_CUL_AFRICANROMANCE = { #Camels from Berbers and Spearmen from nearby Italy. Very solid retinue all round.
+	first_type = 2
+	first_amount = 200
+	second_type = 6
+	second_amount = 250
+	
+	special_troops = camel_cavalry
+	
+	potential = {
+		is_nomadic = no
+		culture = african_romance
+	}
+	
+	modifier = {
+		pikemen_offensive = 0.2
+		pikemen_defensive = 0.3
+		
+		camel_cavalry_offensive = 0.3
+		camel_cavalry_defensive = 0.2
+	}
+}
+
+RETTYPE_CUL_PONTIC = { #Silver Shields, typical Alexandrian affair. Pike and Horses, with big boi bonuses to horse offence and big boi bonuses to spear defence
+	first_type = 4
+	first_amount = 300
+	second_type = 2
+	second_amount = 150
+	
+	potential = {
+		is_nomadic = no
+		culture = pontic
+	}
+	
+	modifier = {
+		pikemen_morale = 0.2
+		pikemen_defensive = 0.5
+		
+		heavy_cavalry_offensive = 0.5
+		heavy_cavalry_morale = 0.2
+	}
+}
+
+RETTYPE_CUL_LATINOKRATIAN = { #"Latin Cataphracts"; Slightly altered cataphracts, more geared to melee because knights. Applies to all -Kratian types, since they're ultimately all Europeans mixing with Greeks.
+	first_type = 4
+	first_amount = 250
+	second_type = 6
+	second_amount = 100
+	
+	special_troops = horse_archers
+	
+	potential = {
+		is_nomadic = no
+		OR = {
+			culture = latinokratian
+			culture = frankokratian
+		}
+	}
+	
+	modifier = {
+		heavy_cavalry_offensive = 0.4
+		heavy_cavalry_defensive = 0.1
+		heavy_cavalry_morale = 0.2
+		
+		horse_archers_offensive = 0.2
+		horse_archers_morale = 0.1
+	}
+}

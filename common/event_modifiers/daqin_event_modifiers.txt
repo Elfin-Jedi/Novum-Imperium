@@ -1,0 +1,65 @@
+adeptus_custodes = {
+	icon = 7
+	monthly_character_prestige = 0.05
+	defensive_plot_power_modifier = 10
+}
+adeptus_catstodes = {
+	icon = 47
+	monthly_character_prestige = -0.05
+	defensive_plot_power_modifier = -10
+#	childrens_card_games = 100
+}
+ruler_absent_peasant_unrest = {
+	icon = 31
+	global_revolt_risk = 0.03
+	global_levy_size = -0.03
+	global_garrison_size = -0.05
+	land_morale = -0.02
+}
+
+ruler_absent_economic_woes = {
+	icon = 22
+	global_tax_modifier = -0.1
+	tax_income = -1
+	local_build_cost_modifier = 0.2
+	local_build_time_modifier = 0.2
+}
+
+ruler_absent_military_woes = {
+	icon = 19
+	global_garrison_size = -0.05
+	levy_reinforce_rate = -0.05
+	retinue_reinforce_rate = -0.05 #No idea if this'll work
+	land_morale = -0.08
+	land_organisation = -0.1
+}
+ruler_absent_spiritual_woes = {
+	icon = 26
+	monthly_character_piety = -0.1
+	church_opinion = -2
+	same_religion_opinion = -1
+}
+ruler_absent_flat = {
+	icon = 25
+	monthly_character_prestige = -0.1
+	vassal_opinion = -1
+}
+
+competent_regent = {
+	icon = 10
+	general_opinion = 5
+	monthly_character_prestige = 0.25
+}
+ruthless_overseer = {
+	icon = 75
+	monthly_character_prestige = 0.01
+}
+caring_overseer = {
+	icon = 39
+	monthly_character_piety = 0.01
+}
+
+secret_tomb_health_buff = { #Don't want them dying on you!
+	icon = 121
+	health = 8
+}

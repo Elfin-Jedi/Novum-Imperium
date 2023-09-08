@@ -1,0 +1,81 @@
+decisions = {
+	form_third_rome = {
+		only_independent = yes 
+		
+		is_high_prio = yes
+		ai_check_interval = 120
+		
+		potential = {
+			OR = {
+				has_landed_title = e_russia #This is the Kievan Rus
+				has_landed_title = e_russian_empire #This is the special mega-empire
+			}
+			e_byzantium = { has_holder = no }
+			religion = orthodox
+			is_adult = yes
+			is_incapable = no
+			NOR = {
+				has_global_flag = third_rome_formed
+				has_character_flag = selecting_tsar_flag
+			}
+		}
+		allow = {
+			OR = {
+				has_landed_title = e_russia #This is the Kievan Rus
+				has_landed_title = e_russian_empire #This is the special mega-empire
+			}
+			
+			e_byzantium = { has_holder = no }
+			e_nicaea = { has_holder = no }
+			
+			religion = orthodox #Has to be Orthodox, not a heresy
+			prestige = 5000
+			piety = 2500
+			wealth = 1000
+			
+			completely_controls = k_thrace
+			has_landed_title = c_byzantion
+			has_landed_title = c_kaliopolis
+			has_landed_title = c_thrake
+			
+			war = no
+		}
+		effect = {
+			set_character_flag = selecting_tsar_flag #If you choose yourself this goes away
+			character_event = { id = NIR.14 } #Choose to annex or to find someone to set up as a puppet
+		}
+		revoke_allowed = { always = no }
+	}
+}
+
+targetted_decisions = {
+	
+	select_tsar = {
+		only_playable = yes
+		
+		filter = dynasty #Only dynasts can be chosen to be tsar
+		
+		from_potential = {
+			OR = {
+				has_landed_title = e_russia
+				has_landed_title = e_russian_empire
+			}
+			has_character_flag = selecting_tsar_flag #Set by the 'third rome' decision, though if the player selects themselves in the event it'll be cleared
+		}
+		potential = { #This is to make it show up, 'allow' is for the conditions visible to the player
+			liege = { character = FROM } #Has to be a direct vassal of the player
+			is_primary_heir = no
+		}
+		allow = { #The player needs to see all these to know the restrictions
+			has_landed_title = c_byzantion #Has to hold Constantinople
+			religion = orthodox
+			is_adult = yes
+			is_incapable = no
+		}
+		effect = {
+			save_event_target_as = tsar_candidate
+			clr_character_flag = selecting_tsar_flag
+			FROM = { character_event = { id = NIR.15 } }#Final confirmation event
+		}
+	}		
+}

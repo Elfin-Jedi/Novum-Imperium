@@ -1,0 +1,126 @@
+song = {
+	name = "Egypt Theme - Ancient (Civilization 6 OST) El Helwa Di.ogg"
+	song_name = "El Helwa Di (Ancient)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = egyptian_arabic }
+			NOT = { culture = coptic }
+		}
+		modifier = {
+			factor = 2
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Egypt Theme - Medieval (Civilization 6 OST) El Helwa Di.ogg"
+	song_name = "El Helwa Di (Medieval)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = egyptian_arabic }
+			NOT = { culture = coptic }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Egypt Theme - Industrial (Civilization 6 OST) El Helwa Di.ogg"
+	song_name = "El Helwa Di (Industrial)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = egyptian_arabic }
+			NOT = { culture = coptic }
+		}
+		modifier = {
+			factor = 0.5
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Egypt Theme - Atomic (Civilization 6 OST) El Helwa Di.ogg"
+	song_name = "El Helwa Di (Atomic)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = egyptian_arabic }
+			NOT = { culture = coptic }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Civilization V OST Ramesses II Peace Theme Ancient Egyptian Melody Fragments.ogg"
+	song_name = "Ancient Egyptian Melody Fragments"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = egyptian_arabic }
+			NOT = { culture = coptic }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Civilization V OST Ramesses II War Theme Ancient Egyptian Melody Fragments.ogg"
+	song_name = "Ancient Egyptian Melody Fragments"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = egyptian_arabic }
+			NOT = { culture = coptic }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 2
+}

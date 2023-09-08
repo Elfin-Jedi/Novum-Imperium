@@ -1,0 +1,84 @@
+song = {
+	name = "Medieval Netherlands Anon. 14th c. - Wi willen van den kerels singhen.ogg"
+	song_name = "Wi Willen Van Den Kerels Singhen"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = dutch }
+			NOT = { culture = frisian }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Medieval Netherlands Anon. 14th c. - Het soude een scamel mercenier.ogg"
+	song_name = "Het Soude Een Scamel Mercenier"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = dutch }
+			NOT = { culture = frisian }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Medieval Netherlands Anon. 14th c. Sceiden, onverwilic leit.ogg"
+	song_name = "Sceiden, Onverwilic Leit"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = dutch }
+			NOT = { culture = frisian }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Medieval Netherlands Anon. - Tandernaken op den Rijn.ogg"
+	song_name = "Tandernaken Op Den Rijn"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = dutch }
+			NOT = { culture = frisian }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}

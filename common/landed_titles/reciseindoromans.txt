@@ -86,11 +86,11 @@ d_indo_praetorians = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
         capital = 1131
 
-	graphical_culture = holygfx
+	#graphical_culture = holygfx
 	
 	culture = romanoindian
 	
@@ -119,7 +119,7 @@ d_vieti_seniores = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
         capital = 1131
 	
@@ -150,7 +150,7 @@ d_celestial_vieti_seniores = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
     capital = 1448
 	
@@ -181,7 +181,7 @@ d_thidelepean_iuniores = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
     capital = 1448
 	
@@ -206,6 +206,37 @@ d_thidelepean_iuniores = {
 	mercenary_type = vieti_iuniores
 }
 
+d_hyperborean_amazons = {
+	color={ 153 169 186 }
+	color2={ 227 190 236 }
+
+	
+	# Parent Religion 
+	#religion = orthodox
+
+    capital = 1448
+	
+	culture = romanoindian
+	
+	mercenary = yes
+
+	title = "Captain"
+	foa = "CAPTAIN_FOA"
+	title_female = "Captain"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	replace_captain_on_death = yes
+	
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = sky_lords_composition
+}
+
 k_walakrios_expedition = {
 	color={ 255 228 197 }
 	color2={ 135 39 90 }
@@ -213,7 +244,7 @@ k_walakrios_expedition = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -229,7 +260,7 @@ k_western_expedition = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -245,7 +276,7 @@ d_latin_praetorians = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -271,9 +302,10 @@ d_knights_of_saint_thomas = {
 	holy_order = yes
 	
 	# Parent Religion 
-	religion = orthodox
+	religion = vieti_orthodox
 	
-	culture = bengali
+	#culture = bengali
+	culture = romanoindian
 	
 	# Cannot be held as a secondary title
 	primary = yes
@@ -290,7 +322,7 @@ d_occiromalus = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -302,7 +334,7 @@ d_solromalus = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -326,7 +358,7 @@ k_romala = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -338,7 +370,7 @@ k_vietia = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -350,7 +382,7 @@ k_arcadi = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -362,7 +394,7 @@ d_arcadi_upper = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -374,7 +406,7 @@ d_arcadi = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -386,7 +418,7 @@ d_kalvarea = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -398,7 +430,7 @@ d_fidellia = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -410,7 +442,7 @@ d_maria = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -422,7 +454,7 @@ d_syrica = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -434,7 +466,7 @@ d_western_dominium = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -446,7 +478,7 @@ k_yindu_dominium = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -458,7 +490,7 @@ d_chadican_uprising = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	title = "Dominus"
 	title_female = "Domina"
@@ -474,7 +506,7 @@ d_orgallia = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -486,7 +518,7 @@ d_domaria = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -498,7 +530,7 @@ k_palatia_magnata = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -510,7 +542,7 @@ d_rheatiania = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -522,7 +554,7 @@ d_gaetica = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -534,7 +566,7 @@ k_argilla = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -546,7 +578,7 @@ k_indus = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -558,7 +590,7 @@ d_upper_indus = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 
@@ -570,7 +602,7 @@ d_sericallia = {
 
 	
 	# Parent Religion 
-	religion = orthodox
+	#religion = orthodox
 
 	culture = romanoindian
 

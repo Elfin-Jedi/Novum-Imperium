@@ -14,6 +14,24 @@ praetorian_ultra = {
 	random = no
 }
 
+vieti_carnifex = {
+	potential = {
+	trait = vieti_carnifex
+	}
+	martial = 1
+	learning = 2
+	general_opinion = -5
+	health = 0.5
+	monthly_character_prestige = 0.10
+	
+	combat_rating = 3 #old value: 2
+	
+	same_opinion = 10
+	
+	customizer = yes
+	random = no
+}
+
 indoroman_champ = {
 	potential = {
 	trait = indoroman_champ

@@ -338,7 +338,7 @@ character_event = {
 					}
 					modifier = {
 						factor = 2
-						trait = silver_tongue_lifestyle
+						trait = silver_tongue
 					}
 					modifier = {
 						factor = 1.5
@@ -615,7 +615,7 @@ character_event = {
 					}
 					modifier = {
 						factor = 2
-						trait = silver_tongue_lifestyle
+						trait = silver_tongue
 					}
 					modifier = {
 						factor = 1.5
@@ -5582,7 +5582,7 @@ character_event = { 		#Setup event
 			}			
 			modifier = {
 				factor = 4
-				trait = silver_tongue_lifestyle
+				trait = silver_tongue
 			}
 			modifier = {
 				factor = 1.5
@@ -7434,7 +7434,7 @@ character_event = { 		#Help the magnificent visited lands with money... from the
 					}				
 					modifier = {
 						factor = 2
-						event_target:da_travel_spouse = { trait = silver_tongue_lifestyle }
+						event_target:da_travel_spouse = { trait = silver_tongue }
 					}								
 
 					set_character_flag = da_argument_l
@@ -7563,7 +7563,7 @@ character_event = { 		#Spouse brings back from the voyage a loyal friend, able t
 
 			random_list = {
 				3 = {
-					add_trait = silver_tongue_lifestyle
+					add_trait = silver_tongue
 				}
 				3 = {
 					add_trait = socializer				
@@ -8975,11 +8975,12 @@ character_event = { 		#Spouse is convinced by player to give up on the voyage
 	option = {
 		name = EVTOPTB1972531
 		trigger = {
+			NOT = { lifestyle_traits = 1 }
 		}		
 		
 		prestige = 10
 		
-		add_trait = silver_tongue_lifestyle
+		add_trait = silver_tongue
 		
 	}	
 	
@@ -10298,7 +10299,7 @@ character_event = { 		#STARTUP EVENT
 			}			
 			modifier = {
 				factor = 4
-				trait = silver_tongue_lifestyle
+				trait = silver_tongue
 			}
 			modifier = {
 				factor = 1.5
@@ -10352,7 +10353,7 @@ character_event = { 		#STARTUP EVENT
 					}
 					modifier = {
 						factor = 2.5
-						trait = silver_tongue_lifestyle
+						trait = silver_tongue
 					}					
 					modifier = {
 						factor = 1.33
@@ -11164,6 +11165,7 @@ character_event = {
 	option = {
 		name = EVTOPTB1972540
 		trigger = {
+			NOT = { lifestyle_traits = 1 }
 		}
 
 		if = {
@@ -11248,7 +11250,7 @@ character_event = {
 					}
 					modifier = {
 						factor = 2
-						spouse = { trait = silver_tongue_lifestyle }
+						spouse = { trait = silver_tongue }
 					}
 					modifier = {
 						factor = 1.5
@@ -11447,7 +11449,7 @@ character_event = {
 					}
 					modifier = {
 						factor = 2
-						spouse = { trait = silver_tongue_lifestyle }
+						spouse = { trait = silver_tongue }
 					}
 					modifier = {
 						factor = 1.5
@@ -14086,7 +14088,7 @@ character_event = { 		#Startup event
 			}			
 			modifier = {
 				factor = 4
-				trait = silver_tongue_lifestyle
+				trait = silver_tongue
 			}
 			modifier = {
 				factor = 1.5
@@ -14244,7 +14246,7 @@ character_event = { 		#Startup event
 					}
 					modifier = {
 						factor = 1.25
-						spouse = { trait = silver_tongue_lifestyle }
+						spouse = { trait = silver_tongue }
 					}
 					modifier = {
 						factor = 1.5
@@ -14427,7 +14429,7 @@ character_event = {			#Player tries to convince spouse to give up on heir educat
 					}				
 					modifier = {
 						factor = 3
-						trait = silver_tongue_lifestyle
+						trait = silver_tongue
 					}
 					modifier = {
 						factor = 1.25
@@ -14539,7 +14541,7 @@ character_event = {			#Player tries to convince spouse to give up on heir educat
 					}				
 					modifier = {
 						factor = 3
-						spouse = { trait = silver_tongue_lifestyle }
+						spouse = { trait = silver_tongue }
 					}
 					modifier = {
 						factor = 1.25
@@ -14694,7 +14696,7 @@ character_event = {			#Player tries to convince spouse to give up on heir educat
 					}				
 					modifier = {
 						factor = 3.5
-						spouse = { trait = silver_tongue_lifestyle }
+						spouse = { trait = silver_tongue }
 					}
 			
 					character_event = { id = darkages.72560 }

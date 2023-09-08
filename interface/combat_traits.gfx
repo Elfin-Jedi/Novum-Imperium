@@ -1,0 +1,32 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_trait_poor_warrior"
+		textureFile = "gfx/traits/combat_traits/poor_warrior.tga"
+		noOfFrames = 1
+		noRefCount = yes
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_trained_warrior"
+		textureFile = "gfx/traits/combat_traits/trained_warrior.tga"
+		noOfFrames = 1
+		noRefCount = yes
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_skilled_warrior"
+		textureFile = "gfx/traits/combat_traits/skilled_warrior.tga"
+		noOfFrames = 1
+		noRefCount = yes
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_master_warrior"
+		textureFile = "gfx/traits/combat_traits/master_warrior.tga"
+		noOfFrames = 1
+		noRefCount = yes
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+
+}

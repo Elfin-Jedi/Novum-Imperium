@@ -1,0 +1,47 @@
+##DAQIN CLOTHING OVERRIDES##
+
+spriteTypes = { ##Futou Override
+	
+	spriteType = {
+		name = "GFX_chinese_male_headgear"
+		textureFile = texturefile = "gfx\\characters\\chinese_male\\chinese_male_headgear.dds"
+		noOfFrames = 15
+	}
+	
+	spriteType = {
+		name = "GFX_chinese_male_headgear_behind"
+		texturefile = "gfx\\characters\\chinese_male\\chinese_male_headgear_behind.dds"
+		noOfFrames = 15
+		norefcount = yes
+	}
+	
+	portraitType = {
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_daqin_headgear"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				portrait_culture = sinogreek ##Sinoromans get to have the fancy shmancy laurel wreath
+				portrait_government = western_chinese_government
+				portrait_tier = EMPEROR
+			}
+		}
+		
+		layer = {
+			"GFX_chinese_male_headgear_behind:c1"
+			"GFX_chinese_male_headgear:c5"
+		}
+		
+		# Tonsure hairstyle, no beard
+		allow_property_values = {
+			5 = {
+				3 = {
+					always = yes
+				}
+			}
+		}
+	}

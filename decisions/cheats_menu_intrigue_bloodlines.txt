@@ -1961,7 +1961,7 @@ decisions = {
 		effect = {
  			if = {
 				limit = {
-					religion_group = christian
+					religion = christian
 				}
 				create_bloodline = { 
 					type = event_religion_peaceful_bloodline_01
@@ -1969,7 +1969,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = muslim
+					religion = muslim
 				}
 				create_bloodline = { 
 					type = event_religion_peaceful_bloodline_02
@@ -1977,7 +1977,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = jewish
+					religion = jewish
 				}
 				create_bloodline = { 
 					type = event_religion_peaceful_bloodline_03
@@ -1985,7 +1985,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					religion = pagan_group
 				}
 				create_bloodline = { 
 					type = event_religion_peaceful_bloodline_04
@@ -1993,7 +1993,7 @@ decisions = {
 			}	
 			else_if = {
 				limit = {
-					religion_group = zoroastrian_group
+					religion = zoroastrian_group
 				}
 				create_bloodline = { 
 					type = event_religion_peaceful_bloodline_05
@@ -2001,7 +2001,7 @@ decisions = {
 			}			
 			else_if = {
 				limit = {
-					religion_group = indian_group
+					religion = indian_group
 				}
 				create_bloodline = { 
 					type = event_religion_peaceful_bloodline_06
@@ -2071,7 +2071,7 @@ decisions = {
 		effect = {
 			if = {
 				limit = {
-					religion_group = christian
+					religion = christian
 				}
 				create_bloodline = { 
 					type = event_religion_aggressive_bloodline_01
@@ -2079,7 +2079,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = muslim
+					religion = muslim
 				}
 				create_bloodline = { 
 					type = event_religion_aggressive_bloodline_02
@@ -2087,7 +2087,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = jewish
+					religion = jewish
 				}
 				create_bloodline = { 
 					type = event_religion_aggressive_bloodline_03
@@ -2095,7 +2095,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					religion = pagan_group
 				}
 				create_bloodline = { 
 					type = event_religion_aggressive_bloodline_04
@@ -2103,7 +2103,7 @@ decisions = {
 			}	
 			else_if = {
 				limit = {
-					religion_group = zoroastrian_group
+					religion = zoroastrian_group
 				}
 				create_bloodline = { 
 					type = event_religion_aggressive_bloodline_05
@@ -2111,7 +2111,7 @@ decisions = {
 			}			
 			else_if = {
 				limit = {
-					religion_group = indian_group
+					religion = indian_group
 				}
 				create_bloodline = { 
 					type = event_religion_aggressive_bloodline_06
@@ -4058,12 +4058,10 @@ decisions = {
 			#Christian Groups
 			if = {
 				limit = {
-					OR = {
-						religion = orthodox
-						religion = iconoclast
-						religion = paulician
-						religion = monothelite
-					}
+					religion = orthodox
+					religion = iconoclast
+					religion = paulician
+					religion = monothelite
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_orthodox_01
@@ -4087,7 +4085,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = christian
+					religion = christian
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_catholic_01
@@ -4331,7 +4329,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = christian
+					religion = christian
 				}
 				root = {
 					create_bloodline = { 
@@ -4679,12 +4677,10 @@ decisions = {
 			#Christian Groups
 			if = {
 				limit = {
-					OR = {
-						religion = orthodox
-						religion = iconoclast
-						religion = paulician
-						religion = monothelite
-					}
+					religion = orthodox
+					religion = iconoclast
+					religion = paulician
+					religion = monothelite
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_orthodox_04
@@ -5161,12 +5157,10 @@ decisions = {
 			#Christian Groups
 			if = {
 				limit = {
-					OR = {
-						religion = orthodox
-						religion = iconoclast
-						religion = paulician
-						religion = monothelite
-					}
+					religion = orthodox
+					religion = iconoclast
+					religion = paulician
+					religion = monothelite
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_orthodox_06

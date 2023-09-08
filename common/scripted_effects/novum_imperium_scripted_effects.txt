@@ -1,0 +1,16 @@
+
+novum_imperium_females_take_consorts = {
+	if = {
+		AND = {
+			has_game_rule = { name = gender value = all }
+			limit = {
+				OR = {
+					has_concubinage = yes
+					has_flag = emf_men_can_take_consorts
+				}
+			}
+		}
+		set_women_can_take_consorts = yes
+		set_flag = emf_women_can_take_consorts
+	}
+}

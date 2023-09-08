@@ -1,0 +1,24 @@
+namespace = FGE
+narrative_event = {
+	id = FGE.0002
+	title = FGETitle.0002
+	desc = FGEDesc.0002
+  	picture = GFX_evt_anarchy
+	hide_window = yes
+	trigger = {
+		independent = no
+		has_opinion_modifier = {
+		who = LIEGE
+		name = granted_immediacy
+		}
+	}
+	MTTH = 1
+	option = {
+	name = FGE.0002A
+	remove_opinion = {
+	name = granted_immediacy
+	who = LIEGE
+	}
+	}
+
+}

@@ -1,0 +1,67 @@
+namespace = NIR
+
+narrative_event = { #Alexander's Argead Empire formed
+	id = NIR.03
+	title = NIR.03.T
+	desc = NIR.03.D
+	picture = GFX_evt_hippodrome_byzantine
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NIR.03.OPTA
+		trigger = { has_landed_title = e_argead_empire }
+		if = { 
+			limit = { is_female = no }
+			create_bloodline = {
+				type = alexander_bloodline_01
+			}
+		}
+		if = {
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = alexander_bloodline_01
+				inheritance = matrilineal
+			}		
+		}
+		sound_effect = bloodline_added
+		set_global_flag = flag_alexander_blood_restored
+		character_event = { id = NIR.04 days = 230 } #Pontic event
+	}
+	option = {
+		name = NIR.03.OPTB
+		trigger = { NOT = { has_landed_title = e_argead_empire } }
+	}
+}
+
+character_event = { #Create Pontic culture?
+	id = NIR.04
+	desc = NIR.04.D
+	picture = GFX_evt_market_altaic
+	
+	is_triggered_only = yes
+	
+	option = { #Embrace it
+		name = NIR.04.OPTA
+		culture = pontic
+		hidden_tooltip = {
+			any_courtier_or_vassal = { 
+				limit = { lower_tier_than = COUNT }
+				culture = pontic
+			}
+			any_demesne_province = { culture = pontic }
+			any_vassal = { #This is a very quick and dirty culture bomb. Pontic is not my focus, clean-up would be as part of mod-wide change to conversion.
+				random = {
+					chance = 70
+					culture = pontic
+					capital_scope = { culture = pontic }
+					religion = ROOT #Switches them over to Hellenism if they're not already Hellenic
+				}
+			}
+		}
+	}
+	option = { #Deny it
+		name = NIR.04.OPTB
+		prestige = 70
+	}
+}

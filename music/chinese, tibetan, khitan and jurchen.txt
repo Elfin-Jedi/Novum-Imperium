@@ -1,0 +1,696 @@
+song = {
+	name = "Civilization V OST Wu Zetian Peace Theme Gao Shan Liu Shui.ogg"
+	song_name = "Gao Shan Liu Shui"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Civilization V OST Wu Zetian War Theme Goa Shan Liu Shui.ogg"
+	song_name = "Gao Shan Liu Shui"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Chinese battle music - Xian.ogg"
+	song_name = "Xian"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "The City of Lions (Epic Asian pirate music).ogg"
+	song_name = "The City of Lions"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Tibetan Instrumental Music - Tibetan Monks.ogg"
+	song_name = "Tibetan Monks"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture_group = tibetan_group }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Marcus Warner - The Way of Honour.ogg"
+	song_name = "The Way of Honour"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.4
+}
+song = {
+	name = "Beautiful Chinese Music - Zhang Sanfeng.ogg"
+	song_name = "Zhang Sanfeng"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Epic Chinese Music - Shaolin Monks.ogg"
+	song_name = "Shaolin Monks"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Happy Chinese Music - Song Dynasty.ogg"
+	song_name = "Song Dynasty"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Chinese Instrumental Music - Bamboo Village.ogg"
+	song_name = "Bamboo Village"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Beautiful Chinese Music - Jade Palace.ogg"
+	song_name = "Jade Palace"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Chinese Fantasy Music - Dawn of Wonders.ogg"
+	song_name = "Dawn of Wonders"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Luan Hong - Chen Yue.ogg"
+	song_name = "Luan Hong"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Age of Wushu OST - Luoyang.ogg"
+	song_name = "Luoyang"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Xuanzang - Gareth Coker.ogg"
+	song_name = "Xuanzang"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Chinese Fantasy Music - Panda Power.ogg"
+	song_name = "Panda Power"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Neal Acree - TianYu (2015 Chinese Style OST Video Game).ogg"
+	song_name = "TianYu"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Epic Chinese Music - Chinese Dragon.ogg"
+	song_name = "Chinese Dragon"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Chinese Fantasy Music - Night of the Soaring Dragon.ogg"
+	song_name = "Night of the Soaring Dragon"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Fantasy World Music - Celestial Temple.ogg"
+	song_name = "Celestial Temple"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Chinese Music - Ancient China.ogg"
+	song_name = "Ancient China"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Chinese Instrumental Music - Great Wall of China.ogg"
+	song_name = "Great Wall of China"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Hans Zimmer - Oogway Ascends Kung Fu Panda Soundtrack.ogg"
+	song_name = "Oogway Ascends"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "China Theme - Ancient (Civilization 6 OST) Mo Li Hua.ogg"
+	song_name = "Mo Li Hua (Ancient)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 2
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "China Theme - Medieval (Civilization 6 OST) Mo Li Hua.ogg"
+	song_name = "Mo Li Hua (Medieval)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "China Theme - Industrial (Civilization 6 OST) Mo Li Hua.ogg"
+	song_name = "Mo Li Hua (Industrial)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 0.5
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "China Theme - Atomic (Civilization 6 OST) Mo Li Hua.ogg"
+	song_name = "Mo Li Hua (Atomic)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = bon_reformed }
+			NOT = { religion = bon }
+			NOT = { religion = taoist }
+			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = tibetan_group }
+			NOT = { culture = khitan }
+			NOT = { culture = jurchen }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 2
+}

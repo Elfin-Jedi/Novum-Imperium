@@ -1,0 +1,107 @@
+namespace = NIR
+
+narrative_event = { #HRE Romanises
+	id = NIR.05
+	title = NIR.05.T
+	desc = NIR.05.D
+	picture = GFX_evt_holy_emperor
+	
+	is_triggered_only = yes
+	
+	option = { #For the ruler
+		name = NIR.05.OPTA
+		trigger = { has_landed_title = e_hre }
+		custom_tooltip = {
+			text = german_hate_TT
+			any_vassal = {
+				limit = {
+					OR = {
+						culture_group = central_germanic
+						culture_group = west_germanic
+					}
+				}
+				opinion = {
+					who = ROOT
+					modifier = opinion_deeply_insulted #Mostly means Germans will be upset with you, abandoning their culture and whatnot.
+					years = 50
+				}
+			}
+		}
+		if = { 
+			limit = { is_female = no }
+			create_bloodline = {
+				type = roman_hre_bloodline
+			}
+		}
+		if = {
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = roman_hre_bloodline
+				inheritance = matrilineal
+			}		
+		}
+		sound_effect = bloodline_added
+		
+		custom_tooltip = {
+			text = tooltip_roman_culture_starts_spreading
+			roman_culture_convert_effect = yes
+		}
+	}
+	
+	option = { #They're Roman? Cool.
+		trigger = {
+			NOR = {
+				has_landed_title = e_hre
+				culture_group = central_germanic
+			}
+		}
+		tiered_prestige_reward_effect = yes
+	}
+	
+	option = { #HOW DARE?!
+		trigger = {
+			NOT = { has_landed_title = e_hre }
+			culture_group = central_germanic
+		}
+		tiered_prestige_negative_effect = yes
+	}
+}
+
+
+narrative_event = { #Unified Rome #Considered HRE since the HRE is required to make it happen no matter what
+	id = NIR.06
+	title = NIR.06.T
+	desc = NIR.06.D
+	picture = GFX_evt_rome_restored_byzantine
+	
+	is_triggered_only = yes
+	
+	option = { #Hail Ceasar!
+		name = NIR.06.OPTA
+		trigger = { has_landed_title = e_roman_empire }
+		add_trait = augustus
+		give_nickname = nick_the_glorious
+		
+		if = { #New Imperial Bloodline. (male)
+			limit = { 
+				is_female = no
+	    		NOT = { any_owned_bloodline = { has_bloodline_flag = roman_bloodline } }
+			}
+			create_bloodline = { type = roman_emperor_male }
+			new_bloodline = { set_description = "bloodline_desc_roman" }
+		}
+		if = { #New Imperial Bloodline. (female)
+			limit = { 
+				is_female = yes
+	    		NOT = { any_owned_bloodline = { has_bloodline_flag = roman_bloodline } }
+			}
+			create_bloodline = { type = roman_emperor_female }
+			new_bloodline = { set_description = "bloodline_desc_roman" }
+		}
+		sound_effect = bloodline_added			
+	}
+	option = { #"Rome's back? Cool."
+		name = NIR.06.OPTB
+		trigger = { NOT = { has_landed_title = e_roman_empire } }
+	}
+}

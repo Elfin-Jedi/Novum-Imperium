@@ -1,0 +1,32 @@
+	feudal_governments = {
+	adventurer_government = {
+		preferred_holdings = { CASTLE }
+		allowed_holdings = { 
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+		}
+		frame_suffix = "_adventurer"
+		potential = {
+			any_demesne_title = {
+				adventurer = yes
+			}
+			is_patrician = no
+		}
+		
+		color = { 0 0 0 }
+		
+
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+		}
+		capital_move_delay = 9000
+
+		## Modifiers
+		court_size_modifier = 30
+	}
+	}

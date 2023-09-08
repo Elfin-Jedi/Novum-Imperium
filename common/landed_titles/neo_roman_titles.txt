@@ -1,0 +1,45 @@
+e_third_rome = {
+	color = { 120 20 65 } #Very dark purple. Perhaps too dark.
+	color2 = { 235 245 250 } #Silvery accents
+	
+	capital = 496 #Constantinople #Though obviously the player can use Moscow etc
+	
+	dynasty_title_names = no
+	short_name = yes
+	purple_born_heirs = yes
+	dignity = 200
+	
+	allow = { always = no }
+}
+
+e_argead_empire = {
+	color = { 20 195 245 } #Light blue
+	color2 = { 255 255 23 } #Yellow
+	
+	culture = pontic
+	capital = 693 # Babylon
+
+	short_name = yes
+	
+	allow = { always = no }
+}
+
+e_roman_republic = {
+	color = { 255 200 100 }  # Only for the CoA, so this is hot pink
+	culture = roman
+	
+	capital = 333 # Rome
+	
+	allow = { always = no }
+}
+
+k_african_exarchate = {
+	color = { 220 165 250 } #A nice lavender
+	colour2 = { 255 255 255 } #White
+	
+	capital = 817 #Tunis
+	short_name = yes
+	dynasty_title_names = no
+	
+	allow = { always = no }
+}

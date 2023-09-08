@@ -1,0 +1,2034 @@
+namespace = DAQIN
+
+character_event = { #Event fired for when things are getting worse at home
+	id = DAQIN.00220
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	only_playable = yes
+	trigger = {
+		government = western_chinese_government
+		has_character_modifier = ruler_absent_flat #Checks they're on the TG mission
+		trait = travelling
+	}
+	
+	immediate = {
+		character_event = { id = DAQIN.00220 days = 400 random = 90 }
+		regent = {
+			random_list = {
+				19 = { character_event = { id = DAQIN.01221 } } #Economic woes
+				19 = { character_event = { id = DAQIN.01222 } } #Peasant Problems
+				19 = { character_event = { id = DAQIN.01223 } } #Spiritual Problems
+				19 = { character_event = { id = DAQIN.01224 } } #Warfare Problems
+				19 = { character_event = { id = DAQIN.01225 } } #Culture Problems
+				5 = {
+					character_event = { id = DAQIN.01226 }
+					break = yes
+				}
+			}
+		}
+		after = {
+			add_character_modifier = {
+				name = ruler_absent_flat
+				duration = -1
+				stacking = yes
+			}
+		}
+	}
+}
+
+letter_event = {
+	id = DAQIN.00221
+	desc = DAQIN.00221.D
+	portrait = regent #This might not be needed, as the letter is being sent from the regent
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAMNATION
+		add_character_modifier = {
+			modifier = ruler_absent_economic_woes
+			duration = -1
+			stacking = yes
+		}
+	}
+}
+
+letter_event = {
+	id = DAQIN.00222
+	desc = DAQIN.00222.D
+	portrait = regent
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAMNATION
+		add_character_modifier = {
+			modifier = ruler_absent_peasant_unrest
+			duration = -1
+			stacking = yes
+		}
+	}
+}
+
+letter_event = {
+	id = DAQIN.00223
+	desc = DAQIN.00223.D
+	portrait = regent
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAMNATION
+		add_character_modifier = {
+			modifier = ruler_absent_spiritual_woes
+			duration = -1
+			stacking = yes
+		}
+	}
+}
+
+letter_event = {
+	id = DAQIN.00224
+	desc = DAQIN.00224.D
+	portrait = regent
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAMNATION
+		add_character_modifier = {
+			modifier = ruler_absent_military_woes
+			duration = -1
+			stacking = yes
+		}
+	}
+}
+
+letter_event = {
+	id = DAQIN.00225
+	desc = DAQIN.00225.D
+	portrait = regent
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAMNATION
+		random = {
+			chance = 60
+			culture_techpoints = -30
+		}
+		random = {
+			chance = 60
+			military_techpoints = -30
+		}
+		random = {
+			chance = 60
+			economy_techpoints = -30
+		}
+	}
+}
+
+letter_event = {
+	id = DAQIN.00226
+	desc = DAQIN.00226.D
+	portrait = regent
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		regent = {
+			add_character_modifier = {
+				modifier = competent_regent
+				duration = -1
+				stacking = yes
+			}
+		}
+	}
+}
+
+character_event = { #Tyrian Guard start - finding the mound
+	id = DAQIN.00231
+	desc = DAQIN.00231.D
+	picture = GFX_evt_pagan
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	trigger = { NOT = { has_global_flag = qin_tomb_found } }
+	
+	option = { #Sell them
+		name = DAQIN.00231.OPTA
+		wealth = 40
+	}
+	option = { #Keep them as display pieces
+		name = DAQIN.00231.OPTB
+		prestige = 40
+	}
+	option = { #Dig for more
+		name = DAQIN.00231.OPTC
+		wealth = -5
+		trigger = { ai = no } #The AI should never be able to do this, I don't trust them
+		character_event = { id = DAQIN.00232 }
+	}
+}
+
+character_event = { #Dug deeper, found more
+	id = DAQIN.00232
+	desc = DAQIN.00232.D
+	picture = GFX_evt_relic_box
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = { #Remember to come back
+		name = DAQIN.00232.OPTA
+		custom_tooltip = { text = DAQIN.00232.TT } #Tells the player about a new decision
+		set_global_flag = qin_tomb_found
+	}
+}
+
+character_event = { #Setting off for the tomb
+	id = DAQIN.00233
+	desc = DAQIN.00233.D
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes #Fired by decision
+	
+	option = { #Go
+		name = DAQIN.00233.OPTA
+		custom_tooltip = { text = DAQIN.00233.TT } #Explains the mechanics to the player
+		character_event = { id = DAQIN.00234 days = 210 random = 30 } #The event for getting to the tomb
+		character_event = { id = DAQIN.00220 days = 550 random = 100 } #The event that bumps up the player's absent timer
+		add_trait = travelling
+		add_character_modifier = {
+			modifier = ruler_absent_flat
+			duration = -1
+			stacking = yes
+		}
+		add_character_modifier = {
+			modifier = secret_tomb_health_buff
+			duration = -1
+			hidden = yes
+		}
+	}
+	option = { #Don't
+		name = DAQIN.00233.OPTB
+		remove_trait = travelling
+	}
+}
+
+character_event = { #Tomb: Excavation
+	id = DAQIN.00234
+	desc = DAQIN.00234.D
+	picture = GFX_evt_bribe_accepted
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = { #Buy a lot
+		name = DAQIN.00234.OPTA
+		wealth = -1200
+		character_event = { id = DAQIN.00235 days = 200 random = 50 }
+	}
+	option = { #Buy some
+		name = DAQIN.00234.OPTB
+		wealth = -800
+		character_event = { id = DAQIN.00235 days = 300 random = 50 }
+	}
+	option = { #Buy a little
+		name = DAQIN.00234.OPTC
+		wealth = -400
+		character_event = { id = DAQIN.00235 days = 400 random = 50 }
+	}
+}
+
+character_event = { #Tomb: Foreman
+	id = DAQIN.00235
+	desc = DAQIN.00235.D
+	picture = GFX_evt_spymaster
+	
+	is_triggered_only = yes
+	
+	option = { #A loyalist
+		name = DAQIN.00235.OPTA
+		create_character = {
+			random = no
+			dynasty = none
+			religion = taoist
+			culture = han
+			female = no
+			age = 25
+			trait = thrifty_clerk
+			trait = content
+			trait = humble
+			trait = arbitrary
+			health = 8 #Just to make REAL sure they don't die
+		}
+		new_character = {
+			opinion = {
+				modifier = opinion_loyal_servant
+				who = ROOT
+			}
+			save_event_target_as = target_foreman
+		}
+	}
+	option = { #A moderate
+		name = DAQIN.00235.OPTB
+		create_character = {
+			random = no
+			dynasty = none
+			religion = taoist
+			culture = han
+			female = no
+			age = 25
+			trait = thrifty_clerk
+			trait = just
+			trait = stubborn
+			trait = kind
+			health = 8 #Just to make REAL sure they don't die
+		}
+		new_character = {
+			opinion = {
+				modifier = opinion_loyal_servant
+				who = ROOT
+			}
+			save_event_target_as = target_foreman
+		}
+	}
+	option = { #A scoundrel
+		name = DAQIN.00235.OPTC
+		create_character = {
+			random = no
+			dynasty = none
+			religion = taoist
+			culture = han
+			female = no
+			age = 25
+			trait = tough_soldier
+			trait = cruel
+			trait = wroth
+			trait = cynical
+			trait = scarred
+			health = 8 #Just to make REAL sure they don't die
+		}
+		new_character = {
+			opinion = {
+				modifier = opinion_loyal_servant
+				who = ROOT
+			}
+			save_event_target_as = target_foreman
+		}
+	}
+	after = { character_event = { id = DAQIN.00236 days = 400 random = 200 } }
+}
+
+character_event = { #Tomb: Deaths
+	id = DAQIN.00236
+	desc = DAQIN.00236.D
+	picture = GFX_evt_dead_body_hf
+	
+	is_triggered_only = yes
+	
+	option = { #Preserve life
+		name = DAQIN.00236.OPTA
+		remove_trait_cruel_effect = yes
+		character_event = { id = DAQIN.00237 days = 600 random = 100 }
+		add_caring_overseer_effect = yes
+	}
+	option = { #Prioritise haste
+		name = DAQIN.00236.OPTB
+		remove_trait_kind_effect = yes
+		character_event = { id = DAQIN.00237 days = 300 random = 50 }
+		add_ruthless_overseer_effect = yes
+	}
+}
+
+character_event = { #Tomb: Rowdy Workers
+	id = DAQIN.00237
+	desc = DAQIN.00237.D
+	picture = GFX_evt_suspicious_noble
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = { #Talk them down w/ foreman
+		name = DAQIN.00237.OPTA
+		add_caring_overseer_effect = yes
+		tooltip_info = diplomacy
+		random_list = {
+			20 = { #Success
+				modifier = {
+					factor = 2
+					diplomacy = 12
+				}
+				modifier = {
+					factor = 3
+					diplomacy = 16
+				}
+				modifier = {
+					factor = 4
+					diplomacy = 21
+				}
+				modifer = {
+					factor = 5
+					diplomacy = 26
+				}
+				modifier = {
+					factor = 2
+					event_target:target_foreman = { trait = arbitrary }
+				}
+				modifier = {
+					factor = 3
+					has_character_modifier = caring_overseer
+				}
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+				character_event = { id = DAQIN.002381 }
+			}
+			50 = { #Failure
+				modifier = {
+					factor = 2
+					event_target:target_foreman = { trait = cruel }
+				}
+				modifier = {
+					factor = 2
+					diplomacy < 6
+				}
+				modifier = {
+					factor = 2
+					event_target:target_foreman = { trait = kind }
+				}
+				modifier = {
+					factor = 3
+					has_character_modifier = ruthless_overseer
+				}
+				custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT }
+				character_event = { id = DAQIN.002382 }
+			}
+		}
+	}
+	option = { #Kill them
+		name = DAQIN.00237.OPTB
+		trigger = {
+			OR = {
+				trait = cruel
+				event_target:target_foreman = { trait = cruel }
+			}
+		}
+		character_event = { id = DAQIN.002383 }
+	}
+	option = { #Let them go. We'll get more.
+		name = DAQIN.00237.OPTC
+		wealth = -800
+		character_event = { id = DAQIN.00239 days = 500 random = 150 }
+	}
+}
+
+character_event = { #Tomb: Rowdy result positive
+	id = DAQIN.002381
+	desc = DAQIN.002381.D
+	picture = GFX_evt_courtiers_talking
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		character_event = { id = DAQIN.00239 days = 400 random = 100 }
+	}
+}
+
+character_event = { #Tomb: Rowdy result negative
+	id = DAQIN.002382
+	desc = DAQIN.002382.D
+	picture = GFX_evt_poke_king_in_chest
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = { #Increase their wages
+		name = DAQIN.002382.OPTA
+		wealth = -1000
+		character_event = { id = DAQIN.00239 days = 450 random = 60 }
+	}
+	option = { #Sod it, kill them!
+		name = DAQIN.002382.OPTB
+		character_event = { id = DAQIN.002383 }
+	}
+	option = { #Renegotiate the terms
+		name = DAQIN.002382.OPTC
+		tooltip_info_custom = DAQIN.002382.TT
+		random_list = {
+			40 = { #Good result
+				modifier = {
+					factor = 3
+					event_target:target_foreman = { trait = arbitrary }
+				}
+				modifier = {
+					stewardship = 12
+					factor = 2
+				}
+				modifier = {
+					stewardship = 16
+					factor = 3
+				}
+				modifier = {
+					stewardship = 21
+					factor = 4
+				}
+				random_list = {
+					20 = { #Very good result
+						modifier = {
+							factor = 2
+							stewardship = 18
+						}
+						custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+						character_event = { id = DAQIN.00239 days = 300 random = 50 }
+					}
+					80 = { #Normal good result
+						custom_tooltip = { text = TT_PARTLY_SUCCESFUL_SWAY_EVENT }
+						character_event = { id = DAQIN.00239 days = 400 random = 80 }
+					}
+				}
+			}
+			60 = { #Bad result
+				modifier = {
+					factor = 2
+					stewardship < 9
+				}
+				modifier = {
+					factor = 2
+					trait = charitable
+				}
+				modifier = {
+					factor = 2
+					trait = kind
+				}
+				random_list = {
+					20 = { #Very bad result
+						modifier = {
+							factor = 2
+							stewardship < 6
+						}
+						custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT }
+						character_event = { id = DAQIN.00239 days = 800 random = 150 }
+					}
+					80 = { #Normal bad result
+						custom_tooltip = { text = TT_DISASTROUS_SWAY_EVENT }
+						character_event = { id = DAQIN.00239 days = 600 random = 100 }
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event = { #Tomb: Rowdy result deadly
+	id = DAQIN.002383
+	desc = DAQIN.002383.D
+	picture = GFX_evt_cornered_duel_hf
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = { #Now get back to work.
+		name = DAQIN.002383.OPTA
+		add_trait = cruel
+		add_ruthless_overseer_effect = yes
+		character_event = { id = DAQIN.00239 days = 370 random = 100 }
+	}
+}
+
+character_event = { #Tomb: Tomb uncovered celebration
+	id = DAQIN.00239
+	desc = DAQIN.00239.D
+	picture = GFX_evt_camaraderie
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		prestige = 200
+		character_event = { id = DAQIN.00240 days = 60 random = 30 }
+	}
+}
+
+
+character_event = { #Tomb: Religious objections
+	id = DAQIN.00240
+	desc = DAQIN.00240.D
+	picture = GFX_evt_china_diplomatic_incident
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Argue from theology
+		name = DAQIN.00240.OPTA
+		trigger = {
+			OR = {
+				learning = 16
+				trait = theologian
+				AND = {
+					religion_group = indian_group
+					learning = 12
+				}
+			}
+		}
+		tooltip_info = learning
+		character_event = { id = DAQIN.002401 }
+	}
+	option = { #Argue for the profit
+		name = DAQIN.00240.OPTB
+		trigger = { trait = greedy}
+		tooltip_info = greedy
+		character_event = { id = DAQIN.002401 }
+	}
+	option = { #Ignore their complaints
+		name = DAQIN.00240.OPTC
+		piety = -100
+		add_ruthless_overseer_effect = yes
+		character_event = { id = DAQIN.00241 days = 330 random = 60 }
+	}
+	option = { #Call in religious specialists
+		name = DAQIN.00240.OPTD
+		character_event = { id = DAQIN.002401 }
+		if = {
+			limit = { event:target_foreman = { trait = arbitrary } }
+			piety = -250
+			scaled_wealth = -0.2
+		}
+		else = {
+			piety = -500
+			scaled_wealth = -0.4
+		}
+	}
+}
+
+character_event = { #Religious Objections Success
+	id = DAQIN.002401
+	desc = DAQIN.002401.D
+	picture = GFX_evt_gathering_of_minds
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		character_event = { id = DAQIN.00241 days = 210 random = 60 }
+		add_caring_overseer_effect = yes
+	}
+}
+
+character_event = { #Tomb: Traps
+	id = DAQIN.00241
+	desc = DAQIN.00241.D
+	picture = GFX_evt_died_battle
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = { #Go in yourself to clear the way
+		name = DAQIN.00241.OPTA
+		add_trait = brave
+		tooltip_info = brave
+		random_list = {
+			60 = {
+				add_trait = wounded
+				modifier = {
+					factor = 0.8
+					intrigue = 12
+				}
+				modifier = {
+					factor = 0.5
+					intrigue = 16
+				}
+				modifier = {
+					factor = 0.5
+					intrigue = 21
+				}
+			}
+			20 = {
+				add_trait = severely_wounded
+				modifier = {
+					factor = 0.8
+					intrigue = 12
+				}
+				modifier = {
+					factor = 0.5
+					intrigue = 16
+				}
+				modifier = {
+					factor = 0.5
+					intrigue = 21
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0.1
+					intrigue = 12
+				}
+				modifier = {
+					factor = 2
+					intrigue < 6
+				}
+				character_event = { id = DAQIN.002411 }
+				break = yes
+			}
+		}
+		character_event = { id = DAQIN.00242 days = 90 random = 10 }
+		add_caring_overseer_effect = yes
+	}
+	option = { #Take time to minimise losses
+		name = DAQIN.00241.OPTB
+		character_event = { id = DAQIN.00242 days = 180 random = 30 }
+		add_caring_overseer_effect = yes
+	}
+	option = { #Get back to work!
+		name = DAQIN.00241.OPTC
+		character_event = { id = DAQIN.00242 days = 120 random = 30 }
+		add_ruthless_overseer_effect = yes
+	}
+}
+
+character_event = { #Tomb: Dead
+	id = DAQIN.002411
+	desc = DAQIN.002411.D
+	picture = GFX_evt_dead_body_hf
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.002411.OPTA
+		death = { death_reason = death_execution_crushing }
+	}
+}
+
+character_event = { #Tomb: Final confrontation determinator
+	id = DAQIN.00242
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_character_modifier = ruthless_overseer }
+				event_target:target_foreman = { trait = kind }
+			}
+			character_event = { id = DAQIN.00243 }
+		}
+		else_if = {
+			limit = {
+				calc_true_if = {
+					amount = 3
+					event_target:target_foreman = { trait = cruel }
+					has_instances_of_character_modifier = {
+						name = ruthless_overseer
+						amount = 3
+					}
+					has_instances_of_character_modifier = {
+						name = caring_overseer
+						amount < 2
+					}
+					is_evil_trigger = yes
+				}
+			}
+			character_event = { id = DAQIN.00245 }
+		}
+		else = { character_event = { id = DAQIN.00244 } }
+	}
+}
+
+character_event = { #Tomb: Kind ruler confrontation
+	id = DAQIN.00243
+	desc = DAQIN.00243.D
+	picture = GFX_evt_diplomatic_greeting
+	
+	is_triggered_only = yes
+	
+	option = { #Let them loot the tomb
+		name = DAQIN.00243.OPTA
+		add_trait = just
+		character_event = { id = DAQIN.00250 }
+	}
+	option = { #They're just doing their job
+		name = DAQIN.00243.OPTB
+		character_event = { id = DAQIN.00249 }
+	}
+}
+
+character_event = { #Tomb: Mixed ruler confrontation
+	id = DAQIN.00244
+	desc = DAQIN.00244.D
+	picture = GFX_evt_group_hf
+	
+	is_triggered_only = yes
+	
+	option = { #Talk your way out
+		name = DAQIN.00244.OPTA
+		random_list = {
+			40 = { #Success
+				modifier = {
+					diplomacy = 12
+					factor = 2
+				}
+				modifier = {
+					diplomacy = 16
+					factor = 3
+				}
+				modifier = {
+					diplomacy = 21
+					factor = 4
+				}
+				modifier = {
+					trait = deceitful
+					factor = 3
+				}
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+				character_event = { id = DAQIN.00249 }
+			}
+			60 = { #Failure
+				modifier = {
+					factor = 3
+					diplomacy < 8
+				}
+				custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT }
+				character_event = { id = DAQIN.00248 }
+				set_character_flag = qin_tomb_tricked
+			}
+		}
+	}
+	option = { #Let them loot the place
+		name = DAQIN.00244.OPTB
+		prestige = -200
+		character_event = { id = DAQIN.00250 }
+	}
+	option = { #Fight!
+		name = DAQIN.00244.OPTC
+		character_event = { id = DAQIN.00246 }
+	}
+}
+
+character_event = { #Tomb: Evil ruler confrontation - false check
+	id = DAQIN.00245
+	desc = DAQIN.00245.D
+	picture = GFX_evt_group_hf
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = { #Talk
+		name = DAQIN.00245.OPTA
+	}
+	option = { #Bribe
+		name = DAQIN.00245.OPTB
+	}
+	option = { #Assert authority
+		name = DAQIN.00245.OPTC
+	}
+	
+	after = { character_event = { id = DAQIN.00246 } }
+}
+
+character_event = { #Tomb: Evil ruler confrontation - fight
+	id = DAQIN.00246
+	desc = DAQIN.00246.D
+	picture = GFX_evt_battle
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = { #Charge in
+		name = DAQIN.00246.OPTA
+		random_list = {
+			40 = { #Success
+				modifier = {
+					is_decent_duelist_trigger = yes
+					factor = 2
+				}
+				modifier = {
+					factor = 4
+					is_good_duelist_trigger = yes
+				}
+				modifier = {
+					factor = 8
+					is_great_duelist_trigger = yes
+				}
+				modifier = {
+					factor = 16
+					is_fantastic_duelist_trigger = yes
+				}
+				modifier = {
+					factor = 32
+					is_the_best_duelist_trigger = yes
+				}
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+				character_event = { id = DAQIN.00247 }
+				set_character_flag = 246OPTA
+			}
+			60 = { #Failure
+				modifier = {
+					is_bad_duelist_trigger = yes
+					factor = 2
+				}
+				modifier = {
+					is_terrible_duelist_trigger = yes
+					factor = 2
+				}
+				modifier = {
+					is_the_worst_duelist_trigger = yes
+					factor = 12
+				}
+				custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT }
+				character_event = { id = DAQIN.00248 }
+				set_character_flag = qin_tomb_beaten
+			}
+		}
+		random = {
+			chance = 12
+			add_trait = wounded
+		}
+	}
+	option = { #Indiana Jones option
+		name = DAQIN.00246.OPTB
+		trigger = {
+			any_artifact = { has_artifact_flag = gun }
+		}
+		set_character_flag = 246OPTB
+		prestige = 100
+		character_event = { id = DAQIN.00247 }
+	}
+	option = { #Eat him
+		name = DAQIN.00246.OPTC
+		trigger = { trait = cannibal_trait }
+		add_character_modifier = {
+			name = well_fed
+			duration = 60
+		}
+		set_character_flag = 246OPTC
+		character_event = { id = DAQIN.00247 }
+	}
+}
+
+character_event = { #Tomb: Fight result
+	id = DAQIN.00247
+	desc = {
+		trigger = { has_character_flag = 246OPTA }
+		text = DAQIN.00247.DA
+	}
+	desc = {
+		trigger = { has_character_flag = 246OPTB }
+		text = DAQIN.00247.DB
+	}
+	desc = {
+		trigger = { has_character_flag = 246OPTC }
+		text = DAQIN.00247.DC
+	}
+	picture = GFX_evt_bloody_man
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00247.OPTA
+		add_one_duel_experience_modifier = yes
+	}
+	
+	after = {
+		clr_character_flag = 246OPTC
+		clr_character_flag = 246OPTB
+		clr_character_flag = 246OPTA
+		character_event = { id = DAQIN.00251 }
+	}
+}
+
+character_event = { #Tomb: Sealed in!
+	id = DAQIN.00248
+	desc = {
+		trigger = { has_character_flag = qin_tomb_tricked }
+		text = DAQIN.00248.DA
+	}
+	desc = {
+		trigger = { has_character_flag = qin_tomb_beaten }
+		text = DAQIN.00248.DB
+	}
+	picture = GFX_evt_into_the_dungeon
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = { #Sealed
+		name = DAQIN.00248.OPTA
+		set_global_flag = qin_tomb_sealed
+		clr_character_flag = qin_tomb_beaten
+		clr_character_flag = qin_tomb_tricked
+		narrative_event = { id = DAQIN.00252 }
+	}
+}
+
+character_event = { #Tomb: Bloodless Entry
+	id = DAQIN.00249
+	desc = DAQIN.00249.D
+	picture = GFX_evt_campfire_hf
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00249.OPTA
+		narrative_event = { id = DAQIN.00252 }
+	}
+}
+
+character_event = { #Tomb: Permitted Looting
+	id = DAQIN.00250
+	desc = DAQIN.00250.D
+	picture = GFX_evt_culture_change
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00250.OPTA
+		set_global_flag = qin_tomb_looted
+		narrative_event = { id = DAQIN.00252 }
+	}
+}
+
+character_event = { #Bloody entry
+	id = DAQIN.00251
+	desc = DAQIN.00251.D
+	picture = GFX_evt_beheading
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00251.OPTA
+		narrative_event = { id = DAQIN.00252 }
+	}
+}
+
+narrative_event = { #Tomb: Descriptive Piece 1
+	id = DAQIN.00252
+	title = DAQIN.00252.T
+	desc = DAQIN.00252.D
+	picture = GFX_evt_skulls_hf
+	
+	is_triggered_only = yes
+	immediate = { set_global_flag = qin_tomb_complete } #Point of no return, either you leave with loot or not at all
+	
+	option = {
+		name = DAQIN.00252.OPTA
+		narrative_event = { id = DAQIN.00253 }
+	}
+}
+
+narrative_event = { #Tomb: Descriptive piece 2
+	id = DAQIN.00253
+	title = DAQIN.00253.T
+	desc = DAQIN.00253.D
+	picture = GFX_evt_house_arrest_escape
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00253.OPTA
+		narrative_event = { id = DAQIN.00254 }
+	}
+}
+
+narrative_event = { #Tomb: Terracotta Army
+	id = DAQIN.00254
+	title = DAQIN.00254.T
+	desc = DAQIN.00254.D
+	picture = GFX_evt_eagle_warriors
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00254.OPTA
+		narrative_event = { id = DAQIN.00255 }
+	}
+}
+
+narrative_event = { #Tomb: Loot room
+	id = DAQIN.00255
+	title = DAQIN.00255.T
+	desc = {
+		trigger = { has_global_flag = qin_tomb_looted }
+		text = DAQIN.00255.D.L
+	}
+	desc = {
+		trigger = { NOT = { has_global_flag = qin_tomb_looted } }
+		text = DAQIN.00255.D.F
+	}
+	picture = GFX_evt_treasure_chamber
+	border = GFX_event_narrative_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00255.OPTA
+		trigger = { NOT = { has_character_flag = qin_tomb_sealed } }
+		character_event = { id = DAQIN.00256 }
+	}
+	option = {
+		name = DAQIN.00255.OPTB
+		trigger = { has_character_flag = qin_tomb_sealed }
+		set_variable = { which = tomb_escape_chances value = 4 }
+		character_event = { id = DAQIN.00258 }
+	}
+}
+
+character_event = { #Tomb: To loot or not?
+	id = DAQIN.00256
+	desc = DAQIN.00256.D
+	picture = GFX_evt_treasure_chamber
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = { #Do not loot - leave and seal up
+		name = DAQIN.00256.OPTA
+		if = {
+			limit = { has_global_flag = qin_tomb_looted }
+			piety = 1000
+			add_trait = humble
+		}
+		else = {
+			create_bloodline = { type = daqin_tomb_respect_bloodline }
+		}
+		character_event = { id = DAQIN.00272 days = 720 }#Chinese grateful letter
+		character_event = { id = DAQIN.00261 days = 7 }
+	}
+	option = { #Do not loot - give to the Chinese
+		name = DAQIN.00256.OPTB
+		if = {
+			limit = { has_global_flag = qin_tomb_looted }
+			add_grace_super_huge_effect = yes
+		}
+		else = {
+			create_bloodline = { type = daqin_tomb_chinese_bloodline }
+		}
+		character_event = { id = DAQIN.00272 days = 720 }#Chinese grateful letter
+		character_event = { id = DAQIN.00261 days = 7 }
+	}
+	option = { #Loot it
+		name = DAQIN.00256.OPTC
+		trigger = { NOT = { has_global_flag = qin_tomb_looted } }
+		character_event = { id = DAQIN.00257 }
+	}
+}
+
+character_event = { #Tomb: Looting
+	id = DAQIN.00257
+	desc = DAQIN.00257.D
+	picture = GFX_evt_relic_box
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = { #Take the gold
+		name = DAQIN.00257.OPTA
+		scaled_wealth = {
+			value = 10 #Yes. 10 years of income. Go nuts, you earned it.
+			min = 5000
+		}
+	}
+	option = { #Take the artifacts
+		name = DAQIN.00257.OPTB
+		add_artifact = emerald_scepter_2
+		add_artifact = ruby_bracelets_2
+		add_artifact = horse_armor_tier_3_ornate_steed
+		add_artifact = chinese_ceremonial_robes
+		add_artifact = chinese_ji
+		add_artifact = sarira
+		add_artifact = skull_cup
+		add_artifact = antiquity_book_history
+		add_artifact = antiquity_book_medicine
+		add_artifact = antiquity_book_architecture
+		add_artifact = bow_tier_2_new
+	}
+	option = { #Take Qin Shi Huang
+		name = DAQIN.00257.OPTC
+		add_artifact = body_of_qin_shi_huang
+	}
+	option = { #EAT THE EMPEROR
+		name = DAQIN.00257.OPTD
+		tooltip_info = cannibal_trait
+		trigger = {
+			trait = cannibal_trait
+			trait = lunatic
+			trait = ambitious
+			OR = {
+				learning = 30
+				trait = mystic
+			}
+		}
+		add_trait = immortal
+		if = {
+			limit = {
+				is_female = no
+				has_dlc = "Holy Fury"
+			}
+			create_bloodline = { type = immortal_bloodline_01 }
+		}
+		if = { 
+			limit = { 
+				is_female = yes
+				has_dlc = "Holy Fury"
+			}
+			create_bloodline = {
+				type = immortal_bloodline_01
+				inheritance = matrilineal
+			}
+		}
+	}
+	
+	after = { character_event = { id = DAQIN.00261 } }
+}
+
+character_event = { #Trapped!
+	id = DAQIN.00258
+	desc = {
+		trigger = { check_variable = { which = tomb_escape_chances value == 4 } }
+		text = DAQIN.00258.D.4
+	}
+	desc = {
+		trigger = { check_variable = { which = tomb_escape_chances value == 3 } }
+		text = DAQIN.00258.D.3
+	}
+	desc = {
+		trigger = { check_variable = { which = tomb_escape_chances value == 2 } }
+		text = DAQIN.00258.D.2
+	}
+	desc = {
+		trigger = { check_variable = { which = tomb_escape_chances value == 1 } }
+		text = DAQIN.00258.D.1
+	}
+	picture = GFX_evt_jailbreak
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = { #Mcgyver some explosives
+		name = DAQIN.00258.OPTA
+		trigger = { check_variable = { which = tomb_escape_chances value = 2 } }
+		subtract_variable = { which = tomb_escape_chances value = 1 }
+		random_list = {
+			40 = { #Success
+				modifier = {
+					learning = 12
+					factor = 2
+				}
+				modifier = {
+					learning = 16
+					factor = 3
+				}
+				modifier = {
+					learning = 21
+					factor = 4
+				}
+				modifier = {
+					is_smart_trigger = yes
+					factor = 3
+				}
+				modifier = {
+					trait = sapper
+					factor = 3
+				}
+				modifier = {
+					trait = architect
+					factor = 3
+				}
+				modifier = {
+					trait = scholar
+					factor = 3
+				}
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+				character_event = { id = DAQIN.00260 }
+			}
+			60 = { #Failure
+				custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT }
+				character_event = { id = DAQIN.00258 }
+			}
+		}
+	}
+	option = { #Get to digging
+		name = DAQIN.00258.OPTB
+		trigger = { check_variable = { which = tomb_escape_chances value == 2 } }
+		subtract_variable = { which = tomb_escape_chances value = 1 }
+		random_list = {
+			40 = { #Success
+				modifier = {
+					martial = 12
+					factor = 2
+				}
+				modifier = {
+					martial = 16
+					factor = 3
+				}
+				modifier = {
+					martial = 21
+					factor = 4
+				}
+				modifier = {
+					is_strong_trigger = yes
+					factor = 3
+				}
+				modifier = {
+					trait = siege_leader
+					factor = 3
+				}
+				modifier = {
+					trait = architect
+					factor = 3
+				}
+				modifier = {
+					trait = dwarf
+					factor = 2
+				}
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+				character_event = { id = DAQIN.00260 }
+			}
+			60 = { #Failure
+				custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT }
+				character_event = { id = DAQIN.00258 }
+			}
+		}
+	}
+	option = { #Find a way and wriggle out
+		name = DAQIN.00258.OPTC
+		trigger = { check_variable = { which = tomb_escape_chances value = 2 } }
+		subtract_variable = { which = tomb_escape_chances value = 1 }
+		random_list = {
+			40 = { #Success
+				modifier = {
+					intrigue = 12
+					factor = 2
+				}
+				modifier = {
+					intrigue = 16
+					factor = 3
+				}
+				modifier = {
+					intrigue = 21
+					factor = 4
+				}
+				modifier = {
+					trait = erudite
+					factor = 3
+				}
+				modifier = {
+					trait = temperate
+					factor = 2
+				}
+				modifier = {
+					trait = is_malnourished
+					factor = 2
+				}
+				modifier = {
+					trait = architect
+					factor = 3
+				}
+				modifier = {
+					trait = dwarf
+					factor = 3
+				}
+				character_event = { id = DAQIN.00260 }
+				custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+			}
+			60 = { #Failure
+				custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT }
+				character_event = { id = DAQIN.00258 }
+			}
+		}
+	}
+	option = { #Die
+		name = DAQIN.00258.OPTD
+		trigger = { check_variable = { which = tomb_escape_chances value == 1 } }
+		character_event = { id = DAQIN.00259 }
+	}
+}
+
+character_event = { #Tomb: Dead
+	id = DAQIN.00259
+	desc = {
+		trigger = { trait = immortal }
+		text = DAQIN.00259.D.I
+	}
+	desc = {
+		trigger = { NOT = { trait = immortal } }
+		text = DAQIN.00259.D
+	}
+	picture = GFX_evt_drunk
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	immediate = { set_variable = { which = tomb_escape_chances value = 0 } }
+	
+	option = { #Commit die.
+		name = DAQIN.00259
+		death = { death_reason = death_went_to_china }
+	}
+	after = { narrative_event = { id = DAQIN.00275 days = 120 } } #Event for successor
+}
+
+character_event = { #Tomb: Escape!
+	id = DAQIN.00260
+	desc = DAQIN.00260.D
+	picture = GFX_evt_religious_exultation
+	
+	is_triggered_only = yes
+	
+	immediate = { set_variable = { which = tomb_escape_chances value = 0 } }
+	
+	option = { #Now, to decide what to do with the tomb...
+		name = DAQIN.00260.OPTA
+		character_event = { id = DAQIN.00256 }
+	}
+}
+
+character_event = { #Tomb: Homeward bound
+	id = DAQIN.00261
+	desc = DAQIN.00261.D
+	picture = GFX_evt_rider_adventure
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = { #Tyrian Guard reiteration
+		name = DAQIN.00261.OPTA
+		custom_tooltip = { text = DAQIN.00261.TT }
+		add_trait = adventurer
+		character_event = { id = DAQIN.00271 days = 70 }
+		character_event = { id = DAQIN.00262 days = 50 random = 10 }
+	}
+}
+
+character_event = { #Home: regent and successor check
+	id = DAQIN.00262
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			10 = { #Welcomed back
+				character_event = { id = DAQIN.00263 }
+				modifier = {
+					factor = 2
+					regent = { ai_honor = 20 }
+				}
+				modifier = {
+					factor = 2
+					regent = { ai_ambition < -25 }
+				}
+				modifier = {
+					factor = 2
+					regent = { ai_greed < -15 }
+				}
+				modifier = {
+					factor = 2
+					is_pious_trigger = yes
+					regent = { ai_zeal = 35 }
+				}
+				modifier = {
+					factor = 10 #Matters a lot more if they're zealous
+					is_pious_trigger = yes
+					regent = { trait = zealous }
+				}
+				modifier = {
+					factor = 2
+					is_benevolent_trigger = yes
+				}
+				modifier = {
+					factor = 2
+					has_pleasant_personality_trigger = yes
+				}
+				modifier = {
+					factor = 3
+					regent = { opinion_of = { who = ROOT value = 40 } }
+				}
+				modifier = {
+					factor = 5
+					regent = { opinion_of = { who = ROOT value = 80 } }
+				}
+				modifier = {
+					factor = 0.5
+					regent = { trait = ambitious }
+				}
+			}
+#			10 = { #Foolish regent appoints ambitious successor ##TODO: This should really be any child, not just your familial heir.
+#				character_event = { id = DAQIN.00264 }
+#				trigger = {
+#					current_heir = {
+#						AND = {
+#							dynasty = ROOT
+#							ai_ambition = 25
+#							ai_honor < 25
+#						}
+#					}
+#					has_instances_of_character_modifier = {
+#						name = ruler_absent_flat
+#						amount = 6
+#					}
+#				}
+#				modifier = {
+#					factor = 0.5
+#					regent = { is_smart_trigger = yes }
+#				}
+#				modifier = {
+#					factor = 2
+#					regent = { is_dumb_trigger = yes }
+#				}
+#				modifier = {
+#					factor = 2
+#					regent = { intrigue < 8 }
+#				}
+#				modifier = {
+#					factor = 0.5
+#					regent = { intrigue = 16 }
+#				}
+#				modifier = {
+#					factor = 0.7
+#					regent = { opinion_of = { who = ROOT value = 40 } }
+#				}
+#				modifier = {
+#					factor = 0.4
+#					regent = { opinion_of = { who = ROOT value = 80 } }
+#				}
+#				modifier = {
+#					factor = 3
+#					regent = { opinion_of = { who = ROOT value < -40 } }
+#				}
+#				modifier = {
+#					factor = 3
+#					regent = { opinion_of = { who = ROOT value < -80 } }
+#				}
+#				modifier = {
+#					factor = 3
+#					regent = { opinion_of = { who = { ROOT = { current_heir } } value = 40 } }
+#				}
+#				modifier = {
+#					factor = 5
+#					regent = { opinion_of = { who = { ROOT = { current_heir } } value = 80 } }
+#				}
+#				modifier = {
+#					factor = 0.7
+#					regent = { opinion_of = { who = { ROOT = { current_heir } } value < 40 } }
+#				}
+#				modifier = {
+#					factor = 0.4
+#					regent = { opinion_of = { who = { ROOT = { current_heir } } value < 80 } }
+#				}
+#			}
+#			10 = { #Regent seizes power
+#				character_event = { id = DAQIN.00265 }
+#				trigger = {
+#					has_instances_of_character_modifier = {
+#						name = ruler_absent_flat
+#						value = 6
+#					}
+#				}
+#				modifier = {
+#					factor = 2
+#					regent = { ai_honor < -20 }
+#				}
+#				modifier = {
+#					factor = 3
+#					regent = { ai_ambition = 30 }
+#				}
+#				modifier = {
+#					factor = 2
+#					regent = { ai_greed = 30 }
+#				}
+#				modifier = {
+#					factor = 2
+#					is_impious_trigger = yes
+#					regent = { ai_zeal = 40 }
+#				}
+#				modifier = {
+#					factor = 10 #Matters a lot more if they're zealous
+#					is_impious_trigger = yes
+#					regent = { trait = zealous }
+#				}
+#				modifier = {
+#					factor = 2
+#					is_evil_trigger = yes
+#				}
+#				modifier = {
+#					factor = 4
+#					has_unpleasant_personality_trigger = yes
+#				}
+#				modifier = {
+#					factor = 3
+#					regent = { opinion_of = { who = ROOT value = 40 } }
+#				}
+#				modifier = {
+#					factor = 5
+#					regent = { opinion_of = { who = ROOT value = 80 } }
+#				}
+#				modifier = {
+#					factor = 0.5
+#					regent = { trait = content }
+#				}
+#				modifier = {
+#					factor = 2
+#					prestige = 2000
+#				}
+#			}
+		}
+	}
+}
+
+character_event = { #Home: Welcomed back, loyal regent or short trip
+	id = DAQIN.00263
+	desc = DAQIN.00263.D
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = { #All is well
+		name = DAQIN.00263.OPTA
+		regent = { add_friend = ROOT }
+	}
+	option = { #Reward regent
+		name = DAQIN.00263.OPTB
+		regent = { add_friend = ROOT }
+		random_demesne_title = {
+			limit = { is_capital = no }
+			grant_title = regent
+		}
+	}
+	after = { character_event = { id = DAQIN.00267 } }
+}
+
+#character_event = { #Home: Foolish regent has had child appointed successor at child's wishes
+#	id = DAQIN.00264
+#	desc = DAQIN.00264.D
+#	picture = GFX_evt_powerful_ruler
+#	
+#	is_triggered_only = yes
+#	
+#	trigger = { always = no } ##TODO: Implement this fully, I just want the alpha to come out
+#	
+#	immediate = { current_heir = { add_claim = ROOT } }
+#	
+#	option = { #Declare civil war
+#		name = DAQIN.00264.OPTA
+#		if = {
+#			limit = {
+#				any_realm_lord = {
+#					higher_tier_than = baron
+#					OR = {
+#						opinion = {
+#							who = ROOT
+#							value = 40
+#						}
+#						is_friend = ROOT
+#						is_lover = ROOT
+#					}
+#				}
+#			}
+#			random_realm_lord = {
+#				limit = {
+#					higher_tier_than = baron
+#					OR = {
+#						opinion = {
+#							who = ROOT
+#							value = 40
+#						}
+#						is_friend = ROOT
+#						is_lover = ROOT
+#					}
+#				}
+#				random_demesne_title = { grant_title = ROOT }
+#			}
+#		}
+#		else = {
+#			random_realm_lord = {
+#				limit = { higher_tier_than = baron }
+#				random_demesne_title = { grant_title = ROOT } ##TODO: add opinion malus
+#			}
+#		}
+#		capital_scope = { grant_title = current_heir } ##TODO: add opinion malus
+#		current_heir = {
+#			prestige = 1000
+#			wealth = 2000
+#			piety = 500
+#			if = {
+#				limit = {
+#					ROOT = { has_landed_title = e_daqin }
+#				}
+#				start_faction = {
+#					faction = faction_claimant
+#					title = e_daqin
+#					thirdparty = PREV
+#					can_join_existing = yes
+#				}
+#			}
+#			else = {
+#				start_faction = {
+#					faction = faction_claimant
+#					title = e_fulin
+#					thirdparty = PREV
+#					can_join_existing = yes
+#				}
+#			}
+#		}
+#		any_vassal = { #This scopes exclusively to direct vassals of the Emperor
+#			limit = {
+#				likes_better_than = { 
+#					who = PREV ##TODO: **ENSURE** that current heir is prev or there are enough prevs!!!!
+#					than = ROOT
+#				}
+#			}
+#			join_faction = {
+#				faction = faction_claimant
+#				faction_leader = PREVPREV ##TODO: ENSURE THIS IS CURRENT HEIR
+#				ignore_requirements = yes
+#			}
+#		}
+#		reverse_war = {
+#			target = ROOT
+#			casus_belli = claim_on_liege
+#			faction = faction_claimant
+#		}
+#	}
+#	option = { #Abdicate - play as dynasty successor
+#		name = DAQIN.00264.OPTB
+#		trigger = { current_heir = { dynasty = ROOT } }
+#		abdicate = yes
+#		set_player_character = current_heir
+#		custom_tooltip = DAQIN.00264.TT
+#		current_heir = { character_event = { id = DAQIN.00268 days = 7 } }
+#	}
+#	option = { #Just abdicate
+#		name = DAQIN.00264.OPTC
+#		primary_title = { usurp_title = current_heir }
+#		capital_scope = { usurp_title = current_heir }
+#		character_event = { id = DAQIN.00269 days = 7 }
+#	}
+#	
+#	after = {
+#		regent = { character_event = { id = DAQIN.00266 } }
+#		character_event = { id = DAQIN.00266 }
+#	}
+#}
+#
+#character_event = { #Home: Regent has seized power!
+#	id = DAQIN.00265
+#	desc = DAQIN.00265.D
+#	picture = GFX_evt_powerful_ruler
+#	
+#	is_triggered_only = yes
+#	
+#	trigger = { always = no } ##TODO: Implement this fully, I just want the alpha to come out
+#	
+#	immediate = { regent = { add_claim = ROOT } }
+#	
+#	option = { #Palace coup
+#		name = DAQIN.00265.OPTA
+#		tooltip_info_custom = DAQIN.00265.TT #The majority of your council are loyalists and will aid you
+#		regent = { death = { death_reason = death_execution killer = ROOT } } ##TODO: Fix this death reason
+#		trigger = {
+#			any_voter = {
+#				has_position = loyalist
+#				count = 5
+#			}
+#		}
+#		character_event = { id = DAQIN.00267 days = 7 }
+#	}
+#	option = { #Declare civil war
+#		name = DAQIN.00265
+#		if = {
+#			limit = {
+#				any_realm_lord = {
+#					higher_tier_than = baron
+#					OR = {
+#						opinion = {
+#							who = ROOT
+#							value = 40
+#						}
+#						is_friend = ROOT
+#						is_lover = ROOT
+#					}
+#				}
+#			}
+#			random_realm_lord = {
+#				limit = {
+#					higher_tier_than = baron
+#					OR = {
+#						opinion = {
+#							who = ROOT
+#							value = 40
+#						}
+#						is_friend = ROOT
+#						is_lover = ROOT
+#					}
+#				}
+#				random_demesne_title = { grant_title = ROOT }
+#			}
+#		}
+#		else = {
+#			random_realm_lord = {
+#				limit = { higher_tier_than = baron }
+#				random_demesne_title = { usurp_title = ROOT }
+#			}
+#		}
+#		capital_scope = { usurp_title = regent }
+#		regent = {
+#			prestige = 1000
+#			wealth = 2000
+#			piety = 500
+#			if = {
+#				limit = {
+#					top_liege = {
+#						has_landed_title = e_daqin
+#					}
+#				}
+#				start_faction = {
+#					faction = faction_claimant
+#					title = e_daqin
+#					thirdparty = PREVPREV
+#					can_join_existing = yes
+#				}
+#			}
+#			else = {
+#				start_faction = {
+#					faction = faction_claimant
+#					title = e_fulin
+#					thirdparty = PREVPREVPREV
+#					can_join_existing = yes
+#				}
+#			}
+#		}
+#		regent = {
+#			top_liege = {
+#				any_vassal = { #This scopes exclusively to direct vassals of the Emperor
+#					limit = {
+#						likes_better_than = { 
+#							who = PREVPREV ##TODO: **ENSURE** that regent is prev or there are enough prevs!!!!
+#							than = ROOT
+#						}
+#					}
+#					join_faction = {
+#						faction = faction_claimant
+#						faction_leader = PREVPREVPREVPREV ##TODO: ENSURE THIS IS THE REGENT
+#						ignore_requirements = yes
+#					}
+#				}
+#			}
+#		}
+#		reverse_war = {
+#			target = ROOT
+#			casus_belli = claim_on_liege
+#			faction = faction_claimant
+#		}
+#	}
+#	option = { #Abdicate to regent
+#		name = DAQIN.00256.OPTC
+#		primary_title = { usurp_title = regent }
+#		capital_scope = { usurp_title = regent }
+#		character_event = { id = DAQIN.00269 days = 7 }
+#	}
+#	option = { #Abdicate to and play as dynastic regent
+#		name = DAQIN.00265.OPTD
+#		trigger = { regent = { dynasty = ROOT } }
+#		abdicate_to = regent
+#		set_player_character = regent
+#		custom_tooltip = DAQIN.00264.TT
+#		regent = { character_event = { id = DAQIN.00268 days = 7 } }
+#	}
+#	after = {
+#		regent = { character_event = { id = DAQIN.00266 } }
+#		character_event = { id = DAQIN.00266 }
+#	}
+#}
+
+character_event = { #Tomb returning clean-up
+	id = DAQIN.00266
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_trait = travelling
+		remove_character_modifier = secret_tomb_health_buff
+		remove_character_modifiers = {
+			modifier = competent_regent
+			amount = 999
+		}
+		remove_character_modifiers = {
+			modifier = ruler_absent_flat
+			amount = 999
+		}
+		remove_character_modifiers = {
+			modifier = ruler_absent_economic_woes
+			amount = 999
+		}
+		remove_character_modifiers = {
+			modifier = ruler_absent_military_woes
+			amount = 999
+		}
+		remove_character_modifiers = {
+			modifier = ruler_absent_peasant_unrest
+			amount = 999
+		}
+		remove_character_modifiers = {
+			modifier = ruler_absent_spiritual_woes
+			amount = 999
+		}
+	}
+}
+
+character_event = { #Regency Ends
+	id = DAQIN.00267
+	desc = DAQIN.00267.D #With your councillors leading your regent away...
+	picture = GFX_evt_prospering_province
+	
+	is_triggered_only = yes
+	
+	option = { #Excellent.
+		name = DAQIN.00267.OPTA
+		character_event = { id = DAQIN.00266 }
+		regent = { character_event = { id = DAQIN.00266 } }
+	}
+}
+
+character_event = { #Dynastic play-as regent abdication (event for new PC)
+	id = DAQIN.00268
+	desc = DAQIN.00268.D
+	picture = GFX_placeholder
+	
+	is_triggered_only = yes
+	
+	trigger = { always = no } ##TODO: Implement this fully, I just want the alpha to come out
+	
+	option = {
+		name = DAQIN.00268.OPTA
+	}
+}
+
+character_event = { #Non-dynastic regent abdication
+	id = DAQIN.00269
+	desc = DAQIN.00269.D #Mentions your plans for the legion are seized, as it's tied to being emperor
+	picture = GFX_placeholder
+	
+	is_triggered_only = yes
+	
+	trigger = { always = no } ##TODO: Implement this fully, I just want the alpha to come out
+	
+	option = {
+		name = DAQIN.00269.OPTA
+	}
+}
+
+narrative_event = { #Tyrian Guard formed
+	id = DAQIN.00270
+	title = DAQIN.00270.T
+	desc = DAQIN.00270.D
+	picture = GFX_evt_china_diplomatic_success
+	border = GFX_event_narrative_frame_intrigue #Cuz it's purple, y'see
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00270.OPTA
+	}
+}
+
+character_event = { #Returning home
+	id = DAQIN.00271
+	desc = {
+		trigger = { war = yes }
+		text = DAQIN.00271.D.W
+	}
+	desc = {
+		trigger = { war = no }
+		text = DAQIN.00271.D.P
+	}
+	picture = GFX_evt_relaxed_ruler
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00271.OPTA
+		remove_trait = stressed
+		remove_trait = depressed
+		remove_trait = travelling
+		add_character_modifier = {
+			name = invigorated
+			years = 5
+		}
+	}
+}
+
+character_event = { #Chinese grateful
+	id = DAQIN.00272
+	desc = DAQIN.00272.D #Thanks for the tomb, fam.
+	picture = GFX_evt_chinese_emissary
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = { #I hope it's something educational...
+		name = DAQIN.00272.OPTA
+		character_event = { id = DAQIN.00273 }
+	}
+	option = { #I hope it's something stately...
+		name = DAQIN.00272.OPTB
+		character_event = { id = DAQIN.00274 }
+	}
+}
+
+character_event = { #Chinese educational reward
+	id = DAQIN.00273
+	desc = DAQIN.00273.D #Box containing poetry and water clock
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Yay!
+		name = DAQIN.00273.OPTA
+		add_artifact = water_clock
+		add_artifact = classic_of_poetry
+	}
+}
+
+character_event = { #Chinese stately reward
+	id = DAQIN.00274
+	desc = DAQIN.00274.D #Bundle containing art of war and a dragon
+	picture = GFX_evt_china_expansionist
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = { #Yay!
+		name = DAQIN.00274.OPTA
+		add_artifact = art_of_war
+		add_artifact = jade_dragon
+	}
+}
+
+narrative_event = { #Successor event
+	id = DAQIN.00275
+	title = DAQIN.00275.T
+	desc = DAQIN.00275.D #Sorry about your predecessor, have these plans -China
+	picture = GFX_evt_died_funeral
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00275.OPTA
+	}
+}

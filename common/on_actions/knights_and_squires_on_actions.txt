@@ -1,0 +1,27 @@
+on_yearly_pulse = {
+	random_events = {
+		1000 = 0
+		800 = knightly.105
+		400 = knightly.007
+	}
+	events= {
+		knightly.106
+	}
+}
+on_bi_yearly_pulse = {
+	random_events = {
+		1500 = 0
+		800 = knightly.004
+	}
+}
+on_adulthood = {
+	events = {
+		knightly.006
+}
+on_battle_won_owner = {
+	random_events = {
+		1000 = 0
+		500 = knightly.103
+		850 = knightly.005
+	}
+}

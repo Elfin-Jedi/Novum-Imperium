@@ -1,0 +1,34 @@
+hervé_bloodline = {
+	norman_opinion = 5
+	monthly_character_prestige = 0.1
+	command_modifier = {
+		morale_offence = 0.05
+	}
+	bloodline_effect_bloodline_mercenary_traditions = 1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_longship
+	flags = { hervé_bloodline bloodline_mercenary_traditions }
+}
+	
+raoul = {
+	combat_rating = 5
+	norman_opinion = 5
+	greek_opinion = 5
+	monthly_character_prestige = 0.1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_lion
+	flags = { historical_bloodline }
+}
+	
+roussel = {
+	combat_rating = 5
+	norman_opinion = 5
+	greek_opinion = -5
+	monthly_character_prestige = 0.1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_lion
+	flags = { historical_bloodline }
+}

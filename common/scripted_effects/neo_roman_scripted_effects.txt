@@ -1,0 +1,24 @@
+roman_culture_convert_effect = {
+	culture = roman
+	capital_scope = { culture = roman }
+	any_demesne_province = { culture = roman }
+	any_courtier_or_vassal = { 
+		limit = { lower_tier_than = COUNT }
+		culture = roman
+	}
+	any_vassal = {
+		any_demesne_province = {
+			capital_scope = {
+				on_trigger_switch = {
+					trigger = region
+					world_europe_south_italy = { random = { chance = 40 culture = roman } if = { limit = { ROOT = { religion = { OR = { hellenic_pagan hellenic_pagan_reformed } } } } random = { chance = 5 religion = ROOT } } }
+					world_europe_south_east = { random = { chance = 20 culture = roman } }
+					custom_catalan = { random = { chance = 20 culture = roman } }
+					world_europe_west_francia = { random = { chance = 20 culture = roman } }
+					world_europe_west_germania = { random = { chance = 20 culture = roman } }
+					fallback = { random = { chance = 5 culture = roman } }
+				}
+			}
+		}
+	}
+}

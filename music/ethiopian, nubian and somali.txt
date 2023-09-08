@@ -1,0 +1,208 @@
+song = {
+	name = "Civilization V OST Haile Selassie Peace Theme Traditional melody, Selassie's National Anthem.ogg"
+	song_name = "Traditional melody, Selassie's National Anthem"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = ethiopian }
+			NOT = { culture = somali }
+			NOT = { culture = nubian }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Civilization V OST Haile Selassie War Theme Traditional melody, Selassie's National Anthem.ogg"
+	song_name = "Traditional melody, Selassie's National Anthem"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = ethiopian }
+			NOT = { culture = somali }
+			NOT = { culture = nubian }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Nubia Theme - Atomic (Civilization 6 OST) Allah Musau.ogg"
+	song_name = "Allah Musau (Atomic)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = nubian }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Nubia Theme - Industrial (Civilization 6 OST) Allah Musau.ogg"
+	song_name = "Allah Musau (Industrial)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = nubian }
+		}
+		modifier = {
+			factor = 0.5
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Nubia Theme - Medieval (Civilization 6 OST) Allah Musau.ogg"
+	song_name = "Allah Musau (Medieval)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = nubian }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Nubia Theme - Ancient (Civilization 6 OST) Allah Musau.ogg"
+	song_name = "Allah Musau (Ancient)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = nubian }
+		}
+		modifier = {
+			factor = 2
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Ethiopia Theme - Ancient (Civilization 6 OST) Tizita.ogg"
+	song_name = "Tizita (Ancient)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = ethiopian }
+			NOT = { culture = somali }
+		}
+		modifier = {
+			factor = 2
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Ethiopia Theme - Medieval (Civilization 6 OST) Tizita, Bati.ogg"
+	song_name = "Tizita, Bati (Medieval)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = ethiopian }
+			NOT = { culture = somali }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Ethiopia Theme - Industrial (Civilization 6 OST) Tizita.ogg"
+	song_name = "Tizita (Industrial)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = ethiopian }
+			NOT = { culture = somali }
+		}
+		modifier = {
+			factor = 0.5
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Ethiopia Theme - Atomic (Civilization 6 OST) Tizita.ogg"
+	song_name = "Tizita (Atomic)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { culture = ethiopian }
+			NOT = { culture = somali }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 2
+}

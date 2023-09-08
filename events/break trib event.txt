@@ -1,0 +1,15 @@
+namespace = FGE
+character_event = {
+	id = FGE.0005
+	title = FGETitle.0005
+	desc = FGEDesc.0005
+  	picture = GFX_evt_anarchy
+	is_triggered_only = yes
+	option = {
+		name = FGE.0005A
+		custom_tooltip = {
+		text = conftribselfb
+		}
+
+	}
+}

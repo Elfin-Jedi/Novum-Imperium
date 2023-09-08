@@ -1,0 +1,16 @@
+namespace = DAQIN
+
+#Placeholder event##
+character_event = {
+	id = DAQIN.placeholder
+	title = DAQIN.placeholder.title
+	desc = DAQIN.placeholder.desc
+	picture = GFX_placeholder
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.placeholder.OPTA
+		wealth = 100
+	}
+}

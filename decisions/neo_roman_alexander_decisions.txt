@@ -1,0 +1,51 @@
+decisions = {
+	claim_alexanders_legacy = {
+		only_independent = yes
+		
+		is_high_prio = yes
+		ai_check_interval = 120
+		
+		potential = { 
+			religion_openly_hellenic_or_reformed_trigger = yes
+			capital_scope = { region = world_persia }
+			OR = {
+				tier = KING #Be a Persian King, to let the player know they can do it and set them a goal
+				has_landed_title = e_persia #But make an exception for the Emperor of Persia, since they need to be that to take the decision
+			}
+			government = feudal_government #Romans get Imperial, so no Romano-Alexandrian Empire! And no merchants or nomads
+			culture = greek
+			NOT = { has_global_flag = restored_alexandrian_empire }
+		}
+		
+		allow = {
+			has_landed_title = e_persia #You just need to be a Greek Emperor of Persia. Because...
+			num_of_holy_sites = 3 #This should encourage the player to take Alex's heartlands back west.
+			prestige = 5000
+		}
+		
+		effect = {
+			prestige = -5000
+			piety = 2000 #Mimicing Alexander, a Hero of the Hellenic Faith, is pretty pious
+			e_argead_empire = {
+				show_scope_change = no
+				grant_title = ROOT
+				copy_title_laws = PREV
+				add_law = succ_primogeniture
+			}
+			any_demesne_title = {
+				limit = {
+					tier = EMPEROR
+					NOT = { title = e_argead_empire }
+				}
+				destroy_landed_title = THIS
+			}
+			
+			activate_title = { e_persia status = no } #Stops the player re-creating Persia after gaining the Argead Empire
+			set_global_flag = restored_alexandrian_empire
+			narrative_event = { id = NIR.03 }
+			any_playable_ruler = { limit = { ai = no } narrative_event = { id = NIR.03 } }
+		}
+		
+		revoke_allowed = { always = no }
+	}
+}

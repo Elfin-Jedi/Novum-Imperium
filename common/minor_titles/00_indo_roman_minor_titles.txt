@@ -18,6 +18,64 @@
 # SOFT: GRANTABLE - FULLY MODDABLE
 #######################################
 
+title_vieti_carnifex = {
+	dignity = 2.0
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.04
+	monthly_prestige = 0.125
+	
+	allowed_to_hold = {
+	culture = romanoindian
+	is_landed = no
+		NOT = { 
+			primary_title = { temporary = yes } 
+			OR = {
+			trait = indoroman_champ
+			trait = praetorian_ultra
+			}
+		}
+		is_adult = yes
+		combat_rating = 20
+		OR = { 
+			male_can_hold_minor_title_trigger = yes
+			female_can_hold_minor_commander_title_trigger = yes
+		}
+		NOT = { trait = incapable } 
+	}
+
+	allowed_to_grant = {
+	    is_feudal = yes
+		OR = {
+			has_landed_title = e_indo_roman_empire
+			has_landed_title = e_orientis
+			AND = {
+			culture = romanoindian
+			OR = {
+			tier = KING
+			tier = EMPEROR
+			}
+			}
+		}
+		OR = {
+			religion_group = christian
+			religion_group = jewish_group
+			religion_group = pagan_group
+		}
+	}
+	
+	gain_effect = {
+		add_trait = vieti_carnifex
+	}
+	lose_effect = {
+		remove_trait = vieti_carnifex
+	}
+
+	message = yes
+}
+
 title_indoroman_champion = {
 	dignity = 2.0
 	realm_in_name = yes
@@ -33,6 +91,7 @@ title_indoroman_champion = {
 			OR = {
 			trait = indoroman_champ
 			trait = praetorian_ultra
+			trait = vieti_carnifex
 			}
 		}
 		is_adult = yes
@@ -41,7 +100,7 @@ title_indoroman_champion = {
 			male_can_hold_minor_title_trigger = yes
 			female_can_hold_minor_commander_title_trigger = yes
 		}
-		is_incapable = no 
+		NOT = { trait = incapable } 
 	}
 
 	allowed_to_grant = {
@@ -82,6 +141,7 @@ title_indoroman_personal_praetorian = {
 			OR = {
 			trait = indoroman_champ
 			trait = praetorian_ultra
+			trait = vieti_carnifex
 			}
 		}
 		culture = romanoindian
@@ -91,7 +151,7 @@ title_indoroman_personal_praetorian = {
 			male_can_hold_minor_title_trigger = yes
 			female_can_hold_minor_commander_title_trigger = yes
 		}
-		is_incapable = no
+		NOT = { trait = incapable } 
 	}
 
 	allowed_to_grant = {

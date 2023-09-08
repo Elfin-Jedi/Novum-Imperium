@@ -1,0 +1,53 @@
+namespace = FGE
+letter_event = {
+	id = FGE.0001
+	title = FGETitle.0001
+	desc = {
+		trigger = {
+			ROOT = {
+			shares_realm_border_with = FROM
+			}
+			}
+		text = FGEDesc.0001
+	}
+	desc = {
+		trigger = {
+			ROOT = {
+			NOT = { shares_realm_border_with = FROM }
+			}
+			}
+		text = FGEDesc.00011
+	}
+  	picture = GFX_evt_anarchy
+	is_triggered_only = yes
+	option = {
+		name = FGE.0001A
+		trigger = {
+			ROOT = {
+			shares_realm_border_with = FROM
+			}
+		}
+		custom_tooltip = {
+		text = conftribself
+		ROOT = {
+			make_tributary = {
+			who = FROM
+			tributary_type = free_imperial_city_trib
+			}
+		}
+		}
+
+	}
+	option = {
+		name = FGE.0001B
+		trigger = {
+			ROOT = {
+			NOT = { shares_realm_border_with = FROM }
+			}
+		}
+		custom_tooltip = {
+		text = conftribselfb
+		}
+
+	}
+}

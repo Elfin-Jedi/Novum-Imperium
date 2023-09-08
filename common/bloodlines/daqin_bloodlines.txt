@@ -1,0 +1,29 @@
+daqin_tomb_respect_bloodline = {
+	monthly_character_piety = 0.1
+	bloodline_effect_more_philosophers = 1
+	dynasty_opinion = 10
+	picture = GFX_bloodlines_symbol_peace
+	flags = { created_bloodline bloodline_more_philosophers bloodline_daqin }
+}
+daqin_tomb_chinese_bloodline = {
+	monthly_grace = 3
+	bloodline_effect_wandering_artists = 1
+	vassal_opinion = 5
+	monthly_character_prestige = 0.1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_taoist
+	flags = { created_bloodline bloodline_daqin bloodline_wandering_artists }
+}
+
+fulin_founder_bloodline = {
+	monthly_character_prestige = 0.2
+	vassal_opinion = 5
+	tech_growth_modifier = 0.1
+	bloodline_effect_castration = 1
+	bloodline_effect_blinding = 1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_roman
+	flags = { bloodline_blinding bloodline_castration created_bloodline bloodline_daqin }
+}

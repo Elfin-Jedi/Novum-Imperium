@@ -155,6 +155,13 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	spriteType = {
+		name = "GFX_trait_fertile"
+		texturefile = "gfx/traits/fertile.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
 		name = "GFX_trait_fertile_1"
 		texturefile = "gfx/traits/fertile_1.tga"
 		noOfFrames = 1
@@ -164,6 +171,13 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_trait_fertile_2"
 		texturefile = "gfx/traits/fertile_2.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_infertile"
+		texturefile = "gfx/traits/infertile.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -192,6 +206,20 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_trait_weak_1"
 		texturefile = "gfx/traits/weak_1.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_tall"
+		texturefile = "gfx/traits/tall.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_short"
+		texturefile = "gfx/traits/short.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"

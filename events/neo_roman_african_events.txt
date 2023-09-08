@@ -1,0 +1,69 @@
+namespace = NIR
+
+narrative_event = { #Exarchate of Africa formed
+	id = NIR.01
+	title = NIR.01.T
+	desc = NIR.01.D
+	picture = GFX_evt_victory_arch_byzantine
+	
+	is_triggered_only = yes
+	
+	option = { #Response for anyone that isn't the Exarch
+		name = NIR.01.OPTA
+		trigger = { NOT = { has_landed_title = k_african_exarchate } }
+	}
+	option = { #Swear to Byzzies
+		name = NIR.01.OPTB
+		trigger = { has_landed_title = k_african_exarchate }
+		e_byzantium = {
+			owner = {
+				opinion = {
+					who = ROOT
+					modifier = opinion_loyal_vassal
+				}
+			}
+		}
+		k_african_exarchate = { owner = { set_defacto_liege = e_byzantium } }
+	}
+	option = { #Stay independent
+		name = NIR.01.OPTC
+		trigger = { has_landed_title = k_african_exarchate }
+		trait = ambitious
+	}
+}
+
+character_event = { #Discovery of African Romance
+	id = NIR.02
+	desc = NIR.02.D
+	picture = GFX_evt_culture_change
+	
+	is_triggered_only = yes
+	
+	option = { #Adopt the culture there and then
+		name = NIR.02.OPTA
+		trigger = { religion_group = christian }
+		hidden_tooltip = {
+			any_courtier = {
+				limit = {
+					culture = ROOT
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = african_romance
+			}
+			any_demesne_province = {
+				limit = { culture_group = ROOT }
+				culture = african_romance
+			}
+			if = {
+				limit = { capital_scope = { culture_group = arabic } }
+				capital_scope = { culture = african_romance }
+			}
+		}
+		culture = african_romance
+	}
+	option = { #Stick with your culture
+		name = NIR.02.OPTB
+		prestige = 70
+	}
+}

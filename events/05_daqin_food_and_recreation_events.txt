@@ -1,0 +1,557 @@
+namespace = DAQIN
+
+##New fashions##
+character_event = {
+	id = DAQIN.00501
+	title = DAQIN.00501.title
+	desc = DAQIN.00501.desc
+	picture = GFX_evt_fancy_feast
+	
+	is_triggered_only = yes
+	
+	option = { #Very pretty. Introduce some.
+		name = DAQIN.00501.OPTA
+		prestige = 200
+		wealth = -50
+		if = {
+			limit = { trait = humble }
+			remove_trait = humble
+		}
+		else = { add_trait = proud }
+	}	
+	option = { #A little bit gaudy, honestly.
+		name = DAQIN.00501.OPTB
+		prestige = 20
+	}
+}
+
+##New games##
+character_event = { #find a game table with some peasants
+	id = DAQIN.00502
+	title = DAQIN.00502.title
+	desc = DAQIN.00502.desc
+	picture = GFX_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	option = { #Sure, I'll give it a go.
+		name = DAQIN.00502.OPTA
+		hidden_tooltip = {
+			random_list = {
+				10 = { #Player wins
+					modifier = {
+						factor = 3
+						is_smart_trigger = yes
+					}
+					custom_tooltip = { text = TT_SUCCESSFUL_SWAY_EVENT }
+					character_event = { id = DAQIN.00503 }
+				}
+				10 = { #Peasant wins
+					modifier = {
+						factor = 3
+						is_dumb_trigger = yes
+					}
+					custom_tooltip = { text = TT_UNSUCCESSFUL_SWAY_EVENT }
+					character_event = { id = DAQIN.00504 }
+				}
+			}
+		}
+	}
+	option = { #No, but I'd love to watch.
+		name = DAQIN.00502.OPTB
+		character_event = { id = DAQIN.00505 days = 3 }
+	}
+	option = { #I'm alright, thanks. Spend time in the park to relax.
+		name = DAQIN.00502.OPTC
+		hidden_tooltip = {
+			if = {
+				limit = { trait = stressed }
+				character_event = { id = DAQIN.00506 }
+			}
+			else = { character_event = { id = DAQIN.00507 } }
+		}
+	}
+	option = { #Ah, I've seen this one before!
+		name = DAQIN.00502.OPTD
+		trigger = { trait = gamer }
+		tooltip_info = gamer
+		character_event = { id = DAQIN.00508 }
+	}
+}
+
+character_event = { #won game
+	id = DAQIN.00503
+	title = DAQIN.00503.title
+	desc = DAQIN.00503.desc
+	picture = GFX_evt_recieve_letter
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00503.OPTA
+		prestige = 50
+		remove_trait_shy_effect = yes
+		add_trait_gregarious_effect = yes
+		if = {
+			limit = {
+				NOR = {
+					has_character_modifier = apprentice_boardgamer
+					trait = gamer
+				}
+			}
+			add_character_modifier = {
+				name = apprentice_boardgamer
+				days = -1
+			}
+		}
+		if = {
+			limit = {
+				has_character_modifier = apprentice_boardgamer
+				NOT = { lifestyle_traits = 1 }
+			}
+			random = {
+				chance = 20
+				remove_character_modifier = apprentice_boardgamer
+				add_trait = gamer
+			}
+		}
+	}
+}
+	
+character_event = { #lost game
+	id = DAQIN.00504
+	title = DAQIN.00504.title
+	desc = DAQIN.00504.desc
+	picture = GFX_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	option = { #gracious loser
+		name = DAQIN.00504.OPTA
+		tiered_prestige_negative_effect = yes
+	}
+	option = { #flip the table!
+		name = DAQIN.00504.OPTB
+		trigger = { trait = wroth }
+		tooltip_info = wroth
+		tiered_prestige_negative_effect = yes
+	}
+}
+
+character_event = { #watched game
+	id = DAQIN.00505
+	title = DAQIN.00505.title
+	desc = DAQIN.00505.desc
+	picture = GFX_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00505.OPTA
+		random_list = {
+			5 = { #You could apply this to strategy.
+				change_martial = 1
+			}
+			35 = { #You have a good time.
+				remove_trait_shy_effect = yes
+				add_trait_gregarious_effect = yes
+			}
+			60 = {} #It was mostly uneventful.
+		}
+	}
+}
+	
+character_event = { #relaxed instead (destressed)
+	id = DAQIN.00506
+	title = DAQIN.00506.title
+	desc = DAQIN.00506.desc
+	picture = GFX_evt_fishing
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00506.OPTA
+		random = {
+			chance = 60
+			remove_trait = stressed
+		}
+	}
+}
+
+character_event = { #relaxed instead (meditated)
+	id = DAQIN.00507
+	title = DAQIN.00507.title
+	desc = DAQIN.00507.desc
+	picture = GFX_evt_magnificent_castle
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00507.OPTA
+		piety = 50
+		random = {
+			chance = 10
+			change_learning = 1
+		}
+	}
+}
+
+character_event = { #gamer played games
+	id = DAQIN.00508
+	title = DAQIN.00508.title
+	desc = DAQIN.00508.desc
+	picture = GFX_evt_recieve_letter
+	
+	is_triggered_only = yes
+	
+	option = { #Get rekt, nerds.
+		name = DAQIN.00508.OPTA
+		prestige = 100
+		wealth = 5
+	}
+	option = {	#Ah, I got lucky. GG!
+		name = DAQIN.00508.OPTB
+		wealth = 5
+		prestige = 50
+		random = {
+			chance = 5
+			change_diplomacy = 1
+		}
+	}
+	option = { #Here, let me teach you all something.
+		name = DAQIN.00508.OPTC
+		wealth = 5
+		piety = 50
+		prestige = 50
+		random = {
+			chance = 25
+			add_trait = charitable
+		}
+	}
+}
+
+##new food##
+character_event = { #try a new dessert. And talk about rice in rome!
+	id = DAQIN.00510
+	title = DAQIN.00510.title
+	desc = DAQIN.00510.desc
+	picture = GFX_evt_feast
+	
+	is_triggered_only = yes
+	
+	option = { #A nice Nian Gao. It's not new year, but you're a king, who cares?
+		name = DAQIN.00510.OPTA
+		custom_tooltip = {
+			text = nian_gao_info.TT
+			character_event = { id = DAQIN.00511 }
+		}
+	}
+	option = { #Kykeon, a classic greek peasant's recipe! (Make sure to have the final option be something like 'in the future perhaps all wines will be smooth as silk.)
+		name = DAQIN.00510.OPTB
+		custom_tooltip = {
+			text = kykeon_info.TT
+			character_event = { id = DAQIN.00512 }
+		}
+	}
+	option = { #Spartan black soup. I'll be warrior! (make sure to use the Byzzie recipe but reference others)
+		name = DAQIN.00510.OPTC
+		custom_tooltip = {
+			text = black_broth_info.TT
+			character_event = { id = DAQIN.00513 }
+		}
+	}
+	option = { #Surprise me, chef! (but not if you're a cannibal)
+		name = DAQIN.00510.OPTD
+		trigger = { NOT = { trait = cannibal_trait } }
+		character_event = { id = DAQIN.00514 }
+	}
+	option = { #I know EXACTLY what I want to sate my Cravings...
+		name = DAQIN.00510.OPTE
+		trigger = { trait = cannibal_trait }
+		character_event = { id = DAQIN.00515 }
+		tooltip_info = cannibal_trait
+	}
+}
+
+character_event = { #Nian Gao
+	id = DAQIN.00511
+	title = DAQIN.00511.title
+	desc = DAQIN.00511.desc
+	picture = GFX_evt_feast
+	
+	is_triggered_only = yes
+	
+	option = { #It's sticky, but nice, and your court has fun with it all.
+		name = DAQIN.00511.OPTA
+		add_character_modifier = {
+			name = good_times
+			years = 2
+		}
+	}
+}
+
+character_event = { #Kykeon
+	id = DAQIN.00512
+	title = DAQIN.00512.title
+	picture = GFX_evt_feast
+	
+	is_triggered_only = yes
+	desc = {
+		trigger = { religion_openly_hellenic_or_reformed_trigger = yes }
+		text = DAQIN.00512.descHellenic #Talks a bit more about the gods and mythological aspect.
+	}
+	desc = {
+		trigger = { religion_openly_hellenic_or_reformed_trigger = no }
+		text = DAQIN.00512.desc
+	}
+	
+	option = {
+		name = DAQIN.00512.OPTA
+		random_list = {
+			15 = { health = 0.25 }#A little health boost.
+			20 = { #get a little sickly
+				if = {
+					limit = {
+						NOR = {
+							num_of_symptoms = 1
+							is_ill = yes
+							has_character_flag = developing_illness
+							has_character_flag = disease_not_serious
+						}
+					}
+					set_character_flag = disease_not_serious
+					character_event = { id = RIP.5003 days = 5 }
+					character_event = { id = RIP.11005 days = 10 random = 50 }
+				}
+			}
+		}
+	}
+}
+
+character_event = { #Black Broth
+	id = DAQIN.00513
+	title = DAQIN.00513.title
+	desc = DAQIN.00513.desc
+	picture = GFX_evt_feast
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00513.OPTA
+		random_list = {
+			10 = { #ah, delicious!
+				random = {
+					chance = 20
+					change_martial = 1
+				}
+			}
+			5 = { #As hardy as the Spartans!
+				random = {
+					chance = 50
+					add_trait = robust
+				}
+			}
+			10 = { #I'm not a spartan...
+				random = {
+					chance = 20
+					if = {
+						limit = { trait = brave }
+						remove_trait = brave
+					}
+					else = { add_trait = craven }
+				}
+			}
+		}
+	}
+}
+
+character_event = { #mystery soup!
+	id = DAQIN.00514
+	title = DAQIN.00514.title
+	desc = DAQIN.00514.desc
+	picture = GFX_evt_feast
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00514.OPTA
+		hidden_tooltip = {
+			random_list = {
+				20 = { #so sick you're feeble
+					modifier = {
+						factor = 0
+						trait = robust
+					}
+					add_trait = feeble
+					if = {
+						limit = {
+							NOR = {
+								num_of_symptoms = 1
+								is_ill = yes
+								has_character_flag = developing_illness
+								has_character_flag = disease_not_serious
+							}
+						}
+						set_character_flag = got_food_poisoning
+						set_character_flag = developing_illness
+						character_event = { id = RIP.5023 days = 5 }
+					}
+				}
+				20 = { #A hearty stew! Gain brawny.
+					modifier = {
+						factor = 0
+						trait = feeble
+					}
+					add_trait = robust
+				}
+				20 = { #Definitely an acquired taste... but filling! Gain temperate.
+					add_trait = temperate
+					modifier = {
+						factor = 0
+						trait = gluttonous
+					}
+				}
+				20 = { #Addictive. More, you need more! Become glutton and fat.
+					add_trait = gluttonous
+					gain_weight_medium_effect = yes
+					modifier = {
+						factor = 0
+						trait = temperate
+					}
+				}
+				20 = { #It's WHAT?! Gain brave.
+					add_trait = brave
+				}
+				10 = { #Start of Cravings event chain.
+					character_event = { id = DAQIN.00516 days = 30 }
+				}
+			}
+		}
+	}
+}
+
+character_event = { #cannibal soup
+	id = DAQIN.00515
+	title = DAQIN.00515.title
+	desc = DAQIN.00515.desc
+	picture = GFX_evt_whispers
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00515.OPTA
+		remove_trait = stressed
+		remove_trait = depressed
+		add_character_modifier = {
+			name = well_fed
+			years = 2
+		}
+		random = {
+			chance = 20
+			change_intrigue = 1
+		}
+	}
+}
+
+character_event = { #what was the mystery meat?!
+	id = DAQIN.00516
+	title = DAQIN.00516.title
+	desc = DAQIN.00516.desc
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = { #buy more meats! Even the exotic ones!
+		name = DAQIN.00516.OPTA
+		scaled_wealth = {
+			value = -0.10
+			min = -10
+			max = -200
+		}
+		narrative_event = { id = DAQIN.00517 days = 30 }
+	}
+	option = { #Just try and forget about it.
+		add_trait = stressed
+		add_character_modifier = {
+			name = sleep_deprivation
+			years = 1
+		}
+	}
+}
+
+narrative_event = { #realises meat was human
+	id = DAQIN.00517
+	title = DAQIN.00517.title
+	desc = DAQIN.00517.desc
+	picture = GFX_evt_bloody_tools
+	border = GFX_event_narrative_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = { #EAT THEM
+		name = DAQIN.00517.OPTA
+		character_event = { id = DAQIN.00518 }
+		random_courtier = {
+			death = {
+				death_reason = death_murder_unknown_butchered
+				killer = ROOT
+			}
+		}
+	}
+	option = { #Repent and regret
+		name = DAQIN.00517.OPTB
+		add_trait = depressed
+		if = {
+			limit = { religion_group = christian }
+			add_character_modifier = {
+				name = rampant_sinner_christian
+				years = 2
+			}
+		}
+		else = { 
+			add_character_modifier = {
+				name = rampant_sinner_dharmic
+				years = 2
+			}
+		}
+	}
+	option = { #No it's not.
+		name = DAQIN.00517.OPTC
+		trigger = { trait = cynical }
+		tooltip_info = cynical
+		character_event = { id = DAQIN.00519 }
+	}
+}
+
+character_event = { #chowed down
+	id = DAQIN.00518
+	title = DAQIN.00518.title
+	desc = DAQIN.00518.desc
+	picture = GFX_evt_staked_hf
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00518.OPTA
+		add_trait = cannibal_trait
+	}
+}
+
+character_event = { #Cynical opt-out
+	id = DAQIN.00519
+	title = DAQIN.00519.title
+	desc = DAQIN.00519.desc
+	picture = GFX_evt_suspicious_noble
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = DAQIN.00519.OPTA
+		tiered_prestige_negative_effect = yes
+	}
+}

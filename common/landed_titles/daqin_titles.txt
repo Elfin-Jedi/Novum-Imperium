@@ -1,0 +1,71 @@
+e_fulin = { #China-fied Byzantine Empire
+	color = { 100 20 240 }
+	color2 = { 235 230 145 }
+	purple_born_heirs = yes
+	culture = sinogreek
+	short_name = yes #means it'll just be "Fulin" not "The Empire of Fulin". Which would still be accurate, but can be enabled if the player really wants in the renaming thing.
+	capital = 496 #Constantinople
+	
+	allow = {
+		always = no # Only created through special event
+	}
+}
+
+e_daqin = { #China-fied Rome
+	color = { 200 0 0 }
+	color2 = { 255 255 255 }
+	purple_born_heirs = yes
+	culture = sinoroman
+	short_name = yes
+	capital = 333 #Rome
+	
+	allow = {
+		always = no
+	}
+}
+
+d_forbidden_legion = {
+	color={ 80 80 80 }
+	color2={ 80 40 80 }
+	
+	graphical_culture = romangfx
+
+	capital = 496
+
+	religion = orthodox
+	culture = sinogreek
+	
+	mercenary = yes
+
+	title = "CAPTAIN" #Unique-ify this at some stage maybe i don't even care anymore
+	foa = "CAPTAIN_FOA"
+	title_female = "CAPTAIN_FEMALE"
+
+	landless = yes
+	primary = yes
+	strength_growth_per_century = 1.00
+	mercenary_type = han_mid_low_composition
+}
+
+d_tyrian_guard = {
+	color={ 150 60 145 }
+	color2={ 150 60 145 }
+	
+	graphical_culture = byzantinegfx
+	
+	capital = 333
+	
+	religion = taoist
+	culture = han
+	
+	mercenary = yes
+	
+	title = "CAPTAIN" #Fix this at some point
+	foa = "CAPTAIN_FOA"
+	title_female = "CAPTAIN_FEMALE"
+	
+	landless = yes
+	primary = yes
+	strength_growth_per_century = 1.00
+	mercenary_type = sardinian_company_composition	
+}

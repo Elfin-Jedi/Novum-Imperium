@@ -1882,7 +1882,12 @@ character_event = { 		#Current level reaches maximum level
 			remove_character_modifier = da_intensive_training
 		}
 		
-		character_event = { id = darkages.72691 }
+		if = {
+			limit = { 
+				NOT = { lifestyle_traits = 1 } 
+			}
+			character_event = { id = darkages.72691 }
+		}
 		
 		clr_character_flag = da_ct_1
 		clr_character_flag = da_ct_2

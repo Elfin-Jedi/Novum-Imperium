@@ -50,6 +50,21 @@ indoroman_invasion = {
 		}
 		FROM = {
 		OR = {
+		AND = {
+		has_global_flag = indorome_consolidatio
+		OR = {
+			any_realm_title = {
+			OR = {
+			de_jure_liege_or_above = e_tibet
+			}
+			}
+			any_realm_province = {
+			OR = {
+			de_jure_liege_or_above = e_tibet
+			}
+			}
+			}
+		}
 			any_realm_title = {
 			    OR = {
 				de_jure_liege_or_above = e_indo_roman_empire
@@ -87,6 +102,7 @@ indoroman_invasion = {
 				de_jure_liege_or_above = e_bengal
 				de_jure_liege_or_above = e_deccan
 				de_jure_liege_or_above = e_rajastan
+				de_jure_liege_or_above = e_tibet
 				de_jure_liege_or_above = e_burma # for the personal mod
 				}
 			}
@@ -94,6 +110,72 @@ indoroman_invasion = {
 	}
 
 	on_success_title = {
+	
+	hidden_tooltip = {
+	if = {
+	limit = {
+	ROOT = {
+	has_character_modifier = ire_charge_the_west
+	}
+	}
+	ROOT = {
+		occupy_minors_of_occupied_settlements = FROM
+		gain_all_occupied_titles = FROM
+			gain_settlements_under_title = {
+				title = e_indo_roman_empire
+				enemy = FROM
+			}
+			gain_settlements_under_title = {
+				title = e_bengal
+				enemy = FROM
+			}
+			gain_settlements_under_title = {
+				title = e_deccan
+				enemy = FROM
+			}
+			gain_settlements_under_title = {
+				title = e_rajastan
+				enemy = FROM
+			}
+			gain_settlements_under_title = {
+				title = e_burma # for the personal mod
+				enemy = FROM
+			}
+			if = {
+			limit = {
+			has_global_flag = indorome_consolidatio
+			}
+			gain_settlements_under_title = {
+				title = e_tibet
+				enemy = FROM
+			}
+			}
+			hidden_tooltip = {
+			ROOT = {
+			change_infamy = {
+			value = -100
+			localisation = "Ended Unification War"
+			}
+				if = {
+					limit = {
+						has_dlc = "Legacy of Rome"
+						OR = { 
+							has_landed_title = e_indo_roman_empire
+							has_landed_title = k_walakrios_expedition
+						}
+						OR = { 
+							religion_group = christian
+							religion = hellenic_pagan
+							religion = hellenic_pagan_reformed
+						}
+					}
+					character_event = { id = LoR.30 days = 12 }
+				}
+			}
+		}
+		}
+	}
+	}
 
 		ROOT = {
 		occupy_minors_of_occupied_settlements = FROM
@@ -117,6 +199,15 @@ indoroman_invasion = {
 			vassalize_or_take_under_title_destroy_duchies = {
 				title = e_burma # for the personal mod
 				enemy = FROM
+			}
+			if = {
+			limit = {
+			has_global_flag = indorome_consolidatio
+			}
+			vassalize_or_take_under_title_destroy_duchies = {
+				title = e_tibet
+				enemy = FROM
+			}
 			}
 			hidden_tooltip = {
 			ROOT = {

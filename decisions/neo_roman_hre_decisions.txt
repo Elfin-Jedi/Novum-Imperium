@@ -1,0 +1,205 @@
+decisions = {
+
+	romanise_hre = { #This ISN'T about forming a new Western Rome. You already think you are. It's about ROMANISING.
+		
+		only_independent = yes
+		
+		is_high_prio = yes
+		ai_check_interval = 120
+		
+		potential = {
+			has_landed_title = e_hre
+			NOR = {
+				has_landed_title = e_byzantium
+				has_global_flag = rome_restored
+				has_global_flag = flag_started_roman_renaissance
+			}
+		}
+		allow = {
+			capital_scope = { province = 333 } #Has to have Rome as a capital, ergo has to personally hold Rome
+			any_demesne_title = { title = d_latium } #You need to personally be duke of Latium
+			OR = {
+				culture_group = central_germanic
+				culture_group = latin
+			}
+			war = no
+			is_adult = yes
+			is_incapable = no
+			prestige = 1250
+		}
+		
+		effect = {
+			set_global_flag = flag_started_roman_renaissance
+			prestige = -500
+			narrative_event = { id = NIR.05 } #Notification event
+			any_playable_ruler = {
+				limit = { ai = no }
+				narrative_event = { id = NIR.05 } #Notification event
+			}
+		}
+		revoke_allowed = { always = no }
+	}
+	
+	adopt_roman_culture_hre = {
+		only_playable = yes
+		ai_check_interval = 120
+		
+		potential = {
+			top_liege = {
+				AND = {
+					has_landed_title = e_hre
+					culture = roman
+				}
+			}
+			NOT = { culture = roman }
+			has_global_flag = flag_started_roman_renaissance
+		}
+		allow = {
+			show_only_failed_conditions = yes
+			OR = { 
+				culture_group = latin 
+				culture_group = byzantine
+			}
+		}
+		
+		effect = {
+			culture = roman
+			hidden_tooltip = {
+				any_courtier_or_vassal = { 
+					limit = { lower_tier_than = COUNT }
+					culture = roman
+				}
+			}
+			capital_scope = { culture = roman }
+			custom_tooltip = {
+				text = tooltip_roman_culture_spreads
+				roman_culture_convert_effect = yes
+			}
+		}
+		revoke_allowed = { always = no }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				capital_scope = { culture = roman } 
+			}
+			modifier = {
+				factor = 0.01 #Would consider it a step down.
+				culture = greek
+			}
+			modifier = {
+				factor = 0.1
+				culture_group = central_germanic #Offended you left the HRE heartland culture
+			}
+		}
+	}
+	
+	unify_roman_empire = { #This is the 'make unification the real Roman Empire' decision, because so much is linked to the real Roman Empire
+		only_independent = yes
+		
+		is_high_prio = yes
+		ai_check_interval = 120
+		
+		potential = {
+			OR = {
+				has_landed_title = e_hre
+				has_landed_title = e_byzantium
+				has_landed_title = e_latin_empire
+			}
+			is_adult = yes
+			is_incapable = no
+			NOT = { has_global_flag = rome_restored }
+			OR = {
+				religion_group = christian #Perhaps too broad, but if you manage to make your heresy that widespready... hey man, nobody can argue with you.
+				religion_openly_hellenic_or_reformed_trigger = yes
+			}
+			is_heretic = no
+			OR = { #An Eastern Empire needs to exist
+				e_byzantium = { has_holder = yes }
+				e_latin_empire = { has_holder = yes }
+			}
+			e_hre = { has_holder = yes } #A Western Empire needs to exist
+		}
+		allow = {
+			OR = {
+				AND = {
+					has_landed_title = e_hre
+					has_landed_title = e_byzantium
+				}
+				AND = {
+					has_landed_title = e_hre
+					has_landed_title = e_latin_empire
+					e_byzantium = { has_holder = no } #No legitimate successor to Byzantium can exist
+					e_nicaea = { has_holder = no }
+				}
+			}
+			OR = {
+				has_landed_title = c_roma
+				religion_head = { de_facto_liege = ROOT }
+			}
+			has_landed_title = c_byzantion
+			religion_authority = 0.8 #A little more than controlling all holy sites. Catholics can basically always do it, Orthodox will need core Roman territories
+			religion_head = { #Pope or Patriarch needs to like you (or the Hellenic Pope if he exists, I guess)
+				opinion = {
+					who = ROOT
+					value = 50
+				}
+			}
+			war = no
+			prestige = 2500
+			piety = 500
+		}
+		effect = {
+			set_global_flag = rome_restored
+			hidden_tooltip = {
+				e_roman_empire = {
+					show_scope_change = no
+					grant_title = ROOT
+					make_primary_title = yes
+					copy_title_laws = PREV
+					copy_title_history = e_byzantium #Only Byzantium's history goes back to Rome. HRE confirmed not true Rome, clearly.
+					add_law = succ_byzantine_elective #This is just to be safe, it's what makes the player Imperial gov. type
+				}
+			}
+			any_demesne_title = {
+				limit = {
+					tier = EMPEROR
+					NOT = { title = e_roman_empire }
+				}
+				destroy_landed_title = THIS
+			}
+			any_playable_ruler = {
+				limit = { ai = no }
+				narrative_event = { id = NIR.06 } #Notification event for players
+			}
+			narrative_event = { id = NIR.06 } #Notification event for the restorer
+			
+			if = { #Hellenic Resurgence
+				limit = {
+					has_dlc = "Holy Fury" 
+					religion_group = christian
+					has_game_rule = {
+						name = hellenism_rule
+						value = on
+					}
+					OR = { 
+						culture = greek 
+						culture = italian
+						culture = roman
+					}
+				}
+				character_event = { id = HF.23106 days = 155 }
+			}
+			if = { #Burn and Rebuild Rome.
+				limit = { 
+					has_dlc = "Holy Fury" 
+					333 = { any_province_holding = { holding_type = temple count = 2 } } #Check if Gengis Khan or whomever hasn't already leveled the place down.
+				}
+				333 = { province_event = { id = HF.23100 days = 60 } }
+			}
+			##Days for burning shorter and resurgance longer. Burning sets the flag 'primed for conversion', which directly relates to Hellenic resurgence - in the base game this never matters, since the event chain hellenic conversion will ALWAYS fire before the burning by quite a wide margin. I've swapped them around - a bit. Originally the short one was 15 days but that seemed way too short. 60 is more reasonable, imo.
+		}
+		
+		revoke_allowed = { always = no }
+	}
+}	

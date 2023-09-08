@@ -1,0 +1,165 @@
+government_flavor = {
+	name = gov_roman_imperialtwo_governmentweak
+	graphics = GFX_evt_victory_arch_byzantine
+	priority = 5
+	trigger = {
+		primary_title = {
+		capital_holding = {
+			NOT = { holding_type = city }
+		}
+		}
+		government = roman_imperialtwo_government
+		calc_true_if = {
+			amount = 6
+			has_law = law_voting_power_1
+			has_law = banish_voting_power_1
+			has_law = execution_voting_power_1
+			has_law = revoke_title_voting_power_1
+			has_law = grant_title_voting_power_1
+			has_law = imprison_voting_power_1
+			has_law = war_voting_power_1		
+		}
+			}
+					
+}
+
+government_flavor = {
+	name = gov_roman_imperialtwo_governmentmedium
+	graphics = GFX_evt_victory_arch_byzantine
+	priority = 5
+	trigger = {
+		primary_title = {
+		capital_holding = {
+			NOT = { holding_type = city }
+		}
+		}
+		government = roman_imperialtwo_government
+		OR = {
+			NOT = { has_dlc = "Conclave" }
+			calc_true_if = {
+				amount = 2
+				has_law = banish_voting_power_0
+				has_law = execution_voting_power_0
+				has_law = revoke_title_voting_power_0
+				has_law = grant_title_voting_power_0
+				has_law = imprison_voting_power_0
+				has_law = war_voting_power_0
+			}
+		}
+		NOT = {
+			calc_true_if = {
+				amount = 7
+				has_law = law_voting_power_0
+				has_law = banish_voting_power_0
+				has_law = execution_voting_power_0
+				has_law = revoke_title_voting_power_0
+				has_law = grant_title_voting_power_0
+				has_law = imprison_voting_power_0
+				has_law = war_voting_power_0
+			}			
+		}
+			}
+					
+}
+
+government_flavor = {
+	name = gov_roman_imperialtwo_governmentabsolute
+	graphics = GFX_evt_victory_arch_byzantine
+	priority = 5
+	trigger = {
+		primary_title = {
+		capital_holding = {
+			NOT = { holding_type = city }
+		}
+		}
+		government = roman_imperialtwo_government
+		has_law = law_voting_power_0
+		has_law = banish_voting_power_0
+		has_law = execution_voting_power_0
+		has_law = revoke_title_voting_power_0
+		has_law = grant_title_voting_power_0
+		has_law = imprison_voting_power_0
+		has_law = war_voting_power_0	
+			}
+					
+}
+
+government_flavor = {
+	name = gov_roman_imperialtwo_governmentcityweak
+	graphics = GFX_evt_victory_arch_byzantine
+	priority = 6
+	trigger = {
+		capital_scope = {
+			holding_type = city
+		}
+		government = roman_imperialtwo_government
+		calc_true_if = {
+			amount = 6
+			has_law = law_voting_power_1
+			has_law = banish_voting_power_1
+			has_law = execution_voting_power_1
+			has_law = revoke_title_voting_power_1
+			has_law = grant_title_voting_power_1
+			has_law = imprison_voting_power_1
+			has_law = war_voting_power_1		
+		}
+			}
+					
+}
+
+government_flavor = {
+	name = gov_roman_imperialtwo_governmentcitymedium
+	graphics = GFX_evt_victory_arch_byzantine
+	priority = 6
+	trigger = {
+		capital_scope = {
+			holding_type = city
+		}
+		government = roman_imperialtwo_government
+		OR = {
+			NOT = { has_dlc = "Conclave" }
+			calc_true_if = {
+				amount = 2
+				has_law = banish_voting_power_0
+				has_law = execution_voting_power_0
+				has_law = revoke_title_voting_power_0
+				has_law = grant_title_voting_power_0
+				has_law = imprison_voting_power_0
+				has_law = war_voting_power_0
+			}
+		}
+		NOT = {
+			calc_true_if = {
+				amount = 7
+				has_law = law_voting_power_0
+				has_law = banish_voting_power_0
+				has_law = execution_voting_power_0
+				has_law = revoke_title_voting_power_0
+				has_law = grant_title_voting_power_0
+				has_law = imprison_voting_power_0
+				has_law = war_voting_power_0
+			}			
+		}
+			}
+					
+}
+
+government_flavor = {
+	name = gov_roman_imperialtwo_governmentcityabsolute
+	graphics = GFX_evt_victory_arch_byzantine
+	priority = 6
+	trigger = {
+		capital_scope = {
+			holding_type = city
+		}
+		government = roman_imperialtwo_government
+		has_law = law_voting_power_0
+		has_law = banish_voting_power_0
+		has_law = execution_voting_power_0
+		has_law = revoke_title_voting_power_0
+		has_law = grant_title_voting_power_0
+		has_law = imprison_voting_power_0
+		has_law = war_voting_power_0	
+			}
+					
+}

@@ -1,0 +1,35 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+
+# inherit = yes  # Heirs inherit this opinion
+
+# Opinion modifiers can give a reason to do the following actions without penalties
+# prison_reason
+# banish_reason
+# execute_reason
+# revoke_reason
+# divorce_reason
+
+# enemy = yes # This will make the characters enemies of eachother ( effectively at war )
+# crime = yes # Counts as my foe (rivals do too) for the is_foe trigger
+
+##########################################################################
+# MAIN
+##########################################################################
+
+
+opinion_knighted_me = {
+	opinion = 50
+}
+opinion_knighted_me = {
+	opinion = 25
+	years = 20
+	stacking = no
+}
+
+opinion_squired_me = {
+	opinion = 15
+	years = 8
+	stacking = no
+}

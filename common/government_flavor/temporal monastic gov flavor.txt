@@ -1,0 +1,89 @@
+government_flavor = {
+	name = gov_theocratic_feudal_governmenttwoblessed
+	graphics = GFX_evt_religious_exultation
+	priority = 4
+	trigger = {
+		government = theocratic_feudal_governmenttwo
+		calc_true_if = {
+			amount = 6
+			has_law = law_voting_power_1
+			has_law = banish_voting_power_1
+			has_law = execution_voting_power_1
+			has_law = revoke_title_voting_power_1
+			has_law = grant_title_voting_power_1
+			has_law = imprison_voting_power_1
+			has_law = war_voting_power_1		
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_theocratic_feudal_governmenttwosacred
+	graphics = GFX_evt_magic_ritual
+	priority = 4
+	trigger = {
+		government = theocratic_feudal_governmenttwo
+		OR = {
+			NOT = { has_dlc = "Conclave" }
+			calc_true_if = {
+				amount = 2
+				has_law = banish_voting_power_0
+				has_law = execution_voting_power_0
+				has_law = revoke_title_voting_power_0
+				has_law = grant_title_voting_power_0
+				has_law = imprison_voting_power_0
+				has_law = war_voting_power_0
+			}
+		}
+		NOT = {
+			calc_true_if = {
+				amount = 7
+				has_law = law_voting_power_0
+				has_law = banish_voting_power_0
+				has_law = execution_voting_power_0
+				has_law = revoke_title_voting_power_0
+				has_law = grant_title_voting_power_0
+				has_law = imprison_voting_power_0
+				has_law = war_voting_power_0
+			}			
+		}	
+	}
+}
+
+government_flavor = {
+	name = gov_theocratic_feudal_governmenttwodivine
+	graphics = GFX_evt_shaman
+	priority = 4
+	trigger = {
+		government = theocratic_feudal_governmenttwo
+		has_law = law_voting_power_0
+		has_law = banish_voting_power_0
+		has_law = execution_voting_power_0
+		has_law = revoke_title_voting_power_0
+		has_law = grant_title_voting_power_0
+		has_law = imprison_voting_power_0
+		has_law = war_voting_power_0	
+	}
+}
+
+government_flavor = {
+	name = gov_theocratic_feudal_governmenttwovassal
+	graphics = GFX_evt_society_joining
+	priority = 5
+	trigger = {
+			government = theocratic_feudal_governmenttwo
+			OR = {
+				independent = no
+				has_law = succession_voting_power_1
+			}		
+	}
+}
+
+government_flavor = {
+	name = gov_theocratic_feudal_governmenttwobackup
+	graphics = GFX_evt_ritual_scroll
+	priority = 3
+	trigger = {
+			government = theocratic_feudal_governmenttwo		
+	}
+}

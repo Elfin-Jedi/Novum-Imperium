@@ -1,0 +1,36 @@
+decisions = {
+
+renounce_hre_decision = {
+		is_high_prio = yes
+		ai_check_interval = 1
+		filter = all
+		from_potential = {
+		}
+		potential = {
+			is_tributary = {
+				type = free_imperial_city_trib
+			}
+			is_ruler = yes
+		}
+		allow = {
+			NOT = { shares_realm_border_with = suzerain }
+			NOT = {
+				has_opinion_modifier = {
+					who = suzerain
+					name = granted_immediacy
+				}
+			}
+		}
+		effect = {
+		suzerain = {
+			letter_event = {
+				id = FGE.0005
+				days = 1
+			}
+			}
+		remove_tributary = suzerain
+		}
+		ai_will_do = 1
+}
+
+}

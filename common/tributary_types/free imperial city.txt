@@ -1,0 +1,37 @@
+free_imperial_city_trib = {
+	tributary_name = trib_free_city
+	tributary_plural = trib_free_cities
+	suzerain_name = suz_free_city
+	tribute_name = trib_free_city_exch
+	breaks_at_suzerain_death = no
+	breaks_at_tributary_death = no
+	suzerain_must_defend = yes
+	tributary_can_be_summoned = yes
+	tributary_must_defend = no
+	tributaries_can_infight = yes
+	suzerain_can_join_infighting = no
+	tributaries_can_unite = no
+	breaks_on_realm_change = yes
+	icon = 7
+	cbs_against_suzerain = {
+		free_tributary_cb
+	}
+	income_tribute_percentage = {
+		value = 0.151
+	}
+	reinforce_tribute_percentage = {
+		value = 0.151
+	}
+	prestige_to_suzerain = {
+		value = 0
+	}
+	prestige_to_tributary = {
+		value = 0
+	}
+	piety_to_suzerain = {
+		value = 0
+	}
+	piety_to_tributary = {
+		value = 0
+	}
+}

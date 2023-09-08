@@ -1,0 +1,25 @@
+decisions = {
+
+adopt_anarchy_gov_decision = {
+		is_high_prio = yes
+		ai_check_interval = 1
+		filter = all
+		from_potential = {
+		}
+		potential = {
+			rebel = yes
+			is_patrician = no
+				}
+		allow = {
+			rebel = yes
+			is_patrician = no
+		}
+		effect = {
+			ROOT = {
+				set_government_type = anarchy_government
+			}
+		}
+		ai_will_do = 1
+}
+
+}

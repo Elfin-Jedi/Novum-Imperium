@@ -1,0 +1,504 @@
+song = {
+	name = "Civilization V OST Askia Peace Theme Gambia Folk Song.ogg"
+	song_name = "Gambia Folk Song"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = west_african_pagan_reformed }
+			NOT = { religion = west_african_pagan }
+			NOT = { culture_group = central_african }
+			NOT = { culture_group = west_african }
+			NOT = { culture = daju }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Civilization V OST Askia War Theme Gambia Folk Song.ogg"
+	song_name = "Gambia Folk Song"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = west_african_pagan_reformed }
+			NOT = { religion = west_african_pagan }
+			NOT = { culture_group = central_african }
+			NOT = { culture_group = west_african }
+			NOT = { culture = daju }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Civilization V OST Shaka Peace Theme Inhliziyo Yami.ogg"
+	song_name = "Inhliziyo Yami"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = west_african_pagan_reformed }
+			NOT = { religion = west_african_pagan }
+			NOT = { culture_group = central_african }
+			NOT = { culture_group = west_african }
+			NOT = { culture = daju }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Civilization V OST Shaka War Theme Inhliziyo Yami.ogg"
+	song_name = "Inhliziyo Yami"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = west_african_pagan_reformed }
+			NOT = { religion = west_african_pagan }
+			NOT = { culture_group = central_african }
+			NOT = { culture_group = west_african }
+			NOT = { culture = daju }
+		}
+		modifier = {
+			factor = 0
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Two Steps From Hell - African Sunset.ogg"
+	song_name = "African Sunset"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = west_african_pagan_reformed }
+			NOT = { religion = west_african_pagan }
+			NOT = { culture_group = central_african }
+			NOT = { culture_group = west_african }
+			NOT = { culture = daju }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "The Hunting Party.ogg"
+	song_name = "Hunting Party"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = west_african_pagan_reformed }
+			NOT = { religion = west_african_pagan }
+			NOT = { culture_group = central_african }
+			NOT = { culture_group = west_african }
+			NOT = { culture = daju }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "African Fantasy Music - Law of the Jungle.ogg"
+	song_name = "Law of the Jungle"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = west_african_pagan_reformed }
+			NOT = { religion = west_african_pagan }
+			NOT = { culture_group = central_african }
+			NOT = { culture_group = west_african }
+			NOT = { culture = daju }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Cool African Music - Guinea.ogg"
+	song_name = "Guinea"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = west_african_pagan_reformed }
+			NOT = { religion = west_african_pagan }
+			NOT = { culture_group = central_african }
+			NOT = { culture_group = west_african }
+			NOT = { culture = daju }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Cool African Music - Serengeti.ogg"
+	song_name = "Serengeti"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = west_african_pagan_reformed }
+			NOT = { religion = west_african_pagan }
+			NOT = { culture_group = central_african }
+			NOT = { culture_group = west_african }
+			NOT = { culture = daju }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "African Jungle Music - Monkey Rainforest.ogg"
+	song_name = "Monkey Rainforest"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = west_african_pagan_reformed }
+			NOT = { religion = west_african_pagan }
+			NOT = { culture_group = central_african }
+			NOT = { culture_group = west_african }
+			NOT = { culture = daju }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "African Instrumental Music - Jungle Wildlife.ogg"
+	song_name = "Jungle Wildlife"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = west_african_pagan_reformed }
+			NOT = { religion = west_african_pagan }
+			NOT = { culture_group = central_african }
+			NOT = { culture_group = west_african }
+			NOT = { culture = daju }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "African Music Instrumental - The Watering Hole.ogg"
+	song_name = "The Watering Hole"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = west_african_pagan_reformed }
+			NOT = { religion = west_african_pagan }
+			NOT = { culture_group = central_african }
+			NOT = { culture_group = west_african }
+			NOT = { culture = daju }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "David Hirschfelder - A Sacred Place.ogg"
+	song_name = "A Sacred Place"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = west_african_pagan_reformed }
+			NOT = { religion = west_african_pagan }
+			NOT = { culture_group = central_african }
+			NOT = { culture_group = west_african }
+			NOT = { culture = daju }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Gabriel Heinrich - Rising From Ashes (Trailer Music)(Epic Africa).ogg"
+	song_name = "Rising From Ashes"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = west_african_pagan_reformed }
+			NOT = { religion = west_african_pagan }
+			NOT = { culture_group = central_african }
+			NOT = { culture_group = west_african }
+			NOT = { culture = daju }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Jewel of Africa - Daniel Heath.ogg"
+	song_name = "Jewel of Africa"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = west_african_pagan_reformed }
+			NOT = { religion = west_african_pagan }
+			NOT = { culture_group = central_african }
+			NOT = { culture_group = west_african }
+			NOT = { culture = daju }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Epic African Music - Chill Out Vocals Soundtracks Percussion Only 4.ogg"
+	song_name = "Epic African Cinematic Adventure"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = west_african_pagan_reformed }
+			NOT = { religion = west_african_pagan }
+			NOT = { culture_group = central_african }
+			NOT = { culture_group = west_african }
+			NOT = { culture = daju }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 4
+			war = yes
+		}
+	}
+	volume = 0.6
+}
+song = {
+	name = "Hakuna Matata (From The Lion King Soundtrack).ogg"
+	song_name = "Hakuna Matata"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = west_african_pagan_reformed }
+			NOT = { religion = west_african_pagan }
+			NOT = { culture_group = central_african }
+			NOT = { culture_group = west_african }
+			NOT = { culture = daju }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Mali Theme - Ancient (Civilization 6 OST ) Mali Sadjo Masana Seesay.ogg"
+	song_name = "Mali Sadjo; Masana Seesay (Ancient)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = west_african_pagan_reformed }
+			NOT = { religion = west_african_pagan }
+			NOT = { culture_group = central_african }
+			NOT = { culture_group = west_african }
+			NOT = { culture = daju }
+		}
+		modifier = {
+			factor = 2
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Mali Theme - Medieval (Civilization 6 OST ) Mali Sadjo Masana Seesay.ogg"
+	song_name = "Mali Sadjo; Masana Seesay (Medieval)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = west_african_pagan_reformed }
+			NOT = { religion = west_african_pagan }
+			NOT = { culture_group = central_african }
+			NOT = { culture_group = west_african }
+			NOT = { culture = daju }
+		}
+		modifier = {
+			factor = 4
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Mali Theme - Industrial (Civilization 6 OST ) Mali Sadjo Masana Seesay.ogg"
+	song_name = "Mali Sadjo; Masana Seesay (Industrial)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = west_african_pagan_reformed }
+			NOT = { religion = west_african_pagan }
+			NOT = { culture_group = central_african }
+			NOT = { culture_group = west_african }
+			NOT = { culture = daju }
+		}
+		modifier = {
+			factor = 0.5
+			war = no
+		}	
+		modifier = {
+			factor = 0
+			war = yes
+		}
+	}
+	volume = 2
+}
+song = {
+	name = "Mali Theme - Atomic (Civilization 6 OST )Mali Sadjo Masana Seesay.ogg"
+	song_name = "Mali Sadjo; Masana Seesay (Atomic)"
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { religion = west_african_pagan_reformed }
+			NOT = { religion = west_african_pagan }
+			NOT = { culture_group = central_african }
+			NOT = { culture_group = west_african }
+			NOT = { culture = daju }
+		}
+		modifier = {
+			factor = 0.1
+			war = no
+		}	
+		modifier = {
+			factor = 0.1
+			war = yes
+		}
+	}
+	volume = 2
+}

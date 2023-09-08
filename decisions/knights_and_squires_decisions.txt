@@ -1,0 +1,279 @@
+# filter = [self/court/home_court/vassals/sub_realm/realm/dynasty/all] ('self' MUST be set for decisions targetting only the taker, the other filter types can be set to lessen CPU load)
+# ai_target_filter = [self/court/home_court/vassals/sub_realm/realm/dynasty/all] (which characters for which the AI evaluates the decision.)
+#	court: all characters in the AI's host court, including prisoners, and characters currently away (wards, prisoners, etc)
+#	home_court: all characters in the AI's home court, including prisoners, and characters currently away (wards, prisoners, etc)
+#	vassals: direct vassal rulers of the AI's employer
+#	sub_realm: all characters below the AI's employer
+#	realm: all characters in the same top realm as the AI
+#	dynasty: all members of the same dynasty
+#	all: all living characters (Avoid if possible. VERY CPU-HEAVY!)
+#	
+
+targetted_decisions = {
+	knight_character = {
+		ai_target_filter = court
+		filter = court
+		diplomacy_icon = GFX_knight_character
+		from_potential = {
+			trait = knight
+			prestige = 50
+		}
+		potential = {
+			religion_group = christian
+			is_female = no
+			age = 16
+			NOT = {
+				trait = knight
+			}	
+		}
+		allow = {
+			age = 16
+			religion_group = christian
+			is_female = no
+			martial = 12
+			show_only_failed_conditions = yes
+			NOT = {
+				trait = squire
+			}	
+		}
+		effect = {
+			FROM = {
+				prestige = -25
+			}
+			FROM = {
+				character_event = {
+					id = knightly.0002
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	take_squire = {
+		ai_target_filter = court
+		filter = court
+		diplomacy_icon = GFX_take_ward_squire
+		from_potential = {
+			trait = knight
+		}
+		potential = {
+			educator = {
+				character = FROM
+				}
+			OR = {
+				is_female = no
+				AND = {
+					is_female = yes
+					dynasty = FROM
+				}
+			}
+			NOT = {
+				trait = knight
+			}
+			NOT = {
+				trait = squire
+			}
+		}
+		allow = {
+			is_feudal = yes
+			show_only_failed_conditions = yes
+			age = 8
+
+			FROM = {
+				trait = knight
+			}
+		}
+		effect = {		
+			FROM = {
+				prestige = -20
+			}
+			FROM = {
+				character_event = {
+					id = knightly.0001
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	buy_knighthood = {
+		ai_target_filter = self
+		filter = self
+		diplomacy_icon = GFX_buy_knighthood
+		from_potential = {
+			is_ruler = yes
+			ai = no
+		}
+		potential = {
+			age = 16
+			religion_group = christian
+			NOT = {
+				trait = knight
+			}
+		}
+		allow = {
+			is_feudal = yes
+			age = 16
+			religion_group = christian
+			wealth = 150
+		}
+		effect = {
+			remove_trait = squire
+			add_trait = knight
+			ROOT = {
+				wealth = -150
+				prestige = -200
+			}
+		}
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 0.02
+				NOT = { martial = 10 }
+			} 
+			modifier = {
+				factor = 0.001
+				OR = {
+				trait = honest
+				trait = proud
+				}
+			} 
+			modifier = {
+				factor = 3
+				trait = craven
+			} 
+			modifier = {
+				factor = 0.01
+				NOT = { wealth = 400 }
+			} 
+			modifier = {
+				factor = 0.05
+				is_female = yes
+			} 
+		}
+	}
+	knight_squire = {
+		ai_target_filter = realm
+		filter = realm
+		diplomacy_icon = GFX_knight_character
+		from_potential = {
+			prestige = 25
+			AND = {
+				is_ruler = yes
+				trait = knight
+			}
+		}
+		potential = {
+			religion_group = christian
+			age = 16
+			trait = squire
+		}
+		allow = {
+			age = 16
+			trait = squire
+		}
+		effect = {
+			FROM = {
+				character_event = {
+					id = knightly.003
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	train_squire = {
+		ai_target_filter = court
+		filter = court
+		diplomacy_icon = GFX_duel_decision
+		from_potential = {
+			AND = {
+				is_adult = yes
+				trait = knight
+			}
+		}
+		potential = {
+			religion_group = christian
+			NOT = { has_character_modifier = trained_squire }
+			educator = {
+				character = FROM
+				}
+			OR = {
+				is_female = no
+				AND = {
+					is_female = yes
+					dynasty = FROM
+				}
+			}
+			age = 8
+			NOT = { age = 16 }
+			trait = squire
+		}
+		allow = {
+			age = 8
+			NOT = { age = 16 }
+		}
+		effect = {
+			FROM = {
+				character_event = {
+					id = knightly.100
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	train_ward = {
+		ai_target_filter = court
+		filter = court
+		diplomacy_icon = GFX_duel_decision
+		from_potential = {
+			NOT = { religion_group = christian }
+			AND = {
+				is_adult = yes
+				OR = {
+					martial = 10
+					trait = tough_soldier
+					trait = skilled_tactician
+					trait = brilliant_strategist
+					trait = duelist
+				}
+			}
+		}
+		potential = {
+			NOT = { religion_group = christian }
+			educator = {
+				character = FROM
+				}
+			OR = {
+				is_female = no
+				AND = { 
+					is_female = yes
+					dynasty = FROM
+					}
+				}
+			age = 9
+			NOT = { age = 16 }
+		}
+		allow = {
+			age = 9
+			NOT = { age = 16 }
+			NOT = { has_character_modifier = trained_ward }
+		}
+		effect = {
+			FROM = {
+				character_event = {
+					id = roytraining.100
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
