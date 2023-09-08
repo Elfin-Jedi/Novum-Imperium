@@ -90,6 +90,19 @@ action_fabricate_claims = {
 			FROM = { independent = yes }
 			FROM = { ai = no }
 		}
+		OR = {
+			scholarly_soul_trigger = yes
+			statist_soul_trigger = yes
+			has_law = sovereignty_title_law_1
+			has_law = sovereignty_title_law_2
+			AND = {
+				traditional_soul_trigger = yes
+					OR = {
+					has_law = tradition_control_3
+					has_law = tradition_control_4
+				}
+			}
+		}
 		owner = {
 			NOR = {
 				character = FROM # Can't fab claims on self-owned counties
@@ -196,6 +209,7 @@ action_squeeze_peasants = {
 	}
 
 	local_tax_modifier = 0.025
+	local_revolt_risk = 0.005
 
 	events = { 920 921 }
 }
@@ -422,6 +436,8 @@ action_organize_spies = {
 	}
 
 	plot_power_modifier = 0.005
+	arrest_chance_modifier = 0.003
+	local_revolt_risk = -0.003
 
 	events = { 935 936 }
 }
@@ -569,6 +585,8 @@ action_assist_arrest = {
 
 	arrest_chance_modifier = 0.01
 	local_revolt_risk = -0.01
+	local_tax_modifier = -0.005
+	levy_size = -0.005
 
 	events = {  }
 }
@@ -597,17 +615,56 @@ action_inquisition = {
 	}
 
 	trigger = {
+		FROM = {
+			NOR = {
+				trait = tolerant_ruler
+				liege = {
+					trait = tolerant_ruler
+				}
+			}
+			top_liege = {
+				NAND = {
+					trait = tolerant_ruler
+					religion_group = FROM
+				}
+			} #allows foreign vassals to spread their different faiths but not the main religion's ones to overwrite them 
+		}
 		num_of_settlements = 1
 		NAND = {
 			FROM = { job_spiritual = { has_character_modifier = spiritual_refused_pagans } }  # See Event ZE.5040
 			owner = {
-				novum_imperium_is_pagan = yes
-				NOT = { religion = FROM }
+				accepts_missionaries_trigger = yes
 			}
 		}
 		OR = {
-			proselytize_convert_independent_trigger = yes
-			any_province_lord = { under_FROM = yes }
+			owner = {
+				independent = yes
+				NOT = { religion = FROM }
+				accepts_missionaries_trigger = yes
+				is_reformed_religion = no
+				capital_scope = {
+					province = ROOT
+				}
+				controls_religion = no
+				FROM = {
+					higher_tier_than = COUNT
+					OR = {
+						independent = yes
+						higher_tier_than = DUKE
+					}
+					missionary_religions_trigger = yes
+				}
+				NOT = {
+					has_opinion_modifier = { who = FROM modifier = opinion_sent_preacher }
+				}
+			 is_within_diplo_range = FROM	
+			}
+			any_province_lord = {
+				OR = {
+					character = FROM
+					is_liege_or_above = FROM
+				}
+			}
 		}
 	}
 	
@@ -615,7 +672,12 @@ action_inquisition = {
 		tooltip = JOB_PROSELYTIZE_SAME_RELIGION
 		trigger = {
 			religion = FROM
-			any_province_lord = { under_FROM = yes }
+			any_province_lord = {
+				OR = {
+					character = FROM
+					is_liege_or_above = FROM
+				}
+			}
 		}
 		color = { 0 0 255 }
 	}
@@ -624,7 +686,12 @@ action_inquisition = {
 		tooltip = JOB_PROSELYTIZE_DIFFERENT_RELIGION
 		trigger = {
 			NOT = { religion = FROM }
-			any_province_lord = { under_FROM = yes }
+			any_province_lord = {
+				OR = {
+					character = FROM
+					is_liege_or_above = FROM
+				}
+			}
 		}
 		color = { 0 255 0 }
 	}
@@ -697,6 +764,16 @@ action_build_zeal = {
 	potential = {
 		FROM = {
 			is_tribal = yes
+			NOR = {
+				trait = tolerant_ruler
+				liege = { trait = tolerant_ruler }
+			}
+			top_liege = {
+				NAND = {
+					trait = tolerant_ruler
+					religion_group = FROM
+				}
+			}
 		}
 	}
 
@@ -725,6 +802,86 @@ action_hunt_heretics = {
 	events = { MNM.70100 }
 }
 
+action_rel_authority = {
+	attribute = learning
+	
+	potential = {
+		FROM = {
+			OR = {
+				has_law = tradition_control_0
+				has_law = tradition_control_1
+			}
+		}
+	}
+
+	trigger = {
+		any_province_lord = {
+			OR = {
+				character = FROM
+				is_liege_or_above = FROM
+			}
+		}
+		religion = FROM
+		NOT = { has_province_modifier = held_rel_authority_festival_province }
+	}
+	
+	events = { 928 }
+}
+
+action_rel_lore = {
+	attribute = learning
+	
+	potential = {
+		FROM = {
+			#OR = {
+				has_law = tradition_control_4
+			#}
+		}
+	}
+
+	trigger = {
+		any_province_lord = {
+			OR = {
+				character = FROM
+				is_liege_or_above = FROM
+			}
+		}
+		religion = FROM
+		#NOT = { has_province_modifier = lore_searched }
+	}
+	
+	monthly_character_piety = 0.05
+	
+	events = { 908 909 }
+}
+
+action_rel_educate = {
+	attribute = learning
+	
+	potential = {
+		FROM = {
+			OR = {
+				has_law = knowledge_control_3
+				has_law = knowledge_control_4
+			}
+		}
+	}
+
+	trigger = {
+		any_province_lord = {
+			OR = {
+				character = FROM
+				is_liege_or_above = FROM
+			}
+			religion = FROM
+			#NOT = { has_province_modifier = educated_population }
+		}
+	}
+	
+	monthly_character_piety = 0.05
+	
+	events = { 20080 }
+}
 # Lord Spiritual (Muslim only)
 action_charity = {
 	attribute = learning

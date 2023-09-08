@@ -727,17 +727,3 @@ job_spiritual = {
 
 	lift_fow = yes
 }
-
-job_commander = {
-	is_marshal = yes
-	is_voter = no
-	dignity = 1
-
-	allow = {
-		always = no
-	}
-
-	dismiss_trigger = {
-		always = no
-	}
-}

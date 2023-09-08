@@ -1,19 +1,17 @@
-217729 = { # Emperor Shizu of Jin (lived 1039-1092)(reigned )
+217729 = { #完顏劾里鉢 Wanyan Helibo, 金世祖 Emperor Shizu of Jin
 	dynasty = 1051153 # Wanyan - ruling Jin dynasty
 	name = "Helibo"
 	religion = taoist
 	culture = jurchen
-	father = 1000076444
-	#father = X # Emperor
-	#mother = 
+	father = 14190019
 	1039.1.1 = {
 		birth = yes
 	}
-	#= {
-	#	name = "Shizu" # Actually given posthumously by Xizong of Jin in 1145
-	#}
 	1092.1.1 = {
 		death = yes
+	}
+	1136.9.18 = {
+		name = "Shizu"
 	}
 }
 
@@ -27,11 +25,8 @@
 	1068.8.1 = {
 		birth = yes
 	}
-	1115.1.28 = {
-		name = "Taizu" # Actually given posthumously by Xizong of Jin in 1145
-	}
 	1123.9.19 = {
-		death = yes
+		death = { death_reason = death_in_china_historic }
 	}
 }
 
@@ -41,7 +36,7 @@
 	religion = taoist
 	culture = jurchen
 	father = 217729 # Wanyan Helibo - posthumously honoured as Emperor Shizu
-	#mother =  # Lady Nalan - Empress Yijian
+	#mother = # Lady Nalan - Empress Yijian
 	#spouse = # Lady Tangkuo - Empress Qinren
 	1075.11.25 = {
 		birth = yes
@@ -84,7 +79,7 @@
 		birth = yes
 	}
 	1125.1.1 = { # unknown death date 
-		death = yes
+		death = { death_reason = death_in_china_historic }
 	}
 }
 
@@ -99,7 +94,7 @@
 		birth = yes
 	}
 	1140.1.1 = {
-		death = yes
+		death = { death_reason = death_in_china_historic }
 	}
 }
 
@@ -132,7 +127,7 @@
 		birth = yes
 	}
 	1143.1.1 = {
-		death = yes
+		death = { death_reason = death_in_china_historic }
 	}
 }
 
@@ -165,7 +160,7 @@
 		birth = yes
 	}
 	1180.1.1 = {
-		death = yes
+		death = { death_reason = death_in_china_historic }
 	}
 }
 
