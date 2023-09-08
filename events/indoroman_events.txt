@@ -3662,7 +3662,7 @@ character_event = {
 	adjective = "Walakrios' Legions"
 	}
 	hidden_tooltip = {
-	add_piety 100
+	add_piety = 100
 	set_preferred_capital = c_esfahan
 	random_independent_ruler = {
 	limit = {
@@ -5427,7 +5427,7 @@ character_event = {
 	new_character = {
 	add_trait = zealous
 	add_trait = fair
-	age -4
+	age = 40
 	culture = romanoindian
 	set_graphical_culture = romanoindian
 	}
@@ -6197,7 +6197,7 @@ character_event = {
 	hidden_tooltip = {
 	add_blood_splatter_effect = yes
 	apply_duel_wounded_effect = yes
-	add_piety 100
+	add_piety = 100
 	set_preferred_capital = c_esfahan
 	random_independent_ruler = {
 	limit = {
@@ -7471,7 +7471,7 @@ character_event = {
 				years = 10
 			}
         }
-	add_piety 100
+	add_piety = 100
 	set_preferred_capital = c_esfahan
 	random_independent_ruler = {
 	limit = {
@@ -8751,7 +8751,7 @@ character_event = {
 	hidden_tooltip = {
 	add_blood_splatter_effect = yes
 	apply_duel_wounded_effect = yes
-	add_piety 100
+	add_piety = 100
 	set_preferred_capital = c_esfahan
 	random_independent_ruler = {
 	limit = {
