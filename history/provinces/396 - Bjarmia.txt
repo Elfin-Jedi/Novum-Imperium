@@ -1,20 +1,20 @@
-# -*- ck2.history.provinces -*-
-
-# 396 - Bjarmia # Pinega
+# 396 - Bjarmia
 
 # County Title
 title = c_bjarmia
 
 # Settlements
 max_settlements = 2
+b_okladnikowa = tribal
+#b_kusnezowa = city
+#b_okulovsky = temple
 
-#b_orlets = castle
-b_ust_pinega = tribal
+#b_kamenka_bj = castle
+#b_kimzha = castle
+#b_lampozhnya = castle
+
 # Misc
-
-culture = vepsian
+culture = finnish
 religion = finnish_pagan
 
 # History
-1238.1.1 = { b_ust_pinega = castle } #Semjun's expedition
-1342.1.1 = { b_orlets = city } #Orlets founded

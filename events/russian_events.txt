@@ -1,0 +1,27 @@
+namespace = russianevents
+#Spawning retineus for dumb AIs
+character_event = {
+	id = russianevents.1
+	hide_window = yes
+	only_independent = yes
+	ai = yes
+	mean_time_to_happen = {
+	months = 1
+	}
+	trigger = {
+		culture_group = east_slavic
+		is_alternate_start = no
+		religion_group = christian
+		wealth >= 250
+		tier = KING
+		monthly_income >= 1
+		war = no
+		ai = yes
+		has_space_for_retinue = RETTYPE_CUL_RUS
+		is_nomadic = no 
+		is_tribal = no
+	}
+	immediate = { 
+	create_retinue = RETTYPE_CUL_RUS
+	}
+	}

@@ -498,6 +498,42 @@ blg_set_ethnicity_mongol = {
 	}
 }
 
+blg_set_ethnicity_native_american = {
+	if = {
+		limit = {
+			blg_culture_native_american = yes
+		}
+		set_graphical_culture = apache
+	}
+}
+
+blg_set_ethnicity_northernnative = {
+	if = {
+		limit = {
+			blg_culture_northernnative = yes
+		}
+		set_graphical_culture = cherokee
+	}
+}
+
+blg_set_ethnicity_mesoamerican = {
+	if = {
+		limit = {
+			blg_culture_mesoamerican = yes
+		}
+		set_graphical_culture = mesoamerican
+	}
+}
+
+blg_set_ethnicity_native_far_north = {
+	if = {
+		limit = {
+			blg_culture_native_far_north = yes
+		}
+		set_graphical_culture = northernnative
+	}
+}
+
 blg_set_ethnicity_norman = {
 	if = {
 		limit = {

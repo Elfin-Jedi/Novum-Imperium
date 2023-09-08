@@ -13,10 +13,8 @@ character_event = {   # Imperialism
 	only_capable = yes
 
 	trigger = {
-		AND = {
-			has_focus = focus_war
-			martial >= 11
-		}
+		has_focus = focus_war
+		martial >= 11
 	}
 
 	mean_time_to_happen = {

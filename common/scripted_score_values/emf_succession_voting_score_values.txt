@@ -4611,7 +4611,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		OR = {
 			trait = lustful
 			religion_scope = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				trigger_if = {
 					limit = { has_religion_features = yes }
 					OR = {
@@ -4665,7 +4665,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		OR = {
 			trait = gluttonous
 			AND = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				NOR = {
 					religion = bon
 					religion = bon_reformed
@@ -4779,7 +4779,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		NOT = { character = FROM } #Do not judge yourself.
 		OR = {
 			AND = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				NOR = {
 					religion = bon
 					religion = bon_reformed
@@ -4865,7 +4865,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		NOT = { character = FROM } #Do not judge yourself.
 		OR = {
 			AND = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				NOR = {
 					religion = bon
 					religion = bon_reformed
@@ -4903,7 +4903,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		NOT = { character = FROM } #Do not judge yourself.
 		OR = {
 			AND = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				NAND = {
 					OR = {
 						religion = bon
@@ -4986,7 +4986,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		value = 15
 		localisation_key = tooltip_feudal_elector_vote_proud_positive
 		NOT = { character = FROM } #Do not judge yourself.
-		religion_group = pagan_group
+		novum_imperium_is_pagan = yes
 		NOR = {
 			religion = bon
 			religion = bon_reformed
@@ -5018,7 +5018,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		value = 5
 		localisation_key = tooltip_feudal_elector_vote_ambitious_positive
 		NOT = { character = FROM } #Do not judge yourself.
-		religion_group = pagan_group
+		novum_imperium_is_pagan = yes
 		NOR = {
 			religion = bon
 			religion = bon_reformed
@@ -5103,7 +5103,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		value = -5
 		localisation_key = tooltip_feudal_elector_vote_content_negative
 		NOT = { character = FROM } #Do not judge yourself.
-		religion_group = pagan_group
+		novum_imperium_is_pagan = yes
 		NOR = {
 			trait = content
 			religion = bon

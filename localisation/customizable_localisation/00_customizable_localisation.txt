@@ -3564,7 +3564,7 @@ defined_text = {
 	text = {
 		localisation_key = GetHouseOfWorship_Pagan
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOT = {
 				religion_openly_in_celtic_subgroup_trigger = no
 			}
@@ -3626,7 +3626,7 @@ defined_text = {
 	}
 	text = {
 		localisation_key = string_Temple
-		trigger = { religion_group = pagan_group }
+		trigger = { novum_imperium_is_pagan = yes }
 	}
 	text = {
 		localisation_key = string_Temple
@@ -3671,7 +3671,7 @@ defined_text = {
 	}
 	text = {
 		localisation_key = String_worship
-		trigger = { religion_group = pagan_group }
+		trigger = { novum_imperium_is_pagan = yes }
 	}
 	text = {
 		localisation_key = String_worship
@@ -3742,8 +3742,8 @@ defined_text = {
 		localisation_key = String_sainik
 		trigger = {
 			OR = {
-				culture_group = indo_aryan_group
-				culture_group = dravidian_group
+				culture_group = indoaryan
+				culture_group = dravidian
 			}
 		}
 	}
@@ -3815,8 +3815,8 @@ defined_text = {
 		localisation_key = String_sainikon
 		trigger = {
 			OR = {
-				culture_group = indo_aryan_group
-				culture_group = dravidian_group
+				culture_group = indoaryan
+				culture_group = dravidian
 			}
 		}
 	}
@@ -4098,7 +4098,7 @@ defined_text = {
 	text = {
 		localisation_key = String_great_hero
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOT = { religion = britannic_pagan }
 		}
 	}
@@ -4129,7 +4129,7 @@ defined_text = {
 	text = {
 		localisation_key = String_Great_Hero_cap
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOT = { religion = britannic_pagan }
 		}
 	}
@@ -4647,7 +4647,8 @@ defined_text = {
 	text = { 
 		localisation_key = khurmazta
 		trigger = {
-			true_religion_khurmazta_trigger = yes
+				true_religion_khurmazta_trigger = yes
+			}
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -9473,74 +9474,6 @@ defined_text = {
 }
 
 ### Chinese flavor
-defined_text = {
-	name = GetChineseConvoTopic #Note that these are a little dry sounding and don't necessarily mention China by name. How to use in a sentence: 
-	# "As we discuss [adventurous_spirit.GetHerHis] travels to the [the_protector_general.Offmap.GetFullName] [adventurous_spirit.GetSheHe] speaks passionately about [adventurous_spirit.GetChineseConvoTopic]"
-	text = {
-		localisation_key = String_such_a_wealthy_realm
-		trigger = { china_is_fine_trigger = yes }
-	}
-	text = {
-		localisation_key = String_such_white_papers
-		trigger = { trait = poet }
-	}
-	text = {
-		localisation_key = String_so_full_of_life
-	}
-	text = {
-		localisation_key = String_the_street_jugglers
-	}
-	text = {
-		localisation_key = String_the_many_festivals
-	}
-	text = {
-		localisation_key = String_crowded_water_routes
-	}
-	text = {
-		localisation_key = String_artisan_potters
-	}
-	text = {
-		localisation_key = String_the_melody_of_Chinese_language
-		trigger = {
-			OR = {
-				has_character_modifier = multilingual
-				has_character_modifier = student_of_language
-				learning = 15
-			}
-		}
-	}
-	text = {
-		localisation_key = String_the_magnificent_architecture
-	}
-	text = {
-		localisation_key = String_a_religious_ceremony
-	}
-	text = {
-		localisation_key = String_a_pleasure_trip_on_a_lake
-	}
-	text = {
-		localisation_key = String_the_construction_of_Chinese_boats
-	}
-	text = {
-		localisation_key = String_the_Chinese_food
-	}
-	text = {
-		localisation_key = String_the_intricacies_of_Chinese_government
-	}
-	text = {
-		localisation_key = String_the_artistic_sensibility
-	}
-	#text = {
-	#	localisation_key = String_friendly_to_outsiders
-	#	trigger = {
-	#		offmap_china = {
-	#			offmap_ruler = {
-	#				culture = mongol
-	#			}
-	#		}
-	#	}
-	#}
-}
 
 defined_text = { # Must only be used after having visited China, as it talks in past tense and uses pronouns, eg: "When asked about [From.GetHerHis] travels, [From.GetSheHe] just mutters about [adventurous_spirit.GetNegativeChineseConvoTopic]."
 	name = GetNegativeChineseConvoTopic
@@ -10675,82 +10608,6 @@ defined_text = {
 	}
 	text = {
 		localisation_key = String_Iso_Great_Wall
-	}
-}
-
-# Description of the end of a Chinese Status
-defined_text = {
-	name = GetChinaPreviousStatusEnd
-
-	text = {
-		localisation_key = String_End_Stable
-		trigger = {
-			prev_status = china_stable
-		}
-	}
-	text = {
-		localisation_key = String_End_Unrest
-		trigger = {
-			prev_status = china_unrest
-			china_is_suffering_trigger = no
-		}
-	}
-	text = {
-		localisation_key = String_End_Unrest_Worsened
-		trigger = {
-			prev_status = china_unrest
-			china_is_suffering_trigger = yes
-		}
-	}
-	text = {
-		localisation_key = String_End_Famine
-		trigger = {
-			prev_status = china_famine
-		}
-	}
-	text = {
-		localisation_key = String_End_Plague
-		trigger = {
-			prev_status = china_plague
-		}
-	}
-	text = {
-		localisation_key = String_End_Mongols
-		trigger = {
-			prev_status = china_mongol_invasion
-		}
-	}
-	text = {
-		localisation_key = String_End_Jurchen
-		trigger = {
-			prev_status = china_jurchen_invasion
-		}
-	}
-	text = {
-		localisation_key = String_End_Civil_War
-		trigger = {
-			prev_status = china_civil_war
-			NOR = {
-				has_status = china_mongol_invasion
-				has_status = china_jurchen_invasion
-			}
-		}
-	}
-	text = {
-		localisation_key = String_End_Civil_War_to_Invasion
-		trigger = {
-			prev_status = china_civil_war
-			OR = {
-				has_status = china_mongol_invasion
-				has_status = china_jurchen_invasion
-			}
-		}
-	}
-	text = {
-		localisation_key = String_End_Golden_Age
-		trigger = {
-			prev_status = china_golden_age
-		}
 	}
 }
 
@@ -15531,7 +15388,6 @@ defined_text = {
 		trigger = {
 			any_owned_bloodline = {
 				has_bloodline_flag = jewish_saintly_bloodline
-				bloodline_is_active_for = PREV
 			}
 		}
 		localisation_key = string_friendly_jewish_interest
@@ -15542,7 +15398,6 @@ defined_text = {
 			NOT = {
 				any_owned_bloodline = {
 					has_bloodline_flag = jewish_saintly_bloodline
-					bloodline_is_active_for = PREV
 				}
 			}
 		}
@@ -17229,10 +17084,10 @@ defined_text = {
 		trigger = {
 			OR = {
 				FROM = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				ROOT = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 			}
 		}
@@ -17548,8 +17403,8 @@ defined_text = {
 				culture_group = iranian
 				culture_group = arabic
 				culture_group = chinese_group
-				culture_group = dravidian_group
-				culture_group = indo_aryan_group
+				culture_group = dravidian
+				culture_group = indoaryan
 			}
 		}
 		localisation_key = string_beer
@@ -17562,14 +17417,16 @@ defined_text = {
 				culture_group = latin
 				culture_group = iberian
 				culture_group = italian_group
-				culture_group = magyar
 				culture_group = byzantine
 				culture_group = south_slavic
 				culture_group = iranian
 				culture_group = arabic
 				culture_group = chinese_group
-				culture_group = dravidian_group
-				culture_group = indo_aryan_group
+				culture_group = dravidian
+				culture_group = indoaryan
+				culture = hungarian
+				culture = old_hungarian
+				culture = szekely
 			}
 		}
 		localisation_key = string_wine
@@ -17598,14 +17455,13 @@ defined_text = {
 				culture_group = latin
 				culture_group = iberian
 				culture_group = italian_group
-				culture_group = magyar
 				culture_group = byzantine
 				culture_group = south_slavic
 				culture_group = iranian
 				culture_group = arabic
 				culture_group = chinese_group
-				culture_group = dravidian_group
-				culture_group = indo_aryan_group
+				culture_group = dravidian
+				culture_group = indoaryan
 			}
 		}
 		localisation_key = String_Beer
@@ -17618,14 +17474,13 @@ defined_text = {
 				culture_group = latin
 				culture_group = iberian
 				culture_group = italian_group
-				culture_group = magyar
 				culture_group = byzantine
 				culture_group = south_slavic
 				culture_group = iranian
 				culture_group = arabic
 				culture_group = chinese_group
-				culture_group = dravidian_group
-				culture_group = indo_aryan_group
+				culture_group = dravidian
+				culture_group = indoaryan
 			}
 		}
 		localisation_key = String_Wine
@@ -18457,8 +18312,8 @@ defined_text =
 		trigger = 
 		{
 			OR = {
-				culture_group = indo_aryan_group
-				culture_group = dravidian_group
+				culture_group = indoaryan
+				culture_group = dravidian
 			}
 		}
 		localisation_key = Culture_Army_IndoAryan
@@ -18467,10 +18322,7 @@ defined_text =
 	{
 		trigger = 
 		{
-			OR = {
-				culture = italian
-				culture_group = italian_group
-			}
+			culture_group = italian_group
 		}
 		localisation_key = Culture_Army_Italian
 	}
@@ -18892,7 +18744,7 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOT = { religion_openly_egyptian_or_reformed_trigger = yes }
 		}
 		localisation_key = string_blessed_ancestor
@@ -18916,7 +18768,7 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			religion_openly_egyptian_or_reformed_trigger = no
 		}
 		localisation_key = string_saint_view_title_pagan

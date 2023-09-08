@@ -392,22 +392,42 @@ random_government_effect = {
 				}
 				else_if = {
 					limit = {
-						is_government_potential = bureaucratic_government
-					}
-					set_government_type = bureaucratic_government
-				}
-				else_if = {
-					limit = {
 						is_government_potential = theocratic_feudal_government
 					}
 					set_government_type = theocratic_feudal_government
+				}
+				else_if = {
+					limit = {
+						is_government_potential = mandala_government
+					}
+					set_government_type = mandala_government
+				}
+				else_if = {
+					limit = {
+						is_government_potential = japanese_feudalism
+					}
+					set_government_type = japanese_feudalism
+				}
+				else_if = {
+					limit = {
+						is_government_potential = warlord_government
+					}
+					set_government_type = warlord_government
 				}
 				else = {
 					set_government_type = feudal_government
 				}
 			}
 			16 = {
-				set_government_type = tribal_government
+				if = {
+					limit = {
+						is_government_potential = primitive_government
+					}
+					set_government_type = primitive_government
+				}
+				else = {
+					set_government_type = tribal_government
+				}
 			}
 			16 = {
 				set_government_type = nomadic_government
@@ -1117,12 +1137,30 @@ spawn_merchant_republics_effect = {
 	spawn_merchant_republic_effect = yes
 	spawn_merchant_republic_effect = yes
 	spawn_merchant_republic_effect = yes
+	spawn_merchant_republic_effect = yes
+	spawn_merchant_republic_effect = yes
+	spawn_merchant_republic_effect = yes
+	spawn_merchant_republic_effect = yes
+	spawn_merchant_republic_effect = yes
+	spawn_merchant_republic_effect = yes
+	random = {
+		chance = 60
+		spawn_merchant_republic_effect = yes
+	}
 	random = {
 		chance = 60
 		spawn_merchant_republic_effect = yes
 	}
 	random = {
 		chance = 30
+		spawn_merchant_republic_effect = yes
+	}
+	random = {
+		chance = 30
+		spawn_merchant_republic_effect = yes
+	}
+	random = {
+		chance = 5
 		spawn_merchant_republic_effect = yes
 	}
 	random = {

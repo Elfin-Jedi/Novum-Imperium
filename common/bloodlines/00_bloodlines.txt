@@ -138,14 +138,14 @@ ghaznavid = {
 }
 
 pala = {
-	indo_aryan_group_opinion = 5
+	indoaryan_opinion = 5
 	monthly_character_prestige = 0.1
 	inheritance = patrilineal
 	allow_bastards = yes
 	picture = GFX_bloodlines_symbol_buddhist
 	flags = { historical_bloodline }
 	active = {
-		culture_group = indo_aryan_group
+		culture_group = indoaryan
 	}
 }
 
@@ -287,7 +287,11 @@ arpad = {
 	picture = GFX_bloodlines_symbol_horse
 	flags = { historical_bloodline arpad_bloodline }
 	active = {
-		culture_group = magyar
+		OR = {
+			culture = hungarian
+			culture = old_hungarian
+			culture = szekely
+		}
 	}
 }
 
@@ -670,8 +674,8 @@ tughluq = {
 	monthly_character_prestige = 0.1
 	#turkmen_opinion = 5
 	khorasani_opinion = 5 #Tughluq is Khorasani in SWMH
-	#dravidian_group_opinion = 3
-	#indo_aryan_group_opinion = 3
+	#dravidian_opinion = 3
+	#indoaryan_opinion = 3
 	inheritance = patrilineal
 	allow_bastards = yes
 	picture = GFX_bloodlines_symbol_sunni
@@ -1008,3 +1012,46 @@ mardavij = {
 		religion = zoroastrian
 	}
 }
+#japanese lineages
+yamato = {
+	monthly_character_piety = 0.25
+	nihon_shinto_opinion = 25 #should be nihon_shinto but I can't get it to work
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_lion
+	flags = { historical_bloodline }
+	active = {
+		dynasty = 1000027000
+		religion = nihon_shinto
+	}
+}
+#chinese lineages
+confucian_blood = {
+	monthly_character_piety = 0.25
+	confucian_opinion = 10 
+	diplomacy = 5
+	health = 1
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_lion
+	flags = { historical_bloodline }
+	active = {
+		religion = taoist
+	}
+}
+laozi_blood = {
+	monthly_character_piety = 0.25
+	taoist_opinion = 10 
+	stewardship = 5
+	inheritance = patrilineal
+	matrilineal_override = yes
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_lion
+	flags = { historical_bloodline }
+	active = {
+		religion = taoist
+	}
+}
+#korean lineages

@@ -273,7 +273,7 @@ decisions = {
 			prisoner = no
 			OR = {
 				religion_group = christian
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				religion_group = zoroastrian_group
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -2175,7 +2175,7 @@ decisions = {
 				}
 				chronicle = {
 					entry = CHRONICLE_BECAME_KSHATRIYA
-					picture = GFX_evt_emissary_indo_aryan_group
+					picture = GFX_evt_emissary_indoaryan
 				}
 			}
 		}
@@ -2300,7 +2300,7 @@ decisions = {
 				}
 				chronicle = {
 					entry = CHRONICLE_BECAME_VAISHYA
-					picture = GFX_evt_emissary_indo_aryan_group
+					picture = GFX_evt_emissary_indoaryan
 				}
 			}
 		}

@@ -1159,11 +1159,9 @@ title_decisions = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					FROM = {
-						monthly_income <= 0
-						wealth < 100
-					}
+				FROM = {
+					monthly_income <= 0
+					wealth < 100
 				}
 			}
 			modifier = {
@@ -1227,11 +1225,9 @@ title_decisions = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					FROM = {
-						monthly_income <= 0
-						wealth < 100
-					}
+				FROM = {
+					monthly_income <= 0
+					wealth < 100
 				}
 			}
 			modifier = {
@@ -1292,11 +1288,9 @@ title_decisions = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					FROM = {
-						monthly_income <= 0
-						wealth < 200
-					}
+				FROM = {
+					monthly_income <= 0
+					wealth < 200
 				}
 			}
 			modifier = {

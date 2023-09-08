@@ -31,7 +31,7 @@ character_event = {
 			independent = yes
 			higher_tier_than = DUKE
 		}
-		NOT = { religion_group = pagan_group }
+		NOT = { novum_imperium_is_pagan = yes }
 		job_spiritual = {
 			ai = yes
 			trait = zealous
@@ -567,10 +567,10 @@ letter_event = {
 
 	trigger = {
 		has_dlc = "Zeus"
-		NOT = { religion_group = pagan_group }
+		NOT = { novum_imperium_is_pagan = yes }
 		job_spiritual = {
 			has_job_action = action_inquisition
-			location = { owner = { religion_group = pagan_group } }
+			location = { owner = { novum_imperium_is_pagan = yes } }
 			OR = {
 				trait = craven
 				trait = cynical

@@ -12,10 +12,10 @@ tribal = {
 		is_active_trigger = {
 			FROM = { #Owner and his liege must be of the founding religion, otherwise the building becomes inactive.
 				is_tribal = yes 
-				religion = norse_pagan
+				religion_group = norsegerman_group
 				liege = { 
 					is_tribal = yes 
-					religion = norse_pagan
+					religion_group = norsegerman_group
 				} 
 			}
 		}
@@ -504,9 +504,9 @@ temple = { #Historical Irminsul's holding is set as a temple.
 		}
 		is_active_trigger = {
 			FROM = { 
-				religion = norse_pagan
+				religion_group = norsegerman_group
 				liege = { 
-					religion = norse_pagan
+					religion_group = norsegerman_group
 				} 
 			}
 		} 

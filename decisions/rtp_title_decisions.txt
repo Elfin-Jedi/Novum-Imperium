@@ -232,6 +232,7 @@ title_decisions = {
 						FROM = {
 							show_scope_change = no
 							set_defacto_liege = PREV
+							emf_liege_change = yes
 						}
 					}
 				}
@@ -247,7 +248,12 @@ title_decisions = {
 							show_scope_change = no
 							FROM = {
 								show_scope_change = no
+								make_tributary = {
+									who = FROM
+									tributary_type = landless_under_count
+								}
 								set_defacto_liege = PREV
+								emf_liege_change = yes
 							}
 						}
 					}
@@ -267,6 +273,7 @@ title_decisions = {
 							FROM = {
 								show_scope_change = no
 								set_defacto_liege = PREV
+								emf_liege_change = yes
 							}
 						}
 					}
@@ -281,6 +288,7 @@ title_decisions = {
 								FROM = {
 									show_scope_change = no
 									set_defacto_liege = PREV
+									emf_liege_change = yes
 								}
 							}
 						}
@@ -347,6 +355,7 @@ title_decisions = {
 						FROM = {
 							show_scope_change = no
 							set_defacto_liege = PREV
+							emf_liege_change = yes
 						}
 					}
 				}
@@ -363,6 +372,7 @@ title_decisions = {
 							FROM = {
 								show_scope_change = no
 								set_defacto_liege = PREV
+								emf_liege_change = yes
 							}
 						}
 					}
@@ -382,6 +392,7 @@ title_decisions = {
 							FROM = {
 								show_scope_change = no
 								set_defacto_liege = PREV
+								emf_liege_change = yes
 							}
 						}
 					}
@@ -396,6 +407,7 @@ title_decisions = {
 								FROM = {
 									show_scope_change = no
 									set_defacto_liege = PREV
+									emf_liege_change = yes
 								}
 							}
 						}

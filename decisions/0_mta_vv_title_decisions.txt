@@ -152,11 +152,9 @@ title_decisions = {
 					custom_tooltip = {
 						text = mta_has_trade_post_TT
 						hidden_tooltip = {
-							AND = {
-								has_trade_post = yes
-								trade_post_owner = {
-									character = FROM
-								}
+							has_trade_post = yes
+							trade_post_owner = {
+								character = FROM
 							}
 						}
 					}

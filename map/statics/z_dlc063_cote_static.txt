@@ -1,48 +1,46 @@
 
-
-
-    object = {
-        type = "cote_palace_of_aachen"
-        position = { 697.000 22.900 1423.000 }
-        rotation = { 0.000 0.000 0.000 }
-        scale = 0.9
-    }
-    
-    
-    object = {
-        type = "cote_petra"
-        position = { 1395.000 28.000 798.000 }
-        rotation = { 0.000 0.000 0.000 }
-        scale = 0.16
-    }
+	object = {
+		type = "cote_palace_of_aachen"
+		position = { 2736.000 22.350 1848.000 }
+		rotation = { 0.000 0.000 0.000 }
+		scale = 0.8
+	}
 	
 	
-    object = {
-        type = "cote_visby_ringmur"
-        position = { 974.000 19.300 1638.000 }
-        rotation = { 0.000 0.000 0.000 }
-        scale = 3.0
-    }
+	object = {
+		type = "cote_petra"
+		position = { 3200.000 22.600 1487.000 }
+		rotation = { 0.000 0.000 0.000 }
+		scale = 0.16
+	}
+
+	
+	object = {
+		type = "cote_visby_ringmur"
+		position = { 2922.000 19.300 1987.000 }
+		rotation = { 0.000 0.000 0.000 }
+		scale = 1.6
+	}
 
 
-    #object = { # rotation doesn't work
-    #    type = "cote_hadrianswall"
-    #    position = { 489.000 21.300 1350.000 }
-    #    rotation = { 0.500 0.000 0.000 }
-    #    scale = 3.0
-    #}
+	object = {
+		type = "cote_hadrianswall"
+		position = { 2595.000 20.000 1946.000 }
+		rotation = { 0.000 0.000 0.000 }
+		scale = 1.8
+	}
 
 
-    object = {
-        type = cote_giza_pyramids
-        position = { 1276.000 21.000 782.900 }
-        rotation = { 0.000 0.000 0.000 }
-        scale = 0.6
-    }
-    object = {
-        type = cote_khajuraho
-        position = { 2522.000 23.000 742.000 }
-        rotation = { 0.000 0.000 0.000 }
-        scale = 0.7
-    }   
-        
+	object = {
+		type = cote_giza_pyramids
+		position = { 3101.000 21.300 1472.000 }
+		rotation = { 0.000 0.000 0.000 }
+		scale = 0.6
+	}
+	object = {
+		type = cote_khajuraho
+		position = { 3893.000 22.000 1400.000 }
+		rotation = { 0.000 0.000 0.000 }
+		scale = 0.51
+	}	
+		

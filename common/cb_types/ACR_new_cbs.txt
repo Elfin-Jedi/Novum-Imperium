@@ -20,8 +20,8 @@ hellenic_county_liberation = {
 			religion_openly_hellenic_or_reformed_trigger = yes
 			NOT = { same_realm = FROM }
 		}
-		NOT = { FROM = { religion_group = pagan_group } }
-		NOT = { FROM = { any_liege = { religion_group = pagan_group } } }
+		NOT = { FROM = { novum_imperium_is_pagan = yes } }
+		NOT = { FROM = { any_liege = { novum_imperium_is_pagan = yes } } }
 	}
 
 	can_use_title = {
@@ -59,7 +59,7 @@ hellenic_county_liberation = {
 
 	is_valid_title = {
 		ROOT = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOT = { same_realm = FROM }
 		}
 		FROM = {
@@ -78,13 +78,6 @@ hellenic_county_liberation = {
 
 	on_add = {
 		hidden_tooltip = { fire_haruspicy_event_effect = yes }
-		if = {
-			limit = { defender = { is_offmap_governor = offmap_china } }
-			attacker = {  
-				sound_effect = china_angered_emperor
-				detract_grace_super_huge_effect = yes 
-			}
-		}
 	}
 	
 	on_success_title = { #winning the war
@@ -304,13 +297,6 @@ hellenic_reconquest = {
 
 	on_add = {
 		hidden_tooltip = { fire_haruspicy_event_effect = yes }
-		if = {
-			limit = { defender = { is_offmap_governor = offmap_china } }
-			attacker = {  
-				sound_effect = china_angered_emperor
-				detract_grace_super_huge_effect = yes 
-			}
-		}
 	}
 	
 	on_success = {
@@ -451,13 +437,6 @@ promethean_expansion = {
 	on_add = {
 		ROOT = { prestige = -500 }
 		hidden_tooltip = { fire_haruspicy_event_effect = yes }
-		if = {
-			limit = { defender = { is_offmap_governor = offmap_china } }
-			attacker = {  
-				sound_effect = china_angered_emperor
-				detract_grace_super_huge_effect = yes 
-			}
-		}
 	}
 
 	can_use_title = {
@@ -723,13 +702,6 @@ egyptian_reconquest = {
 
 	on_add = {
 		hidden_tooltip = { fire_haruspicy_event_effect = yes }
-		if = {
-			limit = { defender = { is_offmap_governor = offmap_china } }
-			attacker = {  
-				sound_effect = china_angered_emperor
-				detract_grace_super_huge_effect = yes 
-			}
-		}
 	}
 	
 	on_success = {

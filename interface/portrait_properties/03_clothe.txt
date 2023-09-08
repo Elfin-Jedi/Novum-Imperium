@@ -25,7 +25,6 @@
 				trait = heresiarch
 				government = order_government
 			}
-			NOT = { is_offmap_tag_including_dead = offmap_china }
 		}
 		modifier = {
 			factor = 0
@@ -34,7 +33,6 @@
 			NOT = { spouse = { real_tier = king } }
 			NOT = { spouse = { real_tier = emperor } }
 			NOT = { has_minor_title = title_prince }
-			NOT = { is_offmap_tag_including_dead = offmap_china }
 		}
 	}
 	
@@ -62,7 +60,6 @@
 				trait = heresiarch
 				government = order_government
 			}
-			NOT = { is_offmap_tag_including_dead = offmap_china }
 		}
 		modifier = {
 			factor = 0
@@ -71,7 +68,6 @@
 			NOT = { spouse = { real_tier = king } }
 			NOT = { spouse = { real_tier = emperor } }
 			NOT = { has_minor_title = title_prince }
-			NOT = { is_offmap_tag_including_dead = offmap_china }
 		}
 	}
 	
@@ -99,7 +95,6 @@
 				trait = heresiarch
 				government = order_government
 			}
-			NOT = { is_offmap_tag_including_dead = offmap_china }
 		}
 		modifier = {
 			factor = 0
@@ -108,7 +103,6 @@
 			NOT = { spouse = { real_tier = king } }
 			NOT = { spouse = { real_tier = emperor } }
 			NOT = { has_minor_title = title_prince }
-			NOT = { is_offmap_tag_including_dead = offmap_china }
 		}
 	}
 	
@@ -257,7 +251,7 @@
 			factor = 10
 			is_ruler = yes
 			is_theocracy = yes
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 	}
 	7 = { # Modest clothes 2

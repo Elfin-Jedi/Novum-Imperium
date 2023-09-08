@@ -644,7 +644,7 @@ character_event = {
 		}
 		name = { # A dozen of tough warriors
 			text = EVTOPTA_WOL_10114_WARRIORS
-			trigger = { religion_group = pagan_group }
+			trigger = { novum_imperium_is_pagan = yes }
 		}
 		wealth = -30
 		FROM = {
@@ -1913,7 +1913,7 @@ character_event = {
 			limit = {
 				NOR = {
 					religion_group = indian_group
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				any_vassal = {
 					ai = yes

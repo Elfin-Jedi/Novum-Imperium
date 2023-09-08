@@ -13,7 +13,6 @@
 			factor = 0
 			NOT = { real_tier = emperor }
 			NOT = { spouse = { real_tier = emperor } }
-			NOT = { is_offmap_tag_including_dead = offmap_china }
 		}
 		modifier = {
 			factor = 0
@@ -109,7 +108,6 @@
 			is_feudal = no
 			is_tribal = no
 			is_nomadic = no
-			NOT = { is_offmap_tag_including_dead = offmap_china }
 		}
 		modifier = {
 			factor = 0
@@ -128,7 +126,6 @@
 				trait = peasant_leader
 				trait = heresiarch
 			}
-			NOT = { is_offmap_tag_including_dead = offmap_china }
 		}
 		modifier = {
 			factor = 0
@@ -733,7 +730,7 @@
 			factor = 10
 			is_ruler = yes
 			is_theocracy = yes
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 		modifier = {
 			factor = 2

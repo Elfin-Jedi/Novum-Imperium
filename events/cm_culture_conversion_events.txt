@@ -619,9 +619,9 @@ province_event = {
 					NOT = { culture_group = east_slavic }
 					NOT = { culture_group = finno_ugric }
 				}
-				NOT = { religion_group = pagan_group }
+				NOT = { novum_imperium_is_pagan = yes }
 				AND = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					is_reformed_religion = yes
 					NOT = {
 						religion_head = { culture = THIS }

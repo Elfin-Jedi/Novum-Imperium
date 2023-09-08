@@ -1,5 +1,3 @@
-# -*- ck2.history.provinces -*-
-
 # 185 - Mértola
 
 # County Title
@@ -8,17 +6,25 @@ title = c_mertola
 # Settlements
 max_settlements = 4
 b_mertola = castle
-b_moura = temple
-#b_monsaraz = temple
+b_monsaraz = temple
+b_serpa = city
+#b_noudal = castle
 #b_mourao = castle
-#b_serpa = castle
 #b_portel = castle
-#b_barrancos = castle
+#b_moura = castle
 
-# Misc
-culture = andalusian_arabic
-religion = sunni
+culture = visigothic
+religion = catholic
 
 # History
-1253.1.1 = { culture = portuguese }
-1253.1.1 = { religion = catholic }
+
+811.1.1 = { religion = sunni }
+
+939.1.1 = {
+	culture = andalusian_arabic
+}
+
+1253.1.1 = {
+	culture = portuguese
+	religion = catholic
+}

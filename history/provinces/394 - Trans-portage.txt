@@ -1,20 +1,17 @@
-# -*- ck2.history.provinces -*-
-
-# 394 - Trans-portage # Pomorye
+# 394 - Trans-portage
 
 # County Title
 title = c_trans-portage
 
 # Settlements
 max_settlements = 2
-b_belomorsk = tribal
-#b_spasskij = city
+b_shenkursk = tribal
 
-
-#
 # Misc
-culture = vepsian
+culture = finnish
 religion = finnish_pagan
 
 # History
-1150.1.1 = { b_belomorsk = castle }
+1150.1.1 = {
+	religion = orthodox
+}

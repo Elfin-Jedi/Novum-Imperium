@@ -1,0 +1,4120 @@
+# Religion-specific opinion can be added to modifiers (E.G., norse_pagan_opinion = 5), but the modifier *has* to be defined in 00_modifier_definitions.txt as well. It also needs localisation. Works for groups as well
+
+# join_crusade_if_bordering_hostile = yes # The AI won't refrain from joining a crusade simply because it borders a heathen/heretic realm
+
+# This trigger defines who can see a character's secret religion. The character with the secret religion is FROM, while the viewer is ROOT
+# Characters can always see their own secret religion. The observer can see all secret religions
+secret_religion_visibility_trigger = {
+	secret_religion = FROM
+}
+
+# women_can_take_consorts = yes # If set, women can take consorts as well, not just men. Defaults to "no". Has no effect if max_consorts is 0
+# men_can_take_consorts = no # If set, men cannot take consorts any more. Defaults to "yes". Has no effect if max_consorts is 0
+# male_temple_holders = no # If set to no, men cannot hold temples. Defaults to "yes". You might need to update your law scripts for this to fully work (see trigger "religion_allows_male_temple_holders")
+
+christian = {
+	has_coa_on_barony_only = yes
+	graphical_culture = westerngfx
+	crusade_cb = crusade
+	playable = yes
+	ai_peaceful = yes # Will make Hordes lose their super aggressiveness
+	
+	ai_convert_same_group = 2 # always try to convert
+	ai_convert_other_group = 2 # always try to convert
+	
+	color = { 0.8 0.8 0.6 }
+	
+	# Names given only to Christian characters (base names)
+	male_names = {
+		Andrew Antoninus Bartolomeus Benedict Christian Christopher Clement Constantine David Demetrius Eustace George Gregory 
+		Hans Isaac Joakim Jacob John Jordan Joseph Laurence Magnus Marcus Martin Matthew Michael Nicholas Patrick Paul Peter Philip 
+		Salvador Samuel Sebastian Simon Stephen Thomas Abraham Alexander Daniel Jesus Job Joshua Cyrus Luke Zachariah
+	}
+	female_names = {
+		Anna Beatrice Benedicta Brigid Catherine Cecilia Christina Clementia Constance Dorothy Elisabeth Joan Judith Juliana Helen 
+		Magdalena Margaret Maria Marine Patricia Philippa Rachel 
+		Sarah Sophia Stephania
+	}
+	
+	#protestant
+	methodist = {
+		graphical_culture = westerngfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 72
+		heresy_icon = 6
+		
+		color = { 255 255 51 }
+		
+		scripture_name = THE_SCRIPTURE
+		priest_title = PRIEST
+		piety_name = GRACE
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_GOD GOD_THE_LORD GOD_JESUS
+		}
+		
+		evil_god_names = {
+			SATAN LUCIFER THE_DEVIL THE_WHORE_BABYLON THE_MOTHER_HARLOTS BEELZEBUB MEPHISTOPHELES
+		}
+		feminist = yes
+		priests_can_marry = yes
+		hard_to_convert = yes
+		female_temple_holders = yes
+		
+		intermarry = catholic
+		intermarry = orthodox
+		intermarry = miaphysite
+		intermarry = nestorian
+
+		intermarry = cathar
+		intermarry = fraticelli
+		intermarry = waldensian
+		intermarry = monophysite
+		intermarry = bogomilist
+		intermarry = monothelite
+		intermarry = iconoclast
+		intermarry = paulician
+		intermarry = messalian
+		intermarry = lollard
+		
+		intermarry = reformed
+		intermarry = anglican
+		intermarry = hussite
+		intermarry = lutheran
+		intermarry = anabaptist
+		intermarry = unitarian
+		intermarry = baptist
+		intermarry = arminian
+		intermarry = methodist
+	}
+	arminian = {
+		graphical_culture = westerngfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 74
+		heresy_icon = 6
+		
+		color = { 0 255 255 }
+		
+		scripture_name = THE_SCRIPTURE
+		priest_title = PRIEST
+		piety_name = GRACE
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_GOD GOD_THE_LORD GOD_JESUS
+		}
+		
+		evil_god_names = {
+			SATAN LUCIFER THE_DEVIL THE_WHORE_BABYLON THE_MOTHER_HARLOTS BEELZEBUB MEPHISTOPHELES
+		}
+
+		priests_can_marry = yes
+		hard_to_convert = yes
+		
+		intermarry = catholic
+		intermarry = orthodox
+		intermarry = miaphysite
+		intermarry = nestorian
+
+		intermarry = cathar
+		intermarry = fraticelli
+		intermarry = waldensian
+		intermarry = monophysite
+		intermarry = bogomilist
+		intermarry = monothelite
+		intermarry = iconoclast
+		intermarry = paulician
+		intermarry = messalian
+		intermarry = lollard
+		
+		intermarry = reformed
+		intermarry = anglican
+		intermarry = hussite
+		intermarry = lutheran
+		intermarry = anabaptist
+		intermarry = unitarian
+		intermarry = baptist
+		intermarry = arminian
+		intermarry = methodist
+	}
+	baptist = {
+		graphical_culture = westerngfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 73
+		heresy_icon = 6
+		
+		color = { 153 255 51 }
+		
+		scripture_name = THE_SCRIPTURE
+		priest_title = PASTOR
+		piety_name = GRACE
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_GOD GOD_THE_LORD GOD_JESUS
+		}
+		
+		evil_god_names = {
+			SATAN LUCIFER THE_DEVIL THE_WHORE_BABYLON THE_MOTHER_HARLOTS BEELZEBUB MEPHISTOPHELES
+		}
+
+		priests_can_marry = yes
+		hard_to_convert = yes
+		
+		intermarry = catholic
+		intermarry = orthodox
+		intermarry = miaphysite
+		intermarry = nestorian
+
+		intermarry = cathar
+		intermarry = fraticelli
+		intermarry = waldensian
+		intermarry = monophysite
+		intermarry = bogomilist
+		intermarry = monothelite
+		intermarry = iconoclast
+		intermarry = paulician
+		intermarry = messalian
+		intermarry = lollard
+		
+		intermarry = reformed
+		intermarry = anglican
+		intermarry = hussite
+		intermarry = lutheran
+		intermarry = anabaptist
+		intermarry = unitarian
+		intermarry = baptist
+		intermarry = arminian
+		intermarry = methodist
+	}
+	unitarian = {
+		graphical_culture = westerngfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 71
+		heresy_icon = 6
+		
+		color = { 255 255 102 }
+		
+		scripture_name = THE_SCRIPTURE
+		priest_title = PRIEST
+		piety_name = GRACE
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_GOD GOD_THE_LORD GOD_JESUS
+		}
+		
+		evil_god_names = {
+			SATAN LUCIFER THE_DEVIL THE_WHORE_BABYLON THE_MOTHER_HARLOTS BEELZEBUB MEPHISTOPHELES
+		}
+
+		can_demand_religious_conversion = no
+		pacifist = yes
+		priests_can_marry = yes
+		hard_to_convert = yes
+		
+		intermarry = catholic
+		intermarry = orthodox
+		intermarry = miaphysite
+		intermarry = nestorian
+
+		intermarry = cathar
+		intermarry = fraticelli
+		intermarry = waldensian
+		intermarry = monophysite
+		intermarry = bogomilist
+		intermarry = monothelite
+		intermarry = iconoclast
+		intermarry = paulician
+		intermarry = messalian
+		intermarry = lollard
+		
+		intermarry = reformed
+		intermarry = anglican
+		intermarry = hussite
+		intermarry = lutheran
+		intermarry = anabaptist
+		intermarry = unitarian
+		intermarry = baptist
+		intermarry = arminian
+		intermarry = methodist
+	}
+	anabaptist = {
+		graphical_culture = westerngfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 69
+		heresy_icon = 6
+		
+		color = { 102 102 0 }
+		
+		scripture_name = THE_SCRIPTURE
+		priest_title = PRIEST
+		piety_name = GRACE
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_GOD GOD_THE_LORD GOD_JESUS
+		}
+		
+		evil_god_names = {
+			SATAN LUCIFER THE_DEVIL THE_WHORE_BABYLON THE_MOTHER_HARLOTS BEELZEBUB MEPHISTOPHELES
+		}
+
+		can_demand_religious_conversion = no
+		pacifist = yes
+		priests_can_marry = yes
+		hard_to_convert = yes
+		
+		intermarry = catholic
+		intermarry = orthodox
+		intermarry = miaphysite
+		intermarry = nestorian
+
+		intermarry = cathar
+		intermarry = fraticelli
+		intermarry = waldensian
+		intermarry = monophysite
+		intermarry = bogomilist
+		intermarry = monothelite
+		intermarry = iconoclast
+		intermarry = paulician
+		intermarry = messalian
+		intermarry = lollard
+		
+		intermarry = reformed
+		intermarry = anglican
+		intermarry = hussite
+		intermarry = lutheran
+		intermarry = anabaptist
+		intermarry = unitarian
+		intermarry = baptist
+		intermarry = arminian
+		intermarry = methodist
+	}
+	anglican = {
+		graphical_culture = westerngfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 68
+		heresy_icon = 6
+		
+		color = { 255 204 204 }
+		scripture_name = THE_SCRIPTURE
+		priest_title = PRIEST
+		piety_name = GRACE
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_GOD GOD_THE_LORD GOD_JESUS
+		}
+		
+		evil_god_names = {
+			SATAN LUCIFER THE_DEVIL THE_WHORE_BABYLON THE_MOTHER_HARLOTS BEELZEBUB MEPHISTOPHELES
+		}
+
+		can_retire_to_monastery = yes
+		investiture = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		priests_can_marry = yes
+		priests_can_inherit = no
+		
+		religious_clothing_head = 0
+		religious_clothing_priest = 1
+		
+		intermarry = catholic
+		intermarry = orthodox
+		intermarry = miaphysite
+		intermarry = nestorian
+
+		intermarry = cathar
+		intermarry = fraticelli
+		intermarry = waldensian
+		intermarry = monophysite
+		intermarry = bogomilist
+		intermarry = monothelite
+		intermarry = iconoclast
+		intermarry = paulician
+		intermarry = messalian
+		intermarry = lollard
+		
+		intermarry = reformed
+		intermarry = anglican
+		intermarry = hussite
+		intermarry = lutheran
+		intermarry = anabaptist
+		intermarry = unitarian
+		intermarry = baptist
+		intermarry = arminian
+		intermarry = methodist
+	}
+	reformed = {
+		graphical_culture = westerngfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 67
+		heresy_icon = 6
+		
+		color = { 153 255 255 }
+		scripture_name = THE_SCRIPTURE
+		priest_title = PRIEST
+		piety_name = GRACE
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_GOD GOD_THE_LORD GOD_JESUS
+		}
+		
+		evil_god_names = {
+			SATAN LUCIFER THE_DEVIL THE_WHORE_BABYLON THE_MOTHER_HARLOTS BEELZEBUB MEPHISTOPHELES
+		}
+
+		can_retire_to_monastery = yes
+		priests_can_marry = yes
+		priests_can_inherit = yes
+		
+		religious_clothing_head = 0
+		religious_clothing_priest = 1
+		
+		intermarry = catholic
+		intermarry = orthodox
+		intermarry = miaphysite
+		intermarry = nestorian
+
+		intermarry = cathar
+		intermarry = fraticelli
+		intermarry = waldensian
+		intermarry = monophysite
+		intermarry = bogomilist
+		intermarry = monothelite
+		intermarry = iconoclast
+		intermarry = paulician
+		intermarry = messalian
+		intermarry = lollard
+		
+		intermarry = reformed
+		intermarry = anglican
+		intermarry = hussite
+		intermarry = lutheran
+		intermarry = anabaptist
+		intermarry = unitarian
+		intermarry = baptist
+		intermarry = arminian
+		intermarry = methodist
+	}
+	lutheran = {
+		graphical_culture = westerngfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 66
+		heresy_icon = 6
+		
+		color = { 0 51 102 }
+		scripture_name = THE_SCRIPTURE
+		priest_title = PRIEST
+		piety_name = GRACE
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_GOD GOD_THE_LORD GOD_JESUS
+		}
+		
+		evil_god_names = {
+			SATAN LUCIFER THE_DEVIL THE_WHORE_BABYLON THE_MOTHER_HARLOTS BEELZEBUB MEPHISTOPHELES
+		}
+
+		can_retire_to_monastery = yes
+		priests_can_marry = yes
+		investiture = yes
+		autocephaly = yes
+		
+		religious_clothing_head = 0
+		religious_clothing_priest = 1
+		
+		intermarry = catholic
+		intermarry = orthodox
+		intermarry = miaphysite
+		intermarry = nestorian
+
+		intermarry = cathar
+		intermarry = fraticelli
+		intermarry = waldensian
+		intermarry = monophysite
+		intermarry = bogomilist
+		intermarry = monothelite
+		intermarry = iconoclast
+		intermarry = paulician
+		intermarry = messalian
+		intermarry = lollard
+		
+		intermarry = reformed
+		intermarry = anglican
+		intermarry = hussite
+		intermarry = lutheran
+		intermarry = anabaptist
+		intermarry = unitarian
+		intermarry = baptist
+		intermarry = arminian
+		intermarry = methodist
+	}
+	hussite = {
+		graphical_culture = westerngfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 70
+		heresy_icon = 6
+		
+		color = { 204 102 0 }
+		scripture_name = THE_SCRIPTURE
+		priest_title = PRIEST
+		piety_name = GRACE
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_GOD GOD_THE_LORD GOD_JESUS
+		}
+		
+		evil_god_names = {
+			SATAN LUCIFER THE_DEVIL THE_WHORE_BABYLON THE_MOTHER_HARLOTS BEELZEBUB MEPHISTOPHELES
+		}
+		
+		allow_looting = yes
+		hard_to_convert = yes
+		priests_can_marry = yes
+		investiture = yes
+		autocephaly = yes
+		feminist = yes
+		female_temple_holders = yes
+		
+		religious_clothing_head = 0
+		religious_clothing_priest = 1
+		
+		intermarry = catholic
+		intermarry = orthodox
+		intermarry = miaphysite
+		intermarry = nestorian
+
+		intermarry = cathar
+		intermarry = fraticelli
+		intermarry = waldensian
+		intermarry = monophysite
+		intermarry = bogomilist
+		intermarry = monothelite
+		intermarry = iconoclast
+		intermarry = paulician
+		intermarry = messalian
+		intermarry = lollard
+		
+		intermarry = reformed
+		intermarry = anglican
+		intermarry = hussite
+		intermarry = lutheran
+		intermarry = anabaptist
+		intermarry = unitarian
+		intermarry = baptist
+		intermarry = arminian
+		intermarry = methodist
+	}
+	#endprotestants
+}
+
+native_american_group = {
+    graphical_culture = mesoamericangfx
+    playable = yes
+	has_coa_on_barony_only = no
+	hostile_within_group = yes
+
+	color = { 0.37 0.85 0.85 }
+	
+	miskito_pagan_reformed = {
+		graphical_culture = mesoamericangfx
+		icon = 15
+		heresy_icon = 16
+		color = { 191 97 142 }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } has_dlc = "Sunset Invasion" }
+		has_coa_on_barony_only = no
+		secondary_event_pictures = mesoamerican
+		
+		god_names = {
+			GOD_KATI GOD_SLILMA GOD_ALWANI GOD_IMYULA GOD_DUSDAWANKA GOD_LIDAWANKA GOD_RAYAKADAWANKA GOD_SINSLAKADAWANKA GOD_DISANGDAWANKA	GOD_RAKIDAWAN	
+		}
+		evil_god_names = {
+			GOD_LASADAWANKA GOD_PRURADAWANKA
+		}
+		
+		#unit_modifier = {
+		#	levy_size = 0.3
+		#	
+		#	key = "OFF_RELIGION"
+		#}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = SUKYA
+		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		defensive_attrition = yes
+		allow_looting = yes
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+	}
+	
+	miskito_pagan = {
+		graphical_culture = mesoamericangfx
+		icon = 15
+		heresy_icon = 16
+		color = { 191 97 142 }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } has_dlc = "Sunset Invasion" }
+		has_coa_on_barony_only = no
+		secondary_event_pictures = mesoamerican
+		
+		god_names = {
+			GOD_KATI GOD_SLILMA GOD_ALWANI GOD_IMYULA GOD_DUSDAWANKA GOD_LIDAWANKA GOD_RAYAKADAWANKA GOD_SINSLAKADAWANKA GOD_DISANGDAWANKA	GOD_RAKIDAWAN	
+		}
+		evil_god_names = {
+			GOD_LASADAWANKA GOD_PRURADAWANKA
+		}
+		
+		#unit_modifier = {
+		#	levy_size = 0.3
+		#	
+		#	key = "OFF_RELIGION"
+		#}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = SUKYA
+		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		defensive_attrition = yes
+		allow_looting = yes
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = miskito_pagan_reformed
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+	}
+
+#Native American Groups
+
+	subartic_pagan_reformed = {
+		graphical_culture = northernnativegfx
+		alternate_start = { always = no }
+		
+		secondary_event_pictures = mongolgfx
+		
+		icon = 17
+		heresy_icon = 18
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 243 206 168 }
+
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_AADIZOOKAAN_SCROLLS
+		priest_title = MIDEW #Religious societies: Midewiwin, Wabunowin, Jiisakiiwin
+		has_coa_on_barony_only = no
+		high_god_name = GOD_GITCHEE_MANITOU
+
+		god_names = {
+			GOD_GITCHEE_MANITOU GOD_NANABOZHO GOD_GIIZHIGOOKWE GOD_MUDJEKEEWIS 
+		}
+		evil_god_names = {
+			JIIBAYAABOOZ MISHIGINEBIG MISHIPESHU
+		}
+		
+		unit_modifier = {
+			levy_size = 0.3
+			
+			key = "OFF_RELIGION"
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		allow_looting = yes
+		max_consorts = 3
+		short_reign_opinion_year_mult = 1.5
+###########################################	
+		
+		aggression = 0.7 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		allow_in_ruler_designer = no
+		intermarry = algic_pagan
+		intermarry = subartic_pagan
+		intermarry = southwest_pagan
+		intermarry = southeast_pagan
+		intermarry = plains_pagan
+		intermarry = plateau_pagan
+		intermarry = basin_pagan
+		intermarry = aztec
+		intermarry = california_pagan
+		intermarry = raven_tales
+		intermarry = algic_pagan_reformed
+		intermarry = southwest_pagan_reformed
+		intermarry = southeast_pagan_reformed
+		intermarry = plains_pagan_reformed
+		intermarry = plateau_pagan_reformed
+		intermarry = basin_pagan_reformed
+		intermarry = aztec_reformed
+		intermarry = california_pagan_reformed
+		intermarry = raven_tales_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+	}	
+	subartic_pagan = {
+		graphical_culture = northernnativegfx
+		icon = 15
+		heresy_icon = 16
+		color = { 253 216 178 }
+		alternate_start = {
+			OR = {
+				year < 1100
+				has_alternate_start_parameter = { key = religion value = full_random }
+			}
+		}
+
+		secondary_event_pictures = mesoamerican
+
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_AADIZOOKAAN_SCROLLS
+		priest_title = MIDEW #Religious societies: Midewiwin, Wabunowin, Jiisakiiwin
+		has_coa_on_barony_only = no
+		high_god_name = GOD_GITCHEE_MANITOU
+
+		god_names = {
+			GOD_GITCHEE_MANITOU GOD_NANABOZHO GOD_GIIZHIGOOKWE GOD_MUDJEKEEWIS 
+		}
+		evil_god_names = {
+			JIIBAYAABOOZ MISHIGINEBIG MISHIPESHU
+		}
+
+		unit_modifier = {
+			levy_size = 0.3
+			
+			key = "OFF_RELIGION"
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		defensive_attrition = yes
+		allow_looting = yes
+###########################################
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = subartic_pagan_reformed
+		
+		short_reign_opinion_year_mult = 2
+		
+		aggression = 0.7 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		intermarry = algic_pagan
+		intermarry = southwest_pagan
+		intermarry = southeast_pagan
+		intermarry = plains_pagan_pagan
+		intermarry = plateau_pagan_pagan
+		intermarry = basin_pagan
+		intermarry = aztec
+		intermarry = california_pagan
+		intermarry = raven_tales
+		intermarry = algic_pagan_reformed
+		intermarry = southwest_pagan_reformed
+		intermarry = southeast_pagan_reformed
+		intermarry = plains_pagan_reformed
+		intermarry = plateau_pagan_reformed
+		intermarry = basin_pagan_reformed
+		intermarry = aztec_reformed
+		intermarry = subartic_pagan_reformed
+		intermarry = california_pagan_reformed
+		intermarry = raven_tales_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+
+	}
+	plains_pagan_reformed = {
+		graphical_culture = northernnativegfx
+		alternate_start = { always = no }
+		
+		secondary_event_pictures = mesoamerican
+		
+		icon = 17
+		heresy_icon = 18
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 241 167 119 }
+
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_AADIZOOKAAN_SCROLLS
+		priest_title = MIDEW #Religious societies: Midewiwin, Wabunowin, Jiisakiiwin
+		has_coa_on_barony_only = no
+		high_god_name = GOD_GITCHEE_MANITOU
+
+		god_names = {
+			GOD_GITCHEE_MANITOU GOD_NANABOZHO GOD_GIIZHIGOOKWE GOD_MUDJEKEEWIS 
+		}
+		evil_god_names = {
+			JIIBAYAABOOZ MISHIGINEBIG MISHIPESHU
+		}
+		
+		unit_modifier = {
+			levy_size = 0.3
+			
+			key = "OFF_RELIGION"
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		allow_looting = yes
+		max_consorts = 3
+		short_reign_opinion_year_mult = 1.5
+###########################################	
+		
+		aggression = 0.7 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		intermarry = algic_pagan
+		intermarry = southwest_pagan
+		intermarry = southeast_pagan
+		intermarry = plains_pagan_pagan
+		intermarry = plateau_pagan_pagan
+		intermarry = basin_pagan
+		intermarry = aztec
+		intermarry = subartic_pagan
+		intermarry = california_pagan
+		intermarry = raven_tales
+		intermarry = algic_pagan_reformed
+		intermarry = southwest_pagan_reformed
+		intermarry = southeast_pagan_reformed
+		intermarry = plateau_pagan_reformed
+		intermarry = basin_pagan_reformed
+		intermarry = aztec_reformed
+		intermarry = subartic_pagan_reformed
+		intermarry = california_pagan_reformed
+		intermarry = raven_tales_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+		allow_in_ruler_designer = no
+	}	
+	plains_pagan = {
+		graphical_culture = northernnativegfx
+		icon = 15
+		heresy_icon = 16
+		color = { 251 177 129 }
+		alternate_start = {
+			OR = {
+				year < 1100
+				has_alternate_start_parameter = { key = religion value = full_random }
+			}
+		}
+
+		secondary_event_pictures = mesoamerican
+
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_AADIZOOKAAN_SCROLLS
+		priest_title = MIDEW #Religious societies: Midewiwin, Wabunowin, Jiisakiiwin
+		has_coa_on_barony_only = no
+		high_god_name = GOD_GITCHEE_MANITOU
+
+		god_names = {
+			GOD_GITCHEE_MANITOU GOD_NANABOZHO GOD_GIIZHIGOOKWE GOD_MUDJEKEEWIS 
+		}
+		evil_god_names = {
+			JIIBAYAABOOZ MISHIGINEBIG MISHIPESHU
+		}
+
+		unit_modifier = {
+			levy_size = 0.3
+			
+			key = "OFF_RELIGION"
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		defensive_attrition = yes
+		allow_looting = yes
+###########################################
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = plains_pagan_reformed
+		
+		short_reign_opinion_year_mult = 2
+		
+		aggression = 0.7 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		intermarry = algic_pagan
+		intermarry = southwest_pagan
+		intermarry = southeast_pagan
+		intermarry = plateau_pagan_pagan
+		intermarry = basin_pagan
+		intermarry = aztec
+		intermarry = subartic_pagan
+		intermarry = california_pagan
+		intermarry = raven_tales
+		intermarry = algic_pagan_reformed
+		intermarry = southwest_pagan_reformed
+		intermarry = southeast_pagan_reformed
+		intermarry = plains_pagan_reformed
+		intermarry = plateau_pagan_reformed
+		intermarry = basin_pagan_reformed
+		intermarry = aztec_reformed
+		intermarry = subartic_pagan_reformed
+		intermarry = california_pagan_reformed
+		intermarry = raven_tales_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+
+	}
+	basin_pagan = {
+		graphical_culture = northernnativegfx
+		icon = 15
+		heresy_icon = 16
+		color = { 234 133 124 }
+		alternate_start = {
+			OR = {
+				year < 1100
+				has_alternate_start_parameter = { key = religion value = full_random }
+			}
+		}
+
+		secondary_event_pictures = mesoamerican
+		has_coa_on_barony_only = no
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_AADIZOOKAAN_SCROLLS
+		priest_title = MIDEW #Religious societies: Midewiwin, Wabunowin, Jiisakiiwin
+
+		high_god_name = GOD_GITCHEE_MANITOU
+
+		god_names = {
+			GOD_GITCHEE_MANITOU GOD_NANABOZHO GOD_GIIZHIGOOKWE GOD_MUDJEKEEWIS 
+		}
+		evil_god_names = {
+			JIIBAYAABOOZ MISHIGINEBIG MISHIPESHU
+		}
+
+		unit_modifier = {
+			levy_size = 0.3
+			
+			key = "OFF_RELIGION"
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		defensive_attrition = yes
+		allow_looting = yes
+###########################################
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = basin_pagan_reformed
+		
+		short_reign_opinion_year_mult = 2
+		
+		aggression = 0.7 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		intermarry = algic_pagan
+		intermarry = southwest_pagan
+		intermarry = southeast_pagan
+		intermarry = plains_pagan_pagan
+		intermarry = plateau_pagan_pagan
+		intermarry = aztec
+		intermarry = subartic_pagan
+		intermarry = california_pagan
+		intermarry = raven_tales
+		intermarry = algic_pagan_reformed
+		intermarry = southwest_pagan_reformed
+		intermarry = southeast_pagan_reformed
+		intermarry = plains_pagan_reformed
+		intermarry = plateau_pagan_reformed
+		intermarry = basin_pagan_reformed
+		intermarry = aztec_reformed
+		intermarry = subartic_pagan_reformed
+		intermarry = california_pagan_reformed
+		intermarry = raven_tales_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+
+	}
+	basin_pagan_reformed = {
+		graphical_culture = northernnativegfx
+		alternate_start = { always = no }
+		
+		secondary_event_pictures = mesoamerican
+		
+		icon = 17
+		heresy_icon = 18
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 224 123 114 }
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_AADIZOOKAAN_SCROLLS
+		priest_title = MIDEW #Religious societies: Midewiwin, Wabunowin, Jiisakiiwin
+		has_coa_on_barony_only = no
+		high_god_name = GOD_GITCHEE_MANITOU
+
+		god_names = {
+			GOD_GITCHEE_MANITOU GOD_NANABOZHO GOD_GIIZHIGOOKWE GOD_MUDJEKEEWIS 
+		}
+		evil_god_names = {
+			JIIBAYAABOOZ MISHIGINEBIG MISHIPESHU
+		}
+		
+		unit_modifier = {
+			levy_size = 0.3
+			
+			key = "OFF_RELIGION"
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		allow_looting = yes
+		max_consorts = 3
+		short_reign_opinion_year_mult = 1.5
+###########################################	
+		
+		aggression = 0.7 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		intermarry = algic_pagan
+		intermarry = southwest_pagan
+		intermarry = southeast_pagan
+		intermarry = plains_pagan_pagan
+		intermarry = plateau_pagan_pagan
+		intermarry = basin_pagan
+		intermarry = aztec
+		intermarry = subartic_pagan
+		intermarry = california_pagan
+		intermarry = raven_tales
+		intermarry = algic_pagan_reformed
+		intermarry = southwest_pagan_reformed
+		intermarry = southeast_pagan_reformed
+		intermarry = plains_pagan_reformed
+		intermarry = plateau_pagan_reformed
+		intermarry = aztec_reformed
+		intermarry = subartic_pagan_reformed
+		intermarry = california_pagan_reformed
+		intermarry = raven_tales_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+		allow_in_ruler_designer = no
+	}
+	plateau_pagan_reformed = {
+		graphical_culture = northernnativegfx
+		alternate_start = { always = no }
+		
+		secondary_event_pictures = mesoamerican
+		
+		icon = 17
+		heresy_icon = 18
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 112 171 169 }
+
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_AADIZOOKAAN_SCROLLS
+		priest_title = MIDEW #Religious societies: Midewiwin, Wabunowin, Jiisakiiwin
+		has_coa_on_barony_only = no
+		high_god_name = GOD_GITCHEE_MANITOU
+
+		god_names = {
+			GOD_GITCHEE_MANITOU GOD_NANABOZHO GOD_GIIZHIGOOKWE GOD_MUDJEKEEWIS 
+		}
+		evil_god_names = {
+			JIIBAYAABOOZ MISHIGINEBIG MISHIPESHU
+		}
+		
+		unit_modifier = {
+			levy_size = 0.3
+			
+			key = "OFF_RELIGION"
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		allow_looting = yes
+		max_consorts = 3
+		short_reign_opinion_year_mult = 1.5
+###########################################	
+		
+		aggression = 0.7 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		intermarry = algic_pagan
+		intermarry = southwest_pagan
+		intermarry = southeast_pagan
+		intermarry = plains_pagan_pagan
+		intermarry = plateau_pagan_pagan
+		intermarry = basin_pagan
+		intermarry = aztec
+		intermarry = subartic_pagan
+		intermarry = california_pagan
+		intermarry = raven_tales
+		intermarry = algic_pagan_reformed
+		intermarry = southwest_pagan_reformed
+		intermarry = southeast_pagan_reformed
+		intermarry = plains_pagan_reformed
+		intermarry = basin_pagan_reformed
+		intermarry = aztec_reformed
+		intermarry = subartic_pagan_reformed
+		intermarry = california_pagan_reformed
+		intermarry = raven_tales_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+		allow_in_ruler_designer = no
+	}	
+	plateau_pagan = {
+		graphical_culture = northernnativegfx
+		icon = 15
+		heresy_icon = 16
+		color = { 122 181 179 }
+		alternate_start = {
+			OR = {
+				year < 1100
+				has_alternate_start_parameter = { key = religion value = full_random }
+			}
+		}
+
+		secondary_event_pictures = mesoamerican
+
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_AADIZOOKAAN_SCROLLS
+		priest_title = MIDEW #Religious societies: Midewiwin, Wabunowin, Jiisakiiwin
+		has_coa_on_barony_only = no
+		high_god_name = GOD_GITCHEE_MANITOU
+
+		god_names = {
+			GOD_GITCHEE_MANITOU GOD_NANABOZHO GOD_GIIZHIGOOKWE GOD_MUDJEKEEWIS 
+		}
+		evil_god_names = {
+			JIIBAYAABOOZ MISHIGINEBIG MISHIPESHU
+		}
+
+		unit_modifier = {
+			levy_size = 0.3
+			
+			key = "OFF_RELIGION"
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		defensive_attrition = yes
+		allow_looting = yes
+###########################################
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = plateau_pagan_reformed
+		
+		short_reign_opinion_year_mult = 2
+		
+		aggression = 0.7 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		intermarry = algic_pagan
+		intermarry = southwest_pagan
+		intermarry = southeast_pagan
+		intermarry = plains_pagan
+		intermarry = basin_pagan
+		intermarry = aztec
+		intermarry = subartic_pagan
+		intermarry = california_pagan
+		intermarry = raven_tales
+		intermarry = algic_pagan_reformed
+		intermarry = southwest_pagan_reformed
+		intermarry = southeast_pagan_reformed
+		intermarry = plains_pagan_reformed
+		intermarry = plateau_pagan_reformed
+		intermarry = basin_pagan_reformed
+		intermarry = aztec_reformed
+		intermarry = subartic_pagan_reformed
+		intermarry = california_pagan_reformed
+		intermarry = raven_tales_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+
+	}	
+	california_pagan_reformed = {
+		graphical_culture = northernnativegfx
+		alternate_start = { always = no }
+		
+		secondary_event_pictures = mesoamerican
+		
+		icon = 17
+		heresy_icon = 18
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 176 207 170 }
+
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_AADIZOOKAAN_SCROLLS
+		priest_title = MIDEW #Religious societies: Midewiwin, Wabunowin, Jiisakiiwin
+		has_coa_on_barony_only = no
+		high_god_name = GOD_GITCHEE_MANITOU
+
+		god_names = {
+			GOD_GITCHEE_MANITOU GOD_NANABOZHO GOD_GIIZHIGOOKWE GOD_MUDJEKEEWIS 
+		}
+		evil_god_names = {
+			JIIBAYAABOOZ MISHIGINEBIG MISHIPESHU
+		}
+		
+		unit_modifier = {
+			levy_size = 0.3
+			
+			key = "OFF_RELIGION"
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		allow_looting = yes
+		max_consorts = 3
+		short_reign_opinion_year_mult = 1.5
+###########################################	
+		
+		aggression = 0.7 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		allow_in_ruler_designer = no
+		intermarry = algic_pagan
+		intermarry = southwest_pagan
+		intermarry = southeast_pagan
+		intermarry = plains_pagan_pagan
+		intermarry = plateau_pagan_pagan
+		intermarry = basin_pagan
+		intermarry = california_pagan
+		intermarry = aztec
+		intermarry = subartic_pagan
+		intermarry = raven_tales
+		intermarry = algic_pagan_reformed
+		intermarry = southwest_pagan_reformed
+		intermarry = southeast_pagan_reformed
+		intermarry = plains_pagan_reformed
+		intermarry = plateau_pagan_reformed
+		intermarry = basin_pagan_reformed
+		intermarry = aztec_reformed
+		intermarry = subartic_pagan_reformed
+		intermarry = raven_tales_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+	}	
+	california_pagan = {
+		graphical_culture = northernnativegfx
+		icon = 15
+		heresy_icon = 16
+		color = { 186 217 180 }
+		alternate_start = {
+			OR = {
+				year < 1100
+				has_alternate_start_parameter = { key = religion value = full_random }
+			}
+		}
+
+		secondary_event_pictures = mesoamerican
+
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_AADIZOOKAAN_SCROLLS
+		priest_title = MIDEW #Religious societies: Midewiwin, Wabunowin, Jiisakiiwin
+		has_coa_on_barony_only = no
+		high_god_name = GOD_GITCHEE_MANITOU
+
+		god_names = {
+			GOD_GITCHEE_MANITOU GOD_NANABOZHO GOD_GIIZHIGOOKWE GOD_MUDJEKEEWIS 
+		}
+		evil_god_names = {
+			JIIBAYAABOOZ MISHIGINEBIG MISHIPESHU
+		}
+
+		unit_modifier = {
+			levy_size = 0.3
+			
+			key = "OFF_RELIGION"
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		defensive_attrition = yes
+		allow_looting = yes
+###########################################
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = california_pagan_reformed
+		
+		short_reign_opinion_year_mult = 2
+		
+		aggression = 0.7 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		intermarry = algic_pagan
+		intermarry = southwest_pagan
+		intermarry = southeast_pagan
+		intermarry = plains_pagan_pagan
+		intermarry = plateau_pagan_pagan
+		intermarry = basin_pagan
+		intermarry = aztec
+		intermarry = subartic_pagan
+		intermarry = raven_tales
+		intermarry = algic_pagan_reformed
+		intermarry = southwest_pagan_reformed
+		intermarry = southeast_pagan_reformed
+		intermarry = plains_pagan_reformed
+		intermarry = plateau_pagan_reformed
+		intermarry = basin_pagan_reformed
+		intermarry = aztec_reformed
+		intermarry = subartic_pagan_reformed
+		intermarry = california_pagan_reformed
+		intermarry = raven_tales_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+
+	}
+	southeast_pagan_reformed = {
+		graphical_culture = northernnativegfx
+		alternate_start = { always = no }
+		
+		secondary_event_pictures = mesoamerican
+		
+		icon = 17
+		heresy_icon = 18
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 217 212 171 }
+
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_AADIZOOKAAN_SCROLLS
+		priest_title = MIDEW #Religious societies: Midewiwin, Wabunowin, Jiisakiiwin
+		has_coa_on_barony_only = no
+		high_god_name = GOD_GITCHEE_MANITOU
+
+		god_names = {
+			GOD_GITCHEE_MANITOU GOD_NANABOZHO GOD_GIIZHIGOOKWE GOD_MUDJEKEEWIS 
+		}
+		evil_god_names = {
+			JIIBAYAABOOZ MISHIGINEBIG MISHIPESHU
+		}
+		
+		unit_modifier = {
+			levy_size = 0.3
+			
+			key = "OFF_RELIGION"
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		allow_looting = yes
+		max_consorts = 3
+		short_reign_opinion_year_mult = 1.5
+###########################################	
+		
+		aggression = 0.7 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		allow_in_ruler_designer = no
+		intermarry = algic_pagan
+		intermarry = southwest_pagan
+		intermarry = southeast_pagan
+		intermarry = plains_pagan_pagan
+		intermarry = plateau_pagan_pagan
+		intermarry = basin_pagan
+		intermarry = aztec
+		intermarry = subartic_pagan
+		intermarry = california_pagan
+		intermarry = raven_tales
+		intermarry = algic_pagan_reformed
+		intermarry = southwest_pagan_reformed
+		intermarry = plains_pagan_reformed
+		intermarry = plateau_pagan_reformed
+		intermarry = basin_pagan_reformed
+		intermarry = aztec_reformed
+		intermarry = subartic_pagan_reformed
+		intermarry = california_pagan_reformed
+		intermarry = raven_tales_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+	}	
+	southeast_pagan = {
+		graphical_culture = northernnativegfx
+		icon = 15
+		heresy_icon = 16
+		color = { 227 222 181 }
+		alternate_start = {
+			OR = {
+				year < 1100
+				has_alternate_start_parameter = { key = religion value = full_random }
+			}
+		}
+
+		secondary_event_pictures = mesoamerican
+
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_AADIZOOKAAN_SCROLLS
+		priest_title = MIDEW #Religious societies: Midewiwin, Wabunowin, Jiisakiiwin
+		has_coa_on_barony_only = no
+		high_god_name = GOD_GITCHEE_MANITOU
+
+		god_names = {
+			GOD_GITCHEE_MANITOU GOD_NANABOZHO GOD_GIIZHIGOOKWE GOD_MUDJEKEEWIS 
+		}
+		evil_god_names = {
+			JIIBAYAABOOZ MISHIGINEBIG MISHIPESHU
+		}
+
+		unit_modifier = {
+			levy_size = 0.3
+			
+			key = "OFF_RELIGION"
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		defensive_attrition = yes
+		allow_looting = yes
+###########################################
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = southeast_pagan_reformed
+		
+		short_reign_opinion_year_mult = 2
+		
+		aggression = 0.7 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		intermarry = algic_pagan
+		intermarry = southwest_pagan
+		intermarry = plains_pagan_pagan
+		intermarry = plateau_pagan_pagan
+		intermarry = basin_pagan
+		intermarry = aztec
+		intermarry = subartic_pagan
+		intermarry = california_pagan
+		intermarry = raven_tales
+		intermarry = algic_pagan_reformed
+		intermarry = southwest_pagan_reformed
+		intermarry = southeast_pagan_reformed
+		intermarry = plains_pagan_reformed
+		intermarry = plateau_pagan_reformed
+		intermarry = basin_pagan_reformed
+		intermarry = aztec_reformed
+		intermarry = subartic_pagan_reformed
+		intermarry = california_pagan_reformed
+		intermarry = raven_tales_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+
+	}	
+	southwest_pagan_reformed = {
+		graphical_culture = zapotecangfx
+		alternate_start = { always = no }
+		
+		secondary_event_pictures = muslimgfx
+		
+		icon = 17
+		heresy_icon = 18
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 214 171 118 }
+
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_AADIZOOKAAN_SCROLLS
+		priest_title = MIDEW #Religious societies: Midewiwin, Wabunowin, Jiisakiiwin
+		has_coa_on_barony_only = no
+		high_god_name = GOD_GITCHEE_MANITOU
+
+		god_names = {
+			GOD_GITCHEE_MANITOU GOD_NANABOZHO GOD_GIIZHIGOOKWE GOD_MUDJEKEEWIS 
+		}
+		evil_god_names = {
+			JIIBAYAABOOZ MISHIGINEBIG MISHIPESHU
+		}
+		
+		unit_modifier = {
+			levy_size = 0.3
+			
+			key = "OFF_RELIGION"
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		allow_looting = yes
+		max_consorts = 3
+		short_reign_opinion_year_mult = 1.5
+###########################################	
+		
+		aggression = 0.7 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		intermarry = algic_pagan
+		intermarry = southwest_pagan
+		intermarry = southeast_pagan
+		intermarry = plains_pagan_pagan
+		intermarry = plateau_pagan_pagan
+		intermarry = basin_pagan
+		intermarry = aztec
+		intermarry = subartic_pagan
+		intermarry = california_pagan
+		intermarry = raven_tales
+		intermarry = algic_pagan_reformed
+		intermarry = southeast_pagan_reformed
+		intermarry = plains_pagan_reformed
+		intermarry = plateau_pagan_reformed
+		intermarry = basin_pagan_reformed
+		intermarry = aztec_reformed
+		intermarry = subartic_pagan_reformed
+		intermarry = california_pagan_reformed
+		intermarry = raven_tales_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+		allow_in_ruler_designer = no
+		intermarry = algic_pagan
+	}	
+	southwest_pagan = {
+		graphical_culture = zapotecangfx
+		icon = 15
+		heresy_icon = 16
+		color = { 234 181 128 }
+		alternate_start = {
+			OR = {
+				year < 1100
+				has_alternate_start_parameter = { key = religion value = full_random }
+			}
+		}
+
+		secondary_event_pictures = mesoamerican
+
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_AADIZOOKAAN_SCROLLS
+		priest_title = MIDEW #Religious societies: Midewiwin, Wabunowin, Jiisakiiwin
+		has_coa_on_barony_only = no
+		high_god_name = GOD_GITCHEE_MANITOU
+
+		god_names = {
+			GOD_GITCHEE_MANITOU GOD_NANABOZHO GOD_GIIZHIGOOKWE GOD_MUDJEKEEWIS 
+		}
+		evil_god_names = {
+			JIIBAYAABOOZ MISHIGINEBIG MISHIPESHU
+		}
+
+		unit_modifier = {
+			levy_size = 0.3
+			
+			key = "OFF_RELIGION"
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		defensive_attrition = yes
+		allow_looting = yes
+###########################################
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = southwest_pagan_reformed
+		
+		short_reign_opinion_year_mult = 2
+		
+		aggression = 0.7 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		intermarry = algic_pagan
+		intermarry = southeast_pagan
+		intermarry = plains_pagan_pagan
+		intermarry = plateau_pagan_pagan
+		intermarry = basin_pagan
+		intermarry = aztec
+		intermarry = subartic_pagan
+		intermarry = california_pagan
+		intermarry = raven_tales
+		intermarry = algic_pagan_reformed
+		intermarry = southwest_pagan_reformed
+		intermarry = southeast_pagan_reformed
+		intermarry = plains_pagan_reformed
+		intermarry = plateau_pagan_reformed
+		intermarry = basin_pagan_reformed
+		intermarry = aztec_reformed
+		intermarry = subartic_pagan_reformed
+		intermarry = california_pagan_reformed
+		intermarry = raven_tales_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+
+	}	
+	algic_pagan_reformed = {
+		graphical_culture = northernnativegfx
+		alternate_start = { always = no }
+		
+		secondary_event_pictures = mesoamerican
+		
+		icon = 17
+		heresy_icon = 18
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 0.25 0.85 0.85 }
+
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_AADIZOOKAAN_SCROLLS
+		priest_title = MIDEW #Religious societies: Midewiwin, Wabunowin, Jiisakiiwin
+		has_coa_on_barony_only = no
+		high_god_name = GOD_GITCHEE_MANITOU
+
+		god_names = {
+			GOD_GITCHEE_MANITOU GOD_NANABOZHO GOD_GIIZHIGOOKWE GOD_MUDJEKEEWIS 
+		}
+		evil_god_names = {
+			JIIBAYAABOOZ MISHIGINEBIG MISHIPESHU
+		}
+		
+		unit_modifier = {
+			levy_size = 0.3
+			
+			key = "OFF_RELIGION"
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		allow_looting = yes
+		max_consorts = 3
+		short_reign_opinion_year_mult = 1.5
+###########################################	
+		
+		aggression = 0.7 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		intermarry = algic_pagan
+		intermarry = southwest_pagan
+		intermarry = southeast_pagan
+		intermarry = plains_pagan_pagan
+		intermarry = plateau_pagan_pagan
+		intermarry = basin_pagan
+		intermarry = aztec
+		intermarry = subartic_pagan
+		intermarry = california_pagan
+		intermarry = raven_tales
+		intermarry = southwest_pagan_reformed
+		intermarry = southeast_pagan_reformed
+		intermarry = plains_pagan_reformed
+		intermarry = plateau_pagan_reformed
+		intermarry = basin_pagan_reformed
+		intermarry = aztec_reformed
+		intermarry = subartic_pagan_reformed
+		intermarry = california_pagan_reformed
+		intermarry = raven_tales_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+		allow_in_ruler_designer = no
+		intermarry = algic_pagan
+	}	
+	algic_pagan = {
+		graphical_culture = northernnativegfx
+		icon = 15
+		heresy_icon = 16
+		color = { 0.2 0.8 0.8 }
+		alternate_start = {
+			OR = {
+				year < 1100
+				has_alternate_start_parameter = { key = religion value = full_random }
+			}
+		}
+
+		secondary_event_pictures = mesoamerican
+
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_AADIZOOKAAN_SCROLLS
+		priest_title = MIDEW #Religious societies: Midewiwin, Wabunowin, Jiisakiiwin
+		has_coa_on_barony_only = no
+		high_god_name = GOD_GITCHEE_MANITOU
+
+		god_names = {
+			GOD_GITCHEE_MANITOU GOD_NANABOZHO GOD_GIIZHIGOOKWE GOD_MUDJEKEEWIS 
+		}
+		evil_god_names = {
+			JIIBAYAABOOZ MISHIGINEBIG MISHIPESHU
+		}
+
+		unit_modifier = {
+			levy_size = 0.3
+			
+			key = "OFF_RELIGION"
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		defensive_attrition = yes
+		allow_looting = yes
+###########################################
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = algic_pagan_reformed
+		
+		short_reign_opinion_year_mult = 2
+		
+		aggression = 0.7 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		intermarry = southwest_pagan
+		intermarry = southeast_pagan
+		intermarry = plains_pagan_pagan
+		intermarry = plateau_pagan_pagan
+		intermarry = basin_pagan
+		intermarry = aztec
+		intermarry = subartic_pagan
+		intermarry = california_pagan
+		intermarry = raven_tales
+		intermarry = algic_pagan_reformed
+		intermarry = southwest_pagan_reformed
+		intermarry = southeast_pagan_reformed
+		intermarry = plains_pagan_reformed
+		intermarry = plateau_pagan_reformed
+		intermarry = basin_pagan_reformed
+		intermarry = aztec_reformed
+		intermarry = subartic_pagan_reformed
+		intermarry = california_pagan_reformed
+		intermarry = raven_tales_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+
+	}
+	raven_tales_reformed = {
+		graphical_culture = northernnativegfx 
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+
+		icon = 17
+		heresy_icon = 18
+		
+		color = { 0.7 0 0 }
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_GREAT_TOTEM
+		priest_title = SHAMAN
+		piety_name = REVERENCE
+		has_coa_on_barony_only = no
+		high_god_name = GOD_XHUUYEE
+		
+		god_names = {
+			GOD_TAXET GOD_TIA GOD_GYHLDEPTIS GOD_LAGUA GOD_DZALARHONS GOD_KAITI
+		}
+		evil_god_names = {
+			THE_DARK_SPIRITS
+		}
+		
+		can_call_crusade = yes
+		allow_looting = yes
+		allow_rivermovement = yes
+		priests_can_marry = yes
+		allow_in_ruler_designer = no
+
+		religious_clothing_head = 15
+		religious_clothing_priest = 15
+		intermarry = algic_pagan
+		intermarry = southwest_pagan
+		intermarry = southeast_pagan
+		intermarry = plains_pagan_pagan
+		intermarry = plateau_pagan_pagan
+		intermarry = basin_pagan
+		intermarry = aztec
+		intermarry = subartic_pagan
+		intermarry = california_pagan
+		intermarry = raven_tales
+		intermarry = algic_pagan_reformed
+		intermarry = southwest_pagan_reformed
+		intermarry = southeast_pagan_reformed
+		intermarry = plains_pagan_reformed
+		intermarry = plateau_pagan_reformed
+		intermarry = basin_pagan_reformed
+		intermarry = aztec_reformed
+		intermarry = subartic_pagan_reformed
+		intermarry = california_pagan_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+		alternate_start = { always = no }
+	}
+	
+	raven_tales = {
+		graphical_culture = northernnativegfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+
+		icon = 17
+		heresy_icon = 18
+		
+		color = { 0.5 0.1 0.1 }
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_TALES
+		priest_title = SHAMAN
+		piety_name = REVERENCE
+		has_coa_on_barony_only = no
+		high_god_name = GOD_XHUUYEE
+		
+		god_names = {
+			GOD_TAXET GOD_TIA GOD_GYHLDEPTIS GOD_LAGUA GOD_DZALARHONS GOD_KAITI
+		}
+		evil_god_names = {
+			THE_DARK_SPIRITS
+		}
+
+		allow_viking_invasion = yes
+		allow_rivermovement = yes
+		allow_looting = yes
+		peace_prestige_loss = yes
+		raised_vassal_opinion_loss = no
+		max_consorts = 2
+		priests_can_marry = yes
+		can_demand_religious_conversion = no
+		
+		reformed = raven_tales_reformed
+		
+		religious_clothing_head = 15
+		religious_clothing_priest = 15
+		intermarry = algic_pagan
+		intermarry = southwest_pagan
+		intermarry = southeast_pagan
+		intermarry = plains_pagan_pagan
+		intermarry = plateau_pagan_pagan
+		intermarry = basin_pagan
+		intermarry = aztec
+		intermarry = subartic_pagan
+		intermarry = california_pagan
+		intermarry = algic_pagan_reformed
+		intermarry = southwest_pagan_reformed
+		intermarry = southeast_pagan_reformed
+		intermarry = plains_pagan_reformed
+		intermarry = plateau_pagan_reformed
+		intermarry = basin_pagan_reformed
+		intermarry = aztec_reformed
+		intermarry = subartic_pagan_reformed
+		intermarry = california_pagan_reformed
+		intermarry = raven_tales_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+	}
+	caribic_pagan_reformed = {
+		graphical_culture = africangfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		secondary_event_pictures = west_african_pagan
+
+		icon = 35
+		heresy_icon = 36
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 13 87 132 }
+		alternate_start = { always = no }
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = NANGA
+		has_coa_on_barony_only = no
+		high_god_name = GOD_MWARI
+		
+		god_names = {
+			GOD_THE_SPIRITS GOD_THE_ANCESTORS
+		}
+		evil_god_names = {
+			THE_ZIMWI
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		allow_looting = yes
+		short_reign_opinion_year_mult = 1.5
+###########################################
+		max_consorts = 3
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		
+		allow_in_ruler_designer = no
+		aggression = 0.5 # AI aggression factor
+	}
+	
+
+	caribic_pagan = {
+		graphical_culture = africangfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 34
+		heresy_icon = 35
+		
+		color = { 23 97 142 }
+
+		scripture_name = THE_LEGENDS
+		priest_title = NANGA
+		has_coa_on_barony_only = no
+		high_god_name = GOD_MWARI
+		reformed = caribic_pagan_reformed
+		god_names = {
+			GOD_THE_SPIRITS GOD_THE_ANCESTORS
+		}
+		evil_god_names = {
+			THE_ZIMWI
+		}
+		priests_can_marry = yes
+		female_temple_holders = yes
+		defensive_attrition = yes
+		allow_looting = yes
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		
+		unit_modifier = {		
+			garrison_size = 0.3
+			levy_size = 0.1
+			
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {
+			land_morale = 0.8
+			light_infantry_defensive = 0.8
+			heavy_infantry_defensive = 0.8
+			pikemen_defensive = 0.8
+			light_cavalry_defensive = 0.7
+			knights_defensive = 0.8
+			archers_defensive = 0.8
+			horse_archers_defensive = 0.6
+			camel_cavalry_defensive = 0.6
+			war_elephants_defensive = 0.6
+			
+			garrison_size = 0.4
+			
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+		}
+		pampas_pagan_reformed = {
+		graphical_culture = pagangfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		secondary_event_pictures = west_african_pagan
+
+		icon = 35
+		heresy_icon = 36
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 55 100 75 }
+		alternate_start = { always = no }
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = ADMAPU
+		priest_title = MACHI
+		
+		high_god_name = GOD_NGENECHEN
+		
+		god_names = {
+			GOD_ANTU  GOD_ELCHE GOD_ELMAPU GOD_EPUNAMUN GOD_THE_WANGULEN GOD_PILLAN
+		}
+		evil_god_names = {
+			GOD_THE_GUALICHO GOD_THE_WEKUFE 
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		allow_looting = yes
+		short_reign_opinion_year_mult = 1.5
+###########################################
+		max_consorts = 3
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		
+		allow_in_ruler_designer = no
+		intermarry = south_american
+		aggression = 0.5 # AI aggression factor
+	}
+	
+
+	pampas_pagan = {
+		graphical_culture = pagangfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 34
+		heresy_icon = 35
+		
+		color = { 60 60 200 }
+
+		scripture_name = ADMAPU
+		priest_title = MACHI
+		has_coa_on_barony_only = no
+		high_god_name = GOD_NGENECHEN
+		reformed = pampas_pagan_reformed
+		god_names = {
+			GOD_ANTU  GOD_ELCHE GOD_ELMAPU GOD_EPUNAMUN GOD_THE_WANGULEN GOD_PILLAN
+		}
+		evil_god_names = {
+			GOD_THE_GUALICHO GOD_THE_WEKUFE 
+		}
+		}
+		mapuche_pagan_reformed = {
+		graphical_culture = pagangfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		secondary_event_pictures = west_african_pagan
+
+		icon = 35
+		heresy_icon = 36
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 50 50 190 }
+		alternate_start = { always = no }
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = ADMAPU
+		priest_title = MACHI
+		
+		high_god_name = GOD_NGENECHEN
+		
+		god_names = {
+			GOD_ANTU  GOD_ELCHE GOD_ELMAPU GOD_EPUNAMUN GOD_THE_WANGULEN GOD_PILLAN
+		}
+		evil_god_names = {
+			GOD_THE_GUALICHO GOD_THE_WEKUFE 
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		defensive_attrition = yes
+		allow_looting = yes
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+###########################################
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		
+		allow_in_ruler_designer = no
+		intermarry = south_american
+		aggression = 0.5 # AI aggression factor
+	}
+
+	chaco_pagan = {
+		graphical_culture = pagangfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 34
+		heresy_icon = 35
+		
+		color = { 80 5 120 }
+
+		scripture_name = ADMAPU
+		priest_title = MACHI
+		has_coa_on_barony_only = no
+		high_god_name = GOD_NGENECHEN
+		reformed = chaco_pagan_reformed
+		god_names = {
+			GOD_ANTU  GOD_ELCHE GOD_ELMAPU GOD_EPUNAMUN GOD_THE_WANGULEN GOD_PILLAN
+		}
+		evil_god_names = {
+			GOD_THE_GUALICHO GOD_THE_WEKUFE 
+		}
+		priests_can_marry = yes
+		female_temple_holders = yes
+		defensive_attrition = yes
+		allow_looting = yes
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		}
+	chaco_pagan_reformed = {
+		graphical_culture = pagangfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		secondary_event_pictures = west_african_pagan
+
+		icon = 35
+		heresy_icon = 36
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 70 0 110 }
+		alternate_start = { always = no }
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = ADMAPU
+		priest_title = MACHI
+		has_coa_on_barony_only = no
+		high_god_name = GOD_NGENECHEN
+		
+		god_names = {
+			GOD_ANTU  GOD_ELCHE GOD_ELMAPU GOD_EPUNAMUN GOD_THE_WANGULEN GOD_PILLAN
+		}
+		evil_god_names = {
+			GOD_THE_GUALICHO GOD_THE_WEKUFE 
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		allow_looting = yes
+		short_reign_opinion_year_mult = 1.5
+###########################################
+		max_consorts = 3
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		
+		allow_in_ruler_designer = no
+		intermarry = south_american
+		aggression = 0.5 # AI aggression factor
+	}
+	amazonian_pagan = {
+		graphical_culture = africangfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 34
+		heresy_icon = 35
+		
+		color = { 0 100 0 }
+
+		scripture_name = ADMAPU
+		priest_title = MACHI
+		has_coa_on_barony_only = no
+		high_god_name = GOD_NGENECHEN
+		reformed = amazonian_pagan_reformed
+		god_names = {
+			GOD_ANTU  GOD_ELCHE GOD_ELMAPU GOD_EPUNAMUN GOD_THE_WANGULEN GOD_PILLAN
+		}
+		evil_god_names = {
+			GOD_THE_GUALICHO GOD_THE_WEKUFE 
+		}
+		priests_can_marry = yes
+		female_temple_holders = yes
+		defensive_attrition = yes
+		allow_looting = yes
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		}
+	amazonian_pagan_reformed = {
+		graphical_culture = africangfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		secondary_event_pictures = west_african_pagan
+
+		icon = 35
+		heresy_icon = 36
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 0 80 0 }
+		alternate_start = { always = no }
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = ADMAPU
+		priest_title = MACHI
+		has_coa_on_barony_only = no
+		high_god_name = GOD_NGENECHEN
+		
+		god_names = {
+			GOD_ANTU  GOD_ELCHE GOD_ELMAPU GOD_EPUNAMUN GOD_THE_WANGULEN GOD_PILLAN
+		}
+		evil_god_names = {
+			GOD_THE_GUALICHO GOD_THE_WEKUFE 
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		allow_looting = yes
+		short_reign_opinion_year_mult = 1.5
+###########################################
+		max_consorts = 3
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		
+		allow_in_ruler_designer = no
+		intermarry = south_american
+		aggression = 0.5 # AI aggression factor
+	}
+	mapuche_pagan = {
+		graphical_culture = pagangfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 34
+		heresy_icon = 35
+		
+		color = { 120 80 90 }
+
+		scripture_name = ADMAPU
+		priest_title = MACHI
+		has_coa_on_barony_only = no
+		high_god_name = GOD_NGENECHEN
+		reformed = mapuche_pagan_reformed
+		god_names = {
+			GOD_ANTU  GOD_ELCHE GOD_ELMAPU GOD_EPUNAMUN GOD_THE_WANGULEN GOD_PILLAN
+		}
+		evil_god_names = {
+			GOD_THE_GUALICHO GOD_THE_WEKUFE 
+		}
+	}
+}
+andean_rel_group = {
+	graphical_culture = norsegfx
+	playable = yes
+	has_coa_on_barony_only = no
+	ai_convert_same_group = 2 # always try to convert
+	ai_convert_other_group = 2	# always try to convert
+	hostile_within_group = yes
+	interface_skin = { indian_interface muslim_interface }
+	
+	muisca_pagan_reformed = {
+		graphical_culture = mesoamericangfx
+		alternate_start = { always = no }
+		
+		secondary_event_pictures = mesoamerican
+		
+		icon = 17
+		heresy_icon = 18
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 244 244 22 }
+		
+		high_god_name = GOD_CHIA
+		
+		god_names = {
+			GOD_CHIMINIGAGUA GOD_SUE GOD_BACHUE GOD_BOCHICA	GOD_HUITACA GOD_CHIBCHACUM GOD_CUCHAVIRA GOD_NENCATACOA GOD_CHAQUE GOD_CHIBAFRUIME
+		}
+		evil_god_names = {
+			GOD_GUAHAIOQUE
+		}
+		
+		#unit_modifier = {
+		#	levy_size = 0.3
+		#	
+		#	key = "OFF_RELIGION"
+		#}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = OGQUE 
+		priests_can_marry = yes
+		max_consorts = 3
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		allow_in_ruler_designer = no
+	}	
+	
+	muisca_pagan = {
+		graphical_culture = mesoamericangfx
+		icon = 15
+		heresy_icon = 16
+		color = { 254 254 12 }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } has_dlc = "Sunset Invasion" }
+		
+		secondary_event_pictures = mesoamerican
+		
+		high_god_name = GOD_CHIA
+		
+		god_names = {
+			GOD_CHIMINIGAGUA GOD_SUE GOD_BACHUE GOD_BOCHICA	GOD_HUITACA GOD_CHIBCHACUM GOD_CUCHAVIRA GOD_NENCATACOA GOD_CHAQUE GOD_CHIBAFRUIME
+		}
+		evil_god_names = {
+			GOD_GUAHAIOQUE
+		}
+		
+		#unit_modifier = {
+		#	levy_size = 0.3
+		#	
+		#	key = "OFF_RELIGION"
+		#}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = OGQUE
+		
+		priests_can_marry = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = muisca_pagan_reformed
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+	}
+	caran_pagan_reformed = {
+		graphical_culture = carangfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		secondary_event_pictures = west_african_pagan
+
+		icon = 35
+		heresy_icon = 36
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 0.25 0.5 0.5 }
+		alternate_start = { always = no }
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = PRIEST
+		
+		high_god_name = GOD_THE_ANCESTORS
+		
+		god_names = {
+			GOD_THE_ANCESTORS
+		}
+		evil_god_names = {
+			ELNINO
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		allow_looting = yes
+		short_reign_opinion_year_mult = 1.5
+###########################################
+		max_consorts = 2
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		
+		allow_in_ruler_designer = no
+		intermarry = inti
+	}
+	caran_pagan = {
+		graphical_culture = carangfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 34
+		heresy_icon = 35
+		
+		color = { 0.25 0.5 0.5 }
+
+		scripture_name = THE_LEGENDS
+		priest_title = PRIEST
+		
+		high_god_name = GOD_THE_ANCESTORS
+		
+		god_names = {
+			GOD_THE_ANCESTORS
+		}
+		evil_god_names = {
+			ELNINO
+		}
+		reformed = caran_pagan_reformed
+		unit_modifier = {		
+			garrison_size = 0.3
+			levy_size = 0.1
+			
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {
+			land_morale = 0.9
+			light_infantry_defensive = 0.9
+			heavy_infantry_defensive = 0.8
+			pikemen_defensive = 0.8
+			light_cavalry_defensive = 0.7
+			knights_defensive = 0.9
+			archers_defensive = 0.8
+			horse_archers_defensive = 0.7
+			camel_cavalry_defensive = 0.7
+			war_elephants_defensive = 0.7
+			
+			garrison_size = 0.4
+			
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+		}
+	chachapoyan_pagan_reformed = {
+		graphical_culture = chachapoyangfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		secondary_event_pictures = west_african_pagan
+
+		icon = 35
+		heresy_icon = 36
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 140 30 50 }
+		alternate_start = { always = no }
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = ADMAPU
+		priest_title = MACHI
+		
+		high_god_name = GOD_NGENECHEN
+		
+		god_names = {
+			GOD_ANTU  GOD_ELCHE GOD_ELMAPU GOD_EPUNAMUN GOD_THE_WANGULEN GOD_PILLAN
+		}
+		evil_god_names = {
+			GOD_THE_GUALICHO GOD_THE_WEKUFE 
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		defensive_attrition = yes
+		allow_looting = yes
+###########################################	
+		short_reign_opinion_year_mult = 2
+		
+		aggression = 1 # AI aggression factor
+
+		religious_clothing_head = 3
+		religious_clothing_priest = 3	
+		###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		allow_looting = yes
+		short_reign_opinion_year_mult = 1.5
+###########################################
+		max_consorts = 2
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		allow_in_ruler_designer = no
+	}
+	chachapoyan_pagan = {
+		graphical_culture = chachapoyangfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 34
+		heresy_icon = 35
+		
+		color = { 160 40 60 }
+
+		scripture_name = ADMAPU
+		priest_title = MACHI
+		
+		high_god_name = GOD_NGENECHEN
+	
+		god_names = {
+			GOD_ANTU  GOD_ELCHE GOD_ELMAPU GOD_EPUNAMUN GOD_THE_WANGULEN GOD_PILLAN
+		}
+		evil_god_names = {
+			GOD_THE_GUALICHO GOD_THE_WEKUFE 
+		}
+		reformed = chachapoyan_pagan_reformed
+		unit_modifier = {		
+			garrison_size = 0.3
+			levy_size = 0.1
+			
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {
+			land_morale = 0.9
+			light_infantry_defensive = 0.9
+			heavy_infantry_defensive = 0.8
+			pikemen_defensive = 0.8
+			light_cavalry_defensive = 0.7
+			knights_defensive = 0.9
+			archers_defensive = 0.8
+			horse_archers_defensive = 0.7
+			camel_cavalry_defensive = 0.7
+			war_elephants_defensive = 0.7
+			
+			garrison_size = 0.4
+			
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+		###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		defensive_attrition = yes
+		allow_looting = yes
+		###########################################	
+		max_consorts = 2
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+		intermarry = inti
+		}
+		chimuan_pagan_reformed = {
+		graphical_culture = chimugfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		secondary_event_pictures = west_african_pagan
+
+		icon = 35
+		heresy_icon = 36
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 0.25 0.25 0.25 }
+		alternate_start = { always = no }
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = PRIEST
+		
+		high_god_name = GOD_SI
+		
+		god_names = {
+			 GOD_NI GOD_NOR GOD_GHISA GOD_JIANG
+		}
+		evil_god_names = {
+			ELNINO
+		}
+
+###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		defensive_attrition = yes
+		allow_looting = yes
+###########################################	
+		short_reign_opinion_year_mult = 2
+		
+		aggression = 1 # AI aggression factor
+
+		religious_clothing_head = 3
+		religious_clothing_priest = 3	
+		###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		allow_looting = yes
+		short_reign_opinion_year_mult = 1.5
+###########################################
+		max_consorts = 2
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		allow_in_ruler_designer = no
+		
+	}
+	chimuan_pagan = {
+		graphical_culture = chimugfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 34
+		heresy_icon = 35
+		
+		color = { 0.05 0.05 0.05 }
+
+		scripture_name = THE_LEGENDS
+		priest_title = PRIEST
+		
+		high_god_name = GOD_SI
+		
+		god_names = {
+			 GOD_NI GOD_NOR GOD_GHISA GOD_JIANG
+		}
+		evil_god_names = {
+			ELNINO
+		}
+		reformed = chimuan_pagan_reformed
+		unit_modifier = {		
+			garrison_size = 0.3
+			levy_size = 0.1
+			
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {
+			land_morale = 0.9
+			light_infantry_defensive = 0.9
+			heavy_infantry_defensive = 0.8
+			pikemen_defensive = 0.8
+			light_cavalry_defensive = 0.7
+			knights_defensive = 0.9
+			archers_defensive = 0.8
+			horse_archers_defensive = 0.7
+			camel_cavalry_defensive = 0.7
+			war_elephants_defensive = 0.7
+			
+			garrison_size = 0.4
+			
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+	###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		defensive_attrition = yes
+		allow_looting = yes
+		###########################################	
+		max_consorts = 2
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+	}
+	tiwanakan_pagan_reformed = {
+		graphical_culture = mesoamericangfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		secondary_event_pictures = west_african_pagan
+
+		icon = 35
+		heresy_icon = 36
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 233 125 02 }
+		alternate_start = { always = no }
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = PRIEST
+		
+		high_god_name = GOD_STAFF_GOD
+		
+		god_names = {
+			 GOD_THE_MOUNTAINS GOD_THE_SPIRITS
+		}
+		evil_god_names = {
+			ELNINO
+		}
+
+		short_reign_opinion_year_mult = 2
+		
+		aggression = 1 # AI aggression factor
+
+		religious_clothing_head = 3
+		religious_clothing_priest = 3	
+		###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		allow_looting = yes
+		short_reign_opinion_year_mult = 1.5
+###########################################
+		max_consorts = 2
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		allow_in_ruler_designer = no
+	}
+	tiwanakan_pagan = {
+		graphical_culture = tiwanacangfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 34
+		heresy_icon = 35
+		
+		color = { 253 135 12 }
+
+		scripture_name = THE_LEGENDS
+		priest_title = PRIEST
+	
+		high_god_name = GOD_STAFF_GOD
+		
+		god_names = {
+			 GOD_THE_MOUNTAINS GOD_THE_SPIRITS
+		}
+		evil_god_names = {
+			ELNINO
+		}
+		reformed = tiwanakan_pagan_reformed
+		unit_modifier = {		
+			garrison_size = 0.3
+			levy_size = 0.1
+			
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {
+			land_morale = 0.9
+			light_infantry_defensive = 0.9
+			heavy_infantry_defensive = 0.8
+			pikemen_defensive = 0.8
+			light_cavalry_defensive = 0.7
+			knights_defensive = 0.9
+			archers_defensive = 0.8
+			horse_archers_defensive = 0.7
+			camel_cavalry_defensive = 0.7
+			war_elephants_defensive = 0.7
+			
+			garrison_size = 0.4
+			
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+		###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		defensive_attrition = yes
+		allow_looting = yes
+		###########################################	
+		max_consorts = 2
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+		intermarry = inti
+	}
+	chavin_pagan_reformed = {
+		graphical_culture = incagfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		secondary_event_pictures = west_african_pagan
+
+		icon = 35
+		heresy_icon = 36
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 25 190 140 }
+		alternate_start = { always = no }
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = SHAMAN
+		
+		high_god_name = GOD_HUARI
+		
+		god_names = {
+			GOD_VICHAMA GOD_WASIKAMAYUQ GOD_YANANAMCA GOD_TUTANAMCA GOD_URQUCHILLAY GOD_URCAGUARY GOD_TUNUPA GOD_RUNACOTO 
+			GOD_QOYLLUR GOD_QHOA GOD_QHAXRA-KAMAYUQ GOD_PACHA GOD_KAMAQ GOD_MANANAMCA GOD_WAYRA GOD_SARA GOD_KILLA
+			GOD_MAMA GOD_RAYHUANA PACHA GOD_QUCHA GOD_QUINOA GOD_NINA GOD_KOKA GOD_ALLPA
+			GOD_MALLKU GOD_KON GOD_KOLASH GOD_ILLAPA GOD_HUAYTAPALLANA GOD_HUAMANCANTAC GOD_EKEKO GOD_COPACATI GOD_CONIRAYA 
+			GOD_CHUYCHU GOD_CHAUPINAMCA GOD_CHASKA GOD_CAVILLACE GOD_CATEQUIL 
+			GOD_AXOMAMMA GOD_AUQUIS GOD_ATAGUCHU GOD_AMARU GOD_APU  
+		}
+		evil_god_names = {
+			GOD_SUPAY GOD_PIGUERAO GOD_PARYAQAQA
+		}
+
+		short_reign_opinion_year_mult = 2
+		
+		aggression = 1 # AI aggression factor
+
+		religious_clothing_head = 3
+		religious_clothing_priest = 3	
+		###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		allow_looting = yes
+		short_reign_opinion_year_mult = 1.5
+		###########################################
+		max_consorts = 2
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		allow_in_ruler_designer = no
+	}
+	chavin_pagan = {
+		graphical_culture = incagfx
+		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+
+		icon = 34
+		heresy_icon = 35
+		
+		color = { 35 200 150 }
+
+		scripture_name = THE_LEGENDS
+		priest_title = SHAMAN
+		
+		high_god_name = GOD_HUARI
+		
+		god_names = {
+			GOD_VICHAMA GOD_WASIKAMAYUQ GOD_YANANAMCA GOD_TUTANAMCA GOD_URQUCHILLAY GOD_URCAGUARY GOD_TUNUPA GOD_RUNACOTO 
+			GOD_QOYLLUR GOD_QHOA GOD_QHAXRA-KAMAYUQ GOD_PACHA GOD_KAMAQ GOD_MANANAMCA GOD_WAYRA GOD_SARA GOD_KILLA
+			GOD_MAMA GOD_RAYHUANA PACHA GOD_QUCHA GOD_QUINOA GOD_NINA GOD_KOKA GOD_ALLPA
+			GOD_MALLKU GOD_KON GOD_KOLASH GOD_ILLAPA GOD_HUAYTAPALLANA GOD_HUAMANCANTAC GOD_EKEKO GOD_COPACATI GOD_CONIRAYA 
+			GOD_CHUYCHU GOD_CHAUPINAMCA GOD_CHASKA GOD_CAVILLACE GOD_CATEQUIL 
+			GOD_AXOMAMMA GOD_AUQUIS GOD_ATAGUCHU GOD_AMARU GOD_APU 
+		}
+		evil_god_names = {
+			GOD_SUPAY GOD_PIGUERAO GOD_PARYAQAQA
+		}
+		
+		reformed = chavin_pagan_reformed
+		unit_modifier = {		
+			garrison_size = 0.3
+			levy_size = 0.1
+			
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {
+			land_morale = 0.9
+			light_infantry_defensive = 0.9
+			heavy_infantry_defensive = 0.8
+			pikemen_defensive = 0.8
+			light_cavalry_defensive = 0.7
+			knights_defensive = 0.9
+			archers_defensive = 0.8
+			horse_archers_defensive = 0.7
+			camel_cavalry_defensive = 0.7
+			war_elephants_defensive = 0.7
+			
+			garrison_size = 0.4
+			
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+		###########################################		
+		priests_can_marry = yes
+		female_temple_holders = yes
+		defensive_attrition = yes
+		allow_looting = yes
+		###########################################	
+		max_consorts = 2
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+		intermarry = inti
+	}
+}
+mesoamerican_rel_group = {
+	has_coa_on_barony_only = yes
+	graphical_culture = norsegfx
+	playable = yes
+	ai_convert_same_group = 2 # always try to convert
+	ai_convert_other_group = 2	# always try to convert
+	hostile_within_group = yes
+	interface_skin = { indian_interface muslim_interface }
+	
+	otomi_pagan_reformed = {
+		graphical_culture = mesoamericangfx
+		alternate_start = { always = no }
+		
+		secondary_event_pictures = mesoamerican
+		
+		icon = 17
+		heresy_icon = 18
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 18 34 180 }
+		
+		high_god_name = GOD_MAKA_SIHTA_SIPI 
+		
+		god_names = {
+		 GOD_HMUHOI GOD_POMBE GOD_ZUDAPI GOD_MAKA_XUMPO_DEHE GOD_MAKA_HYADI GOD_MAKA_HAI
+		}
+		evil_god_names = {
+		 GOD_ZANA GOD_ZITHU
+		}
+		
+		#unit_modifier = {
+		#	levy_size = 0.3
+		#	
+		#	key = "OFF_RELIGION"
+		#}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = VADI 
+		
+		priests_can_marry = yes
+		max_consorts = 3
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		allow_in_ruler_designer = no
+	}	
+	otomi_pagan = {
+		graphical_culture = mesoamericangfx
+		icon = 15
+		heresy_icon = 16
+		color = { 22 44 200 }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } has_dlc = "Sunset Invasion" }
+		
+		secondary_event_pictures = mesoamerican
+		
+		high_god_name = GOD_MAKA_SIHTA_SIPI 
+		
+		god_names = {
+		 GOD_HMUHOI GOD_POMBE GOD_ZUDAPI GOD_MAKA_XUMPO_DEHE GOD_MAKA_HYADI GOD_MAKA_HAI
+		}
+		evil_god_names = {
+		 GOD_ZANA GOD_ZITHU
+		}
+		
+		#unit_modifier = {
+		#	levy_size = 0.3
+		#	
+		#	key = "OFF_RELIGION"
+		#}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = VADI 
+		
+		priests_can_marry = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = otomi_pagan_reformed
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+	}
+	corachol_pagan_reformed = {
+		graphical_culture = mesoamericangfx
+		alternate_start = { always = no }
+		
+		secondary_event_pictures = mesoamerican
+		
+		icon = 17
+		heresy_icon = 18
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 10 130 10 }
+		
+		high_god_name = GOD_TAYAU
+		
+		god_names = {
+			GOD_TATI GOD_TAHAS_SURAVEH GOD_TETEWAN GOD_SAUTARI GOD_HATSIKAN GOD_ORA GOD_TAU GOD_TEIJKAME 
+			GOD_UXUU GOD_HUNAA GOD_SAUTARI
+		}
+		evil_god_names = {
+		 GOD_HURICAN
+		}
+		
+		#unit_modifier = {
+		#	levy_size = 0.3
+		#	
+		#	key = "OFF_RELIGION"
+		#}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = TONATI
+		
+		priests_can_marry = yes
+		max_consorts = 3
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		allow_in_ruler_designer = no
+	}	
+	corachol_pagan = {
+		graphical_culture = mesoamericangfx
+		icon = 15
+		heresy_icon = 16
+		color = { 120 20 15 }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } has_dlc = "Sunset Invasion" }
+		
+		secondary_event_pictures = mesoamerican
+		
+		high_god_name = GOD_TAYAU
+		
+		god_names = {
+			GOD_TATI GOD_TAHAS_SURAVEH GOD_TETEWAN GOD_SAUTARI GOD_HATSIKAN GOD_ORA GOD_TAU GOD_TEIJKAME 
+			GOD_UXUU GOD_HUNAA GOD_SAUTARI
+		}
+		evil_god_names = {
+		 GOD_HURICAN
+		}
+		
+		#unit_modifier = {
+		#	levy_size = 0.3
+		#	
+		#	key = "OFF_RELIGION"
+		#}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = TONATI
+		
+		priests_can_marry = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = corachol_pagan_reformed
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+	}
+	tarascan_pagan_reformed = {
+		graphical_culture = mesoamericangfx
+		alternate_start = { always = no }
+		
+		secondary_event_pictures = mesoamerican
+		
+		icon = 17
+		heresy_icon = 18
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 130 30 45 }
+		
+		high_god_name = GOD_TAYAU
+		
+		god_names = {
+			GOD_TATI GOD_TAHAS_SURAVEH GOD_TETEWAN GOD_SAUTARI GOD_HATSIKAN GOD_ORA GOD_TAU GOD_TÉIJKAME 
+			GOD_UXUU GOD_HUNAA GOD_SAUTARI
+		}
+		
+		evil_god_names = {
+		 GOD_HURICAN
+		}
+		
+		#unit_modifier = {
+		#	levy_size = 0.3
+		#	
+		#	key = "OFF_RELIGION"
+		#}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = TONATI
+		
+		priests_can_marry = yes
+		max_consorts = 3
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		allow_in_ruler_designer = no
+	}	
+	
+	tarascan_pagan = {
+		graphical_culture = mesoamericangfx
+		icon = 15
+		heresy_icon = 16
+		color = { 0 151 0 }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } has_dlc = "Sunset Invasion" }
+		
+		secondary_event_pictures = mesoamerican
+		
+		high_god_name = GOD_CURICAUERI
+		
+		god_names = {
+			GOD_CUPANTZIERE GOD_CUERAUAPERI GOD_CURITACAHERI GOD_HURENDEQUAUECARA GOD_XUNGAPETI	GOD_TURUPTEN GOD_CAHERI GOD_QUARENCHA GOD_ANGAMU_CURACHA GOD_XARATANGA
+
+		}
+		evil_god_names = {
+		 GOD_UCUMU 
+		}
+		
+		#unit_modifier = {
+		#	levy_size = 0.3
+		#	
+		#	key = "OFF_RELIGION"
+		#}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = CURI_PECHA
+		
+		priests_can_marry = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = tarascan_pagan_reformed
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+	}
+	nonohualcan_pagan_reformed = {
+		graphical_culture = mesoamericangfx
+		alternate_start = { always = no }
+		
+		secondary_event_pictures = mesoamerican
+		
+		icon = 17
+		heresy_icon = 18
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 97 113 103 }
+		
+		high_god_name = GOD_QUETZALCOATL
+		
+		god_names = {
+			GOD_TEZCATLIPOCA GOD_TLALOC GOD_CENTEOTL GOD_XOCHIQUETZAL 
+		}
+		
+		evil_god_names = {
+		 GOD_ITZTLACOLIUHQUI
+		}
+		
+		#unit_modifier = {
+		#	levy_size = 0.3
+		#	
+		#	key = "OFF_RELIGION"
+		#}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = TONATI
+		
+		priests_can_marry = yes
+		max_consorts = 3
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		allow_in_ruler_designer = no
+	}	
+	
+	nonohualcan_pagan = {
+		graphical_culture = mesoamericangfx
+		icon = 15
+		heresy_icon = 16
+		color = { 77 93 83 }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } has_dlc = "Sunset Invasion" }
+		
+		secondary_event_pictures = mesoamerican
+		
+		high_god_name = GOD_CURICAUERI
+		
+		god_names = {
+			GOD_CUPANTZIERE GOD_CUERAUAPERI GOD_CURITACAHERI GOD_HURENDEQUAUECARA GOD_XUNGAPETI	GOD_TURUPTEN GOD_CAHERI GOD_QUARENCHA GOD_ANGAMU_CURACHA GOD_XARATANGA
+
+		}
+		evil_god_names = {
+		 GOD_UCUMU 
+		}
+		
+		#unit_modifier = {
+		#	levy_size = 0.3
+		#	
+		#	key = "OFF_RELIGION"
+		#}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = TLAMACAZQUI
+		
+		priests_can_marry = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = nonohualcan_pagan_reformed
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+	}
+	#wastek
+	wastek_pagan_reformed = {
+		graphical_culture = mesoamericangfx
+		alternate_start = { always = no }
+		
+		secondary_event_pictures = mesoamerican
+		
+		icon = 17
+		heresy_icon = 18
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 117 217 250 }
+		
+		high_god_name = GOD_EHECATL
+		
+		god_names = {
+			GOD_HUITZILOPOCHTLI GOD_XIPE_TOTEC GOD_TEZCATLIPOCA GOD_QUETZALCOATL GOD_TLALOC GOD_CHICOMECOATL GOD_XOCHIQUETZAL GOD_CHALCHIUHTILICUE GOD_MIXCOATL
+			GOD_XOLOTL GOD_CHANTICO GOD_PATECATL GOD_TEPEYOLLOTL GOD_TLAHUIZCALPANTECUHTLI GOD_XOCHIPILLI
+		}
+		evil_god_names = {
+			TLAZOLTEOTL GOD_MICTLANTECUHTLI XOLOTL
+		}
+		
+		#unit_modifier = {
+		#	levy_size = 0.3
+		#	
+		#	key = "OFF_RELIGION"
+		#}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = PRIEST
+		
+		priests_can_marry = yes
+		max_consorts = 3
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		
+		aggression = 1.5 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		allow_in_ruler_designer = no
+	}	
+	
+	wastek_pagan = {
+		graphical_culture = mesoamericangfx
+		icon = 15
+		heresy_icon = 16
+		color = { 137 207 240 }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } has_dlc = "Sunset Invasion" }
+		
+		secondary_event_pictures = mesoamerican
+		
+		high_god_name = GOD_EHECATL
+		
+		god_names = {
+			GOD_HUITZILOPOCHTLI GOD_XIPE_TOTEC GOD_TEZCATLIPOCA GOD_QUETZALCOATL GOD_TLALOC GOD_CHICOMECOATL GOD_XOCHIQUETZAL GOD_CHALCHIUHTILICUE GOD_MIXCOATL
+			GOD_XOLOTL GOD_CHANTICO GOD_PATECATL GOD_TEPEYOLLOTL GOD_TLAHUIZCALPANTECUHTLI GOD_XOCHIPILLI
+		}
+		evil_god_names = {
+			TLAZOLTEOTL GOD_MICTLANTECUHTLI XOLOTL
+		}
+		
+		#unit_modifier = {
+		#	levy_size = 0.3
+		#	
+		#	key = "OFF_RELIGION"
+		#}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = PRIEST
+		
+		priests_can_marry = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = wastek_pagan_reformed
+		
+		aggression = 1.0 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+	}
+	#wastek
+	#zapotec
+	zapotec_pagan_reformed = {
+		graphical_culture = mesoamericangfx
+		alternate_start = { always = no }
+		
+		secondary_event_pictures = mesoamerican
+		
+		icon = 17
+		heresy_icon = 18
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 0.35 0.7 0.35 }
+		
+		high_god_name = GOD_COCIYO
+		
+		god_names = {
+			GOD_COQUIHANI GOD_COPIJCHA GOD_COZOBI GOD_PECALA GOD_XIPE_TOTEC GOD_ITZPAPALOTL GOD_COQUEELAA GOD_COQUI_HUANI GOD_COQUI_NEXO GOD_COQUI_XEE
+			GOD_COZAANA GOD_COZICHACOZEE GOD_MBAZ GOD_MDI GOD_NDAN GOD_NDOZIN GOD_NDUBDO GOD_NOHUICHAANA GOD_PICHANA_GOBECHE GOD_PICHANTO GOD_PIQUETE_ZINA GOD_QUIABELAGAYO
+		}
+		evil_god_names = {
+			GOD_KEDO GOD_COQUI_BEZELAO GOD_MSE GOD_NDO_YET
+		}
+		
+		#unit_modifier = {
+		#	levy_size = 0.3
+		#	
+		#	key = "OFF_RELIGION"
+		#}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = TLAMACAZQUI
+		
+		priests_can_marry = yes
+		max_consorts = 3
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		allow_in_ruler_designer = no
+	}	
+	
+	zapotec_pagan = {
+		graphical_culture = mesoamericangfx
+		icon = 15
+		heresy_icon = 16
+		color = { 0.45 0.8 0.2 }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } has_dlc = "Sunset Invasion" }
+		
+		secondary_event_pictures = mesoamerican
+		
+		high_god_name = GOD_COCIYO
+		
+		god_names = {
+			GOD_COQUIHANI GOD_COPIJCHA GOD_COZOBI GOD_PECALA GOD_XIPE_TOTEC GOD_ITZPAPALOTL GOD_COQUEELAA GOD_COQUI_HUANI GOD_COQUI_NEXO GOD_COQUI_XEE
+			GOD_COZAANA GOD_COZICHACOZEE GOD_MBAZ GOD_MDI GOD_NDAN GOD_NDOZIN GOD_NDUBDO GOD_NOHUICHAANA GOD_PICHANA_GOBECHE GOD_PICHANTO GOD_PIQUETE_ZINA GOD_QUIABELAGAYO
+		}
+		evil_god_names = {
+			GOD_KEDO GOD_COQUI_BEZELAO GOD_MSE GOD_NDO_YET
+		}
+		
+		#unit_modifier = {
+		#	levy_size = 0.3
+		#	
+		#	key = "OFF_RELIGION"
+		#}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = TLAMACAZQUI
+		
+		priests_can_marry = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = zapotec_pagan_reformed
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+	}
+	#zapotec
+	#totonac
+	totonac_pagan_reformed = {
+		graphical_culture = mesoamericangfx
+		alternate_start = { always = no }
+		
+		secondary_event_pictures = mesoamerican
+		
+		icon = 17
+		heresy_icon = 18
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 0 120 0 }
+		
+		high_god_name = GOD_CHICHINI 
+		
+		god_names = {
+			GOD_AKTZIN  GOD_TONACAYOHUA GOD_QUETZALCOATL GOD_CIHUATETEO GOD_XIPE_TOTEC GOD_XIPE_TOTEC GOD_HURACAN  GOD_CHICUEYOZUMATLI
+		}
+		evil_god_names = {
+			GOD_XOLOTL 
+		}
+		
+		#unit_modifier = {
+		#	levy_size = 0.3
+		#	
+		#	key = "OFF_RELIGION"
+		#}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = TLAMACAZQUI 
+		
+		priests_can_marry = yes
+		max_consorts = 3
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		allow_in_ruler_designer = no
+	}	
+	
+	totonac_pagan = {
+		graphical_culture = mesoamericangfx
+		icon = 15
+		heresy_icon = 16
+		color = { 0 100 0 }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } has_dlc = "Sunset Invasion" }
+		
+		secondary_event_pictures = mesoamerican
+		
+		high_god_name = GOD_CHICHINI 
+		
+		god_names = {
+			GOD_AKTZIN  GOD_TONACAYOHUA GOD_QUETZALCOATL GOD_CIHUATETEO GOD_XIPE_TOTEC GOD_XIPE_TOTEC GOD_HURACAN  GOD_CHICUEYOZUMATLI
+		}
+		evil_god_names = {
+			GOD_XOLOTL 
+		}
+		
+		#unit_modifier = {
+		#	levy_size = 0.3
+		#	
+		#	key = "OFF_RELIGION"
+		#}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = TLAMACAZQUI
+		
+		priests_can_marry = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = totonac_pagan_reformed
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+	}
+	#totonac
+	#mixtec
+	mixtec_pagan_reformed = {
+		graphical_culture = mesoamericangfx
+		alternate_start = { always = no }
+		
+		secondary_event_pictures = mesoamerican
+		
+		icon = 17
+		heresy_icon = 18
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 0.64 0.26 0.11 }
+		
+		high_god_name = GOD_DZAHUI
+		
+		god_names = {
+			GOD_HUEHUETEOTL GOD_COQUIHANI GOD_COPIJCHA GOD_COZOBI GOD_PECALA GOD_XIPE_TOTEC GOD_ITZPAPALOTL GOD_COQUEELAA GOD_COQUI_HUANI GOD_COQUI_NEXO GOD_COQUI_XEE
+			GOD_COZAANA GOD_COZICHACOZEE GOD_MBAZ GOD_MDI GOD_NDAN GOD_NDOZIN GOD_NDUBDO GOD_NOHUICHAANA GOD_PICHANA_GOBECHE GOD_PICHANTO GOD_PIQUETE_ZINA GOD_QUIABELAGAYO
+		}
+		evil_god_names = {
+			GOD_KEDO GOD_COQUI_BEZELAO GOD_MSE GOD_NDO_YET
+		}
+		
+		#unit_modifier = {
+		#	levy_size = 0.3
+		#	
+		#	key = "OFF_RELIGION"
+		#}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = YAHA_YAHUI
+		
+		priests_can_marry = yes
+		max_consorts = 3
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		allow_in_ruler_designer = no
+	}	
+	
+	mixtec_pagan = {
+		graphical_culture = mesoamericangfx
+		icon = 15
+		heresy_icon = 16
+		color = { 0.74 0.36 0.01 }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } has_dlc = "Sunset Invasion" }
+		
+		secondary_event_pictures = mesoamerican
+		
+		high_god_name = GOD_DZAHUI
+		
+		god_names = {
+			GOD_HUEHUETEOTL GOD_COQUIHANI GOD_COPIJCHA GOD_COZOBI GOD_PECALA GOD_XIPE_TOTEC GOD_ITZPAPALOTL GOD_COQUEELAA GOD_COQUI_HUANI GOD_COQUI_NEXO GOD_COQUI_XEE
+			GOD_COZAANA GOD_COZICHACOZEE GOD_MBAZ GOD_MDI GOD_NDAN GOD_NDOZIN GOD_NDUBDO GOD_NOHUICHAANA GOD_PICHANA_GOBECHE GOD_PICHANTO GOD_PIQUETE_ZINA GOD_QUIABELAGAYO
+		}
+		evil_god_names = {
+			GOD_KEDO GOD_COQUI_BEZELAO GOD_MSE GOD_NDO_YET
+		}
+		
+		#unit_modifier = {
+		#	levy_size = 0.3
+		#	
+		#	key = "OFF_RELIGION"
+		#}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = YAHA_YAHUI
+		
+		priests_can_marry = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = mixtec_pagan_reformed
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+	}
+	#mixtec
+	aztec_reformed = {
+		graphical_culture = mesoamericangfx
+		alternate_start = { always = no }
+		
+		secondary_event_pictures = mesoamerican
+		
+		icon = 17
+		heresy_icon = 18
+		
+		ai_convert_other_group = 2 # always try to convert
+		
+		color = { 0.95 0.3 0.3 }
+		
+		high_god_name = GOD_HUITZILOPOCHTLI
+		
+		god_names = {
+			GOD_XIPE_TOTEC GOD_TEZCATLIPOCA GOD_QUETZALCOATL GOD_TLALOC GOD_CHICOMECOATL GOD_XOCHIQUETZAL GOD_CHALCHIUHTILICUE GOD_MIXCOATL
+			GOD_XOLOTL GOD_CHANTICO GOD_PATECATL GOD_TEPEYOLLOTL GOD_TLAHUIZCALPANTECUHTLI GOD_XOCHIPILLI GOD_ITZPAPALOTL
+		}
+		evil_god_names = {
+			TLAZOLTEOTL GOD_MICTLANTECUHTLI XOLOTL
+		}
+		
+		#unit_modifier = {
+		#	levy_size = 0.3
+		#	
+		#	key = "OFF_RELIGION"
+		#}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = TLAMACAZQUI
+		
+		priests_can_marry = yes
+		max_consorts = 3
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		allow_in_ruler_designer = no
+	}	
+	
+	aztec = {
+		graphical_culture = mesoamericangfx
+		icon = 15
+		heresy_icon = 16
+		color = { 0.8 0.2 0.2 }
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } has_dlc = "Sunset Invasion" }
+		
+		secondary_event_pictures = mesoamerican
+		
+		high_god_name = GOD_HUITZILOPOCHTLI
+		
+		god_names = {
+			GOD_XIPE_TOTEC GOD_TEZCATLIPOCA GOD_QUETZALCOATL GOD_TLALOC GOD_CHICOMECOATL GOD_XOCHIQUETZAL GOD_CHALCHIUHTILICUE GOD_MIXCOATL
+			GOD_XOLOTL GOD_CHANTICO GOD_PATECATL GOD_TEPEYOLLOTL GOD_TLAHUIZCALPANTECUHTLI GOD_XOCHIPILLI GOD_ITZPAPALOTL
+		}
+		evil_god_names = {
+			TLAZOLTEOTL GOD_MICTLANTECUHTLI XOLOTL
+		}
+		
+		#unit_modifier = {
+		#	levy_size = 0.3
+		#	
+		#	key = "OFF_RELIGION"
+		#}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = TLAMACAZQUI
+		
+		priests_can_marry = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = aztec_reformed
+		
+		aggression = 2.0 # AI aggression factor
+		
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+	}
+}
+zoroastrian_group = {
+	has_coa_on_barony_only = yes
+	graphical_culture = muslimgfx
+	playable = yes
+	
+	ai_convert_same_group = 2 # always try to convert
+	ai_convert_other_group = 2	# always try to convert
+	
+	color = { 0.5 0.7 0.2 }
+	
+	interface_skin = { zoroastrian_interface muslim_interface }
+	
+	# Names given only to Zoroastrian characters (base names)
+	male_names = {
+		Hormazd Maziar Shapur Vandad Zartosht
+	}
+	
+	khurmazta = {
+		graphical_culture = persiangfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+		
+		secondary_event_pictures = sunni
+		
+		icon = 10
+		heresy_icon = 12
+		
+		color = { 0.5 0.6 0.3 }
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_GATHAS
+		
+		priest_title = VAYNPAT
+		
+		high_god_name = GOD_ZARVANA
+		
+		god_names = {
+			GOD_KHURMAZTA GOD_WESHPARKAR GOD_WISHAGHN GOD_NANAIYA
+		}
+		
+		parent = zoroastrian
+		
+		can_grant_divorce = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		can_grant_invasion_cb = invasion
+		
+		max_consorts = 3 # Can take concubines
+		
+		religious_clothing_head = 5
+		religious_clothing_priest = 5
+
+		intermarry = zoroastrian
+		intermarry = mazdaki
+		intermarry = manichean
+		
+		intermarry = zun_pagan
+		intermarry = zun_pagan_reformed
+		intermarry = bon
+		intermarry = bon_reformed
+		intermarry = nestorian
+		intermarry = buddhist
+		intermarry = tengri_pagan
+		intermarry = tengri_pagan_reformed
+	}
+	
+}
+
+jewish_group = {
+	graphical_culture = jewishgfx
+	crusade_cb = crusade
+	playable = yes
+	ai_peaceful = yes # Will make Hordes lose their super aggressiveness
+	
+	ai_convert_same_group = 2 # always try to convert
+	ai_convert_other_group = 1	# try to convert if ai_zeal is high
+	
+	color = { 0.1 0.7 1.0 }
+	
+	interface_skin = { jews_interface }
+	
+	# Names given only to Jewish characters (base names)
+	male_names = {
+		Belet Ezra Hanukkah Hezekiah Isaac Levi Manasseh Nisi Simeon Yavdi Zebulun
+	}
+	female_names = {
+		Adah Adinah Alte Asnat Batya Bilha Chana Chava Devorah Esther Gisse Hadassah Leah Machla Miriam Puah Peninah Rachel Rivkah Ruth Sarah Tamar Tirtzah Tzipporah Tziviah Yael Yehudit Yiska Yocheved Yonah  
+	}
+
+	jewish = {
+		graphical_culture = jewishgfx
+		
+		icon = 38
+		heresy_icon = 39
+		
+		color = { 0.1 0.7 1.0 }
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_TORAH
+		priest_title = RABBI
+		
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_GOD GOD_THE_LORD ADONAI
+		}
+		evil_god_names = {
+			SATAN
+		}
+		
+		can_grant_divorce = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		can_grant_invasion_cb = invasion
+		
+		priests_can_marry = yes
+		
+		religious_clothing_head = 7
+		religious_clothing_priest = 7
+		
+		expel_modifier = expelled_jewish
+
+		intermarry = samaritan
+		intermarry = karaite
+	}
+	samaritan = {
+		graphical_culture = jewishgfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+		
+		icon = 38
+		heresy_icon = 39
+		
+		color = { 0.1 0.8 0.8 }
+		
+		parent = jewish
+		
+		crusade_name = GREAT_HOLY_WAR
+
+		can_grant_divorce = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		can_grant_invasion_cb = invasion
+		
+		priests_can_marry = yes
+		
+		religious_clothing_head = 7
+		religious_clothing_priest = 7
+		
+		expel_modifier = expelled_jewish
+
+		intermarry = jewish
+		intermarry = karaite
+	}
+	karaite = {
+		graphical_culture = jewishgfx
+		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
+		
+		icon = 38
+		heresy_icon = 39
+		
+		color = { 0.1 0.5 0.9 }
+		
+		parent = jewish
+		
+		crusade_name = GREAT_HOLY_WAR
+
+		can_grant_divorce = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		can_grant_invasion_cb = invasion
+		
+		priests_can_marry = yes
+		
+		religious_clothing_head = 7
+		religious_clothing_priest = 7
+		
+		expel_modifier = expelled_jewish
+
+		intermarry = samaritan
+		intermarry = jewish
+	}
+}
+
+chinese_group = {
+	crusade_cb = crusade
+	graphical_culture = mongolgfx
+	playable = yes
+	has_coa_on_barony_only = yes
+	hostile_within_group = yes
+	
+	color = { 0.75 0.5 0.35 }
+	
+	ai_convert_same_group = 1 # try to convert if ai_zeal is high
+	ai_convert_other_group = 2 # always try to convert
+
+	yukaghir_pantheism_reformed = {
+		graphical_culture = mongolgfx	
+		secondary_event_pictures = tengri_pagan
+
+		icon = 64
+		
+		color = { 0.10 1 0.8 }
+		alternate_start = { always = no }
+		
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		
+		high_god_name = GOD_KANDAKORO
+		god_names = {
+			GOD_KAMUY GOD_FUCHI GOD_KANNA GOD_HASH-INAU-UK GOD_KANDAKORO GOD_WAKA-USH GOD_MINTAKORO GOD_RUKORO GOD_CHIKAP
+			GOD_MOSHIRIKARA GOD_REPUN GOD_KIM-UN
+		}
+		evil_god_names = {
+			PAUCHI
+		}
+
+		scripture_name =THE_KAMUY_YUKAR
+		priest_title = SHAMAN
+		priests_can_marry = yes
+		defensive_attrition = yes
+		can_grant_divorce = yes
+		priests_can_inherit = no
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		female_temple_holders = yes
+		max_consorts = 3
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		intermarry = jurchen_pagan
+		intermarry = jurchen_pagan_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+		intermarry = ainu_pantheism
+		intermarry = ainu_pantheism_reformed
+		intermarry = chukchi_pantheism
+		intermarry = chukchi_pantheism_reformed
+		intermarry = finnish_pagan
+		intermarry = finnish_pagan_reformed
+		intermarry = tengri_pagan
+		intermarry = tengri_pagan_reformed
+		allow_in_ruler_designer = no
+		
+	}
+	yukaghir_pantheism = {
+		graphical_culture = mongolgfx
+		secondary_event_pictures = tengri_pagan
+		alternate_start = {
+			OR = {
+				year < 1100
+				has_alternate_start_parameter = { key = religion value = full_random }
+			}
+		}
+
+		icon = 64
+
+		color = { 0.20 0.8 0.6 }
+		
+		high_god_name = GOD_PUGU
+		god_names = {
+			GOD_YOBIN GOD_KINIJE GOD_Lebien GOD_COROMO GOD_POGI
+		}
+		evil_god_names = {
+			GOD_PON 
+		}
+
+		scripture_name = THE_KAMUY_YUKAR
+		priest_title = ALMA
+
+		unit_modifier = {		
+			garrison_size = 0.4
+			
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {
+			land_morale = 0.8
+			light_infantry_defensive = 0.8
+			heavy_infantry_defensive = 0.8
+			pikemen_defensive = 0.8
+			light_cavalry_defensive = 0.8
+			knights_defensive = 0.8
+			archers_defensive = 0.8
+			horse_archers_defensive = 0.8
+			camel_cavalry_defensive = 0.8
+			war_elephants_defensive = 0.8
+			
+			garrison_size = 0.4
+			
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		priests_can_marry = yes
+		defensive_attrition = yes
+		can_grant_divorce = yes
+		priests_can_inherit = no
+		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		female_temple_holders = yes
+		max_consorts = 3
+		reformed = yukaghir_pantheism_reformed
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		intermarry = jurchen_pagan
+		intermarry = jurchen_pagan_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+		intermarry = ainu_pantheism
+		intermarry = ainu_pantheism_reformed
+		intermarry = chukchi_pantheism
+		intermarry = chukchi_pantheism_reformed
+		intermarry = finnish_pagan
+		intermarry = finnish_pagan_reformed
+		intermarry = tengri_pagan
+		intermarry = tengri_pagan_reformed
+		
+		dislike_tribal_organization = yes
+	}
+	chukchi_pantheism_reformed = {
+		graphical_culture = mongolgfx	
+		secondary_event_pictures = tengri_pagan
+
+		icon = 64
+		
+		color = { 0.80 0.2 0.35 }
+		alternate_start = { always = no }
+		
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		
+		high_god_name = GOD_QUIKIL
+		god_names = {
+			  GOD_ANAPEL GOD_CHACHY GOD_MITGH GOD_USHAKHTCHU GOD_GAMULI GOD_BILLUKAI GOD_HAETSCH
+		}
+		evil_god_names = {
+			GOD_UNIVERSE GOD_MASTER GOD_ONEHIGH GOD_KUTGA GOD_KAMMA GOD_SUPERVISOR
+		}
+
+		scripture_name =THE_KAMUY_YUKAR
+		priest_title = SHAMAN
+		priests_can_marry = yes
+		defensive_attrition = yes
+		can_grant_divorce = yes
+		priests_can_inherit = no
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		female_temple_holders = yes
+		max_consorts = 3
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+
+		allow_in_ruler_designer = no
+		intermarry = jurchen_pagan
+		intermarry = jurchen_pagan_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+		intermarry = ainu_pantheism
+		intermarry = ainu_pantheism_reformed
+		intermarry = yukaghir_pantheism
+		intermarry = yukaghir_pantheism_reformed
+		intermarry = finnish_pagan
+		intermarry = finnish_pagan_reformed
+		intermarry = tengri_pagan
+		intermarry = tengri_pagan_reformed
+	}
+	chukchi_pantheism = {
+		graphical_culture = mongolgfx
+		alternate_start = {
+			OR = {
+				year < 1100
+				has_alternate_start_parameter = { key = religion value = full_random }
+			}
+		}
+
+		icon = 64
+
+		color = { 0.80 0.2 0.10 }
+		
+		high_god_name = GOD_QUIKIL
+		god_names = {
+			  GOD_ANAPEL GOD_CHACHY GOD_MITGH GOD_USHAKHTCHU GOD_GAMULI GOD_BILLUKAI GOD_HAETSCH
+		}
+		evil_god_names = {
+			GOD_UNIVERSE GOD_MASTER GOD_ONEHIGH GOD_KUTGA GOD_KAMMA GOD_SUPERVISOR
+		}
+
+		scripture_name = THE_LEGENDS
+		priest_title = SHAMAN
+
+		unit_modifier = {		
+			garrison_size = 0.4
+			
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {
+			land_morale = 0.8
+			light_infantry_defensive = 0.8
+			heavy_infantry_defensive = 0.8
+			pikemen_defensive = 0.8
+			light_cavalry_defensive = 0.8
+			knights_defensive = 0.8
+			archers_defensive = 0.8
+			horse_archers_defensive = 0.8
+			camel_cavalry_defensive = 0.8
+			war_elephants_defensive = 0.8
+			
+			garrison_size = 0.4
+			
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		priests_can_marry = yes
+		defensive_attrition = yes
+		can_grant_divorce = yes
+		priests_can_inherit = no
+		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		female_temple_holders = yes
+		max_consorts = 3
+		reformed = chukchi_pantheism_reformed
+		religious_clothing_head = 14
+		religious_clothing_priest = 3
+		
+		dislike_tribal_organization = yes
+		intermarry = jurchen_pagan
+		intermarry = jurchen_pagan_reformed
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+		intermarry = ainu_pantheism
+		intermarry = ainu_pantheism_reformed
+		intermarry = yukaghir_pantheism
+		intermarry = yukaghir_pantheism_reformed
+		intermarry = finnish_pagan
+		intermarry = finnish_pagan_reformed
+		intermarry = tengri_pagan
+		intermarry = tengri_pagan_reformed
+	}
+}

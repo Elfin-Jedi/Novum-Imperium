@@ -2142,7 +2142,7 @@ character_event = {
 				prisoner = no
 				OR = {
 					religion_group = muslim
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				OR = {
 					has_job_title = job_chancellor
@@ -2176,7 +2176,7 @@ character_event = {
 					prisoner = no
 					OR = {
 						religion_group = muslim
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 					OR = {
 						has_job_title = job_chancellor
@@ -2217,7 +2217,7 @@ character_event = {
 				prisoner = no
 				OR = {
 					religion_group = muslim
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				OR = {
 					has_job_title = job_chancellor
@@ -2347,7 +2347,7 @@ character_event = {
 				prisoner = no
 				OR = {
 					religion_group = muslim
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				OR = {
 					has_job_title = job_chancellor
@@ -2381,7 +2381,7 @@ character_event = {
 					prisoner = no
 					OR = {
 						religion_group = muslim
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 					OR = {
 						has_job_title = job_chancellor
@@ -2422,7 +2422,7 @@ character_event = {
 				prisoner = no
 				OR = {
 					religion_group = muslim
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				OR = {
 					has_job_title = job_chancellor
@@ -3902,7 +3902,7 @@ province_event = {
 		# Jains, Taoists and Bön have a hard time converting ALL non-pagans
 		modifier = {
 			factor = 3.0
-			NOT = { religion_group = pagan_group }
+			NOT = { novum_imperium_is_pagan = yes }
 			owner = {
 				top_liege = {
 					OR = {
@@ -6792,7 +6792,7 @@ narrative_event = {
 
 	only_playable = yes
 	min_age = 16
-	religion_group = pagan_group
+	novum_imperium_is_pagan = yes
 
 	trigger = {
 		controls_religion = yes
@@ -6933,7 +6933,7 @@ narrative_event = {
 	option = {
 		name = EVTOPTB39680
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOT = { religion = ROOT }
 		}
 	}
@@ -6941,7 +6941,7 @@ narrative_event = {
 	option = {
 		name = EVTOPTC39680
 		trigger = {
-			NOT = { religion_group = pagan_group }
+			NOT = { novum_imperium_is_pagan = yes }
 		}
 	}
 }

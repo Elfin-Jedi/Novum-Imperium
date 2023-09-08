@@ -3,12 +3,11 @@
 #character
 on_startup = {
 	events = {
+		chinaevents.16 # give education to people at the beggining of the game
 		1337 # Emperor Ticket character spawning event
 #		MNM.10025 #Save game conversion of secret_traits to secret religions # EMF: removed the traits & thus this event
 		#741 #Block "Beyond the Indus" achievement for dynasty if you start and meet the conditions for it
 		ZP.5 #Change Zorastrian pet traits into modifiers
-		JD.60005 #Convert prosthetics event modifiers into artifacts
-		JD.50401 # Set correct value of the Silk Road
 		HF.20372 # Apply Crowned_by_traits
 		#686 # TODO REMOVE TEST STARTUP GENERATION OF BLOODLINES
 		HFP.30031 # Set up freckles
@@ -41,6 +40,48 @@ on_startup = {
 #character
 on_yearly_pulse = {
 	events = {
+		chinaevents.6 #event for fixing pretender bug
+		japanevents.5 #japan events
+	    chinaevents.5 #chinese branch
+		koreaevents.5 #korean branch
+		portugalevents.1 #Check Reconquista 
+		colonialevents.2
+		colonialevents.3
+		colonialevents.4
+		colonialevents.5
+		colonialevents.6
+		colonialevents.7
+		colonialevents.8
+		colonialevents.9
+		colonialevents.10
+		colonialevents.11
+		colonialevents.12
+		colonialevents.13
+		colonialevents.25
+		colonialevents.26
+		colonialevents.27
+		colonialevents.28
+		colonialevents.29
+		colonialevents.30
+		colonialevents.31
+		colonialevents.32
+		colonialevents.33
+		colonialevents.34
+		colonialevents.35
+		colonialevents.36
+		colonialevents.37
+		colonialevents.38
+		colonialevents.39
+		colonialevents.40
+		colonialevents.41
+		colonialevents.42
+		colonialevents.43
+		colonialevents.44
+		colonialevents.45
+		colonialevents.46
+		colonialevents.47
+		colonialevents.48
+		colonialevents.49
 		CM.5000 # Ragnar Lodbrok
 		CM.503 # Start of Viking Age
 		CM.1011 # Lombard Queen
@@ -58,7 +99,6 @@ on_yearly_pulse = {
 		MNM.9815 # Seal of Solomon artifact makes you immune to possession
 		MNM.70030 # Secret society visibility reduction
 		HO.100 # Creation of Indian Holy Orders should important cities fall to another religion
-		JD.20041 # Chinese commander teaching other commanders their leadership trait
 		bear.7 # Secret bear generation
 		bear.1 # Secret bear discovery. Called here and in bear.7, as bear.1 can be temporarily precluded
 		GR.23 # Repeat exclave purge for AI's every year if they are at war
@@ -524,15 +564,6 @@ on_yearly_pulse = {
 
 		#Artifact events
 		500 = MNM.9816 # Blessed Mantle allows you to make Water of the Blessed Mantle (-> logic)
-
-		#Jade Dragon events 
-		200 = JD.10030 # Gifted refugee appears
-		150 = JD.7000 # Chinese Teacher visits
-		150 = JD.7010 # Radhanite Merchant asks for money
-		
-		20 = JD.2100 # Chance of Religious Liberation CB
-		
-		150 = JD.4100
 		
 		# Holy Fury Flavor
 		#200 = HFP.1 # Giant-trait character gains Frail or Brawny (EMF: Disabled because Giant is now a height trait, not gigantism)
@@ -1112,6 +1143,91 @@ on_five_year_pulse = {
 #character
 on_decade_pulse = {
 	events = {
+		spainevents.1
+		spainevents.2
+		spainevents.3
+		spainevents.4
+		spainevents.5
+		spainevents.9
+		briishevents.1
+		briishevents.2
+		briishevents.3
+		briishevents.4
+		briishevents.5
+		briishevents.6
+		briishevents.7
+		briishevents.8
+		briishevents.9
+		briishevents.10
+		briishevents.11
+		briishevents.12
+		briishevents.13
+		briishevents.14
+		briishevents.15
+		briishevents.16
+		briishevents.17
+		frenchevents.1
+		frenchevents.2
+		frenchevents.3
+		frenchevents.4
+		frenchevents.5
+		frenchevents.6
+		frenchevents.7
+		frenchevents.8
+		frenchevents.9
+		frenchevents.10
+		frenchevents.11
+		frenchevents.12
+		frenchevents.13
+		frenchevents.14
+		frenchevents.15
+		niederlanderevents.1
+		niederlanderevents.2
+		niederlanderevents.3
+		niederlanderevents.4
+		niederlanderevents.5
+		niederlanderevents.6
+		niederlanderevents.7
+		niederlanderevents.8
+		scottishevents.1
+		scottishevents.2
+		portugalevents.2
+		portugalevents.3
+		portugalevents.4
+		portugalevents.5
+		portugalevents.6
+		portugalevents.7
+		portugalevents.8
+		portugalevents.9
+		portugalevents.10
+		portugalevents.11
+		portugalevents.12
+		portugalevents.13
+		portugalevents.14
+		portugalevents.15
+		portugalevents.16
+		portugalevents.17
+		portugalevents.18
+		portugalevents.19
+		portugalevents.20
+		portugalevents.21
+		portugalevents.22
+		portugalevents.23
+		italianevents.1
+		hrecolonialevents.1
+		courlandevents.1
+		danishevents.1
+		reformationevents.6 #Wycliffe
+		reformationevents.7 #Hus
+		reformationevents.8 #Luther
+		reformationevents.9 #Calvin
+		reformationevents.10 #Anglican
+		reformationevents.11 #Radical
+		reformationevents.13 #Unitarian
+		reformationevents.14 #95 Theses
+		reformationevents.18 #Arminian
+		reformationevents.20 #Baptists
+		reformationevents.22 #Methodist
 		RIP.10031 # clear global flags from bubonic plague
 		HF.23400 # Astrology + Haruspicy = Religious Head reads the stars.
 		LT.41000 #Rename West-Frisia to Holland
@@ -1959,9 +2075,6 @@ on_death = {
 		MNM.9030 # Notify of dead relic hunter
 		MNM.1611 # Clears Apprentice minor titles
 		680
-		JD.60015 # Notify of Suzerain dying and you being free
-		JD.60006 # Destroy prosthetics
-		JD.3042 # Clear Supply Horses modifier if no longer Nomadic
 		HF.20014 	# On death of sponsor before baptism
 		HF.20016 	# On death of converter before baptism
 		HF.20022	# On death of sponsor after baptism
@@ -2853,6 +2966,8 @@ on_create_title = {
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder = {
 	events = {
+		japanevents.11 #tracks emperor
+		japanevents.1 #gives away religion head title
 		HL.4999 #Preserve Nomad Culture
 		HL.4996 #Clear Nomad Agitation when conquered by a non-nomad
 		HL.4812 #Clear nomadic pillage holding modifiers upon succession/conquest
@@ -2876,8 +2991,6 @@ on_new_holder = {
 
 		# Clean up zoroastrian pets on province modifiers in case capital lost
 		ZP.7
-
-		JD.60204 # Rebel General's Empire continues temple names, triggers for any title with the uses_temple_names_by_script title flag
 		
 		539 # Fix adventurers turning Tribal land Feudal
 
@@ -2914,6 +3027,8 @@ on_new_holder = {
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder_inheritance = {
 	events = {
+		japanevents.11 #tracks emperor
+		japanevents.1 #gives away religion head title
 		HL.4812 #Clear nomadic pillage holding modifiers upon succession/conquest
 		CM.10039 #Chronicle entry
 		HL.140 #Landless nomad gains a title.
@@ -2924,7 +3039,6 @@ on_new_holder_inheritance = {
 		# 738 # Black Pope achievement # EMF: cleanse cheevos
 		MNM.1215 # The Hermetics Scrying Power result (for new holder)
 		MNM.1216 # The Hermetics Scrying Power result (for old holder)
-		JD.60204 # Rebel General's Empire continues temple names, triggers for any title with the uses_temple_names_by_script title flag
 
 		HFP.41087 # Makes sure the Holy Orders doesn't get any part of the pot
 		HFP.42002 # Check titular Crusader titles
@@ -2963,6 +3077,8 @@ on_new_holder_inheritance = {
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder_usurpation = {
 	events = {
+		japanevents.11 #tracks emperor
+		japanevents.1 #gives away religion head title
 		HL.4999 #Preserve Nomad Culture
 		HL.4996 #Clear Nomad Agitation when conquered by a non-nomad
 		HL.4812 #Clear nomadic pillage holding modifiers upon succession/conquest
@@ -2977,7 +3093,6 @@ on_new_holder_usurpation = {
 		MNM.1215 # The Hermetics Scrying Power result (for new holder)
 		MNM.1216 # The Hermetics Scrying Power result (for old holder)
 #		MNM.6230 # Clearing covert province quest if new owner
-		JD.60204 # Rebel General's Empire continues temple names, triggers for any title with the uses_temple_names_by_script title flag
 		HF.20414 # Hidden check to move special crowns to holder of the title they are tied to.
 		HFP.42002 # Check titular Crusader titles
 		
@@ -3205,7 +3320,6 @@ on_divorce = {
 # ROOT = Builder, FROM = Title
 on_settlement_construction_start = {
 	events = {
-		JD.40002 # Start constructing a city on the Silk Road for trade competition
 	}
 }
 
@@ -3233,7 +3347,6 @@ on_settlement_construction_completed = {
 		44482
 		HL.4
 		MNM.4024
-		JD.40003 # Finish constructing a city on the Silk Road for trade competition
 		HF.24022 # Architect Bloodline check.
 		HF.24023 # Castellan Bloodline check.
 		HF.24024 # Monumental Bloodline check.

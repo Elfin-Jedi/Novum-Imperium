@@ -1187,7 +1187,10 @@ decisions = {
 
 		potential = {
 			rtp_is_landless = no
-			is_ruler = yes
+			OR = {
+				is_ruler = yes
+				has_landed_title = c_landless_t
+			}
 			has_character_modifier = in_seclusion
 		}
 

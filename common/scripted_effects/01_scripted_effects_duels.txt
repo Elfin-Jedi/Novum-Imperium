@@ -217,7 +217,7 @@ apply_any_applicable_harsh_penalties_effect = {
 	                }
 	            }
 	            is_priest = yes #They are a priest
-	            NOT = { event_target:combatant_1 = { religion_group = pagan_group } } #Attacker is NOT pagan
+	            NOT = { event_target:combatant_1 = { novum_imperium_is_pagan = yes } } #Attacker is NOT pagan
 			}
 			custom_tooltip = { text = dueling_inappropriate_target_tt }
 			# Instead of blocking the action completely...
@@ -278,7 +278,7 @@ apply_any_applicable_harsh_penalties_effect = {
 			limit = {
 				is_member_of_any_warrior_lodge_trigger = no #They are not a warrior
 	            is_priest = yes #They are a priest
-	            NOT = { event_target:combatant_1 = { religion_group = pagan_group } } #Attacker is NOT pagan
+	            NOT = { event_target:combatant_1 = { novum_imperium_is_pagan = yes } } #Attacker is NOT pagan
 			}
 			custom_tooltip = { text = dueling_inappropriate_target_tt }
 			event_target:combatant_1 = {
@@ -471,7 +471,7 @@ evaluate_extra_duel_result_score_effect = { # [SPECIAL CIRCUMSTANCES - OPTIONAL]
 	# 1. BONUSES ADDED:	adds to the score...
 	################################################################
 	if = {
-		limit = { religion_group = pagan_group }
+		limit = { novum_imperium_is_pagan = yes }
 		change_variable = {
 			which = duel_result_score #(50 + X) - Y
 			value = 3
@@ -542,7 +542,7 @@ evaluate_extra_duel_result_score_effect = { # [SPECIAL CIRCUMSTANCES - OPTIONAL]
 		}
 	}
 	if = {
-		limit = { event_target:combatant_2 = { religion_group = pagan_group } }
+		limit = { event_target:combatant_2 = { novum_imperium_is_pagan = yes } }
 		subtract_variable = {
 			which = duel_result_score #(50 + X) - Y
 			value = 3

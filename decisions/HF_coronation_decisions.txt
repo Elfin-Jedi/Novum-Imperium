@@ -42,18 +42,16 @@ decisions = {
 				OR = { #Either is an adult, or the child is liked by the regent and has assertive traits.
 					is_adult = yes
 					conditional_tooltip = {
-						trigger = { is_adult = no }
-						AND = { 
-							age >= 11
-							custom_tooltip = {
-								text = TT_CHILD_IS_ASSERTIVE
-								hidden_tooltip = {  
-									OR = {
-										trait = ambitious
-										trait = quick
-										trait = genius
-										trait = willful
-									}
+						trigger = { is_adult = no } 
+						age >= 11
+						custom_tooltip = {
+							text = TT_CHILD_IS_ASSERTIVE
+							hidden_tooltip = {  
+								OR = {
+									trait = ambitious
+									trait = quick
+									trait = genius
+									trait = willful
 								}
 							}
 							conditional_tooltip = {

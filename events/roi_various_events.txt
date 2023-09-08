@@ -5631,8 +5631,8 @@ character_event = {
 		has_dharmic_religion_trigger = yes
 		NOT = { religion_authority = 0.3 }
 		OR = {
-			culture_group = dravidian_group
-			culture_group = indo_aryan_group
+			culture_group = dravidian
+			culture_group = indoaryan
 		}
 		any_independent_ruler = {
 			any_realm_province = {

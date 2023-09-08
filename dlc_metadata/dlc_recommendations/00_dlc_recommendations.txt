@@ -763,7 +763,7 @@ dlc063 = { #Conclave Content Pack
 		trigger = {	
 			OR = {		
 				culture_group = arabic
-				culture_group = dravidian_group
+				culture_group = dravidian
 				culture_group = north_african
 				culture = bengali
 				culture = oriya
@@ -786,7 +786,7 @@ dlc065 = { #South Indian Portraits
 		tooltip_reason = "DLC_RECOMMENDATION_REASON_PACK_CULTURE"
 		weight = 10
 		trigger = {						
-			culture_group = dravidian_group										
+			culture_group = dravidian										
 		}
 	}
 }

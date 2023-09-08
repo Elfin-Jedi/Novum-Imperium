@@ -16,9 +16,8 @@ targetted_decisions = {
                 has_religion_feature = religion_ritual_sacrifice
                 has_religion_feature = religion_feature_amazigh
             }
-			NOR = { #Already have their special decision.
-				religion = aztec
-				religion = aztec_reformed
+			NOT = { #Already have their special decision.
+				religion_group = mesoamerican_rel_group
 			}
 		}
 	
@@ -51,9 +50,8 @@ targetted_decisions = {
 				if = {
 					limit = {
 						controls_religion = yes
-						NOR = {
-							religion = aztec
-							religion = aztec_reformed
+						NOT = {
+							religion_group = mesoamerican_rel_group
 						}
 						FROM = { ai = no }
 					}
@@ -1848,6 +1846,7 @@ decisions = {
 			OR = {
 				emf_ritual_sacrifice_religion = yes
 				religion = titan_pagan
+				religion_group = mesoamerican_rel_group
 			}
 		}
 		
@@ -2083,7 +2082,8 @@ settlement_decisions = {
 				religion = baltic_pagan
 				religion = finnish_pagan
 				religion = west_african_pagan
-				religion = aztec
+				religion_group = mesoamerican_rel_group
+				religion_group = andean_rel_group
 				religion = bon
 				religion = zun_pagan
 				religion = hellenic_pagan 
@@ -2114,8 +2114,12 @@ settlement_decisions = {
 					any_realm_province = { has_province_flag = flag_great_pillar_west_african } 
 				}
 				AND = { 
-					religion = aztec
+					religion_group = mesoamerican_rel_group
 					any_realm_province = { has_province_flag = flag_great_pillar_aztec } 
+				}
+				AND = { 
+					religion_group = andean_rel_group
+					any_realm_province = { has_province_flag = flag_great_pillar_andean } 
 				}
 				AND = { 
 					religion = bon
@@ -2211,7 +2215,6 @@ settlement_decisions = {
 					if = { 
 						limit = { NOT = { has_building = tb_great_pillar_norse } } 
 						add_building = tb_great_pillar_norse
-						add_building = tb_great_pillar_norse_empty
 					}
 				}
 				if = {  
@@ -2224,7 +2227,6 @@ settlement_decisions = {
 					if = { 
 						limit = { NOT = { has_building = tb_great_pillar_tengri } } 
 						add_building = tb_great_pillar_tengri
-						add_building = tb_great_pillar_tengri_empty
 					}
 				}
 				if = {  
@@ -2237,7 +2239,6 @@ settlement_decisions = {
 					if = { 
 						limit = { NOT = { has_building = tb_great_pillar_slavic } } 
 						add_building = tb_great_pillar_slavic
-						add_building = tb_great_pillar_slavic_empty
 					}
 				}
 				if = {  
@@ -2250,7 +2251,6 @@ settlement_decisions = {
 					if = { 
 						limit = { NOT = { has_building = tb_great_pillar_baltic } } 
 						add_building = tb_great_pillar_baltic
-						add_building = tb_great_pillar_baltic_empty
 					}
 				}
 				if = {  
@@ -2263,7 +2263,6 @@ settlement_decisions = {
 					if = { 
 						limit = { NOT = { has_building = tb_great_pillar_finnish } } 
 						add_building = tb_great_pillar_finnish
-						add_building = tb_great_pillar_finnish_empty
 					}
 				}
 				if = {  
@@ -2276,11 +2275,10 @@ settlement_decisions = {
 					if = { 
 						limit = { NOT = { has_building = tb_great_pillar_west_african } } 
 						add_building = tb_great_pillar_west_african
-						add_building = tb_great_pillar_west_african_empty
 					}
 				}
 				if = {  
-					limit = { FROM = { religion = aztec } }
+					limit = { FROM = { religion_group = mesoamerican_rel_group } }
 					hidden_tooltip = {
 						location = {
 							set_province_flag = flag_great_pillar_aztec
@@ -2289,7 +2287,6 @@ settlement_decisions = {
 					if = { 
 						limit = { NOT = { has_building = tb_great_pillar_aztec } } 
 						add_building = tb_great_pillar_aztec
-						add_building = tb_great_pillar_aztec_empty
 					}
 				}
 				if = {  
@@ -2302,7 +2299,6 @@ settlement_decisions = {
 					if = { 
 						limit = { NOT = { has_building = tb_great_pillar_zun } } 
 						add_building = tb_great_pillar_zun
-						add_building = tb_great_pillar_zun_empty
 					}
 				}
 				if = {  
@@ -2315,7 +2311,6 @@ settlement_decisions = {
 					if = { 
 						limit = { NOT = { has_building = tb_great_pillar_bon } } 
 						add_building = tb_great_pillar_bon
-						add_building = tb_great_pillar_bon_empty
 					}
 				}
 				if = {  
@@ -2328,7 +2323,6 @@ settlement_decisions = {
 					if = { 
 						limit = { NOT = { has_building = tb_great_pillar_hellenic } } 
 						add_building = tb_great_pillar_hellenic
-						add_building = tb_great_pillar_hellenic_empty
 					}
 				}
 			}
@@ -2570,7 +2564,7 @@ settlement_decisions = {
 						clr_province_flag = flag_great_pillar_aztec
 					}
 					any_realm_character = {
-						limit = { religion = aztec }
+						limit = { religion_group = mesoamerican_rel_group }
 						character_event = { id = HF.23477 }
 					}
 				}

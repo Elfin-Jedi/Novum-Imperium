@@ -1,0 +1,33 @@
+namespace = hrecolonialevents
+#Courland colonies
+narrative_event = {
+	id = hrecolonialevents.1
+	title = EVTNAMEhrecolonialevents.1
+	desc = EVTDESChrecolonialeventsR.1
+	  picture = GFX_evt_magnificent_castle_wol
+	is_triggered_only = yes
+	trigger = {
+		is_alternate_start = no
+		year = 1528 
+		NOT = { has_global_flag = hre_venezuela }
+		has_landed_title = c_nurnberg
+		religion_group = christian
+		controls = 314
+		d_venezuela = {
+		any_de_jure_vassal_title = {
+		owner = { NOT = { religion_group = christian }} }
+			}
+	}
+	option = {
+		name = EVTOPTAhrecolonialevents.1
+		any_title = {
+		limit = {
+		de_jure_liege_or_above = d_venezuela
+		owner = { NOT = { religion_group = christian }}
+		}
+		gain_title = FROM
+		}
+		set_global_flag = hre_venezuela
+		prestige = 100
+	}
+}

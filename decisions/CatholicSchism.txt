@@ -57,10 +57,8 @@ decisions = {
 							tier = EMPEROR
 						}
 					}
-					AND = {
-						completely_controls = c_roma
-						b_roma = { holder_scope = { religion = ROOT } }
-					}
+					completely_controls = c_roma
+					b_roma = { holder_scope = { religion = ROOT } }
 					b_hagiasophia = { holder_scope = { religion = ROOT } }
 					NOR = {
 						b_antiocheia = {

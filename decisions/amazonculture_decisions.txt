@@ -57,10 +57,8 @@ decisions = {
 			}
 			modifier = {
 				factor = 0 
-				AND = {
-					has_global_flag = themiskyran_reborn_flag
-					NOT = { had_global_flag = { flag = themiskyran_reborn_flag years = 100 } }
-				}
+				has_global_flag = themiskyran_reborn_flag
+				NOT = { had_global_flag = { flag = themiskyran_reborn_flag years = 100 } }
 			}
 			modifier = {
 				factor = 2
@@ -182,10 +180,8 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				AND = {
-					has_global_flag = valkyrie_reborn_flag
-					NOT = { had_global_flag = { flag = valkyrie_reborn_flag years = 100 } }
-				}
+				has_global_flag = valkyrie_reborn_flag
+				NOT = { had_global_flag = { flag = valkyrie_reborn_flag years = 100 } }
 			}
 			modifier = {
 				factor = 2
@@ -299,10 +295,8 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				AND = {
-					has_global_flag = scythian_reborn_flag
-					NOT = { had_global_flag = { flag = scythian_reborn_flag years = 100 } }
-				}
+				has_global_flag = scythian_reborn_flag
+				NOT = { had_global_flag = { flag = scythian_reborn_flag years = 100 } }
 			}
 			modifier = {
 				factor = 2
@@ -373,9 +367,7 @@ decisions = {
 			is_adult = yes
 			is_female = yes
 			prisoner = no
-			OR = { 
-				culture_group = iranian 
-			}
+			culture_group = iranian
 			NOR = { 
 				culture = parthian_amz
 			}
@@ -397,9 +389,7 @@ decisions = {
 			prestige = 300
 			war = no
 			independent = yes
-			OR = {
-				culture_group = iranian 
-			}
+			culture_group = iranian
 			NOT = { is_inaccessible_or_incapable_trigger = yes }
 		}
 		
@@ -429,10 +419,8 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				AND = {
-					has_global_flag = parthian_reborn_flag
-					NOT = { had_global_flag = { flag = parthian_reborn_flag years = 100 } }
-				}
+				has_global_flag = parthian_reborn_flag
+				NOT = { had_global_flag = { flag = parthian_reborn_flag years = 100 } }
 			}
 			modifier = {
 				factor = 2
@@ -555,10 +543,8 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				AND = {
-					has_global_flag = kushite_reborn_flag
-					NOT = { had_global_flag = { flag = kushite_reborn_flag years = 100 } }
-				}
+				has_global_flag = kushite_reborn_flag
+				NOT = { had_global_flag = { flag = kushite_reborn_flag years = 100 } }
 			}
 			modifier = {
 				factor = 2
@@ -681,10 +667,8 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				AND = {
-					has_global_flag = carthaginian_reborn_flag
-					NOT = { had_global_flag = { flag = carthaginian_reborn_flag years = 100 } }
-				}
+				has_global_flag = carthaginian_reborn_flag
+				NOT = { had_global_flag = { flag = carthaginian_reborn_flag years = 100 } }
 			}
 			modifier = {
 				factor = 2
@@ -809,10 +793,8 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				AND = {
-					has_global_flag = etruscan_reborn_flag
-					NOT = { had_global_flag = { flag = etruscan_reborn_flag years = 100 } }
-				}
+				has_global_flag = etruscan_reborn_flag
+				NOT = { had_global_flag = { flag = etruscan_reborn_flag years = 100 } }
 			}
 			modifier = {
 				factor = 2
@@ -919,17 +901,15 @@ decisions = {
 			}
 			modifier = {
 				factor = 1.5
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			modifier = {
 				factor = 0.2 
 			}
 			modifier = {
 				factor = 0
-				AND = {
-					has_global_flag = pritani_reborn_flag
-					NOT = { had_global_flag = { flag = pritani_reborn_flag years = 100 } }
-				}
+				has_global_flag = pritani_reborn_flag
+				NOT = { had_global_flag = { flag = pritani_reborn_flag years = 100 } }
 			}
 			modifier = {
 				factor = 2
@@ -1051,10 +1031,8 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				AND = {
-					has_global_flag = illyrian_reborn_flag
-					NOT = { had_global_flag = { flag = illyrian_reborn_flag years = 100 } }
-				}
+				has_global_flag = illyrian_reborn_flag
+				NOT = { had_global_flag = { flag = illyrian_reborn_flag years = 100 } }
 			}
 			modifier = {
 				factor = 2
@@ -1174,10 +1152,8 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				AND = {
-					has_global_flag = valascan_reborn_flag
-					NOT = { had_global_flag = { flag = valascan_reborn_flag years = 100 } }
-				}
+				has_global_flag = valascan_reborn_flag
+				NOT = { had_global_flag = { flag = valascan_reborn_flag years = 100 } }
 			}
 			modifier = {
 				factor = 2
@@ -1194,7 +1170,7 @@ decisions = {
 			}
 			modifier = { 	
 				factor = 2
-				FROM = { 
+				FROM = {
 					character = yes 
 					current_heir = { 
 						is_female = yes 
@@ -1418,21 +1394,19 @@ decisions = {
 					trait = is_amazonian_immortal
 				}
 			}
-			AND = {
-				independent = no 
-				liege = { 
-					OR = { 
-						culture = themiskyran_amz
-						culture = valkyrie_amz
-						culture = scythian_amz
-						culture = parthian_amz
-						culture = kushite_amz
-						culture = carthaginian_amz
-						culture = etruscan_amz
-						culture = pritani_amz
-						culture = illyrian_amz
-						culture = valascan_amz
-					}
+			independent = no 
+			liege = { 
+				OR = { 
+					culture = themiskyran_amz
+					culture = valkyrie_amz
+					culture = scythian_amz
+					culture = parthian_amz
+					culture = kushite_amz
+					culture = carthaginian_amz
+					culture = etruscan_amz
+					culture = pritani_amz
+					culture = illyrian_amz
+					culture = valascan_amz
 				}
 			}
 			OR = {
@@ -1930,7 +1904,7 @@ decisions = {
 			NOR = { 
 				trait = is_amazonian 
 				trait = is_amazonian_immortal
-				trait = blind
+				trait = blinded
 			}
 			OR = {
 				NOT = { has_character_flag = amazonian_trial_flag }
@@ -2254,10 +2228,8 @@ decisions = {
 				trait = pagan_branch_3
 				has_crusade_trait_trigger = yes
 			}
-			AND = {
-				war = yes
-				in_command = yes
-			}
+			war = yes
+			in_command = yes
 		}
 		
 		allow = {
@@ -2891,11 +2863,9 @@ decisions = {
 			add_trait = shieldmaiden
 			if = {
 				limit = {
-					AND = {
-						is_adult = no
-						guardian = {
-							society_member_of = warrior_lodge_amazonian
-						}
+					is_adult = no
+					guardian = {
+						society_member_of = warrior_lodge_amazonian
 					}
 				}
 				guardian = { 
@@ -3028,12 +2998,10 @@ decisions = {
 			
 			if = {
 				limit = {
-					AND = {
-						is_alternate_start = yes
-						has_alternate_start_parameter = {
-							key = dejure_empires
-							value = none
-						}
+					is_alternate_start = yes
+					has_alternate_start_parameter = {
+						key = dejure_empires
+						value = none
 					}
 				}
 				wealth = -200
@@ -4159,7 +4127,7 @@ decisions = {
 					if = {
 						limit = {
 							has_religion_feature = religion_no_leader
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 						}
 						random_list = {  
 							5 = {
@@ -4308,7 +4276,7 @@ decisions = {
 					if = {
 						limit = {
 							has_religion_feature = religion_no_leader
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 						}
 						random_list = {  
 							5 = {
@@ -5422,7 +5390,7 @@ decisions = {
 				OR = {
 					trait = dull
 					trait = slothful
-					trait = inbecile
+					trait = imbecile
 					trait = inbred
 					trait = slow
 					trait = shy
@@ -5568,9 +5536,9 @@ decisions = {
 				}
 				any_courtier = {
 					OR = {
-						NOT = { dynasty = NONE }	# preggers must have a dynasty
+						NOT = { dynasty = none }	# preggers must have a dynasty
 						NOT = { 					# preggers' husband must have dynasty
-							any_spouse = { dynasty = NONE }
+							any_spouse = { dynasty = none }
 						}
 					}
 					OR = {
@@ -5732,18 +5700,16 @@ decisions = {
 			}
 			modifier = {
 				factor = 0.5		# possible but not priority
-				AND = {
-					OR = {
-						has_character_modifier = incestuous_adulteress 
-						has_character_modifier = adulteress 
-						has_character_modifier = adulterous_priest	# might apply to females?
-					}
-					father_of_unborn_known = yes
-					father_of_unborn = {			# father of child is not spouse or consort
-						NOR = {
-							is_main_spouse = yes
-							is_consort = yes
-						}
+				OR = {
+					has_character_modifier = incestuous_adulteress 
+					has_character_modifier = adulteress 
+					has_character_modifier = adulterous_priest	# might apply to females?
+				}
+				father_of_unborn_known = yes
+				father_of_unborn = {			# father of child is not spouse or consort
+					NOR = {
+						is_main_spouse = yes
+						is_consort = yes
 					}
 				}
 			}
@@ -5770,16 +5736,14 @@ decisions = {
 			}
 			modifier = {			# ai will never take decision if midwife available and not adulterous
 				factor = 0
-				AND = {
-					OR = {
-						host = { has_character_modifier = hired_midwife_modifier }
-						has_character_modifier = hired_midwife_modifier 
-					}
-					NOR = {
-						has_character_modifier = incestuous_adulteress 
-						has_character_modifier = adulteress 
-						has_character_modifier = adulterous_priest	
-					}
+				OR = {
+					host = { has_character_modifier = hired_midwife_modifier }
+					has_character_modifier = hired_midwife_modifier 
+				}
+				NOR = {
+					has_character_modifier = incestuous_adulteress 
+					has_character_modifier = adulteress 
+					has_character_modifier = adulterous_priest	
 				}
 			}
 		}

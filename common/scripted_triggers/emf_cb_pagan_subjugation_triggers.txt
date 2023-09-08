@@ -73,7 +73,7 @@ emf_cb_pagan_subjugation_basic_can_use = {
 	}
 	FROM = {
 		# Only can attack pagan targets (reformed allowed if same base religion as attacker) that are non-nomadic:
-		religion_group = pagan_group
+		novum_imperium_is_pagan = yes
 		is_nomadic = no
 		OR = {
 			is_organized_religion_trigger = no

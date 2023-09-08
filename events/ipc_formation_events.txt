@@ -127,7 +127,7 @@ character_event = {
 			
 			##pagan courts
 			else_if = {
-				limit = { religion_group = pagan_group }
+				limit = { novum_imperium_is_pagan = yes }
 				primary_title = {
 					set_title_flag = imperial_court_active
 					if = {

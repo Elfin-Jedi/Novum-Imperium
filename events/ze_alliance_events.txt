@@ -60,7 +60,7 @@ character_event = {
 					}
 					NOR = {
 						AND = {
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 							OR = {
 								has_religion_feature = religion_syncretic_muslim
 								emf_syncretized_religion_with_ROOT = no
@@ -101,7 +101,7 @@ character_event = {
 						}
 						NOR = {
 							AND = {
-								religion_group = pagan_group
+								novum_imperium_is_pagan = yes
 								OR = {
 									has_religion_feature = religion_syncretic_muslim
 									emf_syncretized_religion_with_ROOT = no
@@ -147,7 +147,7 @@ character_event = {
 						}
 						NOR = {
 							AND = {
-								religion_group = pagan_group
+								novum_imperium_is_pagan = yes
 								OR = {
 									has_religion_feature = religion_syncretic_muslim
 									emf_syncretized_religion_with_ROOT = no
@@ -188,7 +188,7 @@ character_event = {
 							}
 							NOR = {
 								AND = {
-									religion_group = pagan_group
+									novum_imperium_is_pagan = yes
 									OR = {
 										has_religion_feature = religion_syncretic_muslim
 										emf_syncretized_religion_with_ROOT = no
@@ -220,7 +220,7 @@ character_event = {
 							}
 							NOR = {
 								AND = {
-									religion_group = pagan_group
+									novum_imperium_is_pagan = yes
 									OR = {
 										has_religion_feature = religion_syncretic_muslim
 										emf_syncretized_religion_with_ROOT = no

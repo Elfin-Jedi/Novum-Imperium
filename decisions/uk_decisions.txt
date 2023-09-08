@@ -1,0 +1,121 @@
+decisions = {
+unite_great_britain = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 60
+		
+		potential = {
+			has_landed_title = k_scotland
+			OR = {
+			has_landed_title = e_britannia
+			has_landed_title = k_england
+			}
+			NOR = {
+				has_alternate_start_setting = {
+					setting = dejure
+					value = random
+				}
+				has_alternate_start_setting = {
+					setting = title_names
+					value = random
+				}
+				has_alternate_start_setting = {
+					setting = title_names
+					value = random_including_duchies
+				}
+			}
+		}
+		allow = {
+			is_adult = yes
+			independent = yes
+			war = no
+			NOT = { trait = incapable }
+			
+			conditional_tooltip = {
+				trigger = {
+					ai = no
+				}
+
+				prestige = 250
+			}
+			wealth = 100
+		}
+		effect = {
+			wealth = -100
+			prestige = 250
+			e_great_britain = {
+				show_scope_change = no
+				grant_title = ROOT
+			}
+			any_title = {
+			limit = {
+			de_jure_liege = e_britannia
+			}
+				show_scope_change = no
+				de_jure_liege = e_great_britain
+			}
+			destroy_landed_title = e_britannia
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	unite_great_britain_ireland = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 60
+		
+		potential = {
+			has_landed_title = k_ireland
+			has_landed_title = e_great_britain
+			NOR = {
+				has_alternate_start_setting = {
+					setting = dejure
+					value = random
+				}
+				has_alternate_start_setting = {
+					setting = title_names
+					value = random
+				}
+				has_alternate_start_setting = {
+					setting = title_names
+					value = random_including_duchies
+				}
+			}
+		}
+		allow = {
+			is_adult = yes
+			independent = yes
+			war = no
+			NOT = { trait = incapable }
+			
+			conditional_tooltip = {
+				trigger = {
+					ai = no
+				}
+
+				prestige = 250
+			}
+			wealth = 100
+		}
+		effect = {
+			wealth = -100
+			prestige = 250
+			e_union_jack = {
+				show_scope_change = no
+				grant_title = ROOT
+			}
+			any_title = {
+			limit = {
+			de_jure_liege = e_great_britain
+			}
+				show_scope_change = no
+				de_jure_liege = e_union_jack
+			}
+			destroy_landed_title = e_great_britain
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

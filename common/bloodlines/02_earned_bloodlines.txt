@@ -157,7 +157,7 @@ teuta_female = {
 	picture = GFX_bloodlines_symbol_longship
 	active = {
 		OR = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			is_tribal = yes
 		}
 		NOR = {

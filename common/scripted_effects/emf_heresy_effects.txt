@@ -205,7 +205,7 @@ emf_become_heretic = {
 	else_if = {
 		limit = {
 			OR = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				religion_group = muslim
 			}
 			event_target:heretic_province = {
@@ -1312,11 +1312,9 @@ emf_muslim_conversion = {
 			}
 			modifier = {
 				factor = 0.5
-				AND = {
-					character = yes
-					# Audax Validator "." Ignore_1007
-					trait = sayyid
-				}
+				character = yes
+				# Audax Validator "." Ignore_1007
+				trait = sayyid
 				religion = sunni
 			}
 			religion = kharijite
@@ -1363,11 +1361,9 @@ emf_muslim_conversion = {
 			}
 			modifier = {
 				factor = 0.5
-				AND = {
-					character = yes
-					# Audax Validator "." Ignore_1007
-					trait = sayyid
-				}
+				character = yes
+				# Audax Validator "." Ignore_1007
+				trait = sayyid
 				religion = sunni
 			}
 			religion = shiite
@@ -1471,10 +1467,8 @@ emf_muslim_conversion = {
 			modifier = {
 				factor = 0.5
 				# Audax Validator "." Ignore_1007
-				AND = {
-					character = yes
-					trait = sayyid
-				}
+				character = yes
+				trait = sayyid
 				religion = sunni
 			}
 			religion = ismaili

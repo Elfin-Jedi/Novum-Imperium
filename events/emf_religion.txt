@@ -193,7 +193,7 @@ narrative_event = {
 							has_global_flag = muslim_jihads_unlocked
 						}
 						trigger_else_if = {
-							limit = { religion_group = pagan_group }
+							limit = { novum_imperium_is_pagan = yes }
 							has_global_flag = pagan_ghws_unlocked
 						}
 						trigger_else_if = {
@@ -337,7 +337,7 @@ narrative_event = {
 							has_global_flag = muslim_jihads_unlocked
 						}
 						trigger_else_if = {
-							limit = { religion_group = pagan_group }
+							limit = { novum_imperium_is_pagan = yes }
 							has_global_flag = pagan_ghws_unlocked
 						}
 						trigger_else_if = {
@@ -493,7 +493,7 @@ narrative_event = {
 
 	only_playable = yes
 	min_age = 16
-	religion_group = pagan_group
+	novum_imperium_is_pagan = yes
 
 	trigger = {
 		controls_religion = yes
@@ -599,7 +599,7 @@ narrative_event = {
 	option = {
 		name = EVTOPTB39680
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOT = { religion = ROOT }
 		}
 	}
@@ -607,7 +607,7 @@ narrative_event = {
 	option = {
 		name = EVTOPTC39680
 		trigger = {
-			NOT = { religion_group = pagan_group }
+			NOT = { novum_imperium_is_pagan = yes }
 		}
 	}
 }
@@ -995,7 +995,7 @@ narrative_event = {
 						}
 						OR = {
 							religion_group = muslim
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 							trigger_if = {
 								limit = { religion_group = zoroastrian_group }
 								has_global_flag = zoroastrian_ghws_unlocked
@@ -1007,7 +1007,7 @@ narrative_event = {
 							liege_before_war = {
 								OR = {
 									religion_group = muslim
-									religion_group = pagan_group
+									novum_imperium_is_pagan = yes
 									trigger_if = {
 										limit = { religion_group = zoroastrian_group }
 										has_global_flag = zoroastrian_ghws_unlocked
@@ -1153,7 +1153,7 @@ narrative_event = {
 						}
 						OR = {
 							religion_group = christian
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 							trigger_if = {
 								limit = { religion_group = zoroastrian_group }
 								has_global_flag = zoroastrian_ghws_unlocked
@@ -1165,7 +1165,7 @@ narrative_event = {
 							liege_before_war = {
 								OR = {
 									religion_group = christian
-									religion_group = pagan_group
+									novum_imperium_is_pagan = yes
 									trigger_if = {
 										limit = { religion_group = zoroastrian_group }
 										has_global_flag = zoroastrian_ghws_unlocked

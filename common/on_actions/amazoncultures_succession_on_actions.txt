@@ -81,15 +81,6 @@ on_heresy_takeover = {
 	}
 }
 
-on_character_convert_culture = {
-	events = {
-		AmzCul.801
-		AmzCul.802
-		AmzCul.803
-		AmzCul.804
-	}
-}
-
 on_war_started = {	# just in case
 	events = {
 		AmzCul.801

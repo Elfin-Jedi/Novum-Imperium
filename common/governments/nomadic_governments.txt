@@ -68,16 +68,14 @@ nomadic_governments = {
 		unit_home_modifier = {
 			supply_limit = 5 # Supply limit modifier for Nomads in Nomad land
 		}
-
-		character_modifier = {
-			vassal_opinion = -10
-			max_population = 1550 # Compensates for the capital taking up one holding slot
-		}
 		
 		character_modifier = {
 			martial = 1
 
 			diplomacy = -1
+			
+			vassal_opinion = -10
+			max_population = 1550 # Compensates for the capital taking up one holding slot
 		}
 
 		color = { 201 179 36 }
@@ -86,6 +84,7 @@ nomadic_governments = {
 		allow_title_revokation = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		ignores_de_jure_laws = yes
 		can_build_holdings = no
 		can_build_forts = no

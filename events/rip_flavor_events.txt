@@ -3047,7 +3047,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { religion_group = pagan_group }
+				NOT = { novum_imperium_is_pagan = yes }
 			}
 		}
 

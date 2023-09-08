@@ -63,6 +63,22 @@ title_appointed_regent = {
 				has_character_flag = rtp_can_read #You can now read
 			}
 		}
+		OR = {
+			NOR = {
+				religion = thangiao
+				religion = ua_dab
+				religion = nugyauq
+				religion = benzhujiao
+				religion = taoist
+				religion = nihon_shinto
+				religion = shingyo
+				government = japanese_imperial_government
+			}
+			trait = military_jinshi
+			trait = military_juren
+			trait = military_gongshi
+		}
+		is_adult = yes
 	}
 
 	allowed_to_grant = {
@@ -211,10 +227,33 @@ title_commander = {
 						value = 2
 					}
 				}
-			}	
+			}
 		}
 		emf_minor_title_basic_allowed_to_hold = yes
 		can_be_marshal_trigger = yes
+		OR = {
+			AND = {
+				emf_minor_title_basic_allowed_to_hold = yes
+				OR = {	
+					NOR = {
+						religion = thangiao
+						religion = ua_dab
+						religion = nugyauq
+						religion = benzhujiao
+						religion = taoist
+						religion = nihon_shinto
+						religion = shingyo
+						government = japanese_imperial_government
+					}
+					trait = military_jinshi
+					trait = military_juren
+					trait = military_gongshi
+	
+				}
+				is_adult = yes
+			}
+			can_be_marshal_trigger = yes
+		}
 		NOT = { has_character_modifier = refusing_to_lead }
 		OR = { 
 			NOT = { liege = { has_law = succ_byzantine_elective } }  #Either not Imperial...
@@ -226,6 +265,23 @@ title_commander = {
 						any_vassal = { 
 							higher_real_tier_than = BARON
 							emf_minor_title_basic_allowed_to_hold = yes
+							OR = {
+								AND = {
+									OR = {
+										NOR = {
+											religion = taoist
+											religion = shingyo
+										}
+										OR = {
+											trait = military_jinshi
+											trait = military_juren
+											trait = military_gongshi
+										}
+									}
+									is_adult = yes
+								}
+								can_be_marshal_trigger = yes
+							}
 							can_be_marshal_trigger = yes
 							NOT = { has_character_modifier = refusing_to_lead }
 							NOR = {
@@ -326,6 +382,22 @@ title_court_eunuch = {
 				has_character_flag = rtp_can_read #You can now read
 			}
 		}
+		OR = {
+			trait = shengyuan
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+			NOR = {
+				religion = thangiao
+				religion = ua_dab
+				religion = nugyauq
+				religion = benzhujiao
+				religion = taoist
+				religion = nihon_shinto
+				religion = shingyo
+				government = japanese_imperial_government
+			}
+		}
 	}
 
 	allowed_to_grant = {
@@ -371,6 +443,22 @@ title_court_dwarf = {
 			AND = {
 				government = rtp_lowborn_g
 				has_character_flag = rtp_can_read #You can now read
+			}
+		}
+		OR = {	
+			trait = shengyuan
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+			NOR = {
+				religion = thangiao
+				religion = ua_dab
+				religion = nugyauq
+				religion = benzhujiao
+				religion = taoist
+				religion = nihon_shinto
+				religion = shingyo
+				government = japanese_imperial_government
 			}
 		}
 	}
@@ -438,7 +526,7 @@ title_court_jester = {
 		OR = {
 			religion_group = christian
 			religion_group = jewish_group
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			has_dharmic_religion_trigger = yes
 		}
 	}
@@ -695,6 +783,22 @@ title_cupbearer = {
 				has_character_flag = rtp_can_read #You can now read
 			}
 		}
+		OR = {		
+			trait = shengyuan
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+			NOR = {
+				religion = thangiao
+				religion = ua_dab
+				religion = nugyauq
+				religion = benzhujiao
+				religion = taoist
+				religion = nihon_shinto
+				religion = shingyo
+				government = japanese_imperial_government
+			}
+		}
 	}
 
 	allowed_to_grant = {
@@ -817,7 +921,7 @@ title_despot = {
 	allowed_to_hold = {
 		OR = {
 			is_close_relative = FROM
-			is_sibling_of = FROM
+			is_nibling_of = FROM
 			is_aunt_uncle_of = FROM
 			is_cousin_of = FROM
 		}
@@ -873,7 +977,7 @@ title_sebastokrator = {
 		emf_minor_title_basic_allowed_to_hold = yes
 		OR = {
 			is_close_relative = FROM
-			is_sibling_of = FROM
+			is_nibling_of = FROM
 			is_aunt_uncle_of = FROM
 			is_cousin_of = FROM
 		}
@@ -895,7 +999,7 @@ title_sebastokrator = {
 		OR = {
 			religion_group = christian
 			religion_group = jewish_group
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 	}
 
@@ -931,7 +1035,7 @@ title_caesar = {
 		OR = {
 			religion_group = christian
 			religion_group = jewish_group
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 		OR = {
 			ai = yes
@@ -990,7 +1094,7 @@ title_kouropalates = {
 		OR = {
 			religion_group = christian
 			religion_group = jewish_group
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 	}
 
@@ -1039,7 +1143,7 @@ title_anthypatos = {
 		OR = {
 			religion_group = christian
 			religion_group = jewish_group
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 	}
 
@@ -1588,7 +1692,43 @@ title_patrician_heir = {
 
 	message = yes
 }
+#Finnish titles
+title_runonlaulaja = {
+    dignity = 0.15
+    grant_limit = 1
+    opinion_effect = 10
 
+    monthly_salary = 0.1
+    monthly_prestige = 0.40
+
+    is_unique = yes
+
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		is_adult = yes
+		trait = poet
+		culture_group = finno_ugric
+		NOT = { trait = incapable } 
+	}
+
+	allowed_to_grant = {
+		OR = {
+			is_feudal = yes
+			is_tribal = yes
+		}
+		culture_group = finno_ugric
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
 # NORSE PAGAN TITLES
 
 title_volva = {
@@ -3270,6 +3410,35 @@ title_councilmember_king = {
 				has_character_flag = rtp_can_read #You can now read
 			}
 		}
+		OR = {
+			AND = {
+				OR = {
+					religion = thangiao
+					religion = ua_dab
+					religion = nugyauq
+					religion = benzhujiao
+					religion = taoist
+					religion = nihon_shinto
+					religion = shingyo
+					liege = { government = japanese_imperial_government }
+				}
+				OR = {
+					trait = jinshi
+					trait = juren
+					trait = gongshi
+				}
+				can_be_councilmember_king_trigger = yes
+			}
+		}
+		AND = {
+			can_be_councilmember_king_trigger = yes
+			NOR = {
+				religion = shingyo 
+				religion = taoist
+				liege = { government = japanese_imperial_government }
+				culture_group = chinese_group
+			}
+		}
 	}
 	revoke_trigger = {
 		FROM = {
@@ -3347,6 +3516,35 @@ title_councilmember_emperor = {
 			AND = {
 				government = rtp_lowborn_g
 				has_character_flag = rtp_can_read #You can now read
+			}
+		}
+		OR = {
+		   AND = {
+				OR = {
+					religion = thangiao
+					religion = ua_dab
+					religion = nugyauq
+					religion = benzhujiao
+					religion = taoist
+					religion = nihon_shinto
+					religion = shingyo
+					liege = { government = japanese_imperial_government }
+				}
+				OR = {
+					trait = jinshi
+					trait = juren
+					trait = gongshi
+				}
+				can_be_councilmember_emperor_trigger = yes
+			}
+			AND = {
+			can_be_councilmember_emperor_trigger = yes
+				NOR = {
+					religion = shingyo 
+					religion = taoist
+					liege = { government = japanese_imperial_government }
+					culture_group = chinese
+				}
 			}
 		}
 	}
@@ -3563,12 +3761,6 @@ title_yuhou = {
 
 	allowed_to_hold = {
 		emf_minor_title_basic_allowed_to_hold = yes
-		is_adult = yes
-		OR = { 
-			male_can_hold_minor_title_trigger = yes
-			female_can_hold_minor_title_trigger = yes
-		}
-		NOT = { trait = incapable }
 		OR = {
 			ai = yes
 			NOT = {
@@ -3578,6 +3770,12 @@ title_yuhou = {
 				government = rtp_lowborn_g
 				has_character_flag = rtp_can_read #You can now read
 			}
+		}
+		OR = {		
+			trait = shengyuan
+			trait = jinshi
+			trait = juren
+			trait = gongshi
 		}
 	}
 	
@@ -3612,12 +3810,7 @@ title_historiographer = {
 	
 	allowed_to_hold = {
 		emf_minor_title_basic_allowed_to_hold = yes
-		is_adult = yes
-		OR = { 
-			male_can_hold_minor_title_trigger = yes
-			female_can_hold_minor_title_trigger = yes
-		}
-		NOT = { trait = incapable } 
+				
 		learning = 7
 		OR = {
 			ai = yes
@@ -3628,6 +3821,12 @@ title_historiographer = {
 				government = rtp_lowborn_g
 				has_character_flag = rtp_can_read #You can now read
 			}
+		}
+		OR = {		
+			trait = shengyuan
+			trait = jinshi
+			trait = juren
+			trait = gongshi
 		}
 	}
 	
@@ -3678,6 +3877,17 @@ title_court_physician = {
 			AND = {
 				government = rtp_lowborn_g
 				has_character_flag = rtp_can_read #You can now read
+			}
+		}
+		OR = {		
+			trait = shengyuan
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+			NOR = {
+				religion = shingyo
+				government = japanese_imperial_government
+				religion = taoist
 			}
 		}
 		custom_tooltip = {
@@ -4010,14 +4220,6 @@ title_hermetics_apprentice = {
 
 ###JADE DRAGON MINOR TITLES###
 
-title_china_emperor = {		 # this title is not granted by a character to another, it is automatically obtained
-								# when one character becomes emperor of china. It is used solely to identify them as such
-	is_offmap_holder = yes
-	offmap_power = offmap_china
-	show_as_title = yes
-	dignity = 1000			  # this should always be higher than 0, or it won't be applied in all cases
-}
-
 title_administrator = {
 	is_high_prio = no
 	dignity = 0.9
@@ -4122,79 +4324,6 @@ title_administrator = {
 	message = yes
 }
 
-title_master_engineer = {
-	is_high_prio = no
-	dignity = 0.9
-	realm_in_name = no
-	grant_limit = 1
-	opinion_effect = 10
-	monthly_salary = 0.1
-	monthly_prestige = 0.1
-	
-	allowed_to_grant = {
-		has_dlc = "Jade Dragon"
-		any_courtier = { has_character_modifier = jd_master_engineer }
-	}
-	
-	allowed_to_hold = {
-		OR = {
-			ai = yes
-			NOT = {
-				government = rtp_lowborn_g
-			}
-			AND = {
-				government = rtp_lowborn_g
-				has_character_flag = rtp_can_read #You can now read
-			}
-		}
-		custom_tooltip = {
-			text = title_master_engineer_modifier_tt
-			has_character_modifier = jd_master_engineer
-		}
-		# emf_minor_title_basic_allowed_to_hold = yes
-		NOT = { trait = in_hiding }
-		NOT = { trait = incapable }
-		prisoner = no
-		trigger_if = { # Prevents Doges from using minor title prestige to rack up points for their heirs
-			limit = { liege = { is_merchant_republic = yes } }
-			emf_can_be_patrician_heir_if_can_inherit = no
-		}
-	}
-
-	revoke_trigger = {
-		always = yes
-	}
-	
-	gain_effect = {
-		if = {
-			limit = { has_character_flag = master_engineer_just_spawned }
-			character_event = { id = JD.20033 days = 10 } 
-			clr_character_flag = master_engineer_just_spawned
-			break = yes
-		}
-		if = {
-			limit = {
-				has_character_flag = china_master_engineer_golden_age
-			}
-			character_event = { id = JD.20033 days = 1460 random = 542 } 
-		}
-		else = {
-			character_event = { id = JD.20033 days = 2920 random = 1095 } 
-		}
-	}
-	lose_effect = {
-		clear_delayed_event = { id = JD.20033 }
-	}
-	retire_effect = {
-		clear_delayed_event = { id = JD.20033 } 
-	}
-	death_effect = {
-		clear_delayed_event = { id = JD.20033 }
-	}
-
-	message = yes
-}
-
 # Special Title. Do not Delete or alter the name of the tag!
 # The Teacher serves as the default Educator for all children at court who are not close relatives of the ruler
 title_teacher = {
@@ -4285,7 +4414,7 @@ title_augusta = {
 		is_female = yes
 		OR = {
 			is_close_relative = FROM
-			is_sibling_of = FROM
+			is_nibling_of = FROM
 			is_aunt_uncle_of = FROM
 			is_cousin_of = FROM
 			is_grandchild_of = FROM
@@ -4299,7 +4428,7 @@ title_augusta = {
 		OR = {
 			religion_group = christian
 			religion_group = jewish_group
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 	}
 	
@@ -4312,6 +4441,7 @@ title_augusta = {
 }
 
 title_patrikios = {
+	is_high_prio = yes
 	dignity = 2.0
 	grant_limit = 4
 	opinion_effect = 5
@@ -4348,7 +4478,7 @@ title_patrikios = {
 		OR = {
 			religion_group = christian
 			religion_group = jewish_group
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 	}
 	
@@ -4361,6 +4491,7 @@ title_patrikios = {
 }
 
 title_hypatos = {
+	is_high_prio = yes
 	dignity = 1.0
 	grant_limit = 8
 	opinion_effect = 3
@@ -4395,7 +4526,7 @@ title_hypatos = {
 		OR = {
 			religion_group = christian
 			religion_group = jewish_group
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 	}
 	
@@ -4447,8 +4578,1854 @@ title_sebastos = {
 		OR = {
 			religion_group = christian
 			religion_group = jewish_group
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+#Japanese Court
+title_naidaijin = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+			government = japanese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_sadaijin = {
+	is_high_prio = yes
+	dignity = 1
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+	is_unique = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+			government = japanese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_udaijin = {
+	is_high_prio = yes
+	dignity = 1
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+	is_unique = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+			government = japanese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_shonagon = {
+	is_high_prio = yes
+	dignity = 0.5
+	realm_in_name = yes
+	grant_limit = 3
+	opinion_effect = 5
+	
+	monthly_salary = 0.200
+	monthly_prestige = 1.50
+	
+	is_unique = yes
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+			trait = shengyuan
+		}
+	}
+	
+	allowed_to_grant = {
+			government = japanese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_chunagon = {
+	is_high_prio = yes
+	dignity = 0.25
+	realm_in_name = yes
+	grant_limit = 3
+	opinion_effect = 3
+	
+	monthly_salary = 0.100
+	monthly_prestige = 0.75
+	is_voter = yes
+	is_unique = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+			trait = shengyuan
+		}
+	}
+	
+	allowed_to_grant = {
+			government= japanese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_shikibu = {
+	is_high_prio = yes
+	dignity = 1
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+	attribute = learning
+
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+	is_unique = yes
+
+	allowed_to_grant = {
+		government= japanese_imperial_government
+		has_wonder = wonder_university
+	}
+	
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+
+	revoke_trigger = {
+		always = yes
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+	retire_effect = {
+	}
+	death_effect = {
+	}
+
+	message = yes
+}
+title_minbu = {
+	is_high_prio = yes
+	dignity = 1
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+	is_unique = yes
+
+	allowed_to_grant = {
+		government= japanese_imperial_government
+	}
+	
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+
+	revoke_trigger = {
+		always = yes
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+	retire_effect = {
+	}
+	death_effect = {
+	}
+
+	message = yes
+}
+title_dainagon = {
+	is_high_prio = yes
+	dignity = 1
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+	is_unique = yes
+
+	allowed_to_grant = {
+		government= japanese_imperial_government
+	}
+	
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+
+	revoke_trigger = {
+		always = yes
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+	retire_effect = {
+	}
+	death_effect = {
+	}
+
+	message = yes
+}
+title_nakatsukasa = {
+	is_high_prio = yes
+	dignity = 1
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+	is_unique = yes
+
+	allowed_to_grant = {
+		government= japanese_imperial_government
+	}
+	
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	revoke_trigger = {
+		always = yes
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+	retire_effect = {
+	}
+	death_effect = {
+	}
+
+	message = yes
+}
+title_daijotenno = {
+	is_high_prio = yes
+	dignity = 100
+	grant_limit = 1
+	opinion_effect = 50
+	revoke_allowed = yes
+
+	monthly_salary = 0.01
+	monthly_prestige = 10
+
+	allowed_to_grant = {
+		religion = nihon_shinto
+		any_realm_character = {
+			has_character_flag = cloistered_emperor
+		}
+	}
+	
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+	}
+
+	revoke_trigger = {
+		always = yes
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+	retire_effect = {
+	}
+	death_effect = {
+	}
+
+	message = yes
+}
+title_kunai = {
+	is_high_prio = yes
+	dignity = 1
+	grant_limit = 1
+	opinion_effect = 10
+	revoke_allowed = yes
+
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+	
+	allowed_to_grant = {
+		government= japanese_imperial_government
+	}
+	
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+
+	revoke_trigger = {
+		always = yes
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+	retire_effect = {
+	}
+	death_effect = {
+	}
+
+	message = yes
+}
+#korean government titles
+title_gongjo = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = korean_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_daesaheon = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = korean_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_daesagan = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = korean_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_bujehak = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = korean_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_ijopanseo = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = korean_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_uuijeong = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = korean_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_jwauijeong = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = korean_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_jwachanseong = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = korean_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_uichangseong = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = korean_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_jwachamchan = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.200
+	monthly_prestige = 1.5
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = korean_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_uichamchan = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.200
+	monthly_prestige = 1.5
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = korean_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_sain = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 2
+	opinion_effect = 10
+	
+	monthly_salary = 0.100
+	monthly_prestige = 0.75
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+			trait = shengyuan
+		}
+	}
+	
+	allowed_to_grant = {
+		government = korean_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_geomsang = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.50
+	monthly_prestige = 0.375
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = korean_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_daesaseong  = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.100
+	monthly_prestige = 0.75
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+			trait = shengyuan
+		}
+	}
+	
+	allowed_to_grant = {
+		government = korean_imperial_government
+		has_wonder = wonder_university
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_seungseon   = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 6
+	opinion_effect = 10
+	
+	monthly_salary = 0.5
+	monthly_prestige = 0.375
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+			trait = shengyuan
+		}
+	}
+	
+	allowed_to_grant = {
+		government = korean_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_juseo = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 2
+	opinion_effect = 5
+	
+	monthly_salary = 0.25
+	monthly_prestige = 0.15
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+			trait = shengyuan
+		}
+	}
+	
+	allowed_to_grant = {
+		government = korean_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_paanyoon = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.50
+	monthly_prestige = 0.375
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+			trait = shengyuan
+		}
+	}
+	
+	allowed_to_grant = {
+		government = korean_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_suhaengja = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 10
+	opinion_effect = 10
+	
+	monthly_salary = 0.10
+	monthly_prestige = 0.2
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+			trait = shengyuan
+		}
+	}
+	
+	allowed_to_grant = {
+		government = korean_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+#Chinese titles
+title_libu = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_gongbu = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_menxiashizong = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_menxiashilang = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_taichang = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.200
+	monthly_prestige = 1.5
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_guangluxun = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.200
+	monthly_prestige = 1.5
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_langzheng = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.200
+	monthly_prestige = 1.5
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_taifu = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.200
+	monthly_prestige = 1.5
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_shaofu = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.200
+	monthly_prestige = 1.5
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_weiwei = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.200
+	monthly_prestige = 1.5
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_dahonglu = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.200
+	monthly_prestige = 1.5
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_dasinong = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.200
+	monthly_prestige = 1.5
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_tingwei = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.200
+	monthly_prestige = 1.5
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_dushuijian = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.200
+	monthly_prestige = 1.5
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_shaofujian = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.200
+	monthly_prestige = 1.5
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_jiangzuojian = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.200
+	monthly_prestige = 1.5
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_junqijian = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.200
+	monthly_prestige = 1.5
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_changqiujian = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.200
+	monthly_prestige = 1.5
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_guozijian = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.200
+	monthly_prestige = 1.5
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_sitianjian = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.200
+	monthly_prestige = 1.5
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_shangshuling = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_shangshupuye = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_shangshuchengling = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_shangshuchengpuye = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.400
+	monthly_prestige = 3
+	is_voter = yes
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_dianzhongshiyushi = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 10
+	opinion_effect = 5
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.5
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+			trait = shengyuan
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_chayuan = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 10
+	opinion_effect = 5
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.5
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+			trait = shengyuan
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+title_shiyushi = {
+	is_high_prio = yes
+	dignity = 1
+	is_unique = yes
+	realm_in_name = yes
+	grant_limit = 10
+	opinion_effect = 5
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.5
+
+	allowed_to_hold = {
+		emf_minor_title_basic_allowed_to_hold = yes
+		OR = {
+			trait = jinshi
+			trait = juren
+			trait = gongshi
+			trait = shengyuan
+		}
+	}
+	
+	allowed_to_grant = {
+		government = chinese_imperial_government
 	}
 	
 	gain_effect = {

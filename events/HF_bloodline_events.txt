@@ -942,7 +942,7 @@ character_event = {
 					is_alternate_start = no 
 					independent = yes
 					lower_tier_than = EMPEROR
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { realm_size = 120 }
 					NOR = { 
 						religion = hellenic_pagan
@@ -973,7 +973,7 @@ character_event = {
 					is_alternate_start = no 
 					independent = yes
 					lower_tier_than = EMPEROR
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { realm_size = 120 }
 					NOR = { 
 						religion = hellenic_pagan
@@ -1010,7 +1010,7 @@ character_event = {
 					is_alternate_start = no 
 					independent = yes
 					lower_tier_than = EMPEROR
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { realm_size = 120 }
 					NOR = { 
 						religion = hellenic_pagan
@@ -1045,7 +1045,7 @@ character_event = {
 					is_alternate_start = no 
 					independent = yes
 					lower_tier_than = EMPEROR
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { realm_size = 120 }
 					NOR = { 
 						religion = hellenic_pagan
@@ -4660,7 +4660,7 @@ narrative_event = {
 			}
 		}
 		else_if = { 
-			limit = { religion_group = pagan_group }
+			limit = { novum_imperium_is_pagan = yes }
 			if = { 
 				limit = { is_female = no }
 				create_bloodline = {
@@ -5289,7 +5289,7 @@ narrative_event = {
 			}
 		}
 		else_if = { 
-			limit = { religion_group = pagan_group }
+			limit = { novum_imperium_is_pagan = yes }
 			if = { 
 				limit = { is_female = no }
 				create_bloodline = {

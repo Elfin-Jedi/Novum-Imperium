@@ -3315,7 +3315,7 @@ character_event = {
 	id = LT.20510
 	title = EVT_TITLE_LT_20510
 	desc = {
-		trigger = { religion_group = pagan_group }
+		trigger = { novum_imperium_is_pagan = yes }
 		text = EVTDESC_LT_20510_pagan
 		picture = GFX_evt_bad_news
 	}
@@ -3431,7 +3431,7 @@ character_event = {
 	id = LT.20520
 	title = EVT_TITLE_LT_20510
 	desc = {
-		trigger = { religion_group = pagan_group }
+		trigger = { novum_imperium_is_pagan = yes }
 		text = EVTDESC_LT_20520_pagan
 		picture = GFX_evt_feast_hf
 	}
@@ -3478,7 +3478,7 @@ character_event = {
 			text = EVTOPTA_LT_20520_polyteist
 			trigger = {
 				OR = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					religion_group = indian_group
 				}
 			}

@@ -7,14 +7,6 @@ targetted_decisions = {
 			ai = no
 			age = 14
 			NOT = { trait = zealous }
-			NOR = {
-				trait = dragon
-				culture = dragon_culture
-				religion = dragon_rel
-				culture_group = winter_group
-				culture_group = old_races
-				culture_group = unoccupied_group
-			}
 			OR = {
 				AND = {
 					is_female = no
@@ -34,14 +26,6 @@ targetted_decisions = {
 		potential = {
 			age = 14
 			NOT = { trait = zealous }
-			NOR = {
-				trait = dragon
-				culture = dragon_culture
-				religion = dragon_rel
-				culture_group = winter_group
-				culture_group = old_races
-				culture_group = unoccupied_group
-			}
 			OR = {
 				AND = {
 					is_female = no

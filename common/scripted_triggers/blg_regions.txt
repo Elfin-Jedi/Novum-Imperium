@@ -10,11 +10,15 @@ blg_region_africa = {
 
 # Black bear regions.
 blg_region_asia = {
-	OR = {
-		region = world_persia
-		region = world_india
-		region = world_himalayas
-		region = world_steppe_tarim
+	location = {
+		OR = {
+			region = world_persia
+			region = world_india
+			region = world_steppe_tarim
+			region = world_tibet
+			region = world_far_east
+			region = world_indochina
+		}
 	}
 }
 
@@ -25,7 +29,7 @@ blg_region_europe = {
 		region = world_asia_minor
 		AND = {
 			region = world_steppe_west
-			blg_religion_christian = yes
+			religion_group = christian
 		}
 	}
 }
@@ -50,6 +54,7 @@ blg_region_mediterranean = {
 		region = world_middle_east
 		region = world_persia
 		region = world_africa_north
+		region = world_far_east
 	}
 }
 
@@ -64,10 +69,14 @@ blg_region_muslim = {
 
 # Polar bear regions.
 blg_region_polar = {
-	climate = severe_winter
-	OR = {
-		blg_region_scandinavia = yes
-		terrain = arctic
+	location = {
+		OR = {
+			region = world_europe_north
+			region = world_manchuria
+			region = custom_yezo
+			terrain = arctic
+		}
+		climate = severe_winter
 	}
 }
 
@@ -236,6 +245,7 @@ blg_farmlands = {
 				region = world_europe_west_germania
 				region = world_europe_west_francia
 				region = world_india
+				region = world_indochina
 			}
 		}
 	}

@@ -3,8 +3,17 @@
 # 00_modifier_definitions.txt as well. It also needs localisation. Works
 # for groups as well
 
-pagan_group = {
-	color = { 0.6 0.0 0.0 } # included here to make validator shut the hell up
+graecoroman_group = {
+	crusade_cb = crusade
+	graphical_culture = westerngfx
+	playable = yes
+	has_coa_on_barony_only = yes
+	hostile_within_group = yes
+	
+	color = { 153 133 153 }
+	
+	ai_convert_same_group = 1 # try to convert if ai_zeal is high
+	ai_convert_other_group = 2 # always try to convert
 
 	titan_pagan = {
 		graphical_culture = norsegfx
@@ -59,17 +68,15 @@ pagan_group = {
 		character_modifier = {
 			combat_rating = 10
 			martial = 5
-			hellenic_pagan_reformed_opinion = -20
-			hellenic_pagan_opinion = -10
+			graeco_roman_reformed_opinion = -20
+			graeco_roman_opinion = -10
 		}
 
 		intermarry = norse_pagan
 		intermarry = tengri_pagan
-		intermarry = zun_pagan
 		intermarry = aten_pagan
 		intermarry = norse_pagan_reformed
 		intermarry = tengri_pagan_reformed
-		intermarry = zun_pagan_reformed
 
 		can_demand_religious_conversion = no
 	}
@@ -111,8 +118,8 @@ pagan_group = {
 			key = "EXP_RELIGION_HOME_TERRITORY"
 		}
 		character_modifier = {
-			hellenic_pagan_reformed_opinion = 15
-			hellenic_pagan_opinion = 30
+			graeco_roman_reformed_opinion = 15
+			graeco_roman_opinion = 30
 			learning = 4
 		}
 
@@ -143,121 +150,17 @@ pagan_group = {
 
 		allow_in_ruler_designer = no
 	}
-
-	celtic_pagan_reformed = { # Druidic
-		# Use norsegfx rather than celticgfx to have the northern pagan rounded CoA on the map
-		graphical_culture = norsegfx
-		alternate_start = { always = no }
-		icon = 92
-		heresy_icon = 93
-		
-		ai_convert_other_group = 2 # always try to convert
-		ai_convert_same_group = 2 # always try to convert
-		
-		color = { 0.2 0.6 0.03 }
-		crusade_name = GREAT_HOLY_WAR
-		use_new_crusade = yes
-		crusade_cb = new_crusade
-		scripture_name = THE_STONES
-		priest_title = DRUID
-
-		high_god_name = GOD_LUGH
-
-		god_names = {
-			GOD_RHIANNON GOD_MANANNAN GOD_DAGHDA GOD_LUGH GOD_MACHA GOD_DANA GOD_NUADA GOD_SEQUANA GOD_CERNNUNOS
-		}
-		evil_god_names = {
-			THE_FOMORIANS EVIL_BALOR EVIL_BRES GOD_CAILLEACH
-		}
-		
-		priests_can_marry = no
-		priests_can_inherit = no
-		max_consorts = 3
-		can_call_crusade = yes
-		join_crusade_if_bordering_hostile = yes
-
-		aggression = 1.5 # AI aggression factor
-		
-		short_reign_opinion_year_mult = 1.5 # The default is 2
-		
-		religious_clothing_head = 3
-		religious_clothing_priest = 3
-
-		allow_in_ruler_designer = no
-
-		intermarry = celtic_pagan
-		intermarry = britannic_pagan
-	}
 	
-	celtic_pagan = {
-		# Use norsegfx rather than celticgfx to have the northern pagan rounded CoA on the map
-		graphical_culture = norsegfx
-		
-		icon = 91
-		heresy_icon = 93
-		
-		color = { 0.14 0.36 0.16 }
-		crusade_name = GREAT_HOLY_WAR
-		scripture_name = THE_BALLADS
-		priest_title = DRUID
-
-		high_god_name = GOD_LUGH
-
-		god_names = {
-			GOD_RHIANNON GOD_MANANNAN GOD_DAGHDA GOD_LUGH GOD_MACHA GOD_DANA GOD_NUADA GOD_SEQUANA GOD_CERNNUNOS
-		}
-		evil_god_names = {
-			THE_FOMORIANS EVIL_BALOR EVIL_BRES GOD_CAILLEACH
-		}
-		
-		unit_modifier = {	
-			levy_size = 0.15
-			
-			retinuesize_perc = 0.3	
-			garrison_size = 0.2
-			
-			key = "HERO_RELIGION"
-		}
-		unit_home_modifier = {
-			land_morale = 0.6
-			light_infantry_defensive = 0.6
-			heavy_infantry_defensive = 0.6
-			pikemen_defensive = 0.6
-			light_cavalry_defensive = 0.6
-			knights_defensive = 0.6
-			archers_defensive = 0.6
-			horse_archers_defensive = 0.6
-			camel_cavalry_defensive = 0.6
-			war_elephants_defensive = 0.6
-			
-			garrison_size = 0.2
-			
-			key = "HERO_RELIGION_HOME_TERRITORY"
-		}
-
-		priests_can_marry = yes
-		female_temple_holders = yes
-		priests_can_inherit = no
-		feminist = yes
-		defensive_attrition = yes
-		max_consorts = 3
-		peace_prestige_loss = yes # Lose Prestige while at peace
-		raised_vassal_opinion_loss = no
-		allow_looting = yes
-		reformed = celtic_pagan_reformed
-		aggression = 1.5 # AI aggression factor
-		
-		dislike_tribal_organization = yes
-
-		short_reign_opinion_year_mult = 2
-		
-		religious_clothing_head = 3
-		religious_clothing_priest = 3
-
-		intermarry = celtic_pagan_reformed
-		intermarry = britannic_pagan
-		can_demand_religious_conversion = no
-	}
+celtic_group = {
+	graphical_culture = norsegfx
+	playable = yes
+	has_coa_on_barony_only = yes
+	hostile_within_group = yes
+	
+	color = { 127 195 77 }
+	
+	ai_convert_same_group = 1 # try to convert if ai_zeal is high
+	ai_convert_other_group = 2 # always try to convert
 	
 	britannic_pagan = {
 		graphical_culture = celticgfx
@@ -319,6 +222,18 @@ pagan_group = {
 		intermarry = celtic_pagan
 		intermarry = celtic_pagan_reformed
 	}
+	
+egyptian_group = {
+	crusade_cb = crusade
+	graphical_culture = muslimgfx
+	playable = yes
+	has_coa_on_barony_only = yes
+	hostile_within_group = yes
+	
+	color = { 236 190 51 }
+	
+	ai_convert_same_group = 1 # try to convert if ai_zeal is high
+	ai_convert_other_group = 2 # always try to convert
 
 	egyptian_pagan_reformed = {
 		graphical_culture = africangfx
@@ -347,8 +262,8 @@ pagan_group = {
 			GOD_SET GOD_APEP
 		}
 		character_modifier = {
-			hellenic_pagan_reformed_opinion = 10
-			hellenic_pagan_opinion = 20
+			graeco_roman_reformed_opinion = 10
+			graeco_roman_opinion = 20
 		}
 
 		
@@ -416,8 +331,8 @@ pagan_group = {
 			key = "DEF_RELIGION_HOME_TERRITORY"
 		}
 		character_modifier = {
-			hellenic_pagan_reformed_opinion = 10
-			hellenic_pagan_opinion = 20
+			graeco_roman_reformed_opinion = 10
+			graeco_roman_opinion = 20
 		}
 
 		

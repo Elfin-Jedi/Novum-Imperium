@@ -381,6 +381,7 @@ blg_regional_diversity = {
 
 # Spawned character processing.
 blg_character_processing = {
+	blg_child_upbringing = yes
 	# Fix noculture generated characters.
 	if = {
 		limit= {
@@ -571,6 +572,7 @@ blg_child_mixed = {
 							blg_ethnicity_indian = yes
 							blg_ethnicity_tibetan = yes
 							blg_ethnicity_mesoamerican = yes
+							graphical_culture = khmergfx
 						}
 					}
 					mother_even_if_dead = {
@@ -578,6 +580,7 @@ blg_child_mixed = {
 							blg_ethnicity_indian = yes
 							blg_ethnicity_tibetan = yes
 							blg_ethnicity_mesoamerican = yes
+							graphical_culture = khmergfx
 						}
 					}
 				}
@@ -588,10 +591,16 @@ blg_child_mixed = {
 			limit = {
 				OR = {
 					event_target:father = {
-						blg_ethnicity_iberian = yes
+						OR = {
+							blg_ethnicity_iberian = yes
+							graphical_culture = ashkenazigfx
+						}
 					}
 					mother_even_if_dead = {
-						blg_ethnicity_iberian = yes
+						OR = {
+							blg_ethnicity_iberian = yes
+							graphical_culture = ashkenazigfx
+						}
 					}
 				}
 			}
@@ -1539,173 +1548,6 @@ blg_child_mixed = {
 
 # Child ethnicity changes from cultural upbringing.
 blg_child_upbringing = {
-	if = {
-		limit= {
-			blg_ethnicity_centralasian = yes
-		}
-		blg_set_ethnicity_centralasian = yes
-	}
-
-	if = {
-		limit = { has_game_rule = { name = blg_child_birth value = on } }
-
-		#Norse/English
-		if = {
-			limit = {
-				OR = {
-					blg_ethnicity_english = yes
-					blg_ethnicity_norse = yes
-					blg_ethnicity_dutch = yes
-				}
-			}
-			blg_set_ethnicity_western = yes
-		}
-
-		#Byzantine
-		else_if = {
-			limit = {
-				blg_ethnicity_byzantine = yes
-			}
-			blg_set_ethnicity_byzantine = yes
-		}
-
-		#Celtic
-		else_if = {
-			limit = {
-				blg_ethnicity_celtic = yes
-			}
-			blg_set_ethnicity_celtic = yes
-		}
-
-		#East African
-		else_if = {
-			limit = {
-				blg_ethnicity_african = yes
-			}
-			blg_set_ethnicity_east_african = yes
-		}
-
-		#Egyptian
-		else_if = {
-			limit = {
-				blg_ethnicity_egyptian = yes
-			}
-			blg_set_ethnicity_egyptian = yes
-		}
-
-		#Frankish
-		else_if = {
-			limit = {
-				blg_ethnicity_frankish = yes
-			}
-			blg_set_ethnicity_frankish = yes
-		}
-
-		#German
-		else_if = {
-			limit = {
-				blg_ethnicity_german = yes
-			}
-			blg_set_ethnicity_german = yes
-		}
-
-		#Indian
-		else_if = {
-			limit = {
-				blg_ethnicity_southindian = yes
-			}
-			blg_set_ethnicity_southindian = yes
-		}
-
-		#Italian
-		else_if = {
-			limit = {
-				blg_ethnicity_italian = yes
-			}
-			blg_set_ethnicity_italian = yes
-		}
-
-		#Levantine
-		else_if = {
-			limit = {
-				blg_ethnicity_levantine = yes
-			}
-			blg_set_ethnicity_levantine = yes
-		}
-
-		#Lombard
-		else_if = {
-			limit = {
-				blg_ethnicity_lombard = yes
-			}
-			blg_set_ethnicity_lombard = yes
-		}
-
-		#Mongol
-		else_if = {
-			limit = {
-				blg_ethnicity_mongol = yes
-			}
-			blg_set_ethnicity_mongol = yes
-		}
-
-		#Persian
-		else_if = {
-			limit = {
-				blg_ethnicity_persian = yes
-			}
-			blg_set_ethnicity_persian = yes
-		}
-
-		#Steppe Iranians
-		else_if = {
-			limit = {
-				blg_ethnicity_sogdian = yes
-			}
-			blg_set_ethnicity_sogdian = yes
-		}
-
-		#South-Slavic
-		else_if = {
-			limit = {
-				blg_ethnicity_southslavic = yes
-			}
-			blg_set_ethnicity_southslavic = yes
-		}
-
-		#Tibetan
-		else_if = {
-			limit = {
-				blg_ethnicity_tibetan = yes
-				NOT = { graphical_culture = inuitgfx }
-			}
-			blg_set_ethnicity_tibetan = yes
-		}
-
-		#Turkish
-		else_if = {
-			limit = {
-				blg_ethnicity_turkish = yes
-			}
-			blg_set_ethnicity_turkish = yes
-		}
-
-		#West African
-		else_if = {
-			limit = {
-				blg_ethnicity_westafrican = yes
-			}
-			blg_set_ethnicity_westafrican = yes
-		}
-
-		#West-Slavic
-		else_if = {
-			limit = {
-				blg_ethnicity_westslavic = yes
-			}
-			blg_set_ethnicity_westslavic = yes
-		}
-	}
 }
 
 # Refresh portrait trick by removing harmless trait.

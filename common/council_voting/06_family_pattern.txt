@@ -532,9 +532,9 @@ family_pattern_for = {
 							intrigue = 12
 						}
 						NAND = {
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 							liege = {
-								religion_group = pagan_group
+								novum_imperium_is_pagan = yes
 							}
 						}
 						OR = {
@@ -585,9 +585,9 @@ family_pattern_for = {
 							intrigue = 12
 						}
 						NAND = {
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 							liege = {
-								religion_group = pagan_group
+								novum_imperium_is_pagan = yes
 							}
 						}
 						OR = {
@@ -643,9 +643,9 @@ family_pattern_for = {
 							intrigue = 12
 						}
 						NAND = {
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 							liege = {
-								religion_group = pagan_group
+								novum_imperium_is_pagan = yes
 							}
 						}
 						OR = {
@@ -707,9 +707,9 @@ family_pattern_for = {
 									intrigue = 12
 								}
 								NAND = {
-									religion_group = pagan_group
+									novum_imperium_is_pagan = yes
 									liege = {
-										religion_group = pagan_group
+										novum_imperium_is_pagan = yes
 									}
 								}
 								OR = {
@@ -833,9 +833,9 @@ family_pattern_for = {
 									intrigue = 12
 								}
 								NAND = {
-									religion_group = pagan_group
+									novum_imperium_is_pagan = yes
 									liege = {
-										religion_group = pagan_group
+										novum_imperium_is_pagan = yes
 									}
 								}
 								OR = {
@@ -964,9 +964,9 @@ family_pattern_for = {
 									intrigue = 12
 								}
 								NAND = {
-									religion_group = pagan_group
+									novum_imperium_is_pagan = yes
 									liege = {
-										religion_group = pagan_group
+										novum_imperium_is_pagan = yes
 									}
 								}
 								OR = {
@@ -1100,9 +1100,9 @@ family_pattern_for = {
 										intrigue = 12
 									}
 									NAND = {
-										religion_group = pagan_group
+										novum_imperium_is_pagan = yes
 										liege = {
-											religion_group = pagan_group
+											novum_imperium_is_pagan = yes
 										}
 									}
 									OR = {
@@ -1264,9 +1264,9 @@ family_pattern_for = {
 										intrigue = 12
 									}
 									NAND = {
-										religion_group = pagan_group
+										novum_imperium_is_pagan = yes
 										liege = {
-											religion_group = pagan_group
+											novum_imperium_is_pagan = yes
 										}
 									}
 									OR = {
@@ -1433,9 +1433,9 @@ family_pattern_for = {
 										intrigue = 12
 									}
 									NAND = {
-										religion_group = pagan_group
+										novum_imperium_is_pagan = yes
 										liege = {
-											religion_group = pagan_group
+											novum_imperium_is_pagan = yes
 										}
 									}
 									OR = {
@@ -2015,9 +2015,9 @@ family_pattern_for = {
 										intrigue = 12
 									}
 									NAND = {
-										religion_group = pagan_group
+										novum_imperium_is_pagan = yes
 										liege = {
-											religion_group = pagan_group
+											novum_imperium_is_pagan = yes
 										}
 									}
 									OR = {
@@ -2226,9 +2226,9 @@ family_pattern_for = {
 										intrigue = 12
 									}
 									NAND = {
-										religion_group = pagan_group
+										novum_imperium_is_pagan = yes
 										liege = {
-											religion_group = pagan_group
+											novum_imperium_is_pagan = yes
 										}
 									}
 									OR = {
@@ -2442,9 +2442,9 @@ family_pattern_for = {
 										intrigue = 12
 									}
 									NAND = {
-										religion_group = pagan_group
+										novum_imperium_is_pagan = yes
 										liege = {
-											religion_group = pagan_group
+											novum_imperium_is_pagan = yes
 										}
 									}
 									OR = {
@@ -3342,6 +3342,53 @@ family_pattern_for = {
 			}
 		}
 	}
+	slavery_0 = {
+		NOR = {
+			trait = slave_owner
+			trait = slave_trader
+		}
+		OR = {
+			spouse = {
+				OR = {
+					trait = slave
+					trait = former_slave
+					any_dynasty_member = {
+						is_close_relative = PREV
+						OR = {
+							trait = slave
+							trait = former_slave
+						}
+					}
+				}
+			}
+			mother_even_if_dead = {
+				OR = {
+					trait = slave
+					trait = former_slave
+					any_dynasty_member = {
+						is_close_relative = ROOT
+						OR = {
+							trait = slave
+							trait = former_slave
+						}
+					}
+				}
+			}
+			any_dynasty_member = {
+				is_close_relative = ROOT
+				OR = {
+					trait = slave
+					trait = former_slave
+				}
+			}
+			any_child = {
+				OR = {
+					trait = slave
+					trait = former_slave
+				}
+			}
+		}
+	}
 }
 family_pattern_against = {
 	icon = 14
@@ -3369,24 +3416,22 @@ family_pattern_against = {
 			custom_tooltip = {
 				text = pattern_family_member_lose_title_custom_tooltip
 				hidden_tooltip = {
-					AND = {
-						NOR = { 
-							stored_token_trigger = dejure_barony_claim
-						}			
-						FROMFROMFROMFROM = { # Thirdparty_title
-							holder_scope = {
-								OR = {
-									is_close_relative = ROOT
-									is_nibling_of = ROOT
-									is_aunt_uncle_of = ROOT
-									is_cousin_of = ROOT
-								}
-								NOT = { is_foe = ROOT }
-								is_liege_or_above = ROOT_FROMFROM
+					NOR = { 
+						stored_token_trigger = dejure_barony_claim
+					}			
+					FROMFROMFROMFROM = { # Thirdparty_title
+						holder_scope = {
+							OR = {
+								is_close_relative = ROOT
+								is_nibling_of = ROOT
+								is_aunt_uncle_of = ROOT
+								is_cousin_of = ROOT
 							}
+							NOT = { is_foe = ROOT }
+							is_liege_or_above = ROOT_FROMFROM
 						}
-					}	
-				}
+					}
+				}	
 			}
 		}
 	}
@@ -5951,28 +5996,26 @@ family_pattern_against = {
 							vassal_of = FROM
 							OR = {
 								# Lose from 4
-								AND = {
-									NOR = {
-										liege = {
-											OR = {
-												dynasty = FROM
-												is_close_relative = FROM
-												is_married = FROM
-												FROM = { is_consort = PREV }
-											}
+								NOR = {
+									liege = {
+										OR = {
+											dynasty = FROM
+											is_close_relative = FROM
+											is_married = FROM
+											FROM = { is_consort = PREV }
 										}
-										is_landed = yes
-										is_patrician = yes
-										trait = nun
 									}
-									FROM = { primary_title = { has_law = status_of_women_4 } }
-									OR = {
-										has_job_title = job_spymaster
-										has_job_title = job_chancellor
-										has_job_title = job_treasurer
-										has_job_title = job_marshal
-										has_minor_title = title_commander
-									}
+									is_landed = yes
+									is_patrician = yes
+									trait = nun
+								}
+								FROM = { primary_title = { has_law = status_of_women_4 } }
+								OR = {
+									has_job_title = job_spymaster
+									has_job_title = job_chancellor
+									has_job_title = job_treasurer
+									has_job_title = job_marshal
+									has_minor_title = title_commander
 								}
 							}
 						}
@@ -6829,6 +6872,100 @@ family_pattern_against = {
 							}
 						}
 					}
+				}
+			}
+		}
+	}
+	slavery_2 = {
+		NOR = {
+			trait = slave_owner
+			trait = slave_trader
+		}
+		OR = {
+			spouse = {
+				OR = {
+					trait = slave
+					trait = former_slave
+					any_dynasty_member = {
+						is_close_relative = PREV
+						OR = {
+							trait = slave
+							trait = former_slave
+						}
+					}
+				}
+			}
+			mother_even_if_dead = {
+				OR = {
+					trait = slave
+					trait = former_slave
+					any_dynasty_member = {
+						is_close_relative = ROOT
+						OR = {
+							trait = slave
+							trait = former_slave
+						}
+					}
+				}
+			}
+			any_dynasty_member = {
+				is_close_relative = ROOT
+				OR = {
+					trait = slave
+					trait = former_slave
+				}
+			}
+			any_child = {
+				OR = {
+					trait = slave
+					trait = former_slave
+				}
+			}
+		}
+	}
+	slavery_3 = {
+		NOR = {
+			trait = slave_owner
+			trait = slave_trader
+		}
+		OR = {
+			spouse = {
+				OR = {
+					trait = slave
+					trait = former_slave
+					any_dynasty_member = {
+						is_close_relative = PREV
+						OR = {
+							trait = slave
+							trait = former_slave
+						}
+					}
+				}
+			}
+			mother_even_if_dead = {
+				OR = {
+					trait = slave
+					trait = former_slave
+					any_dynasty_member = {
+						is_close_relative = ROOT
+						OR = {
+							trait = slave
+							trait = former_slave
+						}
+					}
+				}
+			}
+			any_dynasty_member = {
+				is_close_relative = ROOT
+				OR = {
+					trait = slave
+					trait = former_slave
+				}
+			}
+			any_child = {
+				OR = {
+					trait = slave
+					trait = former_slave
 				}
 			}
 		}

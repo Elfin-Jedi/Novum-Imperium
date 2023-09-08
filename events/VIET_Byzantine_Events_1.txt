@@ -206,7 +206,7 @@ character_event = {
 	option = { #Disgusting pagans!
 		name = "EVTOPTA1000109162"
 		trigger = {
-			NOT = { religion_group = pagan_group }
+			NOT = { novum_imperium_is_pagan = yes }
 		}
 		piety = 5
 		random_list = {

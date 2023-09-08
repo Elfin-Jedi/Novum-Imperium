@@ -1476,8 +1476,8 @@ can_be_spymaster_trigger = {
 					liege = { emf_feminist_religion = yes }
 				}
 				AND = {
-					religion_group = pagan_group
-					liege = { religion_group = pagan_group }
+					novum_imperium_is_pagan = yes
+					liege = { novum_imperium_is_pagan = yes }
 				}
 				liege = {
 					OR = {
@@ -2669,10 +2669,7 @@ FROMs_religion_is_playable_trigger = {
 	trigger_else_if = {
 		limit = {
 			FROM = {
-				OR = {
-					religion_group = pagan_group
-					religion_group = african_group
-				}
+				novum_imperium_is_pagan = yes
 			}
 			NOR = { 
 				has_dlc = "The Old Gods" 
@@ -2706,10 +2703,7 @@ FROMs_religion_is_playable_trigger = {
 			}
 		}
 		trigger_else = {
-			OR = {
-				religion_group = pagan_group
-				religion_group = african_group
-			}
+			novum_imperium_is_pagan = yes
 			OR = {
 				has_dlc = "The Old Gods"
 				has_dlc = "Holy Fury"
@@ -2771,10 +2765,7 @@ ROOTs_religion_is_playable_trigger = { #For targeted decision where ROOT is the 
 	trigger_else_if = {
 		limit = {
 			ROOT = {
-				OR = {
-					religion_group = pagan_group
-					religion_group = african_group
-				}
+				novum_imperium_is_pagan = yes
 			}
 			NOR = { 
 				has_dlc = "The Old Gods" 
@@ -2808,10 +2799,7 @@ ROOTs_religion_is_playable_trigger = { #For targeted decision where ROOT is the 
 			}
 		}
 		trigger_else = {
-			OR = {
-				religion_group = pagan_group
-				religion_group = african_group
-			}
+			novum_imperium_is_pagan = yes
 			OR = {
 				has_dlc = "The Old Gods"
 				has_dlc = "Holy Fury"
@@ -3277,8 +3265,11 @@ has_negative_congenital_trigger = {
 
 is_christian_monastic_member_trigger = {
 	OR = {
+		society_member_of = monastic_order_presbyterian
 		society_member_of = monastic_order_orthodox
 		society_member_of = monastic_order_benedictine
+		society_member_of = monastic_order_jesuit
+		society_member_of = monastic_order_ursuline
 		society_member_of = monastic_order_dominican
 		society_member_of = monastic_order_nestorian
 		society_member_of = monastic_order_monophysite
@@ -3661,6 +3652,21 @@ can_be_sabotaged_trigger = {
 		has_province_modifier = sabotaged_unrest
 	}
 }
+has_shinobi_prerequisites = {
+	age = 16
+	conditional_tooltip = { #recruitment decision
+		trigger = { FROM = { society_member_of = the_shinobi } }
+		OR = {
+			FROM = { ai = no }
+			hidden_trigger = { ai = no }
+			religion = nihon_shinto
+		}
+	}
+	conditional_tooltip = { #showing interest via interface
+		trigger = { NOT = { FROM = { society_member_of = the_shinobi } } }
+		religion = nihon_shinto
+	}
+}
 
 has_assassins_prerequisites = {
 	is_adult = yes
@@ -3744,9 +3750,7 @@ has_trollcrafters_prerequisites = {
 has_cult_of_kali_prerequisites = {
 	has_common_devilworship_prerequisites = yes
 	OR = {
-		religion_group = indian_group
-		religion = bon
-		religion = bon_reformed
+		religion = hindu
 	}
 }
 
@@ -5454,7 +5458,7 @@ has_2nd_tier_education_trait_trigger = {
 has_3rd_tier_education_trait_trigger = {
 	custom_tooltip = {
 		text = tribute_interaction_level3_education_tt
-		hidden_trigger = {  
+		hidden_trigger = {
 			OR = {
 				trait = charismatic_negotiator
 				trait = skilled_tactician
@@ -6344,6 +6348,12 @@ religion_openly_west_african_or_reformed_trigger = {
 			OR = {
 				religion = west_african_pagan
 				religion = west_african_pagan_reformed
+				religion = cushitic_pagan
+				religion = cushitic_pagan_reformed
+				religion = omotic_pagan
+				religion = omotic_pagan_reformed
+				religion = melanesian_religion
+				religion = melanesian_religion_reformed
 			}
 		}
 	}
@@ -6728,10 +6738,10 @@ likes_tributaries = {
 	context = tributary # Not a trigger, but used by the 'liked_by_offmap' & 'disliked_by_offmap' triggers
 }
 likes_indians = {
-	culture_group = indo_aryan_group
+	culture_group = indoaryan
 }
 likes_dravidians = {
-	culture_group = dravidian_group
+	culture_group = dravidian
 }
 likes_tibetans = {
 	culture_group = tibetan_group
@@ -6854,104 +6864,329 @@ is_blood_relative_of_root_trigger = {
 		dynasty = ROOT
 	}
 }
+kangoo_road_trade_post_trigger = {
+	custom_tooltip = {
+		text = kangoo_road_province_desc
+		hidden_tooltip = {
+			OR = {
+				province_id = 3410
+				province_id = 3408
+				province_id = 3407
+				province_id = 3403
+				province_id = 3402
+				province_id = 3399
+				province_id = 3398
+				province_id = 3400
+				province_id = 3401
+				province_id = 3405
+				province_id = 3406
+				province_id = 3411
+				province_id = 3412
+				province_id = 3413
+				province_id = 3415
+				province_id = 3416
+			}
+		}
+	}
+}
+america_road_trade_post_trigger = {
+	custom_tooltip = {
+		text = america_road_province_desc
+		hidden_tooltip = {
+			OR = {
+				province_id = 3861
+				province_id = 3860
+				province_id = 3859
+				province_id = 3856
+				province_id = 3855
+				province_id = 3854
+				province_id = 3852
+				province_id = 3848
+                province_id = 3755
+                province_id = 3754
+                province_id = 3753
+                province_id = 3757
+                province_id = 3760
+                province_id = 3759
+                province_id = 3758
+                province_id = 3744
+                province_id = 3745
+                province_id = 3743
+                province_id = 3736
+                province_id = 3732
+                province_id = 3720
+                province_id = 3728
+                province_id = 3723
+                province_id = 3718
+                province_id = 3717
+                province_id = 3807
+                province_id = 3715
+                province_id = 3769
+                province_id = 3770
+                province_id = 3777
+                province_id = 3778
+                province_id = 3780
+                province_id = 3784
+                province_id = 3787
+                province_id = 3788
+                province_id = 3792
+                province_id = 3793
+                province_id = 3796
+                province_id = 3804
+                province_id = 3802
+                province_id = 3801
+                province_id = 3800
+                province_id = 3706
+                province_id = 3704
+                province_id = 3701
+                province_id = 3694
+                province_id = 3693
+                province_id = 3692
+                province_id = 3691
+                province_id = 3643
+                province_id = 3642
+                province_id = 3641
+                province_id = 3639
+                province_id = 3638
+                province_id = 3637
+                province_id = 3636
+                province_id = 3635
+                province_id = 3634
+                province_id = 3632
+                province_id = 3631
+                province_id = 3630
+                province_id = 3629
+                province_id = 3628
+                province_id = 3627
+                province_id = 3620
+				province_id = 3619
+                province_id = 3618
+                province_id = 3613
+                province_id = 3614
+                province_id = 3615
+                province_id = 3540
+                province_id = 3528
+                province_id = 3529
+                province_id = 3527
+                province_id = 3525
+                province_id = 3524
+                province_id = 3522
+                province_id = 3516
+                province_id = 3517
+				province_id = 3863
+				province_id = 3907
+				province_id = 3910
+				province_id = 3866
+				province_id = 3918
+				province_id = 3921
+				province_id = 3925
+				province_id = 3933
+				province_id = 3936
+				province_id = 3941
+				province_id = 3943
+				province_id = 3949
+				province_id = 3950
+				province_id = 3959
+				province_id = 3960
+#				province_id = 3870
+#				province_id = 3873
+#				province_id = 3896
+#				province_id = 3902
+#				province_id = 3894
+#				province_id = 3880
+#				province_id = 3884
+#				province_id = 3887
+#				province_id = 3968
+#				province_id = 3974
+#				province_id = 3980
+#				province_id = 4019
+#				province_id = 4008
+#				province_id = 4013
+#				province_id = 4017
+#				province_id = 4035
+#				province_id = 4040
+#				province_id = 4043
+#				province_id = 4047
+#				province_id = 4050		
+			}
+		}
+	}
+}
+golden_path_trade_post_trigger = {
+	custom_tooltip = {
+		text = golden_path_province_desc
+		hidden_tooltip = {
+			OR = {
+			province_id = 2073
+			province_id = 2378
+			province_id = 2070
+			province_id = 2376
+			province_id = 2382
+			province_id = 2370
+			province_id = 3312
+			province_id = 2338
+			province_id = 2080
+			province_id = 3329
+			}
+		}
+	}
+}
 
 silk_road_trade_post_trigger = {
 	custom_tooltip = {
 		text = silk_road_province_desc
 		hidden_tooltip = {
 			OR = {
-				province_id = 620 # Itil
-				province_id = 630 # Merv
-				province_id = 641 # Hormuz
-				province_id = 646 # Isfahan / Esfahan
-				province_id = 667 # Tabriz
-				province_id = 678 # Trebizond
-				province_id = 693 # Baghdad
-				province_id = 719 # Mecca
-				province_id = 728 # Damascus
-				province_id = 764 # Antiocheia
-				province_id = 796 # Cairo
-				province_id = 802 # Alexandria
-				province_id = 858 # Aden
-				province_id = 903 # Samarkand
-				trigger_if = {
-					limit = { emf_has_swmh = yes }
-					OR = {
-						province_id = 560 # Cherson
-						province_id = 598 # Tmutarakan
-						province_id = 626 # Kath
-						province_id = 628 # Bukhara
-						province_id = 658 # Hamadan
-						province_id = 682 # Vaspurakan
-						province_id = 733 # Aleppo
-						province_id = 772 # Acre
-						province_id = 1567 # Kashgar
-						province_id = 1570 # Qarashahr
-						province_id = 1580 # Khotan
-						province_id = 1600 # Debul
-						province_id = 1615 # Multan
-						province_id = 1620 # Lahur
-						province_id = 1639 # Navasarika
-						province_id = 1658 # Delhi
-						province_id = 1986 # Purang
-						province_id = 2036 # Goa
-						province_id = 2052 # Mahoyadapuram
-						province_id = 2072 # Vijayawada
-						province_id = 2093 # Kataka
-						province_id = 2111 # Magadha
-						province_id = 2123 # Varanasi
-						province_id = 2136 # Tamralipti
-						province_id = 2167 # Lhasa
-						province_id = 2187 # Dege
-						province_id = 2199 # Dunhuang
-						province_id = 2227 # Kara Khoja
-						province_id = 2242 # Cholamandalam
-						province_id = 2429 # Dali
-						
-					}
-				}
-				trigger_else = {
-					OR = {
-						province_id = 596 # Tana
-						province_id = 633 # Gurgan
-						province_id = 644 # Shiraz
-						province_id = 649 # Basra
-						province_id = 664 # Qazwin
-						province_id = 774 # Jerusalem
-						province_id = 775 # Jaffa
-						province_id = 868 # Muscat
-						# SWMH IDs generally start diverging from here
-						province_id = 1114 # Mahodayapuram
-						province_id = 1115 # Cholamandalam
-						province_id = 1127 # Navasarika
-						province_id = 1129 # Kataka
-						province_id = 1151 # Laksmanavati
-						province_id = 1154 # Magadha
-						province_id = 1163 # Varanasi
-						province_id = 1180 # Udabhanda
-						province_id = 1185 # Kabul
-						province_id = 1220 # Goa
-						province_id = 1221 # Vijayawada
-						province_id = 1288 # Ujjayini
-						province_id = 1297 # Debul
-						province_id = 1318 # Samatata
-						province_id = 1338 # Multan
-						province_id = 1359 # Mathura
-						province_id = 1362 # Lahur
-						province_id = 1365 # Delhi
-						province_id = 1369 # Socotra
-						province_id = 1439 # Kashgar
-						province_id = 1440 # Khotan
-						province_id = 1446 # Kara Khoja
-						province_id = 1448 # Dunhuang
-						province_id = 1478 # Kathmandu
-						province_id = 1481 # Paro
-						province_id = 1491 # Purang
-						province_id = 1498 # Lhasa
-						province_id = 1794 # Yangikent
-						province_id = 1797 # Almaty
-					}
-				}
+				province_id = 1491
+				province_id = 1498
+				province_id = 1478
+				province_id = 1359
+				province_id = 1365
+				province_id = 1448
+				province_id = 1440
+				province_id = 1439
+				province_id = 678
+				province_id = 764
+				province_id = 802
+				province_id = 596
+				province_id = 667
+				province_id = 693
+				province_id = 649
+				province_id = 646
+				province_id = 641
+				province_id = 630
+				province_id = 1180
+				province_id = 1297
+				province_id = 1127
+				province_id = 1220
+				province_id = 1114
+				province_id = 1221
+				province_id = 1446
+				province_id = 868
+				province_id = 719
+				province_id = 1338
+				province_id = 1369
+				province_id = 858
+				province_id = 903
+				province_id = 1185
+				province_id = 1129
+				province_id = 1318
+				province_id = 1163
+				province_id = 1154
+				province_id = 1151
+				province_id = 1481
+				province_id = 1115
+				province_id = 1288
+				province_id = 796
+				province_id = 1362
+				province_id = 728
+				province_id = 774
+				province_id = 620
+				province_id = 622
+				province_id = 775
+				province_id = 633
+				province_id = 664
+				province_id = 644
+				province_id = 1797
+				
+				#UMBRA SPHERAE
+				province_id = 2649
+				province_id = 2588
+				province_id = 2653
+				province_id = 2582
+				province_id = 2449
+
+				province_id = 2423
+				province_id = 2146
+				province_id = 2139
+				province_id = 2218
+				province_id = 2122
+				province_id = 2267
+				province_id = 2110
+				province_id = 2106
+					
+		   
+				province_id = 2126
+				province_id = 2302
+				province_id = 2221
+				province_id = 2233
+				province_id = 2262
+				province_id = 2284
+				province_id = 2248
+				province_id = 2443
+				province_id = 2564
+				province_id = 2015
+				province_id = 2845
+				province_id = 2004
+				province_id = 2024
+				province_id = 2028
+				province_id = 2037
+
+				province_id = 2340
+				province_id = 2341
+				province_id = 2342
+				province_id = 2343
+				province_id = 2344
+				province_id = 2345
+				province_id = 2346
+				province_id = 2347
+				province_id = 2348
+				province_id = 2349
+				province_id = 2350
+				province_id = 2351
+				province_id = 2352
+				province_id = 2353
+				province_id = 2354
+				province_id = 2357
+				province_id = 2359
+				province_id = 2360
+				province_id = 2361
+				province_id = 2061
+
+				province_id = 2362
+				province_id = 2372
+				province_id = 2374
+				province_id = 2377
+				province_id = 2072
+				province_id = 2076
+				province_id = 2068
+				province_id = 2069
+			
+				province_id = 2828
+				province_id = 2827
+				province_id = 2831
+
+				province_id = 2371
+				province_id = 2363
+				province_id = 3392
+				province_id = 3391
+				province_id = 3390
+				province_id = 3389
+				province_id = 3388
+				province_id = 3387
+				province_id = 3383
+				province_id = 3377
+				province_id = 3378
+				province_id = 3372
+				province_id = 3371
+				province_id = 3368
+				province_id = 3367
+				province_id = 3366
+				province_id = 3352
+				province_id = 3348
+				province_id = 3345
+				province_id = 3344
+				province_id = 3342
+				province_id = 3341
+				province_id = 3340
+				province_id = 3339
+				province_id = 3338
+				province_id = 925
+				province_id = 913
+				province_id = 912
+				province_id = 3335
+				province_id = 3334
+                province_id = 920
 			}
 		}
 	}
@@ -7008,7 +7243,7 @@ proselytize_convert_independent_trigger = {
 	owner = {
 		FROM = {
 			OR = { 
-				NOT = { religion_group = pagan_group }
+				NOT = { novum_imperium_is_pagan = yes }
 				religion_scope = { has_religion_feature = religion_proselytizing }
 				AND = {
 					religion = west_african_pagan_reformed
@@ -7796,68 +8031,58 @@ can_build_walls_trigger = {
 	holding_type = castle
 	hidden_tooltip = { NOT = { has_building = ca_wall_5 } }
 	OR = { 
-		AND = { 
-			custom_tooltip = { 
-				text = tooltip_can_build_ca_wall_1
-				hidden_tooltip = { 
-					NOR = { 
-						is_building = ca_wall_1 
-						has_building = ca_wall_1
-					}
-					location = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
-				}
-			}
-		}
-		AND = { 
-			custom_tooltip = { 
-				text = tooltip_can_build_ca_wall_2
-				hidden_tooltip = { 
+		custom_tooltip = { 
+			text = tooltip_can_build_ca_wall_1
+			hidden_tooltip = { 
+				NOR = { 
+					is_building = ca_wall_1 
 					has_building = ca_wall_1
-					NOR = { 
-						is_building = ca_wall_2 
-						has_building = ca_wall_2
-					}
-					location = { TECH_FORTIFICATIONS_CONSTRUCTION = 2 }
 				}
+				location = { TECH_FORTIFICATIONS_CONSTRUCTION = 0 }
 			}
 		}
-		AND = { 
-			custom_tooltip = { 
-				text = tooltip_can_build_ca_wall_3
-				hidden_tooltip = { 
+		custom_tooltip = { 
+			text = tooltip_can_build_ca_wall_2
+			hidden_tooltip = { 
+				has_building = ca_wall_1
+				NOR = { 
+					is_building = ca_wall_2 
 					has_building = ca_wall_2
-					NOR = { 
-						is_building = ca_wall_3 
-						has_building = ca_wall_3
-					}
-					location = { TECH_FORTIFICATIONS_CONSTRUCTION = 4 }
 				}
+				location = { TECH_FORTIFICATIONS_CONSTRUCTION = 2 }
 			}
 		}
-		AND = { 
-			custom_tooltip = { 
-				text = tooltip_can_build_ca_wall_4
-				hidden_tooltip = { 
+		custom_tooltip = { 
+			text = tooltip_can_build_ca_wall_3
+			hidden_tooltip = { 
+				has_building = ca_wall_2
+				NOR = { 
+					is_building = ca_wall_3 
 					has_building = ca_wall_3
-					NOR = { 
-						is_building = ca_wall_4 
-						has_building = ca_wall_4
-					}
-					location = { TECH_FORTIFICATIONS_CONSTRUCTION = 6 }
 				}
+				location = { TECH_FORTIFICATIONS_CONSTRUCTION = 4 }
 			}
 		}
-		AND = { 
-			custom_tooltip = { 
-				text = tooltip_can_build_ca_wall_5
-				hidden_tooltip = { 
+		custom_tooltip = { 
+			text = tooltip_can_build_ca_wall_4
+			hidden_tooltip = { 
+				has_building = ca_wall_3
+				NOR = { 
+					is_building = ca_wall_4 
 					has_building = ca_wall_4
-					NOR = { 
-						is_building = ca_wall_5 
-						has_building = ca_wall_5
-					}
-					location = { TECH_FORTIFICATIONS_CONSTRUCTION = 8 }
 				}
+				location = { TECH_FORTIFICATIONS_CONSTRUCTION = 6 }
+			}
+		}
+		custom_tooltip = { 
+			text = tooltip_can_build_ca_wall_5
+			hidden_tooltip = { 
+				has_building = ca_wall_4
+				NOR = { 
+					is_building = ca_wall_5 
+					has_building = ca_wall_5
+				}
+				location = { TECH_FORTIFICATIONS_CONSTRUCTION = 8 }
 			}
 		}
 	}
@@ -9273,10 +9498,7 @@ dlc_religion_check_trigger = {
 	}
 	trigger_else_if = {
 		limit = {
-			OR = {
-				religion_group = pagan_group
-				religion_group = african_group
-			}
+			novum_imperium_is_pagan = yes
 		}
 		OR = {
 			has_dlc = "The Old Gods"
@@ -9296,7 +9518,7 @@ dlc_religion_check_trigger = {
 			has_dlc = "Rajas of India"
 			AND = {
 				has_dlc = "Jade Dragon"
-				religion = taoist
+				religion = tao
 			}
 		}
 	}
@@ -9466,9 +9688,22 @@ root_has_imprisonment_reason_opinion_trigger = {
 
 region_africa_west_central_or_east_trigger = {
 	OR = {
+		region = world_south_north_america
+		region = world_west_isles
+		region = world_meso
+		region = world_amazon
+		region = world_colombia
+		region = world_kongo
+		region = world_africa_se
+		region = world_kentanmoz
+		region = world_zimbabwe
+		region = world_east_african_coast
 		region = world_africa_west
 		region = world_africa_east
 		region = world_africa_central
+		region = world_india
+		region = world_southermost_china
+		region = world_southeast_asia
 	}
 }
 
@@ -9606,5 +9841,42 @@ is_single_player_observer_mode = {
 	AND = {
 		multiplayer = no
 		is_local_human_observer = yes
+	}
+}
+
+is_portugal = {
+	OR = {
+		has_landed_title = k_portugal
+		has_landed_title = k_portugal_2
+		has_landed_title = k_portugal_3
+		has_landed_title = k_portugal_4
+		has_landed_title = k_portugal_5
+		has_landed_title = k_portugal_6
+		has_landed_title = k_portugal_7
+		has_landed_title = k_portugal_8
+		has_landed_title = k_portugal_9
+		has_landed_title = k_portugal_10
+		has_landed_title = k_portugal_11
+		has_landed_title = k_portugal_12
+		has_landed_title = k_portugal_13
+		has_landed_title = k_portugal_14
+		has_landed_title = k_portugal_15
+		has_landed_title = k_portugal_16
+		has_landed_title = e_portugal
+		has_landed_title = e_portugal_2
+		has_landed_title = e_portugal_3
+		has_landed_title = e_portugal_4
+		has_landed_title = e_portugal_5
+		has_landed_title = e_portugal_6
+		has_landed_title = e_portugal_7
+		has_landed_title = e_portugal_8
+		has_landed_title = e_portugal_9
+		has_landed_title = e_portugal_10
+		has_landed_title = e_portugal_11
+		has_landed_title = e_portugal_12
+		has_landed_title = e_portugal_13
+		has_landed_title = e_portugal_14
+		has_landed_title = e_portugal_15
+		has_landed_title = e_portugal_16
 	}
 }

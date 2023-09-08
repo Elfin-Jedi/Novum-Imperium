@@ -669,7 +669,7 @@ decisions = {
 		potential = {
 			government = mercenary_government
 			independent = no
-			LIEGE = {
+			liege = {
 				NOT = {
 					has_opinion_modifier = {
 						who = ROOT
@@ -684,7 +684,7 @@ decisions = {
 		}
 
 		effect = {
-			LIEGE = {
+			liege = {
 				opinion = {
 					who = ROOT
 					modifier = opinion_chivalry_merc_bribe
@@ -702,7 +702,7 @@ decisions = {
 				limit = {
 					has_dlc = "Conclave"
 				}
-				reverse_add_favor = LIEGE
+				reverse_add_favor = liege
 			}
 		}
 
@@ -869,7 +869,7 @@ society_decisions = {
 										had_character_flag = { flag = chivalry_recent_duel days = 500 }
 										AND = {
 											had_character_flag = { flag = chivalry_recent_duel days = 365 }
-											AI = yes
+											ai = yes
 										}
 									}
 									society_rank == 2
@@ -881,7 +881,7 @@ society_decisions = {
 										had_character_flag = { flag = chivalry_recent_duel days = 500 }
 										AND = {
 											had_character_flag = { flag = chivalry_recent_duel days = 365 }
-											AI = yes
+											ai = yes
 										}
 									}
 									society_rank == 3
@@ -893,12 +893,12 @@ society_decisions = {
 										AND = {
 											had_character_flag = { flag = chivalry_recent_duel days = 180 }
 											# society_rank == 4
-											AI = no
+											ai = no
 										}
 										AND = {
 											had_character_flag = { flag = chivalry_recent_duel days = 90 }
 											# society_rank == 4
-											AI = yes
+											ai = yes
 										}
 									}
 									OR = {
@@ -2082,10 +2082,7 @@ society_decisions = {
 									tier = DUKE
 									AND = {
 										is_nomadic = yes
-										AND = {
-											is_nomadic = yes
-											num_of_count_titles_in_realm > 8
-										}
+										num_of_count_titles_in_realm > 8
 									}
 								}
 							}
@@ -3045,10 +3042,7 @@ society_decisions = {
 									factor = 0
 									holding_type = tribal
 									ROOT = {
-										OR = {
-											culture_group = altaic
-											culture_group = magyar
-										}
+										culture_group = altaic
 									}
 								}
 								modifier = {
@@ -3111,8 +3105,10 @@ society_decisions = {
 								}
 								modifier = {
 									factor = 0
-									holding_type = temple
-									holding_type = tribal
+									OR = {
+										holding_type = temple
+										holding_type = tribal
+									}
 								}
 								modifier = {
 									factor = 0
@@ -3167,16 +3163,17 @@ society_decisions = {
 									factor = 0
 									holding_type = tribal
 									ROOT = {
-										NOR = {
+										NOT = {
 											culture_group = altaic
-											culture_group = magyar
 										}
 									}
 								}
 								modifier = {
 									factor = 0
-									holding_type = city
-									holding_type = temple
+									OR = {
+										holding_type = city
+										holding_type = temple
+									}
 								}
 								modifier = {
 									factor = 0
@@ -3234,9 +3231,11 @@ society_decisions = {
 								}
 								modifier = {
 									factor = 0
-									holding_type = city
-									holding_type = temple
-									holding_type = tribal
+									OR = {
+										holding_type = city
+										holding_type = temple
+										holding_type = tribal
+									}
 								}
 								modifier = {
 									factor = 0
@@ -3486,7 +3485,7 @@ targeted_decisions = {
 		from_potential = {
 			OR = {
 				is_fighter_societies_trigger = no
-				AI = no
+				ai = no
 			}
 			is_playable = yes
 			prisoner = no
@@ -3853,19 +3852,15 @@ targeted_decisions = {
 				character_event = { id = CHI.105 days = 180 }
 				any_courtier = {
 					limit = {
-						AND = {
-							has_holyorder_societies_prerequisites_notrait = yes
-							religion = root
-						}
+						has_holyorder_societies_prerequisites_notrait = yes
+						religion = root
 					}
 					join_society = society_holy_one
 				}
 				any_vassal = {
 					limit = {
-						AND = {
-							has_holyorder_societies_prerequisites_notrait = yes
-							religion = root
-						}
+						has_holyorder_societies_prerequisites_notrait = yes
+						religion = root
 					}
 					join_society = society_holy_one
 				}
@@ -3915,19 +3910,15 @@ targeted_decisions = {
 				character_event = { id = CHI.105 days = 180 }
 				any_courtier = {
 					limit = {
-						AND = {
-							has_holyorder_societies_prerequisites_notrait = yes
-							religion = root
-						}
+						has_holyorder_societies_prerequisites_notrait = yes
+						religion = root
 					}
 					join_society = society_holy_one
 				}
 				any_vassal = {
 					limit = {
-						AND = {
-							has_holyorder_societies_prerequisites_notrait = yes
-							religion = root
-						}
+						has_holyorder_societies_prerequisites_notrait = yes
+						religion = root
 					}
 					join_society = society_holy_one
 				}
@@ -4524,10 +4515,7 @@ settlement_decisions = {
 					holding_type = tribal
 				}
 				FROM = {
-					OR = {
-						culture_group = altaic
-						culture_group = magyar
-					}
+					culture_group = altaic
 				}
 			}
 			modifier = {

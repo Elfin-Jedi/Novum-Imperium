@@ -9,11 +9,9 @@ character_event = {  # Potence Witch
 	only_capable = yes
 
 	trigger = {
-		AND = {
-			has_focus = focus_family
-			age >= 40
-			is_female = no
-		}
+		has_focus = focus_family
+		age >= 40
+		is_female = no
 	}
 
 	mean_time_to_happen = {

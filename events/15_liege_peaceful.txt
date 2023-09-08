@@ -12,14 +12,10 @@ character_event = {
 	prisoner = no
 
 	trigger = {
-		AND = {
-			independent = no
-			any_liege = {
-				AND = {
-					martial <= 14
-					ai_ambition <= 50
-				}
-			}
+		independent = no
+		any_liege = {
+			martial <= 14
+			ai_ambition <= 50
 		}
 	}
 

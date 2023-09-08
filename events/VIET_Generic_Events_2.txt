@@ -935,7 +935,7 @@ character_event = {
 			#region = custom_egypt
 		}
 		NOT = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		NOT = { has_alternate_start_parameter = { key = culture_names value = random } }

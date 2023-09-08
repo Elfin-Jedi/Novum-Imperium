@@ -156,10 +156,7 @@ check_if_crusader_trigger = {
 					religion = fraticelli
 					religion = britannic_pagan
 				}
-				OR = {
-					has_pledged_crusade_participation = yes
-					any_war = { using_cb = new_crusade }
-				}
+				has_pledged_crusade_participation = yes
 				NOR = {
 					has_landed_title = k_papal_state
 					has_landed_title = d_fraticelli
@@ -172,10 +169,7 @@ check_if_crusader_trigger = {
 			NOT = {
 				ROOT = {
 					has_pledged_crusade_participation = yes
-					OR = {
-						religion_scope = { is_preparing_crusade = yes }
-						any_war = { using_cb = new_crusade }
-					}
+					religion_scope = { is_preparing_crusade = yes }
 					religion = FROM
 					FROM = {
 						OR = {
@@ -208,10 +202,7 @@ check_if_crusader_thirdparty_trigger = {
 				religion = catholic
 				religion = fraticelli
 			}
-			OR = {
-				has_pledged_crusade_participation = yes
-				any_war = { using_cb = new_crusade }
-			}
+			has_pledged_crusade_participation = yes
 			NOR = {
 				has_landed_title = k_papal_state
 				has_landed_title = d_fraticelli
@@ -221,10 +212,7 @@ check_if_crusader_thirdparty_trigger = {
 			text = crusade_invalidate_other_wars_TT
 			NAND = {
 				has_pledged_crusade_participation = yes
-				OR = {
-					religion_scope = { is_preparing_crusade = yes }
-					any_war = { using_cb = new_crusade }
-				}
+				religion_scope = { is_preparing_crusade = yes }
 				religion = FROM
 				FROM = {
 					OR = {

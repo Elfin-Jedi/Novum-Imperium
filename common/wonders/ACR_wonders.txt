@@ -11,7 +11,7 @@ wonder_crotone_university = {
 	active = {
 		trigger_if = {
 			limit = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			ROOT = {
 				is_organized_religion_trigger = yes

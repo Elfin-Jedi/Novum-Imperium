@@ -937,14 +937,12 @@ decisions = {
 
 			conditional_tooltip = {
 				trigger = {
-					AND = {
-						NOT = {
-							d_teutonic_order = {
-								holder_scope = {
-									opinion = {
-										who = ROOT
-										value = 25
-									}
+					NOT = {
+						d_teutonic_order = {
+							holder_scope = {
+								opinion = {
+									who = ROOT
+									value = 25
 								}
 							}
 						}
@@ -968,19 +966,17 @@ decisions = {
 
 			conditional_tooltip = {
 				trigger = {
-					AND = {
-						NOT = {
-							k_teutonic_state = {
-								holder_scope = {
-									opinion = {
-										who = ROOT
-										value = 25
-									}
+					NOT = {
+						k_teutonic_state = {
+							holder_scope = {
+								opinion = {
+									who = ROOT
+									value = 25
 								}
 							}
 						}
-						is_title_active = k_teutonic_state
 					}
+					is_title_active = k_teutonic_state
 				}
 
 				custom_tooltip = {
@@ -2104,12 +2100,10 @@ targetted_decisions = {
 			}
 			conditional_tooltip = {
 				trigger = {
-					AND = {
-						is_title_active = d_teutonic_order
-						d_teutonic_order = {
-							owner = {
-								war = yes
-							}
+					is_title_active = d_teutonic_order
+					d_teutonic_order = {
+						owner = {
+							war = yes
 						}
 					}
 				}
@@ -2125,12 +2119,10 @@ targetted_decisions = {
 			}
 			conditional_tooltip = {
 				trigger = {
-					AND = {
-						is_title_active = k_teutonic_state
-						k_teutonic_state = {
-							owner = {
-								war = yes
-							}
+					is_title_active = k_teutonic_state
+					k_teutonic_state = {
+						owner = {
+							war = yes
 						}
 					}
 				}

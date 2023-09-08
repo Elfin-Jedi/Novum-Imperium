@@ -545,8 +545,10 @@ RETTYPE_CUL_HUNG =
 
 	potential = {
 		emf_retinue_hire_basic_potential = yes
-		culture_group = magyar
-		NOT = { culture = old_hungarian }
+		OR = {
+			culture = hungarian
+			culture = szekely
+		}
 	}
 
 	modifier = {
@@ -1337,6 +1339,9 @@ RETTYPE_CUL_ALTAIC =
 			culture = turkish
 			culture = jurchen
 			culture = mongol
+			culture = hungarian
+			culture = szekely
+			culture = old_hungarian
 		}
 	}
 
@@ -1572,8 +1577,8 @@ RETTYPE_CUL_INDIAN =
 	potential = {
 		emf_retinue_hire_basic_potential = yes
 		OR = {
-			culture_group = indo_aryan_group
-			culture_group = dravidian_group
+			culture_group = indoaryan
+			culture_group = dravidian
 		}
 	}
 
@@ -1640,7 +1645,7 @@ RETTYPE_CUL_HAN =
 	
 	potential = {
 		emf_retinue_hire_basic_potential = yes
-		culture_group = chinese_group
+		culture_group = chinese
 	}
 	
 	modifier = {
@@ -2120,5 +2125,433 @@ HORDE_RETTYPE_TEMUJIN = {
 	modifier = {
 		knights_defensive = 0.6
 		horse_archers_defensive = 0.6
+	}
+}
+
+HORDE_RETTYPE_PAGAN =
+{
+	first_type = 3
+	first_amount = 125
+	second_type = 6
+	second_amount = 125
+	
+	special_troops = horse_archers
+	
+	hire_cost = 50
+	costs_piety = yes
+	
+	maintenance_multiplier = 0.25
+	
+	potential = {
+		is_nomadic = yes
+		novum_imperium_is_pagan = yes
+	}
+	modifier = {
+		light_cavalry_defensive = 0.5
+		light_cavalry_offensive = -0.3
+		horse_archers_offensive = 0.25
+		horse_archers_defensive = 0.5
+	}
+}
+
+HORDE_RETTYPE_MUSLIM =
+{
+	first_type = 6
+	first_amount = 125
+	second_type = 5
+	second_amount = 125
+	
+	special_troops = horse_archers
+	
+	hire_cost = 50
+	costs_piety = yes
+	
+	maintenance_multiplier = 0.25
+	
+	potential = {
+		is_nomadic = yes
+		religion_group = muslim
+	}
+	modifier = {
+		archers_offensive = 0.25
+		archers_defensive = 0.5
+		horse_archers_offensive = 0.25
+		horse_archers_defensive = 0.5
+	}
+}
+
+HORDE_RETTYPE_CHRISTIAN =
+{
+	first_type = 2
+	first_amount = 125
+	second_type = 6
+	second_amount = 125
+	
+	special_troops = horse_archers
+	
+	hire_cost = 75
+	costs_piety = yes
+	
+	maintenance_multiplier = 0.25
+	
+	potential = {
+		is_nomadic = yes
+		religion_group = christian
+	}
+	modifier = {
+		pikemen_defensive = 0.25
+		horse_archers_offensive = 0.25
+		horse_archers_defensive = 0.5
+	}
+}
+
+HORDE_RETTYPE_ZOROASTRIAN =
+{
+	first_type = 1
+	first_amount = 125
+	second_type = 6
+	second_amount = 125
+	
+	special_troops = horse_archers
+	
+	hire_cost = 75
+	costs_piety = yes
+	
+	maintenance_multiplier = 0.25
+	
+	potential = {
+		is_nomadic = yes
+		religion_group = zoroastrian_group
+	}
+	modifier = {
+		heavy_infantry_defensive = 0.25
+		horse_archers_offensive = 0.25
+		horse_archers_defensive = 0.5
+	}
+}
+
+HORDE_RETTYPE_JEWISH =
+{
+	first_type = 3
+	first_amount = 125
+	second_type = 1
+	second_amount = 125
+	
+	special_troops = horse_archers
+	
+	hire_cost = 50
+	costs_piety = yes
+	
+	maintenance_multiplier = 0.25
+	
+	potential = {
+		is_nomadic = yes
+		religion_group = jewish_group
+	}
+	modifier = {
+		heavy_infantry_defensive = 0.25
+		light_cavalry_defensive = 0.75
+	}
+}
+
+HORDE_RETTYPE_EASTERN =
+{
+	first_type = 0
+	first_amount = 125
+	second_type = 3
+	second_amount = 125
+	
+	special_troops = horse_archers
+	
+	hire_cost = 50
+	costs_piety = yes
+	
+	maintenance_multiplier = 0.25
+	
+	potential = {
+		is_nomadic = yes
+		religion_group = indian_group
+	}
+	modifier = {
+		light_infantry_offensive = 0.25
+		light_infantry_defensive = 0.5
+		light_cavalry_defensive = 0.5
+		light_cavalry_offensive = -0.3
+	}
+}
+
+HORDE_RETTYPE_INDIAN = 
+{
+	first_type = 3
+	first_amount = 200
+	second_type = 6
+	second_amount = 50
+	
+	special_troops = war_elephants
+
+	hire_cost = 250
+	
+	potential = {
+		is_nomadic = yes
+		capital_scope = {
+		OR={
+				region = world_india
+				region = world_indochina
+				region = world_malaysia
+				region = world_java
+				region = world_indonesia
+				region = world_indonesia
+				region = world_africa_east
+				region = world_south_china
+				}
+		}
+		NOT = { has_character_modifier = invading_population_halt } # This stops the Mongol Empire from spending all their money on super-expensive retinues
+	}
+	
+	modifier = {
+		light_cavalry_offensive = 0.25
+		light_cavalry_defensive = 0.5
+		war_elephants_morale = 0.25
+	}
+}
+
+HORDE_RETTYPE_DESERT = {
+	first_type = 3
+	first_amount = 100
+	second_type = 6
+	second_amount = 150
+	
+	special_troops = camel_cavalry
+	
+	hire_cost = 250
+	
+	potential = {
+		is_nomadic = yes
+		capital_scope = {
+			terrain = desert
+		}
+		NOT = { has_character_modifier = invading_population_halt } # This stops the Mongol Empire from spending all their money on super-expensive retinues
+	}
+	
+	modifier = {
+		light_cavalry_offensive = 0.25
+		light_cavalry_defensive = 0.5
+		camel_cavalry_offensive = 0.25
+		camel_cavalry_defensive = 0.5
+	}
+}
+
+HORDE_RETTYPE_EUROPE = {
+	first_type = 4
+	first_amount = 250
+	
+	hire_cost = 250
+	
+	potential = {
+		is_nomadic = yes
+		capital_scope = {
+			OR = {
+				region = world_europe_west
+				region = world_europe_south
+			}
+		}
+		NOT = { has_character_modifier = invading_population_halt } # This stops the Mongol Empire from spending all their money on super-expensive retinues
+	}
+	
+	modifier = {
+		knights_offensive = 0.25
+		knights_defensive = -0.25
+	}
+}
+RETTYPE_CUL_CHUK =
+{
+	first_type = 3
+	first_amount = 100
+	second_type = 6
+	second_amount = 150
+	special_troops = reindeer_cavalry
+	potential = {
+		is_nomadic = no
+			OR = {
+			culture_group = far_north_east
+			culture_group = yukaghir_group
+			culture_group = baltic
+			culture_group = finno_ugric
+		}
+	}
+	
+	modifier = {
+		reindeer_cavalry_offensive = 0.25
+		reindeer_cavalry_defensive = 0.5
+		knights_morale = 0.1
+	}
+}
+RETTYPE_CUL_KOR =
+{
+	first_type = 4
+	first_amount = 250
+	
+	potential = {
+		is_nomadic = no
+		culture_group = korean_group
+	}
+	
+	modifier = {
+		knights_offensive = 0.075
+		knights_defensive = 0.075
+		knights_morale = 0.1
+	}
+}
+RETTYPE_CUL_EXPLOSIVE_HAN = 
+{
+	first_type = 5
+	first_amount = 250
+	second_type = 6
+	second_amount = 100
+	
+	special_troops = fire_lancers
+	
+	potential = {
+			date >= 950.1.1
+			TECH_CASTLE_CONSTRUCTION >= 1.8
+			TECH_SIEGE_EQUIPMENT >= 1.8
+			TECH_SKIRMISH >= 1.8
+		is_nomadic = no
+		culture = han
+	}
+	
+	modifier = {
+		fire_lancers_morale = 0.1
+		archers_offensive = 0.70
+		archers_defensive = 0.50
+		fire_lancers_offensive = 0.60
+		fire_lancers_defensive = 0.3
+	}
+}
+RETTYPE_CUL_ROCKETS_HAN = 
+{
+	first_type = 5
+	first_amount = 200
+	second_type = 6
+	second_amount = 50
+	
+	special_troops = rocketeers
+	
+	potential = {
+			date >= 904.1.1
+			TECH_CASTLE_CONSTRUCTION >= 1.8
+			TECH_SIEGE_EQUIPMENT >= 1.8
+			TECH_SKIRMISH >= 1.8
+		is_nomadic = no
+		culture = han
+	}
+	
+	modifier = {
+		rocketeers_morale = 0.1
+		archers_offensive = 0.70
+		archers_defensive = 0.50
+		rocketeers_offensive = 0.60
+		rocketeers_defensive = 0.3
+	}
+}
+RETTYPE_CUL_CANNONS_HAN = 
+{
+	first_type = 5
+	first_amount = 200
+	second_type = 6
+	second_amount = 50
+	
+	special_troops = cannoneers
+	
+	potential = {
+			date >= 1214.1.1
+			TECH_CASTLE_CONSTRUCTION = 3
+			TECH_SIEGE_EQUIPMENT = 3
+			TECH_SKIRMISH = 3
+		is_nomadic = no
+		culture = han
+	}
+	
+	modifier = {
+		cannoneers_morale = 0.1
+		archers_offensive = 0.70
+		archers_defensive = 0.50
+		cannoneers_offensive = 0.60
+		cannoneers_defensive = 0.3
+	}
+}
+RETTYPE_CUL_GUNNERS_HAN = 
+{
+	first_type = 6
+	first_amount = 250
+	
+	special_troops = hand_gunners
+	
+	potential = {
+			date >= 1214.1.1
+			TECH_CASTLE_CONSTRUCTION = 3
+			TECH_SIEGE_EQUIPMENT = 3
+			TECH_SKIRMISH = 3
+		is_nomadic = no
+		culture = han
+	}
+	
+	modifier = {
+		hand_gunners_morale = 0.1
+		hand_gunners_offensive = 0.60
+		hand_gunners_defensive = 0.3
+	}
+}
+RETTYPE_CUL_FIRELANCERS_HAN = 
+{
+	first_type = 6
+	first_amount = 250
+	
+	special_troops = fire_lancers
+	
+	potential = {
+			date >= 950.1.1
+			TECH_CASTLE_CONSTRUCTION >= 1.8
+			TECH_SIEGE_EQUIPMENT >= 1.8
+			TECH_SKIRMISH >= 1.8
+		is_nomadic = no
+		culture = han
+	}
+	
+	modifier = {
+		fire_lancers_morale = 0.1
+		fire_lancers_offensive = 0.60
+		fire_lancers_defensive = 0.3
+	}
+}
+RETTYPE_CUL_ASSYRIAN = 
+{
+	first_type = 1
+	first_amount = 200
+	
+	potential = {
+		is_nomadic = no
+		culture = assyrian
+	}
+	
+	modifier = {
+		heavy_infantry_defensive = 0.2
+		heavy_infantry_morale = 0.1
+	}
+}
+RETTYPE_CUL_SAMURAI = 
+{
+	first_type = 1
+	first_amount = 250
+	
+	potential = {
+		is_nomadic = no
+		culture = japanese
+	}
+	
+	modifier = {
+		heavy_infantry_defensive = -0.15
+		heavy_infantry_offensive = 0.3
+		heavy_infantry_morale = 0.3
 	}
 }

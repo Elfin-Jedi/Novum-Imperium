@@ -23,7 +23,7 @@ chinese_unification = {
 				}
 			}
 			OR = {
-				culture_group = chinese_group
+				culture_group = chinese
 				primary_title = { has_title_flag = pretender_chinese_empire }
 			}
 		}
@@ -35,7 +35,7 @@ chinese_unification = {
 			independent = yes
 			NOT = { same_realm = FROM }
 			OR = {
-				culture_group = chinese_group
+				culture_group = chinese
 				primary_title = { has_title_flag = pretender_chinese_empire }
 			}
 			mercenary = no
@@ -45,8 +45,12 @@ chinese_unification = {
 	can_use_title = {
 		emf_cb_can_use_de_jure_title = yes
 		any_direct_de_jure_vassal_title = {
-			location = { 
-				region = world_china
+			location = {
+				OR = {
+					region = world_north_china
+					region = world_southermost_china
+					region = world_south_china
+				}
 				any_neighbor_province = {
 					OR = {
 						owner_under_ROOT = yes
@@ -69,7 +73,7 @@ chinese_unification = {
 			NOT = { same_realm = FROM }
 			OR = {
 				primary_title = { has_title_flag = pretender_chinese_empire }
-				culture_group = chinese_group
+				culture_group = chinese
 			}
 			mercenary = no
 		}

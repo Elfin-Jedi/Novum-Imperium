@@ -222,7 +222,7 @@ long_character_event = {							# invite suitor
 			if = {
 				limit = {
 					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				random_list = {  
 					5 = {
@@ -1467,7 +1467,7 @@ long_character_event = {							# suitor appears from nowhere
 			if = {
 				limit = {
 					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				random_list = {  
 					5 = {

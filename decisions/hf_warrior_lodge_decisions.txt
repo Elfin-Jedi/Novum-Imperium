@@ -37,7 +37,7 @@ targeted_decisions = {
 					is_female = yes
 					OR = {
 						trait = brave
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 						is_nomadic = yes
 						religion = buddhist
 						religion = bogomilist
@@ -158,7 +158,7 @@ targeted_decisions = {
 #	                                OR = {
 #	                                    trait = brave
 #	                                    gender_equality_trigger = yes
-#	                                    religion_group = pagan_group
+#	                                    novum_imperium_is_pagan = yes
 #	                                    is_nomadic = yes
 #	                                    religion = buddhist
 #	                                    religion = bogomilist
@@ -166,7 +166,7 @@ targeted_decisions = {
 #	                                FROM = {
 #	                                    OR = {
 #	                                        gender_equality_trigger = yes
-#	                                        religion_group = pagan_group
+#	                                        novum_imperium_is_pagan = yes
 #	                                        is_nomadic = yes
 #	                                        religion = buddhist
 #	                                        religion = bogomilist
@@ -179,7 +179,7 @@ targeted_decisions = {
 #	                        	limit = { is_member_of_any_warrior_lodge_trigger = no }
 #		                        OR = {
 #		                            is_priest = no
-#		                            FROM = { religion_group = pagan_group }
+#		                            FROM = { novum_imperium_is_pagan = yes }
 #		                        }
 #	                        }
 #	                    }
@@ -314,8 +314,7 @@ targeted_decisions = {
 					is_female = yes
 					OR = {
 						trait = brave
-						religion_group = pagan_group
-						religion_group = african_group
+						novum_imperium_is_pagan = yes
 						is_nomadic = yes
 						religion = buddhist
 						religion = bogomilist
@@ -1836,7 +1835,7 @@ society_decisions = {
 			modifier = {
 				factor = 2
 				trait = zealous
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			modifier = {
 				factor = 0
@@ -2358,59 +2357,57 @@ settlement_decisions = {
 						holding_type = tribal
 						NOT = { has_building = tb_hillfort_4 }
 					}
-					AND = {
-						holding_type = tribal
-						hidden_tooltip = { NOT = { has_building = tb_hillfort_4 } }
-						OR = {
-							AND = {
-								custom_tooltip = {
-									text = tooltip_can_build_tb_hillfort_1
-									hidden_tooltip = {
-										NOR = {
-											is_building = tb_hillfort_1
-											has_building = tb_hillfort_1
-										}
-										location = { TECH_CASTLE_CONSTRUCTION = 0 }
-									}
-								}
-							}
-							AND = {
-								custom_tooltip = {
-									text = tooltip_can_build_tb_hillfort_2
-									hidden_tooltip = {
+					holding_type = tribal
+					hidden_tooltip = { NOT = { has_building = tb_hillfort_4 } }
+					OR = {
+						AND = {
+							custom_tooltip = {
+								text = tooltip_can_build_tb_hillfort_1
+								hidden_tooltip = {
+									NOR = {
+										is_building = tb_hillfort_1
 										has_building = tb_hillfort_1
-										NOR = {
-											is_building = tb_hillfort_2
-											has_building = tb_hillfort_2
-										}
-										location = { TECH_CASTLE_CONSTRUCTION = 0 }
 									}
+									location = { TECH_CASTLE_CONSTRUCTION = 0 }
 								}
 							}
-							AND = {
-								custom_tooltip = {
-									text = tooltip_can_build_tb_hillfort_3
-									hidden_tooltip = {
+						}
+						AND = {
+							custom_tooltip = {
+								text = tooltip_can_build_tb_hillfort_2
+								hidden_tooltip = {
+									has_building = tb_hillfort_1
+									NOR = {
+										is_building = tb_hillfort_2
 										has_building = tb_hillfort_2
-										NOR = {
-											is_building = tb_hillfort_3
-											has_building = tb_hillfort_3
-										}
-										location = { TECH_CASTLE_CONSTRUCTION = 1 }
 									}
+									location = { TECH_CASTLE_CONSTRUCTION = 0 }
 								}
 							}
-							AND = {
-								custom_tooltip = {
-									text = tooltip_can_build_tb_hillfort_4
-									hidden_tooltip = {
+						}
+						AND = {
+							custom_tooltip = {
+								text = tooltip_can_build_tb_hillfort_3
+								hidden_tooltip = {
+									has_building = tb_hillfort_2
+									NOR = {
+										is_building = tb_hillfort_3
 										has_building = tb_hillfort_3
-										NOR = {
-												is_building = tb_hillfort_4
-												has_building = tb_hillfort_4
-											}
-										location = { TECH_CASTLE_CONSTRUCTION = 1 }
 									}
+									location = { TECH_CASTLE_CONSTRUCTION = 1 }
+								}
+							}
+						}
+						AND = {
+							custom_tooltip = {
+								text = tooltip_can_build_tb_hillfort_4
+								hidden_tooltip = {
+									has_building = tb_hillfort_3
+									NOR = {
+											is_building = tb_hillfort_4
+											has_building = tb_hillfort_4
+										}
+									location = { TECH_CASTLE_CONSTRUCTION = 1 }
 								}
 							}
 						}

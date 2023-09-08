@@ -1,5 +1,3 @@
-# -*- ck2.history.provinces -*-
-
 # 388 - Karelen
 
 # County Title
@@ -9,17 +7,22 @@ title = c_karelen
 max_settlements = 2
 
 b_kem = tribal
-#b_solovetsky = temple
-#b_karhumaki = city
 
-
+#b_sordavala = city
+#b_kalevala = temple
+#b_kostomuksha = castle
+#b_pitkyaranta = castle
+#b_muezersky = castle
+#b_loukhi = city
 
 # Misc
-culture = karelian
+culture = lappish
 religion = finnish_pagan
 
 # History
-1150.1.1 = { religion = orthodox }
-1150.1.1 = { b_kem = castle
-b_solovetsky = temple
+1150.1.1 = {
+	religion = orthodox
+	b_kem = castle
+	b_kem = ca_wall_1
+	b_kem = ca_wall_q_1
 }

@@ -8,6 +8,251 @@
 #
 ###################################
 
+# Written by Henrik Fåhraeus & Henrik Eklund
+
+# A tribe comes riding in from the wastes to topple a decadent dynasty
+character_event = {
+	id = 91000
+	desc = EVTDESC91000
+	picture = GFX_evt_moors
+	border = GFX_event_normal_frame_war
+	
+	only_playable = yes
+	only_independent = yes
+	religion_group = muslim
+	trigger = {
+		uses_decadence = yes
+		decadence = 75
+		higher_tier_than = count
+		NOT = {
+			any_war = {
+				defender = { character = ROOT }
+				using_cb = decadence_invasion # Already under tribal invasion
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.75
+			decadence = 80
+		}
+		modifier = {
+			factor = 0.5
+			decadence = 85
+		}
+		modifier = {
+			factor = 0.5
+			decadence = 90
+		}
+		modifier = {
+			factor = 0.5
+			decadence = 95
+		}
+	}
+	
+	immediate = {
+		random_potential_tribal_county = { # A county suitable for tribal takeover
+			location = {
+				create_character = {
+					random_traits = yes
+					dynasty = random
+					religion = ROOT
+					culture = ROOT
+					female = no
+					age = 38
+					attributes = {
+						martial = 7
+					}
+					trait = skilled_tactician
+				}
+				
+				new_character = {
+					create_title = {
+						tier = DUKE
+						landless = yes
+						temporary = yes
+						culture = ROOT
+						name = "DECADENCE_REVOLT"
+						holder = THIS
+					}
+					
+					if = {
+						limit = { ROOT = { tier = duke } }
+						wealth = 500
+					}
+					if = {
+						limit = { ROOT = { tier = king } }
+						wealth = 1000
+					}
+					if = {
+						limit = { ROOT = { tier = emperor } }
+						wealth = 2000
+					}
+					
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						leader = THIS
+						match_character = ROOT
+						match_mult = 0.2
+						earmark = decadence_revolters
+						reinforces = yes
+						reinforce_rate_multiplier = 0.25
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = THIS
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 18
+						attributes = {
+							martial = 7
+						}
+						trait = skilled_tactician
+					}
+					new_character = {
+						set_father = PREV
+						spawn_unit = {
+							province = PREVPREV
+							home = PREVPREV
+							owner = PREV
+							#leader = THIS
+							match_character = ROOT
+							match_mult = 0.2
+							earmark = decadence_revolters
+							reinforces = yes
+							reinforce_rate_multiplier = 0.25
+						}
+					}
+					
+					create_character = {
+						random_traits = yes
+						dynasty = THIS
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 20
+						attributes = {
+							martial = 7
+						}
+						trait = skilled_tactician
+					}
+					new_character = {
+						set_father = PREV
+						spawn_unit = {
+							province = PREVPREV
+							home = PREVPREV
+							owner = PREV
+							#leader = THIS
+							match_character = ROOT
+							match_mult = 0.2
+							earmark = decadence_revolters
+							reinforces = yes
+							reinforce_rate_multiplier = 0.25
+						}
+					}
+					
+					create_character = {
+						random_traits = yes
+						dynasty = NONE
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 20
+						attributes = {
+							martial = 7
+						}
+						trait = skilled_tactician
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREV
+							home = PREVPREV
+							owner = PREV
+							#leader = THIS
+							match_character = ROOT
+							match_mult = 0.2
+							earmark = decadence_revolters
+							reinforces = yes
+							reinforce_rate_multiplier = 0.25
+						}
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = NONE
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 22
+						attributes = {
+							martial = 7
+						}
+						trait = skilled_tactician
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREV
+							home = PREVPREV
+							owner = PREV
+							#leader = THIS
+							match_character = ROOT
+							match_mult = 0.2
+							earmark = decadence_revolters
+							reinforces = yes
+							reinforce_rate_multiplier = 0.25
+						}
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = NONE
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 22
+						attributes = {
+							martial = 7
+						}
+						trait = skilled_tactician
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREV
+							home = PREVPREV
+							owner = PREV
+							#leader = THIS
+							match_character = ROOT
+							match_mult = 0.2
+							earmark = decadence_revolters
+							reinforces = yes
+							reinforce_rate_multiplier = 0.25
+						}
+					}
+					
+					set_character_flag = decadence_invader
+					war = {
+						target = ROOT
+						casus_belli = decadence_invasion
+					}
+					clr_character_flag = decadence_invader
+					
+#					log = "91000: Decadence revolt in [Root.PrimaryTitle.GetName]!"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA91000
+		decadence = -50
+	}
+}
+
+### Decadence Trait-Based Events
+
 ### Raises Decadence
 
 # Drunkard
@@ -62,7 +307,38 @@ character_event = {
 	}
 }
 
-# Homosexual malus event (91201) removed due to EMF's misgovernance-based definition of decadence
+# Homosexual
+character_event = {
+	id = 91201
+	desc = EVTDESC91201
+	picture = GFX_evt_carriage
+	
+	ai = no
+	min_age = 16
+	capable_only = yes
+	prisoner = no
+	only_rulers = yes
+	religion_group = muslim
+	
+	trigger = {
+		uses_decadence = yes
+		OR = {
+			trait = homosexual
+			trait = bisexual
+		}
+		NOT = { has_character_flag = decadence_homosexual }
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+	}
+	
+	option = {
+		name = EVTOPTA91201
+		decadence = 2
+		set_character_flag = decadence_homosexual
+	}
+}
 
 # Hedonist
 character_event = {
@@ -1786,6 +2062,8 @@ character_event = {
 			trait = drunkard
 			trait = hedonist
 			trait = impaler
+			trait = homosexual
+			trait = bisexual
 			calc_true_if = {
 				amount = 2
 				trait = gluttonous
@@ -1840,6 +2118,13 @@ character_event = {
 		modifier = {
 			factor = 0.25
 			trait = hedonist
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				trait = homosexual
+				trait = bisexual
+			}
 		}
 		modifier = {
 			factor = 0.5

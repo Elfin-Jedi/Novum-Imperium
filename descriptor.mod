@@ -1,4 +1,4 @@
 name="Novum Imperium: A Mod Merger"
-path="mod/Novum-Imperium"
-user_dir="Novum Imperium"
+path="mod/CK2--Novum-Imperium-Alternate"
+user_dir="Novum Imperium-Alternate"
 

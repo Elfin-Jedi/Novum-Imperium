@@ -154,31 +154,6 @@ decisions = {
         }
 	}
 
-    add_grace = {
-
-		potential = {
-		    ai = no
-            has_character_flag = cheats_enabled
-            has_character_flag = show_cheats
-		}
-
-		allow = {
-			always = yes
-		}
-
-		effect = {
-		    add_offmap_currency = { offmap = offmap_china value = 5000 }
-		}
-
-		revoke_allowed = {
-			always = no
-		}
-
-        ai_will_do = {
-            factor = 0
-        }
-	}
-
 	add_society_points = {
 
 		potential = {

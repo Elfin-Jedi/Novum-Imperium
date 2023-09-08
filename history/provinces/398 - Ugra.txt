@@ -1,18 +1,21 @@
-# -*- ck2.history.provinces -*-
-
-# 398 - Ugra # Mezen
+# 398 - Ugra
 
 # County Title
 title = c_ugra
 
 # Settlements
-max_settlements = 2
-b_mezen_pechora = tribal
-#b_yurom = city
+max_settlements = 1
+b_ukhta = tribal
+#b_yarega = city
+#b_sosnogorsk = temple
 
+#b_vodnyy = castle
+#b_nizhodes = castle
+#b_kadzherom = castle
+#b_voyvozh = castle
 
 # Misc
-culture = vepsian
+culture = mordvin
 religion = finnish_pagan
 terrain = arctic
 

@@ -24,7 +24,35 @@ job_chancellor = {
 	monthly_prestige = 0.25
 
 	allow = {
-		can_be_chancellor_trigger = yes
+		OR = {
+			AND = {
+				OR = {
+					religion = thangiao
+					religion = ua_dab
+					religion = nugyauq
+					religion = benzhujiao
+					religion = taoist
+					religion = nihon_shinto
+					religion = shingyo
+					liege = { government = japanese_imperial_government }
+				}
+				OR = {
+					trait = jinshi
+					trait = juren
+					trait = gongshi
+				}
+			}
+			NOR = {
+				religion = shingyo
+				religion = taoist
+				religion = thangiao
+				religion = ua_dab
+				religion = nugyauq
+				religion = benzhujiao 
+				liege = { government = japanese_imperial_government }
+				culture_group = chinese
+			}
+		}
 		liege = {
 			rtp_is_landless = no
 		}
@@ -38,6 +66,7 @@ job_chancellor = {
 				has_character_flag = rtp_can_read #You can now read
 			}
 		}
+		can_be_chancellor_trigger = yes
 	}
 	dismiss_trigger = {
 		FROM = {
@@ -122,7 +151,35 @@ job_marshal = {
 	monthly_prestige = 0.25
 
 	allow = {
-		can_be_marshal_trigger = yes
+		OR = {
+			AND = {
+				OR = {
+					religion = thangiao
+					religion = ua_dab
+					religion = nugyauq
+					religion = benzhujiao
+					religion = taoist
+					religion = nihon_shinto
+					religion = shingyo
+					liege = { government = japanese_imperial_government }
+				}
+				OR = {
+					trait = jinshi
+					trait = juren
+					trait = gongshi
+				}
+			}
+			NOR = {
+				religion = shingyo
+				religion = taoist
+				religion = thangiao
+				religion = ua_dab
+				religion = nugyauq
+				religion = benzhujiao 
+				liege = { government = japanese_imperial_government }
+				culture_group = chinese
+			}
+		}
 		liege = {
 			rtp_is_landless = no
 		}
@@ -136,6 +193,7 @@ job_marshal = {
 				has_character_flag = rtp_can_read #You can now read
 			}
 		}
+		can_be_marshal_trigger = yes
 	}
 	dismiss_trigger = {
 		FROM = {
@@ -289,7 +347,36 @@ job_treasurer = {
 	monthly_prestige = 0.25
 
 	allow = {
-		can_be_treasurer_trigger = yes
+		OR = {
+			AND = {
+				OR = {
+					religion = thangiao
+					religion = ua_dab
+					religion = nugyauq
+					religion = benzhujiao
+					religion = taoist
+					religion = nihon_shinto
+					religion = shingyo
+					liege = { government = japanese_imperial_government }
+				}
+				OR = {
+					trait = jinshi
+					trait = juren
+					trait = gongshi
+				}
+
+			}
+			NOR = {
+				religion = shingyo
+				religion = taoist
+				religion = thangiao
+				religion = ua_dab
+				religion = nugyauq
+				religion = benzhujiao 
+				liege = { government = japanese_imperial_government }
+				culture_group = chinese
+			}
+		}
 		liege = {
 			rtp_is_landless = no
 		}
@@ -303,6 +390,7 @@ job_treasurer = {
 				has_character_flag = rtp_can_read #You can now read
 			}
 		}
+		can_be_treasurer_trigger = yes
 	}
 	dismiss_trigger = {
 		FROM = {
@@ -388,7 +476,35 @@ job_spymaster = {
 	monthly_salary = 0.2
 
 	allow = {
-		can_be_spymaster_trigger = yes
+		OR = {
+			AND = {
+				OR = {
+					religion = thangiao
+					religion = ua_dab
+					religion = nugyauq
+					religion = benzhujiao
+					religion = taoist
+					religion = nihon_shinto
+					religion = shingyo
+					liege = { government = japanese_imperial_government }
+				}
+				OR = {
+					trait = jinshi
+					trait = juren
+					trait = gongshi
+				}
+			}
+			NOR = {
+				religion = shingyo
+				religion = taoist
+				religion = thangiao
+				religion = ua_dab
+				religion = nugyauq
+				religion = benzhujiao 
+				liege = { government = japanese_imperial_government }
+				culture_group = chinese
+			}
+		}
 		liege = {
 			rtp_is_landless = no
 		}
@@ -402,6 +518,7 @@ job_spymaster = {
 				has_character_flag = rtp_can_read #You can now read
 			}
 		}
+		can_be_spymaster_trigger = yes
 	}
 	dismiss_trigger = {
 		FROM = {
@@ -490,7 +607,35 @@ job_spiritual = {
 	monthly_piety = 0.5
 
 	allow = {
-		can_be_spiritual_trigger = yes
+		OR = {
+			AND = {
+				OR = {
+					religion = thangiao
+					religion = ua_dab
+					religion = nugyauq
+					religion = benzhujiao
+					religion = taoist
+					religion = nihon_shinto
+					religion = shingyo
+					liege = { government = japanese_imperial_government }
+				}
+				OR = {
+					trait = jinshi
+					trait = juren
+					trait = gongshi
+				}
+			}
+			NOR = {
+				religion = shingyo
+				religion = taoist
+				religion = thangiao
+				religion = ua_dab
+				religion = nugyauq
+				religion = benzhujiao 
+				liege = { government = japanese_imperial_government }
+				culture_group = chinese
+			}
+		}
 		liege = {
 			rtp_is_landless = no
 		}
@@ -504,6 +649,7 @@ job_spiritual = {
 				has_character_flag = rtp_can_read #You can now read
 			}
 		}
+		can_be_spiritual_trigger = yes
 	}
 	dismiss_trigger = {
 		FROM = {

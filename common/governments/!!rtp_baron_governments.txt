@@ -297,7 +297,7 @@ feudal_governments = {
 				tier = EMPEROR
 				primary_title = { has_title_flag = pretender_chinese_empire }
 				OR = {
-					culture_group = chinese_group
+					culture_group = chinese
 					culture = khitan
 					culture = tangut
 					culture = jurchen
@@ -379,7 +379,7 @@ feudal_governments = {
 				tier = EMPEROR
 				primary_title = { has_title_flag = pretender_chinese_empire }
 				OR = {
-					culture_group = chinese_group
+					culture_group = chinese
 					culture = khitan
 					culture = tangut
 					culture = jurchen
@@ -469,7 +469,7 @@ feudal_governments = {
 				tier = EMPEROR
 				primary_title = { has_title_flag = pretender_chinese_empire }
 				OR = {
-					culture_group = chinese_group
+					culture_group = chinese
 					culture = khitan
 					culture = tangut
 					culture = jurchen
@@ -525,10 +525,8 @@ feudal_governments = {
 		court_size_modifier = -5
 		commander_limit = -1
 	}
-}
 
 #Baron - Tribal
-tribal_government = {
 	rtp_baron_tribal_g = {
 		potential = {
 			ai = no
@@ -550,7 +548,7 @@ tribal_government = {
 				is_government_potential = rtp_baron_mercenary_g
 				is_government_potential = rtp_baron_republic_g
 				is_government_potential = rtp_baron_theocracy_g
-				is_government_potential = rtp_baron_feudal_g
+				is_government_potential = rtp_baron_g
 			}
 			NAND = { 
 				culture_group = tibetan_group
@@ -565,7 +563,7 @@ tribal_government = {
 				tier = EMPEROR
 				primary_title = { has_title_flag = pretender_chinese_empire }
 				OR = {
-					culture_group = chinese_group
+					culture_group = chinese
 					culture = khitan
 					culture = tangut
 					culture = jurchen

@@ -1,26 +1,9 @@
-crusade_trigger = {
-	using_cb = crusade
-}
-
-holy_war_trigger = {
-	OR = {
-		using_cb = crusade
-		using_cb = religious
-		using_cb = viking_invasion
-		using_cb = muslim_invasion
-		using_cb = pagan_holy_war
-		using_cb = manifest_destiny_invasion
-		using_cb = nomad_invasion
-		using_cb = nomad_expansion
-	}
-}
-
 is_sinosphere_small_trigger = {
 	custom_tooltip = {
 		text = is_sinosphere_small_trigger_desc
 		hidden_tooltip = {
 			OR = {
-				culture_group = chinese_group
+				culture_group = chinese
 				culture = khitan
 				culture = jurchen
 			}
@@ -33,7 +16,7 @@ is_sinosphere_large_trigger = {
 		text = is_sinosphere_large_trigger_desc
 		hidden_tooltip = {
 			OR = {
-				culture_group = chinese_group
+				culture_group = chinese
 				culture_group = serindian # exists in WtWSMS
 				culture_group = tibetan_group
 				culture = tocharian

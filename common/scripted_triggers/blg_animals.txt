@@ -62,7 +62,7 @@ blg_animal_imp = {
 }
 
 blg_animal_monkey = {
-	always = no
+	has_character_modifier = monkey_pet
 }
 
 blg_animal_otter = {
@@ -80,7 +80,13 @@ blg_animal_owl = {
 }
 
 blg_animal_parrot = {
-	has_character_modifier = pet_parrot
+	OR = {
+		has_character_modifier = pet_parrot
+		any_artifact = {
+			is_artifact_equipped = yes
+			artifact_type = pirate_parrot
+		}
+	}
 }
 
 blg_animal_rat = {
@@ -96,6 +102,10 @@ blg_animal_raven = {
 		AND = {
 			has_character_modifier = raven_familiar
 			blg_visible_society = yes
+		}
+		any_artifact = {
+			is_artifact_equipped = yes
+			artifact_type = haunted_raven
 		}
 	}
 }
@@ -360,6 +370,7 @@ blg_mount_lizard = {
 
 # Polar Bear mount.
 blg_mount_polarbear = {
+	death_reason = death_execution_polar_bear
 	any_artifact = {
 		is_artifact_equipped = yes
 		has_artifact_flag = polarbear

@@ -1985,7 +1985,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				create_bloodline = { 
 					type = event_religion_peaceful_bloodline_04
@@ -2095,7 +2095,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				create_bloodline = { 
 					type = event_religion_aggressive_bloodline_04
@@ -2474,7 +2474,7 @@ decisions = {
 			always = yes
 		}
 		effect = {
-			If = {
+			if = {
 				limit = {
 					is_female = yes
 				}
@@ -2482,7 +2482,7 @@ decisions = {
 					type = matilde_bloodline
 				}
 			}
-			Else = {
+			else = {
 				create_bloodline = { 
 					type = matilde_male_bloodline
 				}
@@ -2602,7 +2602,7 @@ decisions = {
 			always = yes
 		}
 		effect = {
-			If = {
+			if = {
 				limit = {
 					is_female = yes
 				}
@@ -2610,7 +2610,7 @@ decisions = {
 					type = samrat_chakravartin_female
 				}
 			}
-			Else = {
+			else = {
 				create_bloodline = { 
 					type = samrat_chakravartin_male
 				}
@@ -2669,7 +2669,7 @@ decisions = {
 			always = yes
 		}
 		effect = {
-			If = {
+			if = {
 				limit = {
 					is_female = yes
 				}
@@ -2677,7 +2677,7 @@ decisions = {
 					type = saoshyant_female
 				}
 			}
-			Else = {
+			else = {
 				create_bloodline = { 
 					type = saoshyant_male
 				}
@@ -2737,7 +2737,7 @@ decisions = {
 			always = yes
 		}
 		effect = {
-			If = {
+			if = {
 				limit = {
 					is_female = yes
 				}
@@ -2745,7 +2745,7 @@ decisions = {
 					type = israel_female
 				}
 			}
-			Else = {
+			else = {
 				create_bloodline = { 
 					type = israel_male
 				}
@@ -2805,7 +2805,7 @@ decisions = {
 			always = yes
 		}
 		effect = {
-			If = {
+			if = {
 				limit = {
 					is_female = yes
 				}
@@ -2813,7 +2813,7 @@ decisions = {
 					type = roman_emperor_female
 				}
 			}
-			Else = {
+			else = {
 				create_bloodline = { 
 					type = roman_emperor_male
 				}
@@ -2874,7 +2874,7 @@ decisions = {
 			always = yes
 		}
 		effect = {
-			If = {
+			if = {
 				limit = {
 					is_female = no
 				}
@@ -2882,7 +2882,7 @@ decisions = {
 					type = phalaris_male
 				}
 			}
-			Else = {
+			else = {
 			}
 		}
 		revoke_allowed = {
@@ -2940,7 +2940,7 @@ decisions = {
 			always = yes
 		}
 		effect = {
-			If = {
+			if = {
 				limit = {
 					is_female = yes
 				}
@@ -2948,7 +2948,7 @@ decisions = {
 					type = teuta_female
 				}
 			}
-			Else = {
+			else = {
 			}
 		}
 		revoke_allowed = {
@@ -3007,7 +3007,7 @@ decisions = {
 			always = yes
 		}
 		effect = {
-			If = {
+			if = {
 				limit = {
 					is_female = yes
 				}
@@ -3015,7 +3015,7 @@ decisions = {
 					type = child_of_destiny_female
 				}
 			}
-			Else = {
+			else = {
 				create_bloodline = { 
 					type = child_of_destiny_male
 				}
@@ -3077,7 +3077,7 @@ decisions = {
 			always = yes
 		}
 		effect = {
-			If = {
+			if = {
 				limit = {
 					is_female = yes
 				}
@@ -3085,7 +3085,7 @@ decisions = {
 					type = seaqueen_bloodline
 				}
 			}
-			Else = {
+			else = {
 				create_bloodline = { 
 					type = seaking_bloodline
 				}
@@ -3146,7 +3146,7 @@ decisions = {
 			always = yes
 		}
 		effect = {
-			If = {
+			if = {
 				limit = {
 					is_female = yes
 				}
@@ -3154,7 +3154,7 @@ decisions = {
 					type = bloodthirsty_female_bloodline
 				}
 			}
-			Else = {
+			else = {
 				create_bloodline = { 
 					type = bloodthirsty_male_bloodline
 				}
@@ -3216,7 +3216,7 @@ decisions = {
 			always = yes
 		}
 		effect = {
-			If = {
+			if = {
 				limit = {
 					is_female = yes
 				}
@@ -3224,7 +3224,7 @@ decisions = {
 					type = duelist_female
 				}
 			}
-			Else = {
+			else = {
 				create_bloodline = { 
 					type = duelist_male
 				}
@@ -3285,7 +3285,7 @@ decisions = {
 			always = yes
 		}
 		effect = {
-			If = {
+			if = {
 				limit = {
 					is_female = yes
 				}
@@ -3293,7 +3293,7 @@ decisions = {
 					type = lcr_female
 				}
 			}
-			Else = {
+			else = {
 				create_bloodline = { 
 					type = lcr_male
 				}
@@ -4206,7 +4206,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_germanic_01
@@ -4228,7 +4228,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				new_bloodline = {
 					set_name = blessed_bloodline_01
@@ -4367,7 +4367,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				new_bloodline = {
 					set_name = blessed_bloodline_02
@@ -4439,10 +4439,12 @@ decisions = {
 			#Christian Groups
 			if = {
 				limit = {
-					religion = orthodox
-					religion = iconoclast
-					religion = paulician
-					religion = monothelite
+					OR = {
+						religion = orthodox
+						religion = iconoclast
+						religion = paulician
+						religion = monothelite
+					}
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_orthodox_03
@@ -4466,9 +4468,9 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion = christian
+					religion_group = christian
 				}
-				create_bloodline = { 
+				create_bloodline = {
 					type = saintly_bloodline_catholic_03
 				}
 			}
@@ -4585,7 +4587,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_germanic_03
@@ -4607,7 +4609,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				new_bloodline = {
 					set_name = blessed_bloodline_03
@@ -4708,7 +4710,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion = christian
+					religion_group = christian
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_catholic_04
@@ -4827,7 +4829,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_germanic_04
@@ -4849,7 +4851,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				new_bloodline = {
 					set_name = blessed_bloodline_04
@@ -4921,10 +4923,12 @@ decisions = {
 			#Christian Groups
 			if = {
 				limit = {
-					religion = orthodox
-					religion = iconoclast
-					religion = paulician
-					religion = monothelite
+					OR = {
+						religion = orthodox
+						religion = iconoclast
+						religion = paulician
+						religion = monothelite
+					}
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_orthodox_05
@@ -4948,7 +4952,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion = christian
+					religion_group = christian
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_catholic_05
@@ -5067,7 +5071,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_germanic_05
@@ -5089,7 +5093,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				new_bloodline = {
 					set_name = blessed_bloodline_05
@@ -5190,7 +5194,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion = christian
+					religion_group = christian
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_catholic_06
@@ -5309,7 +5313,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_germanic_06
@@ -5331,7 +5335,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				new_bloodline = {
 					set_name = blessed_bloodline_06
@@ -6008,7 +6012,7 @@ decisions = {
 			always = yes
 		}
 		effect = {
-			If = {
+			if = {
 				limit = {
 					is_female = yes
 				}
@@ -6043,7 +6047,7 @@ decisions = {
 				}
 				
 			}
-			Else = {
+			else = {
 				create_bloodline = { 
 					type = legendary_eagle_hunter_male
 				}
@@ -6131,7 +6135,7 @@ decisions = {
 			always = yes
 		}
 		effect = {
-			If = {
+			if = {
 				limit = {
 					is_female = yes
 				}
@@ -6166,7 +6170,7 @@ decisions = {
 				}
 				
 			}
-			Else = {
+			else = {
 				create_bloodline = { 
 					type = legendary_dog_hunter_male
 				}
@@ -6254,7 +6258,7 @@ decisions = {
 			always = yes
 		}
 		effect = {
-			If = {
+			if = {
 				limit = {
 					is_female = yes
 				}
@@ -6289,7 +6293,7 @@ decisions = {
 				}
 				
 			}
-			Else = {
+			else = {
 				create_bloodline = { 
 					type = legendary_battle_survivor_male
 				}
@@ -6377,7 +6381,7 @@ decisions = {
 			always = yes
 		}
 		effect = {
-			If = {
+			if = {
 				limit = {
 					is_female = yes
 				}
@@ -6412,7 +6416,7 @@ decisions = {
 				}
 				
 			}
-			Else = {
+			else = {
 				create_bloodline = { 
 					type = legendary_leader_male
 				}
@@ -6500,7 +6504,7 @@ decisions = {
 			always = yes
 		}
 		effect = {
-			If = {
+			if = {
 				limit = {
 					is_female = yes
 				}
@@ -6535,7 +6539,7 @@ decisions = {
 				}
 				
 			}
-			Else = {
+			else = {
 				create_bloodline = { 
 					type = legendary_warrior_male
 				}
@@ -6623,7 +6627,7 @@ decisions = {
 			always = yes
 		}
 		effect = {
-			If = {
+			if = {
 				limit = {
 					is_female = yes
 				}
@@ -6658,7 +6662,7 @@ decisions = {
 				}
 				
 			}
-			Else = {
+			else = {
 				create_bloodline = { 
 					type = legendary_soldier_male
 				}
@@ -6746,7 +6750,7 @@ decisions = {
 			always = yes
 		}
 		effect = {
-			If = {
+			if = {
 				limit = {
 					is_female = yes
 				}
@@ -6781,7 +6785,7 @@ decisions = {
 				}
 				
 			}
-			Else = {
+			else = {
 				create_bloodline = { 
 					type = legendary_battle_bard_male
 				}
@@ -6869,7 +6873,7 @@ decisions = {
 			always = yes
 		}
 		effect = {
-			If = {
+			if = {
 				limit = {
 					is_female = yes
 				}
@@ -6904,7 +6908,7 @@ decisions = {
 				}
 				
 			}
-			Else = {
+			else = {
 				create_bloodline = { 
 					type = legendary_commander_male
 				}
@@ -6991,7 +6995,7 @@ decisions = {
 			always = yes
 		}
 		effect = {
-			If = {
+			if = {
 				limit = {
 					is_female = yes
 				}
@@ -7025,7 +7029,7 @@ decisions = {
 					}
 				}	
 			}
-			Else = {
+			else = {
 				create_bloodline = { 
 					type = legendary_captor_male
 				}
@@ -7113,7 +7117,7 @@ decisions = {
 			always = yes
 		}
 		effect = {
-			If = {
+			if = {
 				limit = {
 					is_female = yes
 				}
@@ -7147,7 +7151,7 @@ decisions = {
 					}
 				}
 			}
-			Else = {
+			else = {
 				create_bloodline = { 
 					type = legendary_raider_male
 				}

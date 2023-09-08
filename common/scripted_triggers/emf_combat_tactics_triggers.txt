@@ -459,10 +459,8 @@ emf_combined_closing_charge_tactic_culture = {
 		culture = carantanian
 		culture = bosnian
 		culture = arberian
-		AND = {
-			culture_group = magyar
-			NOT = { culture = old_hungarian }
-		}
+		culture = hungarian
+		culture = szekely
 		AND = {
 			culture_group = iberian
 			NOR = {
@@ -516,8 +514,8 @@ emf_shock_closing_charge_tactic_culture = {
 
 emf_crushing_closing_charge_tactic_culture = {
 	OR = {
-		culture_group = dravidian_group
-		culture_group = indo_aryan_group
+		culture_group = dravidian
+		culture_group = indoaryan
 		culture_group = elephant_group
 	}
 }
@@ -637,7 +635,7 @@ emf_ambush_volley_tactic_culture = {
 	OR = {
 		culture = ligurian
 		culture = sardinian
-		culture_group = chinese_group
+		culture_group = chinese
 		AND = {
 			culture_group = east_african
 			NOR = {
@@ -721,10 +719,8 @@ emf_combined_charge_tactic_culture = {
 		culture = carantanian
 		culture = bosnian
 		culture = arberian
-		AND = {
-			culture_group = magyar
-			NOT = { culture = old_hungarian }
-		}
+		culture = hungarian
+		culture = szekely
 		AND = {
 			culture_group = iberian
 			NOR = {
@@ -779,8 +775,8 @@ emf_shock_charge_tactic_culture = {
 
 emf_crushing_charge_tactic_culture = {
 	OR = {
-		culture_group = dravidian_group
-		culture_group = indo_aryan_group
+		culture_group = dravidian
+		culture_group = indoaryan
 		culture_group = elephant_group
 	}
 }

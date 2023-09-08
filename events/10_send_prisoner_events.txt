@@ -207,41 +207,39 @@ letter_event = { #Echance d'une faveur
 			    }
 			}
 		}
-		OR = {
-		    if = {
-                limit = {
-                    FROM = {
-		    	        owes_favor_to = ROOT
-		    	    }
-                }
-                remove_favor = FROM
-		    	FROM = {
-		    	    any_courtier = {
-		    	        limit = { 
-		    	        has_character_modifier = mark_prisoner_tag
-		    	    }
-		    	    imprison = no
+		if = {
+            limit = {
+                FROM = {
+		  	        owes_favor_to = ROOT
+		   	    }
+            }
+            remove_favor = FROM
+		   	FROM = {
+		   	    any_courtier = {
+		   	        limit = { 
+		   	        has_character_modifier = mark_prisoner_tag
+		   	    }
+		   	    imprison = no
+				move_character = ROOT
+		   	    opinion = { modifier = release_ who = ROOT years = 15 }
+		   	    hidden_tooltip = { remove_character_modifier = mark_prisoner_tag }
+		   	    }
+		    }
+        }
+		else = {
+            reverse_add_favor = FROM
+		   	FROM = {
+		   	    any_courtier = {
+		   	        limit = { 
+		   	            has_character_modifier = mark_prisoner_tag
+		   	        }
+		   		    imprison = no
 					move_character = ROOT
-		    	    opinion = { modifier = release_ who = ROOT years = 15 }
-		    	    hidden_tooltip = { remove_character_modifier = mark_prisoner_tag }
-		    	    }
-		        }
-            }
-		    else = {
-                reverse_add_favor = FROM
-		    	FROM = {
-		    	    any_courtier = {
-		    	        limit = { 
-		    	            has_character_modifier = mark_prisoner_tag
-		    	        }
-		    		    imprison = no
-						move_character = ROOT
-		    			opinion = { modifier = release_ who = ROOT years = 15 }
-		    		    hidden_tooltip = { remove_character_modifier = mark_prisoner_tag }
-		    	    }
-		        }
-            }
-		}
+		   			opinion = { modifier = release_ who = ROOT years = 15 }
+		   		    hidden_tooltip = { remove_character_modifier = mark_prisoner_tag }
+		   	    }
+		    }
+        }
 	}
 	
 	option = {

@@ -1,0 +1,16 @@
+consort_equality_effect = {
+	if = {
+		limit = {
+			AND = {
+				OR = {
+					religion_scope = { has_religion_feature = men_can_take_consorts }
+					is_tribal = yes
+					is_nomaadic = yes
+				}
+				gender_equality_trigger = yes
+			}
+		}
+	}
+	set_women_can_take_consorts = yes
+	set_flag = emf_women_can_take_consorts
+}

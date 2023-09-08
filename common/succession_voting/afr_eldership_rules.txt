@@ -1843,7 +1843,7 @@ eldership_rules_afr = {
 			OR = { 
 				trait = lustful 
 				AND = { 
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { religion = bon }
 					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
@@ -1887,7 +1887,7 @@ eldership_rules_afr = {
 			OR = { 
 				trait = gluttonous
 				AND = { 
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { religion = bon }
 					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
@@ -2037,7 +2037,7 @@ eldership_rules_afr = {
 			NOT = { character = FROM } #Do not judge yourself.
 			OR = { 
 				AND = { 
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { religion = bon }
 					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
@@ -2059,7 +2059,7 @@ eldership_rules_afr = {
 			NOT = { character = FROM } #Do not judge yourself.
 			OR = { 
 				AND = { 
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { religion = bon }
 					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
@@ -2104,7 +2104,7 @@ eldership_rules_afr = {
 			NOT = { character = FROM } #Do not judge yourself.
 			OR = { 
 				AND = { 
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { religion = bon }
 					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
@@ -2149,7 +2149,7 @@ eldership_rules_afr = {
 			NOT = { character = FROM } #Do not judge yourself.
 			OR = { 
 				AND = { 
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { religion = bon }
 					NOT = { religion = bon_reformed }
 				}
@@ -2252,7 +2252,7 @@ eldership_rules_afr = {
 			value = 15
 			localisation_key = tooltip_feudal_elector_vote_proud_positive
 			NOT = { character = FROM } #Do not judge yourself.
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOR = { 
 				religion = bon
 				religion = bon_reformed
@@ -2294,7 +2294,7 @@ eldership_rules_afr = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_ambitious_positive
 			NOT = { character = FROM } #Do not judge yourself.
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOR = { 
 				religion = bon
 				religion = bon_reformed
@@ -2414,7 +2414,7 @@ eldership_rules_afr = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_content_negative
 			NOT = { character = FROM } #Do not judge yourself.
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOR = { 
 				trait = content
 				religion = bon
@@ -2484,7 +2484,7 @@ eldership_rules_afr = {
 			}
 			OR = { 
 				is_organized_religion_trigger = yes
-				NOT = { religion_group = pagan_group }
+				NOT = { novum_imperium_is_pagan = yes }
 			}
 			FROM = { 
 				trait = cynical
@@ -4981,7 +4981,7 @@ eldership_rules_afr = {
 			OR = { 
 				trait = lustful 
 				AND = { 
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { religion = bon }
 					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
@@ -5021,7 +5021,7 @@ eldership_rules_afr = {
 			OR = { 
 				trait = gluttonous
 				AND = { 
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { religion = bon }
 					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
@@ -5151,7 +5151,7 @@ eldership_rules_afr = {
 			NOT = { character = FROM } #Do not judge yourself.
 			OR = { 
 				AND = { 
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { religion = bon }
 					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
@@ -5171,7 +5171,7 @@ eldership_rules_afr = {
 			NOT = { character = FROM } #Do not judge yourself.
 			OR = { 
 				AND = { 
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { religion = bon }
 					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
@@ -5212,7 +5212,7 @@ eldership_rules_afr = {
 			NOT = { character = FROM } #Do not judge yourself.
 			OR = { 
 				AND = { 
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { religion = bon }
 					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
@@ -5253,7 +5253,7 @@ eldership_rules_afr = {
 			NOT = { character = FROM } #Do not judge yourself.
 			OR = { 
 				AND = { 
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { religion = bon }
 					NOT = { religion = bon_reformed }
 				}
@@ -5344,7 +5344,7 @@ eldership_rules_afr = {
 			value = 15
 			localisation_key = tooltip_feudal_elector_vote_proud_positive
 			NOT = { character = FROM } #Do not judge yourself.
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOR = { 
 				religion = bon
 				religion = bon_reformed
@@ -5382,7 +5382,7 @@ eldership_rules_afr = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_ambitious_positive
 			NOT = { character = FROM } #Do not judge yourself.
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOR = { 
 				religion = bon
 				religion = bon_reformed
@@ -5488,7 +5488,7 @@ eldership_rules_afr = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_content_negative
 			NOT = { character = FROM } #Do not judge yourself.
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOR = { 
 				trait = content
 				religion = bon
@@ -5550,7 +5550,7 @@ eldership_rules_afr = {
 			}
 			OR = { 
 				is_organized_religion_trigger = yes
-				NOT = { religion_group = pagan_group }
+				NOT = { novum_imperium_is_pagan = yes }
 			}
 			FROM = { 
 				trait = cynical

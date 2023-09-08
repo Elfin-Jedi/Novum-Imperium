@@ -18,7 +18,7 @@ blg_shaved = {
 
 # Tonsured hair rules.
 blg_tonsure = {
-	blg_religion_christian = yes
+	religion_group = christian
 	OR = {
 		blg_priest = yes
 		is_ascetic_trigger = yes
@@ -213,6 +213,7 @@ blg_hair_chinese = {
 	OR = {
 		graphical_culture = chinesegfx
 		graphical_culture = khitangfx
+		graphical_culture = japanesegfx
 	}
 }
 
@@ -272,6 +273,7 @@ blg_hair_indian = {
 	OR = {
 		graphical_culture = indiangfx
 		graphical_culture = centralindiangfx
+		graphical_culture = koreangfx
 	}
 }
 
@@ -385,6 +387,7 @@ blg_beard_bodpa = {
 		graphical_culture = bodpagfx
 		graphical_culture = sogdiangfx
 		graphical_culture = tochariangfx
+		graphical_culture = koreangfx
 	}
 }
 
@@ -415,6 +418,7 @@ blg_beard_chinese = {
 		graphical_culture = chinesegfx
 		graphical_culture = khitangfx
 		graphical_culture = tangutgfx
+		graphical_culture = japanesegfx
 	}
 }
 
@@ -548,6 +552,7 @@ blg_beard_turkish = {
 		graphical_culture = steppegfx
 		graphical_culture = centralasiangfx
 		graphical_culture = alangfx
+		graphical_culture = ainugfx
 	}
 }
 

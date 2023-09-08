@@ -12,10 +12,7 @@ character_event = {
 	prisoner = no
 
 	trigger = {
-		has_offmap_currency = {
-			offmap = offmap_china
-			value = 500
-		}
+		
 	}
 
 	mean_time_to_happen = {
@@ -26,20 +23,11 @@ character_event = {
 		name = optaexpandedtraits.18
 		add_trait = offensive
 		add_trait = wounded
-		add_offmap_currency = {
-			offmap = offmap_china
-			value = 500
-		}
-
 	}
 
 	option = {
 		name = optbexpandedtraits.18
 		add_trait = indulgent
-		add_offmap_currency = {
-			offmap = offmap_china
-			value = -500
-		}
 	}
 
 	option = {

@@ -146,16 +146,21 @@ slave_castration_culture = {
 mta_is_african_culture = {
 	OR = {
 		culture_group = east_african
-		culture_group = central_african
+		culture_group = congo_nigerian
 		culture_group = west_african
 		culture_group = north_african
+		culture_group = ethiopic
+		culture_group = nilo_saharan
+		culture_group = bantu
+		culture_group = east_bantu
+		culture_group = south_bantu
+		culture_group = afroaustronesian
+		culture_group = khoi_san_group
 	}
 }
 
 mta_is_arabic_culture = {
-	OR = {
-		culture_group = arabic
-	}
+	culture_group = arabic
 }
 
 mta_is_greco_roman = {

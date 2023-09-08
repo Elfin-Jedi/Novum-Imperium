@@ -1,15 +1,175 @@
-# -*- ck2.trade_routes -*-
-
-# Every path must start either at a start province, or where another path ends.
-# Paths that try to branch off the middle of another path are not connected
-# and won't work right.
-
 silk_road = {
 	wealth = 197			# Total base wealth of silk route
 	trade_post_display_trigger = {
-		silk_road_trade_post_trigger = yes
+		OR = {
+			province_id = 1491
+			province_id = 1498
+			province_id = 1478
+			province_id = 1359
+			province_id = 1365
+			province_id = 1448
+			province_id = 1440
+			province_id = 1439
+			province_id = 678
+			province_id = 764
+			province_id = 802
+			province_id = 596
+			province_id = 667
+			province_id = 693
+			province_id = 649
+			province_id = 646
+			province_id = 641
+			province_id = 630
+			province_id = 1180
+			province_id = 1297
+			province_id = 1127
+			province_id = 1220
+			province_id = 1114
+			province_id = 1221
+			province_id = 1446
+			province_id = 868
+			province_id = 719
+			province_id = 1338
+			province_id = 1369
+			province_id = 858
+			province_id = 903
+			province_id = 1185
+			province_id = 1129
+			province_id = 1318
+			province_id = 1297
+			province_id = 1163
+			province_id = 1154
+			province_id = 1151
+			province_id = 1481
+			province_id = 1115
+			province_id = 1288
+			province_id = 796
+			province_id = 1362
+			province_id = 728
+			province_id = 774
+			province_id = 620
+			province_id = 622
+			province_id = 775
+			province_id = 633
+			province_id = 664
+			province_id = 644
+                                          province_id = 1797
+
+			#UMBRA SPHERAE
+			province_id = 2649
+			province_id = 2588
+			province_id = 2653
+			province_id = 2582
+			province_id = 2449
+
+			province_id = 2423
+			province_id = 2146
+			province_id = 2139
+			province_id = 2218
+			province_id = 2122
+			province_id = 2267
+			province_id = 2110
+			province_id = 2106
+			province_id = 2126
+			province_id = 2302
+			province_id = 2221
+			province_id = 2233
+			province_id = 2262
+			province_id = 2284
+			province_id = 2248
+
+			province_id = 2443
+			province_id = 2564
+			province_id = 2015
+			province_id = 2845
+			province_id = 2004
+			province_id = 2024
+			province_id = 2028
+			province_id = 2037
+
+			province_id = 2340
+			province_id = 2341
+			province_id = 2342
+			province_id = 2343
+			province_id = 2344
+			province_id = 2345
+			province_id = 2346
+			province_id = 2347
+			province_id = 2348
+			province_id = 2349
+			province_id = 2350
+			province_id = 2351
+			province_id = 2352
+			province_id = 2353
+			province_id = 2354
+			province_id = 2357
+			province_id = 2359
+			province_id = 2360
+			province_id = 2361
+			province_id = 2061
+
+			province_id = 2362
+			province_id = 2372
+			province_id = 2374
+			province_id = 2377
+			province_id = 2072
+			province_id = 2076
+			province_id = 2068
+			province_id = 2069
+			
+			province_id = 2828
+			province_id = 2827
+			province_id = 2831
+
+			province_id = 2371
+			province_id = 2363
+			province_id = 3392
+			province_id = 3391
+			province_id = 3390
+			province_id = 3389
+			province_id = 3388
+			province_id = 3387
+			province_id = 3383
+			province_id = 3377
+			province_id = 3378
+			province_id = 3372
+			province_id = 3371
+			province_id = 3368
+			province_id = 3367
+			province_id = 3366
+			province_id = 3352
+			province_id = 3348
+			province_id = 3345
+			province_id = 3344
+			province_id = 3342
+			province_id = 3341
+			province_id = 3340
+			province_id = 3339
+			province_id = 3338
+			province_id = 925
+			province_id = 913
+			province_id = 912
+			province_id = 3335
+			province_id = 3334
+                                          province_id = 920
+# 			province_id = 3393
+# 			province_id = 3395
+# 			province_id = 3407
+# 			province_id = 3403
+# 			province_id = 3404
+# 			province_id = 3406
+# 			province_id = 3409
+# 			province_id = 3410
+# 			province_id = 3411
+# 			province_id = 3412
+# 			province_id = 3413
+# 			province_id = 3414
+# 			province_id = 3415
+#                                        province_id = 3416
+#                                        province_id = 3417
+		}
 	}
-	
+
 	modifier = {			# How the trade route modifies the provinces it passes
 		castle_tax_modifier = 0.10
 		city_tax_modifier = 0.10
@@ -22,176 +182,188 @@ silk_road = {
 	}
 
 	start = {				# Start provinces of trade route
-		2276 #Chang'an
-		2336 #Akyab Bay
-		2401 #Chengdu
-	}
-	# Northern Silk Route
-	path = {	# Chang'an - Gongzhou
-		2276 2316 2321 2312 2066
-	}
-	path = {	# Gongzhou - Dunhuang
-		2066 2313 2196 2200 2198 2197 2199
-	}
-	path = {	# Gongzhou - Tsongkha -  Dunhuang
-		2066 2170 2172 2210 2201 2203 2206 2199
-	}
-	path = {	# Dunhuang - Yetisu
-		2199 2221 2227 2228 1574 1573
-	}
-	path = {	# Dunhuang - Qarashar
-		2199 2218 1570
-	}
-	path = {	# Qarashar - Kashgar
-		1570 1569 1568 1567
-	}
-	path = {	# Kashgar - Ferghana - Ustrushana
-		1567 1559 1564 1558 1557
-	}
-	path = {	# Qarashar - Khotan
-		1570 2217 2220 1968 1580
-	}
-	path = {	# Khotan - Yarkand
-		1580 1178
-	}
-	path = {	# Yarkand - Kashgar
-		1178 1567
-	}
-	path = {	# North bound to Ustrushana
-		1573 1572 1563 1562 1561 1557
-	}
-	path = {	# Ustrushana to Bukhara via Samarkand
-		1557 903 628
-	}
-	path = {	# Yarkand - Badakhshan - Bukhara
-		1178 1978 1553 1578 1546 904 1544 628
-	}
-	path = {	# Bukhara to Merv
-		628 1543 630
-	}
-	path = {	# Merv to Rayy
-		630 1538 634 907 660 663
-	}
-	path = {	# Rayy to Hamadan to Ahlat
-		663 658 665 650 667 686 682 702
-	}
-	path = {	# Bukhara to Khiva to Itil to Cherson
-		628 902 626 623 625 621 618 620 619 605 597 598 562 561 560
-	}
-	#path = {	# Khiva to Gilan
-	#	626 1467 1549 631 633 662 663
-	#}
-	path = {	# Merv - Herat - Kerman
-		630 1539 905 299 637 639
-	}
-	path = {	# Kerman - Isfahan
-		639 638 646
-	}
-	#path = {	# Hamadan to Isfahan
-	#	658 646
-	#}
-	#path = {	# Hamadan to Ahlat
-	#	658 665 650 667 686 682 702
-	#}
-	path = {	# Ahlat to Manbij
-		702 1482 1239 699 1240
-	}
-	path = {	# Kerman to Hormuz
-		639 853 641
-	}
-	path = {	# Shiraz to Baghdad to Manbij
-		644 645 648 2014 649 656 690 693 695 710 709 1240
-	}
-	path = {	# Rayy to Isfahan
-		663 659 646
-	}
-	path = {	# Isfahan to Shiraz
-		646 644
-	}
-	path = {	# Shiraz to Siraf
-		644 643 642
-	}
-	path = {	# Ahlat to Trebizond
-		702 1158 704 816 678
-	}
-	path = {	# Manbij to Aleppo
-		1240 733
-	}
-	#path = {	# Aleppo to Homs
-	#	733 1243 732 731
-	#}
-	path = {	# Aleppo to Homs to Acre
-		733 1243 732 731 768 728 712 727 773 772
-	}
-	path = {	# Aleppo to Antioch
-		733 1236 764
-	}
-	#path = {	# Homs to Acre
-	#	731 768 728 712 727 773 772
-	#}
-	# Indus and Red Sea routes
-	#path = {	# Nakhsheb to Indus via Kabul and Ghazna
-	#	1544 904 1546 1550 1547 1611 1626 1616
-	#}
-	path = {	# Malabar Coast to Debul
-		1498 2052 2060 2059 1845 1846 1848 1600
-	}
-	path = {	# Khotan to Leh
-		1580 1982
-	}
-	path = {	# Kashmir to Lahur
-		1628 1624 1627 1617 1620
-	}
-	path = {	# Lahur to Multan to Debul
-		1620  1618 1615 1613 1649 1606 1604 1603 1600
-	}
-	path = {	# Debul to Aden to Qusayr to the Nile to Alexandria
-		1600 1844 1944 1552 1943 1941 858 859 857 1940 1939 719 718 1283 1501 1593 794 1340 1339 795 1337 1336 1335 796 800 801 802
-	}
-	#path = {	# Aden to Suez to the Med to Alexandria
-	#	1482 788 1712 802
-	#}
-	path = {	# Bay of Bengal (Bengal) to Mathura
-		2338 2136 2139 2132 2114 2111 2112 2123 2214 1686 1682 1664 
-	}
-	path = {	# Mathura to Lahur
-		1664 1658 1662 1661 1620
-	}
-	path = {	# Chengdu to Dege
-		2401 2402 2404 2182 2187
-	}
-	path = {	# Dege to Dali
-		2187 2183 2186 2431 2429
-	}
-	path = {	# Dali to Kamatapur
-		2429 2432 2157 2156 2150 2151
-	}
-	path = {	# Dege to Mangyul
-		2187 2189 2194 2169 2167 2178
-	}
-	path = {	# Gyantze to Kamatapur
-		2178 2152 2151
-	}
-	path = {	# Kamatapur to Bikrampur
-		2151 2148 2147 2142
-	}
-	path = {	# Gyantze to Kamaru
-		2178 2179 2180
-	}
-	path = {	# Mangyul to Leh
-		2180 1986 1985 1983 1982
-	}
-	path = {	# Mangyul to Kashmir
-		1982 1976 1628
-	}
-	path = {	# Mangyul to Magadha (Pataliputra)
-		2180 2129 2130 2122 2120 2111
-	}
-	path = {	# Akyab Bay to Bay of Bengal
-		2336 2337 2338
-	}
-	path = {	#Bay of Bengal to Rameswaram Bay
-		2338 2339 2340 2341 2345 2344 1498
+		#1509 # Anxi
+		#1510 # Kundina
+		#1512 # Water Node
+		#1513
+		#1505
+		#1403
+		2649 #Chengdu
+		2588 #Guangzhou
+		2653 #Chang'an
+		2582 #Fujian
+		2449 #Beijing
+                2122
+#                3417
+		
 	}
 
+	# Northern Silk Route
+	path = {	# Jiuquan-Anxi-Dunhuang
+		#1509 1513 1408 1448
+		1513 1408 1448
+	}
+	path = {	# Dunhuang-Khotan
+		1448 1518 1447 1520 1442 1441 1522 1523 1440
+	}
+	path = {	# Dunhuang-Turpan-Kucha-Karashar
+		1448 1450 1446
+	}
+	path = {	# Karashar-Kashgar
+		1446 1443 1444 1528 1445 1527 1439
+	}
+	path = {	# Karashar-Otrar
+		1446 1449 1875 1876 1426 1797 1424 1795 1431
+	}
+	path = {	# Khotan-Yarkand-Kashgar
+		1440 1438 1525 1439
+	}
+	path = {	# Kashgar-Samarkand
+		1439 1423 1546 903
+	}
+	path = {	# Samarkand-Merv
+		903 628 1541 630
+	}
+	path = {	# Merv-Tus
+		630 1542 632
+	}
+	path = {	# Tus-Lut
+		632 634 906 636
+	}
+	path = {	# Tus-Dailam
+		632 633 661 662 664 665
+	}
+	path = {	# Lut-Ahvaz
+		636 638 646 647
+	}
+	path = {	# Ahvaz-Bagdad
+		647 656 689 693
+	}
+	path = {	# Samarkand-Otrar
+		903 1181 1186 1431
+	}
+	path = {	# Otrar-Turkestan-Itil-Tana
+		1431 900 1794 622 623 1793 621 618 620 619 605 1811 607 596
+	}
+	path = {	# Bagdad-Palmyra
+		693 696 695 712 729 730
+	}
+	path = {	# Palmyra-Antioch
+		730 732 733 764
+	}
+	path = {	# Palmyra-Jerusalem
+		730 731 768 769 728 725 773 774 775
+	}
+
+	# Southern Silk Route
+	path = {	# Khotan-Kasmira-Nandana-Indus Valley
+		1440 1524 1467 1464 1180
+	}
+	path = {	# Indus Valley-Banbhore
+		1180 1341 1340 1338 1337 1339 1138 1303 1297
+	}
+	path = {	# Indus Valley-Merv
+		1180 1342 1185 1187 904 1540 630
+	}
+	path = {	# Offmap-Kunggar
+		#1510 1505 1553 1500 1557
+		1505 1553 1500 1557
+	}
+	path = {	# Kunggar -> Vijayawada(Masulipatam)
+		1557 1555 1484 1177 1418 1321 1481 1244 1381 1151 1325 1319 1318 1236 1235 1232 1231 1129 1225 1224 1128 1415 1123 1221
+	}
+	path = {	# Kunggar -> Mathura
+		1557 1498 1499 1561 1493 1562 1563 1491 1476 1475 1478 1477 1420 1419 1154 1251 1163 1284 1356 1359
+	}
+	path = {	# Mathura -> Indus Valley
+		1359 1365 1367 1193 1362 1190 1161 1180
+	}
+	path = {	# Mathura -> Navasarika
+		1359 1357 1355 1300 1288 1147 1289 1127
+	}
+	path = { # Vijayawada(Masulipatam) -> Mahoyadapuram(Muziris) -> Navasarika
+		1221 1204 1119 1115 1201 1114
+	}
+	path = { # Mahoyadapuram(Muziris) -> Navasarika
+		1114 1400 1220 1399 1127
+	}
+	path = { # Offmap -> Mahoyadapuram(Muziris)
+		1403 1402 1401 1114
+	}
+	path = { # Vijayawada(Masulipatam) -> Navasarika
+		1221 1207 1253 1209 1144 1257 1143 1212 1142 1145 1264 1127
+	}
+	path = { # Navasarika -> Debul
+		1127 1398 1397 1297
+	}
+	path = {	# Banbhore-Hormuz
+		1297 1396 1392 1393 641
+	}
+	path = {	# Hormuz-Basra-Bagdad
+		641 1394 1395 649 655 690 693
+	}
+	path = {	# Hormuz-Ahvaz
+		641 642 644 645 647
+	}
+	path = {	# Banbhore-Muscat-Aden
+		1297 1412 1391 868 1390 866 1389 1369 1388
+	}
+	path = {	# Aden-Mecca-Cairo-Alexandria
+		1388 871 1387 1386 858 859 1532 1385 1384 716 719 718 1536 1383 1320 794 791 795 796 797 802
+	}
+
+	# Asia Minor Silk Route
+	path = {	# Lut-Dailam
+		636 663 715 665
+	}
+	path = {	# Dailam-Tabriz-Karin-Trebizond
+		665 667 671 672 681 703 704 678
+	}
+	
+	#UMBRA SPHERAE
+
+	# China - Indochina - India/Indonesia
+	path = {	# Yi(Chengdu)-Markam
+		2649 2650 2652 2085 1505
+	}
+	path = {	# Markam-Dali
+		1505 2429 2428 2423
+	}
+	path = {	# Guang(Guangzhou/Nanhai)-Thang Long-Vijaya-Coast of Annam
+		2588 2734 2194 2146 2140 2735
+	}
+	path = {	# Coast of Annam-Mekong Delta
+		2735 2139 2137 2744 2747
+	}
+	path = {	# Mekong Delta-Straits of Johore
+		2747 2752 2753
+	}
+	path = {	# Straits of Johore-Palembang-Kedaram-South Lanka Sea
+		2753 2218 2216 2122 2768 2267 2773 2774 1403
+	}
+	path = {	# Dali-Ngoenyang-Hariphunchai-Pegu-Vaisali-Samatata
+		2423 2435 2203 2169 2156 2155 2114 2113 2110 2770 2771 2105 2167 2106 1318
+	}
+	path = {	# Mekong Delta-Angkor Wat-Lavodapura-Hariphunchai
+		2747 2748 2128 2126 2174 2173 2115 2152 2150 2114
+	}
+	path = {	# Coast of Annam-Maidh
+		2735 2739 2740 2298 2299 2302
+	}
+	path = {	# Straits of Johore-Banten Girang-Kahuripan-Makassar-Ternate
+		2753 2758 2243 2221 2754 2233 2755 2262 2763 2764 2761 2284 2248
+	}
+
+	# China - Tarim Basin
+	path = {	# Yong(Chang'an)-Liang-Jiuquan
+		2653 2666 2668 2669 2443 2444 1513
+	}
+
+	# China - Japan
+	path = {	# Fu(Fujian)-Ryukyu-Chikuzen-Yamashiro
+		2582 2732 2564 2731 2015 2726 2725 2845 2843 2715 2006 2004
+	}
+	path = {	# You(Beijing/Fanyang)-Gyeonggi-Yang-Tsushima Straits
+		2449 2729 2024 2028 2730 2037 2725
+	}
 }

@@ -50,13 +50,6 @@ imperial_reconquest_carthage = {
 
 	on_add = {
 		hidden_tooltip = { fire_haruspicy_event_effect = yes }
-		if = {
-			limit = { defender = { is_offmap_governor = offmap_china } }
-			attacker = {  
-				sound_effect = china_angered_emperor
-				detract_grace_super_huge_effect = yes 
-			}
-		}
 	}
 	
 	on_success = {
@@ -211,13 +204,6 @@ salt_county = {
 	on_add = {
 		ROOT = { show_scope_change = no piety = -1000 }
 		hidden_tooltip = { fire_haruspicy_event_effect = yes }
-		if = {
-			limit = { defender = { is_offmap_governor = offmap_china } }
-			attacker = {  
-				sound_effect = china_angered_emperor
-				detract_grace_super_huge_effect = yes 
-			}
-		}
 	}
     
     can_use = {

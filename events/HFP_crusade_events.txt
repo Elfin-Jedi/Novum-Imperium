@@ -413,7 +413,7 @@ character_event = {
 						}
 					}
 					trigger_else_if = {
-						limit = { religion_group = pagan_group }
+						limit = { novum_imperium_is_pagan = yes }
 						OR = {
 							has_global_flag = muslim_jihads_unlocked
 							has_global_flag = christian_crusades_unlocked
@@ -541,7 +541,7 @@ character_event = {
 							}
 						}
 						trigger_else_if = {
-							limit = { religion_group = pagan_group }
+							limit = { novum_imperium_is_pagan = yes }
 							OR = {
 								has_global_flag = muslim_jihads_unlocked
 								has_global_flag = christian_crusades_unlocked
@@ -596,7 +596,7 @@ character_event = {
 							}
 						}
 						trigger_else_if = {
-							limit = { religion_group = pagan_group }
+							limit = { novum_imperium_is_pagan = yes }
 							OR = {
 								has_global_flag = muslim_jihads_unlocked
 								has_global_flag = christian_crusades_unlocked
@@ -713,7 +713,7 @@ character_event = {
 						}
 					}
 					trigger_else_if = {
-						limit = { religion_group = pagan_group }
+						limit = { novum_imperium_is_pagan = yes }
 						OR = {
 							has_global_flag = muslim_jihads_unlocked
 							has_global_flag = christian_crusades_unlocked
@@ -907,7 +907,7 @@ character_event = {
 							}
 						}
 						trigger_else_if = {
-							limit = { religion_group = pagan_group }
+							limit = { novum_imperium_is_pagan = yes }
 							OR = {
 								has_global_flag = muslim_jihads_unlocked
 								has_global_flag = christian_crusades_unlocked
@@ -962,7 +962,7 @@ character_event = {
 							}
 						}
 						trigger_else_if = {
-							limit = { religion_group = pagan_group }
+							limit = { novum_imperium_is_pagan = yes }
 							OR = {
 								has_global_flag = muslim_jihads_unlocked
 								has_global_flag = christian_crusades_unlocked
@@ -3725,7 +3725,7 @@ character_event = {
 						}
 					}
 					trigger_else_if = {
-						limit = { ROOT = { religion_group = pagan_group } }
+						limit = { ROOT = { novum_imperium_is_pagan = yes } }
 						OR = {
 							has_global_flag = muslim_jihads_unlocked
 							has_global_flag = christian_crusades_unlocked
@@ -3937,7 +3937,7 @@ character_event = {
 						}
 					}
 					trigger_else_if = {
-						limit = { ROOT = { religion_group = pagan_group } }
+						limit = { ROOT = { novum_imperium_is_pagan = yes } }
 						OR = {
 							has_global_flag = muslim_jihads_unlocked
 							has_global_flag = christian_crusades_unlocked

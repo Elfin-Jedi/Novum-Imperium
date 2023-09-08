@@ -130,6 +130,7 @@ character_event = {
 						county = {
 							grant_title = ROOT
 							set_defacto_liege = event_target:rtp_new_liege #My new liege
+							emf_liege_change = yes
 						}
 					}
 				}

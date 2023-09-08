@@ -7,14 +7,6 @@ targetted_decisions = {
 			ai = no
 			age = 14
 			is_married = yes
-			NOR = {
-				trait = dragon
-				culture = dragon_culture
-				religion = dragon_rel
-				culture_group = winter_group
-				culture_group = old_races
-				culture_group = unoccupied_group
-			}
 			OR = {
 				NOT = { has_character_flag = have_child_same_sex }
 				had_character_flag = { flag = have_child_same_sex days = 365 }
@@ -23,14 +15,6 @@ targetted_decisions = {
 		potential = {
 			age = 14
 			spouse = { character = FROM }
-			NOR = {
-				trait = dragon
-				culture = dragon_culture
-				religion = dragon_rel
-				culture_group = winter_group
-				culture_group = old_races
-				culture_group = unoccupied_group
-			}
 			OR = {
 				AND = {
 					FROM = { is_female = no }
@@ -68,14 +52,6 @@ targetted_decisions = {
 			age = 14
 			is_married = no
 			is_betrothed = no
-			NOR = {
-				trait = dragon
-				culture = dragon_culture
-				religion = dragon_rel
-				culture_group = winter_group
-				culture_group = old_races
-				culture_group = unoccupied_group
-			}
 			OR = {
 				AND = {
 					FROM = { is_female = no }

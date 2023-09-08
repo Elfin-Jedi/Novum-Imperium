@@ -929,6 +929,56 @@ matrilineal_marriages = {
 	}
 }
 
+dynamic_realms = {
+	name = "RULE_DYNAMIC_REALMS"
+	dlc = "Charlemagne"
+	group = "RULE_GROUP_VARIOUS"
+	option = {
+		name = on
+		text = "RULE_OPTION_ON"
+		desc = "RULE_DYNAMIC_REALMS_ON_DESC"
+	}
+	option = {
+		name = off
+		text = "RULE_OPTION_OFF"
+		desc = "RULE_DYNAMIC_REALMS_OFF_DESC"
+	}
+}
+
+vassal_republics = {
+	name = "RULE_VASSAL_REPUBLICS"
+	group = "RULE_GROUP_DIPLOMACY"
+	option = {
+		name = unrestricted
+		achievements = no
+		alt_start_achievements = no
+		text = "RULE_OPTION_UNRESTRICTED"
+		desc = "RULE_VASSAL_REPUBLICS_UNRESTRICTED_DESC"
+	}
+	option = {
+		name = restricted
+		text = "RULE_OPTION_RESTRICTED"
+		desc = "RULE_VASSAL_REPUBLICS_RESTRICTED_DESC"
+	}
+}
+
+vassal_theocracies = {
+	name = "RULE_VASSAL_THEOCRACIES"
+	group = "RULE_GROUP_DIPLOMACY"
+	option = {
+		name = unrestricted
+		achievements = no
+		alt_start_achievements = no
+		text = "RULE_OPTION_UNRESTRICTED"
+		desc = "RULE_VASSAL_THEOCRACIES_UNRESTRICTED_DESC"
+	}
+	option = {
+		name = restricted
+		text = "RULE_OPTION_RESTRICTED"
+		desc = "RULE_VASSAL_THEOCRACIES_RESTRICTED_DESC"
+	}
+}
+
 otto_story = {
 	name = "RULE_OTTO_STORY"
 	group = "RULE_GROUP_RAILROADING"
@@ -1007,6 +1057,32 @@ provincial_revolts = {
 	}
 }
 
+provincial_revolt_strength = {
+	name = "RULE_PROVINCIAL_REVOLT_STRENGTH"
+	group = "RULE_GROUP_WARFARE"
+	dlc = "The Old Gods"
+	option = {
+		name = default
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_PROVINCIAL_REVOLT_STRENGTH_DEFAULT_DESC"
+	}
+	option = {
+		name = powerful
+		text = "RULE_OPTION_POWERFUL"
+		desc = "RULE_PROVINCIAL_REVOLT_STRENGTH_POWERFUL_DESC"
+	}
+	option = {
+		name = very_powerful
+		text = "RULE_OPTION_VERY_POWERFUL"
+		desc = "RULE_PROVINCIAL_REVOLT_STRENGTH_VERY_POWERFUL_DESC"
+	}
+	option = {
+		name = extremely_powerful
+		text = "RULE_OPTION_EXTREMELY_POWERFUL"
+		desc = "RULE_PROVINCIAL_REVOLT_STRENGTH_EXTREMELY_POWERFUL_DESC"
+	}
+}
+
 defensive_attrition = {
 	name = "RULE_DEF_ATTRITION"
 	group = "RULE_GROUP_WARFARE"
@@ -1065,8 +1141,58 @@ regencies = {
 	option = {
 		name = off
 		achievements = no
+		alt_start_achievements = no
 		text = "RULE_OPTION_OFF"
 		desc = "RULE_REGENCIES_OFF_DESC"
+	}
+}
+
+diplo_assassination = {
+	name = "RULE_DIPLO_ASSASSINATION"
+	group = "RULE_GROUP_DIPLOMACY"
+	option = {
+		name = off
+		text = "RULE_DIPLO_ASSASSINATION_OFF"
+		desc = "RULE_DIPLO_ASSASSINATION_OFF_DESC"
+	}
+	option = {
+		name = on
+		achievements = no
+		alt_start_achievements = no
+		text = "RULE_DIPLO_ASSASSINATION_ON"
+		desc = "RULE_DIPLO_ASSASSINATION_ON_DESC"
+	}
+}
+
+ai_seduction = {
+	name = "RULE_AI_SEDUCTION"
+	dlc = "Way of Life"
+	group = "RULE_GROUP_WOL"
+	option = {
+		name = on
+		text = "RULE_OPTION_ON"
+		desc = "RULE_AI_SEDUCTION_ON_DESC"
+	}
+	option = {
+		name = off
+		text = "RULE_OPTION_OFF"
+		desc = "RULE_AI_SEDUCTION_OFF_DESC"
+	}
+}
+
+ai_intrigue = {
+	name = "RULE_AI_INTRIGUE"
+	dlc = "Way of Life"
+	group = "RULE_GROUP_WOL"
+	option = {
+		name = on
+		text = "RULE_OPTION_ON"
+		desc = "RULE_AI_INTRIGUE_ON_DESC"
+	}
+	option = {
+		name = off
+		text = "RULE_OPTION_OFF"
+		desc = "RULE_AI_INTRIGUE_OFF_DESC"
 	}
 }
 

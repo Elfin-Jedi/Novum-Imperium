@@ -216,8 +216,8 @@ decisions = {
 			}
 			religion = buddhist
 			OR = { 
-				culture_group = indo_aryan_group
-				culture_group = dravidian_group
+				culture_group = indoaryan
+				culture_group = dravidian
 			}
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }

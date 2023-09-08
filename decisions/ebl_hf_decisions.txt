@@ -84,7 +84,7 @@ decisions = {
   		}	
 		effect = {
 			any_bloodline = {
-				limit = { Founder = { character = ROOT } }
+				limit = { founder = { character = ROOT } }
 				prompt_name = { player = from type = RENAME_CHARACTER_MESSAGE }
 			}
 		}

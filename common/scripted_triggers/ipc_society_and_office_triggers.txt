@@ -100,7 +100,7 @@ imperial_court_female_membership_trigger = {
 					}
 				}
 				trigger_if = {
-					limit = { top_liege = { religion_group = pagan_group } }
+					limit = { top_liege = { novum_imperium_is_pagan = yes } }
 					trait = shieldmaiden
 				}
 			}

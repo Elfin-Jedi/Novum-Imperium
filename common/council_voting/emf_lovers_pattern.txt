@@ -340,9 +340,9 @@ lover_pattern_for = {
 						intrigue = 12
 					}
 					NAND = {
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 						liege = {
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 						}
 					}
 					OR = {
@@ -401,9 +401,9 @@ lover_pattern_for = {
 								intrigue = 12
 							}
 							NAND = {
-								religion_group = pagan_group
+								novum_imperium_is_pagan = yes
 								liege = {
-									religion_group = pagan_group
+									novum_imperium_is_pagan = yes
 								}
 							}
 							OR = {
@@ -534,9 +534,9 @@ lover_pattern_for = {
 									intrigue = 12
 								}
 								NAND = {
-									religion_group = pagan_group
+									novum_imperium_is_pagan = yes
 									liege = {
-										religion_group = pagan_group
+										novum_imperium_is_pagan = yes
 									}
 								}
 								OR = {
@@ -843,9 +843,9 @@ lover_pattern_for = {
 									intrigue = 12
 								}
 								NAND = {
-									religion_group = pagan_group
+									novum_imperium_is_pagan = yes
 									liege = {
-										religion_group = pagan_group
+										novum_imperium_is_pagan = yes
 									}
 								}
 								OR = {
@@ -1321,22 +1321,21 @@ lover_pattern_against = {
 			custom_tooltip = {
 				text = pattern_lover_lose_title_custom_tooltip
 				hidden_tooltip = {
-					AND = {
-						NOR = { 
-							stored_token_trigger = dejure_barony_claim
-						}			
-						FROMFROMFROMFROM = { # Thirdparty_title
-							holder_scope = {
-								is_lover = ROOT
-								NOT = { is_foe = ROOT }
-								is_liege_or_above = ROOT_FROMFROM
-							}
+					NOR = { 
+						stored_token_trigger = dejure_barony_claim
+					}			
+					FROMFROMFROMFROM = { # Thirdparty_title
+						holder_scope = {
+							is_lover = ROOT
+							NOT = { is_foe = ROOT }
+							is_liege_or_above = ROOT_FROMFROM
 						}
-					}	
-				}
+					}
+				}	
 			}
 		}
 	}
+
 	prepare_invasion_interaction = {
 		custom_tooltip = {
 			text = pattern_lover_against_lover_custom_tooltip
@@ -2388,30 +2387,28 @@ lover_pattern_against = {
 					any_lover = {
 						is_female = yes
 						vassal_of = FROM
-						OR = {
-							# Lose from 4
-							AND = {
-								NOR = {
-									liege = {
-										OR = {
-											dynasty = FROM
-											is_lover = FROM
-											is_married = FROM
-											FROM = { is_consort = PREV }
-										}
+						# Lose from 4
+						AND = {
+							NOR = {
+								liege = {
+									OR = {
+										dynasty = FROM
+										is_lover = FROM
+										is_married = FROM
+										FROM = { is_consort = PREV }
 									}
-									is_landed = yes
-									is_patrician = yes
-									trait = nun
 								}
-								FROM = { primary_title = { has_law = status_of_women_4 } }
-								OR = {
-									has_job_title = job_spymaster
-									has_job_title = job_chancellor
-									has_job_title = job_treasurer
-									has_job_title = job_marshal
-									has_minor_title = title_commander
-								}
+								is_landed = yes
+								is_patrician = yes
+								trait = nun
+							}
+							FROM = { primary_title = { has_law = status_of_women_4 } }
+							OR = {
+								has_job_title = job_spymaster
+								has_job_title = job_chancellor
+								has_job_title = job_treasurer
+								has_job_title = job_marshal
+								has_minor_title = title_commander
 							}
 						}
 					}

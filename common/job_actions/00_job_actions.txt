@@ -83,21 +83,6 @@ action_fabricate_claims = {
 		owner = {
 			is_within_diplo_range = FROM
 		}
-		OR = {
-			NOT = { region = emf_region_sahara }
-			FROM = {
-				OR = {
-					ai = no
-					capital_scope = { region = emf_region_sahara }
-				}
-			}
-			owner = {
-				OR = {
-					ai = no
-					capital_scope = { NOT = { region = emf_region_sahara } }
-				}
-			}
-		}
 		# If AI, must be independent or vassal duke+ to fab claims outside top realm...
 		OR = {
 			owner = { same_realm = FROM }
@@ -615,7 +600,10 @@ action_inquisition = {
 		num_of_settlements = 1
 		NAND = {
 			FROM = { job_spiritual = { has_character_modifier = spiritual_refused_pagans } }  # See Event ZE.5040
-			owner = { AND = { religion_group = pagan_group NOT = { religion = FROM } } }
+			owner = {
+				novum_imperium_is_pagan = yes
+				NOT = { religion = FROM }
+			}
 		}
 		OR = {
 			proselytize_convert_independent_trigger = yes

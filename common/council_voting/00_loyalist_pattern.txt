@@ -1067,11 +1067,205 @@ loyalist_pattern_for = {
 			}
 		}
 	}
+	chivalry_mobilization_0 = { 
+		custom_tooltip = {
+			text = pattern_loyalist_vote_as_liege_custom_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_mobilization_1 = { 
+		custom_tooltip = {
+			text = pattern_loyalist_vote_as_liege_custom_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_mobilization_2 = { 
+		custom_tooltip = {
+			text = pattern_loyalist_vote_as_liege_custom_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_mobilization_3 = { 
+		custom_tooltip = {
+			text = pattern_loyalist_vote_as_liege_custom_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_mobilization_4 = { 
+		custom_tooltip = {
+			text = pattern_loyalist_vote_as_liege_custom_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_militarization_0 = { 
+		custom_tooltip = {
+			text = pattern_loyalist_vote_as_liege_custom_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_militarization_1 = { 
+		custom_tooltip = {
+			text = pattern_loyalist_vote_as_liege_custom_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_militarization_2 = { 
+		custom_tooltip = {
+			text = pattern_loyalist_vote_as_liege_custom_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_militarization_3 = { 
+		custom_tooltip = {
+			text = pattern_loyalist_vote_as_liege_custom_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	chivalry_militarization_4 = { 
+		custom_tooltip = {
+			text = pattern_loyalist_vote_as_liege_custom_tooltip
+			hidden_tooltip = {
+				liege = { character = FROM }
+			}
+		}
+	}
+	people_control_0 = { liege = { character = FROM } }
+	people_control_1 = { liege = { character = FROM } }
+	people_control_2 = { liege = { character = FROM } }
+	people_control_3 = { liege = { character = FROM } }
+	people_control_4 = { liege = { character = FROM } }
+	centralization_0 = { liege = { character = FROM } }
+	centralization_1 = { liege = { character = FROM } }
+	centralization_2 = { liege = { character = FROM } }
+	centralization_3 = { liege = { character = FROM } }
+	centralization_4 = { liege = { character = FROM } }
+	tolerance_0 = { liege = { character = FROM } }
+	tolerance_1 = { liege = { character = FROM } }
+	tolerance_2 = { liege = { character = FROM } }
+	vice_royalty_0 = { liege = { character = FROM } }
+	vice_royalty_1 = { liege = { character = FROM } }
+	vice_royalty_2 = { liege = { character = FROM } }
+	slavery_0 = { liege = { character = FROM } }
+	slavery_2 = { liege = { character = FROM } }
+	slavery_3 = { liege = { character = FROM } }
+	
+	tajr_slider_0 = { liege = { character = FROM } }
+	tajr_slider_1 = { liege = { character = FROM } }
+	tajr_slider_2 = { liege = { character = FROM } }
+	tajr_slider_3 = { liege = { character = FROM } }
+	tajr_slider_4 = { liege = { character = FROM } }
+	imam_slider_0 = { liege = { character = FROM } }
+	imam_slider_1 = { liege = { character = FROM } }
+	imam_slider_2 = { liege = { character = FROM } }
+	imam_slider_3 = { liege = { character = FROM } }
+	imam_slider_4 = { liege = { character = FROM } }
+
+	tajr_obligations_0 = { liege = { character = FROM } }
+	tajr_obligations_1 = { liege = { character = FROM } }
+	tajr_obligations_2 = { liege = { character = FROM } }
+	tajr_obligations_3 = { liege = { character = FROM } }
+	tajr_obligations_4 = { liege = { character = FROM } }
+	imam_obligations_0 = { liege = { character = FROM } }
+	imam_obligations_1 = { liege = { character = FROM } }
+	imam_obligations_2 = { liege = { character = FROM } }
+	imam_obligations_3 = { liege = { character = FROM } }
+	imam_obligations_4 = { liege = { character = FROM } }
+	
+	clanic_centralization_0 = { liege = { character = FROM } }
+	clanic_centralization_1 = { liege = { character = FROM } }
+	clanic_centralization_2 = { liege = { character = FROM } }
+	clanic_centralization_3 = { liege = { character = FROM } }
+	clanic_centralization_4 = { liege = { character = FROM } }
+	
+	sovereignty_title_law_0 = { liege = { character = FROM } }
+	sovereignty_title_law_1 = { liege = { character = FROM } }
+	sovereignty_title_law_2 = { liege = { character = FROM } }
 }
 
 loyalist_pattern_against = {
 	icon = 3
 	pattern_type = against
 	
+	chivalry_mobilization_0 = { NOT = { liege = { character = FROM } } }
+	chivalry_mobilization_1 = { NOT = { liege = { character = FROM } } }
+	chivalry_mobilization_2 = { NOT = { liege = { character = FROM } } }
+	chivalry_mobilization_3 = { NOT = { liege = { character = FROM } } }
+	chivalry_mobilization_4 = { NOT = { liege = { character = FROM } } }
+	chivalry_militarization_0 = { NOT = { liege = { character = FROM } } }
+	chivalry_militarization_1 = { NOT = { liege = { character = FROM } } }
+	chivalry_militarization_2 = { NOT = { liege = { character = FROM } } }
+	chivalry_militarization_3 = { NOT = { liege = { character = FROM } } }
+	chivalry_militarization_4 = { NOT = { liege = { character = FROM } } }
+	
 	infighting_0 = { always = yes }
+	
+	people_control_0 = { NOT = { liege = { character = FROM } } }
+	people_control_1 = { NOT = { liege = { character = FROM } } }
+	people_control_2 = { NOT = { liege = { character = FROM } } }
+	people_control_3 = { NOT = { liege = { character = FROM } } }
+	people_control_4 = { NOT = { liege = { character = FROM } } }
+	centralization_0 = { NOT = { liege = { character = FROM } } }
+	centralization_1 = { NOT = { liege = { character = FROM } } }
+	centralization_2 = { NOT = { liege = { character = FROM } } }
+	centralization_3 = { NOT = { liege = { character = FROM } } }
+	centralization_4 = { NOT = { liege = { character = FROM } } }
+	tolerance_0 = { NOT = { liege = { character = FROM } } }
+	tolerance_1 = { NOT = { liege = { character = FROM } } }
+	tolerance_2 = { NOT = { liege = { character = FROM } } }
+	vice_royalty_0 = { NOT = { liege = { character = FROM } } }
+	vice_royalty_1 = { NOT = { liege = { character = FROM } } }
+	vice_royalty_2 = { NOT = { liege = { character = FROM } } }
+	slavery_0 = { NOT = { liege = { character = FROM } } }
+	slavery_2 = { NOT = { liege = { character = FROM } } }
+	slavery_3 = { NOT = { liege = { character = FROM } } }
+	
+	tajr_slider_0 = { NOT = { liege = { character = FROM } } }
+	tajr_slider_1 = { NOT = { liege = { character = FROM } } }
+	tajr_slider_2 = { NOT = { liege = { character = FROM } } }
+	tajr_slider_3 = { NOT = { liege = { character = FROM } } }
+	tajr_slider_4 = { NOT = { liege = { character = FROM } } }
+	imam_slider_0 = { NOT = { liege = { character = FROM } } }
+	imam_slider_1 = { NOT = { liege = { character = FROM } } }
+	imam_slider_2 = { NOT = { liege = { character = FROM } } }
+	imam_slider_3 = { NOT = { liege = { character = FROM } } }
+	imam_slider_4 = { NOT = { liege = { character = FROM } } }
+
+	tajr_obligations_0 = { NOT = { liege = { character = FROM } } }
+	tajr_obligations_1 = { NOT = { liege = { character = FROM } } }
+	tajr_obligations_2 = { NOT = { liege = { character = FROM } } }
+	tajr_obligations_3 = { NOT = { liege = { character = FROM } } }
+	tajr_obligations_4 = { NOT = { liege = { character = FROM } } }
+	imam_obligations_0 = { NOT = { liege = { character = FROM } } }
+	imam_obligations_1 = { NOT = { liege = { character = FROM } } }
+	imam_obligations_2 = { NOT = { liege = { character = FROM } } }
+	imam_obligations_3 = { NOT = { liege = { character = FROM } } }
+	imam_obligations_4 = { NOT = { liege = { character = FROM } } }
+	
+	clanic_centralization_0 = { NOT = { liege = { character = FROM } } }
+	clanic_centralization_1 = { NOT = { liege = { character = FROM } } }
+	clanic_centralization_2 = { NOT = { liege = { character = FROM } } }
+	clanic_centralization_3 = { NOT = { liege = { character = FROM } } }
+	clanic_centralization_4 = { NOT = { liege = { character = FROM } } }
+	
+	sovereignty_title_law_0 = { NOT = { liege = { character = FROM } } }
+	sovereignty_title_law_1 = { NOT = { liege = { character = FROM } } }
+	sovereignty_title_law_2 = { NOT = { liege = { character = FROM } } }
 }

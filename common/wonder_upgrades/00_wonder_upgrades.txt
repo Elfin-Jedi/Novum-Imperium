@@ -839,11 +839,11 @@ upgrade_bells_golden = {
 upgrade_statue_god = {
 	picture = GFX_upgrade_icon_statue
 
-	potential = { religion_group = pagan_group }
+	potential = { novum_imperium_is_pagan = yes }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion_group = pagan_group } }
-			religion_group = pagan_group
+			limit = { NOT = { novum_imperium_is_pagan = yes } }
+			novum_imperium_is_pagan = yes
 		}
 		NOT = { religion = iconoclast }
 		trigger_if = {
@@ -853,7 +853,7 @@ upgrade_statue_god = {
 			NOT = { trait = zealous }
 		}
 	}
-	active = { religion_group = pagan_group }
+	active = { novum_imperium_is_pagan = yes }
 
 	flags = {
 		decorative
@@ -871,14 +871,14 @@ upgrade_statue_god = {
 upgrade_temple_guards = { 
 	picture = GFX_upgrade_icon_guard
 	
-	potential = { religion_group = pagan_group }
+	potential = { novum_imperium_is_pagan = yes }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion_group = pagan_group } }
-			religion_group = pagan_group
+			limit = { NOT = { novum_imperium_is_pagan = yes } }
+			novum_imperium_is_pagan = yes
 		}
 	}
-	active = { religion_group = pagan_group }
+	active = { novum_imperium_is_pagan = yes }
 
 	flags = {
 		defensive
@@ -918,14 +918,14 @@ upgrade_sacrificial_altar = {
 upgrade_sacred_grove = { 
 	picture = GFX_upgrade_icon_roses_white
 
-	potential = { religion_group = pagan_group }
+	potential = { novum_imperium_is_pagan = yes }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion_group = pagan_group } }
-			religion_group = pagan_group
+			limit = { NOT = { novum_imperium_is_pagan = yes } }
+			novum_imperium_is_pagan = yes
 		}
 	}
-	active = { religion_group = pagan_group }
+	active = { novum_imperium_is_pagan = yes }
 
 	flags = {
 		holy
@@ -948,14 +948,14 @@ upgrade_sacred_grove = {
 upgrade_prophecy_rooms = { 
 	picture = GFX_upgrade_icon_crates
 
-	potential = { religion_group = pagan_group }
+	potential = { novum_imperium_is_pagan = yes }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion_group = pagan_group } }
-			religion_group = pagan_group
+			limit = { NOT = { novum_imperium_is_pagan = yes } }
+			novum_imperium_is_pagan = yes
 		}
 	}
-	active = { religion_group = pagan_group }
+	active = { novum_imperium_is_pagan = yes }
 
 	flags = {
 		room
@@ -972,14 +972,14 @@ upgrade_prophecy_rooms = {
 upgrade_temple_precinct = { 
 	picture = GFX_upgrade_icon_crates
 
-	potential = { religion_group = pagan_group }
+	potential = { novum_imperium_is_pagan = yes }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion_group = pagan_group } }
-			religion_group = pagan_group
+			limit = { NOT = { novum_imperium_is_pagan = yes } }
+			novum_imperium_is_pagan = yes
 		}
 	}
-	active = { religion_group = pagan_group }
+	active = { novum_imperium_is_pagan = yes }
 
 	flags = {
 		is_singular
@@ -995,14 +995,14 @@ upgrade_temple_precinct = {
 upgrade_inner_sanctuary = { 
 	picture = GFX_upgrade_icon_crates
 
-	potential = { religion_group = pagan_group }
+	potential = { novum_imperium_is_pagan = yes }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion_group = pagan_group } }
-			religion_group = pagan_group
+			limit = { NOT = { novum_imperium_is_pagan = yes } }
+			novum_imperium_is_pagan = yes
 		}
 	}
-	active = { religion_group = pagan_group }
+	active = { novum_imperium_is_pagan = yes }
 
 	flags = {
 		room
@@ -1024,11 +1024,11 @@ upgrade_custodian_of_temple = {
 	potential = { }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion_group = pagan_group } }
-			religion_group = pagan_group
+			limit = { NOT = { novum_imperium_is_pagan = yes } }
+			novum_imperium_is_pagan = yes
 		}
 	}
-	active = { religion_group = pagan_group }
+	active = { novum_imperium_is_pagan = yes }
 
 	flags = {
 		is_singular

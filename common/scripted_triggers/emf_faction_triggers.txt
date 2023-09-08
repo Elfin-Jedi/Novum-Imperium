@@ -59,7 +59,7 @@ emf_faction_has_special_chance_blocker = {
 			}
 			trigger_else = {
 				culture = hungarian
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			NOT = { has_global_flag = emf_magyar_migration_completed }
 			year < 920

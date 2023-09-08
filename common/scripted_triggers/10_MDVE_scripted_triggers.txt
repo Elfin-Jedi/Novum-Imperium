@@ -7,9 +7,17 @@ slavery_trigger = {
 					culture = han
 					culture = persian
 					culture_group = arabic
-					culture_group = central_african
 					culture_group = east_african
+					culture_group = congo_nigerian
 					culture_group = west_african
+					culture_group = north_african
+					culture_group = ethiopic
+					culture_group = nilo_saharan
+					culture_group = bantu
+					culture_group = east_bantu
+					culture_group = south_bantu
+					culture_group = afroaustronesian
+					culture_group = khoi_san_group
 				}
 			}
 			custom_tooltip = {
@@ -40,7 +48,7 @@ slavery_trigger = {
 				text = slavery_enabled_government
 				OR = {
 					is_nomadic = yes
-					government = imperial_government
+					government = roman_imperial_government
 					OR = {
 						government = adventurer_government
 						primary_title = { has_title_flag = adventurer_title }
@@ -219,16 +227,21 @@ have_all_horse_armor_artifacts_trigger = {
 MDVE_is_african_culture = {
 	OR = {
 		culture_group = east_african
-		culture_group = central_african
+		culture_group = congo_nigerian
 		culture_group = west_african
 		culture_group = north_african
+		culture_group = ethiopic
+		culture_group = nilo_saharan
+		culture_group = bantu
+		culture_group = east_bantu
+		culture_group = south_bantu
+		culture_group = afroaustronesian
+		culture_group = khoi_san_group
 	}
 }
 
 MDVE_is_arabic_culture = {
-	OR = {
-		culture_group = arabic
-	}
+	culture_group = arabic
 }
 
 MDVE_is_greco_roman = {

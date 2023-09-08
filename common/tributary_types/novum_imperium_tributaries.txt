@@ -1,0 +1,36 @@
+landless_under_count = {
+	icon = 10
+	tributary_name = "landless_under_count"
+	tributary_plural = "landless_under_count"
+	suzerain_name = "count"
+	tribute_name = "landless tribute"
+	suzerain_must_defend = yes
+	suzerain_can_be_called = no
+	tributary_can_be_summoned = no
+	tributaries_can_infight = no
+	tributaries_can_unite = no
+
+	income_tribute_percentage = {
+		value = 0
+	}
+
+	reinforce_tribute_percentage = {
+		value = 0
+	}
+
+	prestige_to_suzerain = {
+		value = 0
+	}
+
+	prestige_to_tributary = {
+		value = 0
+	}
+
+	piety_to_suzerain = {
+		value = 0
+	}
+
+	piety_to_tributary = {
+		value = 0
+	}
+}

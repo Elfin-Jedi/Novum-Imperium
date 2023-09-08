@@ -26,13 +26,11 @@ targetted_decisions = {
 		from_potential = {
 			is_playable = yes
 			OR = {
-				religion = aztec
-				AND = {
-					religion = aztec_reformed
-					has_religion_features = no
-				}
+				religion_group = mesoamerican_rel_group
+				religion_group = andean_rel_group
 				has_religion_feature = religion_feature_aztec
 			}
+			NOT = { has_religion_feature = religion_peaceful } #Aztecs could reform as Peaceful.
 		}
 
 		potential = {
@@ -62,8 +60,8 @@ targetted_decisions = {
 					limit = {
 						controls_religion = yes
 						NOR = {
-							religion = aztec
-							religion = aztec_reformed
+							religion_group = mesoamerican_rel_group
+							religion_group = andean_rel_group	
 						}
 						FROM = { ai = no }
 					}
@@ -100,5 +98,4 @@ targetted_decisions = {
 			}
 		}
 	}
-
 }

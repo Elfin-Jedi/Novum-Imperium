@@ -46,7 +46,7 @@ blg_artifact_bowl = {
 
 # Glass candle.
 blg_artifact_candle = {
-	always = no
+	has_artifact = living_flame
 }
 
 # Babr-e-Bayan leopard skin.
@@ -71,6 +71,7 @@ blg_artifact_grail = {
 	OR = {
 		has_artifact = holy_grail
 		has_artifact = holy_chalice
+		has_artifact = vial_of_immortality
 	}
 }
 
@@ -113,6 +114,10 @@ blg_artifact_relic_chest = {
 		has_artifact = shroud_of_jesus
 		has_artifact = bones_of_st_peter
 		has_artifact = blessed_mantle
+		has_artifact = kusanagi
+		has_artifact = yata_no_kagami
+		has_artifact = yasakani_no_magatama
+		has_artifact = sugari_no_ontachi
 	}
 }
 
@@ -130,6 +135,7 @@ blg_artifact_relic_case = {
 			artifact_type = random_world_mythological_heart_1
 			artifact_type = random_world_mythological_blood
 			artifact_type = random_world_mythological_eye
+			artifact_type = heirloom_seal_of_the_realm
 			has_artifact_flag = bodypart
 			has_artifact_flag = remains
 			has_artifact_flag = saint_item
@@ -188,6 +194,8 @@ blg_artifact_scroll = {
 			artifact_type = letter_of_mohammad
 			artifact_type = cyrus_cylinder
 			artifact_type = chinese_calligraphy
+			artifact_type = treasure_map
+			artifact_type = fantasy_world_map
 			has_artifact_flag = scroll
 		}
 	}
@@ -279,7 +287,10 @@ blg_artifact_tablet = {
 blg_artifact_totem = {
 	any_artifact = {
 		is_artifact_equipped = yes
-		has_artifact_flag = totem
+		OR = {
+			has_artifact_flag = totem
+			artifact_type = talking_wand
+		}
 	}
 }
 
@@ -609,6 +620,7 @@ blg_weapon_greatsword = {
 		artifact_type = rtp_greatsword_a
 		AND = { has_artifact_flag = cleaver has_artifact_flag = twohand }
 		artifact_type = zweihander_sword
+		artifact_type = hungering_blade
 	}
 }
 
@@ -617,6 +629,7 @@ blg_weapon_hammer = {
 		has_artifact_flag = hammer
 		artifact_type = mace_tier_3_foe_hammer
 		artifact_type = mace_tier_4_foe_hammer
+		artifact_type = hammer_of_banning
 	}
 }
 

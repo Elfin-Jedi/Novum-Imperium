@@ -8595,7 +8595,7 @@ character_event = {
 			50 = {
 				trigger = { 
 					is_ruler = yes
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					OR = { 
 						is_tribal = yes
 						is_nomadic = yes
@@ -9807,7 +9807,7 @@ character_event = {
 	trigger = { 
 		trait = pregnant
 		NOT = { trait = troubled_pregnancy } 
-		religion_group = pagan_group
+		novum_imperium_is_pagan = yes
 	}
 
 	is_triggered_only = yes

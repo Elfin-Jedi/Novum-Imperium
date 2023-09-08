@@ -1219,26 +1219,26 @@ character_event = {
 					20 = { add_trait = experimenter }
 					20 = { add_trait = flanker }
 					20 = {
-						trigger = { culture_group = chinese_group }
+						trigger = { culture_group = chinese }
 						add_trait = logistics_expert
 					}
 					20 = {
-						trigger = { culture_group = chinese_group }
+						trigger = { culture_group = chinese }
 						add_trait = master_of_flame
 					}
 					20 = {
-						trigger = { culture_group = chinese_group }
+						trigger = { culture_group = chinese }
 						add_trait = sapper
 					}
 					20 = {
-						trigger = { culture_group = chinese_group }
+						trigger = { culture_group = chinese }
 						add_trait = levy_coordinator
 					}
 					20 = {
 						trigger = { 
 							OR = { 
-								culture_group = indo_aryan_group 
-								culture_group = dravidian_group
+								culture_group = indoaryan 
+								culture_group = dravidian
 							}
 						}
 						add_trait = war_elephant_leader
@@ -3355,7 +3355,7 @@ character_event = {
 					OR = {
 						religion_group = christian
 						religion_group = jewish_group
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 						has_dharmic_religion_trigger = yes
 					}
 					NOT = { has_assigned_minor_title = title_court_jester }
@@ -3691,7 +3691,7 @@ character_event = {
 				}
 				modifier = {
 					factor = 1.5
-					FROM = { religion_group = pagan_group }
+					FROM = { novum_imperium_is_pagan = yes }
 				}
 				prestige = -100
 			}
@@ -3700,7 +3700,7 @@ character_event = {
 			factor = 20
 			modifier = {
 				factor = 0.5
-				FROM = { religion_group = pagan_group }
+				FROM = { novum_imperium_is_pagan = yes }
 			}
 			modifier = {
 				factor = 2

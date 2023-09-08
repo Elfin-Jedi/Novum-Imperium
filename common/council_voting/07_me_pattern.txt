@@ -5,4 +5,28 @@ me_pattern_for = {
 	default = {
 		character = FROM # Actor
 	}
+	slavery_2 = {
+		OR = {
+			trait = slave_owner
+			trait = slave_trader
+		}
+	}
+	slavery_3 = {
+		OR = {
+			trait = slave_owner
+			trait = slave_trader
+		}
+	}
+}
+
+me_pattern_against = {
+	icon = 9
+	pattern_type = against
+	
+	slavery_0 = {
+		OR = {
+			trait = slave_owner
+			trait = slave_trader
+		}
+	}
 }

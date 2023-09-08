@@ -2,13 +2,22 @@ title_decisions = {
 	paint_map = {
 		potential ={
 			FROM = {
-				AI = no
+				ai = no
 			}
 			
 		}
+		from_potential = {
+			ai = no
+			check_variable = { which = global_debug_cheats value = 1 }
+			OR = {
+				is_multiplayer_host_character = yes
+				check_variable = { which = global_debug_cheats_all_MP value = 1 }
+				multiplayer = no
+			}
+		}
 		allow ={
 			FROM = {
-				AI = no
+				ai = no
 				OR = {
 					NOT = {
 						ROOT = { holder = FROM }

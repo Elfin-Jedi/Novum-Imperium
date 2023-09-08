@@ -15,7 +15,7 @@ character_event = {
 
 	hide_window = yes
 	
-	religion_group = pagan_group
+	novum_imperium_is_pagan = yes
 	only_playable = yes
 	only_independent = yes
 
@@ -188,7 +188,7 @@ character_event = {
 
 	hide_window = yes
 	
-	religion_group = pagan_group
+	novum_imperium_is_pagan = yes
 	only_playable = yes
 
 	trigger = {
@@ -358,7 +358,7 @@ character_event = {
 
 	hide_window = yes
 	
-	religion_group = pagan_group
+	novum_imperium_is_pagan = yes
 	only_playable = yes
 	only_independent = yes
 	capable_only = yes
@@ -1546,7 +1546,7 @@ character_event = {
 
 	hide_window = yes
 	
-	religion_group = pagan_group
+	novum_imperium_is_pagan = yes
 	only_playable = yes
 	capable_only = yes
 	prisoner = no
@@ -1711,7 +1711,7 @@ character_event = {
 
 	hide_window = yes
 	
-	religion_group = pagan_group
+	novum_imperium_is_pagan = yes
 	only_playable = yes
 	only_independent = yes
 	capable_only = yes
@@ -2010,7 +2010,7 @@ character_event = {
 
 	hide_window = yes
 	
-	religion_group = pagan_group
+	novum_imperium_is_pagan = yes
 	only_playable = yes
 	war = no
 	has_global_flag = emf_magyar_migration_completed
@@ -2281,7 +2281,7 @@ narrative_event = {
 	major = yes
 
 	only_independent = yes
-	religion_group = pagan_group
+	novum_imperium_is_pagan = yes
 	capable_only = yes
 	prisoner = no
 	min_age = 16
@@ -2298,7 +2298,7 @@ narrative_event = {
 		trigger_else = {
 			culture = hungarian
 		}
-		religion_group = pagan_group
+		novum_imperium_is_pagan = yes
 		NOT = { k_hungary = { has_flag = ai_converted_catholic } }
 		emf_alternate_start = no
 		emf_can_convert_religion = yes
@@ -2324,7 +2324,7 @@ narrative_event = {
 		random_realm_character = {
 			limit = {
 				ai = yes
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				OR = {
 					dynasty = ROOT
 					is_close_relative = ROOT
@@ -2391,7 +2391,7 @@ character_event = {
 			random_realm_character = {
 				limit = {
 					ai = yes
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { has_flag = considered_conversion }
 					OR = {
 						dynasty = PREV

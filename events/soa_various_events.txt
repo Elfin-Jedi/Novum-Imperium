@@ -2878,7 +2878,7 @@ character_event = {
 		is_ruler = no
 		is_consort = no
 		NOR = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			any_courtier = {
 				has_character_flag = demon_child_non_pagan
 				host = {
@@ -2948,7 +2948,7 @@ character_event = {
 
 	trigger = {
 		has_dlc = "Sons of Abraham"
-		NOT = { religion_group = pagan_group }
+		NOT = { novum_imperium_is_pagan = yes }
 		OR = {
 			ai = no
 			liege = {

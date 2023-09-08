@@ -245,16 +245,8 @@ mjolnir = {
 	weight = {
 		value = 0
 		additive_modifier = {
-			value = 5
-			OR = {
-				religion = norse_pagan
-				religion = norse_pagan_reformed
-			}
-			is_landed = yes
-		}
-		additive_modifier = {
 			value = 100
-			religion = norse_pagan
+			religion_group = norsegerman_group
 			is_landed = yes
 		}
 	}
@@ -286,10 +278,7 @@ andvaranaut = {
 		value = 0
 		additive_modifier = {
 			value = 5
-			OR = {
-				religion = norse_pagan
-				religion = norse_pagan_reformed
-			}
+			religion_group = norsegerman_group
 			is_landed = yes
 		}
 	}
@@ -792,10 +781,7 @@ gjallarhorn = {
 		value = 0
 		additive_modifier = {
 			value = 100
-			OR = {
-				religion = norse_pagan
-				religion = norse_pagan_reformed
-			}
+			religion_group = norsegerman_group
 			is_landed = yes
 		}
 	}
@@ -1247,4 +1233,88 @@ generic_artifact = {
 		}
 	}
 }
-
+chinese_artifacts = {
+	max_amount = 100
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			OR = {
+			culture_group = chinese
+			culture_group = hmong_mien
+			culture = zhuang
+			culture = viet
+			culture = japanese
+			culture_group = korean_group 
+			}
+			is_landed = yes
+		}
+	}
+	
+	artifacts = {
+		jade_dragon = {
+			value = 1
+		}
+		chinese_dragon_amulet = {
+			value = 1
+		}
+		chinese_artwork = {
+			value = 1
+		}
+		chinese_calligraphy = {
+			value = 1
+		}
+		chinese_sculpture = {
+			value = 1
+		}
+		chinese_ceremonial_robes = {
+			value = 1
+		}
+		silk_shroud = {
+			value = 1
+		}
+		water_clock = {
+			value = 1
+		}
+		jian_sword = {
+			value = 1
+		}
+		chinese_prev_emperor_sculpture = {
+			value = 1
+		}
+		chinese_arm_protector = {
+			value = 1
+		}
+		chinese_serpent_spear = {
+			value = 1
+		}
+		chinese_ji = {
+			value = 1
+		}
+		chinese_crossbow = {
+			value = 1
+		}
+		chinese_bronze_sculpture = {
+			value = 1
+		}
+		chinese_painting_of_glitterhoof = {
+			value = 1
+		}
+		chinese_tapestry = {
+			value = 1
+		}
+		chinese_tapestry_grand = {
+			value = 1
+		}
+	}
+}

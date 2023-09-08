@@ -137,4 +137,19 @@ succession_laws = {
 			}
 		}
 	}
+	#Tribal Baron
+	rtp_baron_tribal_succ = {
+		potential = {
+			holder_scope = {
+				government = rtp_baron_tribal_g
+			}
+		}
+
+		effect = {
+			succession = {
+				base_type = elective_gavelkind
+				voting_rules = elective_gavelkind
+			}
+		}
+	}
 }

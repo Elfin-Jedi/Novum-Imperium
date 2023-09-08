@@ -27,19 +27,17 @@ zealot_pattern_for = {
 			}
 			custom_tooltip = {
 				text = pattern_zealot_dislikes_heathens_heretics_custom_tooltip
-				hidden_tooltip = {
-					AND = { # or taking titles from heretics or heathens
-						OR = {
-							FROMFROM = { # Defender
+				hidden_tooltip = { # or taking titles from heretics or heathens
+					OR = {
+						FROMFROM = { # Defender
+							NOT = {
+								religion = ROOT
+							}
+						}
+						FROMFROMFROMFROM = { # Thirdparty_title
+							holder_scope = {
 								NOT = {
 									religion = ROOT
-								}
-							}
-							FROMFROMFROMFROM = { # Thirdparty_title
-								holder_scope = {
-									NOT = {
-										religion = ROOT
-									}
 								}
 							}
 						}
@@ -48,15 +46,13 @@ zealot_pattern_for = {
 			}
 			custom_tooltip = {
 				text = pattern_attacking_excom_or_antipope_custom_tooltip
-				hidden_tooltip = {
-					AND = { # or attacking an excommunicated member of the faith or an antipope
-						FROMFROM = { # Defender
-							religion = ROOT
-							OR = {
-								trait = excommunicated
-								ROOT = {
-									stored_token_trigger = depose_antipope # cb_type
-								}
+				hidden_tooltip = { # or attacking an excommunicated member of the faith or an antipope
+					FROMFROM = { # Defender
+						religion = ROOT
+						OR = {
+							trait = excommunicated
+							ROOT = {
+								stored_token_trigger = depose_antipope # cb_type
 							}
 						}
 					}
@@ -541,47 +537,70 @@ zealot_pattern_for = {
 	
 	# Zealots who do not belong to a feminist religion/culture will actively oppose Status of Women laws, even if they're female, but those who do belong to such groups will actively support Status of Women.
 	status_of_women_0 = {
-		emf_feminist_religion = no
+		OR = {
+			emf_feminist_religion = no
+			feminism_0_religions_trigger = yes
+		}
 		FROMFROM = { has_law = status_of_women_1 }
 	}
 	status_of_women_1 = {
 		OR = {
+			feminism_1_religions_trigger = yes
 			AND = {
 				emf_feminist_religion = no
 				FROMFROM = { has_law = status_of_women_2 }
 			}
 			AND = {
-				emf_feminist_religion = yes
+				OR = {
+					emf_feminist_religion = yes
+					feminism_0_religions_trigger = yes
+				}
 				FROMFROM = { has_law = status_of_women_0 }
 			}
 		}
 	}
 	status_of_women_2 = {
 		OR = {
+			feminism_2_religions_trigger = yes
 			AND = {
-				emf_feminist_religion = no
+				OR = {
+					emf_feminist_religion = no
+					feminism_0_religions_trigger = yes
+					feminism_1_religions_trigger = yes
+				}
 				FROMFROM = { has_law = status_of_women_3 }
 			}
 			AND = {
-				emf_feminist_religion = yes
+				OR = {
+					emf_feminist_religion = yes
+					feminism_3_religions_trigger = yes
+					feminism_4_religions_trigger = yes
+				}
 				FROMFROM = { has_law = status_of_women_1 }
 			}
 		}
 	}
 	status_of_women_3 = {
 		OR = {
+			feminism_3_religions_trigger = yes
 			AND = {
 				emf_feminist_religion = no
 				FROMFROM = { has_law = status_of_women_4 }
 			}
 			AND = {
-				emf_feminist_religion = yes
+				OR = {
+					emf_feminist_religion = yes
+					feminism_4_religions_trigger = yes
+				}
 				FROMFROM = { has_law = status_of_women_2 }
 			}
 		}
 	}
-	status_of_women_4 = { 
-		emf_feminist_religion = yes
+	status_of_women_4 = {
+		OR = {
+			emf_feminist_religion = yes
+			feminism_4_religions_trigger = yes
+		}
 	}
 	
 	administration_0 = { always = no }
@@ -840,9 +859,261 @@ zealot_pattern_for = {
 	mazdaki_wealth_4 = {
 		religion = mazdaki
 	}
-	
+	chivalry_militarization_0 = { 
+		custom_tooltip = {
+			text = chivalry_zealot_vote_mil_tooltip
+			hidden_tooltip = {
+				always = yes
+			}
+		}
+	}
+	chivalry_militarization_1 = { 
+		custom_tooltip = {
+			text = chivalry_zealot_vote_mil_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						has_law = chivalry_militarization_2
+					}
+				}
+			}
+		}
+	}
+	chivalry_militarization_2 = { 
+		custom_tooltip = {
+			text = chivalry_zealot_vote_mil_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						has_law = chivalry_militarization_3
+					}
+				}
+			}
+		}
+	}
+	chivalry_militarization_3 = { 
+		custom_tooltip = {
+			text = chivalry_zealot_vote_mil_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						has_law = chivalry_militarization_4
+					}
+				}
+			}
+		}
+	}
+	chivalry_militarization_4 = { 
+		custom_tooltip = {
+			text = chivalry_zealot_vote_mil_tooltip
+			hidden_tooltip = {
+				always = no
+			}
+		}
+	}
 	infighting_0 = { always = no }
 	infighting_1 = { religion_head = { character = FROMFROM } }
+	
+	centralization_0 = {
+		always = yes
+	}
+	centralization_1 = {
+		OR = {
+			liege = {
+				primary_title = {
+					has_law = centralization_2
+				}
+			}
+			opinion = {
+				who = liege
+				value = 20
+			}
+		}
+	}
+	centralization_2 = {
+		OR = {
+			liege = {
+				primary_title = {
+					has_law = centralization_3
+				}
+			}
+			opinion = {
+				who = liege
+				value = 20
+			}
+		}
+	}
+	centralization_3 = {
+		OR = {
+			liege = {
+				primary_title = {
+					has_law = centralization_4
+				}
+			}
+			opinion = {
+				who = liege
+				value = 20
+			}
+		}
+	}
+	centralization_4 = {
+		opinion = {
+			who = liege 
+			value = 20
+		}
+	}
+	vice_royalty_0 = {
+		is_feudal = yes
+		liege = {
+			primary_title = {
+				OR = {
+					has_law = vice_royalty_1
+					has_law = vice_royalty_2
+				}
+			}
+		}
+	}
+	vice_royalty_1 = {
+		is_feudal = yes
+		liege = {
+			primary_title = {
+				has_law = vice_royalty_2
+			}
+		}
+	}
+	vice_royalty_2 = { always = no }
+	#feudal_administration = { always = yes }
+	#imperial_administration = { always = no }
+	#out_of_realm_inheritance_law_0 = { always = yes }
+	#out_of_realm_inheritance_law_1 = { always = no }
+	
+	tajr_slider_0 = { always = no }
+	tajr_slider_1 = {
+		FROMFROM = { has_law = tajr_slider_0 }
+		is_republic = yes
+	}
+	tajr_slider_2 = {
+		FROMFROM = { has_law = tajr_slider_1 }
+		is_republic = yes
+	}
+	tajr_slider_3 = {
+		FROMFROM = { has_law = tajr_slider_2 }
+		is_republic = yes
+	}
+	tajr_slider_4 = { is_republic = yes }
+	
+	imam_slider_0 = { always = no }
+	imam_slider_1 = {
+		FROMFROM = { has_law = imam_slider_0 }
+		capital_holding = {
+			holding_type = temple
+		}
+	}
+	imam_slider_2 = {
+		capital_holding = {
+			holding_type = temple
+		}
+	}
+	imam_slider_3 = {
+		FROMFROM = { has_law = imam_slider_4 }
+		capital_holding = {
+			holding_type = temple
+		}
+	}
+	imam_slider_4 = { always = no }
+
+	tajr_obligations_0 = { is_republic = yes }
+	tajr_obligations_1 = {
+		FROMFROM = { has_law = tajr_obligations_2 }
+		is_republic = yes
+	}
+	tajr_obligations_2 = {
+		FROMFROM = { has_law = tajr_obligations_3 }
+		is_republic = yes
+	}
+	tajr_obligations_3 = {
+		FROMFROM = { has_law = tajr_obligations_4 }
+		is_republic = yes
+	}
+	tajr_obligations_4 = { always = no }
+	imam_obligations_0 = { capital_holding = { holding_type = temple } }
+	imam_obligations_1 = {
+		FROMFROM = { has_law = imam_obligations_2 }
+		capital_holding = {
+			holding_type = temple
+		}
+	}
+	imam_obligations_2 = {
+		FROMFROM = { has_law = imam_obligations_3 }
+		capital_holding = {
+			holding_type = temple
+		}
+	}
+	imam_obligations_3 = {
+		FROMFROM = { has_law = imam_obligations_4 }
+		capital_holding = {
+			holding_type = temple
+		}
+	}
+	imam_obligations_4 = { always = no }
+	
+	clanic_centralization_0 = {
+		OR = {
+			is_reformed_religion = no
+			is_tribal = yes
+		}
+	}
+	clanic_centralization_1 = { 
+		OR = { 
+			FROMFROM = { has_law = clanic_centralization_2 } 
+			is_reformed_religion = yes
+			is_tribal = no
+		}
+	}
+	clanic_centralization_2 = { 
+		OR = { 
+			FROMFROM = { has_law = clanic_centralization_3 } 
+			is_reformed_religion = yes
+			is_tribal = no
+		}
+	}
+	clanic_centralization_3 = { 
+		OR = { 
+			FROMFROM = { has_law = clanic_centralization_4 } 
+			is_reformed_religion = yes
+			is_tribal = no
+		}
+	}
+	clanic_centralization_4 = {
+		OR = {
+			is_reformed_religion = yes
+			is_tribal = no
+		}
+	}
+	
+	sovereignty_title_law_0 = {
+		always = no
+	}
+	sovereignty_title_law_1 = {
+		always = no
+	}
+	sovereignty_title_law_2 = {
+		opinion = {
+			who = liege
+			value = 20
+		}
+	}
+	
+	slavery_0 = {
+		abolitionist_trigger = yes
+	}
+	slavery_2 = {
+		abolitionist_trigger = no
+		prefers_thralls_trigger = no
+	}
+	slavery_3 = {
+		prefers_thralls_trigger = yes
+	}
 }
 
 zealot_pattern_against = {
@@ -1291,17 +1562,27 @@ zealot_pattern_against = {
 	
 	# Zealots who do not belong to a feminist religion/culture will actively oppose Status of Women laws, even if they're female, but those who do belong to such groups will actively support Status of Women.
 	status_of_women_0 = {
-		emf_feminist_religion = yes
+		OR = {
+			feminism_0_religions_trigger = no
+			emf_feminist_religion = yes
+		}
 		FROMFROM = { has_law = status_of_women_1 }
 	}
 	status_of_women_1 = {
 		OR = {
 			AND = {
-				emf_feminist_religion = yes
+				OR = {
+					emf_feminist_religion = yes
+					feminism_0_religions_trigger = no
+					feminism_1_religions_trigger = no
+				}
 				FROMFROM = { has_law = status_of_women_2 }
 			}
 			AND = {
-				emf_feminist_religion = no
+				OR = {
+					emf_feminist_religion = no
+					feminism_0_religions_trigger = yes
+				}
 				FROMFROM = { has_law = status_of_women_0 }
 			}
 		}
@@ -1309,11 +1590,19 @@ zealot_pattern_against = {
 	status_of_women_2 = {
 		OR = {
 			AND = {
-				emf_feminist_religion = yes
+				OR = {
+					emf_feminist_religion = yes
+					feminism_3_religions_trigger = yes
+					feminism_4_religions_trigger = yes
+				}
 				FROMFROM = { has_law = status_of_women_3 }
 			}
 			AND = {
-				emf_feminist_religion = no
+				OR = {
+					emf_feminist_religion = no
+					feminism_0_religions_trigger = yes
+					feminism_1_religions_trigger = yes
+				}
 				FROMFROM = { has_law = status_of_women_1 }
 			}
 		}
@@ -1321,17 +1610,27 @@ zealot_pattern_against = {
 	status_of_women_3 = {
 		OR = {
 			AND = {
-				emf_feminist_religion = yes
+				OR = {
+					emf_feminist_religion = yes
+					feminism_4_religions_trigger = yes
+				}
 				FROMFROM = { has_law = status_of_women_4 }
 			}
 			AND = {
-				emf_feminist_religion = no
+				OR = {
+					emf_feminist_religion = no
+					feminism_3_religions_trigger = no
+					feminism_4_religions_trigger = no
+				}
 				FROMFROM = { has_law = status_of_women_2 }
 			}
 		}
 	}
-	status_of_women_4 = { 
-		emf_feminist_religion = no
+	status_of_women_4 = {
+		OR = {
+			emf_feminist_religion = no
+			feminism_4_religions_trigger = no
+		}
 	}
 	
 	administration_0 = { always = yes }
@@ -1611,7 +1910,221 @@ zealot_pattern_against = {
 		is_feudal = yes
 		NOT = { religion = mazdaki }
 	}
-	
+	chivalry_militarization_0 = { 
+		custom_tooltip = {
+			text = chivalry_zealot_vote_mil_tooltip
+			hidden_tooltip = {
+				always = no
+			}
+		}
+	}
+	chivalry_militarization_1 = { 
+		custom_tooltip = {
+			text = chivalry_zealot_vote_mil_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						NOT = { has_law = chivalry_militarization_2 }
+					}
+				}
+			}
+		}
+	}
+	chivalry_militarization_2 = { 
+		custom_tooltip = {
+			text = chivalry_zealot_vote_mil_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						NOT = { has_law = chivalry_militarization_3 }
+					}
+				}
+			}
+		}
+	}
+	chivalry_militarization_3 = { 
+		custom_tooltip = {
+			text = chivalry_zealot_vote_mil_tooltip
+			hidden_tooltip = {
+				liege = {
+					primary_title = {
+						NOT = { has_law = chivalry_militarization_4 }
+					}
+				}
+			}
+		}
+	}
+	chivalry_militarization_4 = { 
+		custom_tooltip = {
+			text = chivalry_zealot_vote_mil_tooltip
+			hidden_tooltip = {
+				always = yes
+			}
+		}
+	}
 	infighting_0 = { religion_head = { character = FROMFROM } }
 	infighting_1 = { always = no }
+	
+	centralization_0 = { always = no }
+	centralization_1 = { always = no }
+	centralization_2 = { always = no }
+	centralization_3 = { always = no }
+	centralization_4 = { always = no }
+	vice_royalty_0 = { always = no }
+	vice_royalty_1 = {
+		is_feudal = yes
+		liege = {
+			primary_title = {
+				has_law = vice_royalty_0
+			}
+		}
+	}
+	vice_royalty_2 = {
+		is_feudal = yes
+		liege = {
+			primary_title = {
+				has_law = vice_royalty_1
+			}
+		}
+	}
+	
+	tajr_slider_0 = { is_republic = yes }
+	tajr_slider_1 = {
+		FROMFROM = { has_law = tajr_slider_2 }
+		is_republic = yes
+	}
+	tajr_slider_2 = {
+		FROMFROM = { has_law = tajr_slider_3 }
+		is_republic = yes
+	}
+	tajr_slider_3 = {
+		FROMFROM = { has_law = tajr_slider_4 }
+		is_republic = yes
+	}
+	tajr_slider_4 = { always = no }
+	imam_slider_0 = {
+		capital_holding = {
+			holding_type = temple
+		}
+	}
+	imam_slider_1 = {
+		FROMFROM = { has_law = imam_slider_2 }
+		capital_holding = {
+			holding_type = temple
+		}
+	}
+	imam_slider_2 = { always = no }
+	imam_slider_3 = {
+		FROMFROM = { has_law = imam_slider_2 }
+		capital_holding = {
+			holding_type = temple
+		}
+	}
+	imam_slider_4 = {
+		capital_holding = {
+			holding_type = temple
+		}
+	}
+
+	tajr_obligations_0 = { always = no }
+	tajr_obligations_1 = {
+		FROMFROM = { has_law = tajr_obligations_0 }
+		is_republic = yes
+	}
+	tajr_obligations_2 = {
+		FROMFROM = { has_law = tajr_obligations_1 }
+		is_republic = yes
+	}
+	tajr_obligations_3 = {
+		FROMFROM = { has_law = tajr_obligations_2 }
+		is_republic = yes
+	}
+	tajr_obligations_4 = { is_republic = yes }
+	imam_obligations_0 = { always = no }
+	imam_obligations_1 = {
+		FROMFROM = { has_law = imam_obligations_0 }
+		capital_holding = {
+			holding_type = temple
+		}
+	}
+	imam_obligations_2 = {
+		FROMFROM = { has_law = imam_obligations_1 }
+		capital_holding = {
+			holding_type = temple
+		}
+	}
+	imam_obligations_3 = {
+		FROMFROM = { has_law = imam_obligations_2 }
+		capital_holding = {
+			holding_type = temple
+		}
+	}
+	imam_obligations_4 = { capital_holding = { holding_type = temple } }
+	
+	clanic_centralization_0 = {
+		NOR = {
+			is_reformed_religion = no
+			is_tribal = yes
+		}
+	}
+	clanic_centralization_1 = { 
+		NOR = { 
+			FROMFROM = { has_law = clanic_centralization_2 } 
+			is_reformed_religion = yes
+			is_tribal = no
+		}
+	}
+	clanic_centralization_2 = { 
+		NOR = { 
+			FROMFROM = { has_law = clanic_centralization_3 } 
+			is_reformed_religion = yes
+			is_tribal = no
+		}
+	}
+	clanic_centralization_3 = { 
+		NOR = { 
+			FROMFROM = { has_law = clanic_centralization_4 } 
+			is_reformed_religion = yes
+			is_tribal = no
+		}
+	}
+	clanic_centralization_4 = { 
+		NOR = {
+			is_reformed_religion = yes
+			is_tribal = no
+		}
+	}
+	
+	sovereignty_title_law_0 = {
+		NOT = {
+			opinion = {
+				who = liege
+				value = 59
+			}
+		}
+	}
+	sovereignty_title_law_1 = {
+		NOT = {
+			opinion = {
+				who = liege
+				value = 59
+			}
+		}
+	}
+	sovereignty_title_law_2 = {
+		always = no
+	}
+	
+	slavery_0 = {
+		abolitionist_trigger = no
+	}
+	slavery_2 = {
+		OR = {
+			abolitionist_trigger = yes
+			prefers_thralls_trigger = yes
+		}
+	}
+	slavery_3 = {
+		prefers_thralls_trigger = yes
+	}
 }

@@ -151,7 +151,7 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	in_command = yes
-	religion_group = pagan_group
+	novum_imperium_is_pagan = yes
 
 	is_triggered_only = yes
 
@@ -227,8 +227,7 @@ character_event = {
 
 	trigger = {
 		OR = {
-			religion_group = pagan_group
-			religion_group = african_group
+			novum_imperium_is_pagan = yes
 			religion_group = jewish_group
 			religion_group = zoroastrian_group
 		}

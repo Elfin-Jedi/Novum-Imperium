@@ -23,8 +23,6 @@ check_holy_order_donation_effect = {
 					owner = {
 						# Checking that the Teutonics don't already have a Duchy (are not currently landed meaningfully)
 						num_of_count_titles_in_realm == 0
-						# Checking that the Teutonics aren't already in a Northern Crusade
-						NOT = { any_war = { using_cb = northern_crusade_war } }
 					}
 				}
 				# Checking that ROOT doesn't already own the associated Kingdom of THIS title

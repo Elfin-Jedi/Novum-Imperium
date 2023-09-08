@@ -1240,15 +1240,11 @@ targetted_decisions = {
 			
 			hidden_tooltip = {			
 				OR = {
-					AND = {
-						FROM = {
-							ai = yes
-							relative_power = { who = ROOT power = 0.66 }
-						}
+					FROM = {
+						ai = yes
+						relative_power = { who = ROOT power = 0.66 }
 					}
-					AND = {
-						FROM = { ai = no }
-					}
+					FROM = { ai = no }
 				}
 			}
 	

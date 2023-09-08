@@ -470,12 +470,7 @@ calculate_prisoner_price = {
 	}
 	additive_modifier = {
 		value = 15
-		FROMFROM = { check_variable = { which = slave_year_count value == 15 } }
-		localisation_key = MDVE_AIReason_Modifier_FROMFROM_Years_Enslaved
-	}
-	additive_modifier = {
-		value = 15
-		FROMFROM = { check_variable = { which = slave_year_count value > 15 } }
+		FROMFROM = { check_variable = { which = slave_year_count value >= 15 } }
 		localisation_key = MDVE_AIReason_Modifier_FROMFROM_Years_Enslaved
 	}
 	#Mental disabilities

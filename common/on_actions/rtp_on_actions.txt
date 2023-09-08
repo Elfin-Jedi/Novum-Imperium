@@ -4,9 +4,6 @@ on_startup = {
 
 		RTPsounds.1 #Sounds Startup
 
-		RTPdestiny.100 #Ping Charlemagne - Start
-		RTPdestiny.1000 #Nuking Iceland
-
 		RTPcheck.104 #Capital Check
 		RTPcheck.111 #Ambition Check
 		RTPcheck.116 #Focus Prestige Hit
@@ -101,7 +98,6 @@ on_bi_yearly_pulse = {
 
 on_five_year_pulse = {
 	events = {
-		RTPdestiny.105 #Ping Settling Iceland - Start
 	}
 
 	random_events = {
@@ -166,11 +162,6 @@ on_artifact_inheritance = {
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder = {
 	events = {
-		RTPdestiny.101 #Ping Charlemagne - Lotharingia Conquest
-		RTPdestiny.102 #Ping Charlemagne - Saxony Conquest
-		RTPdestiny.103 #Ping Charlemagne - Bavaria Conquest
-		RTPdestiny.104 #Ping Charlemagne - Italy Conquest
-
 		RTPcheck.103 #Laws Check
 	}
 }
@@ -178,11 +169,6 @@ on_new_holder = {
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder_inheritance = {
 	events = {
-		RTPdestiny.101 #Ping Charlemagne - Lotharingia Conquest
-		RTPdestiny.102 #Ping Charlemagne - Saxony Conquest
-		RTPdestiny.103 #Ping Charlemagne - Bavaria Conquest
-		RTPdestiny.104 #Ping Charlemagne - Italy Conquest
-
 		RTPcheck.103 #Laws Check
 	}
 }
@@ -190,11 +176,6 @@ on_new_holder_inheritance = {
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder_usurpation = {
 	events = {
-		RTPdestiny.101 #Ping Charlemagne - Lotharingia Conquest
-		RTPdestiny.102 #Ping Charlemagne - Saxony Conquest
-		RTPdestiny.103 #Ping Charlemagne - Bavaria Conquest
-		RTPdestiny.104 #Ping Charlemagne - Italy Conquest
-
 		RTPcheck.103 #Laws Check
 	}
 }

@@ -185,7 +185,7 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion_group = pagan_group }
+			NOT = { novum_imperium_is_pagan = yes }
 		}
 		modifier = {
 			factor = 0
@@ -196,13 +196,10 @@
 		}
 		modifier = {
 			factor = 0
-			OR = { 
-				is_offmap_tag_including_dead = offmap_china
-				location = { 
-					NOR = { 
-						region = world_europe 
-						region = world_steppe
-					} 
+			location = { 
+				NOR = { 
+					region = world_europe 
+					region = world_steppe
 				}
 			}
 		}
@@ -281,15 +278,12 @@
 		}
 		modifier = {
 			factor = 0
-			OR = { 
-				is_offmap_tag_including_dead = offmap_china
-				location = { 
-					NOR = { 
-						region = world_middle_east_jerusalem 
-						region = world_middle_east_arabia
-						region = world_africa
-					} 
-				}
+			location = {
+				NOR = { 
+					region = world_middle_east_jerusalem 
+					region = world_middle_east_arabia
+					region = world_africa
+				} 
 			}
 		}
 		modifier = {
@@ -316,12 +310,9 @@
 		}
 		modifier = {
 			factor = 0
-			OR = { 
-				is_offmap_tag_including_dead = offmap_china
-				location = { 
-					NOT = { 
-						region = world_steppe
-					} 
+			location = { 
+				NOT = { 
+					region = world_steppe
 				}
 			}
 		}
@@ -349,8 +340,7 @@
 		}
 		modifier = {
 			factor = 0
-			OR = { 
-				is_offmap_tag_including_dead = offmap_china
+			OR = {
 				capital_scope = { 
 					NOT = { 
 						port = yes 
@@ -411,15 +401,12 @@
 		}
 		modifier = {
 			factor = 0
-			OR = { 
-				is_offmap_tag_including_dead = offmap_china
-				location = { 
-					NOR = { 
-						region = world_middle_east_jerusalem 
-						region = world_middle_east_arabia
-						region = world_africa
-					} 
-				}
+			location = { 
+				NOR = { 
+					region = world_middle_east_jerusalem 
+					region = world_middle_east_arabia
+					region = world_africa
+				} 
 			}
 		}
 		modifier = {
@@ -453,12 +440,9 @@
 		}
 		modifier = {
 			factor = 0
-			OR = { 
-				is_offmap_tag_including_dead = offmap_china
-				location = { 
-					NOT = { 
-						region = world_steppe
-					} 
+			location = { 
+				NOT = { 
+					region = world_steppe
 				}
 			}
 		}
@@ -516,7 +500,7 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion_group = pagan_group }
+			NOT = { novum_imperium_is_pagan = yes }
 			NOT = { death_sacrificed_trigger = yes }
 		}
 		modifier = {
@@ -564,14 +548,11 @@
 		}
 		modifier = {
 			factor = 0
-			OR = { 
-				is_offmap_tag_including_dead = offmap_china
-				location = { 
-					NOR = { 
-						region = world_europe_west  
-						region = world_europe_south
-					} 
-				}
+			location = { 
+				NOR = { 
+					region = world_europe_west  
+					region = world_europe_south
+				} 
 			}
 		}
 		modifier = {
@@ -594,14 +575,11 @@
 		}
 		modifier = {
 			factor = 0
-			OR = { 
-				is_offmap_tag_including_dead = offmap_china
-				location = { 
-					NOR = { 
-						region = world_europe_east   
-						region = world_europe_north
-					} 
-				}
+			location = { 
+				NOR = { 
+					region = world_europe_east   
+					region = world_europe_north
+				} 
 			}
 		}
 		modifier = {

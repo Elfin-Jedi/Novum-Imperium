@@ -389,7 +389,7 @@ targetted_decisions = {
 					any_liege = { holy_order = yes }
 					AND = {
 						NOR = {
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 							religion_group = muslim
 						}
 						OR = {
@@ -608,19 +608,17 @@ targetted_decisions = {
 					trigger = { dynasty = FROM }
 					custom_tooltip = { #Matilde's Bloodline
 						text = BLOODLINE_EASIER_VOWS_TOOLTIP
-						AND = { 
-							FROM = { 
-								dynasty = ROOT
-								any_owned_bloodline = {
-									has_bloodline_flag = bloodline_easy_monks
-									bloodline_is_active_for = PREV
-								}
+						FROM = { 
+							dynasty = ROOT
+							any_owned_bloodline = {
+								has_bloodline_flag = bloodline_easy_monks
+								bloodline_is_active_for = PREV
 							}
-							ROOT = { 
-								any_owned_bloodline = {
-									has_bloodline_flag = bloodline_easy_monks
-									bloodline_is_active_for = PREV
-								}
+						}
+						ROOT = { 
+							any_owned_bloodline = {
+								has_bloodline_flag = bloodline_easy_monks
+								bloodline_is_active_for = PREV
 							}
 						}
 					}
@@ -1163,7 +1161,10 @@ targetted_decisions = {
 		ai_check_interval = 12
 
 		from_potential = {
-			is_ruler = yes
+			OR = {
+				is_ruler = yes
+				has_landed_title = c_landless_t
+			}
 			has_regent = no
 			has_children = yes
 		}
@@ -1592,6 +1593,7 @@ targetted_decisions = {
 		potential = {
 			OR = {
 				is_ruler = yes
+				has_landed_title = c_landless_t
 				NOR = {
 					# Spouse can take them out of hiding
 					any_spouse = {
@@ -2093,7 +2095,10 @@ targetted_decisions = {
 		ai_check_interval = 12
 
 		from_potential = {
-			is_ruler = yes
+			OR = {
+				is_ruler = yes
+				has_landed_title = c_landless_t
+			}
 			has_regent = no
 		}
 

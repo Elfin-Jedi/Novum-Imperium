@@ -3143,7 +3143,7 @@ character_event = {
 	option = { # Not scared - non-pagan
 		name = monogatari.191.a
 		trigger = {
-			NOT = { religion_group = pagan_group }
+			NOT = { novum_imperium_is_pagan = yes }
 		}
 		random_list = {
 			50 = { prestige = 5 }
@@ -3162,7 +3162,7 @@ character_event = {
 	option = { # Not scared - pagan
 		name = monogatari.191.b
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 		random_list = {
 			50 = { prestige = 5 }
@@ -3232,14 +3232,14 @@ character_event = {
 	option = { # Silly tales - non-pagan
 		name = monogatari.192.a
 		trigger = {
-			NOT = { religion_group = pagan_group }
+			NOT = { novum_imperium_is_pagan = yes }
 		}
 		piety = 5
 	}		
 	option = { # Silly tales - pagan
 		name = monogatari.192.b
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 		prestige = 5
 	}		
@@ -3247,7 +3247,7 @@ character_event = {
 		name = monogatari.192.c
 		if = {
 			limit = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			piety = 5
 		}
@@ -3331,12 +3331,12 @@ character_event = {
 					trait = content
 					AND = {
 						trait = zealous
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 				NAND = {
 					trait = zealous
-					NOT = { religion_group = pagan_group }
+					NOT = { novum_imperium_is_pagan = yes }
 				}
 				NOT = { trait = gluttonous }
 				NOT = { trait = cynical }
@@ -3763,7 +3763,7 @@ character_event = {
 	
 	trigger = {
 		year = 1300
-		NOT = { religion_group = pagan_group }
+		NOT = { novum_imperium_is_pagan = yes }
 		culture_group = byzantine
 		NOT = { has_global_flag = VIET_plethon_spawned }
 		prestige = 100
@@ -4088,7 +4088,7 @@ character_event = {
 	trigger = {
 		NOT = { year = 1100 }
 		OR = {
-			NOT = { religion_group = pagan_group }
+			NOT = { novum_imperium_is_pagan = yes }
 			religion = hellenic_pagan
 			religion = hellenic_pagan_reformed
 			religion = titan_pagan		# Ancient Religions Reborn compatibility

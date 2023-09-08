@@ -320,28 +320,28 @@ settlement_decisions = {
 		effect = {
 			hidden_tooltip = {
 				location = {
-					add_to_extra_holding = { type = hospital building = hospital_building_1 }
-					add_to_extra_holding = { type = hospital building = hospital_building_2 }
-					add_to_extra_holding = { type = hospital building = hospital_building_3 }
-					add_to_extra_holding = { type = hospital building = hospital_building_4 }
-					add_to_extra_holding = { type = hospital building = hospital_building_5 }
-					add_to_extra_holding = { type = hospital building = leper_colony_1 }
-					add_to_extra_holding = { type = hospital building = soup_kitchen_1 }
-					add_to_extra_holding = { type = hospital building = chapel_1 }
-					add_to_extra_holding = { type = hospital building = translation_house_1 }
-					add_to_extra_holding = { type = hospital building = pilgrims_inn_1 }
-					add_to_extra_holding = { type = hospital building = library_1 }
-					add_to_extra_holding = { type = hospital building = pharmacology_laboratory_1 }
-					add_to_extra_holding = { type = hospital building = medical_academy_1 }
-					add_to_extra_holding = { type = hospital building = observatory_1 }
+					add_to_extra_holding = { type = { hospital building = hospital_building_1 } }
+					add_to_extra_holding = { type = { hospital building = hospital_building_2 } }
+					add_to_extra_holding = { type = { hospital building = hospital_building_3 } }
+					add_to_extra_holding = { type = { hospital building = hospital_building_4 } }
+					add_to_extra_holding = { type = { hospital building = hospital_building_5 } }
+					add_to_extra_holding = { type = { hospital building = leper_colony_1 } }
+					add_to_extra_holding = { type = { hospital building = soup_kitchen_1 } }
+					add_to_extra_holding = { type = { hospital building = chapel_1 } }
+					add_to_extra_holding = { type = { hospital building = translation_house_1 } }
+					add_to_extra_holding = { type = { hospital building = pilgrims_inn_1 } }
+					add_to_extra_holding = { type = { hospital building = library_1 } }
+					add_to_extra_holding = { type = { hospital building = pharmacology_laboratory_1 } }
+					add_to_extra_holding = { type = { hospital building = medical_academy_1 } }
+					add_to_extra_holding = { type = { hospital building = observatory_1 } }
 
 					if = {
 						limit = {
 							has_global_flag = kuru_ec_flag_using_mods_faiterials_buildings
 						}
-						add_to_extra_holding = { type = hospital building = hs_f_treatment_camps }
-						add_to_extra_holding = { type = hospital building = hs_f_treatment_clinics }
-						add_to_extra_holding = { type = hospital building = hs_f_cremation_site }
+						add_to_extra_holding = { type = { hospital building = hs_f_treatment_camps } }
+						add_to_extra_holding = { type = { hospital building = hs_f_treatment_clinics } }
+						add_to_extra_holding = { type = { hospital building = hs_f_cremation_site } }
 					}
 
 					set_province_flag = kuru_ec_has_fully_upgraded_hospital
@@ -777,8 +777,8 @@ settlement_decisions = {
 					if = {
 						limit = {
 							OR = {
-								culture_group = indo_aryan_group
-								culture_group = dravidian_group
+								culture_group = indoaryan
+								culture_group = dravidian
 							}
 						}
 						add_building = ca_culture_indian_1
@@ -1320,7 +1320,7 @@ settlement_decisions = {
 						add_building = tb_steppe_stable_3
 						add_building = tb_steppe_stable_4
 					}
-					else if = {
+					else_if = {
 						limit = {
 							location = {
 								terrain = desert
@@ -1799,28 +1799,28 @@ hospital_decisions = {
 		effect = {
 			hidden_tooltip = {
 				location = {
-					add_to_extra_holding = { type = hospital building = hospital_building_1 }
-					add_to_extra_holding = { type = hospital building = hospital_building_2 }
-					add_to_extra_holding = { type = hospital building = hospital_building_3 }
-					add_to_extra_holding = { type = hospital building = hospital_building_4 }
-					add_to_extra_holding = { type = hospital building = hospital_building_5 }
-					add_to_extra_holding = { type = hospital building = leper_colony_1 }
-					add_to_extra_holding = { type = hospital building = soup_kitchen_1 }
-					add_to_extra_holding = { type = hospital building = chapel_1 }
-					add_to_extra_holding = { type = hospital building = translation_house_1 }
-					add_to_extra_holding = { type = hospital building = pilgrims_inn_1 }
-					add_to_extra_holding = { type = hospital building = library_1 }
-					add_to_extra_holding = { type = hospital building = pharmacology_laboratory_1 }
-					add_to_extra_holding = { type = hospital building = medical_academy_1 }
-					add_to_extra_holding = { type = hospital building = observatory_1 }
+					add_to_extra_holding = { type = { hospital building = hospital_building_1 } }
+					add_to_extra_holding = { type = { hospital building = hospital_building_2 } }
+					add_to_extra_holding = { type = { hospital building = hospital_building_3 } }
+					add_to_extra_holding = { type = { hospital building = hospital_building_4 } }
+					add_to_extra_holding = { type = { hospital building = hospital_building_5 } }
+					add_to_extra_holding = { type = { hospital building = leper_colony_1 } }
+					add_to_extra_holding = { type = { hospital building = soup_kitchen_1 } }
+					add_to_extra_holding = { type = { hospital building = chapel_1 } }
+					add_to_extra_holding = { type = { hospital building = translation_house_1 } }
+					add_to_extra_holding = { type = { hospital building = pilgrims_inn_1 } }
+					add_to_extra_holding = { type = { hospital building = library_1 } }
+					add_to_extra_holding = { type = { hospital building = pharmacology_laboratory_1 } }
+					add_to_extra_holding = { type = { hospital building = medical_academy_1 } }
+					add_to_extra_holding = { type = { hospital building = observatory_1 } }
 
 					if = {
 						limit = {
 							has_global_flag = kuru_ec_flag_using_mods_faiterials_buildings
 						}
-						add_to_extra_holding = { type = hospital building = hs_f_treatment_camps }
-						add_to_extra_holding = { type = hospital building = hs_f_treatment_clinics }
-						add_to_extra_holding = { type = hospital building = hs_f_cremation_site }
+						add_to_extra_holding = { type = { hospital building = hs_f_treatment_camps } }
+						add_to_extra_holding = { type = { hospital building = hs_f_treatment_clinics } }
+						add_to_extra_holding = { type = { hospital building = hs_f_cremation_site } }
 					}
 
 					set_province_flag = kuru_ec_has_fully_upgraded_hospital
@@ -1904,15 +1904,15 @@ fort_decisions = {
 						limit = {
 							has_global_flag = kuru_ec_flag_using_mods_faiterials_buildings
 						}
-						add_to_extra_holding = { type = fort building = fr_f_barracks_1 }
-						add_to_extra_holding = { type = fort building = fr_f_barracks_2 }
-						add_to_extra_holding = { type = fort building = fr_f_barracks_3 }
-						add_to_extra_holding = { type = fort building = fr_f_towers }
-						add_to_extra_holding = { type = fort building = fr_f_stone_towers }
-						add_to_extra_holding = { type = fort building = fr_f_stone_walls }
-						add_to_extra_holding = { type = fort building = fr_f_cmd_tent }
-						add_to_extra_holding = { type = fort building = fr_f_cmd_building }
-						add_to_extra_holding = { type = fort building = fr_f_ballista_tower }
+						add_to_extra_holding = { type = { fort building = fr_f_barracks_1 } }
+						add_to_extra_holding = { type = { fort building = fr_f_barracks_2 } }
+						add_to_extra_holding = { type = { fort building = fr_f_barracks_3 } }
+						add_to_extra_holding = { type = { fort building = fr_f_towers } }
+						add_to_extra_holding = { type = { fort building = fr_f_stone_towers } }
+						add_to_extra_holding = { type = { fort building = fr_f_stone_walls } }
+						add_to_extra_holding = { type = { fort building = fr_f_cmd_tent } }
+						add_to_extra_holding = { type = { fort building = fr_f_cmd_building } }
+						add_to_extra_holding = { type = { fort building = fr_f_ballista_tower } }
 					}
 
 					set_province_flag = kuru_ec_has_fully_upgraded_fort
@@ -2061,30 +2061,30 @@ trade_post_decisions = {
 							}
 							port = yes
 						}
-						add_to_extra_holding = { type = trade_post building = tr_port_1 }
-						add_to_extra_holding = { type = trade_post building = tr_port_2 }
-						add_to_extra_holding = { type = trade_post building = tr_port_3 }
-						add_to_extra_holding = { type = trade_post building = tr_enclave_1 }
-						add_to_extra_holding = { type = trade_post building = tr_enclave_2 }
-						add_to_extra_holding = { type = trade_post building = tr_enclave_3 }
-						add_to_extra_holding = { type = trade_post building = tr_garrison_1 }
-						add_to_extra_holding = { type = trade_post building = tr_garrison_2 }
-						add_to_extra_holding = { type = trade_post building = tr_garrison_3 }
+						add_to_extra_holding = { type = { trade_post building = tr_port_1 } }
+						add_to_extra_holding = { type = { trade_post building = tr_port_2 } }
+						add_to_extra_holding = { type = { trade_post building = tr_port_3 } }
+						add_to_extra_holding = { type = { trade_post building = tr_enclave_1 } }
+						add_to_extra_holding = { type = { trade_post building = tr_enclave_2 } }
+						add_to_extra_holding = { type = { trade_post building = tr_enclave_3 } }
+						add_to_extra_holding = { type = { trade_post building = tr_garrison_1 } }
+						add_to_extra_holding = { type = { trade_post building = tr_garrison_2 } }
+						add_to_extra_holding = { type = { trade_post building = tr_garrison_3 } }
 					}
 
 					if = {
 						limit = {
 							trade_route = silk_road
 						}
-						add_to_extra_holding = { type = trade_post building = tr_silk_road_1 }
-						add_to_extra_holding = { type = trade_post building = tr_silk_road_2 }
-						add_to_extra_holding = { type = trade_post building = tr_silk_road_3 }
-						add_to_extra_holding = { type = trade_post building = trade_offices_1 }
-						add_to_extra_holding = { type = trade_post building = trade_offices_2 }
-						add_to_extra_holding = { type = trade_post building = trade_offices_3 }
-						add_to_extra_holding = { type = trade_post building = mercenary_garrison_1 }
-						add_to_extra_holding = { type = trade_post building = mercenary_garrison_2 }
-						add_to_extra_holding = { type = trade_post building = mercenary_garrison_3 }
+						add_to_extra_holding = { type = { trade_post building = tr_silk_road_1 } }
+						add_to_extra_holding = { type = { trade_post building = tr_silk_road_2 } }
+						add_to_extra_holding = { type = { trade_post building = tr_silk_road_3 } }
+						add_to_extra_holding = { type = { trade_post building = trade_offices_1 } }
+						add_to_extra_holding = { type = { trade_post building = trade_offices_2 } }
+						add_to_extra_holding = { type = { trade_post building = trade_offices_3 } }
+						add_to_extra_holding = { type = { trade_post building = mercenary_garrison_1 } }
+						add_to_extra_holding = { type = { trade_post building = mercenary_garrison_2 } }
+						add_to_extra_holding = { type = { trade_post building = mercenary_garrison_3 } }
 
 						if = {
 							limit = {
@@ -2096,9 +2096,9 @@ trade_post_decisions = {
 									}
 								}
 							}
-							add_to_extra_holding = { type = trade_post building = radhanite_quarter_1 }
-							add_to_extra_holding = { type = trade_post building = radhanite_quarter_2 }
-							add_to_extra_holding = { type = trade_post building = radhanite_quarter_3 }
+							add_to_extra_holding = { type = { trade_post building = radhanite_quarter_1 } }
+							add_to_extra_holding = { type = { trade_post building = radhanite_quarter_2 } }
+							add_to_extra_holding = { type = { trade_post building = radhanite_quarter_3 } }
 						}
 					}
 
@@ -2107,9 +2107,9 @@ trade_post_decisions = {
 							trade_route = trans_saharan_trade_route
 							trans_saharan_trade_post_market_trigger = yes
 						}
-						add_to_extra_holding = { type = trade_post_building = tr_sahara_1 }
-						add_to_extra_holding = { type = trade_post_building = tr_sahara_2 }
-						add_to_extra_holding = { type = trade_post_building = tr_sahara_3 }
+						add_to_extra_holding = { type = { trade_post_building = tr_sahara_1 } }
+						add_to_extra_holding = { type = { trade_post_building = tr_sahara_2 } }
+						add_to_extra_holding = { type = { trade_post_building = tr_sahara_3 } }
 					}
 
 					if = {
@@ -2117,9 +2117,9 @@ trade_post_decisions = {
 							trade_route = trans_saharan_trade_route
 							trans_saharan_trade_post_gold_mine_trigger = yes
 						}
-						add_to_extra_holding = { type = trade_post_building = tr_gold_mine_1 }
-						add_to_extra_holding = { type = trade_post_building = tr_gold_mine_2 }
-						add_to_extra_holding = { type = trade_post_building = tr_gold_mine_3 }
+						add_to_extra_holding = { type = { trade_post_building = tr_gold_mine_1 } }
+						add_to_extra_holding = { type = { trade_post_building = tr_gold_mine_2 } }
+						add_to_extra_holding = { type = { trade_post_building = tr_gold_mine_3 } }
 					}
 
 					if = {
@@ -2130,7 +2130,7 @@ trade_post_decisions = {
 								province_id = 916
 							}
 						}
-						add_to_extra_holding = { type = trade_post_building = tr_salt_mine_1 }
+						add_to_extra_holding = { type = { trade_post_building = tr_salt_mine_1 } }
 					}
 
 					if = {
@@ -2138,7 +2138,7 @@ trade_post_decisions = {
 							trade_route = trans_saharan_trade_route
 							province_id = 911
 						}
-						add_to_extra_holding = { type = trade_post_building = tr_cloth_production_1 }
+						add_to_extra_holding = { type = { trade_post_building = tr_cloth_production_1 } }
 					}
 
 					if = {
@@ -2149,9 +2149,9 @@ trade_post_decisions = {
 								is_patrician = yes
 							}
 						}
-						add_to_extra_holding = { type = trade_post building = tp_f_warehouse }
-						add_to_extra_holding = { type = trade_post building = tp_f_navy_supplies }
-						add_to_extra_holding = { type = trade_post building = tp_f_merchant_hall }
+						add_to_extra_holding = { type = { trade_post building = tp_f_warehouse } }
+						add_to_extra_holding = { type = { trade_post building = tp_f_navy_supplies } }
+						add_to_extra_holding = { type = { trade_post building = tp_f_merchant_hall } }
 					}
 
 					set_province_flag = kuru_ec_has_fully_upgraded_trade_post

@@ -61,10 +61,8 @@ character_event = {
 		name = optdexpandedtraits.21
 
 		trigger = {
-			AND = {
-				trait = sympathy_judaism
-				has_dlc = "Sons of Abraham"
-			}
+			trait = sympathy_judaism
+			has_dlc = "Sons of Abraham"
 		}
 
 		ai_chance = {

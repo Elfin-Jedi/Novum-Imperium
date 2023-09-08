@@ -96,7 +96,7 @@ character_event = {
 		}
 		# Pagans get k_england default (on some maps [vanilla], they have a pagan_coa definition)
 		if = {
-			limit = { religion_group = pagan_group }
+			limit = { novum_imperium_is_pagan = yes }
 			k_england = { reset_coa = THIS }
 			break = yes
 		}

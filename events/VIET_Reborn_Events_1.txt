@@ -1054,7 +1054,7 @@ province_event = {
 		name = VIETmisc.8010.b
 		trigger = {
 			owner = {
-				NOT = { religion_group = pagan_group }
+				NOT = { novum_imperium_is_pagan = yes }
 				NOT = { religion_group = indian_group }
 			}
 		}
@@ -1951,8 +1951,8 @@ character_event = {
 			culture_group = iranian
 			culture_group = arabic
 			culture_group = byzantine
-			culture_group = indo_aryan_group
-			culture_group = dravidian_group
+			culture_group = indoaryan
+			culture_group = dravidian
 			any_demesne_province = {
 				OR = {
 					region = custom_eastern_edge_of_map
@@ -1965,7 +1965,7 @@ character_event = {
 				}
 			}		
 		}
-		NOT = { culture_group = chinese_group } #doesn't make sense for Chinese to think about Chinese culture from a foreigner's perspective
+		NOT = { culture_group = chinese } #doesn't make sense for Chinese to think about Chinese culture from a foreigner's perspective
 		#NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		NOT = { has_alternate_start_parameter = { key = culture_names value = random } }
 	}
@@ -2624,8 +2624,8 @@ character_event = {
 	trigger = {
 		#in_command = no
 		NOT = { religion_group = indian_group }
-		NOT = { culture_group = indo_aryan_group }
-		NOT = { culture_group = dravidian_group }
+		NOT = { culture_group = indoaryan }
+		NOT = { culture_group = dravidian }
 		capital_scope = {
 			NOR = {
 				region = custom_eastern_edge_of_map
@@ -4699,8 +4699,8 @@ character_event = {
 	trigger = {
 		in_command = no
 		OR = {
-			culture_group = indo_aryan_group
-			culture_group = dravidian_group
+			culture_group = indoaryan
+			culture_group = dravidian
 			culture_group = iranian
 			culture_group = serindian # exists in WtWSMS
 		}
@@ -7163,7 +7163,7 @@ character_event = {
 		
 	trigger = {
 		in_command = no
-		religion_group = pagan_group
+		novum_imperium_is_pagan = yes
 		is_reformed_religion = no
 		NOT = { has_character_flag = VIET_pagan_future }
 		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
@@ -13354,7 +13354,7 @@ character_event = {
 	
 	trigger = {
 		in_command = no
-		#NOT = { religion_group = pagan_group }
+		#NOT = { novum_imperium_is_pagan = yes }
 		capital_scope = {
 			OR = {
 				region = world_europe_west
@@ -13733,7 +13733,7 @@ character_event = {
 character_event = {
 	id = VIETmisc.8137
 	desc = VIETmisc.8137.desc
-	picture = GFX_evt_castle_construction_indo_aryan_group
+	picture = GFX_evt_castle_construction_indoaryan
 	
 	is_triggered_only = yes
 	
@@ -13748,12 +13748,12 @@ character_event = {
 		#in_command = no
 		#NOT = { has_character_flag = VIET_what_do_when_grown_up }
 		OR = {
-			culture_group = indo_aryan_group
-			culture_group = dravidian_group
+			culture_group = indoaryan
+			culture_group = dravidian
 			capital_scope = {
 				OR = {
-					culture_group = indo_aryan_group
-					culture_group = dravidian_group
+					culture_group = indoaryan
+					culture_group = dravidian
 					region = world_india
 				}
 			}
@@ -16806,8 +16806,8 @@ character_event = {
 	trigger = {
 		in_command = no
 		OR = {
-			culture_group = indo_aryan_group
-			culture_group = dravidian_group
+			culture_group = indoaryan
+			culture_group = dravidian
 			capital_scope = {
 				OR = {
 					region = world_india
@@ -16921,8 +16921,8 @@ character_event = {
 	trigger = {
 		#in_command = no
 		OR = {
-			culture_group = indo_aryan_group
-			culture_group = dravidian_group
+			culture_group = indoaryan
+			culture_group = dravidian
 			capital_scope = {
 				region = world_india
 			}
@@ -16968,7 +16968,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			NOT = { culture_group = dravidian_group }
+			NOT = { culture_group = dravidian }
 			capital_scope = {
 				OR = {
 					region = world_india_rajastan				
@@ -17008,8 +17008,8 @@ character_event = {
 			culture_group = serindian # exists in WtWSMS
 			culture_group = arabic
 			culture_group = byzantine
-			culture_group = indo_aryan_group
-			culture_group = dravidian_group
+			culture_group = indoaryan
+			culture_group = dravidian
 			capital_scope = {
 				region = world_steppe_tarim
 				region = world_persia
@@ -17144,8 +17144,8 @@ character_event = {
 			culture_group = serindian # exists in WtWSMS
 			culture_group = arabic
 			culture_group = byzantine
-			culture_group = indo_aryan_group
-			culture_group = dravidian_group
+			culture_group = indoaryan
+			culture_group = dravidian
 			capital_scope = {
 				OR = {
 					region = world_steppe_tarim
@@ -17424,8 +17424,8 @@ character_event = {
 		in_command = no
 		#Typical used in India and Eastern Iranian regions for food
 		NOR = {
-			culture_group = indo_aryan_group
-			culture_group = dravidian_group
+			culture_group = indoaryan
+			culture_group = dravidian
 			culture_group = iranian
 			capital_scope = {
 				region = world_india
@@ -18383,8 +18383,8 @@ character_event = {
 			culture_group = north_african
 			culture_group = arabic
 			culture_group = iranian
-			culture_group = indo_aryan_group
-			culture_group = dravidian_group
+			culture_group = indoaryan
+			culture_group = dravidian
 			culture_group = serindian # exists in WtWSMS
 			culture = turkish
 		}
@@ -18671,8 +18671,8 @@ character_event = {
 	trigger = {
 		in_command = no
 		OR = {
-			culture_group = indo_aryan_group
-			culture_group = dravidian_group
+			culture_group = indoaryan
+			culture_group = dravidian
 			culture_group = iranian
 			culture_group = serindian # exists in WtWSMS
 		}
@@ -19695,7 +19695,7 @@ character_event = {
 character_event = {
 	id = VIETmisc.8188
 	desc = VIETmisc.8188.desc
-	picture = GFX_evt_moorish_decor_indo_aryan_group
+	picture = GFX_evt_moorish_decor_indoaryan
 	
 	is_triggered_only = yes
 
@@ -19708,8 +19708,8 @@ character_event = {
 	trigger = {
 		in_command = no
 		OR = {
-			culture_group = indo_aryan_group
-			culture_group = dravidian_group
+			culture_group = indoaryan
+			culture_group = dravidian
 			capital_scope = {
 				region = world_india
 			}
@@ -20196,8 +20196,8 @@ character_event = {
 				is_sinosphere_large_trigger = yes
 				culture_group = arabic
 				culture_group = iranian
-				culture_group = indo_aryan_group
-				culture_group = dravidian_group
+				culture_group = indoaryan
+				culture_group = dravidian
 				culture_group = byzantine
 				culture_group = north_african
 				religion_group = muslim
@@ -20378,8 +20378,8 @@ character_event = {
 				is_sinosphere_large_trigger = yes
 				culture_group = arabic
 				culture_group = iranian
-				culture_group = indo_aryan_group
-				culture_group = dravidian_group
+				culture_group = indoaryan
+				culture_group = dravidian
 				culture_group = byzantine
 				culture_group = north_african
 				religion_group = muslim
@@ -25007,7 +25007,7 @@ character_event = {
 		}	
 		#NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		NOT = { has_alternate_start_parameter = { key = culture_names value = random } }	
-		NOT = { culture_group = chinese_group }
+		NOT = { culture_group = chinese }
 	}
 	
 	weight_multiplier = {
@@ -26691,7 +26691,7 @@ character_event = {
 				culture_group = altaic
 				culture_group = magyar
 				culture_group = finno_ugric
-				culture_group = chinese_group
+				culture_group = chinese
 				culture_group = tibetan_group
 				culture_group = iranian
 				culture_group = east_slavic
@@ -28795,7 +28795,7 @@ character_event = {
 	
 	trigger = {
 		NOT = {
-			culture_group = chinese_group
+			culture_group = chinese
 		}
 		#in_command = no
 		#NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
@@ -37625,7 +37625,7 @@ character_event = {
 			culture = norman
 			culture_group = arabic
 			culture = coptic
-			culture_group = chinese_group
+			culture_group = chinese
 		}
 	}
 	
@@ -37722,7 +37722,7 @@ character_event = {
 			culture = norman
 			culture_group = arabic
 			culture = coptic
-			culture_group = chinese_group
+			culture_group = chinese
 		}
 	}
 	
@@ -39152,8 +39152,8 @@ character_event = {
 		#NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		NOT = { has_alternate_start_parameter = { key = culture_names value = random } }
 		OR = {
-			culture_group = indo_aryan_group
-			culture_group = dravidian_group
+			culture_group = indoaryan
+			culture_group = dravidian
 		}
 	}
 	
@@ -40743,8 +40743,8 @@ character_event = {
 		#NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		NOT = { has_alternate_start_parameter = { key = culture_names value = random } }
 		OR = {
-			culture_group = indo_aryan_group
-			culture_group = dravidian_group
+			culture_group = indoaryan
+			culture_group = dravidian
 			capital_scope = {
 				region = world_india
 			}

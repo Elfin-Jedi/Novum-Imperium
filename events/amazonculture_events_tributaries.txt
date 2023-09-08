@@ -81,19 +81,6 @@ namespace = AmzCul
 					}
 				}
 				
-				if = {
-					limit = { has_landed_title = c_amisos }
-					event_target:themiskyran_tributary = {
-						grant_title = c_amisos
-					}
-					d_armeniacon = { set_preferred_capital = c_sinope }
-				}
-				if = {
-					limit = { has_landed_title = c_sinope }
-					event_target:themiskyran_tributary = {
-						grant_title = c_sinope
-					}
-				}
 				make_tributary = { 
 					who = event_target:themiskyran_tributary
 					tributary_type = protectorate
@@ -193,30 +180,6 @@ namespace = AmzCul
 					}
 				}
 				
-				if = {
-					limit = { has_landed_title = c_uppland }
-					event_target:valkyrie_tributary = {
-						grant_title = c_uppland
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_gastrikland }
-					event_target:valkyrie_tributary = {
-						grant_title = c_gastrikland
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_aland }
-					event_target:valkyrie_tributary = {
-						grant_title = c_aland
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_sodermanland }
-					event_target:valkyrie_tributary = {
-						grant_title = c_sodermanland
-					}
-				}
 				make_tributary = { 
 					who = event_target:valkyrie_tributary
 					tributary_type = protectorate
@@ -316,30 +279,6 @@ namespace = AmzCul
 					}
 				}
 				
-				if = {
-					limit = { has_landed_title = c_crimea }
-					event_target:scythian_tributary = {
-						grant_title = c_crimea
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_lukomorie }
-					event_target:scythian_tributary = {
-						grant_title = c_lukomorie
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_lower_dniepr }
-					event_target:scythian_tributary = {
-						grant_title = c_lower_dniepr
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_lower_don }
-					event_target:scythian_tributary = {
-						grant_title = c_lower_don
-					}
-				}
 				make_tributary = { 
 					who = event_target:scythian_tributary
 					tributary_type = protectorate
@@ -439,30 +378,6 @@ namespace = AmzCul
 					}
 				}
 				
-				if = {
-					limit = { has_landed_title = c_nishapur }
-					event_target:parthian_tributary = {
-						grant_title = c_nishapur
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_tus }
-					event_target:parthian_tributary = {
-						grant_title = c_tus
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_birjand }
-					event_target:parthian_tributary = {
-						grant_title = c_birjand
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_qohistan }
-					event_target:parthian_tributary = {
-						grant_title = c_qohistan
-					}
-				}
 				make_tributary = { 
 					who = event_target:parthian_tributary
 					tributary_type = protectorate
@@ -562,25 +477,6 @@ namespace = AmzCul
 					}
 				}
 				
-				if = {
-					limit = { has_landed_title = c_makuria }
-					event_target:kushite_tributary = {
-						grant_title = c_makuria
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_atbara }
-					event_target:kushite_tributary = {
-						grant_title = c_atbara
-					}
-					d_nubia = { set_preferred_capital = c_atbara }
-				}
-				if = {
-					limit = { has_landed_title = c_napata }
-					event_target:kushite_tributary = {
-						grant_title = c_napata
-					}
-				}
 				make_tributary = { 
 					who = event_target:kushite_tributary
 					tributary_type = protectorate
@@ -680,36 +576,6 @@ namespace = AmzCul
 					}
 				}
 				
-				if = {
-					limit = { has_landed_title = c_tunis }
-					event_target:carthaginian_tributary = {
-						grant_title = c_tunis
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_kairwan }
-					event_target:carthaginian_tributary = {
-						grant_title = c_kairwan
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_mahdia }
-					event_target:carthaginian_tributary = {
-						grant_title = c_mahdia
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_medjerda }
-					event_target:carthaginian_tributary = {
-						grant_title = c_medjerda
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_bizerte }
-					event_target:carthaginian_tributary = {
-						grant_title = c_bizerte
-					}
-				}
 				make_tributary = { 
 					who = event_target:carthaginian_tributary
 					tributary_type = protectorate
@@ -809,30 +675,6 @@ namespace = AmzCul
 					}
 				}
 				
-				if = {
-					limit = { has_landed_title = c_firenze }
-					event_target:etruscan_tributary = {
-						grant_title = c_firenze
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_arezzo }
-					event_target:etruscan_tributary = {
-						grant_title = c_arezzo
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_lucca }
-					event_target:etruscan_tributary = {
-						grant_title = c_lucca
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_siena }
-					event_target:etruscan_tributary = {
-						grant_title = c_siena
-					}
-				}
 				make_tributary = { 
 					who = event_target:etruscan_tributary
 					tributary_type = protectorate
@@ -932,18 +774,6 @@ namespace = AmzCul
 					}
 				}
 				
-				if = {
-					limit = { has_landed_title = c_norfolk }
-					event_target:pritani_tributary = {
-						grant_title = c_norfolk
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_suffolk }
-					event_target:pritani_tributary = {
-						grant_title = c_suffolk
-					}
-				}
 				make_tributary = { 
 					who = event_target:pritani_tributary
 					tributary_type = protectorate
@@ -1043,25 +873,6 @@ namespace = AmzCul
 					}
 				}
 				
-				if = {
-					limit = { has_landed_title = c_zeta }
-					event_target:illyrian_tributary = {
-						grant_title = c_zeta
-					}
-					d_dioclea = { set_preferred_capital = c_zeta }
-				}
-				if = {
-					limit = { has_landed_title = c_ragusa }
-					event_target:illyrian_tributary = {
-						grant_title = c_ragusa
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_travunia }
-					event_target:illyrian_tributary = {
-						grant_title = c_travunia
-					}
-				}
 				make_tributary = { 
 					who = event_target:illyrian_tributary
 					tributary_type = protectorate
@@ -1161,42 +972,6 @@ namespace = AmzCul
 					}
 				}
 				
-				if = {
-					limit = { has_landed_title = c_praha }
-					event_target:valascan_tributary = {
-						grant_title = c_praha
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_domazlice }
-					event_target:valascan_tributary = {
-						grant_title = c_domazlice
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_litomerice }
-					event_target:valascan_tributary = {
-						grant_title = c_litomerice
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_plzen }
-					event_target:valascan_tributary = {
-						grant_title = c_plzen
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_zatec }
-					event_target:valascan_tributary = {
-						grant_title = c_zatec
-					}
-				}
-				if = {
-					limit = { has_landed_title = c_hradec }
-					event_target:valascan_tributary = {
-						grant_title = c_hradec
-					}
-				}
 				make_tributary = { 
 					who = event_target:valascan_tributary
 					tributary_type = protectorate

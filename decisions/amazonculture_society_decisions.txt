@@ -413,15 +413,13 @@
 			society_rank = 4
 			prisoner = no
 			NOT = { has_character_flag = heroine_quest_decision_flag }
-			AND = {
-				any_artifact = {
-					quality = 4
-					has_artifact_flag = combat_weapon
-				}
-				any_artifact = {
-					quality = 4
-					has_artifact_flag = armor
-				}
+			any_artifact = {
+				quality = 4
+				has_artifact_flag = combat_weapon
+			}
+			any_artifact = {
+				quality = 4
+				has_artifact_flag = armor
 			}
 			OR = {
 				trait = shieldmaiden

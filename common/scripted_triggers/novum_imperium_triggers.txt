@@ -4,20 +4,20 @@ novum_imperium_is_pagan = {
 		OR = {
             religion_group = pagan_group
 			religion_group = african_group
+			religion_group = mesoamerican_rel_group
+			religion_group = andean_rel_group
+			LI_pagan_trigger = yes
         }
 	}
 }
 
 is_organized_religion_trigger = {
 	OR = {
-		NOR = {
-			religion_group = pagan_group
-			religion_group = african_group
-		}
 		is_reformed_religion = yes
 		religion = britannic_pagan
 		religion = aten_pagan
 		religion = promethean_pagan
 		religion = bori
+		organized_religion_trigger = yes
 	}
 }

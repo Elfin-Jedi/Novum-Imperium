@@ -5850,6 +5850,14 @@ join_prev_monastic_order_society = {
 		join_society = monastic_order_benedictine
 	}
 	if = {
+		limit = { PREV = { society_member_of = monastic_order_jesuit } }
+		join_society = monastic_order_jesuit
+	}
+	if = {
+		limit = { PREV = { society_member_of = monastic_order_ursuline } }
+		join_society = monastic_order_ursuline
+	}
+	if = {
 		limit = { PREV = { society_member_of = monastic_order_dominican } }
 		join_society = monastic_order_dominican
 	}
@@ -29011,92 +29019,6 @@ raiding_adventurer_war_declaration_effect = {
 	}
 }
 
-
-#Grace effects
-add_grace_trivial_effect = {
-	add_offmap_currency = {
-		offmap = offmap_china
-		value = 100
-	}
-}
-
-add_grace_minor_effect = {
-	add_offmap_currency = {
-		offmap = offmap_china
-		value = 200
-	}
-}
-
-add_grace_medium_effect = {
-	add_offmap_currency = {
-		offmap = offmap_china
-		value = 300
-	}	
-}
-
-add_grace_major_effect = {
-	add_offmap_currency = {
-		offmap = offmap_china
-		value = 500
-	}
-}
-
-add_grace_massive_effect = {
-	add_offmap_currency = {
-		offmap = offmap_china
-		value = 1000
-	}
-}
-
-add_grace_super_huge_effect = {
-	add_offmap_currency = {
-		offmap = offmap_china
-		value = 2000
-	}
-}
-
-detract_grace_trivial_effect = {
-	add_offmap_currency = {
-		offmap = offmap_china
-		value = -100
-	}
-}
-
-detract_grace_minor_effect = {
-	add_offmap_currency = {
-		offmap = offmap_china
-		value = -200
-	}
-}
-
-detract_grace_medium_effect = {
-	add_offmap_currency = {
-		offmap = offmap_china
-		value = -300
-	}
-}
-
-detract_grace_major_effect = {
-	add_offmap_currency = {
-		offmap = offmap_china
-		value = -500
-	}
-}
-
-detract_grace_massive_effect = {
-	add_offmap_currency = {
-		offmap = offmap_china
-		value = -1000
-	}
-}
-
-detract_grace_super_huge_effect = {
-	add_offmap_currency = {
-		offmap = offmap_china
-		value = -2000
-	}
-}
-
 set_china_boon_cd_effect = {  #added via tribute to China decisions... Always one year.
 	add_character_modifier = {
 		hidden = yes
@@ -38410,7 +38332,7 @@ add_random_commander_trait_effect = {
 				NOT = {
 					trait = logistics_expert
 				}
-				culture_group = chinese_group
+				culture_group = chinese
 			}
 			add_trait = logistics_expert
 		}
@@ -38419,7 +38341,7 @@ add_random_commander_trait_effect = {
 				NOT = {
 					trait = master_of_flame
 				}
-				culture_group = chinese_group
+				culture_group = chinese
 			}
 			add_trait = master_of_flame
 		}
@@ -38428,7 +38350,7 @@ add_random_commander_trait_effect = {
 				NOT = {
 					trait = sapper
 				}
-				culture_group = chinese_group
+				culture_group = chinese
 			}
 			add_trait = sapper
 		}
@@ -38437,7 +38359,7 @@ add_random_commander_trait_effect = {
 				NOT = {
 					trait = levy_coordinator
 				}
-				culture_group = chinese_group
+				culture_group = chinese
 			}
 			add_trait = levy_coordinator
 		}
@@ -38643,7 +38565,7 @@ add_same_commander_trait_as_FROM = {
 				NOT = {
 					trait = logistics_expert
 				}
-				culture_group = chinese_group
+				culture_group = chinese
 				FROM = { trait = logistics_expert }
 			}
 			add_trait = logistics_expert
@@ -38653,7 +38575,7 @@ add_same_commander_trait_as_FROM = {
 				NOT = {
 					trait = master_of_flame
 				}
-				culture_group = chinese_group
+				culture_group = chinese
 				FROM = { trait = master_of_flame }
 			}
 			add_trait = master_of_flame
@@ -38663,7 +38585,7 @@ add_same_commander_trait_as_FROM = {
 				NOT = {
 					trait = sapper
 				}
-				culture_group = chinese_group
+				culture_group = chinese
 				FROM = { trait = sapper }
 			}
 			add_trait = sapper
@@ -38673,7 +38595,7 @@ add_same_commander_trait_as_FROM = {
 				NOT = {
 					trait = levy_coordinator
 				}
-				culture_group = chinese_group
+				culture_group = chinese
 				FROM = { trait = levy_coordinator }
 			}
 			add_trait = levy_coordinator
@@ -42517,7 +42439,7 @@ give_random_character_modifier_effect = {
 				OR = {
 					is_female = no
 					trait = brave
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					is_nomadic = yes
 					religion = buddhist
 					religion = bogomilist

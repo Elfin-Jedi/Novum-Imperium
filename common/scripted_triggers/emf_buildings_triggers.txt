@@ -13,7 +13,10 @@ emf_province_is_steppe_culture = {
 			culture = old_hungarian
 		}
 		trigger_else = {
-			culture_group = magyar
+			OR = {
+				culture = hungarian
+				culture = szekely
+			}
 		}
 		culture = romanian
 	}
@@ -217,14 +220,14 @@ emf_province_is_north_germanic_building_culture = {
 		culture = frisian # SWMH only
 		# West Germanic group
 		culture = english
-		culture = frisian # Vanilla only
 		culture = dutch # Vanilla only
 	}
 }
 
 emf_province_is_hungarian_building_culture = {
 	OR = {
-		culture_group = magyar
+		culture = hungarian
+		culture = szekely
 		culture_group = west_slavic
 	}
 	NOR = {
@@ -300,7 +303,7 @@ emf_province_is_ethopian_building_culture = {
 emf_province_is_west_african_building_culture = {
 	OR = {
 		culture_group = west_african
-		culture_group = central_african
+		culture_group = congo_nigerian
 		culture = daju
 		culture = canarian
 	}
@@ -336,8 +339,8 @@ emf_province_is_jewish_building_culture = {
 
 emf_province_is_indian_building_culture = {
 	OR = {
-		culture_group = indo_aryan_group
-		culture_group = dravidian_group
+		culture_group = indoaryan
+		culture_group = dravidian
 		culture_group = elephant_group
 	}
 }
@@ -355,7 +358,7 @@ emf_province_is_suebi_building_culture = {
 }
 
 emf_province_is_chinese_han_building_culture = {
-	culture_group = chinese_group
+	culture_group = chinese
 }
 
 emf_province_is_altaic_jurchen_building_culture = {

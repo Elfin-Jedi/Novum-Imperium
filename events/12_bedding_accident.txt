@@ -12,10 +12,8 @@ character_event = {
 	only_capable = yes
 
 	trigger = {
-		AND = {
-			has_lover = yes
-			diplomacy <= 16
-		}
+		has_lover = yes
+		diplomacy <= 16
 	}
 
 	mean_time_to_happen = {

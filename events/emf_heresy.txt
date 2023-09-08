@@ -5098,7 +5098,7 @@ long_character_event = {
 		trigger = {
 			ROOT = {
 				controls_religion = yes
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				NOR = {
 					dynasty = FROM
 					is_married = FROM
@@ -5168,7 +5168,7 @@ long_character_event = {
 					}
 					AND = {
 						controls_religion = yes
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -5210,7 +5210,7 @@ long_character_event = {
 					}
 					AND = {
 						controls_religion = yes
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -5253,7 +5253,7 @@ long_character_event = {
 					}
 					AND = {
 						controls_religion = yes
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -5297,7 +5297,7 @@ long_character_event = {
 					}
 					AND = {
 						controls_religion = yes
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -5341,7 +5341,7 @@ long_character_event = {
 					}
 					AND = {
 						controls_religion = yes
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -5386,7 +5386,7 @@ long_character_event = {
 					}
 					AND = {
 						controls_religion = yes
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -5432,7 +5432,7 @@ long_character_event = {
 					}
 					AND = {
 						controls_religion = yes
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -5479,7 +5479,7 @@ long_character_event = {
 					}
 					AND = {
 						controls_religion = yes
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -5527,7 +5527,7 @@ long_character_event = {
 					}
 					AND = {
 						controls_religion = yes
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -5574,7 +5574,7 @@ long_character_event = {
 					}
 					AND = {
 						controls_religion = yes
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -5983,7 +5983,7 @@ long_character_event = {
 			character = FROM
 			ROOT = {
 				controls_religion = yes
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				NOR = {
 					sibling = FROM
 					is_father = FROM
@@ -6062,7 +6062,7 @@ long_character_event = {
 					}
 					AND = {
 						controls_religion = yes
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -6113,7 +6113,7 @@ long_character_event = {
 					}
 					AND = {
 						controls_religion = yes
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -6165,7 +6165,7 @@ long_character_event = {
 					}
 					AND = {
 						controls_religion = yes
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -6218,7 +6218,7 @@ long_character_event = {
 					}
 					AND = {
 						controls_religion = yes
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -6271,7 +6271,7 @@ long_character_event = {
 					}
 					AND = {
 						controls_religion = yes
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -6325,7 +6325,7 @@ long_character_event = {
 					}
 					AND = {
 						controls_religion = yes
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -6380,7 +6380,7 @@ long_character_event = {
 					}
 					AND = {
 						controls_religion = yes
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -6436,7 +6436,7 @@ long_character_event = {
 					}
 					AND = {
 						controls_religion = yes
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -6493,7 +6493,7 @@ long_character_event = {
 					}
 					AND = {
 						controls_religion = yes
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -6535,7 +6535,7 @@ long_character_event = {
 							religion_group = muslim
 							religion_group = jewish_group
 							religion_group = zoroastrian_group
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 						}
 					}
 				}

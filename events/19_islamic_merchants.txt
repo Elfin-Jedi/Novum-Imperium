@@ -52,10 +52,8 @@ character_event = {
 		name = optdexpandedtraits.19
 
 		trigger = {
-			AND = {
-				trait = sympathy_islam
-				has_dlc = "The Sword of Islam"
-			}
+			trait = sympathy_islam
+			has_dlc = "The Sword of Islam"
 		}
 		ai_chance = {
 			factor = 10
