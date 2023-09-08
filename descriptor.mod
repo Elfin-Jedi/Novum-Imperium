@@ -1,4 +1,3 @@
-name="Novum Imperium: A Mod Merger"
+name="Novum-Imperium: A Mod Merger"
 path="mod/Novum-Imperium"
-user_dir="Novum Imperium"
-
+user_dir="Novum-Imperium"
