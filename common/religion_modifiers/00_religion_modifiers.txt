@@ -104,6 +104,16 @@ won_religious_revolt = {
 	years = 10
 }
 
+won_decadence_invasion = {
+	authority = 5
+	years = 10
+}
+
+lost_decadence_invasion = {
+	authority = -10
+	years = 10
+}
+
 ruler_converted_from = {
 	authority = -3
 	years = 20
@@ -160,6 +170,12 @@ temple_looted = {
 looted_infidel_temple = {
 	authority = 1
 	years = 4
+}
+
+# Religious Council
+held_rel_authority_council = {
+	authority = 10
+	years = 10
 }
 
 papacy_instituted = {

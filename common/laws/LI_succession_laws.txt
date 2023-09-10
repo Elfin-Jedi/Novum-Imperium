@@ -1,0 +1,105 @@
+succession_laws = {
+	# Kurultai
+	kurultai = {
+		dynasty_opinion = 5
+		potential = {
+			holder_scope = {
+				is_nomadic = yes
+				culture_group = altaic # Only Mongols vote!
+				#any_owned_bloodline = {
+					#bloodline_is_active_for = PREV
+					#has_bloodline_flag = genghis_khan_line
+				#}
+			}
+			real_tier = emperor
+		}
+		effect = {
+			succession = {
+				base_type = tanistry # DO NOT USE EG OR FEUDAL ELECTIVE!
+				voting_rules = kurultai
+			}
+			elective_voting_rules = kurultai
+		}
+		revoke_allowed = {
+			always = no
+		}	
+	}
+	
+	# Special Tenno law
+	tenno = {
+		dynasty_opinion = 5 # No penalties from children since you can't ever change the law
+		potential = {
+			holder_scope = {
+				religion = nihon_shinto
+				controls_religion = yes
+			}
+		}
+		effect = {
+			succession = {
+				base_type = tanistry # DO NOT USE EG OR FEUDAL ELECTIVE!
+				voting_rules = tenno_succession
+			}
+			elective_voting_rules = tenno_succession
+		}
+		revoke_allowed = {
+			always = no
+		}	
+	}
+	bureaucratic_succession = {
+		dynasty_opinion = -5
+		potential = {
+			higher_tier_than = count
+			controls_religion = no
+			holder_scope = {
+				OR = {
+					independent = no
+					PREV = {
+						is_primary_holder_title = no
+					}
+				}
+				OR = {
+					top_liege = {
+						OR = {
+							government = chinese_imperial_government
+							government = chinese_vassal_government
+							government = japanese_imperial_government
+							liege_before_war = {
+								OR = {
+									government = chinese_imperial_government
+									government = chinese_vassal_government
+									government = japanese_imperial_government
+								}
+							}
+						}
+					}
+					liege_before_war = {
+						OR = {
+							government = chinese_imperial_government
+							government = chinese_vassal_government
+							government = japanese_imperial_government
+						}
+					}
+				}
+			}
+		}
+		allow = {
+			holder_scope = {
+				war = no
+				OR = {
+					government = chinese_imperial_government
+					government = chinese_vassal_government
+				}
+			}
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = bureaucratic_succession_voting
+			}
+			elective_voting_rules = bureaucratic_succession_voting
+		}
+		revoke_allowed = {
+			always = no
+		}	
+	}
+}

@@ -8,7 +8,7 @@ tribal = {
 				region = emf_region_etelkoz
 			}
 			FROM = {
-				religion = tengri_pagan
+				religion_group = tengri_group
 				trigger_if = {
 					limit = { emf_has_swmh = yes }
 					culture = old_hungarian

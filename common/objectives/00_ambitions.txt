@@ -2490,6 +2490,64 @@ obj_improve_intrigue = {
 	}
 }
 
+# Decadence
+obj_lower_decadence = {
+	type = character
+	
+	potential = {
+		is_adult = yes
+		is_ruler = yes
+		uses_decadence = yes
+	}
+	
+	allow = {
+		decadence = 60
+		NOT = { trait = incapable }
+	}
+	chance = {
+		factor = 100
+		
+		modifier = {
+			factor = 1.25
+			trait = diligent
+		}
+		modifier = {
+			factor = 1.25
+			trait = naive_appeaser
+		}
+		modifier = {
+			factor = 1.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.01
+			trait = content
+		}
+		modifier = {
+			factor = 0.01
+			trait = slothful
+		}
+	}
+	success = {
+		NOT = { decadence = 60 }
+	}
+	abort = {
+		trait = incapable
+	}
+	abort_effect = {
+		clr_character_flag = berber_life
+		clr_character_flag = bandit_camp
+		clr_character_flag = dromedary_hunt
+	}
+	effect = {
+		prestige = 100
+		clr_character_flag = lower_decadence_success
+		clr_character_flag = berber_life
+		clr_character_flag = bandit_camp
+		clr_character_flag = dromedary_hunt
+	}
+}
+
 # Become King
 obj_become_king = {
 	type = character
@@ -2627,7 +2685,7 @@ obj_become_king = {
 			factor = 0.01
 			OR = {
 				religion = finnish_pagan
-				religion = west_african_pagan
+				religion = mande_pagan
 			}
 		}
 	}
@@ -2750,7 +2808,7 @@ obj_buddhist_stop_drinking = {
 	}
 	abort = {
 		OR = {
-			NOT = { religion = buddhist }
+			ascetic_religions_trigger = no
 			is_incapable = yes
 			trait = infirm
 			AND = {
@@ -2782,7 +2840,7 @@ obj_buddhist_reject_empty_pleasures = {
 	type = character
 
 	potential = {
-		religion = buddhist
+		ascetic_religions_trigger = yes
 		trait = hedonist
 	}
 
@@ -2822,7 +2880,7 @@ obj_buddhist_reject_empty_pleasures = {
 	}
 	abort = {
 		OR = {
-			NOT = { religion = buddhist }
+			ascetic_religions_trigger = no
 			is_incapable = yes
 			trait = infirm
 			AND = {
@@ -2854,7 +2912,7 @@ obj_buddhist_abstain_sexual_excess = {
 	type = character
 
 	potential = {
-		religion = buddhist
+		ascetic_religions_trigger = yes
 		trait = lustful
 	}
 
@@ -2894,7 +2952,7 @@ obj_buddhist_abstain_sexual_excess = {
 	}
 	abort = {
 		OR = {
-			NOT = { religion = buddhist }
+			ascetic_religions_trigger = no
 			is_incapable = yes
 			trait = infirm
 			AND = {
@@ -2926,7 +2984,7 @@ obj_buddhist_reject_cruelty = {
 	type = character
 
 	potential = {
-		religion = buddhist
+		ascetic_religions_trigger = yes
 		OR = {
 			trait = impaler
 			trait = cruel
@@ -2970,7 +3028,7 @@ obj_buddhist_reject_cruelty = {
 	}
 	abort = {
 		OR = {
-			NOT = { religion = buddhist }
+			ascetic_religions_trigger = no
 			is_incapable = yes
 			trait = infirm
 			AND = {
@@ -3002,7 +3060,7 @@ obj_buddhist_temperance_food = {
 	type = character
 
 	potential = {
-		religion = buddhist
+		ascetic_religions_trigger = yes
 		trait = gluttonous
 	}
 
@@ -3042,7 +3100,7 @@ obj_buddhist_temperance_food = {
 	}
 	abort = {
 		OR = {
-			NOT = { religion = buddhist }
+			ascetic_religions_trigger = no
 			is_incapable = yes
 			trait = infirm
 			AND = {
@@ -3074,7 +3132,7 @@ obj_buddhist_reject_greed = {
 	type = character
 
 	potential = {
-		religion = buddhist
+		ascetic_religions_trigger = yes
 		trait = greedy
 	}
 
@@ -3114,7 +3172,7 @@ obj_buddhist_reject_greed = {
 	}
 	abort = {
 		OR = {
-			NOT = { religion = buddhist }
+			ascetic_religions_trigger = no
 			is_incapable = yes
 			trait = infirm
 			AND = {
@@ -3146,7 +3204,7 @@ obj_buddhist_reject_envy = {
 	type = character
 
 	potential = {
-		religion = buddhist
+		ascetic_religions_trigger = yes
 		trait = envious
 	}
 
@@ -3187,7 +3245,7 @@ obj_buddhist_reject_envy = {
 	}
 	abort = {
 		OR = {
-			NOT = { religion = buddhist }
+			ascetic_religions_trigger = no
 			is_incapable = yes
 			trait = infirm
 			AND = {
@@ -3219,7 +3277,7 @@ obj_buddhist_reject_hate = {
 	type = character
 
 	potential = {
-		religion = buddhist
+		ascetic_religions_trigger = yes
 		trait = wroth
 	}
 
@@ -3259,7 +3317,7 @@ obj_buddhist_reject_hate = {
 	}
 	abort = {
 		OR = {
-			NOT = { religion = buddhist }
+			ascetic_religions_trigger = no
 			is_incapable = yes
 			trait = infirm
 			AND = {
@@ -3291,7 +3349,7 @@ obj_buddhist_reject_pride = {
 	type = character
 
 	potential = {
-		religion = buddhist
+		ascetic_religions_trigger = yes
 		trait = proud
 	}
 
@@ -3331,7 +3389,7 @@ obj_buddhist_reject_pride = {
 	}
 	abort = {
 		OR = {
-			NOT = { religion = buddhist }
+			ascetic_religions_trigger = no
 			is_incapable = yes
 			trait = infirm
 			AND = {
@@ -3363,7 +3421,7 @@ obj_buddhist_defeat_fear = {
 	type = character
 
 	potential = {
-		religion = buddhist
+		ascetic_religions_trigger = yes
 		OR = {
 			trait = paranoid
 			trait = craven
@@ -3408,7 +3466,7 @@ obj_buddhist_defeat_fear = {
 	}
 	abort = {
 		OR = {
-			NOT = { religion = buddhist }
+			ascetic_religions_trigger = no
 			is_incapable = yes
 			trait = infirm
 			AND = {
@@ -3440,7 +3498,7 @@ obj_become_paragon_of_enlightenment = {
 	type = character
 
 	potential = {
-		religion_group = indian_group
+		ascetic_religions_trigger = yes
 	}
 
 	allow = {
@@ -3501,7 +3559,7 @@ obj_become_paragon_of_enlightenment = {
 			is_incapable = yes
 			is_ruler = no
 			has_impious_trait_trigger = yes
-			NOT = { religion_group = indian_group }
+			ascetic_religions_trigger = no
 			AND = {
 				ai = yes
 				NOT = { has_character_modifier = emf_objective_timer }
@@ -3748,6 +3806,14 @@ obj_see_the_realm_prosper = {
 		OR = {
 			is_incapable = yes
 			is_playable = no
+			any_war = {
+				NOR = {
+					using_cb = peasant_revolt
+					using_cb = heretic_revolt
+					using_cb = religious_revolt
+					using_cb = liberation_revolt
+				}
+			}
 			AND = {
 				is_landed = no
 				is_patrician = no

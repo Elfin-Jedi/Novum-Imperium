@@ -614,7 +614,8 @@ promethean_expansion = {
 					}
 					OR = {
 						religion_group = christian
-						religion = hellenic_pagan
+						religion_group = graecoroman_group
+						religion_group = indohelen_group
 					}
 				}
 				hidden_tooltip = { character_event = { id = LoR.30 days = 12 } }

@@ -85,8 +85,8 @@ character_event = {
 			bon_reformed = { persistent_event_target:emf_religion_dummy_character = { is_alive = yes } }
 			bon = { persistent_event_target:emf_religion_dummy_character = { is_alive = yes } }
 			zoroastrian = { persistent_event_target:emf_religion_dummy_character = { is_alive = yes } }
-			mazdaki = { persistent_event_target:emf_religion_dummy_character = { is_alive = yes } }
-			zurvanist = { persistent_event_target:emf_religion_dummy_character = { is_alive = yes } }
+			mazdakism = { persistent_event_target:emf_religion_dummy_character = { is_alive = yes } }
+			zurvanism = { persistent_event_target:emf_religion_dummy_character = { is_alive = yes } }
 			manichean = { persistent_event_target:emf_religion_dummy_character = { is_alive = yes } }
 			mandaean = { persistent_event_target:emf_religion_dummy_character = { is_alive = yes } }
 			yazidi = { persistent_event_target:emf_religion_dummy_character = { is_alive = yes } }
@@ -1369,10 +1369,10 @@ character_event = {
 		}
 
 		if = {
-			limit = { NOT = { mazdaki = { persistent_event_target:emf_religion_dummy_character = { is_alive = yes } } } }
+			limit = { NOT = { mazdakism = { persistent_event_target:emf_religion_dummy_character = { is_alive = yes } } } }
 			create_character = {
 				dynasty = none
-				religion = mazdaki
+				religion = mazdakism
 				trait = emf_isis_courtier
 				random_traits = no
 			}
@@ -1392,10 +1392,10 @@ character_event = {
 		}
 
 		if = {
-			limit = { NOT = { zurvanist = { persistent_event_target:emf_religion_dummy_character = { is_alive = yes } } } }
+			limit = { NOT = { zurvanism = { persistent_event_target:emf_religion_dummy_character = { is_alive = yes } } } }
 			create_character = {
 				dynasty = none
-				religion = zurvanist
+				religion = zurvanism
 				trait = emf_isis_courtier
 				random_traits = no
 			}
@@ -1764,8 +1764,8 @@ character_event = {
 		bon_reformed = { emf_set_default_flags_for_bon_reformed = yes }
 		bon = { emf_set_default_flags_for_bon = yes }
 		zoroastrian = { emf_set_default_flags_for_zoroastrian = yes }
-		mazdaki = { emf_set_default_flags_for_mazdaki = yes }
-		zurvanist = { emf_set_default_flags_for_zurvanist = yes }
+		mazdakism = { emf_set_default_flags_for_mazdakism = yes }
+		zurvanism = { emf_set_default_flags_for_zurvanism = yes }
 		manichean = { emf_set_default_flags_for_manichean = yes }
 		mandaean = { emf_set_default_flags_for_mandaean = yes }
 		yazidi = { emf_set_default_flags_for_yazidi = yes }

@@ -10,10 +10,10 @@ law_groups = {
 		law_type = realm
 		allowed_for_councillors = no
 	}
-	centralization = {
-		law_type = realm
-		allowed_for_councillors = no
-	}
+	#centralization = { # moved to demesne_laws
+	#	law_type = realm
+	#	allowed_for_councillors = no
+	#}
 	administration = {
 		law_type = realm
 		allowed_for_councillors = no
@@ -145,10 +145,15 @@ laws = {
 								emf_unreformed_pagan = yes
 							}
 							has_religion_feature = religion_cosmopolitan
-							religion = hellenic_pagan
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 							trigger_if = {
 								limit = { has_religion_features = no }
-								religion = hellenic_pagan_reformed
+								OR = {
+									religion_group = graecoroman_group
+									religion_group = indohelen_group
+								}
+								is_organized_religion_trigger = yes
 							}
 							has_religion_feature = religion_syncretic_christian
 							has_religion_feature = religion_syncretic_muslim
@@ -221,11 +226,19 @@ laws = {
 							limit = { has_religion_features = no }
 							trigger_if = { # Needed so there aren't two entries for "Is NOT Hellenic Pagan" in the tooltip
 								limit = { has_global_flag = hellenic_reformation }
-								religion = hellenic_pagan_reformed
+								OR = {
+									religion_group = graecoroman_group
+									religion_group = indohelen_group
+								}
+								is_organized_religion_trigger = yes
 							}
 							trigger_else = {
 								hidden_tooltip = {
-									religion = hellenic_pagan_reformed
+									OR = {
+										religion_group = graecoroman_group
+										religion_group = indohelen_group
+									}
+									is_organized_religion_trigger = yes
 								}
 							}
 						}
@@ -288,10 +301,15 @@ laws = {
 								emf_unreformed_pagan = yes
 							}
 							has_religion_feature = religion_cosmopolitan
-							religion = hellenic_pagan
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 							trigger_if = {
 								limit = { has_religion_features = no }
-								religion = hellenic_pagan_reformed
+								OR = {
+									religion_group = graecoroman_group
+									religion_group = indohelen_group
+								}
+								is_organized_religion_trigger = yes
 							}
 							has_religion_feature = religion_syncretic_christian
 							has_religion_feature = religion_syncretic_muslim
@@ -1111,443 +1129,6 @@ laws = {
 		}
 	}
 
-	# CENTRALIZATION LAWS
-	##############################
-
-	centralization_0 = {
-		group = centralization
-		default = yes
-
-		allow = {
-			OR = {
-				has_law = centralization_1
-				custom_tooltip = {
-					text = emf_laws_ctt_no_other_laws_passed
-					hidden_tooltip = {
-						NOR = {
-							has_law = centralization_0
-							has_law = centralization_1
-							has_law = centralization_2
-							has_law = centralization_3
-							has_law = centralization_4
-						}
-					}
-				}
-			}
-		}
-		potential = {
-			higher_tier_than = COUNT
-			is_nomadic = no
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.8
-			}
-			modifier = {
-				factor = 0
-				owner = {
-					# Lower 1->0
-					over_vassal_limit < -5
-					over_max_demesne_size >= -1
-				}
-			}
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = centralization_0
-				revoke_law = centralization_1
-				revoke_law = centralization_2
-				revoke_law = centralization_3
-				revoke_law = centralization_4
-			}
-		}
-
-		vassal_limit = 20
-	}
-
-	centralization_1 = {
-		group = centralization
-
-		allow = {
-			OR = {
-				has_law = centralization_0
-				has_law = centralization_2
-			}
-			OR = {
-				owner = { is_tribal = no }
-				has_law = tribal_organization_1
-				has_law = tribal_organization_2
-				has_law = tribal_organization_3
-				has_law = tribal_organization_4
-			}
-		}
-		potential = {
-			higher_tier_than = COUNT
-			is_nomadic = no
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.9
-			}
-			modifier = {
-				factor = 0
-				trigger_if = { # Raise 0->1
-					limit = { has_law = centralization_0 }
-					owner = {
-						over_vassal_limit >= -10
-						over_max_demesne_size < -2
-					}
-				}
-				trigger_else_if = { # Lower 2->1
-					limit = { has_law = centralization_2 }
-					owner = {
-						over_vassal_limit < -5
-						over_max_demesne_size >= -1
-					}
-				}
-				trigger_else = {
-					always = no
-				}
-			}
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = centralization_0
-				revoke_law = centralization_1
-				revoke_law = centralization_2
-				revoke_law = centralization_3
-				revoke_law = centralization_4
-			}
-		}
-
-		vassal_limit = 10
-		demesne_size = 1
-	}
-
-	centralization_2 = {
-		group = centralization
-
-		allow = {
-			OR = {
-				has_law = centralization_1
-				has_law = centralization_3
-			}
-			OR = {
-				owner = { is_tribal = no }
-				has_law = tribal_organization_2
-				has_law = tribal_organization_3
-				has_law = tribal_organization_4
-			}
-		}
-		potential = {
-			higher_tier_than = COUNT
-			is_nomadic = no
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				trigger_if = { # Raise 1->2
-					limit = { has_law = centralization_1 }
-					owner = {
-						over_vassal_limit >= -10
-						over_max_demesne_size < -2
-					}
-				}
-				trigger_else_if = { # Lower 3->2
-					limit = { has_law = centralization_3 }
-					owner = {
-						over_vassal_limit < -5
-						over_max_demesne_size >= -1
-					}
-				}
-				trigger_else = {
-					always = no
-				}
-			}
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = centralization_0
-				revoke_law = centralization_1
-				revoke_law = centralization_2
-				revoke_law = centralization_3
-				revoke_law = centralization_4
-			}
-		}
-
-		vassal_limit = 0
-		demesne_size = 2
-	}
-
-	centralization_3 = {
-		group = centralization
-
-		allow = {
-			OR = {
-				has_law = centralization_2
-				has_law = centralization_4
-			}
-			OR = {
-				owner = { is_tribal = no }
-				has_law = tribal_organization_3
-				has_law = tribal_organization_4
-			}
-		}
-		potential = {
-			higher_tier_than = COUNT
-			is_nomadic = no
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.9
-			}
-			modifier = {
-				factor = 0
-				trigger_if = { # Raise 2->3
-					limit = { has_law = centralization_2 }
-					owner = {
-						over_vassal_limit >= -10
-						over_max_demesne_size < -2
-					}
-				}
-				trigger_else_if = { # Lower 4->3
-					limit = { has_law = centralization_4 }
-					owner = {
-						over_vassal_limit < -5
-						over_max_demesne_size >= -1
-					}
-				}
-				trigger_else = {
-					always = no
-				}
-			}
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = centralization_0
-				revoke_law = centralization_1
-				revoke_law = centralization_2
-				revoke_law = centralization_3
-				revoke_law = centralization_4
-			}
-		}
-
-		vassal_limit = -10
-		demesne_size = 3
-	}
-
-	centralization_4 = {
-		group = centralization
-
-		allow = {
-			has_law = centralization_3
-			OR = {
-				owner = { is_tribal = no }
-				has_law = tribal_organization_4
-			}
-		}
-		potential = {
-			higher_tier_than = COUNT
-			is_nomadic = no
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.8
-			}
-			modifier = { # Raise 3->4
-				factor = 0
-				owner = {
-					over_vassal_limit >= -10
-					over_max_demesne_size < -2
-				}
-			}
-		}
-		effect = {
-			hidden_tooltip = {
-				revoke_law = centralization_0
-				revoke_law = centralization_1
-				revoke_law = centralization_2
-				revoke_law = centralization_3
-				revoke_law = centralization_4
-			}
-		}
-
-		vassal_limit = -20
-		demesne_size = 4
-	}
-
-	# ADMINISTRATION
-	##############################
-
-	# Early Feudal
-	administration_0 = {
-		group = administration
-		default = yes
-
-		potential = {
-			higher_tier_than = BARON
-			owner = { is_feudal = yes }
-		}
-		allow = {
-			has_law = administration_1
-		}
-		effect = {
-			set_allow_free_duchy_revokation = no
-			if = {
-				limit = {
-					emf_laws_potential_not_for_byzantium = yes
-					OR = {
-						AND = {
-							emf_laws_succ_basic_potential = yes
-							holder_scope = {
-								is_feudal = yes
-								OR = {
-									emf_unreformed_pagan = no
-									religion = hellenic_pagan
-								}
-							}
-						}
-						has_flag = alternate_byz
-					}
-					holder_scope = {
-						is_patrician = no
-						NOT = { culture = basque }
-					}
-					NOT = { emf_laws_crownlaw_title_high_ca_plus = yes }
-				}
-				custom_tooltip = { text = emf_laws_ctt_disables_succ_primogeniture }
-			}
-			if = {
-				limit = {
-					emf_laws_potential_not_for_byzantium = yes
-					holder_scope = {
-						NOT = { religion_group = muslim }
-						OR = {
-							independent = yes
-							NOT = { any_liege = { holy_order = yes } }
-						}
-						is_patrician = no
-						OR = {
-							culture = mongol
-							emf_unreformed_pagan = no
-						}
-					}
-					OR = {
-						AND = {
-							holder_scope = { is_feudal = yes }
-							OR = {
-								is_landless_type_title = no
-								temporary = yes
-							}
-						}
-						AND = {
-							is_nomadic = no
-							OR = {
-								title = e_mongol_empire
-								title = e_golden_horde
-								title = e_il-khanate
-							}
-						}
-					}
-					is_primary_type_title = no
-					NOT = { emf_laws_crownlaw_title_high_ca_plus = yes }
-				}
-				custom_tooltip = { text = emf_laws_ctt_disables_succ_ultimogeniture }
-			}
-			if = {
-				limit = {
-					emf_laws_succ_basic_potential = yes
-					emf_laws_potential_not_for_byzantium = yes
-					owner = {
-						is_feudal = yes
-						OR = {
-							emf_unreformed_pagan = no
-							religion = hellenic_pagan
-						}
-					}
-					NOT = { emf_laws_crownlaw_title_high_ca_plus = yes }
-				}
-				custom_tooltip = { text = emf_laws_ctt_disables_succ_dynastic_elective }
-			}
-			if = {
-				limit = {
-					emf_laws_potential_not_for_byzantium = yes
-					OR = {
-						is_landless_type_title = no
-						is_tribal_type_title = yes
-						temporary = yes
-					}
-					is_primary_type_title = no
-					owner = {
-						is_patrician = no
-						OR = {
-							independent = yes
-							NOT = { any_liege = { holy_order = yes } }
-						}
-						NOR = {
-							religion_group = muslim
-							religion_group = indian_group
-						}
-						OR = {
-							emf_unreformed_pagan = no
-							religion = hellenic_pagan
-						}
-					}
-					NOR = {
-						emf_laws_no_crown_law_title = yes
-						emf_laws_crownlaw_title_medium_ca_plus = yes
-					}
-				}
-				custom_tooltip = { text = emf_laws_ctt_disables_succ_seniority }
-			}
-			if = {
-				limit = {
-					has_dlc = "Reapers"
-					has_dlc = "Conclave"
-				}
-				custom_tooltip = { text = emf_laws_ctt_vassals_who_disobey_interference_not_traitors }
-			}
-			hidden_tooltip = {
-				revoke_law = administration_0
-				revoke_law = administration_1
-				revoke_law = administration_2
-			}
-		}
-		pass_effect = {
-			if = {
-				limit = { has_law = administration_2 }
-				clr_flag = has_imperial_administration
-				clr_title_flag = pretender_chinese_empire
-				clr_title_flag = uses_temple_names_by_script
-				owner = {
-					if = {
-						limit = { emf_imperial_government = yes }
-						emf_switch_to_feudal_gov = yes
-						hidden_tooltip = {
-							any_realm_lord = { character_event = { id = emf_imperial.3299 } }
-							if = {
-								limit = {
-									government = chinese_imperial_government
-								}
-								clear_flags_with_prefix = temple_name_
-								clear_flags_with_prefix = china_name_
-								set_name = "[Root.Capital.GetName] Empire"
-							}
-						}
-					}
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-
 	# Late Feudal
 	administration_1 = {
 		group = administration
@@ -1705,7 +1286,8 @@ laws = {
 							is_feudal = yes
 							OR = {
 								emf_unreformed_pagan = no
-								religion = hellenic_pagan
+								religion_group = graecoroman_group
+								religion_group = indohelen_group
 							}
 						}
 						NOT = { emf_laws_crownlaw_title_high_ca_plus = yes }
@@ -1733,7 +1315,8 @@ laws = {
 							}
 							OR = {
 								emf_unreformed_pagan = no
-								religion = hellenic_pagan
+								religion_group = graecoroman_group
+								religion_group = indohelen_group
 							}
 						}
 						NOR = {
@@ -1809,9 +1392,12 @@ laws = {
 									emf_unreformed_pagan = yes
 								}
 								has_religion_feature = religion_cosmopolitan
-								religion = hellenic_pagan
+								religion_group = graecoroman_group
+								religion_group = indohelen_group
 								AND = {
-									religion = hellenic_pagan_reformed
+									religion_group = graecoroman_group
+									religion_group = indohelen_group
+									is_organized_religion_trigger = yes
 									has_religion_features = no
 								}
 								has_religion_feature = religion_syncretic_christian
@@ -1837,9 +1423,12 @@ laws = {
 								emf_unreformed_pagan = yes
 							}
 							has_religion_feature = religion_cosmopolitan
-							religion = hellenic_pagan
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 							AND = {
-								religion = hellenic_pagan_reformed
+								religion_group = graecoroman_group
+								religion_group = indohelen_group
+								is_organized_religion_trigger = yes
 								has_religion_features = no
 							}
 							has_religion_feature = religion_syncretic_christian
@@ -1953,7 +1542,8 @@ laws = {
 									is_feudal = yes
 									OR = {
 										emf_unreformed_pagan = no
-										religion = hellenic_pagan
+										religion_group = graecoroman_group
+										religion_group = indohelen_group
 									}
 								}
 							}
@@ -2012,7 +1602,8 @@ laws = {
 							is_feudal = yes
 							OR = {
 								emf_unreformed_pagan = no
-								religion = hellenic_pagan
+								religion_group = graecoroman_group
+								religion_group = indohelen_group
 							}
 						}
 						NOT = { emf_laws_crownlaw_title_high_ca_plus = yes }
@@ -2040,7 +1631,8 @@ laws = {
 							}
 							OR = {
 								emf_unreformed_pagan = no
-								religion = hellenic_pagan
+								religion_group = graecoroman_group
+								religion_group = indohelen_group
 							}
 						}
 						NOR = {

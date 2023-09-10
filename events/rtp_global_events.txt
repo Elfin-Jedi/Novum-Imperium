@@ -1177,12 +1177,16 @@ character_event = {
 			}
 			save_event_target_as = rtp_province1 #The random province
 		}
+		
+		random_character = {
+			save_event_target_as = random_guy
+		}
 
 		create_character = {
 			age = 25
 			random_traits = yes
-			culture = ashkenazi
-			religion = jewish
+			culture = event_target:random_guy
+			religion = event_target:random_guy
 			dynasty = random
 			female = yes
 		}
@@ -1192,8 +1196,8 @@ character_event = {
 		create_character = {
 			age = 25
 			random_traits = yes
-			culture = ashkenazi
-			religion = jewish
+			culture = event_target:random_guy
+			religion = event_target:random_guy
 			dynasty = random
 			female = no
 		}
@@ -1219,7 +1223,7 @@ character_event = {
 			random = {
 				chance = 1
 
-				unsafe_religion = jewish
+				unsafe_religion = event_target:random_guy
 			}
 		}
 
@@ -1228,7 +1232,7 @@ character_event = {
 				random = {
 					chance = 5
 
-					religion = jewish
+					religion = event_target:random_guy
 				}
 			}
 		}

@@ -1194,10 +1194,6 @@ loyalist_pattern_for = {
 	clanic_centralization_2 = { liege = { character = FROM } }
 	clanic_centralization_3 = { liege = { character = FROM } }
 	clanic_centralization_4 = { liege = { character = FROM } }
-	
-	sovereignty_title_law_0 = { liege = { character = FROM } }
-	sovereignty_title_law_1 = { liege = { character = FROM } }
-	sovereignty_title_law_2 = { liege = { character = FROM } }
 }
 
 loyalist_pattern_against = {
@@ -1264,8 +1260,4 @@ loyalist_pattern_against = {
 	clanic_centralization_2 = { NOT = { liege = { character = FROM } } }
 	clanic_centralization_3 = { NOT = { liege = { character = FROM } } }
 	clanic_centralization_4 = { NOT = { liege = { character = FROM } } }
-	
-	sovereignty_title_law_0 = { NOT = { liege = { character = FROM } } }
-	sovereignty_title_law_1 = { NOT = { liege = { character = FROM } } }
-	sovereignty_title_law_2 = { NOT = { liege = { character = FROM } } }
 }

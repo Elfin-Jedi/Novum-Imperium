@@ -1773,8 +1773,8 @@ claim_all = {
 						emf_has_roman_empire = yes
 						OR = { 
 							religion_group = christian
-							religion = hellenic_pagan
-							religion = hellenic_pagan_reformed
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 						}
 					}
 					character_event = {
@@ -1857,8 +1857,8 @@ claim_all = {
 					emf_has_roman_empire = yes
 					OR = { 
 						religion_group = christian
-						religion = hellenic_pagan
-						religion = hellenic_pagan_reformed
+						religion_group = graecoroman_group
+						religion_group = indohelen_group
 					}
 				}
 				hidden_tooltip = {
@@ -2097,8 +2097,8 @@ invasion = {
 						emf_has_roman_empire = yes
 						OR = { 
 							religion_group = christian
-							religion = hellenic_pagan
-							religion = hellenic_pagan_reformed
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 							culture = roman
 							culture = romanobrython
 							culture = romanogothic
@@ -2576,8 +2576,8 @@ invasion = {
 					emf_has_roman_empire = yes
 					OR = { 
 						religion_group = christian
-						religion = hellenic_pagan
-						religion = hellenic_pagan_reformed
+						religion_group = graecoroman_group
+						religion_group = indohelen_group
 						culture = roman
 						culture = romanobrython
 						culture = romanogothic
@@ -3241,8 +3241,8 @@ tribal_invasion = {
 					emf_has_roman_empire = yes
 					OR = { 
 						religion_group = christian
-						religion = hellenic_pagan
-						religion = hellenic_pagan_reformed
+						religion_group = graecoroman_group
+						religion_group = indohelen_group
 						culture = roman
 						culture = romanobrython
 						culture = romanogothic
@@ -3980,8 +3980,8 @@ crusade = {
 						emf_has_roman_empire = yes
 						OR = { 
 							religion_group = christian
-							religion = hellenic_pagan
-							religion = hellenic_pagan_reformed
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 							culture = roman
 							culture = romanobrython
 							culture = romanogothic
@@ -5624,8 +5624,8 @@ new_crusade = {
 					emf_has_roman_empire = yes
 					OR = { 
 						religion_group = christian
-						religion = hellenic_pagan
-						religion = hellenic_pagan_reformed
+						religion_group = graecoroman_group
+						religion_group = indohelen_group
 					}
 				}
 				hidden_tooltip = { character_event = { id = LoR.30 days = 12 } }
@@ -6812,24 +6812,6 @@ overthrow_ruler = {
 					if = {
 						limit = { has_law = clanic_centralization_4 }
 						add_law = clanic_centralization_2
-					}
-				}
-			}
-			if = {
-				limit = { has_dlc = "Zeus" }
-				any_demesne_title = { # All titles
-					limit = {
-						higher_tier_than = count
-						NOT = { has_law = sovereignty_title_law_0 }
-					}
-					if = {
-						limit = {
-							OR = {
-								has_law = sovereignty_title_law_1
-								has_law = sovereignty_title_law_2
-							}
-						}
-						add_law = sovereignty_title_law_0
 					}
 				}
 			}
@@ -8108,8 +8090,8 @@ muslim_invasion = {
 					emf_has_roman_empire = yes
 					OR = { 
 						religion_group = christian
-						religion = hellenic_pagan
-						religion = hellenic_pagan_reformed
+						religion_group = graecoroman_group
+						religion_group = indohelen_group
 					}
 				}
 				hidden_tooltip = {
@@ -8186,8 +8168,8 @@ muslim_invasion = {
 					emf_has_roman_empire = yes
 					OR = { 
 						religion_group = christian
-						religion = hellenic_pagan
-						religion = hellenic_pagan_reformed
+						religion_group = graecoroman_group
+						religion_group = indohelen_group
 					}
 				}
 				hidden_tooltip = {
@@ -8639,8 +8621,8 @@ imperial_reconquest = {
 			}
 			OR = {
 				religion_group = christian
-				religion = hellenic_pagan
-				religion = hellenic_pagan_reformed
+				religion_group = graecoroman_group
+				religion_group = indohelen_group
 			}
 		}
 	}
@@ -8785,8 +8767,8 @@ imperial_reconquest = {
 			}
 			OR = {
 				religion_group = christian
-				religion = hellenic_pagan
-				religion = hellenic_pagan_reformed
+				religion_group = graecoroman_group
+				religion_group = indohelen_group
 			}
 			mercenary = no
 		}
@@ -9601,8 +9583,8 @@ viking_invasion = {
 					emf_has_roman_empire = yes
 					OR = { 
 						religion_group = christian
-						religion = hellenic_pagan
-						religion = hellenic_pagan_reformed
+						religion_group = graecoroman_group
+						religion_group = indohelen_group
 						culture = roman
 						culture = romanobrython
 						culture = romanogothic
@@ -11169,8 +11151,8 @@ caliphal_subjugation = {
 					emf_has_roman_empire = yes
 					OR = { 
 						religion_group = christian
-						religion = hellenic_pagan
-						religion = hellenic_pagan_reformed
+						religion_group = graecoroman_group
+						religion_group = indohelen_group
 					}
 				}
 				hidden_tooltip = {
@@ -12977,8 +12959,8 @@ manifest_destiny_invasion = {
 					emf_has_roman_empire = yes
 					OR = { 
 						religion_group = christian
-						religion = hellenic_pagan
-						religion = hellenic_pagan_reformed
+						religion_group = graecoroman_group
+						religion_group = indohelen_group
 					}
 				}
 				hidden_tooltip = {
@@ -13023,8 +13005,8 @@ manifest_destiny_invasion = {
 					emf_has_roman_empire = yes
 					OR = { 
 						religion_group = christian
-						religion = hellenic_pagan
-						religion = hellenic_pagan_reformed
+						religion_group = graecoroman_group
+						religion_group = indohelen_group
 					}
 				}
 				hidden_tooltip = {
@@ -14884,8 +14866,8 @@ nomad_subjugation = {
 					emf_has_roman_empire = yes
 					OR = { 
 						religion_group = christian
-						religion = hellenic_pagan
-						religion = hellenic_pagan_reformed
+						religion_group = graecoroman_group
+						religion_group = indohelen_group
 						culture = roman
 						culture = romanobrython
 						culture = romanogothic
@@ -15269,8 +15251,8 @@ nomad_invasion = {
 					emf_has_roman_empire = yes
 					OR = { 
 						religion_group = christian
-						religion = hellenic_pagan
-						religion = hellenic_pagan_reformed
+						religion_group = graecoroman_group
+						religion_group = indohelen_group
 						culture = roman
 						culture = romanobrython
 						culture = romanogothic
@@ -21639,8 +21621,8 @@ roman_christian_revolt = {
 				limit = { 
 					FROM = { 
 						NOR = { 
-							religion = hellenic_pagan
-							religion = hellenic_pagan_reformed
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 			 			} 
 			 		}
 			 	}
@@ -21650,8 +21632,8 @@ roman_christian_revolt = {
 				limit = { 
 					FROM = { 
 						OR = { 
-							religion = hellenic_pagan
-							religion = hellenic_pagan_reformed
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 			 			} 
 			 		}
 			 	}
@@ -22065,8 +22047,8 @@ flower_war_cb = {
 					emf_has_roman_empire = yes
 					OR = { 
 						religion_group = christian
-						religion = hellenic_pagan
-						religion = hellenic_pagan_reformed
+						religion_group = graecoroman_group
+						religion_group = indohelen_group
 					}
 				}
 				hidden_tooltip = { character_event = { id = LoR.30 days = 12 } }
@@ -22434,8 +22416,8 @@ childrens_crusade = {
 					emf_has_roman_empire = yes
 					OR = { 
 						religion_group = christian
-						religion = hellenic_pagan
-						religion = hellenic_pagan_reformed
+						religion_group = graecoroman_group
+						religion_group = indohelen_group
 					}
 				}
 				hidden_tooltip = { character_event = { id = LoR.30 days = 12 } }
@@ -24655,8 +24637,8 @@ shattered_invasion = {
 					emf_has_roman_empire = yes
 					OR = {
 						religion_group = christian
-						religion = hellenic_pagan
-						religion = hellenic_pagan_reformed
+						religion_group = graecoroman_group
+						religion_group = indohelen_group
 					}
 				}
 				hidden_tooltip = { character_event = { id = LoR.30 days = 12 } }

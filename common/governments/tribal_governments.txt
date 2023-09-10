@@ -26,6 +26,21 @@ tribal_governments = {
 			rtp_mercenary_g
 			rtp_privateer_g
 			nomadic_government
+			oriental_monarchy_government
+			classical_government
+			chinese_imperial_government
+			chinese_vassal_government
+			japanese_imperial_government
+			japanese_feudalism
+			japanese_monastic_feudal_government
+		}
+		accepts_liege_governments_religion = { # only radical governments from the correct religion are accepted
+			anarchist_government
+			demagogic_government
+			mystic_government
+			absolutist_government
+			hegemonic_government
+			messianic_government
 		}
 		
 		accepts_liege_governments_culture_and_religion = { 	# Tribals have no opinion penalty towards their liege if of the same culture and religion

@@ -700,8 +700,8 @@ decisions = {
 			independent = yes
 			OR = {
 				religion = zoroastrian
-				religion = mazdaki
-				religion = zurvanist
+				religion = mazdakism
+				religion = zurvanism
 			}
 			NOT = { has_global_flag = saoshyant_appears }
 			is_random_world = no
@@ -775,7 +775,7 @@ decisions = {
 			has_dlc = "The Old Gods"
 			OR = {
 				religion = zoroastrian
-				religion = zurvanist
+				religion = zurvanism
 				religion = khurmazta						
 			}
 			is_heretic = no

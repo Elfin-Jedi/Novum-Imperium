@@ -89,8 +89,6 @@ emf_calc_realm_province_religion_breakdown_of_THIS_for_ROOT = {
 		set_variable = { which = r_prov_rel_tengri_pagan_pct value = 0 }
 		set_variable = { which = r_prov_rel_baltic_pagan_reformed value = 0 }
 		set_variable = { which = r_prov_rel_baltic_pagan_reformed_pct value = 0 }
-		set_variable = { which = r_prov_rel_baltic_pagan value = 0 }
-		set_variable = { which = r_prov_rel_baltic_pagan_pct value = 0 }
 		set_variable = { which = r_prov_rel_finnish_pagan_reformed value = 0 }
 		set_variable = { which = r_prov_rel_finnish_pagan_reformed_pct value = 0 }
 		set_variable = { which = r_prov_rel_finnish_pagan value = 0 }
@@ -103,34 +101,22 @@ emf_calc_realm_province_religion_breakdown_of_THIS_for_ROOT = {
 		set_variable = { which = r_prov_rel_slavic_pagan_reformed_pct value = 0 }
 		set_variable = { which = r_prov_rel_slavic_pagan value = 0 }
 		set_variable = { which = r_prov_rel_slavic_pagan_pct value = 0 }
-		set_variable = { which = r_prov_rel_west_african_pagan_reformed value = 0 }
-		set_variable = { which = r_prov_rel_west_african_pagan_reformed_pct value = 0 }
-		set_variable = { which = r_prov_rel_west_african_pagan value = 0 }
-		set_variable = { which = r_prov_rel_west_african_pagan_pct value = 0 }
-		set_variable = { which = r_prov_rel_zun_pagan_reformed value = 0 }
-		set_variable = { which = r_prov_rel_zun_pagan_reformed_pct value = 0 }
-		set_variable = { which = r_prov_rel_zun_pagan value = 0 }
-		set_variable = { which = r_prov_rel_zun_pagan_pct value = 0 }
-		set_variable = { which = r_prov_rel_hellenic_pagan_reformed value = 0 }
-		set_variable = { which = r_prov_rel_hellenic_pagan_reformed_pct value = 0 }
-		set_variable = { which = r_prov_rel_hellenic_pagan value = 0 }
-		set_variable = { which = r_prov_rel_hellenic_pagan_pct value = 0 }
 		set_variable = { which = r_prov_rel_bon_reformed value = 0 }
 		set_variable = { which = r_prov_rel_bon_reformed_pct value = 0 }
 		set_variable = { which = r_prov_rel_bon value = 0 }
 		set_variable = { which = r_prov_rel_bon_pct value = 0 }
 		set_variable = { which = r_prov_rel_zoroastrian value = 0 }
 		set_variable = { which = r_prov_rel_zoroastrian_pct value = 0 }
-		set_variable = { which = r_prov_rel_mazdaki value = 0 }
-		set_variable = { which = r_prov_rel_mazdaki_pct value = 0 }
-		set_variable = { which = r_prov_rel_zurvanist value = 0 }
-		set_variable = { which = r_prov_rel_zurvanist_pct value = 0 }
-		set_variable = { which = r_prov_rel_manichean value = 0 }
-		set_variable = { which = r_prov_rel_manichean_pct value = 0 }
-		set_variable = { which = r_prov_rel_mandaean value = 0 }
-		set_variable = { which = r_prov_rel_mandaean_pct value = 0 }
-		set_variable = { which = r_prov_rel_yazidi value = 0 }
-		set_variable = { which = r_prov_rel_yazidi_pct value = 0 }
+		set_variable = { which = r_prov_rel_mazdakism value = 0 }
+		set_variable = { which = r_prov_rel_mazdakism_pct value = 0 }
+		set_variable = { which = r_prov_rel_zurvanism value = 0 }
+		set_variable = { which = r_prov_rel_zurvanism_pct value = 0 }
+		set_variable = { which = r_prov_rel_mani value = 0 }
+		set_variable = { which = r_prov_rel_mani_pct value = 0 }
+		set_variable = { which = r_prov_rel_mand value = 0 }
+		set_variable = { which = r_prov_rel_mand_pct value = 0 }
+		set_variable = { which = r_prov_rel_yazidism value = 0 }
+		set_variable = { which = r_prov_rel_yazidism_pct value = 0 }
 		set_variable = { which = r_prov_rel_khurmazta value = 0 }
 		set_variable = { which = r_prov_rel_khurmazta_pct value = 0 }
 		set_variable = { which = r_prov_rel_jewish value = 0 }
@@ -141,8 +127,6 @@ emf_calc_realm_province_religion_breakdown_of_THIS_for_ROOT = {
 		set_variable = { which = r_prov_rel_karaite_pct value = 0 }
 		set_variable = { which = r_prov_rel_hindu value = 0 }
 		set_variable = { which = r_prov_rel_hindu_pct value = 0 }
-		set_variable = { which = r_prov_rel_buddhist value = 0 }
-		set_variable = { which = r_prov_rel_buddhist_pct value = 0 }
 		set_variable = { which = r_prov_rel_jain value = 0 }
 		set_variable = { which = r_prov_rel_jain_pct value = 0 }
 		set_variable = { which = r_prov_rel_taoist value = 0 }
@@ -427,13 +411,6 @@ emf_calc_realm_province_religion_breakdown_of_THIS_for_ROOT = {
 		any_realm_province = {
 			limit = {
 				owner_under_PREV = yes
-				religion = baltic_pagan
-			}
-			ROOT = { change_variable = { which = r_prov_rel_baltic_pagan value = 1 } }
-		}
-		any_realm_province = {
-			limit = {
-				owner_under_PREV = yes
 				religion = finnish_pagan_reformed
 			}
 			ROOT = { change_variable = { which = r_prov_rel_finnish_pagan_reformed value = 1 } }
@@ -539,35 +516,35 @@ emf_calc_realm_province_religion_breakdown_of_THIS_for_ROOT = {
 		any_realm_province = {
 			limit = {
 				owner_under_PREV = yes
-				religion = mazdaki
+				religion = mazdakism
 			}
 			ROOT = { change_variable = { which = r_prov_rel_mazdaki value = 1 } }
 		}
 		any_realm_province = {
 			limit = {
 				owner_under_PREV = yes
-				religion = zurvanist
+				religion = zurvanism
 			}
-			ROOT = { change_variable = { which = r_prov_rel_zurvanist value = 1 } }
+			ROOT = { change_variable = { which = r_prov_rel_zurvanism value = 1 } }
 		}
 		any_realm_province = {
 			limit = {
 				owner_under_PREV = yes
-				religion = manichean
+				religion = mani
 			}
 			ROOT = { change_variable = { which = r_prov_rel_manichean value = 1 } }
 		}
 		any_realm_province = {
 			limit = {
 				owner_under_PREV = yes
-				religion = mandaean
+				religion = mand
 			}
 			ROOT = { change_variable = { which = r_prov_rel_mandaean value = 1 } }
 		}
 		any_realm_province = {
 			limit = {
 				owner_under_PREV = yes
-				religion = yazidi
+				religion = yazidism
 			}
 			ROOT = { change_variable = { which = r_prov_rel_yazidi value = 1 } }
 		}
@@ -605,13 +582,6 @@ emf_calc_realm_province_religion_breakdown_of_THIS_for_ROOT = {
 				religion = hindu
 			}
 			ROOT = { change_variable = { which = r_prov_rel_hindu value = 1 } }
-		}
-		any_realm_province = {
-			limit = {
-				owner_under_PREV = yes
-				religion = buddhist
-			}
-			ROOT = { change_variable = { which = r_prov_rel_buddhist value = 1 } }
 		}
 		any_realm_province = {
 			limit = {
@@ -965,10 +935,10 @@ emf_calc_realm_province_religion_breakdown_of_THIS_for_ROOT = {
 				divide_variable = { which = r_prov_rel_mazdaki_pct which = r_prov }
 			}
 			if = {
-				limit = { check_variable = { which = r_prov_rel_zurvanist value > 0 } }
-				set_variable = { which = r_prov_rel_zurvanist_pct which = r_prov_rel_zurvanist }
-				multiply_variable = { which = r_prov_rel_zurvanist_pct value = 100 }
-				divide_variable = { which = r_prov_rel_zurvanist_pct which = r_prov }
+				limit = { check_variable = { which = r_prov_rel_zurvanism value > 0 } }
+				set_variable = { which = r_prov_rel_zurvanism_pct which = r_prov_rel_zurvanism }
+				multiply_variable = { which = r_prov_rel_zurvanism_pct value = 100 }
+				divide_variable = { which = r_prov_rel_zurvanism_pct which = r_prov }
 			}
 			if = {
 				limit = { check_variable = { which = r_prov_rel_manichean value > 0 } }
@@ -4366,7 +4336,7 @@ emf_set_default_flags_for_mazdaki = {
 	set_flag = emf_secret_religion
 }
 
-emf_set_default_flags_for_zurvanist = {
+emf_set_default_flags_for_zurvanism = {
 	set_flag = emf_playable
 	clr_flag = emf_ai_peaceful
 	clr_flag = emf_hostile_within_group

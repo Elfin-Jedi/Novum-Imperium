@@ -120,10 +120,15 @@ de_jure_laws = {
 								emf_unreformed_pagan = yes
 							}
 							has_religion_feature = religion_cosmopolitan
-							religion = hellenic_pagan
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 							trigger_if = {
 								limit = { has_religion_features = no }
-								religion = hellenic_pagan_reformed
+								OR = {
+									religion_group = graecoroman_group
+									religion_group = indohelen_group
+								}
+								is_organized_religion_trigger = yes
 							}
 							has_religion_feature = religion_syncretic_christian
 							has_religion_feature = religion_syncretic_muslim
@@ -164,7 +169,8 @@ de_jure_laws = {
 								is_feudal = yes
 								OR = {
 									emf_unreformed_pagan = no
-									religion = hellenic_pagan
+									religion_group = graecoroman_group
+									religion_group = indohelen_group
 								}
 							}
 						}
@@ -225,7 +231,8 @@ de_jure_laws = {
 						is_feudal = yes
 						OR = {
 							emf_unreformed_pagan = no
-							religion = hellenic_pagan
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 						}
 					}
 					NOT = { emf_laws_holder_has_late_administration_plus = yes }
@@ -253,7 +260,8 @@ de_jure_laws = {
 						}
 						OR = {
 							emf_unreformed_pagan = no
-							religion = hellenic_pagan
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 						}
 					}
 					NOT = { emf_laws_holder_has_late_administration_plus = yes }
@@ -500,10 +508,15 @@ de_jure_laws = {
 								emf_unreformed_pagan = yes
 							}
 							has_religion_feature = religion_cosmopolitan
-							religion = hellenic_pagan
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 							trigger_if = {
 								limit = { has_religion_features = no }
-								religion = hellenic_pagan_reformed
+								OR = {
+									religion_group = graecoroman_group
+									religion_group = indohelen_group
+								}
+								is_organized_religion_trigger = yes
 							}
 							has_religion_feature = religion_syncretic_christian
 							has_religion_feature = religion_syncretic_muslim
@@ -544,7 +557,8 @@ de_jure_laws = {
 								is_feudal = yes
 								OR = {
 									emf_unreformed_pagan = no
-									religion = hellenic_pagan
+									religion_group = graecoroman_group
+									religion_group = indohelen_group
 								}
 							}
 						}
@@ -605,7 +619,8 @@ de_jure_laws = {
 						is_feudal = yes
 						OR = {
 							emf_unreformed_pagan = no
-							religion = hellenic_pagan
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 						}
 					}
 					NOT = { emf_laws_holder_has_late_administration_plus = yes }
@@ -634,7 +649,8 @@ de_jure_laws = {
 						}
 						OR = {
 							emf_unreformed_pagan = no
-							religion = hellenic_pagan
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 						}
 					}
 					NOT = { emf_laws_holder_has_late_administration_plus = yes }
@@ -873,10 +889,15 @@ de_jure_laws = {
 								emf_unreformed_pagan = yes
 							}
 							has_religion_feature = religion_cosmopolitan
-							religion = hellenic_pagan
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 							trigger_if = {
 								limit = { has_religion_features = no }
-								religion = hellenic_pagan_reformed
+								OR = {
+									religion_group = graecoroman_group
+									religion_group = indohelen_group
+								}
+								is_organized_religion_trigger = yes
 							}
 							has_religion_feature = religion_syncretic_christian
 							has_religion_feature = religion_syncretic_muslim
@@ -917,7 +938,8 @@ de_jure_laws = {
 								is_feudal = yes
 								OR = {
 									emf_unreformed_pagan = no
-									religion = hellenic_pagan
+									religion_group = graecoroman_group
+									religion_group = indohelen_group
 								}
 							}
 						}
@@ -978,7 +1000,8 @@ de_jure_laws = {
 						is_feudal = yes
 						OR = {
 							emf_unreformed_pagan = no
-							religion = hellenic_pagan
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 						}
 					}
 					NOT = { emf_laws_holder_has_late_administration_plus = yes }
@@ -1007,7 +1030,8 @@ de_jure_laws = {
 						}
 						OR = {
 							emf_unreformed_pagan = no
-							religion = hellenic_pagan
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 						}
 					}
 					NOT = { emf_laws_holder_has_late_administration_plus = yes }
@@ -1245,10 +1269,15 @@ de_jure_laws = {
 								emf_unreformed_pagan = yes
 							}
 							has_religion_feature = religion_cosmopolitan
-							religion = hellenic_pagan
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 							trigger_if = {
 								limit = { has_religion_features = no }
-								religion = hellenic_pagan_reformed
+								OR = {
+									religion_group = graecoroman_group
+									religion_group = indohelen_group
+								}
+								is_organized_religion_trigger = yes
 							}
 							has_religion_feature = religion_syncretic_christian
 							has_religion_feature = religion_syncretic_muslim
@@ -1289,7 +1318,8 @@ de_jure_laws = {
 								is_feudal = yes
 								OR = {
 									emf_unreformed_pagan = no
-									religion = hellenic_pagan
+									religion_group = graecoroman_group
+									religion_group = indohelen_group
 								}
 							}
 						}
@@ -1350,7 +1380,8 @@ de_jure_laws = {
 						is_feudal = yes
 						OR = {
 							emf_unreformed_pagan = no
-							religion = hellenic_pagan
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 						}
 					}
 					NOT = { emf_laws_holder_has_late_administration_plus = yes }
@@ -1379,7 +1410,8 @@ de_jure_laws = {
 						}
 						OR = {
 							emf_unreformed_pagan = no
-							religion = hellenic_pagan
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 						}
 					}
 					NOT = { emf_laws_holder_has_late_administration_plus = yes }
@@ -1624,10 +1656,15 @@ de_jure_laws = {
 								emf_unreformed_pagan = yes
 							}
 							has_religion_feature = religion_cosmopolitan
-							religion = hellenic_pagan
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 							trigger_if = {
 								limit = { has_religion_features = no }
-								religion = hellenic_pagan_reformed
+								OR = {
+									religion_group = graecoroman_group
+									religion_group = indohelen_group
+								}
+								is_organized_religion_trigger = yes
 							}
 							has_religion_feature = religion_syncretic_christian
 							has_religion_feature = religion_syncretic_muslim
@@ -1663,7 +1700,8 @@ de_jure_laws = {
 								is_feudal = yes
 								OR = {
 									emf_unreformed_pagan = no
-									religion = hellenic_pagan
+									religion_group = graecoroman_group
+									religion_group = indohelen_group
 								}
 							}
 						}
@@ -1724,7 +1762,8 @@ de_jure_laws = {
 						is_feudal = yes
 						OR = {
 							emf_unreformed_pagan = no
-							religion = hellenic_pagan
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 						}
 					}
 					NOT = { emf_laws_holder_has_late_administration_plus = yes }
@@ -1753,7 +1792,8 @@ de_jure_laws = {
 						}
 						OR = {
 							emf_unreformed_pagan = no
-							religion = hellenic_pagan
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 						}
 					}
 					NOT = { emf_laws_holder_has_late_administration_plus = yes }
@@ -1950,10 +1990,15 @@ de_jure_laws = {
 								emf_unreformed_pagan = yes
 							}
 							has_religion_feature = religion_cosmopolitan
-							religion = hellenic_pagan
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 							trigger_if = {
 								limit = { has_religion_features = no }
-								religion = hellenic_pagan_reformed
+								OR = {
+									religion_group = graecoroman_group
+									religion_group = indohelen_group
+								}
+								is_organized_religion_trigger = yes
 							}
 							has_religion_feature = religion_syncretic_christian
 							has_religion_feature = religion_syncretic_muslim
@@ -2010,10 +2055,15 @@ de_jure_laws = {
 							emf_unreformed_pagan = yes
 						}
 						has_religion_feature = religion_cosmopolitan
-						religion = hellenic_pagan
+						religion_group = graecoroman_group
+						religion_group = indohelen_group
 						trigger_if = {
 							limit = { has_religion_features = no }
-							religion = hellenic_pagan_reformed
+							OR = {
+								religion_group = graecoroman_group
+								religion_group = indohelen_group
+							}
+							is_organized_religion_trigger = yes
 						}
 						has_religion_feature = religion_syncretic_christian
 						has_religion_feature = religion_syncretic_muslim
@@ -2082,10 +2132,15 @@ de_jure_laws = {
 								emf_unreformed_pagan = yes
 							}
 							has_religion_feature = religion_cosmopolitan
-							religion = hellenic_pagan
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 							trigger_if = {
 								limit = { has_religion_features = no }
-								religion = hellenic_pagan_reformed
+								OR = {
+									religion_group = graecoroman_group
+									religion_group = indohelen_group
+								}
+								is_organized_religion_trigger = yes
 							}
 							has_religion_feature = religion_syncretic_christian
 							has_religion_feature = religion_syncretic_muslim
@@ -2232,10 +2287,15 @@ de_jure_laws = {
 											emf_unreformed_pagan = yes
 										}
 										has_religion_feature = religion_cosmopolitan
-										religion = hellenic_pagan
+										religion_group = graecoroman_group
+										religion_group = indohelen_group
 										trigger_if = {
 											limit = { has_religion_features = no }
-											religion = hellenic_pagan_reformed
+											OR = {
+												religion_group = graecoroman_group
+												religion_group = indohelen_group
+											}
+											is_organized_religion_trigger = yes
 										}
 										has_religion_feature = religion_syncretic_christian
 										has_religion_feature = religion_syncretic_muslim
@@ -2260,10 +2320,15 @@ de_jure_laws = {
 										emf_unreformed_pagan = yes
 									}
 									has_religion_feature = religion_cosmopolitan
-									religion = hellenic_pagan
+									religion_group = graecoroman_group
+									religion_group = indohelen_group
 									trigger_if = {
 										limit = { has_religion_features = no }
-										religion = hellenic_pagan_reformed
+										OR = {
+											religion_group = graecoroman_group
+											religion_group = indohelen_group
+										}
+										is_organized_religion_trigger = yes
 									}
 									has_religion_feature = religion_syncretic_christian
 									has_religion_feature = religion_syncretic_muslim
@@ -2373,10 +2438,15 @@ de_jure_laws = {
 											emf_unreformed_pagan = yes
 										}
 										has_religion_feature = religion_cosmopolitan
-										religion = hellenic_pagan
+										religion_group = graecoroman_group
+										religion_group = indohelen_group
 										trigger_if = {
 											limit = { has_religion_features = no }
-											religion = hellenic_pagan_reformed
+											OR = {
+												religion_group = graecoroman_group
+												religion_group = indohelen_group
+											}
+											is_organized_religion_trigger = yes
 										}
 										has_religion_feature = religion_syncretic_christian
 										has_religion_feature = religion_syncretic_muslim
@@ -2401,10 +2471,15 @@ de_jure_laws = {
 										emf_unreformed_pagan = yes
 									}
 									has_religion_feature = religion_cosmopolitan
-									religion = hellenic_pagan
+									religion_group = graecoroman_group
+									religion_group = indohelen_group
 									trigger_if = {
 										limit = { has_religion_features = no }
-										religion = hellenic_pagan_reformed
+										OR = {
+											religion_group = graecoroman_group
+											religion_group = indohelen_group
+										}
+										is_organized_religion_trigger = yes
 									}
 									has_religion_feature = religion_syncretic_christian
 									has_religion_feature = religion_syncretic_muslim
@@ -2531,10 +2606,15 @@ de_jure_laws = {
 											emf_unreformed_pagan = yes
 										}
 										has_religion_feature = religion_cosmopolitan
-										religion = hellenic_pagan
+										religion_group = graecoroman_group
+										religion_group = indohelen_group
 										trigger_if = {
 											limit = { has_religion_features = no }
-											religion = hellenic_pagan_reformed
+											OR = {
+												religion_group = graecoroman_group
+												religion_group = indohelen_group
+											}
+											is_organized_religion_trigger = yes
 										}
 										has_religion_feature = religion_syncretic_christian
 										has_religion_feature = religion_syncretic_muslim
@@ -2559,10 +2639,15 @@ de_jure_laws = {
 										emf_unreformed_pagan = yes
 									}
 									has_religion_feature = religion_cosmopolitan
-									religion = hellenic_pagan
+									religion_group = graecoroman_group
+									religion_group = indohelen_group
 									trigger_if = {
 										limit = { has_religion_features = no }
-										religion = hellenic_pagan_reformed
+										OR = {
+											religion_group = graecoroman_group
+											religion_group = indohelen_group
+										}
+										is_organized_religion_trigger = yes
 									}
 									has_religion_feature = religion_syncretic_christian
 									has_religion_feature = religion_syncretic_muslim

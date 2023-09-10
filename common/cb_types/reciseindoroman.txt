@@ -133,8 +133,8 @@ indoroman_invasion = {
 						}
 						OR = { 
 							religion_group = christian
-							religion = hellenic_pagan
-							religion = hellenic_pagan_reformed
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 						}
 					}
 					character_event = { id = LoR.30 days = 12 }
@@ -443,8 +443,8 @@ indoroman_invasion = {
 						}
 						OR = { 
 							religion_group = christian
-							religion = hellenic_pagan
-							religion = hellenic_pagan_reformed
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 						}
 					}
 					character_event = { id = LoR.30 days = 12 }
@@ -529,8 +529,8 @@ indoroman_invasion = {
 					}
 						OR = { 
 							religion_group = christian
-							religion = hellenic_pagan
-							religion = hellenic_pagan_reformed
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 						}
 				}
 				hidden_tooltip = { character_event = { id = LoR.30 days = 12 } }
@@ -996,8 +996,8 @@ indoroman_invasion = {
 						has_landed_title = k_western_expedition
 						OR = { 
 							religion_group = christian
-							religion = hellenic_pagan
-							religion = hellenic_pagan_reformed
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 						}
 					}
 					character_event = { id = LoR.30 days = 12 }

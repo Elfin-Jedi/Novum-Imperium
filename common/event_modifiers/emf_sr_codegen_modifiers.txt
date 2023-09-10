@@ -11,6 +11,10 @@ secret_catholic_community = {
 	icon = 18
 	is_visible = { society_member_of = secret_religious_society_catholic }
 }
+secret_cathar_community = {
+	icon = 18
+	is_visible = { society_member_of = secret_religious_society_cathar }
+}
 secret_fraticelli_community = {
 	icon = 18
 	is_visible = { society_member_of = secret_religious_society_fraticelli }
@@ -42,6 +46,10 @@ secret_bogomilist_community = {
 secret_monothelite_community = {
 	icon = 18
 	is_visible = { society_member_of = secret_religious_society_monothelite }
+}
+secret_iconoclast_community = {
+	icon = 18
+	is_visible = { society_member_of = secret_religious_society_iconoclast }
 }
 secret_syriac_community = {
 	icon = 18
@@ -95,6 +103,18 @@ secret_nabawiyya_community = {
 	icon = 18
 	is_visible = { society_member_of = secret_religious_society_nabawiyya }
 }
+secret_ibadi_community = {
+	icon = 18
+	is_visible = { society_member_of = secret_religious_society_ibadi }
+}
+secret_kharijite_community = {
+	icon = 18
+	is_visible = { society_member_of = secret_religious_society_kharijite }
+}
+secret_haruri_community = {
+	icon = 18
+	is_visible = { society_member_of = secret_religious_society_haruri }
+}
 secret_shiite_community = {
 	icon = 18
 	is_visible = { society_member_of = secret_religious_society_shiite }
@@ -106,6 +126,10 @@ secret_waqifi_community = {
 secret_zaydi_community = {
 	icon = 18
 	is_visible = { society_member_of = secret_religious_society_zaydi }
+}
+secret_hurufi_community = {
+	icon = 18
+	is_visible = { society_member_of = secret_religious_society_hurufi }
 }
 secret_ismaili_community = {
 	icon = 18
@@ -163,13 +187,17 @@ secret_bon_community = {
 	icon = 18
 	is_visible = { society_member_of = secret_religious_society_bon }
 }
+secret_qarmatian_community = {
+	icon = 18
+	is_visible = { society_member_of = secret_religious_society_qarmatian }
+}
 secret_zoroastrian_community = {
 	icon = 18
 	is_visible = { society_member_of = secret_religious_society_zoroastrian }
 }
 secret_zurvanism_community = {
 	icon = 18
-	is_visible = { society_member_of = secret_religious_society_zurvanist }
+	is_visible = { society_member_of = secret_religious_society_zurvanism }
 }
 secret_mani_community = {
 	icon = 18
@@ -211,6 +239,522 @@ secret_taoist_community = {
 	icon = 18
 	is_visible = { society_member_of = secret_religious_society_taoist }
 }
+secret_titan_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_titan_pagan
+	}
+}
+secret_promethean_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_promethean_pagan
+	}
+}
+secret_britannic_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_britannic_pagan
+	}
+}
+secret_egyptian_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_egyptian_pagan_reformed
+	}
+}
+secret_egyptian_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_egyptian_pagan
+	}
+}
+secret_aten_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_aten_pagan
+	}
+}
+secret_bori_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_bori
+	}
+}
+secret_a_tag_roog_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_a_tag_roog_reformed
+	}
+}
+secret_a_tag_roog_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_a_tag_roog
+	}
+}
+secret_amazigh_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_amazigh_reformed
+	}
+}
+secret_amazigh_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_amazigh
+	}
+}
+secret_vieti_orthodox_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_vieti_orthodox
+	}
+}
+secret_hereclemasculist_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_hereclemasculist_pagan
+	}
+}
+secret_vieti_mithras_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_vieti_mithras_pagan
+	}
+}
+secret_britannic_hyperborean_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_britannic_hyperborean_pagan
+	}
+}
+secret_romist_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_romist_pagan
+	}
+}
+secret_chalcedonian_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_chalcedonian
+	}
+}
+secret_methodist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_methodist
+	}
+}
+secret_arminian_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_arminian
+	}
+}
+secret_baptist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_baptist
+	}
+}
+secret_unitarian_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_unitarian
+	}
+}
+secret_anabaptist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_anabaptist
+	}
+}
+secret_anglican_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_anglican
+	}
+}
+secret_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_reformed
+	}
+}
+secret_lutheran_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_lutheran
+	}
+}
+secret_hussite_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_hussite
+	}
+}
+secret_miskito_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_miskito_pagan_reformed
+	}
+}
+secret_miskito_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_miskito_pagan
+	}
+}
+secret_subartic_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_subartic_pagan_reformed
+	}
+}
+secret_subartic_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_subartic_pagan
+	}
+}
+secret_plains_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_plains_pagan_reformed
+	}
+}
+secret_plains_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_plains_pagan
+	}
+}
+secret_basin_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_basin_pagan_reformed
+	}
+}
+secret_basin_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_basin_pagan
+	}
+}
+secret_plateau_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_plateau_pagan_reformed
+	}
+}
+secret_plateau_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_plateau_pagan
+	}
+}
+secret_california_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_california_pagan_reformed
+	}
+}
+secret_california_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_california_pagan
+	}
+}
+secret_southeast_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_southeast_pagan_reformed
+	}
+}
+secret_southeast_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_southeast_pagan
+	}
+}
+secret_southwest_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_southwest_pagan_reformed
+	}
+}
+secret_southwest_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_southwest_pagan
+	}
+}
+secret_raven_tales_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_raven_tales_reformed
+	}
+}
+secret_raven_tales_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_raven_tales
+	}
+}
+secret_caribic_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_caribic_pagan_reformed
+	}
+}
+secret_caribic_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_caribic_pagan
+	}
+}
+secret_pampas_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_pampas_pagan_reformed
+	}
+}
+secret_pampas_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_pampas_pagan
+	}
+}
+secret_chaco_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_chaco_pagan_reformed
+	}
+}
+secret_chaco_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_chaco_pagan
+	}
+}
+secret_amazonian_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_amazonian_pagan_reformed
+	}
+}
+secret_amazonian_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_amazonian_pagan
+	}
+}
+secret_mapuche_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_mapuche_pagan_reformed
+	}
+}
+secret_mapuche_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_mapuche_pagan
+	}
+}
+secret_muisca_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_muisca_pagan_reformed
+	}
+}
+secret_muisca_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_muisca_pagan
+	}
+}
+secret_caran_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_caran_pagan_reformed
+	}
+}
+secret_caran_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_caran_pagan
+	}
+}
+secret_chachapoyan_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_chachapoyan_pagan_reformed
+	}
+}
+secret_chachapoyan_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_chachapoyan_pagan
+	}
+}
+secret_chimuan_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_chimuan_pagan_reformed
+	}
+}
+secret_chimuan_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_chimuan_pagan
+	}
+}
+secret_tiwanakan_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_tiwanakan_pagan_reformed
+	}
+}
+secret_tiwanakan_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_tiwanakan_pagan
+	}
+}
+secret_chavin_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_chavin_pagan_reformed
+	}
+}
+secret_chavin_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_chavin_pagan
+	}
+}
+secret_otomi_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_otomi_pagan_reformed
+	}
+}
+secret_otomi_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_otomi_pagan
+	}
+}
+secret_corachol_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_corachol_pagan_reformed
+	}
+}
+secret_corachol_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_corachol_pagan
+	}
+}
+secret_tarascan_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_tarascan_pagan_reformed
+	}
+}
+secret_tarascan_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_tarascan_pagan
+	}
+}
+secret_nonohualcan_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_nonohualcan_pagan_reformed
+	}
+}
+secret_nonohualcan_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_nonohualcan_pagan
+	}
+}
+secret_wastek_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_wastek_pagan_reformed
+	}
+}
+secret_wastek_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_wastek_pagan
+	}
+}
+secret_zapotec_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_zapotec_pagan_reformed
+	}
+}
+secret_zapotec_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_zapotec_pagan
+	}
+}
+secret_totonac_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_totonac_pagan_reformed
+	}
+}
+secret_totonac_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_totonac_pagan
+	}
+}
+secret_mixtec_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_mixtec_pagan_reformed
+	}
+}
+secret_mixtec_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_mixtec_pagan
+	}
+}
+secret_yukaghir_pantheism_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_yukaghir_pantheism_reformed
+	}
+}
+secret_yukaghir_pantheism_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_yukaghir_pantheism
+	}
+}
+secret_chukchi_pantheism_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_chukchi_pantheism_reformed
+	}
+}
+secret_chukchi_pantheism_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_chukchi_pantheism
+	}
+}
 secret_antinomian_community = {
 	icon = 18
 	is_visible = {
@@ -241,12 +785,6 @@ secret_bud_mahayana_community = {
 		society_member_of = secret_religious_society_bud_mahayana
 	}
 }
-secret_cathar_community = {
-	icon = 18
-	is_visible = {
-		society_member_of = secret_religious_society_cathar
-	}
-}
 secret_dionysos_community = {
 	icon = 18
 	is_visible = {
@@ -271,34 +809,10 @@ secret_erlik_community = {
 		society_member_of = secret_religious_society_erlik
 	}
 }
-secret_haruri_community = {
-	icon = 18
-	is_visible = {
-		society_member_of = secret_religious_society_haruri
-	}
-}
 secret_hubal_community = {
 	icon = 18
 	is_visible = {
 		society_member_of = secret_religious_society_hubal
-	}
-}
-secret_hurufi_community = {
-	icon = 18
-	is_visible = {
-		society_member_of = secret_religious_society_hurufi
-	}
-}
-secret_ibadi_community = {
-	icon = 18
-	is_visible = {
-		society_member_of = secret_religious_society_ibadi
-	}
-}
-secret_iconoclast_community = {
-	icon = 18
-	is_visible = {
-		society_member_of = secret_religious_society_iconoclast
 	}
 }
 secret_illuyanka_community = {
@@ -317,12 +831,6 @@ secret_jud_sabaoth_community = {
 	icon = 18
 	is_visible = {
 		society_member_of = secret_religious_society_jud_sabaoth
-	}
-}
-secret_kharijite_community = {
-	icon = 18
-	is_visible = {
-		society_member_of = secret_religious_society_kharijite
 	}
 }
 secret_mand_ruha_community = {
@@ -383,12 +891,6 @@ secret_priscillian_community = {
 	icon = 18
 	is_visible = {
 		society_member_of = secret_religious_society_priscillian 
-	}
-}
-secret_qarmatian_community = {
-	icon = 18
-	is_visible = {
-		society_member_of = secret_religious_society_qarmatian
 	}
 }
 secret_ragnarok_community = {
@@ -523,12 +1025,6 @@ secret_allat_community = {
 		society_member_of = secret_religious_society_allat
 	}
 }
-secret_hubal_community = {
-	icon = 18
-	is_visible = {
-		society_member_of = secret_religious_society_hubal
-	}
-}
 secret_attar_community = {
 	icon = 18
 	is_visible = {
@@ -575,12 +1071,6 @@ secret_dievas_community = {
 	icon = 18
 	is_visible = {
 		society_member_of = secret_religious_society_dievas
-	}
-}
-secret_saule_community = {
-	icon = 18
-	is_visible = {
-		society_member_of = secret_religious_society_saule
 	}
 }
 secret_perkunas_community = {
@@ -1529,5 +2019,989 @@ secret_muslim_domination_reformed_community = {
 	icon = 18
 	is_visible = {
 		society_member_of = secret_religious_society_muslim_domination_reformed
+	}
+}
+secret_ashari_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_ashari
+	}
+}
+secret_athari_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_athari
+	}
+}
+secret_maturidi_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_maturidi
+	}
+}
+secret_murjiah_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_murjiah
+	}
+}
+secret_zahiri_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_zahiri
+	}
+}
+secret_sufi_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sufi
+	}
+}
+secret_ilm_islam_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_ilm_islam
+	}
+}
+secret_ghazi_islam_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_ghazi_islam
+	}
+}
+secret_mutazil_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_mutazil
+	}
+}
+secret_marabout_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_marabout
+	}
+}
+secret_neoplato_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_neoplato
+	}
+}
+secret_plato_pythagorean_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_plato_pythagorean
+	}
+}
+secret_porphyryan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_porphyryan
+	}
+}
+secret_zz01_vedanta_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_zz01_vedanta
+	}
+}
+secret_baal_monotheistic_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_baal_monotheistic_reformed
+	}
+}
+secret_beelshamen_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_beelshamen
+	}
+}
+secret_aglibol_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_aglibol
+	}
+}
+secret_malakbel_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_malakbel
+	}
+}
+secret_palmyran_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_palmyran_pagan
+	}
+}
+secret_hadad_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_hadad
+	}
+}
+secret_kothar_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_kothar
+	}
+}
+secret_serer_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_serer_reformed
+	}
+}
+secret_mande_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_mande_pagan
+	}
+}
+secret_yoruba_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_yoruba
+	}
+}
+secret_nyame_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_nyame
+	}
+}
+secret_anansi_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_anansi
+	}
+}
+secret_perun_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_perun
+	}
+}
+secret_veles_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_veles
+	}
+}
+secret_rod_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_rod
+	}
+}
+secret_svaroh_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_svaroh
+	}
+}
+secret_dazhbog_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_dazhbog
+	}
+}
+secret_svetovid_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_svetovid
+	}
+}
+secret_sol_boreas_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sol_boreas_reformed
+	}
+}
+secret_sol_islam_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sol_islam_reformed
+	}
+}
+secret_sol_sahara_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sol_sahara_reformed
+	}
+}
+secret_sol_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sol
+	}
+}
+secret_sol_christ_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sol_christ
+	}
+}
+secret_sol_mani_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sol_mani
+	}
+}
+secret_sol_apollo_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sol_apollo
+	}
+}
+secret_sol_boreas_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sol_boreas
+	}
+}
+secret_sol_islam_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sol_islam
+	}
+}
+secret_sol_norse_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sol_norse
+	}
+}
+secret_sol_slav_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sol_slav
+	}
+}
+secret_sol_tsahay_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sol_tsahay
+	}
+}
+secret_sol_sahara_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sol_sahara
+	}
+}
+secret_erlik_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_erlik_reformed
+	}
+}
+secret_tengri_bud_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_tengri_bud_reformed
+	}
+}
+secret_tengri_confucian_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_tengri_confucian_reformed
+	}
+}
+secret_tengri_mani_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_tengri_mani_reformed
+	}
+}
+secret_tengri_rod_reformed_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_tengri_rod_reformed
+	}
+}
+secret_vattisenyaly_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_vattisenyaly_reformed
+	}
+}
+secret_tengri_ahriman_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_tengri_ahriman
+	}
+}
+secret_tengri_bud_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_tengri_bud
+	}
+}
+secret_tengri_confucian_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_tengri_confucian
+	}
+}
+secret_tengri_mani_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_tengri_mani
+	}
+}
+secret_tengri_rod_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_tengri_rod
+	}
+}
+secret_vattisenyaly_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_vattisenyaly
+	}
+}
+secret_erlik_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_erlik
+	}
+}
+secret_yazdanism_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_yazdanism_reformed
+	}
+}
+secret_yazdanism_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_yazdanism
+	}
+}
+secret_yazidism_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_yazidism
+	}
+}
+secret_zal_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_zal
+	}
+}
+secret_zal_christ_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_zal_christ
+	}
+}
+secret_zal_mani_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_zal_mani
+	}
+}
+secret_mazdakism_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_mazdakism_reformed
+	}
+}
+secret_zor_angra_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_zor_angra_reformed
+	}
+}
+secret_zurvanism_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_zurvanism_reformed
+	}
+}
+secret_zor_angra_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_zor_angra
+	}
+}
+secret_zor_hindu_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_zor_hindu
+	}
+}
+secret_melanesian_religion_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_melanesian_religion_reformed
+	}
+}
+secret_melanesian_religion_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_melanesian_religion
+	}
+}
+secret_taiwanese_religion_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_taiwanese_religion_reformed
+	}
+}
+secret_taiwanese_religion_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_taiwanese_religion
+	}
+}
+secret_philippine_religion_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_philippine_religion_reformed
+	}
+}
+secret_philippine_religion_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_philippine_religion
+	}
+}
+secret_bornean_religion_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_bornean_religion_reformed
+	}
+}
+secret_bornean_religion_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_bornean_religion
+	}
+}
+secret_sulawesi_religion_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sulawesi_religion_reformed
+	}
+}
+secret_sulawesi_religion_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sulawesi_religion
+	}
+}
+secret_flores_religion_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_flores_religion_reformed
+	}
+}
+secret_flores_religion_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_flores_religion
+	}
+}
+secret_java_religion_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_java_religion_reformed
+	}
+}
+secret_java_religion_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_java_religion
+	}
+}
+secret_sumatran_religion_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sumatran_religion_reformed
+	}
+}
+secret_sumatran_religion_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sumatran_religion
+	}
+}
+secret_malagasy_religion_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_malagasy_religion_reformed
+	}
+}
+secret_malagasy_religion_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_malagasy_religion
+	}
+}
+secret_south_bantu_mythology_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_south_bantu_mythology_reformed
+	}
+}
+secret_south_bantu_mythology_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_south_bantu_mythology
+	}
+}
+secret_east_bantu_mythology_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_east_bantu_mythology_reformed
+	}
+}
+secret_east_bantu_mythology_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_east_bantu_mythology
+	}
+}
+secret_omotic_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_omotic_pagan_reformed
+	}
+}
+secret_omotic_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_omotic_pagan
+	}
+}
+secret_cushitic_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_cushitic_pagan_reformed
+	}
+}
+secret_cushitic_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_cushitic_pagan
+	}
+}
+secret_nilotic_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_nilotic_pagan_reformed
+	}
+}
+secret_nilotic_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_nilotic_pagan
+	}
+}
+secret_khoi_san_mythology_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_khoi_san_mythology_reformed
+	}
+}
+secret_khoi_san_mythology_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_khoi_san_mythology
+	}
+}
+secret_inti_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_inti_reformed
+	}
+}
+secret_inti_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_inti
+	}
+}
+secret_zemiist_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_zemiist_reformed
+	}
+}
+secret_zemiist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_zemiist
+	}
+}
+secret_kachina_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_kachina_reformed
+	}
+}
+secret_kachina_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_kachina
+	}
+}
+secret_pohakantenna_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_pohakantenna_reformed
+	}
+}
+secret_pohakantenna_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_pohakantenna
+	}
+}
+secret_sgaanaang_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sgaanaang_reformed
+	}
+}
+secret_sgaanaang_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_ksgaanaang
+	}
+}
+secret_wakanda_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_wakanda_reformed
+	}
+}
+secret_wakanda_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_wakanda
+	}
+}
+secret_wakan_tanka_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_wakan_tanka_reformed
+	}
+}
+secret_wakan_tanka_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_wakan_tanka
+	}
+}
+secret_mahoma_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_mahoma_reformed
+	}
+}
+secret_mahoma_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_mahoma
+	}
+}
+secret_southern_cult_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_southern_cult_reformed
+	}
+}
+secret_southern_cult_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_southern_cult
+	}
+}
+secret_orenda_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_orenda_reformed
+	}
+}
+secret_orenda_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_orenda
+	}
+}
+secret_algic_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_algic_pagan_reformed
+	}
+}
+secret_algic_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_algic_pagan
+	}
+}
+secret_animism_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_animism_reformed
+	}
+}
+secret_animism_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_animism
+	}
+}
+secret_tupan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_tupan_reformed
+	}
+}
+secret_tupan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_tupan
+	}
+}
+secret_chiminigagua_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_chiminigagua_reformed
+	}
+}
+secret_chiminigagua_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_chiminigagua
+	}
+}
+secret_lapta_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_lapta_reformed
+	}
+}
+secret_lapta_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_lapta
+	}
+}
+secret_aiwamdzu_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_aiwamdzu_reformed
+	}
+}
+secret_aiwamdzu_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_aiwamdzu
+	}
+}
+secret_lakayah_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_lakayah_reformed
+	}
+}
+secret_lakayah_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_lakayah
+	}
+}
+secret_tehuelchian_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_tehuelchian_reformed
+	}
+}
+secret_tehuelchian_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_tehuelchian
+	}
+}
+secret_witran_mapu_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_witran_mapu_reformed
+	}
+}
+secret_witran_mapu_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_witran_mapu
+	}
+}
+secret_tsarutama_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_tsarutama_reformed
+	}
+}
+secret_tsarutama_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_tsarutama
+	}
+}
+secret_kaaulayawaa_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_kaaulayawaa_reformed
+	}
+}
+secret_kaaulayawaa_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_kaaulayawaa
+	}
+}
+secret_baniwa_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_baniwa_reformed
+	}
+}
+secret_baniwa_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_baniwa
+	}
+}
+secret_south_american_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_south_american_reformed
+	}
+}
+secret_south_american_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_south_american
+	}
+}
+secret_dreamtime_religion_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_dreamtime_religion_reformed
+	}
+}
+secret_dreamtime_religion_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_dreamtime_religion
+	}
+}
+secret_maori_religion_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_maori_religion_reformed
+	}
+}
+secret_maori_religion_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_maori_religion
+	}
+}
+secret_ainu_pantheism_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_ainu_pantheism_reformed
+	}
+}
+secret_ainu_pantheism_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_ainu_pantheism
+	}
+}
+secret_jurchen_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_jurchen_pagan_reformed
+	}
+}
+secret_jurchen_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_jurchen_pagan
+	}
+}
+secret_nat_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_nat
+	}
+}
+secret_sastsana_phi_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sastsana_phi
+	}
+}
+secret_rmagao_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_rmagao
+	}
+}
+secret_benzhujiao_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_benzhujiao
+	}
+}
+secret_bimojiao_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_bimojiao
+	}
+}
+secret_ua_dab_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_ua_dab
+	}
+}
+secret_nugyauq_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_nugyauq
+	}
+}
+secret_thangiao_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_thangiao
+	}
+}
+secret_shingyo_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_shingyo
+	}
+}
+secret_nihon_shinto_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_nihon_shinto
+	}
+}
+secret_ryukyu_shinto_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_ryukyu_shinto
 	}
 }

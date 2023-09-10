@@ -12,6 +12,9 @@ succession_laws = {
 		potential = {
 			emf_laws_succ_basic_potential = yes
 			emf_laws_potential_not_for_byzantium = yes
+			NOT = {
+				has_title_flag = pretender_chinese_empire
+			}
 			rtp_is_landless = no
 			holder_scope = {
 				OR = {
@@ -24,15 +27,39 @@ succession_laws = {
 						rtp_is_order_government = no
 					}
 				}
-				NOT = { government = confucian_bureaucracy }
-				NOT = { government = bureaucratic_government }
-				NOT = { government = chinese_imperial_government }
+				NOR = {
+					religion_group = muslim
+					has_law = people_control_0
+					government = classical_government
+				}
+				is_merchant_republic = no
+				is_patrician = no
+				OR = {
+					independent = yes
+					NOT = {
+						any_demesne_title = {
+							is_vice_royalty = yes
+						}
+					}
+				}
 			}
 			rebel = no
+			holder_scope = {
+				NOR = {
+					government = chinese_imperial_government
+					government = japanese_imperial_government
+				}
+			}
 		}
 		allow = {
 			holder_scope = {
 				show_scope_change = no
+				primary_title = {
+					NOR = {
+						has_law = centralization_0
+						has_law = clanic_centralization_0
+					}
+				}
 				OR = {
 					is_tribal = no
 					emf_not_unreformed_pagan = yes
@@ -76,6 +103,9 @@ succession_laws = {
 		potential = {
 			emf_laws_succ_basic_potential = yes
 			emf_laws_potential_not_for_byzantium = yes
+			NOT = {
+				has_title_flag = pretender_chinese_empire
+			}
 			rtp_is_landless = no
 			holder_scope = {
 				OR = {
@@ -88,11 +118,31 @@ succession_laws = {
 						rtp_is_order_government = no
 					}
 				}
-				NOT = { government = confucian_bureaucracy }
-				NOT = { government = bureaucratic_government }
-				NOT = { government = chinese_imperial_government }
+				is_nomadic = no
+				NOR = {
+					religion_group = muslim
+					has_law = people_control_0
+				}
+				is_merchant_republic = no
+				is_patrician = no
+				OR = {
+					independent = yes
+					NOT = {
+						any_demesne_title = {
+							is_vice_royalty = yes
+						}
+					}
+				}
+			}
+			OR = {
+				is_landless_type_title = no
+				is_tribal_type_title = yes
+				temporary = yes
 			}
 			rebel = no
+			NOT = { holder_scope = { government = chinese_imperial_government } }
+			NOT = { holder_scope = { government = chinese_vassal_government } }
+			NOT = { holder_scope = { government = japanese_imperial_government } }
 		}
 		allow = {
 			holder_scope = {
@@ -132,6 +182,9 @@ succession_laws = {
 		potential = {
 			emf_laws_succ_basic_potential = yes
 			emf_laws_potential_not_for_byzantium = yes
+			NOT = {
+				has_title_flag = pretender_chinese_empire
+			}
 			rtp_is_landless = no
 			holder_scope = {
 				OR = {
@@ -145,10 +198,8 @@ succession_laws = {
 					}
 				}
 				OR = {
-					religion = west_african_pagan
 					AND = {
 						OR = {
-							religion = west_african_pagan_reformed
 							religion = baltic_pagan_reformed
 							religion = slavic_pagan_reformed
 						}
@@ -159,9 +210,34 @@ succession_laws = {
 					has_religion_feature = religion_feature_west_african
 					has_religion_feature = religion_feature_slavic
 				}
-				NOT = { government = bureaucratic_government }
+				NOR = { 
+					religion_group = muslim 
+					has_religion_feature = religion_matriarchal
+					has_religion_feature = religion_patriarchal
+				}
+				is_merchant_republic = no
+				is_patrician = no
+				OR = {
+					independent = yes
+					NOT = {
+						any_demesne_title = {
+							is_vice_royalty = yes
+						}
+					}
+				}
+			}
+			OR = {
+				is_landless_type_title = no
+				is_tribal_type_title = yes
+				temporary = yes
 			}
 			rebel = no
+			is_primary_type_title = no
+			NOT = { holder_scope = { government = chinese_imperial_government } }
+			NOT = { holder_scope = { government = chinese_vassal_government } }
+			NOT = { holder_scope = { government = japanese_imperial_government } }
+			NOT = { holder_scope = { government = japanese_feudal_government } }
+			NOT = { holder_scope = { government = japanese_monastic_feudal_government } }
 		}
 		allow = {
 			holder_scope = { # For the tooltip
@@ -169,15 +245,12 @@ succession_laws = {
 				trigger_if = {
 					limit = { has_religion_features = no }
 					OR = {
-						religion = west_african_pagan
-						religion = west_african_pagan_reformed
 						religion = baltic_pagan_reformed
 						religion = slavic_pagan_reformed
 					}
 				}
 				trigger_else = {
 					OR = {
-						religion = west_african_pagan
 						has_religion_feature = religion_beatification
 						has_religion_feature = religion_feature_baltic
 						has_religion_feature = religion_feature_west_african
@@ -220,6 +293,9 @@ succession_laws = {
 		potential = {
 			emf_laws_succ_basic_potential = yes
 			emf_laws_potential_not_for_byzantium = yes
+			NOT = {
+				has_title_flag = pretender_chinese_empire
+			}
 			OR = {
 				is_landless_type_title = no
 				is_tribal_type_title = yes
@@ -241,7 +317,8 @@ succession_laws = {
 				}
 				OR = {
 					emf_unreformed_pagan = no
-					religion = hellenic_pagan
+					religion_group = graecoroman_group
+					religion_group = indohelen_group
 				}
 				OR = {
 					is_merchant_republic = no
@@ -254,12 +331,28 @@ succession_laws = {
 					NOR = {
 						religion_group = muslim
 						religion_group = indian_group
+						primary_title = {
+							has_law = people_control_0
+						}
 					}
 					is_republic = no
 					NOT = { PREV = { tier = BARON } }
 				}
-				NOT = { government = bureaucratic_government }
 			}
+			OR = {
+				holder_scope = {
+					OR = {
+						is_patrician = yes
+						government = classical_government
+						government = oriental_monarchy_government
+					}
+				}
+			}
+			NOT = { holder_scope = { government = chinese_imperial_government } }
+			NOT = { holder_scope = { government = japanese_imperial_government } }
+			NOT = { holder_scope = { government = chinese_vassal_government } }
+			NOT = { holder_scope = { government = japanese_feudalism } }
+			NOT = { holder_scope = { government = japanese_monastic_feudal_government } }
 		}
 		allow = {
 			emf_laws_allow_switch_away_from_hre_elective = yes
@@ -278,6 +371,12 @@ succession_laws = {
 							succ_law_title = { title = PREVPREV }
 						}
 					}
+				}
+			}
+			holder_scope = {
+				OR = {
+					government = classical_government
+					government = oriental_monarchy_government
 				}
 			}
 		}
@@ -351,10 +450,23 @@ succession_laws = {
 				has_flag = alternate_byz
 			}
 			holder_scope = {
+				NOR = {
+					religion_group = muslim
+					primary_title = {
+						has_law = people_control_0
+					}
+				}
+				# Viceroyalties can always have primogeniture if not muslim
+				any_demesne_title = {
+					is_vice_royalty = yes
+				}
 				is_merchant_republic = no
 				is_patrician = no
-				NOT = { government = confucian_bureaucracy }
+				NOT = {
+					has_title_flag = pretender_chinese_empire
+				}
 			}
+			NOT = { holder_scope = { government = japanese_imperial_government } }
 		}
 		allow = {
 			OR = {
@@ -406,6 +518,9 @@ succession_laws = {
 		potential = {
 			emf_laws_potential_not_for_byzantium = yes
 			emf_laws_succ_basic_potential = yes
+			NOT = {
+				has_title_flag = pretender_chinese_empire
+			}
 			NOT = { tier = BARON }
 			rtp_is_landless = no
 			rtp_is_feudal_government = yes
@@ -419,20 +534,77 @@ succession_laws = {
 				is_feudal = yes
 				OR = {
 					emf_unreformed_pagan = no
-					religion = hellenic_pagan
+					religion_group = graecoroman_group
+					religion_group = indohelen_group
 				}
-				NOT = { government = bureaucratic_government }
 				NOT = { government = chinese_imperial_government }
 			}
+			holder_scope = {
+				NOR = {
+					religion_group = muslim
+					religion_group = indian_group
+					religion = shenjiao
+					religion = sol_taoist
+					religion_group = asian_religion_group
+					religion_group = eastern_folk_group
+					religion = nihon_shinto
+					religion = shingyo
+				}
+			}
+			NOT = { holder_scope = { government = chinese_imperial_government } }
+			NOT = { holder_scope = { government = chinese_vassal_government } }
+			NOT = { holder_scope = { government = japanese_imperial_government } }
 		}
 		allow = {
 			emf_laws_allow_switch_away_from_hre_elective = yes
 			rtp_is_landless = no
 			rtp_is_feudal_government = yes
 			OR = {
-				independent = yes
-				any_liege = {
-					rtp_is_order_government = no
+				holder_scope = {
+					primary_title = {
+						OR = {
+							has_law = clanic_centralization_4
+							has_law = centralization_4
+						}
+					}
+				}
+				AND = {
+					OR = {
+						AND = {
+							hidden_tooltip = {
+								NOT = { has_dlc = "Zeus" }
+							}
+							holder_scope = {
+								custom_tooltip = {
+									text = is_a_reformed_rel
+									hidden_tooltip = {
+										is_a_reformed_religion_trigger = yes
+									}
+								}
+							}
+						}
+						AND = {
+							hidden_tooltip = {
+								has_dlc = "Zeus"
+							}
+							holder_scope = {
+								primary_title = {
+									OR = {
+										has_law = ze_administration_laws_1
+										has_law = ze_administration_laws_2
+									}
+								}
+							}
+						}
+					}
+					holder_scope = {
+						primary_title = {
+							OR = {
+								has_law = centralization_2
+								has_law = centralization_3
+							}
+						}
+					}
 				}
 			}
 		}
@@ -471,6 +643,9 @@ succession_laws = {
 		potential = {
 			emf_is_hre = yes
 			emf_laws_potential_not_for_byzantium = yes
+			NOT = {
+				has_title_flag = pretender_chinese_empire
+			}
 			OR = {
 				is_landless_type_title = no
 				is_tribal_type_title = yes
@@ -484,13 +659,35 @@ succession_laws = {
 				trigger_if = {
 					limit = { NOT = { has_law = succ_hre_elective } }
 					is_feudal = yes
-					NOT = { religion_group = muslim }
+					NOR = { 
+						religion_group = muslim
+						religion_group = indian_group
+					}
 					OR = {
 						emf_unreformed_pagan = no
-						religion = hellenic_pagan
+						religion_group = graecoroman_group
+						religion_group = indohelen_group
 					}
 				}
-				NOT = { government = confucian_bureaucracy }
+			}
+			OR = {
+				independent = yes
+				NOT = {
+					any_demesne_title = {
+						is_vice_royalty = yes
+					}
+				}
+			}
+			NOT = { holder_scope = { government = chinese_imperial_government } }
+			NOT = { holder_scope = { government = chinese_vassal_government } }
+			NOT = { holder_scope = { government = japanese_imperial_government } }
+		}
+		allow = {
+			custom_tooltip = {
+				text = not_forced_tt
+				hidden_tooltip = {
+					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
+				}
 			}
 		}
 		effect = {
@@ -531,7 +728,6 @@ succession_laws = {
 					is_feudal = yes
 					is_tribal = yes
 				}
-				NOT = { government = confucian_bureaucracy }
 			}
 			NOT = { tier = BARON }
 		}
@@ -576,7 +772,9 @@ succession_laws = {
 				is_nomadic = no
 				is_merchant_republic = no
 				is_patrician = no
-				NOT = { government = confucian_bureaucracy }
+			}
+			NOT = {
+				has_title_flag = pretender_chinese_empire
 			}
 		}
 		allow = {
@@ -687,8 +885,29 @@ succession_laws = {
 						bloodline_is_active_for = PREV
 					}
 				}
-				NOT = { government = confucian_bureaucracy }
+				NOT = { has_law = people_control_0 }
+				OR = {
+					independent = yes
+					NOT = {
+						any_demesne_title = {
+							is_vice_royalty = yes
+						}
+					}
+				}
 			}
+			NOT = {
+				has_title_flag = pretender_chinese_empire
+			}
+			OR = {
+				is_landless_type_title = no
+				is_tribal_type_title = yes
+				temporary = yes
+			}
+			NOT = { holder_scope = { government = chinese_imperial_government } }
+			NOT = { holder_scope = { government = chinese_vassal_government } }
+			NOT = { holder_scope = { government = japanese_imperial_government } }
+			NOT = { holder_scope = { government = japanese_feudalism } }
+			NOT = { holder_scope = { government = japanese_monastic_feudal_government } }
 			NOT = { tier = BARON }
 		}
 		allow = {
@@ -702,6 +921,54 @@ succession_laws = {
 					any_owned_bloodline = {
 						has_bloodline_flag = bloodline_tanistry
 						bloodline_is_active_for = PREV
+					}
+				}
+				holder_scope = {
+					primary_title = {
+						OR = {
+							has_law = centralization_3
+							has_law = centralization_4
+							has_law = clanic_centralization_3
+							has_law = clanic_centralization_4
+						}
+					}
+				}
+				AND = {
+					OR = {
+						AND = {
+							hidden_tooltip = {
+								NOT = { has_dlc = "Zeus" }
+							}
+							holder_scope = {
+								custom_tooltip = {
+									text = is_a_reformed_rel
+									hidden_tooltip = {
+										is_a_reformed_religion_trigger = yes
+									}
+								}
+							}
+						}
+						AND = {
+							hidden_tooltip = {
+								has_dlc = "Zeus"
+							}
+							holder_scope = {
+								primary_title = {
+									OR = {
+										has_law = ze_administration_laws_1
+										has_law = ze_administration_laws_2
+									}
+								}
+							}
+						}
+					}
+					holder_scope = {
+						primary_title = {
+							OR = {
+								has_law = centralization_1
+								has_law = centralization_2
+							}
+						}
 					}
 				}
 			}
@@ -802,10 +1069,14 @@ succession_laws = {
 					any_liege = {
 						rtp_is_order_government = no
 					}
+					NOT = {
+						any_demesne_title = {
+							is_vice_royalty = yes
+						}
+					}
 				}
 				NOR = {
 					religion_group = muslim
-					government = bureaucratic_government
 					government = chinese_imperial_government
 				}
 				OR = {
@@ -818,6 +1089,7 @@ succession_laws = {
 					culture = mongol
 					emf_unreformed_pagan = no
 				}
+				NOT = { has_law = people_control_0 }
 			}
 			OR = {
 				AND = {
@@ -834,8 +1106,12 @@ succession_laws = {
 					}
 				}
 			}
+			NOT = {
+				has_title_flag = pretender_chinese_empire
+			}
 			OR = {
 				is_landless_type_title = no
+				is_tribal_type_title = yes
 				temporary = yes
 				AND = {
 					is_nomadic = no
@@ -847,6 +1123,11 @@ succession_laws = {
 				}
 			}
 			is_primary_type_title = no
+			NOT = { holder_scope = { government = chinese_imperial_government } }
+			NOT = { holder_scope = { government = japanese_imperial_government } }
+			NOT = { holder_scope = { government = chinese_vassal_government } }
+			NOT = { holder_scope = { government = japanese_feudal_government } }
+			NOT = { holder_scope = { government = japanese_monastic_feudal_government } }
 		}
 		allow = {
 			OR = {
@@ -900,14 +1181,52 @@ succession_laws = {
 						is_theocracy = no
 					}
 				}
+				NOR = {
+					religion_group = abrahamic_group 		# <--- added by Numahr, to take into account change changes introduced on the religious groups structure
+					religion_group = arabpagan_group		# <--- added by Numahr, to take into account change changes introduced on the religious groups structure
+					religion_group = berberpagan_group		# <--- added by Numahr, to take into account change changes introduced on the religious groups structure
+					religion_group = bud_group
+					religion_group = christian
+					religion_group = graecoroman_group		# <--- added by Numahr, to take into account change changes introduced on the religious groups structure
+					religion_group = indohelen_group		
+					religion_group = luwian_group			# <--- added by Numahr, to take into account change changes introduced on the religious groups structure
+					religion_group = mithra_group 			# <--- added by Numahr, to take into account change changes introduced on the religious groups structure
+					religion_group = neoplato_group
+					religion_group = palmyranpagan_group	# <--- added by Numahr, to take into account change changes introduced on the religious groups structure
+					religion_group = sol_group
+					religion_group = zoroastrian_group
+					has_law = people_control_0
+				}
 				is_republic = no
 				is_merchant_republic = no
 				is_nomadic = no
-				OR = {
-					independent = yes
-					NOT = { any_liege = { holy_order = yes } }
+				NOT = {
+					has_title_flag = pretender_chinese_empire
 				}
-				NOT = { government = confucian_bureaucracy }
+				OR = {
+				holder_scope = { # Viceroyalties can always have turkish succession if muslim
+					any_demesne_title = {
+						is_vice_royalty = yes
+					}
+				}
+				AND = {
+					OR = {
+						is_landless_type_title = no
+						is_tribal_type_title = yes
+						temporary = yes
+					}
+					holder_scope = {
+						OR = {
+							independent = yes
+							NOT = {
+								any_liege = {
+									holy_order = yes
+								}
+							}
+						}
+					}
+					is_primary_type_title = no
+				}
 			}
 			OR = {
 				is_landless_type_title = no
@@ -915,6 +1234,32 @@ succession_laws = {
 				temporary = yes
 			}
 			is_primary_type_title = no
+			NOT = { holder_scope = { government = confucian_bureaucracy } }
+			NOT = { holder_scope = { government = chinese_imperial_government } }
+			NOT = { holder_scope = { government = japanese_imperial_government } }
+			NOT = { holder_scope = { government = chinese_vassal_government } }
+			NOT = { holder_scope = { government = japanese_feudal_government } }
+			NOT = { holder_scope = { government = japanese_monastic_feudal_government } }
+		}
+		allow = {
+			holder_scope = {
+				OR = {
+					religion_group = muslim
+					custom_tooltip = {
+						text = is_not_a_reformed_rel
+						hidden_tooltip = {
+							is_a_reformed_religion_trigger = no
+						}
+						primary_title = {
+							OR = {
+								has_law = centralization_3
+								has_law = centralization_4
+								has_law = clanic_centralization_4
+							}
+						}
+					}
+				}				
+			}
 		}
 		effect = {
 			#tooltip = {
@@ -967,10 +1312,8 @@ succession_laws = {
 				any_liege = {
 					rtp_is_order_government = yes
 				}
-				NOR = {
-					government = confucian_bureaucracy
-					government = chinese_imperial_government
-				}
+			NOT = { holder_scope = { government = chinese_imperial_government } }
+			NOT = { holder_scope = { government = japanese_imperial_government } }
 			}
 		}
 		effect = {
@@ -981,6 +1324,9 @@ succession_laws = {
 	succ_open_elective = {
 		potential = {
 			emf_laws_potential_not_for_byzantium = yes
+			NOT = {
+				has_title_flag = pretender_chinese_empire
+			}
 			holder_scope = {
 				OR = {
 					government = rtp_landless_mercenary_g
@@ -1010,6 +1356,12 @@ succession_laws = {
 					tier = BARON
 					OR = {
 						is_republic = yes
+						holder_scope = {
+							NOR = {
+								government = classical_government
+								government = oriental_monarchy_government
+							}
+						}
 						AND = {
 							is_theocracy = yes
 							NOT = { holder_scope = { religion_group = muslim } }
@@ -1019,10 +1371,19 @@ succession_laws = {
 				holder_scope = {
 					OR = {
 						is_republic = yes
+						NOR = {
+							government = classical_government
+							government = oriental_monarchy_government
+						}
 						AND = {
 							is_theocracy = yes
 							NOT = { religion_group = muslim }
 						}
+					}
+				}
+				holder_scope = {
+					primary_title = {
+						has_law = people_control_0
 					}
 				}
 			}
@@ -1054,11 +1415,10 @@ succession_laws = {
 						is_vice_royalty = yes
 					}
 				}
-				NOR = {
-					government = confucian_bureaucracy
-					government = chinese_imperial_government
-				}
 			}
+			NOT = { holder_scope = { government = chinese_imperial_government } }
+			NOT = { holder_scope = { government = chinese_vassal_government } }
+			NOT = { holder_scope = { government = japanese_imperial_government } }
 		}
 
 		effect = {
@@ -1093,13 +1453,14 @@ succession_laws = {
 					is_feudal = no
 					NOT = { any_liege = { holy_order = yes } }
 				}
-				NOR = {
-					government = bureaucratic_government
-					government = chinese_imperial_government
-				}
 			}
 			is_landless_type_title = no
 			is_primary_type_title = no
+			NOT = { holder_scope = { government = chinese_imperial_government } }
+			NOT = { holder_scope = { government = chinese_vassal_government } }
+			NOT = { holder_scope = { government = japanese_imperial_government } }
+			NOT = { holder_scope = { government = japanese_feudalism } }
+			NOT = { holder_scope = { government = japanese_monastic_feudal_government } }
 		}
 		effect = {
 			succession = catholic_bishopric
@@ -1117,11 +1478,12 @@ succession_laws = {
 			}
 			owner = {
 				is_merchant_republic = yes
-				NOR = {
-					government = confucian_bureaucracy
-					government = chinese_imperial_government
-				}
 			}
+			NOT = { holder_scope = { government = chinese_imperial_government } }
+			NOT = { holder_scope = { government = japanese_imperial_government } }
+			NOT = { holder_scope = { government = chinese_vassal_government } }
+			NOT = { holder_scope = { government = japanese_feudalism } }
+			NOT = { holder_scope = { government = japanese_monastic_feudal_government } }
 		}
 		effect = {
 			succession = patrician_elective
@@ -1139,13 +1501,13 @@ succession_laws = {
 	
 	succ_offmap_succession = {
 		potential = {
-			holder_scope = {
-				top_liege = { is_offmap_governor = yes }
-				government = confucian_bureaucracy # To use this with future offmap powers, use an OR clause here with the new government types
-			}
+			#holder_scope = {
+				#top_liege = { is_offmap_governor = yes }
+				#government = confucian_bureaucracy # To use this with future offmap powers, use an OR clause here with the new government types
+			#}
 		}
 		effect = {
-			succession = offmap_succession
+			#succession = offmap_succession
 			# This succession type generates a character of China's culture and religion
 			# They have decent (4-10) stats, and good (7-11) stewardship, and will always have a Stewardship education
 			# The offmap power defined in the top liege's government is used to determine the culture and religion. Will not function if this isn't defined
@@ -1184,6 +1546,7 @@ gender_laws = {
 					}
 					AND = {
 						OR = {
+							feminism_0_religions_trigger = no
 							has_game_rule = { name = gender value = all }
 							AND = {
 								has_dlc = "Zeus"
@@ -1200,6 +1563,7 @@ gender_laws = {
 									OR = {
 										has_law = true_cognatic_succession
 										has_law = cognatic_succession
+										has_law = agnatic_succession
 									}
 								}
 							}
@@ -1350,7 +1714,10 @@ gender_laws = {
 			factor = 1
 			modifier = {
 				factor = 0
-				has_game_rule = { name = gender value = all }
+				OR = {
+					feminism_4_religions_trigger = no
+					has_game_rule = { name = gender value = all }
+				}
 			}
 			modifier = {
 				factor = 0
@@ -1386,6 +1753,10 @@ gender_laws = {
 			holder_scope = { NOT = { has_religion_feature = religion_matriarchal } }
 			holder_scope = { NOT = { has_religion_feature = religion_patriarchal } }
 			OR = {
+				NOR = {
+					holder_scope = { feminism_0_religions_trigger = yes }
+					holder_scope = { feminism_1_religions_trigger = yes }
+				}
 				has_game_rule = { name = gender value = all }
 				holder_scope = {
 					NOT = {
@@ -1415,6 +1786,7 @@ gender_laws = {
 										OR = {
 											has_law = true_cognatic_succession
 											has_law = cognatic_succession
+											has_law = enatic_cognatic_succession
 										}
 									}
 								}
@@ -1521,7 +1893,18 @@ gender_laws = {
 		female_dynasty_opinion = 10
 
 		potential = {
+			NOR = {
+				has_law = agnatic_succession
+				has_law = cognatic_succession
+				has_law = true_cognatic_succession
+			}
 			holder_scope = {
+				AND = {
+						feminism_0_religions_trigger = no
+						feminism_1_religions_trigger = no
+						feminism_2_religions_trigger = no
+						feminism_3_religions_trigger = no
+				}
 				OR = {
 					has_religion_feature = religion_matriarchal
 					has_landed_title = e_hip
@@ -1536,8 +1919,19 @@ gender_laws = {
 		}
 		allow = {
 			OR = {
-				has_law = true_cognatic_succession
 				has_law = enatic_cognatic_succession
+				feminism_4_religions_trigger = yes
+				has_game_rule = {
+					name = gender
+					value = all
+				}
+			}
+			liege = {
+				primary_title = {
+					NOT = {
+						has_law = agnatic_succession
+					}
+				}
 			}
 			emf_laws_change_succ_can_afford_prestige_cost = yes
 		}
@@ -1598,8 +1992,18 @@ gender_laws = {
 		female_dynasty_opinion = 5
 
 		potential = {
+			NOR = {
+				has_law = cognatic_succession
+				has_law = agnatic_succession
+			}
 			holder_scope = {
 				OR = {
+					AND = {
+						feminism_0_religions_trigger = no
+						feminism_1_religions_trigger = no
+						feminism_2_religions_trigger = no
+						feminism_3_religions_trigger = no
+					}
 					has_religion_feature = religion_matriarchal
 					any_owned_bloodline = {
 						has_bloodline_flag = bloodline_enatic_cognatic
@@ -1618,6 +2022,7 @@ gender_laws = {
 			OR = {
 				has_law = true_cognatic_succession
 				has_law = enatic_succession
+				feminism_4_religions_trigger = yes
 			}
 			emf_laws_change_succ_can_afford_prestige_cost = yes
 		}

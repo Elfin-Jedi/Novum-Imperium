@@ -87,8 +87,9 @@ vieti_orthodox = {
 	}
 }
 
-pagan_group = {
-hereclemasculist_pagan = {
+indohelen_group = {
+
+	hereclemasculist_pagan = {
 		graphical_culture = hellenicgfx
 		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
 		interface_skin = { hellenic_interface }
@@ -216,6 +217,71 @@ hereclemasculist_pagan = {
 		can_demand_religious_conversion = no
 	}
 	
+	romist_pagan = {
+		alternate_start = {
+			OR = {
+				year < 1100
+				has_alternate_start_parameter = { key = religion value = full_random }
+			}
+		}
+		icon = 58
+		heresy_icon = 59
+		
+		interface_skin = { pagan_interface }
+		
+		color = { 116 50 69 }
+		
+		high_god_name = GOD_THE_LIGHT_OF_ROME
+		
+		god_names = {
+			GOD_FATHER_ROME GOD_MOTHER_ROME GOD_THE_LIGHT_OF_ROME GOD_THE_SPIRITS GOD_THE_ANCESTORS GOD_WOLF_MILKIES GOD_BURNING_SUN
+		}
+		evil_god_names = {
+			THE_DARKNESS THE_DARK_SPIRITS GOD_BLACK_SUN GOD_THE_LIGHT_EATERS
+		}
+
+		unit_modifier = {
+			land_morale = 0.4
+
+			key = "OFF_RELIGION"
+		}
+		
+		character_modifier = {
+			martial = 1
+			vieti_orthodox_opinion = 6
+			hereclemasculist_pagan_opinion = 5
+			vieti_mithras_pagan_opinion = 5
+			britannic_hyperborean_pagan_opinion = 5
+		}
+		
+		priests_can_marry = yes
+		priests_can_inherit = yes
+		female_temple_holders = yes
+		allow_looting = yes
+
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LATINI
+		priest_title = AUGUR
+
+		defensive_attrition = yes
+		max_consorts = 3
+		women_can_take_consorts = yes
+		
+		religious_clothing_head = 5
+		religious_clothing_priest = 4
+
+		intermarry = indian_group
+		intermarry = zoroastrian_group
+		intermarry = vieti_orthodox
+		intermarry = hereclemasculist_pagan
+		intermarry = vieti_mithras_pagan
+		
+		dislike_tribal_organization = yes
+		can_demand_religious_conversion = no
+	}
+}
+tengri_group = {
+
 	britannic_hyperborean_pagan = {
 		alternate_start = {
 			OR = {
@@ -280,68 +346,4 @@ hereclemasculist_pagan = {
 		
 		can_demand_religious_conversion = no
 	}
-	
-	romist_pagan = {
-		alternate_start = {
-			OR = {
-				year < 1100
-				has_alternate_start_parameter = { key = religion value = full_random }
-			}
-		}
-		icon = 58
-		heresy_icon = 59
-		
-		interface_skin = { pagan_interface }
-		
-		color = { 116 50 69 }
-		
-		high_god_name = GOD_THE_LIGHT_OF_ROME
-		
-		god_names = {
-			GOD_FATHER_ROME GOD_MOTHER_ROME GOD_THE_LIGHT_OF_ROME GOD_THE_SPIRITS GOD_THE_ANCESTORS GOD_WOLF_MILKIES GOD_BURNING_SUN
-		}
-		evil_god_names = {
-			THE_DARKNESS THE_DARK_SPIRITS GOD_BLACK_SUN GOD_THE_LIGHT_EATERS
-		}
-
-		unit_modifier = {
-			land_morale = 0.4
-
-			key = "OFF_RELIGION"
-		}
-		
-		character_modifier = {
-			martial = 1
-			vieti_orthodox_opinion = 6
-			hereclemasculist_pagan_opinion = 5
-			vieti_mithras_pagan_opinion = 5
-			britannic_hyperborean_pagan_opinion = 5
-		}
-		
-		priests_can_marry = yes
-		priests_can_inherit = yes
-		female_temple_holders = yes
-		allow_looting = yes
-
-		crusade_name = GREAT_HOLY_WAR
-		scripture_name = THE_LATINI
-		priest_title = AUGUR
-
-		defensive_attrition = yes
-		max_consorts = 3
-		women_can_take_consorts = yes
-		
-		religious_clothing_head = 5
-		religious_clothing_priest = 4
-
-		intermarry = indian_group
-		intermarry = zoroastrian_group
-		intermarry = vieti_orthodox
-		intermarry = hereclemasculist_pagan
-		intermarry = vieti_mithras_pagan
-		
-		dislike_tribal_organization = yes
-		can_demand_religious_conversion = no
-	}
-	
 }

@@ -322,29 +322,48 @@ obj_forge_bloodline = {
 		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { # Should not already have a created bloodline.
-				#has_bloodline_flag = created_bloodline
-				founder = {
-						character = ROOT
-				}
+				has_bloodline_flag = created_bloodline
 			}
 		}
-		# NAND = { # The AI shouldn't create bloodlines when they already have a historical one
-			# ai = yes
-			# any_owned_bloodline = {
-				# has_bloodline_flag = historical_bloodline
-			# }
-		# }
+		NAND = { # The AI shouldn't create bloodlines when they already have a historical one
+			ai = yes
+			any_owned_bloodline = {
+				has_bloodline_flag = historical_bloodline
+			}
+		}
 		OR = {
-			prestige = 5000 #Adults
-			AND = { #Child facilitation
-				prestige = 2500
-				is_adult = no
+			AND = {
+				has_dynasty_flag = flag_dynasty_forged_bloodline
 				OR = {
-					trait = willful
-					trait = proud
-					trait = ambitious
-					trait = quick
-					trait = genius 
+					prestige = 20000 #Adults
+					AND = { #Child facilitation
+						prestige = 15000
+						is_adult = no
+						OR = {
+							trait = willful
+							trait = proud
+							trait = ambitious
+							trait = quick
+							trait = genius 
+						}
+					}
+				}
+			}
+			AND = {
+				NOT = { has_dynasty_flag = flag_dynasty_forged_bloodline }
+				OR = {
+					prestige = 5000 #Adults
+					AND = { #Child facilitation
+						prestige = 2500
+						is_adult = no
+						OR = {
+							trait = willful
+							trait = proud
+							trait = ambitious
+							trait = quick
+							trait = genius
+						}
+					}
 				}
 			}
 		}
@@ -402,6 +421,7 @@ obj_forge_bloodline = {
 		}
 		modifier = {
 			factor = 0
+			NOT = {
 			any_owned_bloodline = { #Founders of historical Bloodlines tend to spawn with enough prestige and troops to have an easy time achieving this ambition. Fine for the player, but the AI should not do it.
 				founder = {
 					character = ROOT
@@ -418,10 +438,7 @@ obj_forge_bloodline = {
 			text = obj_forge_bloodline_condition_tooltip		
 			hidden_tooltip = { 
 				any_owned_bloodline = { # Could be either one of the Bloodlines tied to this ambition or one of the other earned bloodlines scattered throughout the game.
-					#has_bloodline_flag = created_bloodline
-					founder = {
-						character = ROOT
-					}
+					has_bloodline_flag = created_bloodline
 				}
 				# Possible Bloodlines specifically tied to this ambition:
 				# Murder Bloodline (assassinate 30 people) 	---> 	(Little Killer/Dreaded/Feast Macabre/Silent)		

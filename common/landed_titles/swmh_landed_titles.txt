@@ -1072,12 +1072,9 @@ d_victual_brothers = { # Victual Brothers
 		conditional_tooltip = {
 			trigger = { is_alternate_start = no }
 			OR = {
-				religion = norse_pagan
-				religion = norse_pagan_reformed
-				religion = baltic_pagan
-				religion = baltic_pagan_reformed
-				religion = finnish_pagan
-				religion = finnish_pagan_reformed
+				religion_group = norsegerman_group
+				religion_group = baltic_group
+				religion_group = finnish_group
 				religion_group = christian
 			}
 		}
@@ -1451,7 +1448,7 @@ d_lithuanian_band = { # Lithuanian Band
 	color2 = { 255 255 255 }
 	capital = 421 # Žëmaitëjë # Lietuva / Zhmud
 	# Parent Religion
-	religion = baltic_pagan
+	religion = dievas
 	culture = lithuanian
 	mercenary = yes
 	title = CAPTAIN

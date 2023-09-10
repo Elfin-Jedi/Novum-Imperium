@@ -29851,11 +29851,14 @@ african_pagan_group = {
 	}
 }
 
-inti_group = {
-	graphical_culture = mesoamericangfx
-    playable = yes
+andean_rel_group = {
+	graphical_culture = norsegfx
+	playable = yes
 	has_coa_on_barony_only = no
+	ai_convert_same_group = 2 # always try to convert
+	ai_convert_other_group = 2	# always try to convert
 	hostile_within_group = yes
+	interface_skin = { indian_interface muslim_interface }
 
 	color = { 0.49 0.82 0.16 }
 	

@@ -65,8 +65,8 @@ emf_sr_has_any_religion_char_flag = {
 		has_flag = character_was_bon_reformed
 		has_flag = character_was_bon
 		has_flag = character_was_zoroastrian
-		has_flag = character_was_mazdaki
-		has_flag = character_was_zurvanist
+		has_flag = character_was_mazdakism
+		has_flag = character_was_zurvanism
 		has_flag = character_was_manichean
 		has_flag = character_was_mandaean
 		has_flag = character_was_yazidi
@@ -303,12 +303,12 @@ emf_sr_is_in_PREVs_interesting_society = {
 		PREV = { interested_in_society = secret_religious_society_zoroastrian }
 	}
 	trigger_else_if = {
-		limit = { society_member_of = secret_religious_society_mazdaki }
-		PREV = { interested_in_society = secret_religious_society_mazdaki }
+		limit = { society_member_of = secret_religious_society_mazdakism }
+		PREV = { interested_in_society = secret_religious_society_mazdakism }
 	}
 	trigger_else_if = {
-		limit = { society_member_of = secret_religious_society_zurvanist }
-		PREV = { interested_in_society = secret_religious_society_zurvanist }
+		limit = { society_member_of = secret_religious_society_zurvanism }
+		PREV = { interested_in_society = secret_religious_society_zurvanism }
 	}
 	trigger_else_if = {
 		limit = { society_member_of = secret_religious_society_manichean }
@@ -579,12 +579,12 @@ emf_sr_has_any_char_old_religion = {
 			any_character = { religion = zoroastrian emf_isolated_character = no }
 		}
 		AND = {
-			has_flag = character_was_mazdaki
-			any_character = { religion = mazdaki emf_isolated_character = no }
+			has_flag = character_was_mazdakism
+			any_character = { religion = mazdakism emf_isolated_character = no }
 		}
 		AND = {
-			has_flag = character_was_zurvanist
-			any_character = { religion = zurvanist emf_isolated_character = no }
+			has_flag = character_was_zurvanism
+			any_character = { religion = zurvanism emf_isolated_character = no }
 		}
 		AND = {
 			has_flag = character_was_manichean
@@ -856,12 +856,12 @@ emf_sr_has_secret_community_of_ROOT = {
 		has_province_modifier = secret_zoroastrian_community
 	}
 	trigger_else_if = {
-		limit = { ROOT = { society_member_of = secret_religious_society_mazdaki } }
-		has_province_modifier = secret_mazdaki_community
+		limit = { ROOT = { society_member_of = secret_religious_society_mazdakism } }
+		has_province_modifier = secret_mazdakism_community
 	}
 	trigger_else_if = {
-		limit = { ROOT = { society_member_of = secret_religious_society_zurvanist } }
-		has_province_modifier = secret_zurvanist_community
+		limit = { ROOT = { society_member_of = secret_religious_society_zurvanism } }
+		has_province_modifier = secret_zurvanism_community
 	}
 	trigger_else_if = {
 		limit = { ROOT = { society_member_of = secret_religious_society_manichean } }
@@ -1407,20 +1407,20 @@ emf_sr_can_have_new_secret_community_of_FROM = {
 		}
 	}
 	trigger_else_if = {
-		limit = { FROM = { society_member_of = secret_religious_society_mazdaki } }
+		limit = { FROM = { society_member_of = secret_religious_society_mazdakism } }
 		location = {
 			NOR = {
-				religion = mazdaki
-				has_province_modifier = secret_mazdaki_community
+				religion = mazdakism
+				has_province_modifier = secret_mazdakism_community
 			}
 		}
 	}
 	trigger_else_if = {
-		limit = { FROM = { society_member_of = secret_religious_society_zurvanist } }
+		limit = { FROM = { society_member_of = secret_religious_society_zurvanism } }
 		location = {
 			NOR = {
-				religion = zurvanist
-				has_province_modifier = secret_zurvanist_community
+				religion = zurvanism
+				has_province_modifier = secret_zurvanism_community
 			}
 		}
 	}
@@ -1913,17 +1913,17 @@ emf_sr_has_not_religion_or_community_of_ROOT_sr = {
 		}
 	}
 	trigger_else_if = {
-		limit = { ROOT = { secret_religion = mazdaki } }
+		limit = { ROOT = { secret_religion = mazdakism } }
 		NOR = {
-			religion = mazdaki
-			has_province_modifier = secret_mazdaki_community
+			religion = mazdakism
+			has_province_modifier = secret_mazdakism_community
 		}
 	}
 	trigger_else_if = {
-		limit = { ROOT = { secret_religion = zurvanist } }
+		limit = { ROOT = { secret_religion = zurvanism } }
 		NOR = {
-			religion = zurvanist
-			has_province_modifier = secret_zurvanist_community
+			religion = zurvanism
+			has_province_modifier = secret_zurvanism_community
 		}
 	}
 	trigger_else_if = {
@@ -2104,8 +2104,8 @@ emf_sr_cult_requires_dlc_unlock = {
 		society_member_of = secret_religious_society_bon_reformed
 		society_member_of = secret_religious_society_bon
 		society_member_of = secret_religious_society_zoroastrian
-		society_member_of = secret_religious_society_mazdaki
-		society_member_of = secret_religious_society_zurvanist
+		society_member_of = secret_religious_society_mazdakism
+		society_member_of = secret_religious_society_zurvanism
 		society_member_of = secret_religious_society_manichean
 		society_member_of = secret_religious_society_mandaean
 		society_member_of = secret_religious_society_yazidi
@@ -2189,8 +2189,8 @@ emf_sr_does_SoI_unlock_cult = {
 emf_sr_does_TOG_unlock_cult = {
 	OR = {
 		society_member_of = secret_religious_society_zoroastrian
-		society_member_of = secret_religious_society_mazdaki
-		society_member_of = secret_religious_society_zurvanist
+		society_member_of = secret_religious_society_mazdakism
+		society_member_of = secret_religious_society_zurvanism
 		society_member_of = secret_religious_society_manichean
 		society_member_of = secret_religious_society_mandaean
 		society_member_of = secret_religious_society_yazidi
@@ -2450,12 +2450,12 @@ emf_sr_old_religion_is_liege_sr = {
 			liege = { secret_religion = zoroastrian }
 		}
 		AND = {
-			has_flag = character_was_mazdaki
-			liege = { secret_religion = mazdaki }
+			has_flag = character_was_mazdakism
+			liege = { secret_religion = mazdakism }
 		}
 		AND = {
-			has_flag = character_was_zurvanist
-			liege = { secret_religion = zurvanist }
+			has_flag = character_was_zurvanism
+			liege = { secret_religion = zurvanism }
 		}
 		AND = {
 			has_flag = character_was_manichean

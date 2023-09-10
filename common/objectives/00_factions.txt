@@ -23,6 +23,10 @@ faction_independence = {
 	# Plotter scope
 	potential = {
 		emf_faction_basic_potential = yes
+		NOR = {
+			trait = treasure_fleet_preparation
+			trait = treasure_fleet_voyage
+		}
 		OR = {
 			ai = yes
 			is_feudal = yes
@@ -1500,18 +1504,6 @@ faction_independence = {
 				}
 			}
 		}
-		modifier = { # More likely to want to go independent from the WP if China is unstable
-			factor = 10.0 # TODO: Balance this factor to something on par with the rest of them
-			liege = {
-				government = confucian_bureaucracy
-			}
-			offmap_china = {
-				NOR = {
-					has_status = china_stable
-					has_status = china_golden_age
-				}
-			}
-		}
 	}
 
 	success = {
@@ -1549,6 +1541,10 @@ faction_claimant = {
 	# Plotter scope
 	potential = {
 		emf_faction_basic_potential = yes
+		NOR = {
+			trait = treasure_fleet_preparation
+			trait = treasure_fleet_voyage
+		}
 		liege = {
 			OR = {
 				is_feudal = yes
@@ -3054,6 +3050,98 @@ faction_claimant = {
 				OR = {
 					has_opinion_modifier = { who = LIEGE modifier = opinion_evil_tyrant }
 					has_opinion_modifier = { who = LIEGE modifier = opinion_tyrant }
+				}
+			}
+		}
+		# NEVER depose the Imperial Family as far as k_chrysanthemum_throne goes!
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = imperial_family_deposed
+				liege = {
+					religion = nihon_shinto
+					controls_religion = yes
+				}
+			}
+			new_character = {
+				NOT = {
+					dynasty = 1000027000 # Imperial Family
+				}
+				NOT = {
+					character = FROM # You can back yourself
+				}
+			}
+			# Assuming we care...
+			OR = {
+				religion = nihon_shinto
+				AND = {
+					religion_group = bud_group
+					culture = japanese
+				}
+			}
+			# ... and that it isn't just a faction for the Shogunate or a lesser kingdom
+			ROOT = {
+				title = k_chrysanthemum_throne
+			}
+		}
+		
+		# Do it less frequently if they previously were deposed
+		modifier = {
+			factor = 0.1
+			OR = {
+				has_global_flag = imperial_family_deposed
+				liege = {
+					religion = nihon_shinto
+					controls_religion = yes
+				}
+			}
+			new_character = {
+				NOT = {
+					dynasty = 1000027000 # Imperial Family
+				}
+				NOT = {
+					character = FROM # You can back yourself...
+				}
+			}
+			# Assuming we care...
+			OR = {
+				religion = nihon_shinto
+				AND = {
+					religion_group = bud_group
+					culture = japanese
+				}
+			}
+			# ... and that it isn't just a faction for the Shogunate or a lesser kingdom
+			ROOT = {
+				title = k_chrysanthemum_throne
+			}
+		}
+			
+		# NEVER depose the Tenno in favour of the Regent!
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = imperial_family_deposed
+				liege = {
+					religion = nihon_shinto
+					controls_religion = yes
+				}
+			}
+			new_character = {
+				OR = {
+					trait = japanese_regent
+					trait = japanese_regent2 # The Shogun's Regent should also not be an option
+				}
+				NOT = {
+					character = ROOT # You can back yourself...
+			}
+		}
+		# Assuming we care...
+		OR = {
+			religion = nihon_shinto
+				AND = {
+					religion_group = bud_group
+					culture = japanese
 				}
 			}
 		}
@@ -4744,6 +4832,100 @@ faction_claimant = {
 				has_opinion_modifier = { who = LIEGE modifier = opinion_tyrant }
 			}
 		}
+		
+		# NEVER depose the Imperial Family as far as k_chrysanthemum_throne goes!
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = imperial_family_deposed
+				liege = {
+					religion = nihon_shinto
+					controls_religion = yes
+				}
+			}
+			new_character = {
+				NOT = {
+					dynasty = 1000027000 # Imperial Family
+				}
+				NOT = {
+					character = FROM # You can back yourself
+				}
+			}
+			# Assuming we care...
+			OR = {
+				religion = nihon_shinto
+				AND = {
+					religion_group = bud_group
+					culture = japanese
+				}
+			}
+			# ... and that it isn't just a faction for the Shogunate or a lesser kingdom
+			ROOT = {
+				title = k_chrysanthemum_throne
+			}
+		}
+		
+		# Do it less frequently if they previously were deposed
+		modifier = {
+			factor = 0.1
+			OR = {
+				has_global_flag = imperial_family_deposed
+				liege = {
+					religion = nihon_shinto
+					controls_religion = yes
+				}
+			}
+			new_character = {
+				NOT = {
+					dynasty = 1000027000 # Imperial Family
+				}
+				NOT = {
+					character = FROM # You can back yourself...
+				}
+			}
+			# Assuming we care...
+			OR = {
+				religion = nihon_shinto
+				AND = {
+					religion_group = bud_group
+					culture = japanese
+				}
+			}
+			# ... and that it isn't just a faction for the Shogunate or a lesser kingdom
+			ROOT = {
+				title = k_chrysanthemum_throne
+			}
+		}
+		
+		# NEVER depose the Tenno in favour of the Regent!
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = imperial_family_deposed
+				liege = {
+					religion = nihon_shinto
+					controls_religion = yes
+				}
+			}
+			new_character = {
+				OR = {
+					trait = japanese_regent
+					trait = japanese_regent2 # The Shogun's Regent should also not be an option
+				}
+				NOT = {
+					character = ROOT # You can back yourself...
+				}
+			}
+			# Assuming we care...
+			OR = {
+				religion = nihon_shinto
+				AND = {
+					religion_group = bud_group
+					culture = japanese
+				}
+			}
+		}
+		
 		# less likely to support a claimant who is adopted
 		modifier = {
 			factor = 0.7
@@ -4778,6 +4960,10 @@ faction_antiking = {
 	# Plotter scope
 	potential = {
 		emf_faction_basic_potential = yes
+		NOR = {
+			trait = treasure_fleet_preparation
+			trait = treasure_fleet_voyage
+		}
 		OR = {
 			religion = catholic
 			religion = fraticelli
@@ -5293,6 +5479,10 @@ faction_overthrow = {
 	potential = {
 		is_nomadic = yes
 		emf_faction_basic_potential = yes
+		NOR = {
+			trait = treasure_fleet_preparation
+			trait = treasure_fleet_voyage
+		}
 	}
 
 	# Target scope
@@ -6142,6 +6332,10 @@ faction_increase_council_power = {
 	potential = {
 		has_dlc = "Zeus"
 		emf_faction_basic_potential = yes
+		NOR = {
+			trait = treasure_fleet_preparation
+			trait = treasure_fleet_voyage
+		}
 		liege = { is_nomadic = no }
 
 		NOT = { has_character_modifier = faction_council_power_ultimatum_timer }
@@ -6984,8 +7178,8 @@ faction_abrahamic_revolters = {
 		}
 		liege = { 
 			OR = {
-				religion = hellenic_pagan
-				religion = hellenic_pagan_reformed 
+				religion_group = graecoroman_group
+				religion_group = indohelen_group
 			}			
 		}
 

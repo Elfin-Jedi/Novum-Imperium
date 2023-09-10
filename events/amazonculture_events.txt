@@ -436,8 +436,8 @@ namespace = AmzCul
 					has_global_flag = bogomilist_enat_cognatic_flag
 				}
 				AND = {
-					religion = mazdaki
-					has_global_flag = mazdaki_enat_cognatic_flag
+					religion = mazdakism
+					has_global_flag = mazdakism_enat_cognatic_flag
 				}
 				AND = {
 					religion = sunni
@@ -544,8 +544,8 @@ namespace = AmzCul
 					has_global_flag = bogomilist_enatic_flag
 				}
 				AND = {
-					religion = mazdaki
-					has_global_flag = mazdaki_enatic_flag
+					religion = mazdakism
+					has_global_flag = mazdakism_enatic_flag
 				}
 				has_religion_feature = religion_matriarchal
 				has_game_rule = { 
@@ -618,8 +618,8 @@ namespace = AmzCul
 					has_global_flag = bogomilist_abs_cognatic_flag
 				}
 				AND = {
-					religion = mazdaki
-					has_global_flag = mazdaki_abs_cognatic_flag
+					religion = mazdakism
+					has_global_flag = mazdakism_abs_cognatic_flag
 				}
 				AND = {
 					religion = sunni
@@ -1209,8 +1209,8 @@ namespace = AmzCul
 				set_global_flag = bogomilist_seminary_flag
 			}
 			if = {
-				limit = { religion = mazdaki }
-				set_global_flag = mazdaki_seminary_flag
+				limit = { religion = mazdakism }
+				set_global_flag = mazdakism_seminary_flag
 			}
 			if = {
 				limit = { religion = sunni }
@@ -1316,8 +1316,8 @@ namespace = AmzCul
 					NOT = { has_global_flag = bogomilist_seminary_flag }
 				}
 				AND = {
-					religion = mazdaki 
-					NOT = { has_global_flag = mazdaki_seminary_flag }
+					religion = mazdakism
+					NOT = { has_global_flag = mazdakism_seminary_flag }
 				}
 				AND = {
 					religion = sunni 

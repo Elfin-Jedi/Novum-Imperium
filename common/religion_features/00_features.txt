@@ -74,7 +74,7 @@ religion_nature = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0.25		#Pacifists should be rarer in general in Random World.
@@ -196,9 +196,7 @@ religion_nature = {
 					OR = { 
 						religion = bon 
 						religion = slavic_pagan
-						religion = baltic_pagan
 						religion = finnish_pagan
-						religion = west_african_pagan
 						religion = egyptian_pagan
 					}
 				}
@@ -318,9 +316,6 @@ religion_nature = {
 					OR = { 
 						religion = norse_pagan
 						religion = tengri_pagan
-						religion = zun_pagan
-						religion = hellenic_pagan
-						religion = west_african_pagan
 					}
 				}
 			}
@@ -412,17 +407,7 @@ religion_nature = {
 		}
 		ai_will_do = {
 			factor = 80
-			modifier = { 	
-				factor = 0.1
-				FROM = { 
-					character = yes 
-					NOR = { 
-						religion = zun_pagan
-						religion = hellenic_pagan
-						religion = west_african_pagan
-					}
-				}
-			}
+			
 			modifier = { 	
 				factor = 0.01
 				FROM = { 
@@ -482,7 +467,7 @@ religion_nature = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -579,7 +564,7 @@ religion_nature = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0.5		#Should be rarer than regular ones.
@@ -637,9 +622,7 @@ religion_nature = {
 				factor = 0.1
 				FROM = { 
 					character = yes 
-					NOR = { 
-						religion = hellenic_pagan
-						religion = west_african_pagan
+					NOT = {
 						religion = slavic_pagan
 					}
 				}
@@ -689,7 +672,7 @@ religion_nature = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0.5		#Should be rarer than regular ones.
@@ -742,19 +725,11 @@ religion_doctrine = {
 		}
 		ai_will_do = {
 			factor = 1
-			modifier = { 	
-				factor = 0.1
-				FROM = { 
-					character = yes 
-					NOT = { 
-						religion = zun_pagan
-					}
-				}
-			}
+
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -807,7 +782,7 @@ religion_doctrine = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -834,7 +809,7 @@ religion_doctrine = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -864,7 +839,7 @@ religion_doctrine = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -1024,7 +999,7 @@ religion_doctrine = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -1032,7 +1007,8 @@ religion_doctrine = {
 		picture = GFX_religion_feature_haruspicy
 		potential = {
 			NOR = {
-				has_selected_religion_feature = religion_feature_hellenic
+				religion_group = graecoroman_group
+				religion_group = indohelen_group
 				has_selected_religion_feature = religion_feature_a_tag_roog
 				has_selected_religion_feature = religion_feature_celtic
 			}
@@ -1048,8 +1024,9 @@ religion_doctrine = {
 	religion_astrology = {
 		picture = GFX_religion_feature_astrology
 		potential = {
-			NOT = {
-				has_selected_religion_feature = religion_feature_hellenic
+			NOR = {
+				religion_group = graecoroman_group
+				religion_group = indohelen_group
 			}
 		}
 
@@ -1484,7 +1461,7 @@ religion_doctrine = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			modifier = {
                 factor = 1.5
@@ -1818,7 +1795,7 @@ religion_doctrine = {
 								is_holy_site = mazdaki
 								is_holy_site = yazidi
 								is_holy_site = zoroastrian
-								is_holy_site = zurvanist
+								is_holy_site = zurvanism
 							}
 						}
 					}
@@ -1944,13 +1921,13 @@ religion_doctrine = {
 		picture = GFX_religion_feature_norse
 		potential = {
 			has_game_started = yes
-			religion = norse_pagan_reformed
+			#religion = norse_pagan_reformed
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
 		trigger = {
-			religion = norse_pagan_reformed
+			#religion = norse_pagan_reformed
 			NOR = {
 				has_selected_religion_feature = religion_peaceful
 				has_selected_religion_feature = religion_seafaring
@@ -2042,13 +2019,13 @@ religion_doctrine = {
 		picture = GFX_religion_feature_tengri
 		potential = {
 			has_game_started = yes
-			religion = tengri_pagan_reformed
+			#religion = tengri_pagan_reformed
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
 		trigger = {
-			religion = tengri_pagan_reformed
+			#religion = tengri_pagan_reformed
 			NOR = {
 				has_selected_religion_feature = religion_peaceful
 				has_selected_religion_feature = religion_defensive
@@ -2092,13 +2069,13 @@ religion_doctrine = {
 		picture = GFX_religion_feature_baltic
 		potential = {
 			has_game_started = yes
-			religion = baltic_pagan_reformed
+			#religion = baltic_pagan_reformed
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
 		trigger = {
-			religion = baltic_pagan_reformed
+			#religion = baltic_pagan_reformed
 			NOR = { 
 				has_selected_religion_feature = religion_beatification
 				has_selected_religion_feature = religion_animistic
@@ -2145,13 +2122,13 @@ religion_doctrine = {
 		picture = GFX_religion_feature_slavic
 		potential = {
 			has_game_started = yes
-			religion = slavic_pagan_reformed
+			#religion = slavic_pagan_reformed
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
 		trigger = {
-			religion = slavic_pagan_reformed
+			#religion = slavic_pagan_reformed
 			NOR = { 
 				has_selected_religion_feature = religion_stable
 				has_selected_religion_feature = religion_beatification
@@ -2178,13 +2155,13 @@ religion_doctrine = {
 		picture = GFX_religion_feature_finnish
 		potential = {
 			has_game_started = yes
-			religion = finnish_pagan_reformed
+			#religion = finnish_pagan_reformed
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
 		trigger = {
-			religion = finnish_pagan_reformed
+			#religion = finnish_pagan_reformed
 			NOR = { 
 				has_selected_religion_feature = religion_stable
 				has_selected_religion_feature = religion_animistic
@@ -2230,13 +2207,13 @@ religion_doctrine = {
 		picture = GFX_religion_feature_west_african
 		potential = {
 			has_game_started = yes
-			religion = west_african_pagan_reformed
+			#religion = west_african_pagan_reformed
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
 		trigger = {
-			religion = west_african_pagan_reformed
+			#religion = west_african_pagan_reformed
 			NOR = { 
 				has_selected_religion_feature = religion_monastic
 				has_selected_religion_feature = religion_animistic
@@ -2292,13 +2269,13 @@ religion_doctrine = {
 		picture = GFX_religion_feature_zun
 		potential = {
 			has_game_started = yes
-			religion = zun_pagan_reformed
+			#religion = zun_pagan_reformed
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
 		trigger = {
-			religion = zun_pagan_reformed
+			#religion = zun_pagan_reformed
 			NOR = { 
 				has_selected_religion_feature = religion_harems
 				has_selected_religion_feature = religion_meritocratic
@@ -2336,13 +2313,13 @@ religion_doctrine = {
 		picture = GFX_religion_feature_bon
 		potential = {
 			has_game_started = yes
-			religion = bon_reformed
+			#religion = bon_reformed
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
 		trigger = {
-			religion = bon_reformed
+			#religion = bon_reformed
 			NOR = {
 				has_selected_religion_feature = religion_syncretic_zoroastrian
 				has_selected_religion_feature = religion_holy_family
@@ -2393,13 +2370,13 @@ religion_doctrine = {
 		picture = GFX_religion_feature_aztec
 		potential = {
 			has_game_started = yes
-			religion = aztec_reformed
+			#religion = aztec_reformed
 			NOR = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
 		trigger = {
-			religion = aztec_reformed
+			#religion = aztec_reformed
 			NOR = {
 				has_selected_religion_feature = religion_peaceful
 				has_selected_religion_feature = religion_ritual_sacrifice #Redundant
@@ -2443,13 +2420,13 @@ religion_doctrine = {
 		picture = GFX_religion_feature_hellenic
 		potential = {
 			has_game_started = yes
-			religion = hellenic_pagan_reformed
+			#religion_group = indohelen_group
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
 		trigger = {
-			religion = hellenic_pagan_reformed
+			#religion_group = indohelen_group
 			NOR = {
 				has_selected_religion_feature = religion_meritocratic
 				has_selected_religion_feature = religion_astrology
@@ -2483,7 +2460,7 @@ religion_doctrine = {
 		picture = GFX_religion_feature_pyramids
 		potential = {
 			has_game_started = yes
-			NOT = { religion = aztec }
+			NOT = { religion_group = mesoamerican_rel_group }
 		}
 		effect = {
 			custom_tooltip = { text = tooltip_religion_feature_pyramids }
@@ -4282,8 +4259,8 @@ religion_leadership = {
 							religion = apostolic
 							religion = nestorian
 							religion = zoroastrian
-							religion = mazdaki
-							religion = zurvanist
+							religion = mazdakism
+							religion = zurvanism
 							religion = manichean
 							religion = khurmazta
 							religion = jewish
@@ -4315,8 +4292,8 @@ religion_leadership = {
 							religion = apostolic
 							religion = nestorian
 							religion = zoroastrian
-							religion = mazdaki
-							religion = zurvanist
+							religion = mazdakism
+							religion = zurvanism
 							religion = manichean
 							religion = khurmazta
 							religion = jewish

@@ -11,6 +11,7 @@ consort_equality_effect = {
 			}
 		}
 	}
-	set_women_can_take_consorts = yes
-	set_flag = emf_women_can_take_consorts
+	hidden_tooltip = {
+		set_women_can_take_consorts = yes
+		set_global_flag = emf_women_can_take_consorts
 }

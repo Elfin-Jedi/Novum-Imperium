@@ -654,7 +654,7 @@ pragmatist_pattern_for = {
 					}
 				}
 			}
-			NOT = { religion = mazdaki }
+			NOT = { religion = mazdakism }
 		}
 	}
 	mazdaki_wealth_1 = {
@@ -674,12 +674,12 @@ pragmatist_pattern_for = {
 							}
 						}
 					}
-					NOT = { religion = mazdaki }
+					NOT = { religion = mazdakism }
 				}
 				FROMFROM = { has_law = mazdaki_wealth_2 }
 			}
 			AND = {
-				religion = mazdaki
+				religion = mazdakism
 				OR = {
 					is_theocracy = yes
 					AND = {
@@ -712,12 +712,12 @@ pragmatist_pattern_for = {
 							}
 						}
 					}
-					NOT = { religion = mazdaki }
+					NOT = { religion = mazdakism }
 				}
 				FROMFROM = { has_law = mazdaki_wealth_3 }
 			}
 			AND = {
-				religion = mazdaki
+				religion = mazdakism
 				OR = {
 					is_theocracy = yes
 					AND = {
@@ -750,12 +750,12 @@ pragmatist_pattern_for = {
 							}
 						}
 					}
-					NOT = { religion = mazdaki }
+					NOT = { religion = mazdakism }
 				}
 				FROMFROM = { has_law = mazdaki_wealth_4 }
 			}
 			AND = {
-				religion = mazdaki
+				religion = mazdakism
 				OR = {
 					is_theocracy = yes
 					AND = {
@@ -772,7 +772,7 @@ pragmatist_pattern_for = {
 		}
 	}
 	mazdaki_wealth_4 = {
-		religion = mazdaki
+		religion = mazdakism
 		OR = {
 			is_theocracy = yes
 			AND = {
@@ -1007,19 +1007,6 @@ pragmatist_pattern_for = {
 			is_reformed_religion = yes
 			is_tribal = no
 		}
-	}
-	
-	sovereignty_title_law_0 = {
-		always = no
-	}
-	sovereignty_title_law_1 = {
-		opinion = {
-			who = liege
-			value = 20
-		}
-	}
-	sovereignty_title_law_2 = {
-		always = no
 	}
 	slavery_0 = { always = no }
 	slavery_2 = { always = no }
@@ -1596,7 +1583,7 @@ pragmatist_pattern_against = {
 		is_theocracy = no
 	}
 	mazdaki_wealth_0 = {
-		religion = mazdaki
+		religion = mazdakism
 		OR = {
 			is_theocracy = yes
 			AND = {
@@ -1626,12 +1613,12 @@ pragmatist_pattern_against = {
 							}
 						}
 					}
-					NOT = { religion = mazdaki }
+					NOT = { religion = mazdakism }
 				}
 				FROMFROM = { has_law = mazdaki_wealth_0 }
 			}
 			AND = {
-				religion = mazdaki
+				religion = mazdakism
 				OR = {
 					is_theocracy = yes
 					AND = {
@@ -1664,12 +1651,12 @@ pragmatist_pattern_against = {
 							}
 						}
 					}
-					NOT = { religion = mazdaki }
+					NOT = { religion = mazdakism }
 				}
 				FROMFROM = { has_law = mazdaki_wealth_1 }
 			}
 			AND = {
-				religion = mazdaki
+				religion = mazdakism
 				OR = {
 					is_theocracy = yes
 					AND = {
@@ -1702,12 +1689,12 @@ pragmatist_pattern_against = {
 							}
 						}
 					}
-					NOT = { religion = mazdaki }
+					NOT = { religion = mazdakism }
 				}
 				FROMFROM = { has_law = mazdaki_wealth_2 }
 			}
 			AND = {
-				religion = mazdaki
+				religion = mazdakism
 				OR = {
 					is_theocracy = yes
 					AND = {
@@ -1738,7 +1725,7 @@ pragmatist_pattern_against = {
 					}
 				}
 			}
-			NOT = { religion = mazdaki }
+			NOT = { religion = mazdakism }
 		}
 	}
 	chivalry_mobilization_0 = { 
@@ -1957,32 +1944,6 @@ pragmatist_pattern_against = {
 			is_tribal = no
 		}
 	}
-	
-	sovereignty_title_law_0 = {
-		NOT = {
-			opinion = {
-				who = liege
-				value = 59
-			}
-		}
-	}
-	sovereignty_title_law_1 = {
-		NOT = {
-			opinion = {
-				who = liege
-				value = -19
-			}
-		}
-	}
-	sovereignty_title_law_2 = {
-		NOT = {
-			opinion = {
-				who = liege
-				value = 59
-			}
-		}
-	}
-	
 	slavery_0 = { always = yes }
 	slavery_2 = { always = no }
 	slavery_3 = { always = no }

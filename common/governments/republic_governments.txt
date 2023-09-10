@@ -24,7 +24,14 @@ republic_governments = {
 			japanese_imperial_government
 			korean_imperial_government
 		}
-		
+		accepts_liege_governments_religion = { # only radical governments from the correct religion are accepted
+			anarchist_government
+			demagogic_government
+			mystic_government
+			absolutist_government
+			hegemonic_government
+			messianic_government
+		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
 		}
@@ -53,8 +60,54 @@ republic_governments = {
 				religion = yazidi
 			}
 			NOT = { government = rtp_republic_g }
-			NOT = {
-				is_government_potential = bureaucratic_government
+			NAND = {
+				controls_religion = yes
+				NOT = {	religion = 	ashari	}
+				NOT = {	religion = 	athari	}
+				NOT = {	religion = 	bud_pratyeka	}
+				NOT = {	religion = 	haruri	}
+				NOT = {	religion = 	hurufi	}
+				NOT = {	religion = 	ilm_islam	}
+				NOT = {	religion = 	maturidi	}
+				NOT = {	religion = 	murjiah	}
+				NOT = {	religion = 	mutazil	}
+				NOT = {	religion = 	roman_imperial	}
+				NOT = {	religion = 	shiite	}
+				NOT = {	religion = 	sunni	}
+				NOT = {	religion = 	zahiri	}
+				NOT = {	religion = 	baltic_pagan_reformed 	}
+				NOT = {	religion = 	bantu_pagan_reformed	}
+				NOT = {	religion = 	berber_pagan_reformed	}
+				NOT = {	religion = 	byeri_reformed	}
+				NOT = {	religion = 	chumbylat_reformed	}
+				NOT = {	religion = 	druze_reformed	}
+				NOT = {	religion = 	erlik_reformed	}
+				NOT = {	religion = 	finnish_pagan_reformed 	}
+				NOT = {	religion = 	german_pagan_reformed	}
+				NOT = {	religion = 	iberian_pagan_reformed	}
+				NOT = {	religion = 	indohelen_reformed	}
+				NOT = {	religion = 	lubu_reformed	}
+				NOT = {	religion = 	mani_germanic_reformed	}
+				NOT = {	religion = 	mani_slavic_reformed	}
+				NOT = {	religion = 	murugan_reformed	}
+				NOT = {	religion = 	muslim_aliite_reformed	}
+				NOT = {	religion = 	muslim_domination_reformed	}
+				NOT = {	religion = 	muslim_sufi_reformed	}
+				NOT = {	religion = 	norse_christ_reformed	}
+				NOT = {	religion = 	norse_pagan_reformed	}
+				NOT = {	religion = 	nyakalagan_reformed	}
+				NOT = {	religion = 	ragnarok_reformed	}
+				NOT = {	religion = 	serer_reformed	}
+				NOT = {	religion = 	slavic_pagan_reformed	}
+				NOT = {	religion = 	tao_reformed	}
+				NOT = {	religion = 	teiwaz_reformed	}
+				NOT = {	religion = 	tengri_confucian_reformed	}
+				NOT = {	religion = 	tengri_mani_reformed	}
+				NOT = {	religion = 	tengri_pagan_reformed	}
+				NOT = {	religion = 	tengri_rod_reformed	}
+				NOT = {	religion = 	vattisenyaly_reformed	}
+				NOT = {	religion = 	zande_pagan_reformed	}
+				NOT = {	religion = 	zulu_pagan_reformed	}
 			}
 			#is_female = no
 			OR = {
@@ -156,6 +209,14 @@ republic_governments = {
 			chinese_imperial_government
 			japanese_imperial_government
 			korean_imperial_government
+		}
+		accepts_liege_governments_religion = { # only radical governments from the correct religion are accepted
+			anarchist_government
+			demagogic_government
+			mystic_government
+			absolutist_government
+			hegemonic_government
+			messianic_government
 		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
@@ -285,6 +346,14 @@ republic_governments = {
 			chinese_imperial_government
 			japanese_imperial_government
 			korean_imperial_government
+		}
+		accepts_liege_governments_religion = { # only radical governments from the correct religion are accepted
+			anarchist_government
+			demagogic_government
+			mystic_government
+			absolutist_government
+			hegemonic_government
+			messianic_government
 		}
 		free_revoke_on_tiers = {
 			duke
@@ -419,6 +488,14 @@ republic_governments = {
 			bogomilist_merchant_republic_government
 			rtp_republic_g
 		}
+		accepts_liege_governments_religion = { # only radical governments from the correct religion are accepted
+			anarchist_government
+			demagogic_government
+			mystic_government
+			absolutist_government
+			hegemonic_government
+			messianic_government
+		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
 		}
@@ -429,13 +506,62 @@ republic_governments = {
 			is_patrician = no
 			NAND = {
 				controls_religion = yes
-				NOT = { religion_group = muslim }
+				NOT = {	religion = 	ashari	}
+				NOT = {	religion = 	athari	}
+				NOT = {	religion = 	bud_pratyeka	}
+				NOT = {	religion = 	haruri	}
+				NOT = {	religion = 	hurufi	}
+				NOT = {	religion = 	ilm_islam	}
+				NOT = {	religion = 	maturidi	}
+				NOT = {	religion = 	murjiah	}
+				NOT = {	religion = 	mutazil	}
+				NOT = {	religion = 	roman_imperial	}
+				NOT = {	religion = 	shiite	}
+				NOT = {	religion = 	sunni	}
+				NOT = {	religion = 	zahiri	}
+				NOT = {	religion = 	nihon_shinto  }
+				NOT = {	religion = 	baltic_pagan_reformed 	}
+				NOT = {	religion = 	bantu_pagan_reformed	}
+				NOT = {	religion = 	berber_pagan_reformed	}
+				NOT = {	religion = 	byeri_reformed	}
+				NOT = {	religion = 	chumbylat_reformed	}
+				NOT = {	religion = 	druze_reformed	}
+				NOT = {	religion = 	erlik_reformed	}
+				NOT = {	religion = 	finnish_pagan_reformed 	}
+				NOT = {	religion = 	german_pagan_reformed	}
+				NOT = {	religion = 	iberian_pagan_reformed	}
+				NOT = {	religion = 	indohelen_reformed	}
+				NOT = {	religion = 	lubu_reformed	}
+				NOT = {	religion = 	mani_germanic_reformed	}
+				NOT = {	religion = 	mani_slavic_reformed	}
+				NOT = {	religion = 	murugan_reformed	}
+				NOT = {	religion = 	muslim_aliite_reformed	}
+				NOT = {	religion = 	muslim_domination_reformed	}
+				NOT = {	religion = 	muslim_sufi_reformed	}
+				NOT = {	religion = 	norse_christ_reformed	}
+				NOT = {	religion = 	norse_pagan_reformed	}
+				NOT = {	religion = 	nyakalagan_reformed	}
+				NOT = {	religion = 	ragnarok_reformed	}
+				NOT = {	religion = 	serer_reformed	}
+				NOT = {	religion = 	slavic_pagan_reformed	}
+				NOT = {	religion = 	tao_reformed	}
+				NOT = {	religion = 	teiwaz_reformed	}
+				NOT = {	religion = 	tengri_confucian_reformed	}
+				NOT = {	religion = 	tengri_mani_reformed	}
+				NOT = {	religion = 	tengri_pagan_reformed	}
+				NOT = {	religion = 	tengri_rod_reformed	}
+				NOT = {	religion = 	vattisenyaly_reformed	}
+				NOT = {	religion = 	zande_pagan_reformed	}
+				NOT = {	religion = 	zulu_pagan_reformed	}
 			}
 			NOR = {
 				is_government_potential = merchant_republic_government
 				is_government_potential = muslim_merchant_republic_government
 				is_government_potential = bogomilist_merchant_republic_government
 				is_government_potential = rtp_republic_g
+				is_government_potential = playable_republic_government
+				is_government_potential = classical_government
+				is_government_potential = oriental_monarchy_government
 			}
 			holy_order = no
 		}

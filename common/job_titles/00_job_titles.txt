@@ -25,6 +25,12 @@ job_chancellor = {
 
 	allow = {
 		OR = {
+			FROM = {
+				NOR = {
+					government = chinese_imperial_government
+					government = chinese_vassal_government
+				}
+			}
 			AND = {
 				OR = {
 					religion = thangiao
@@ -152,6 +158,12 @@ job_marshal = {
 
 	allow = {
 		OR = {
+			FROM = {
+				NOR = {
+					government = chinese_imperial_government
+					government = chinese_vassal_government
+				}
+			}
 			AND = {
 				OR = {
 					religion = thangiao
@@ -348,6 +360,12 @@ job_treasurer = {
 
 	allow = {
 		OR = {
+			FROM = {
+				NOR = {
+					government = chinese_imperial_government
+					government = chinese_vassal_government
+				}
+			}
 			AND = {
 				OR = {
 					religion = thangiao
@@ -477,6 +495,12 @@ job_spymaster = {
 
 	allow = {
 		OR = {
+			FROM = {
+				NOR = {
+					government = chinese_imperial_government
+					government = chinese_vassal_government
+				}
+			}
 			AND = {
 				OR = {
 					religion = thangiao
@@ -608,6 +632,12 @@ job_spiritual = {
 
 	allow = {
 		OR = {
+			FROM = {
+				NOR = {
+					government = chinese_imperial_government
+					government = chinese_vassal_government
+				}
+			}
 			AND = {
 				OR = {
 					religion = thangiao

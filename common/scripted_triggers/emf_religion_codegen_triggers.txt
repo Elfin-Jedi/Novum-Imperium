@@ -68,8 +68,8 @@ emf_religion_has_castes = {
 			religion = bon_reformed
 			religion = bon
 			religion = zoroastrian
-			religion = mazdaki
-			religion = zurvanist
+			religion = mazdakism
+			religion = zurvanism
 			religion = manichean
 			religion = mandaean
 			religion = yazidi
@@ -311,12 +311,12 @@ true_religion_is_heresy_of_FROM_true_religion = {
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = zoroastrian } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = mazdaki }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = mazdaki } } }
+			limit = { true_religion = mazdakism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = mazdakism } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = zurvanist }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = zurvanist } } }
+			limit = { true_religion = zurvanism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = zurvanism } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = manichean }
@@ -589,12 +589,12 @@ true_religion_is_heresy_of_ROOT_true_religion = {
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = zoroastrian } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = mazdaki }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = mazdaki } } }
+			limit = { true_religion = mazdakism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = mazdakism } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = zurvanist }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = zurvanist } } }
+			limit = { true_religion = zurvanism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = zurvanism } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = manichean }
@@ -867,12 +867,12 @@ true_religion_is_heresy_of_PREV_true_religion = {
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = zoroastrian } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = mazdaki }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = mazdaki } } }
+			limit = { true_religion = mazdakism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = mazdakism } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = zurvanist }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = zurvanist } } }
+			limit = { true_religion = zurvanism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = zurvanism } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = manichean }
@@ -1145,12 +1145,12 @@ true_religion_is_heresy_of_target_ruler_true_religion = {
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = zoroastrian } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = mazdaki }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = mazdaki } } }
+			limit = { true_religion = mazdakism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = mazdakism } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = zurvanist }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = zurvanist } } }
+			limit = { true_religion = zurvanism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = zurvanism } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = manichean }
@@ -1425,12 +1425,12 @@ true_religion_is_parent_religion_FROM_true_religion = {
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = zoroastrian } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = mazdaki }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = mazdaki } } }
+			limit = { true_religion = mazdakism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = mazdakism } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = zurvanist }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = zurvanist } } }
+			limit = { true_religion = zurvanism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = zurvanism } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = manichean }
@@ -1703,12 +1703,12 @@ true_religion_is_parent_religion_ROOT_true_religion = {
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = zoroastrian } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = mazdaki }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = mazdaki } } }
+			limit = { true_religion = mazdakism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = mazdakism } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = zurvanist }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = zurvanist } } }
+			limit = { true_religion = zurvanism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = zurvanism } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = manichean }
@@ -1981,12 +1981,12 @@ true_religion_is_parent_religion_PREV_true_religion = {
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = zoroastrian } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = mazdaki }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = mazdaki } } }
+			limit = { true_religion = mazdakism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = mazdakism } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = zurvanist }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = zurvanist } } }
+			limit = { true_religion = zurvanism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = zurvanism } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = manichean }
@@ -2259,12 +2259,12 @@ true_religion_is_parent_religion_target_ruler_true_religion = {
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = zoroastrian } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = mazdaki }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = mazdaki } } }
+			limit = { true_religion = mazdakism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = mazdakism } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = zurvanist }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = zurvanist } } }
+			limit = { true_religion = zurvanism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = zurvanism } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = manichean }

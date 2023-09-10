@@ -2499,7 +2499,7 @@ true_religion_zoroastrian_trigger = {
 }
 
 true_religion_mazdaki_trigger = {
-	true_religion = mazdaki
+	true_religion = mazdakism
 }
 
 true_religion_manichean_trigger = {
@@ -4409,8 +4409,8 @@ looting_artifact_event_religious_artifacts_trigger = {
 				NOT = { has_artifact_flag = zoroastrian }
 			}
 			trigger_else_if = {
-				limit = { ROOT = { religion = mazdaki } }
-				NOT = { has_artifact_flag = mazdaki }
+				limit = { ROOT = { religion = mazdakism } }
+				NOT = { has_artifact_flag = mazdakism }
 			}
 			trigger_else_if = {
 				limit = { ROOT = { religion = manichean } }
@@ -6817,7 +6817,7 @@ likes_zoroastrians = {
 	religion = zoroastrian
 }
 likes_mazdakis = {
-	religion = mazdaki
+	religion = mazdakism
 }
 likes_manicheans = {
 	religion = manichean

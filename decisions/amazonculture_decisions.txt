@@ -407,11 +407,9 @@ decisions = {
 				factor = 1.5
 				OR = { 
 					religion = zoroastrian
-					religion = mazdaki
-					religion = manichean
+					religion = mazdakism
+					religion = mani
 					religion = khurmazta
-					religion = zun_pagan
-					religion = zun_pagan_reformed
 				}
 			}
 			modifier = {
@@ -1642,8 +1640,8 @@ decisions = {
 					has_global_flag = bogomilist_enat_cognatic_flag
 				}
 				AND = {
-					religion = mazdaki
-					has_global_flag = mazdaki_enat_cognatic_flag
+					religion = mazdakism
+					has_global_flag = mazdakism_enat_cognatic_flag
 				}
 			}
 			NOR = { 
@@ -1707,8 +1705,8 @@ decisions = {
 					has_global_flag = bogomilist_enatic_flag
 				}
 				AND = {
-					religion = mazdaki
-					has_global_flag = mazdaki_enatic_flag
+					religion = mazdakism
+					has_global_flag = mazdakism_enatic_flag
 				}
 				has_religion_feature = religion_matriarchal
 			}
@@ -1825,10 +1823,10 @@ decisions = {
 					}
 				}
 				AND = {
-					religion = mazdaki
+					religion = mazdakism
 					NOR = {
-						has_global_flag = mazdaki_enat_cognatic_flag
-						has_global_flag = mazdaki_enatic_flag
+						has_global_flag = mazdakism_enat_cognatic_flag
+						has_global_flag = mazdakism_enatic_flag
 					}
 				}
 			}
@@ -3797,8 +3795,8 @@ decisions = {
 							NOT = { has_global_flag = bogomilist_seminary_flag }
 						}
 						AND = {
-							religion = mazdaki 
-							NOT = { has_global_flag = mazdaki_seminary_flag }
+							religion = mazdakism 
+							NOT = { has_global_flag = mazdakism_seminary_flag }
 						}
 					}
 				}
@@ -3945,8 +3943,8 @@ decisions = {
 					has_global_flag = bogomilist_seminary_flag 
 				}
 				AND = {
-					religion = mazdaki 
-					has_global_flag = mazdaki_seminary_flag 
+					religion = mazdakism 
+					has_global_flag = mazdakism_seminary_flag 
 				}
 				AND = {
 					religion = sunni 
@@ -4450,11 +4448,11 @@ decisions = {
 					}
 				}
 				AND = {															
-					religion = mazdaki
+					religion = mazdakism
 					NOR = {
-						has_global_flag = mazdaki_abs_cognatic_flag
-						has_global_flag = mazdaki_enat_cognatic_flag
-						has_global_flag = mazdaki_enatic_flag
+						has_global_flag = mazdakism_abs_cognatic_flag
+						has_global_flag = mazdakism_enat_cognatic_flag
+						has_global_flag = mazdakism_enatic_flag
 					}
 					OR = {
 						has_game_rule = { 
@@ -4504,8 +4502,8 @@ decisions = {
 					}
 				}
 				AND = {														
-					religion = mazdaki
-					NOT = { has_global_flag = mazdaki_special_feature }
+					religion = mazdakism
+					NOT = { has_global_flag = mazdakism_special_feature }
 					realm_character_percent = {		# 25% of characters
 						target = 0.25
 						religion = ROOT
@@ -4536,8 +4534,8 @@ decisions = {
 					}
 				}
 				AND = {														
-					religion = mazdaki
-					NOT = { has_global_flag = mazdaki_concubines_flag }
+					religion = mazdakism
+					NOT = { has_global_flag = mazdakism_concubines_flag }
 					realm_character_percent = {		# 50% of characters
 						target = 0.50
 						religion = ROOT

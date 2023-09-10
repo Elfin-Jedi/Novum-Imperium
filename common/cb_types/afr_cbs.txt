@@ -314,8 +314,8 @@ salt_county = {
 					}
 						OR = { 
 							religion_group = christian
-							religion = hellenic_pagan
-							religion = hellenic_pagan_reformed
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 						}
 				}
 				hidden_tooltip = { character_event = { id = LoR.30 days = 12 } }
@@ -439,8 +439,8 @@ salt_county = {
 					}
 						OR = { 
 							religion_group = christian
-							religion = hellenic_pagan
-							religion = hellenic_pagan_reformed
+							religion_group = graecoroman_group
+							religion_group = indohelen_group
 						}
 				}
 				hidden_tooltip = { character_event = { id = LoR.30 days = 12 } }

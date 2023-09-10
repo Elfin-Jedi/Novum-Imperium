@@ -443,8 +443,7 @@ ashina = {
 	flags = { historical_bloodline bloodline_mercenary_traditions }
 	active = {
 		OR = {
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
+			religion_group = tengri_group
 			culture_group = altaic
 		}
 	}

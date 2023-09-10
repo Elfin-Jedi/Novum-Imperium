@@ -155,8 +155,7 @@ e_khazaria = { # Qasarstan
 			OR = {
 				ai = no
 				religion_group = jewish_group
-				religion = tengri_pagan
-				religion = tengri_pagan_reformed
+				religion_group = tengri_group
 			}
 		}
 		has_landed_title = k_khazaria
@@ -667,7 +666,7 @@ e_chagatai = { # Chagatai
 	color2 = { 0 250 250 }
 	capital = 1571 # Yulduz # Almaliq
 	culture = mongol
-	religion = tengri_pagan
+	religion_group = tengri_group
 	allow = {
 		FROM = { is_de_jure_title = yes }
 		title_emperor_basic_allow = yes
