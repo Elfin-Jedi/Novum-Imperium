@@ -8237,7 +8237,7 @@ e_byzantium = { # Basileia Rhõmaiõn
 					norman = "Liconie"
 				}
 			} # end c_demetrias
-			c_pteleon = { # Pteleon (2556)
+			c_pteleon = { # Pteleon (2555)
 				color = { 212 79 161 }
 				color2 = { 255 255 255 }
 				sardinian = "Ptelio"
@@ -8267,6 +8267,40 @@ e_byzantium = { # Basileia Rhõmaiõn
 				venetian = "Ptelio"
 				frankish = "Ptelie"
 				}
+				b_halos = {
+					sardinian = "Halo"
+					dalmatian = "Halo"
+					sicilian = "Halo"
+					umbrian = "Halo"
+					italian = "Halo"
+					laziale = "Halo"
+					langobardisch = "Halo"
+					neapolitan = "Halo"
+					tuscan = "Halo"
+					ligurian = "Halo"
+					venetian = "Halo"
+					frankish = "L'Hale"
+					norman = "L'Hale"
+				}
+				b_apollos = {
+				}
+			} # end c_pteleon
+			c_phthia = { # Phthia (2556)
+				color = { 213 80 161 }
+				color2 = { 255 255 255 }
+				sardinian = "Fthia"
+				dalmatian = "Fthia"
+				sicilian = "Fthia"
+				umbrian = "Fthia"
+				italian = "Fthia"
+				laziale = "Fthia"
+				langobardisch = "Fthia"
+				neapolitan = "Fthia"
+				tuscan = "Fthia"
+				ligurian = "Fthia"
+				venetian = "Fthia"
+				frankish = "Phthie"
+				norman = "Phthie"
 				b_phthia = {
 					sardinian = "Fthia"
 					dalmatian = "Fthia"
@@ -8279,12 +8313,16 @@ e_byzantium = { # Basileia Rhõmaiõn
 					tuscan = "Fthia"
 					ligurian = "Fthia"
 					venetian = "Fthia"
-					frankish = "L'Phthie"
-					norman = "L'Phthie"
+					frankish = "Phthie"
+					norman = "Phthie"
 				}
-				b_apollos = {
+				b_alope = {
 				}
-			} # end c_demetrias
+				b_larissa_kremaste = {
+				}
+				b_antron = {
+				}
+			} # end c_pteleon
 			c_upper_wallachia = { # Megále Vlachia (1528)
 				color = { 212 72 164 }
 				color2 = { 255 255 255 }
