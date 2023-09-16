@@ -325,14 +325,14 @@ province_event = {
 		if = {
 			limit = { NOT = { year = 1123 } }
 			if = {
-				limit = { culture = pecheneg religion = manichean }
+				limit = { culture = pecheneg religion = mani }
 				break = yes # Not necessary to build a settlement
 			}
 			build_holding = { type = tribal }
 			culture  = pecheneg
-			religion = manichean
+			religion = mani
 			emf_nomad_antinomad_tribal = yes
-			log = "emf_antinomad(514, '[Root.GetName]') => tribal / pecheneg / manichean"
+			log = "emf_antinomad(514, '[Root.GetName]') => tribal / pecheneg / mani"
 			break = yes
 		}
 		if = {
@@ -1578,14 +1578,14 @@ province_event = {
 		if = {
 			limit = { NOT = { year = 1035 } }
 			if = {
-				limit = { culture = pecheneg religion = manichean }
+				limit = { culture = pecheneg religion = mani }
 				break = yes # Not necessary to build a settlement
 			}
 			build_holding = { type = temple }
 			culture  = pecheneg
-			religion = manichean
+			religion = mani
 			emf_nomad_antinomad_temple = yes
-			log = "emf_antinomad(566, '[Root.GetName]') => temple / pecheneg / manichean"
+			log = "emf_antinomad(566, '[Root.GetName]') => temple / pecheneg / mani"
 			break = yes
 		}
 		if = {
@@ -2755,14 +2755,14 @@ province_event = {
 		if = {
 			limit = { NOT = { year = 936 } }
 			if = {
-				limit = { culture = pecheneg religion = manichean }
+				limit = { culture = pecheneg religion = mani }
 				break = yes # Not necessary to build a settlement
 			}
 			build_holding = { type = tribal }
 			culture  = pecheneg
-			religion = manichean
+			religion = mani
 			emf_nomad_antinomad_tribal = yes
-			log = "emf_antinomad(618, '[Root.GetName]') => tribal / pecheneg / manichean"
+			log = "emf_antinomad(618, '[Root.GetName]') => tribal / pecheneg / mani"
 			break = yes
 		}
 		if = {
@@ -4079,14 +4079,14 @@ province_event = {
 		if = {
 			limit = { NOT = { year = 1125 } }
 			if = {
-				limit = { culture = pecheneg religion = manichean }
+				limit = { culture = pecheneg religion = mani }
 				break = yes # Not necessary to build a settlement
 			}
 			build_holding = { type = tribal }
 			culture  = pecheneg
-			religion = manichean
+			religion = mani
 			emf_nomad_antinomad_tribal = yes
-			log = "emf_antinomad(1529, '[Root.GetName]') => tribal / pecheneg / manichean"
+			log = "emf_antinomad(1529, '[Root.GetName]') => tribal / pecheneg / mani"
 			break = yes
 		}
 		if = {
@@ -4238,14 +4238,14 @@ province_event = {
 		if = {
 			limit = { NOT = { year = 936 } }
 			if = {
-				limit = { culture = karluk religion = manichean }
+				limit = { culture = karluk religion = mani }
 				break = yes # Not necessary to build a settlement
 			}
 			build_holding = { type = tribal }
 			culture  = karluk
-			religion = manichean
+			religion = mani
 			emf_nomad_antinomad_tribal = yes
-			log = "emf_antinomad(1563, '[Root.GetName]') => tribal / karluk / manichean"
+			log = "emf_antinomad(1563, '[Root.GetName]') => tribal / karluk / mani"
 			break = yes
 		}
 		if = {
@@ -4384,14 +4384,14 @@ province_event = {
 		if = {
 			limit = { NOT = { year = 1050 } }
 			if = {
-				limit = { culture = karluk religion = manichean }
+				limit = { culture = karluk religion = mani }
 				break = yes # Not necessary to build a settlement
 			}
 			build_holding = { type = tribal }
 			culture  = karluk
-			religion = manichean
+			religion = mani
 			emf_nomad_antinomad_tribal = yes
-			log = "emf_antinomad(1572, '[Root.GetName]') => tribal / karluk / manichean"
+			log = "emf_antinomad(1572, '[Root.GetName]') => tribal / karluk / mani"
 			break = yes
 		}
 		if = {

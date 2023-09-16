@@ -3760,14 +3760,10 @@ character_event = {
 			}
 		}
 		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-			religion = slavic_pagan
-			religion = slavic_pagan_reformed
-			religion = baltic_pagan
-			religion = baltic_pagan_reformed
-			religion = finnish_pagan
-			religion = finnish_pagan_reformed
+			religion_group = norsegerman_group
+			religion_group = slavic_group
+			religion_group = baltic_group
+			religion_group = finnish_group
 		}
 		NOT = { has_character_flag = the_old_ones_are_waking }
 		NOT = { is_inaccessible_trigger = yes }
@@ -3828,14 +3824,10 @@ character_event = {
 			}
 		}
 		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-			religion = slavic_pagan
-			religion = slavic_pagan_reformed
-			religion = baltic_pagan
-			religion = baltic_pagan_reformed
-			religion = finnish_pagan
-			religion = finnish_pagan_reformed
+			religion_group = norsegerman_group
+			religion_group = slavic_group
+			religion_group = baltic_group
+			religion_group = finnish_group
 		}
 		NOT = { has_character_flag = the_old_ones_are_waking }
 		NOT = { is_inaccessible_trigger = yes }
@@ -3896,14 +3888,10 @@ character_event = {
 			}
 		}
 		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-			religion = slavic_pagan
-			religion = slavic_pagan_reformed
-			religion = baltic_pagan
-			religion = baltic_pagan_reformed
-			religion = finnish_pagan
-			religion = finnish_pagan_reformed
+			religion_group = norsegerman_group
+			religion_group = slavic_group
+			religion_group = baltic_group
+			religion_group = finnish_group
 		}
 		NOT = { has_character_flag = the_old_ones_are_waking }
 		NOT = { is_inaccessible_trigger = yes }
@@ -3964,14 +3952,10 @@ character_event = {
 			}
 		}
 		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-			religion = slavic_pagan
-			religion = slavic_pagan_reformed
-			religion = baltic_pagan
-			religion = baltic_pagan_reformed
-			religion = finnish_pagan
-			religion = finnish_pagan_reformed
+			religion_group = norsegerman_group
+			religion_group = slavic_group
+			religion_group = baltic_group
+			religion_group = finnish_group
 		}
 		NOT = { has_character_flag = the_old_ones_are_waking }
 		NOT = { is_inaccessible_trigger = yes }

@@ -11,10 +11,24 @@ decisions = {
 			higher_tier_than = DUKE
 			is_playable = yes
 			is_feudal = yes
-			OR = {
-				religion_group = christian
-				religion_group = jewish_group
-				religion_group = zoroastrian_group
+			NOR = {
+				culture = bedouin_arabic
+				culture = levantine_arabic
+				culture = andalusian_arabic
+				culture = egyptian_arabic
+				culture = maghreb_arabic
+				culture = sabaean
+				religion_group = tengri_group
+				religion = norse_pagan
+				religion = norse_war
+				religion = ragnarok
+				religion = sowilo
+				religion_group = finnish_group
+				religion_group = baltic_group
+				religion_group = slavic_group
+				religion_group = indian_group
+				religion_group = mani_group
+				religion_group = mand_group
 			}
 			NOT = {
 				any_demesne_title = {
@@ -164,6 +178,60 @@ decisions = {
 		}
 	}
 
+	demand_liege_title = {
+		only_playable = yes
+		is_high_prio = yes
+		potential = {
+			ai = no
+			is_playable = yes
+			has_ambition = obj_gain_any_title
+			liege = {
+				NOT = { character = ROOT }
+			}
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+		}
+		allow = {
+			prestige = 60
+			liege = {
+				has_regent = no
+				NOT = { has_opinion_modifier = { who = ROOT modifier = requested_land } }
+				demesne_size = 3
+				any_demesne_title = {
+					can_be_given_away = yes
+					tier = COUNT
+					NOT = { location = { is_capital = yes } }
+				}
+			}
+		}
+		effect = {
+			prestige = -60
+			liege = {
+				opinion = {
+					who = ROOT
+					years = 2
+					modifier = requested_land
+				}
+				random_demesne_title = {
+					limit = {
+						can_be_given_away = yes
+						tier = COUNT
+						NOT = { location = { is_capital = yes } }
+					}
+					save_event_target_as = vassal_wanted_title
+				}
+			}
+			custom_tooltip = {
+				text = demand_liege_title_tooltip
+				hidden_tooltip = { liege = { letter_event = { id = 63041 days = 4 } } } # "vassal_request_events.txt"
+			}
+		}
+		ai_will_do = {
+			factor = 0 # The AI is limited to the similar event 63040
+		}
+	}
+
 	sadaqah_saddka  = {
 		only_playable = yes
 		ai_check_interval = 24
@@ -218,7 +286,15 @@ decisions = {
 		potential = {
 			is_playable = yes
 			independent = yes
-			religion_group = muslim
+			OR = {
+				religion_group = muslim
+				culture = bedouin_arabic
+				culture = levantine_arabic
+				culture = andalusian_arabic
+				culture = egyptian_arabic
+				culture = maghreb_arabic
+				culture = sabaean
+			}
 			higher_real_tier_than = COUNT
 			is_nomadic = no
 			NOT = {
@@ -286,10 +362,11 @@ decisions = {
 					title = e_latin_empire
 				}
 			}
-			OR = { 
-				religion_group = christian
-				religion = hellenic_pagan
-				religion = hellenic_pagan_reformed
+			OR = {
+				culture = roman
+				culture = galloroman
+				culture = romanobrython
+				culture = greek #IDK about the Rhomaion
 			}
 			NOT = { has_global_flag = rome_restored }
 			has_random_religion_names = no

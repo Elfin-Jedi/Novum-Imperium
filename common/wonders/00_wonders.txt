@@ -1943,8 +1943,8 @@ wonder_amphitheater = {
 			culture = roman
 			culture = italian
 			culture = greek
-			religion = hellenic_pagan
-			religion = hellenic_pagan_reformed
+			culture_group = latin
+			culture_group = byzantine
 			has_religion_feature = religion_ritual_sacrifice
 		}
 		NOT = { has_religion_feature = religion_peaceful }

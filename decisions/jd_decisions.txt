@@ -8,6 +8,718 @@
 
 
 decisions = {
+
+	adopt_chinese_imperialism = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 60
+		potential = {
+			is_feudal = yes
+			NOT = { government = chinese_imperial_government }
+			NOT = {
+				government = japanese_imperial_government
+			}
+			NOT = {
+				has_landed_title = e_china # Already the real EoC
+			}
+			has_dlc = "Jade Dragon"
+			holy_order = no
+			OR = {
+				ai = no
+				AND = {
+					trait = proud
+					prestige = 40000
+				}
+				AND = {
+					trait = ambitious
+					prestige = 40000
+				}
+				AND = {
+					any_owned_bloodline = {
+						has_flag = pretender_chinese_imperial_bloodline # If we already have pretensions, it is easier
+					}
+					prestige = 20000
+				}
+				AND = {
+					any_owned_bloodline = {
+						has_flag = real_chinese_imperial_bloodline # If we used to rule China, it is easier
+					}
+					prestige = 10000
+				}
+				prestige = 120000
+			}
+		}
+		allow = {
+			independent = yes
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			has_regent = no # Can't do this while having a regent
+			is_tributary = no
+			tier = EMPEROR
+			realm_size = 200
+			custom_tooltip = {
+				text = follows_a_chinese_religion
+				has_acceptable_chinese_religion_trigger = yes # If your religion wouldn't let you keep the government type, it is impossible to enact the decision
+			}
+			custom_tooltip = {
+				text = has_chinese_enough_culture
+				has_acceptable_chinese_culture_trigger = yes # If your culture wouldn't let you keep the government type, it is impossible to enact the decision	
+			}
+			OR = { # We don't want the ruler of Japan to become a pretender empire if they should focus on Japanese stuff
+				NAND = {
+					culture = japanese
+					religion_group = bud_group
+				}
+				NOR = {
+					has_landed_title = k_chrysanthemum_throne
+					any_vassal = {
+						has_landed_title = k_chrysanthemum_throne # Direct vassal check is fine since we are looking at a king-tier title
+					}
+					k_chrysanthemum_throne = {
+						holder_scope = {
+							NOR = {
+								AND = {
+									dynasty = ROOT
+									religion = ROOT
+								}
+								current_heir = {
+									character = ROOT
+								}
+							}
+						}
+					}
+				}
+			}
+			conditional_tooltip = {
+				trigger = {
+					OR = {
+						# Pretenders and former rulers of China have an easier time
+						any_owned_bloodline = {
+							has_bloodline_flag = pretender_chinese_imperial_bloodline
+						}
+						any_owned_bloodline = {
+							has_bloodline_flag = real_chinese_imperial_bloodline
+						}
+					}
+				}
+				prestige = 8000
+				wealth = 500
+			}
+			conditional_tooltip = {
+				trigger = {
+					NOR = {
+						# Pretenders and former rulers of China have an easier time
+						any_owned_bloodline = {
+							has_bloodline_flag = pretender_chinese_imperial_bloodline
+						}
+						any_owned_bloodline = {
+							has_bloodline_flag = real_chinese_imperial_bloodline
+						}
+					}
+				}
+				prestige = 16000
+				wealth = 1000
+			}
+			war = no # Must be at peace
+			
+			# Cannot be the heir to e_china
+			e_china = {
+				holder_scope = {
+					NOR = {
+						current_heir = {
+							character = ROOT
+						}
+					}
+					# The AI should not do this if it shares the dynasty of the EoC
+					OR = {
+						ROOT = {
+							ai = no
+						}
+						NOT = {
+							dynasty = ROOT
+						}
+					}
+				}
+			}
+			NOT = {
+				has_character_modifier = peace_deal_with_china # If you have a Chinese Peace Deal, you need to break it or wait for it to expire
+			}
+
+			#offmap_china = {
+			#	show_scope_change = no
+			#	offmap_ruler = { NOT = { dynasty = ROOT } }
+			#}
+		}
+		effect = {
+			hidden_tooltip = {
+				remove_trait = japanese_feudal_trait
+				remove_trait = japanese_monastic_trait
+			}
+			if = {
+			    limit = { religion = tao }
+			    wealth = -500
+			}
+			else = {
+			    wealth = -1000
+			}
+			if = {
+				limit = {
+					has_dlc = "Holy Fury"
+					#NOT = {
+					#	any_owned_bloodline = { 
+					#		has_bloodline_flag = created_bloodline
+					#	}
+					#}
+				}
+				#character_event = { id = HF.24240 tooltip = tooltip_evt_hf_24240 } # Handled in naming event
+			}
+			primary_title = { # DO NOT ADD BACK THE CUSTOM TITLE STUFF VANILLA USES!
+				set_title_flag = pretender_chinese_empire
+				add_law = {
+					law = succ_primogeniture
+					cooldown = no
+					opinion_effect = no
+				}
+			}
+			any_demesne_title = {
+				limit = { 
+					tier = EMPEROR
+					NOT = { has_title_flag = pretender_chinese_empire }
+				}
+				destroy_landed_title = THIS
+			}
+			set_government_type = chinese_imperial_government
+			custom_tooltip = { text = adopt_chinese_imperialism_gov_tt }
+			# DO NOT ADD BACK TEMPLE NAMES; THEY'RE GRANTED ON DEATH!
+			if = { # If we have positive Grace, zero it out!
+				limit = {
+					check_variable = {
+						which = grace
+						value = 1
+					}
+				}
+				set_variable = {
+					which = grace
+					value = 0
+				}
+			}
+			detract_grace_super_huge_effect = yes # China is VERY upset with you for doing this!
+			detract_grace_super_huge_effect = yes # China is VERY upset with you for doing this!
+			hidden_tooltip = {
+				e_china = {
+					holder_scope = {
+						change_variable = {
+							which = stored_mandate_change
+							value = -1000
+						}
+					}
+				}
+			}
+		
+			# Claim China
+			e_china = {
+				add_weak_pressed_claim = PREV
+			}
+			if = {
+				limit = {
+					has_character_modifier = chinese_imperial_trade_contract
+				}
+				remove_character_modifier = chinese_imperial_trade_contract
+			}
+			character_event = { id = nameofchina.30 } # Name the empire
+		}
+		
+		ai_will_do = {
+			factor = 1
+			# Characters that should focus on the Japanese stuff shouldn't do this!
+			modifier = {
+				factor = 0
+				culture = japanese
+				religion_group = bud_group
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					has_acceptable_chinese_culture_no_gamerule_trigger = yes
+				}
+			}
+		}
+	}
+	
+	tributary_independence_normal = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 6
+		potential = {
+			OR = {
+				is_tributary = {
+					type = default
+				}
+				is_tributary = {
+					type = permanent
+				}
+				is_tributary = {
+					type = chinese_peripheral_tributary
+				}
+				is_tributary = {
+					type = chinese_imperial_tributary
+				}
+				is_tributary = {
+					type = chinese_protectorate
+				}
+				is_tributary = {
+					type = chinese_client_state
+				}
+				is_tributary = {
+					type = nomadic
+				}
+			}
+		}
+		allow = {
+			war = no
+			conditional_tooltip = {
+				trigger = { 
+					is_tributary = {
+						type = default
+					}
+				}
+				suzerain = {
+					independent = no
+				}
+			}
+			conditional_tooltip = {
+				trigger = {
+					OR = {
+						is_tributary = {
+							type = permanent
+						}
+						is_tributary = {
+							type = chinese_peripheral_tributary
+						}
+						is_tributary = {
+							type = chinese_imperial_tributary
+						}
+						is_tributary = {
+							type = chinese_protectorate
+						}
+						is_tributary = {
+							type = chinese_client_state
+						}
+					}
+				}
+				suzerain = {
+					OR = {
+						AND = {
+							NOT = {
+								prestige = 0
+							}
+							ROOT = {
+								prestige = 0
+							}
+							custom_tooltip = {
+								text = recently_made_tributary_tt
+								hidden_tooltip = {
+									ROOT = {
+										NOT = {
+											has_opinion_modifier = {
+												modifier = opinion_forced_tributary
+												who = PREV
+											}
+										}
+									}
+								}
+							}
+						}
+						relative_realm_size = {
+							who = ROOT 
+							size < 1
+						}
+						independent = no
+					}
+				}
+			}
+			conditional_tooltip = {
+				trigger = { 
+					is_tributary = {
+						type = nomadic
+					}
+				}
+				suzerain = {
+					OR = {
+						AND = {
+							NOT = {
+								prestige = 0
+							}
+							ROOT = {
+								prestige = 0
+							}
+							custom_tooltip = {
+								text = recently_made_tributary_tt
+								hidden_tooltip = {
+									suzerain = {
+										ROOT = {
+											NOT = {
+												has_opinion_modifier = {
+													modifier = opinion_forced_tributary
+													who = PREV
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						is_nomadic = no
+					}
+				}
+			}
+		}
+		effect = {
+			if = { # If the AI could have used the better decision, act as if it did so that it doesn't take a huge Grace penalty for no reason!
+				limit = {
+					ai = yes
+					suzerain = {
+						is_chinese_emperor_trigger = yes
+						NOT = {
+							reverse_has_opinion_modifier = {
+								who = ROOT
+								modifier = opinion_china_refused_decrese_tributary_tier
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						is_tributary = {
+							type = chinese_client_state
+						}
+					}
+					if = {
+						limit = {
+							NOT = { # If a Client State is too distant, China will be more willing to let them go
+								any_realm_province = {
+									any_neighbor_province = {
+										OR = {
+											AND = {
+												has_owner = yes
+												owner = {
+													OR = {
+														is_chinese_emperor_trigger = yes
+														top_liege = {
+															is_chinese_emperor_trigger = yes
+														}
+														is_tributary = {
+															type = chinese_client_state
+														}
+														is_tributary = {
+															type = chinese_protectorate
+														}
+														top_liege = {
+															OR = {
+																is_tributary = {
+																	type = chinese_client_state
+																}
+																is_tributary = {
+																	type = chinese_protectorate
+																}
+															}
+														}
+													}
+													NOR = {
+														character = ROOT
+														top_liege = {
+															character = ROOT
+														}
+													}
+												}
+											}
+											AND = {
+												is_land = no
+												any_neighbor_province = {
+													OR = {
+														AND = {
+															has_owner = yes
+															owner = {
+																OR = {
+																	is_chinese_emperor_trigger = yes
+																	top_liege = {
+																		is_chinese_emperor_trigger = yes
+																	}
+																	is_tributary = {
+																		type = chinese_client_state
+																	}
+																	is_tributary = {
+																		type = chinese_protectorate
+																	}
+																	top_liege = {
+																		OR = {
+																			is_tributary = {
+																				type = chinese_client_state
+																			}
+																			is_tributary = {
+																				type = chinese_protectorate
+																			}
+																		}
+																	}
+																}
+																NOR = {
+																	character = ROOT
+																	top_liege = {
+																		character = ROOT
+																	}
+																}
+															}
+														}
+														AND = {
+															is_land = no
+															any_neighbor_province = {
+																has_owner = yes
+																owner = {
+																	OR = {
+																		is_chinese_emperor_trigger = yes
+																		top_liege = {
+																			is_chinese_emperor_trigger = yes
+																		}
+																		is_tributary = {
+																			type = chinese_client_state
+																		}
+																		is_tributary = {
+																			type = chinese_protectorate
+																		}
+																		top_liege = {
+																			OR = {
+																				is_tributary = {
+																					type = chinese_client_state
+																				}
+																				is_tributary = {
+																					type = chinese_protectorate
+																				}
+																			}
+																		}
+																	}
+																	NOR = {
+																		character = ROOT
+																		top_liege = {
+																			character = ROOT
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							check_variable = {
+								which = grace
+								value = 1000
+							}
+						}
+						change_variable = {
+							which = grace
+							value = -1000
+						}
+						set_character_flag = ai_ask_to_decrease_tributary_tier
+						character_event = { id = grace.975 }
+						break = yes
+					}
+					else_if = {
+						limit =  {
+							check_variable = {
+								which = grace
+								value = 2000
+							}
+						}
+						change_variable = {
+							which = grace
+							value = -2000
+						}
+						set_character_flag = ai_ask_to_decrease_tributary_tier
+						character_event = { id = grace.975 }
+						break = yes
+					}
+				}
+				else_if = {
+					limit = {
+						is_tributary = {
+							type = chinese_protectorate
+						}
+					}
+					if = {
+						limit = {
+							NOT = { # If a Protectorate is too distant, China will be more willing to let them go
+								any_realm_province = {
+									any_neighbor_province = {
+										OR = {
+											AND = {
+												has_owner = yes
+												owner = {
+													OR = {
+														is_chinese_emperor_trigger = yes
+														top_liege = {
+															is_chinese_emperor_trigger = yes
+														}
+													}
+												}
+											}
+											AND = {
+												is_land = no
+												any_neighbor_province = {
+													OR = {
+														AND = {
+															has_owner = yes
+															owner = {
+																OR = {
+																	is_chinese_emperor_trigger = yes
+																	top_liege = {
+																		is_chinese_emperor_trigger = yes
+																	}
+																}
+															}
+														}
+														AND = {
+															is_land = no
+															any_neighbor_province = {
+																has_owner = yes
+																owner = {
+																	OR = {
+																		is_chinese_emperor_trigger = yes
+																		top_liege = {
+																			is_chinese_emperor_trigger = yes
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							check_variable = {
+								which = grace
+								value = 500
+							}
+						}
+						change_variable = {
+							which = grace
+							value = -500
+						}
+						set_character_flag = ai_ask_to_decrease_tributary_tier
+						character_event = { id = grace.975 }
+						break = yes
+					}
+					else_if = {
+						limit =  {
+							check_variable = {
+								which = grace
+								value = 1000
+							}
+						}
+						change_variable = {
+							which = grace
+							value = -1000
+						}
+						set_character_flag = ai_ask_to_decrease_tributary_tier
+						character_event = { id = grace.975 }
+						break = yes
+					}
+				}
+				else_if = {
+					limit = {
+						is_tributary = {
+							type = chinese_imperial_tributary
+						}
+						check_variable = {
+							which = grace
+							value = 500
+						}
+					}
+					change_variable = {
+						which = grace
+						value = -500
+					}
+					set_character_flag = ai_ask_to_decrease_tributary_tier
+					character_event = { id = grace.975 }
+					break = yes
+				}
+				else_if = {
+					limit = {
+						is_tributary = {
+							type = chinese_peripheral_tributary
+						}
+						check_variable = {
+							which = grace
+							value = 250
+						}
+					}
+					change_variable = {
+						which = grace
+						value = -250
+					}
+					set_character_flag = ai_ask_to_decrease_tributary_tier
+					character_event = { id = grace.975 }
+					break = yes
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						has_dlc = "Jade Dragon"
+						is_chinese_emperor_trigger = no
+					}
+					if = {
+						limit = {
+							suzerain = {
+								is_chinese_emperor_trigger = yes
+							}
+						}
+						detract_grace_super_huge_effect = yes
+					}
+					else_if = {
+						limit = {
+							suzerain = {
+								any_close_relative = {
+									dynasty = PREV
+									is_chinese_emperor_trigger = yes
+								}
+							}
+						}
+						detract_grace_massive_effect = yes
+					}
+					else_if = {
+						limit = {
+							suzerain = {
+								any_dynasty_member = {
+									is_chinese_emperor_trigger = yes
+								}
+							}
+						}
+						detract_grace_major_effect = yes
+					}
+				}
+				any_suzerain = {
+					character_event = { id = JD.2200 }
+					remove_tributary = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5 # Slow down
+				NOT = {
+					trait = ambitious
+				}
+			}
+		}
+	}
 	write_a_book = {
 		only_playable = yes
 		ai_check_interval = 36

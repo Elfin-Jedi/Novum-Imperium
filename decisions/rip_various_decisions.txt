@@ -327,6 +327,8 @@ targeted_decisions = {
 				has_law = succ_gavelkind
 				owes_favor_to = FROM
 				has_opinion_modifier = { who = FROM name = opinion_demanded_succ_law_change }
+				government = classical_government
+				government = oriental_monarchy_government
 			}
 			is_feudal = yes
 			mercenary = no
@@ -388,6 +390,8 @@ targeted_decisions = {
 			NOT = { has_law = succ_gavelkind }
 			owes_favor_to = FROM
 			NOT = { has_opinion_modifier = { who = FROM name = opinion_demanded_succ_law_change } }
+			government = classical_government
+			government = oriental_monarchy_government
 			is_feudal = yes
 			mercenary = no
 			holy_order = no
@@ -1391,4 +1395,3 @@ title_decisions = {
 		}
 	}
 }
-

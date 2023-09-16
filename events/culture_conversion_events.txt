@@ -120,6 +120,22 @@ province_event = {
 				}
 			}
 		}
+		modifier = {	## added by Ash
+			factor = 1.1
+			owner = { trait = tolerant }
+		}
+		modifier = {	## added by Ash
+			factor = 1.1
+			owner = { trait = eccentric }
+		}
+		modifier = {	## added by Ash
+			factor = 1.1
+			owner = { trait = unpredictable }
+		}
+		modifier = {	## added by Ash
+			factor = 0.7
+			owner = { trait = oldfashioned }
+		}
 		modifier = {
 			factor = 0.75
 			owner = {

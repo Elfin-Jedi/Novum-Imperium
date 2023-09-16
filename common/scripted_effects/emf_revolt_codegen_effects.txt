@@ -66,9 +66,9 @@ emf_revolt_clear_religion_title_flags = {
 	clr_title_flag = emf_revolt_religious_victory_title_zoroastrian
 	clr_title_flag = emf_revolt_religious_victory_title_mazdakism
 	clr_title_flag = emf_revolt_religious_victory_title_zurvanism
-	clr_title_flag = emf_revolt_religious_victory_title_manichean
+	clr_title_flag = emf_revolt_religious_victory_title_mani
 	clr_title_flag = emf_revolt_religious_victory_title_mandaean
-	clr_title_flag = emf_revolt_religious_victory_title_yazidi
+	clr_title_flag = emf_revolt_religious_victory_title_yazidism
 	clr_title_flag = emf_revolt_religious_victory_title_khurmazta
 	clr_title_flag = emf_revolt_religious_victory_title_jewish
 	clr_title_flag = emf_revolt_religious_victory_title_samaritan
@@ -314,16 +314,16 @@ emf_revolt_set_religion_title_flag = {
 		set_flag = emf_revolt_religious_victory_title_zurvanism
 	}
 	if = {
-		limit = { owner = { religion = manichean } }
-		set_flag = emf_revolt_religious_victory_title_manichean
+		limit = { owner = { religion = mani } }
+		set_flag = emf_revolt_religious_victory_title_mani
 	}
 	if = {
 		limit = { owner = { religion = mandaean } }
 		set_flag = emf_revolt_religious_victory_title_mandaean
 	}
 	if = {
-		limit = { owner = { religion = yazidi } }
-		set_flag = emf_revolt_religious_victory_title_yazidi
+		limit = { owner = { religion = yazidism } }
+		set_flag = emf_revolt_religious_victory_title_yazidism
 	}
 	if = {
 		limit = { owner = { religion = khurmazta } }

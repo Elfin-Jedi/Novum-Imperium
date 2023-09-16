@@ -57,7 +57,7 @@ republic_governments = {
 				}
 				religion = paulician
 				religion = waldensian
-				religion = yazidi
+				religion = yazidism
 			}
 			NOT = { government = rtp_republic_g }
 			NAND = {
@@ -240,12 +240,9 @@ republic_governments = {
 				}
 				religion = paulician
 				religion = waldensian
-				religion = yazidi
+				religion = yazidism
 			}
 			NOT = { government = rtp_republic_g }
-			NOT = {
-				is_government_potential = bureaucratic_government
-			}
 			#is_female = no
 			OR = {
 				AND = {
@@ -382,12 +379,9 @@ republic_governments = {
 				}
 				religion = paulician
 				religion = waldensian
-				religion = yazidi
+				religion = yazidism
 			}
 			NOT = { government = rtp_republic_g }
-			NOT = {
-				is_government_potential = bureaucratic_government
-			}
 			#is_female = no
 			OR = {
 				AND = {

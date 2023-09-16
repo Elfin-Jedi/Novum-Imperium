@@ -50,16 +50,12 @@ letter_event = {
 					trait = has_bubonic_plague
 				}
 			}
-			any_friend = {
+			random_friend = {
 				limit = {
 					is_adult = yes
 					ai = yes
 					trait = has_bubonic_plague        
 				}
-				score_value = { #Prioritizes selecting an interesting courtier...
-		            value = 10
-		            interesting_courtier_selection_score = yes
-		        }
 				save_event_target_as = GBC_dead_one               
 			}
 		}
@@ -73,17 +69,13 @@ letter_event = {
 					}
 				}
 			}
-			any_dynasty_member = {
+			random_dynasty_member = {
 				limit = {
 					is_offmap_ruler = no
 					is_adult = yes
 					ai = yes
 					trait = has_bubonic_plague        
 				}
-				score_value = { #Prioritizes selecting an interesting courtier...
-		            value = 10
-		            interesting_courtier_selection_score = yes
-		        }
 				save_event_target_as = GBC_dead_one               
 			}
 		}
@@ -98,7 +90,7 @@ letter_event = {
 			death = { death_reason = death_trait }
 		}
 		set_character_flag = gbc_mourning
-		character_event = { id = GBC.2 days = 10 }
+		narrative_event = { id = GBC.2 days = 10 }
 	}
 }
 
@@ -201,17 +193,13 @@ character_event = {
 	}
 
 	immediate = {
-		any_dynasty_member = {
+		random_dynasty_member = {
 			limit = {
 				is_offmap_ruler = no
 				is_adult = yes
 				ai = yes
 				is_incapable = no
 			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-	            value = 10
-	            interesting_courtier_selection_score = yes
-	        }
 			save_event_target_as = GBC_new_friend
 			set_character_flag = GBC_new_friend
 			
@@ -376,7 +364,7 @@ character_event = {
 						}
 					}
 				}
-				any_courtier = {
+				random_courtier = {
 					limit = {
 						AND = {
 							OR = {
@@ -392,10 +380,6 @@ character_event = {
 							}
 						}						
 					}
-					score_value = { #Prioritizes selecting an interesting courtier...
-			            value = 10
-			            interesting_courtier_selection_score = yes
-			        }
 					save_event_target_as = GBC_nice_councillor
 				}
 			}
@@ -419,18 +403,14 @@ character_event = {
 						}
 					}
 				}
-				any_courtier = {
+				random_courtier = {
 					limit = {
 						is_adult = yes
 						opinion = {
 							who = ROOT
 							value = 25
 						}
-					}
-					score_value = { #Prioritizes selecting an interesting courtier...
-			            value = 10
-			            interesting_courtier_selection_score = yes
-			        }						
+					}						
 					save_event_target_as = GBC_nice_councillor
 				}
 			}
@@ -445,11 +425,7 @@ character_event = {
 						}
 					}
 				}
-				any_courtier = {
-					score_value = { #Prioritizes selecting an interesting courtier...
-			            value = 10
-			            interesting_courtier_selection_score = yes
-			        }
+				random_courtier = {
 					save_event_target_as = GBC_nice_councillor
 				}
 			}
@@ -978,7 +954,7 @@ character_event = {
 				}
 			}
 			liege = {
-				any_spouse = {
+				random_spouse = {
 					limit = {
 						NOR = {
 							character = ROOT
@@ -991,10 +967,6 @@ character_event = {
 						possibly_romantically_interested_in_each_other_trigger = yes
 						ai = yes
 					}
-					score_value = { #Prioritizes selecting an interesting courtier...
-			            value = 10
-			            interesting_courtier_selection_score = yes
-			        }
 					save_event_target_as = gbc_lover
 				}
 			}
@@ -1082,7 +1054,7 @@ character_event = {
 			}
 		}
 		#Rival: one of your vassals
-		else_if = {
+		if = {
 			limit = {
 				any_vassal = {
 					NOR = {
@@ -1121,7 +1093,7 @@ character_event = {
 					ai = yes
 					block_general_event_trigger = no
 				}
-				any_spouse = {
+				random_spouse = {
 					limit = {
 						NOR = {
 							character = ROOT
@@ -1170,7 +1142,7 @@ character_event = {
 	option = {
 		spouse = { save_event_target_as = gbc_rival }
 
-		FROM = { character_event = { id = GBC.102 } } 
+		FROM = { narrative_event = { id = GBC.102 } } 
 	}
 }
 

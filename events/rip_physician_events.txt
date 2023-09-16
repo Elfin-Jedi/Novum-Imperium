@@ -4741,8 +4741,8 @@ character_event = {
 				modifier = {
 					factor = 0
 					AND = {
-						has_character_flag = got_physician_manichean_merchant
-						NOT = { had_character_flag = { flag = got_physician_manichean_merchant days = 3650 } }
+						has_character_flag = got_physician_mani_merchant
+						NOT = { had_character_flag = { flag = got_physician_mani_merchant days = 3650 } }
 					}
 				}
 				modifier = {
@@ -4759,7 +4759,7 @@ character_event = {
 				}
 				create_character = {
 					culture = khitan
-					religion = manichean
+					religion = mani
 					dynasty = none
 					age = 38
 					random_traits = yes
@@ -4770,7 +4770,7 @@ character_event = {
 					health = 6
 					trait = thrifty_clerk
 					flag = is_court_physician
-					flag = physician_manichean_merchant
+					flag = physician_mani_merchant
 					flag = ai_flag_refuse_conversion
 				}
 				new_character = {
@@ -5025,7 +5025,7 @@ character_event = {
 		text = EVTDESC_RIP_11053_MANICHEAN_MERCHANT
 		picture = GFX_evt_market
 		trigger = {
-			event_target:recruited_physician_target = { has_character_flag = physician_manichean_merchant }
+			event_target:recruited_physician_target = { has_character_flag = physician_mani_merchant }
 		}
 	}
 
@@ -5940,10 +5940,10 @@ character_event = {
 	option = {
 		name = EVTOPTY_RIP_11053
 		trigger = {
-			event_target:recruited_physician_target = { has_character_flag = physician_manichean_merchant }
+			event_target:recruited_physician_target = { has_character_flag = physician_mani_merchant }
 		}
 		hidden_tooltip = {
-			set_character_flag = got_physician_manichean_merchant
+			set_character_flag = got_physician_mani_merchant
 			if = {
 				limit = {
 					any_courtier_or_vassal = {

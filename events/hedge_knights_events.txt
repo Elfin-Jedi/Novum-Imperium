@@ -394,10 +394,6 @@ character_event = {
 		 			prestige = 100
 		 		}
 		 	}
-		 	score_value = { #Prioritizes selecting an interesting courtier...
-	            value = 10
-	            interesting_courtier_selection_score = yes
-	        }
 			opinion = {
 				modifier = ruler_not_respect_rank
 				who = ROOT
@@ -439,8 +435,20 @@ character_event = {
 	
 	immediate = {
 		set_character_flag = hedge_knight_woman_seduced
+	}
+	
+	mean_time_to_happen = {
+		days = 20
 		
-		any_courtier = {
+		modifier = {
+			factor = 5
+			has_character_flag = hedge_knight_recruited	
+		}		
+	}	
+	option = {
+		name = EVTOPTA71004 #stay
+		
+		random_courtier = {
 	 		limit = {
 	 			is_adult = yes
 	 			not = { age = 20 }

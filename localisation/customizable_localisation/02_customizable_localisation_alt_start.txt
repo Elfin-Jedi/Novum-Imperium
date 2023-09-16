@@ -481,12 +481,12 @@ defined_text = {
 	}
 }
 defined_text = {
-	name = GetReligiousCommunityName_yazidi
+	name = GetReligiousCommunityName_yazidism
 	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
-		localisation_key = alt_start_community_name_yazidi
+		localisation_key = alt_start_community_name_yazidism
 	}
 	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = secret_religious_society_REAL_yazidi
+		localisation_key = secret_religious_society_REAL_yazidism
 	}
 }
 defined_text = {
@@ -733,12 +733,12 @@ defined_text = {
 	}
 }
 defined_text = {
-	name = GetReligiousCommunityName_manichean
+	name = GetReligiousCommunityName_mani
 	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
-		localisation_key = alt_start_community_name_manichean
+		localisation_key = alt_start_community_name_mani
 	}
 	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = secret_religious_society_REAL_manichean
+		localisation_key = secret_religious_society_REAL_mani
 	}
 }
 defined_text = {
@@ -1976,14 +1976,14 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetReligiousSocietyDesc_yazidi
+	name = GetReligiousSocietyDesc_yazidism
 	text = {
 		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
 		localisation_key = alt_start_community_desc
 	}
 	text = {
 		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = secret_religious_society_yazidi_desc_REAL
+		localisation_key = secret_religious_society_yazidism_desc_REAL
 	}
 }
 
@@ -2072,14 +2072,14 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetReligiousSocietyDesc_manichean
+	name = GetReligiousSocietyDesc_mani
 	text = {
 		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
 		localisation_key = alt_start_community_desc
 	}
 	text = {
 		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = secret_religious_society_manichean_desc_REAL
+		localisation_key = secret_religious_society_mani_desc_REAL
 	}
 }
 

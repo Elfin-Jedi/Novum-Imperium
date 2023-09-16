@@ -17773,188 +17773,7 @@ indohelen_group = {
 		religious_clothing_priest = 11
 	}
 }
-inuit_group = {
-	crusade_cb = crusade
-	graphical_culture = norsegfx
-	playable = yes
-	has_coa_on_barony_only = yes
-	hostile_within_group = yes
-	
-	color = { 0.6 0.3 0.3 }
-	
-	ai_convert_same_group = 1 # try to convert if ai_zeal is high
-	ai_convert_other_group = 2 # always try to convert
-	
-	# Reformed
-	inuit_pagan_reformed = {
-		crusade_name = CRUSADE
-		allow_in_ruler_designer = no
-		graphical_culture = norsegfx
-		color = { 0.6 0.3 0.3 }
-		icon = 126
-		heresy_icon = 127
-		reformer_head_of_religion = no
-		
-		high_god_name = GOD_IGALUK
-		
-		piety_name = PIETY
-		priest_title = SHAMAN
-		scripture_name = THE_LEGENDS
-		
-		god_names = {
-			GOD_IGALUK GOD_SEDNA GOD_AAKULUJJUSI GOD_PINGA GOD_THE_SPIRITS
-		}
-		evil_god_names = {
-			AMAGUQ
-		}
-		
-		character_modifier = {
-			global_revolt_risk = -0.05
-			general_opinion = 10
-			church_opinion = 20
-			temple_vassal_tax_modifier = -0.35
-			build_cost_modifier = 0.15
-			land_organisation = 0.05
-			castle_vassal_min_levy = 0.10
-			castle_vassal_max_levy = 0.10
-			city_vassal_min_levy = -0.20
-			city_vassal_max_levy = -0.20
-			temple_vassal_min_levy = -0.15
-			temple_vassal_max_levy = -0.15
-#			monthly_character_prestige = 1.00
-#			monthly_character_piety = 0.50
-			stewardship = -1
-#			ai_zeal = 20
-#			ai_honor = 20
-#			ai_greed = 50
-#			ai_rationality = 20
-		}
-		unit_modifier = {
-			key = "DEF_RELIGION"
-			
-			levy_size = 0.10
-			light_cavalry_offensive = 0.30
-			light_infantry_offensive = 0.30
-			archers_offensive = 0.30
-		}
-		unit_home_modifier = {
-			key = "DEF_RELIGION"
-			
-			light_cavalry_defensive = 0.70
-			light_infantry_defensive = 0.70
-			archers_defensive = 0.70
-			land_morale = 1.30
-		}
-		
-		aggression = 2.0
-		allow_looting = yes
-#		allow_viking_invasion = yes
-		can_call_crusade = yes
-		priests_can_marry = yes
-		independence_war_score_bonus = 20
-		max_consorts = 3
-		peace_prestige_loss = yes
-		ignores_defensive_attrition = yes
-		hard_to_convert = yes
 
-		intermarry = inuit_pagan
-		intermarry = inuit_pagan_reformed
-		# Finnic open-minded (sectarian 0), can be married from the same group or civilization or related ones
-		intermarry = chumbylat
-		intermarry = finnish_pagan
-		intermarry = ilmatar
-		intermarry = jumala
-		intermarry = chumbylat_reformed
-		intermarry = finnish_pagan_reformed 
-		
-		religious_clothing_head = 4
-		religious_clothing_priest = 4
-	}
-	######################
-	inuit_pagan = {
-		graphical_culture = norsegfx
-		color = { 40 67 103 }
-		icon = 125
-		heresy_icon = 128
-		
-		high_god_name = GOD_IGALUK
-		
-		piety_name = PIETY
-		priest_title = SHAMAN
-		scripture_name = THE_LEGENDS
-		
-		god_names = {
-			GOD_IGALUK GOD_SEDNA GOD_AAKULUJJUSI GOD_PINGA GOD_THE_SPIRITS
-		}
-		evil_god_names = {
-			AMAGUQ
-		}
-		
-		reformed = inuit_pagan_reformed
-		#reformer_head_of_religion = no #Reformer is NOT a ruler head
-		
-		character_modifier = {
-			global_revolt_risk = -0.01
-			temple_vassal_tax_modifier = 0.10
-			build_cost_modifier = 0.15
-			land_organisation = -0.10
-			castle_vassal_min_levy = 0.20
-			castle_vassal_max_levy = 0.20
-			city_vassal_min_levy = -0.30
-			city_vassal_max_levy = -0.30
-			temple_vassal_min_levy = 0.05
-#			monthly_character_prestige = -0.20
-#			monthly_character_piety = -0.20
-			martial = 2
-			intrigue = -1
-			learning = -1
-#			ai_zeal = 20
-#			ai_honor = 20
-		}
-		unit_modifier = {
-			key = "DEF_RELIGION_HOME_TERRITORY"
-			
-			levy_size = 0.10
-			light_cavalry_offensive = 0.30
-			light_infantry_offensive = 0.30
-			archers_offensive = 0.30
-		}
-		unit_home_modifier = {
-			key = "DEF_RELIGION_HOME_TERRITORY"
-			
-			light_cavalry_defensive = 0.50
-			light_infantry_defensive = 0.50
-			archers_defensive = 0.50
-			land_morale = 0.50
-		}
-		
-		aggression = 2.0
-		allow_looting = yes
-#		allow_viking_invasion = yes
-		can_call_crusade = no
-#		can_hold_temples = yes
-		independence_war_score_bonus = 40
-		max_consorts = 3
-		priests_can_marry = yes
-		peace_prestige_loss = yes
-		hard_to_convert = yes
-		short_reign_opinion_year_mult = 6 # The default in LI is 5
-		ignores_defensive_attrition = yes
-
-		intermarry = inuit_pagan
-		intermarry = inuit_pagan_reformed
-		# Finnic open-minded (sectarian 0), can be married from the same group or civilization or related ones
-		intermarry = chumbylat
-		intermarry = finnish_pagan
-		intermarry = ilmatar
-		intermarry = jumala
-		intermarry = chumbylat_reformed
-		intermarry = finnish_pagan_reformed 
-		
-		religious_clothing_head = 4
-		religious_clothing_priest = 4
-	}
-}
 jewish_group = {
 	graphical_culture = jewishgfx
 	playable = yes
@@ -29982,6 +29801,176 @@ native_american_group = {
 	hostile_within_group = yes
 
 	color = { 0.37 0.85 0.85 }
+	
+	# Reformed
+	inuit_pagan_reformed = {
+		crusade_name = CRUSADE
+		allow_in_ruler_designer = no
+		graphical_culture = norsegfx
+		color = { 0.6 0.3 0.3 }
+		icon = 126
+		heresy_icon = 127
+		reformer_head_of_religion = no
+		
+		high_god_name = GOD_IGALUK
+		
+		piety_name = PIETY
+		priest_title = SHAMAN
+		scripture_name = THE_LEGENDS
+		
+		god_names = {
+			GOD_IGALUK GOD_SEDNA GOD_AAKULUJJUSI GOD_PINGA GOD_THE_SPIRITS
+		}
+		evil_god_names = {
+			AMAGUQ
+		}
+		
+		character_modifier = {
+			global_revolt_risk = -0.05
+			general_opinion = 10
+			church_opinion = 20
+			temple_vassal_tax_modifier = -0.35
+			build_cost_modifier = 0.15
+			land_organisation = 0.05
+			castle_vassal_min_levy = 0.10
+			castle_vassal_max_levy = 0.10
+			city_vassal_min_levy = -0.20
+			city_vassal_max_levy = -0.20
+			temple_vassal_min_levy = -0.15
+			temple_vassal_max_levy = -0.15
+#			monthly_character_prestige = 1.00
+#			monthly_character_piety = 0.50
+			stewardship = -1
+#			ai_zeal = 20
+#			ai_honor = 20
+#			ai_greed = 50
+#			ai_rationality = 20
+		}
+		unit_modifier = {
+			key = "DEF_RELIGION"
+			
+			levy_size = 0.10
+			light_cavalry_offensive = 0.30
+			light_infantry_offensive = 0.30
+			archers_offensive = 0.30
+		}
+		unit_home_modifier = {
+			key = "DEF_RELIGION"
+			
+			light_cavalry_defensive = 0.70
+			light_infantry_defensive = 0.70
+			archers_defensive = 0.70
+			land_morale = 1.30
+		}
+		
+		aggression = 2.0
+		allow_looting = yes
+#		allow_viking_invasion = yes
+		can_call_crusade = yes
+		priests_can_marry = yes
+		independence_war_score_bonus = 20
+		max_consorts = 3
+		peace_prestige_loss = yes
+		ignores_defensive_attrition = yes
+		hard_to_convert = yes
+
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+		# Finnic open-minded (sectarian 0), can be married from the same group or civilization or related ones
+		intermarry = chumbylat
+		intermarry = finnish_pagan
+		intermarry = ilmatar
+		intermarry = jumala
+		intermarry = chumbylat_reformed
+		intermarry = finnish_pagan_reformed 
+		
+		religious_clothing_head = 4
+		religious_clothing_priest = 4
+	}
+	######################
+	inuit_pagan = {
+		graphical_culture = norsegfx
+		color = { 40 67 103 }
+		icon = 125
+		heresy_icon = 128
+		
+		high_god_name = GOD_IGALUK
+		
+		piety_name = PIETY
+		priest_title = SHAMAN
+		scripture_name = THE_LEGENDS
+		
+		god_names = {
+			GOD_IGALUK GOD_SEDNA GOD_AAKULUJJUSI GOD_PINGA GOD_THE_SPIRITS
+		}
+		evil_god_names = {
+			AMAGUQ
+		}
+		
+		reformed = inuit_pagan_reformed
+		#reformer_head_of_religion = no #Reformer is NOT a ruler head
+		
+		character_modifier = {
+			global_revolt_risk = -0.01
+			temple_vassal_tax_modifier = 0.10
+			build_cost_modifier = 0.15
+			land_organisation = -0.10
+			castle_vassal_min_levy = 0.20
+			castle_vassal_max_levy = 0.20
+			city_vassal_min_levy = -0.30
+			city_vassal_max_levy = -0.30
+			temple_vassal_min_levy = 0.05
+#			monthly_character_prestige = -0.20
+#			monthly_character_piety = -0.20
+			martial = 2
+			intrigue = -1
+			learning = -1
+#			ai_zeal = 20
+#			ai_honor = 20
+		}
+		unit_modifier = {
+			key = "DEF_RELIGION_HOME_TERRITORY"
+			
+			levy_size = 0.10
+			light_cavalry_offensive = 0.30
+			light_infantry_offensive = 0.30
+			archers_offensive = 0.30
+		}
+		unit_home_modifier = {
+			key = "DEF_RELIGION_HOME_TERRITORY"
+			
+			light_cavalry_defensive = 0.50
+			light_infantry_defensive = 0.50
+			archers_defensive = 0.50
+			land_morale = 0.50
+		}
+		
+		aggression = 2.0
+		allow_looting = yes
+#		allow_viking_invasion = yes
+		can_call_crusade = no
+#		can_hold_temples = yes
+		independence_war_score_bonus = 40
+		max_consorts = 3
+		priests_can_marry = yes
+		peace_prestige_loss = yes
+		hard_to_convert = yes
+		short_reign_opinion_year_mult = 6 # The default in LI is 5
+		ignores_defensive_attrition = yes
+
+		intermarry = inuit_pagan
+		intermarry = inuit_pagan_reformed
+		# Finnic open-minded (sectarian 0), can be married from the same group or civilization or related ones
+		intermarry = chumbylat
+		intermarry = finnish_pagan
+		intermarry = ilmatar
+		intermarry = jumala
+		intermarry = chumbylat_reformed
+		intermarry = finnish_pagan_reformed 
+		
+		religious_clothing_head = 4
+		religious_clothing_priest = 4
+	}
 
 	zemiist_reformed = {
 		graphical_culture = mesoamericangfx

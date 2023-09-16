@@ -12839,13 +12839,13 @@ society_army_light = {
 			liege = { has_landed_title = d_army_light }
 			has_holyorder_societies_prerequisites = yes
 		}
-		has_holyorder_societies_religion_manichean = yes
+		has_holyorder_societies_religion_mani = yes
 		NOT = { has_character_modifier = expelled_d_army_light }
 	}
 
 	show_society = { 
 		OR = {
-			has_holyorder_societies_religion_manichean = yes
+			has_holyorder_societies_religion_mani = yes
 			has_holyorder_societies_religion_zoroastrian = yes #is heresy of
 		}
 	}
@@ -12860,7 +12860,7 @@ society_army_light = {
 				# }
 			# }
 		# }
-		has_holyorder_societies_religion_manichean = yes
+		has_holyorder_societies_religion_mani = yes
 		NOT = { has_character_modifier = expelled_d_army_light }
 	}
 	
@@ -13361,7 +13361,7 @@ society_army_light = {
 				}
 			}
 			has_holyorder_societies_prerequisites_notrait = yes
-			has_holyorder_societies_religion_manichean = yes
+			has_holyorder_societies_religion_mani = yes
 			NOT = { has_character_modifier = expelled_d_army_light }
 		}
 	}

@@ -631,12 +631,10 @@ targeted_decisions = {
 							FROM = {
 								any_owned_bloodline = {
 									has_bloodline_flag = bloodline_legendary_warrior
-									bloodline_is_active_for = PREV
 								}
 							}
 							any_owned_bloodline = {
 								has_bloodline_flag = bloodline_legendary_warrior
-								bloodline_is_active_for = PREV
 							}
 						}
 					}
@@ -655,12 +653,10 @@ targeted_decisions = {
 						FROM = {
 							any_owned_bloodline = {
 								has_bloodline_flag = bloodline_legendary_warrior
-								bloodline_is_active_for = PREV
 							}
 						}
 						any_owned_bloodline = {
 							has_bloodline_flag = bloodline_legendary_warrior
-							bloodline_is_active_for = PREV
 						}
 					}
 					NOT = {
@@ -730,12 +726,10 @@ targeted_decisions = {
 						FROM = {
 							any_owned_bloodline = {
 								has_bloodline_flag = bloodline_legendary_warrior
-								bloodline_is_active_for = PREV
 							}
 						}
 						any_owned_bloodline = {
 							has_bloodline_flag = bloodline_legendary_warrior
-							bloodline_is_active_for = PREV
 						}
 					}
 					NOT = {
@@ -1431,10 +1425,7 @@ society_decisions = {
 			is_adult = yes
 			society_member_of = warrior_lodge_finnish
 			society_rank = 3
-			OR = {
-				religion = finnish_pagan
-				religion = finnish_pagan_reformed
-			}
+			religion_group = finnish_group
 			OR = {
 				ai = no
 				any_war = {
@@ -1487,10 +1478,7 @@ society_decisions = {
 			is_adult = yes
 			society_member_of = warrior_lodge_slavic
 			society_rank = 2
-			OR = {
-				religion = slavic_pagan
-				religion = slavic_pagan_reformed
-			}
+			religion_group = slavic_group
 			OR = {
 				ai = no
 				any_war = {
@@ -1638,10 +1626,7 @@ society_decisions = {
 			is_adult = yes
 			society_member_of = warrior_lodge_tengri
 			society_rank = 2
-			OR = {
-				religion = tengri_pagan
-				religion = tengri_pagan_reformed
-			}
+			religion_group = tengri_group
 		}
 		allow = {
 			#show_only_failed_conditions = yes
@@ -1842,7 +1827,7 @@ society_decisions = {
 				trait = zealous
 				OR = {
 					novum_imperium_is_pagan = no
-					religion = hellenic_pagan
+					religion = graeco_roman
 					religion = bon
 				}
 			}
@@ -1874,8 +1859,7 @@ society_decisions = {
 			}
 			society_rank >= 2
 			OR = {
-				religion = zun_pagan
-				religion = zun_pagan_reformed
+				religion_group = sol_group
 				religion_group = zoroastrian_group
 				religion_group = indian_group
 			}
@@ -1968,8 +1952,7 @@ society_decisions = {
 			society_member_of = warrior_lodge_west_african
 			society_rank = 4
 			OR = {
-				religion = west_african_pagan
-				religion = west_african_pagan_reformed
+				religion_group = serer_group
 				religion_group = african_group
 			}
 			OR = {
@@ -2139,10 +2122,7 @@ decisions = {
 			has_dlc = "Holy Fury"
 			is_adult = yes
 			NOT = { has_religion_feature = religion_peaceful }
-			OR = {
-				religion = hellenic_pagan
-				religion = hellenic_pagan_reformed
-			}
+			religion_group = graecoroman_group
 			NOT = {
 				warrior_lodge_hellenic = {
 					society_has_members = yes
@@ -2197,8 +2177,7 @@ decisions = {
 				any_player = {
 					limit = {
 						OR = {
-							religion = hellenic_pagan_reformed
-							religion = hellenic_pagan
+							religion_group = graecoroman_group
 							culture = roman
 							is_within_diplo_range = ROOT
 						}
@@ -2309,10 +2288,7 @@ settlement_decisions = {
 			has_dlc = "Holy Fury"
 			society_member_of = warrior_lodge_baltic
 			society_rank >= 3
-			OR = {
-				religion = baltic_pagan
-				religion = baltic_pagan_reformed
-			}
+			religion_group = baltic_group
 		}
 		potential = {
 			holder_scope = {

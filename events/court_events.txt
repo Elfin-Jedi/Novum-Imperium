@@ -33,6 +33,38 @@ character_event = {
 			factor = 2.0
 			trait = ambitious
 		}
+		modifier = {	## added by Ash
+			factor = 1.25
+			trait = confident
+		}
+		modifier = {	## added by Ash
+			factor = 1.25
+			trait = arrogant
+		}
+		modifier = {	## added by Ash
+			factor = 1.25
+			trait = vain
+		}
+		modifier = {	## added by Ash
+			factor = 1.5
+			trait = lively
+		}
+		modifier = {	## added by Ash
+			factor = 1.25
+			trait = friendly
+		}
+		modifier = {	## added by Ash
+			factor = 1.25
+			trait = quipster
+		}
+		modifier = {	## added by Ash
+			factor = 1.25
+			trait = magnetic
+		}
+		modifier = {	## added by Ash
+			factor = 1.25
+			trait = gullible
+		}
 		modifier = {
 			factor = 0.1
 			trait = shy
@@ -230,6 +262,26 @@ character_event = {
 				trait = poet
 			}
 		}
+		modifier = {	## added by Ash
+			factor = 2.0
+			spouse = { trait = romantic }
+		}
+		modifier = {	## added by Ash
+			factor = 2.0
+			spouse = { trait = books }
+		}
+		modifier = {	## added by Ash - not likely for energetic, confident, hardworking
+#			factor = 0.2
+#			spouse = { trait = ybileblood }
+#		}
+#		modifier = {	## added by Ash -  - not likely for dogmatic, pompous, hardworking
+#			factor = 0.2
+#			spouse = { trait = ybilebbile }
+#		}
+#		modifier = {	## added by Ash  - not likely for plain, reserved, unfriendly
+#			factor = 0.2
+#			spouse = { trait = bbileblood }
+#		}
 		modifier = {
 			factor = 1.5
 			trait = gregarious
@@ -452,6 +504,17 @@ character_event = {
 	}
 	option = {
 		name = EVTOPTB73003 # They are just peasants..
+		trigger = {
+			NOT = { trait = charitable }
+		}
+		if = {
+			limit = { trait = just }		### added by Ash
+			remove_trait = just
+		}
+		if = {
+			limit = { trait = noblespirit }		### added by Ash
+			remove_trait = noblespirit
+		}
 		random_demesne_province = {
 			add_province_modifier = {
 				name = peasants_scorned
@@ -488,11 +551,19 @@ character_event = {
 		days = 1
 		modifier = {
 			factor = 2.0
-			trait = ambitious
+			OR = {
+				trait = ambitious
+				trait = pompous
+				trait = fanciful
+				trait = frivolous
+			}
 		}
 		modifier = {
 			factor = 0.1
-			trait = shy
+			OR = {
+				trait = shy
+				trait = plain
+			}
 		}
 	}
 
@@ -541,6 +612,9 @@ character_event = {
 		OR = {
 			trait = fair
 			trait = ugly
+			trait = frivolous
+			trait = fanciful
+			trait = pompous
 		}
 		NOT = {	trait = humble }
 		NOT = {	trait = uncouth }
@@ -552,6 +626,9 @@ character_event = {
 			factor = 2.0
 			trait = proud
 			trait = fair
+			trait = frivolous
+			trait = fanciful
+			trait = pompous
 		}
 		modifier = {
 			factor = 2.0
@@ -731,9 +808,13 @@ character_event = {
 	option = {
 		name = EVTOPTA73006 #That's my boy
 		trigger = {
-			NOT = { trait = chaste }
-			NOT = { trait = celibate }
-			NOT = { trait = eunuch }
+			NOR = {
+				trait = chaste
+				trait = celibate
+				trait = eunuch
+				trait = spiritual
+				trait = dogmatic
+			}
 		}
 		piety = -10
 		event_target:knocked_up_maid = {
@@ -789,6 +870,12 @@ character_event = {
 	option = {
 		name = EVTOPTC73006 #Give him a beating for messing with inferiors
 		pacifists_lose_piety_effect = yes
+		trigger = {
+			NOR = {
+				trait = noblespirit
+				trait = submissive
+			}
+		}
 		event_target:knocked_up_maid = {
 			opinion = {
 				modifier = resentful_of_my_behaviour
@@ -1158,6 +1245,14 @@ character_event = {
 			factor = 1.25
 			trait = gregarious
 		}
+		modifier = {	## added by Ash
+			factor = 1.5
+			trait = magnetic
+		}
+		modifier = {	## added by Ash
+			factor = 0.2
+			trait = unfriendly
+		}
 	}
 	option = {
 		trigger = {
@@ -1375,22 +1470,12 @@ character_event = {
 	only_playable = yes
 	prisoner = no
 	capable_only = yes
-	religion_group = christian
 
 	is_triggered_only = yes
 
 	trigger = {
 		immortal = no
 		year = 1415
-		OR = {
-			religion = catholic
-			religion = cathar
-			religion = fraticelli
-			religion = waldensian
-			religion = lollard
-			religion = adoptionist
-			religion = arian
-		}
 		NOT = { has_character_flag = ars_moriendi }
 	}
 
@@ -1414,6 +1499,23 @@ character_event = {
 		}
 
 
+		modifier = {		### added by Ash
+			factor = 5.0
+			trait = pessimistic
+		}
+		modifier = {		### added by Ash
+			factor = 2.0
+			trait = tolerant
+		}
+		
+		modifier = {		### added by Ash
+			factor = 2.0
+			trait = philosophical
+		}
+		modifier = {		### added by Ash
+			factor = 2.0
+			trait = stoic
+		}
 		modifier = {
 			factor = 1.25
 			trait = stressed
@@ -1497,7 +1599,7 @@ character_event = {
 	}
 
 	option = {
-		name = EVTOPTA73011 #I am avoiding tempration.
+		name = EVTOPTA73011 #I am avoiding temptation.
 		trigger = {
 			NOT = { trait = cynical }
 			NOT = { trait = lustful }
@@ -3218,4 +3320,3 @@ letter_event = {
 		prestige = -5
 	}
 }
-

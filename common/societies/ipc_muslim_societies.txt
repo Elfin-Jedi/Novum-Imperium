@@ -1566,16 +1566,16 @@ imperial_court_muslim_1 = {
 					trait = koasasa_samael
 					trait = koasasa_nurael
 				}
-				top_liege = { religion = yazidi }
+				top_liege = { religion = yazidism }
 			}
 			value = 5
 		}
 		triggered_gain = {
-			desc = ipc_yazidi_pilgrim_gain
+			desc = ipc_yazidism_pilgrim_gain
 			trigger = {
 				has_global_flag = ipc_hip_detected
-				trait = yazidi_pilgrim
-				top_liege = { religion = yazidi }
+				trait = yazidism_pilgrim
+				top_liege = { religion = yazidism }
 			}
 			value = 1
 		}
@@ -3287,16 +3287,16 @@ imperial_court_muslim_2 = {
 					trait = koasasa_samael
 					trait = koasasa_nurael
 				}
-				top_liege = { religion = yazidi }
+				top_liege = { religion = yazidism }
 			}
 			value = 5
 		}
 		triggered_gain = {
-			desc = ipc_yazidi_pilgrim_gain
+			desc = ipc_yazidism_pilgrim_gain
 			trigger = {
 				has_global_flag = ipc_hip_detected
-				trait = yazidi_pilgrim
-				top_liege = { religion = yazidi }
+				trait = yazidism_pilgrim
+				top_liege = { religion = yazidism }
 			}
 			value = 1
 		}
@@ -5008,16 +5008,16 @@ imperial_court_muslim_3 = {
 					trait = koasasa_samael
 					trait = koasasa_nurael
 				}
-				top_liege = { religion = yazidi }
+				top_liege = { religion = yazidism }
 			}
 			value = 5
 		}
 		triggered_gain = {
-			desc = ipc_yazidi_pilgrim_gain
+			desc = ipc_yazidism_pilgrim_gain
 			trigger = {
 				has_global_flag = ipc_hip_detected
-				trait = yazidi_pilgrim
-				top_liege = { religion = yazidi }
+				trait = yazidism_pilgrim
+				top_liege = { religion = yazidism }
 			}
 			value = 1
 		}

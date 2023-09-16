@@ -1429,7 +1429,22 @@ crusader = {
 		tengri_warrior
 		shaddai
 		gondi_shahansha
-		kailash_guardian
+		hetairos
+		leo_mithras
+		korybantes
+		son_of_mahrem
+		mukarrib
+		induna
+		nyau_akakairo
+		son_of_ifri
+		gongfu_warrior
+		dragon_knight
+		guardian_of_elect
+		seal_holder
+		warrior_of_light
+		medjay
+		vel_wielder
+		serpent_warrior
 		child_of_garki_baba
         shield_of_roog
         heir_of_dihya
@@ -2612,6 +2627,13 @@ content = {
 	opposites =  {
 		ambitious
 		imposing
+		paranoid				################################ ADDED BY ASH
+		irrational				################################ ADDED BY ASH
+		fickle					################################ ADDED BY ASH
+		unreliable				################################ ADDED BY ASH
+		nervous					################################ ADDED BY ASH
+		cunning					################################ ADDED BY ASH
+		deceitful				################################ ADDED BY ASH
 	}
 
 	intrigue = -1
@@ -2661,6 +2683,9 @@ just = {
 	personality = yes
 	opposites =  {
 		arbitrary
+		weakwilled                        ########################## ADDED BY ASH
+		fickle                            ########################## ADDED BY ASH
+		unreliable						  ########################## ADDED BY ASH
 	}
 
 	stewardship = 2
@@ -2712,6 +2737,7 @@ zealous = {
 	opposites =  {
 		cynical
 		decadent
+		tolerant ##FF extra addition - libert3 v11
 		sympathy_christendom
 		sympathy_islam
 		sympathy_pagans
@@ -2719,6 +2745,36 @@ zealous = {
 		sympathy_judaism
 		sympathy_indian
 		sympathy_african
+		sympathy_abrahamics
+		sympathy_anatolians
+		sympathy_east_africans
+		sympathy_arabpagans
+		sympathy_aztecs
+		sympathy_baltics
+		sympathy_bantus
+		sympathy_berbers
+		sympathy_buddhists
+		sympathy_celtics
+		sympathy_chinese
+		sympathy_nordic
+		sympathy_egyptian
+		sympathy_finnish
+		sympathy_graecoroman
+		sympathy_indohellens
+		sympathy_intis
+		sympathy_inuit
+		sympathy_luwians
+		sympathy_mande
+		sympathy_manichaeans
+		sympathy_mithraics
+		sympathy_platonics
+		sympathy_palmyrans
+		sympathy_sererics
+		sympathy_slavics
+		sympathy_sol
+		sympathy_tengri
+		sympathy_yazd
+		sympathy_zal
 		alexandrine
 	}
 
@@ -2763,6 +2819,7 @@ trusting = {
 	personality = yes
 	opposites =  {
 		paranoid
+		unfriendly    ########################## ADDED BY ASH
 	}
 
 	intrigue = -2
@@ -2781,6 +2838,7 @@ cruel = {
 	personality = yes
 	opposites =  {
 		kind
+		noblespirit    	########################## ADDED BY ASH
 	}
 
 	intrigue = 1

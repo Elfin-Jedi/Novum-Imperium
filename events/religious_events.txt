@@ -8100,7 +8100,7 @@ character_event = {
 		name = EVTOPTA39812
 		any_vassal = {
 			limit = {
-				religion = manichean
+				religion = mani
 				is_adult = yes
 				prisoner = no
 				war = no
@@ -8303,7 +8303,7 @@ character_event = {
 		trigger = {
 			OR = {
 				religion_group = zoroastrian_group
-				not = { religion = manichean }
+				not = { religion = mani }
 				not = { religion = mazdakism }
 			}
 		}
@@ -8324,7 +8324,7 @@ character_event = {
 		name = EVTOPTB39821
 		trigger = {
 			NOT = { religion_group = zoroastrian_group }
-				not = { religion = manichean }
+				not = { religion = mani }
 				not = { religion = mazdakism }
 		}
 		FROM = {

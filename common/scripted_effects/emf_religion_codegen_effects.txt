@@ -113,8 +113,8 @@ emf_calc_realm_province_religion_breakdown_of_THIS_for_ROOT = {
 		set_variable = { which = r_prov_rel_zurvanism_pct value = 0 }
 		set_variable = { which = r_prov_rel_mani value = 0 }
 		set_variable = { which = r_prov_rel_mani_pct value = 0 }
-		set_variable = { which = r_prov_rel_mand value = 0 }
-		set_variable = { which = r_prov_rel_mand_pct value = 0 }
+		set_variable = { which = r_prov_rel_mandaean value = 0 }
+		set_variable = { which = r_prov_rel_mandaean_pct value = 0 }
 		set_variable = { which = r_prov_rel_yazidism value = 0 }
 		set_variable = { which = r_prov_rel_yazidism_pct value = 0 }
 		set_variable = { which = r_prov_rel_khurmazta value = 0 }
@@ -131,6 +131,900 @@ emf_calc_realm_province_religion_breakdown_of_THIS_for_ROOT = {
 		set_variable = { which = r_prov_rel_jain_pct value = 0 }
 		set_variable = { which = r_prov_rel_taoist value = 0 }
 		set_variable = { which = r_prov_rel_taoist_pct value = 0 }
+		set_variable = { which = r_prov_rel_titan_pagan value = 0 }
+		set_variable = { which = r_prov_rel_titan_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_promethean_pagan value = 0 }
+		set_variable = { which = r_prov_rel_promethean_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_britannic_pagan value = 0 }
+		set_variable = { which = r_prov_rel_britannic_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_egyptian_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_egyptian_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_egyptian_pagan value = 0 }
+		set_variable = { which = r_prov_rel_egyptian_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_aten_pagan value = 0 }
+		set_variable = { which = r_prov_rel_aten_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_bori value = 0 }
+		set_variable = { which = r_prov_rel_bori_pct value = 0 }
+		set_variable = { which = r_prov_rel_a_tag_roog_reformed value = 0 }
+		set_variable = { which = r_prov_rel_a_tag_roog_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_a_tag_roog value = 0 }
+		set_variable = { which = r_prov_rel_a_tag_roog_pct value = 0 }
+		set_variable = { which = r_prov_rel_amazigh_reformed value = 0 }
+		set_variable = { which = r_prov_rel_amazigh_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_amazigh value = 0 }
+		set_variable = { which = r_prov_rel_amazigh_pct value = 0 }
+		set_variable = { which = r_prov_rel_vieti_orthodox value = 0 }
+		set_variable = { which = r_prov_rel_vieti_orthodox_pct value = 0 }
+		set_variable = { which = r_prov_rel_hereclemasculist_pagan value = 0 }
+		set_variable = { which = r_prov_rel_hereclemasculist_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_vieti_mithras_pagan value = 0 }
+		set_variable = { which = r_prov_rel_vieti_mithras_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_britannic_hyperborean_pagan value = 0 }
+		set_variable = { which = r_prov_rel_britannic_hyperborean_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_romist_pagan value = 0 }
+		set_variable = { which = r_prov_rel_romist_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_chalcedonian value = 0 }
+		set_variable = { which = r_prov_rel_chalcedonian_pct value = 0 }
+		set_variable = { which = r_prov_rel_methodist value = 0 }
+		set_variable = { which = r_prov_rel_methodist_pct value = 0 }
+		set_variable = { which = r_prov_rel_arminian value = 0 }
+		set_variable = { which = r_prov_rel_arminian_pct value = 0 }
+		set_variable = { which = r_prov_rel_baptist value = 0 }
+		set_variable = { which = r_prov_rel_baptist_pct value = 0 }
+		set_variable = { which = r_prov_rel_unitarian value = 0 }
+		set_variable = { which = r_prov_rel_unitarian_pct value = 0 }
+		set_variable = { which = r_prov_rel_anabaptist value = 0 }
+		set_variable = { which = r_prov_rel_anabaptist_pct value = 0 }
+		set_variable = { which = r_prov_rel_anglican value = 0 }
+		set_variable = { which = r_prov_rel_anglican_pct value = 0 }
+		set_variable = { which = r_prov_rel_reformed value = 0 }
+		set_variable = { which = r_prov_rel_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_lutheran value = 0 }
+		set_variable = { which = r_prov_rel_lutheran_pct value = 0 }
+		set_variable = { which = r_prov_rel_hussite value = 0 }
+		set_variable = { which = r_prov_rel_hussite_pct value = 0 }
+		set_variable = { which = r_prov_rel_miskito_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_miskito_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_miskito_pagan value = 0 }
+		set_variable = { which = r_prov_rel_miskito_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_subartic_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_subartic_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_subartic_pagan value = 0 }
+		set_variable = { which = r_prov_rel_subartic_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_plains_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_plains_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_plains_pagan value = 0 }
+		set_variable = { which = r_prov_rel_plains_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_basin_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_basin_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_basin_pagan value = 0 }
+		set_variable = { which = r_prov_rel_basin_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_plateau_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_plateau_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_plateau_pagan value = 0 }
+		set_variable = { which = r_prov_rel_plateau_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_california_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_california_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_california_pagan value = 0 }
+		set_variable = { which = r_prov_rel_california_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_southeast_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_southeast_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_southeast_pagan value = 0 }
+		set_variable = { which = r_prov_rel_southeast_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_southwest_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_southwest_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_southwest_pagan value = 0 }
+		set_variable = { which = r_prov_rel_southwest_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_raven_tales_reformed value = 0 }
+		set_variable = { which = r_prov_rel_raven_tales_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_raven_tales value = 0 }
+		set_variable = { which = r_prov_rel_raven_tales_pct value = 0 }
+		set_variable = { which = r_prov_rel_caribic_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_caribic_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_caribic_pagan value = 0 }
+		set_variable = { which = r_prov_rel_caribic_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_pampas_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_pampas_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_pampas_pagan value = 0 }
+		set_variable = { which = r_prov_rel_pampas_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_chaco_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_chaco_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_chaco_pagan value = 0 }
+		set_variable = { which = r_prov_rel_chaco_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_amazonian_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_amazonian_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_amazonian_pagan value = 0 }
+		set_variable = { which = r_prov_rel_amazonian_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_mapuche_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_mapuche_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_mapuche_pagan value = 0 }
+		set_variable = { which = r_prov_rel_mapuche_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_muisca_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_muisca_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_muisca_pagan value = 0 }
+		set_variable = { which = r_prov_rel_muisca_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_caran_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_caran_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_caran_pagan value = 0 }
+		set_variable = { which = r_prov_rel_caran_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_chachapoyan_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_chachapoyan_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_chachapoyan_pagan value = 0 }
+		set_variable = { which = r_prov_rel_chachapoyan_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_chimuan_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_chimuan_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_chimuan_pagan value = 0 }
+		set_variable = { which = r_prov_rel_chimuan_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_tiwanakan_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_tiwanakan_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_tiwanakan_pagan value = 0 }
+		set_variable = { which = r_prov_rel_tiwanakan_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_chavin_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_chavin_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_chavin_pagan value = 0 }
+		set_variable = { which = r_prov_rel_chavin_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_otomi_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_otomi_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_otomi_pagan value = 0 }
+		set_variable = { which = r_prov_rel_otomi_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_corachol_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_corachol_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_corachol_pagan value = 0 }
+		set_variable = { which = r_prov_rel_corachol_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_tarascan_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_tarascan_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_tarascan_pagan value = 0 }
+		set_variable = { which = r_prov_rel_tarascan_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_nonohualcan_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_nonohualcan_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_nonohualcan_pagan value = 0 }
+		set_variable = { which = r_prov_rel_nonohualcan_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_wastek_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_wastek_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_wastek_pagan value = 0 }
+		set_variable = { which = r_prov_rel_wastek_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_zapotec_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_zapotec_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_zapotec_pagan value = 0 }
+		set_variable = { which = r_prov_rel_zapotec_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_totonac_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_totonac_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_totonac_pagan value = 0 }
+		set_variable = { which = r_prov_rel_totonac_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_mixtec_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_mixtec_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_mixtec_pagan value = 0 }
+		set_variable = { which = r_prov_rel_mixtec_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_yukaghir_pantheism_reformed value = 0 }
+		set_variable = { which = r_prov_rel_yukaghir_pantheism_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_yukaghir_pantheism value = 0 }
+		set_variable = { which = r_prov_rel_yukaghir_pantheism_pct value = 0 }
+		set_variable = { which = r_prov_rel_chukchi_pantheism_reformed value = 0 }
+		set_variable = { which = r_prov_rel_chukchi_pantheism_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_chukchi_pantheism value = 0 }
+		set_variable = { which = r_prov_rel_chukchi_pantheism_pct value = 0 }
+		set_variable = { which = r_prov_rel_druze_reformed value = 0 }
+		set_variable = { which = r_prov_rel_druze_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_judaism_reformed value = 0 }
+		set_variable = { which = r_prov_rel_judaism_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_sethian_reformed value = 0 }
+		set_variable = { which = r_prov_rel_sethian_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_muslim_sufi_reformed value = 0 }
+		set_variable = { which = r_prov_rel_muslim_sufi_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_cybele_reformed value = 0 }
+		set_variable = { which = r_prov_rel_cybele_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_ethiopian_war_reformed value = 0 }
+		set_variable = { which = r_prov_rel_ethiopian_war_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_waaq value = 0 }
+		set_variable = { which = r_prov_rel_waaq_pct value = 0 }
+		set_variable = { which = r_prov_rel_arab_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_arab_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_almaqah value = 0 }
+		set_variable = { which = r_prov_rel_almaqah_pct value = 0 }
+		set_variable = { which = r_prov_rel_talab value = 0 }
+		set_variable = { which = r_prov_rel_talab_pct value = 0 }
+		set_variable = { which = r_prov_rel_shams value = 0 }
+		set_variable = { which = r_prov_rel_shams_pct value = 0 }
+		set_variable = { which = r_prov_rel_allat value = 0 }
+		set_variable = { which = r_prov_rel_allat_pct value = 0 }
+		set_variable = { which = r_prov_rel_hubal value = 0 }
+		set_variable = { which = r_prov_rel_hubal_pct value = 0 }
+		set_variable = { which = r_prov_rel_attar value = 0 }
+		set_variable = { which = r_prov_rel_attar_pct value = 0 }
+		set_variable = { which = r_prov_rel_maher value = 0 }
+		set_variable = { which = r_prov_rel_maher_pct value = 0 }
+		set_variable = { which = r_prov_rel_quetzal_reformed value = 0 }
+		set_variable = { which = r_prov_rel_quetzal_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_quetzal value = 0 }
+		set_variable = { which = r_prov_rel_quetzal_pct value = 0 }
+		set_variable = { which = r_prov_rel_mayan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_mayan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_mayan value = 0 }
+		set_variable = { which = r_prov_rel_mayan_pct value = 0 }
+		set_variable = { which = r_prov_rel_northern_sun_reformed value = 0 }
+		set_variable = { which = r_prov_rel_northern_sun_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_dievas value = 0 }
+		set_variable = { which = r_prov_rel_dievas_pct value = 0 }
+		set_variable = { which = r_prov_rel_saule value = 0 }
+		set_variable = { which = r_prov_rel_saule_pct value = 0 }
+		set_variable = { which = r_prov_rel_perkunas value = 0 }
+		set_variable = { which = r_prov_rel_perkunas_pct value = 0 }
+		set_variable = { which = r_prov_rel_peckols value = 0 }
+		set_variable = { which = r_prov_rel_peckols_pct value = 0 }
+		set_variable = { which = r_prov_rel_bantu_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_bantu_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_nyakalagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_nyakalagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_zande_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_zande_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_zulu_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_zulu_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_kintu value = 0 }
+		set_variable = { which = r_prov_rel_kintu_pct value = 0 }
+		set_variable = { which = r_prov_rel_akuj_reformed value = 0 }
+		set_variable = { which = r_prov_rel_akuj_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_akuj value = 0 }
+		set_variable = { which = r_prov_rel_akuj_pct value = 0 }
+		set_variable = { which = r_prov_rel_baluba_reformed value = 0 }
+		set_variable = { which = r_prov_rel_baluba_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_baluba value = 0 }
+		set_variable = { which = r_prov_rel_baluba_pct value = 0 }
+		set_variable = { which = r_prov_rel_batembuzi value = 0 }
+		set_variable = { which = r_prov_rel_batembuzi_pct value = 0 }
+		set_variable = { which = r_prov_rel_bukongo_reformed value = 0 }
+		set_variable = { which = r_prov_rel_bukongo_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_bukongo value = 0 }
+		set_variable = { which = r_prov_rel_bukongo_pct value = 0 }
+		set_variable = { which = r_prov_rel_bumuntu_reformed value = 0 }
+		set_variable = { which = r_prov_rel_bumuntu_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_bumuntu value = 0 }
+		set_variable = { which = r_prov_rel_bumuntu_pct value = 0 }
+		set_variable = { which = r_prov_rel_byeri_reformed value = 0 }
+		set_variable = { which = r_prov_rel_byeri_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_byeri value = 0 }
+		set_variable = { which = r_prov_rel_byeri_pct value = 0 }
+		set_variable = { which = r_prov_rel_dua value = 0 }
+		set_variable = { which = r_prov_rel_dua_pct value = 0 }
+		set_variable = { which = r_prov_rel_enkai value = 0 }
+		set_variable = { which = r_prov_rel_enkai_pct value = 0 }
+		set_variable = { which = r_prov_rel_imana value = 0 }
+		set_variable = { which = r_prov_rel_imana_pct value = 0 }
+		set_variable = { which = r_prov_rel_imipashi_reformed value = 0 }
+		set_variable = { which = r_prov_rel_imipashi_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_imipashi value = 0 }
+		set_variable = { which = r_prov_rel_imipashi_pct value = 0 }
+		set_variable = { which = r_prov_rel_kalunga_reformed value = 0 }
+		set_variable = { which = r_prov_rel_kalunga_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_kalunga value = 0 }
+		set_variable = { which = r_prov_rel_kalunga_pct value = 0 }
+		set_variable = { which = r_prov_rel_odinane_reformed value = 0 }
+		set_variable = { which = r_prov_rel_odinane_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_odinane value = 0 }
+		set_variable = { which = r_prov_rel_odinane_pct value = 0 }
+		set_variable = { which = r_prov_rel_nyasaye value = 0 }
+		set_variable = { which = r_prov_rel_nyasaye_pct value = 0 }
+		set_variable = { which = r_prov_rel_nyau value = 0 }
+		set_variable = { which = r_prov_rel_nyau_pct value = 0 }
+		set_variable = { which = r_prov_rel_num_reformed value = 0 }
+		set_variable = { which = r_prov_rel_num_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_num value = 0 }
+		set_variable = { which = r_prov_rel_num_pct value = 0 }
+		set_variable = { which = r_prov_rel_nzambiist_reformed value = 0 }
+		set_variable = { which = r_prov_rel_nzambiist_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_nzambiist value = 0 }
+		set_variable = { which = r_prov_rel_nzambiist_pct value = 0 }
+		set_variable = { which = r_prov_rel_makonde_pagan value = 0 }
+		set_variable = { which = r_prov_rel_makonde_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_mwari value = 0 }
+		set_variable = { which = r_prov_rel_mwari_pct value = 0 }
+		set_variable = { which = r_prov_rel_muzimu_reformed value = 0 }
+		set_variable = { which = r_prov_rel_muzimu_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_muzimu value = 0 }
+		set_variable = { which = r_prov_rel_muzimu_pct value = 0 }
+		set_variable = { which = r_prov_rel_okuruo_reformed value = 0 }
+		set_variable = { which = r_prov_rel_okuruo_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_okuruo value = 0 }
+		set_variable = { which = r_prov_rel_okuruo_pct value = 0 }
+		set_variable = { which = r_prov_rel_zande_pagan value = 0 }
+		set_variable = { which = r_prov_rel_zande_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_zulu_pagan value = 0 }
+		set_variable = { which = r_prov_rel_zulu_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_berber_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_berber_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_berber_pagan value = 0 }
+		set_variable = { which = r_prov_rel_berber_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_gurzil value = 0 }
+		set_variable = { which = r_prov_rel_gurzil_pct value = 0 }
+		set_variable = { which = r_prov_rel_amanai value = 0 }
+		set_variable = { which = r_prov_rel_amanai_pct value = 0 }
+		set_variable = { which = r_prov_rel_bud_zen_reformed value = 0 }
+		set_variable = { which = r_prov_rel_bud_zen_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_bud_zor_reformed value = 0 }
+		set_variable = { which = r_prov_rel_bud_zor_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_bud_sthaviravada value = 0 }
+		set_variable = { which = r_prov_rel_bud_sthaviravada_pct value = 0 }
+		set_variable = { which = r_prov_rel_bud_bahusrutiya value = 0 }
+		set_variable = { which = r_prov_rel_bud_bahusrutiya_pct value = 0 }
+		set_variable = { which = r_prov_rel_bud_mahayana value = 0 }
+		set_variable = { which = r_prov_rel_bud_mahayana_pct value = 0 }
+		set_variable = { which = r_prov_rel_bud_pureland value = 0 }
+		set_variable = { which = r_prov_rel_bud_pureland_pct value = 0 }
+		set_variable = { which = r_prov_rel_bud_pratyeka value = 0 }
+		set_variable = { which = r_prov_rel_bud_pratyeka_pct value = 0 }
+		set_variable = { which = r_prov_rel_bud_vajrayana value = 0 }
+		set_variable = { which = r_prov_rel_bud_vajrayana_pct value = 0 }
+		set_variable = { which = r_prov_rel_bud_zen value = 0 }
+		set_variable = { which = r_prov_rel_bud_zen_pct value = 0 }
+		set_variable = { which = r_prov_rel_bud_zor value = 0 }
+		set_variable = { which = r_prov_rel_bud_zor_pct value = 0 }
+		set_variable = { which = r_prov_rel_celtic_christ_reformed value = 0 }
+		set_variable = { which = r_prov_rel_celtic_christ_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_celtic_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_celtic_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_iberian_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_iberian_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_celtic_pagan value = 0 }
+		set_variable = { which = r_prov_rel_celtic_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_lugh value = 0 }
+		set_variable = { which = r_prov_rel_lugh_pct value = 0 }
+		set_variable = { which = r_prov_rel_endovellico value = 0 }
+		set_variable = { which = r_prov_rel_endovellico_pct value = 0 }
+		set_variable = { which = r_prov_rel_lubu_reformed value = 0 }
+		set_variable = { which = r_prov_rel_lubu_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_tao_reformed value = 0 }
+		set_variable = { which = r_prov_rel_tao_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_confucian value = 0 }
+		set_variable = { which = r_prov_rel_confucian_pct value = 0 }
+		set_variable = { which = r_prov_rel_shenjiao value = 0 }
+		set_variable = { which = r_prov_rel_shenjiao_pct value = 0 }
+		set_variable = { which = r_prov_rel_lubu value = 0 }
+		set_variable = { which = r_prov_rel_lubu_pct value = 0 }
+		set_variable = { which = r_prov_rel_tao value = 0 }
+		set_variable = { which = r_prov_rel_tao_pct value = 0 }
+		set_variable = { which = r_prov_rel_sol_taoist value = 0 }
+		set_variable = { which = r_prov_rel_sol_taoist_pct value = 0 }
+		set_variable = { which = r_prov_rel_german_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_german_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_norse_christ_reformed value = 0 }
+		set_variable = { which = r_prov_rel_norse_christ_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_ragnarok_reformed value = 0 }
+		set_variable = { which = r_prov_rel_ragnarok_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_teiwaz_reformed value = 0 }
+		set_variable = { which = r_prov_rel_teiwaz_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_norse_war value = 0 }
+		set_variable = { which = r_prov_rel_norse_war_pct value = 0 }
+		set_variable = { which = r_prov_rel_ragnarok value = 0 }
+		set_variable = { which = r_prov_rel_ragnarok_pct value = 0 }
+		set_variable = { which = r_prov_rel_sowilo value = 0 }
+		set_variable = { which = r_prov_rel_sowilo_pct value = 0 }
+		set_variable = { which = r_prov_rel_nott value = 0 }
+		set_variable = { which = r_prov_rel_nott_pct value = 0 }
+		set_variable = { which = r_prov_rel_german_pagan value = 0 }
+		set_variable = { which = r_prov_rel_german_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_irminsul value = 0 }
+		set_variable = { which = r_prov_rel_irminsul_pct value = 0 }
+		set_variable = { which = r_prov_rel_allfather value = 0 }
+		set_variable = { which = r_prov_rel_allfather_pct value = 0 }
+		set_variable = { which = r_prov_rel_teiwaz value = 0 }
+		set_variable = { which = r_prov_rel_teiwaz_pct value = 0 }
+		set_variable = { which = r_prov_rel_cathar_reformed value = 0 }
+		set_variable = { which = r_prov_rel_cathar_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_christian_populist_reformed value = 0 }
+		set_variable = { which = r_prov_rel_christian_populist_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_mari_christ_reformed value = 0 }
+		set_variable = { which = r_prov_rel_mari_christ_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_montanist_reformed value = 0 }
+		set_variable = { which = r_prov_rel_montanist_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_nasrani_reformed value = 0 }
+		set_variable = { which = r_prov_rel_nasrani_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_priscillian_reformed value = 0 }
+		set_variable = { which = r_prov_rel_priscillian_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_slavic_christian_reformed value = 0 }
+		set_variable = { which = r_prov_rel_slavic_christian_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_antinomian value = 0 }
+		set_variable = { which = r_prov_rel_antinomian_pct value = 0 }
+		set_variable = { which = r_prov_rel_donatist value = 0 }
+		set_variable = { which = r_prov_rel_donatist_pct value = 0 }
+		set_variable = { which = r_prov_rel_melkite value = 0 }
+		set_variable = { which = r_prov_rel_melkite_pct value = 0 }
+		set_variable = { which = r_prov_rel_montanist value = 0 }
+		set_variable = { which = r_prov_rel_montanist_pct value = 0 }
+		set_variable = { which = r_prov_rel_sabellianist value = 0 }
+		set_variable = { which = r_prov_rel_sabellianist_pct value = 0 }
+		set_variable = { which = r_prov_rel_valentinian value = 0 }
+		set_variable = { which = r_prov_rel_valentinian_pct value = 0 }
+		set_variable = { which = r_prov_rel_mari_christ value = 0 }
+		set_variable = { which = r_prov_rel_mari_christ_pct value = 0 }
+		set_variable = { which = r_prov_rel_priscillian value = 0 }
+		set_variable = { which = r_prov_rel_priscillian_pct value = 0 }
+		set_variable = { which = r_prov_rel_docetist value = 0 }
+		set_variable = { which = r_prov_rel_docetist_pct value = 0 }
+		set_variable = { which = r_prov_rel_apollinarist value = 0 }
+		set_variable = { which = r_prov_rel_apollinarist_pct value = 0 }
+		set_variable = { which = r_prov_rel_solomonic_christ value = 0 }
+		set_variable = { which = r_prov_rel_solomonic_christ_pct value = 0 }
+		set_variable = { which = r_prov_rel_audianist value = 0 }
+		set_variable = { which = r_prov_rel_audianist_pct value = 0 }
+		set_variable = { which = r_prov_rel_celtic_christ value = 0 }
+		set_variable = { which = r_prov_rel_celtic_christ_pct value = 0 }
+		set_variable = { which = r_prov_rel_marcionist value = 0 }
+		set_variable = { which = r_prov_rel_marcionist_pct value = 0 }
+		set_variable = { which = r_prov_rel_nasrani value = 0 }
+		set_variable = { which = r_prov_rel_nasrani_pct value = 0 }
+		set_variable = { which = r_prov_rel_norse_christ value = 0 }
+		set_variable = { which = r_prov_rel_norse_christ_pct value = 0 }
+		set_variable = { which = r_prov_rel_pelagian value = 0 }
+		set_variable = { which = r_prov_rel_pelagian_pct value = 0 }
+		set_variable = { which = r_prov_rel_semipelagian value = 0 }
+		set_variable = { which = r_prov_rel_semipelagian_pct value = 0 }
+		set_variable = { which = r_prov_rel_sethian value = 0 }
+		set_variable = { which = r_prov_rel_sethian_pct value = 0 }
+		set_variable = { which = r_prov_rel_slavic_christian value = 0 }
+		set_variable = { which = r_prov_rel_slavic_christian_pct value = 0 }
+		set_variable = { which = r_prov_rel_unctionist value = 0 }
+		set_variable = { which = r_prov_rel_unctionist_pct value = 0 }
+		set_variable = { which = r_prov_rel_amun_reformed value = 0 }
+		set_variable = { which = r_prov_rel_amun_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_aten_reformed value = 0 }
+		set_variable = { which = r_prov_rel_aten_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_isis_reformed value = 0 }
+		set_variable = { which = r_prov_rel_isis_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_set_reformed value = 0 }
+		set_variable = { which = r_prov_rel_set_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_amun value = 0 }
+		set_variable = { which = r_prov_rel_amun_pct value = 0 }
+		set_variable = { which = r_prov_rel_aten value = 0 }
+		set_variable = { which = r_prov_rel_aten_pct value = 0 }
+		set_variable = { which = r_prov_rel_horus_re value = 0 }
+		set_variable = { which = r_prov_rel_horus_re_pct value = 0 }
+		set_variable = { which = r_prov_rel_isis value = 0 }
+		set_variable = { which = r_prov_rel_isis_pct value = 0 }
+		set_variable = { which = r_prov_rel_set value = 0 }
+		set_variable = { which = r_prov_rel_set_pct value = 0 }
+		set_variable = { which = r_prov_rel_chumbylat_reformed value = 0 }
+		set_variable = { which = r_prov_rel_chumbylat_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_voipel_reformed value = 0 }
+		set_variable = { which = r_prov_rel_voipel_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_ilmatar value = 0 }
+		set_variable = { which = r_prov_rel_ilmatar_pct value = 0 }
+		set_variable = { which = r_prov_rel_jumala value = 0 }
+		set_variable = { which = r_prov_rel_jumala_pct value = 0 }
+		set_variable = { which = r_prov_rel_chumbylat value = 0 }
+		set_variable = { which = r_prov_rel_chumbylat_pct value = 0 }
+		set_variable = { which = r_prov_rel_voipel value = 0 }
+		set_variable = { which = r_prov_rel_voipel_pct value = 0 }
+		set_variable = { which = r_prov_rel_graeco_roman_reformed value = 0 }
+		set_variable = { which = r_prov_rel_graeco_roman_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_graeco_roman value = 0 }
+		set_variable = { which = r_prov_rel_graeco_roman_pct value = 0 }
+		set_variable = { which = r_prov_rel_jupiter value = 0 }
+		set_variable = { which = r_prov_rel_jupiter_pct value = 0 }
+		set_variable = { which = r_prov_rel_dionysos value = 0 }
+		set_variable = { which = r_prov_rel_dionysos_pct value = 0 }
+		set_variable = { which = r_prov_rel_alexandros value = 0 }
+		set_variable = { which = r_prov_rel_alexandros_pct value = 0 }
+		set_variable = { which = r_prov_rel_solomonic_alexandros value = 0 }
+		set_variable = { which = r_prov_rel_solomonic_alexandros_pct value = 0 }
+		set_variable = { which = r_prov_rel_roman_imperial value = 0 }
+		set_variable = { which = r_prov_rel_roman_imperial_pct value = 0 }
+		set_variable = { which = r_prov_rel_cybele value = 0 }
+		set_variable = { which = r_prov_rel_cybele_pct value = 0 }
+		set_variable = { which = r_prov_rel_kubera_reformed value = 0 }
+		set_variable = { which = r_prov_rel_kubera_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_murugan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_murugan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_saura_reformed value = 0 }
+		set_variable = { which = r_prov_rel_saura_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_vidharma_reformed value = 0 }
+		set_variable = { which = r_prov_rel_vidharma_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_vidharma value = 0 }
+		set_variable = { which = r_prov_rel_vidharma_pct value = 0 }
+		set_variable = { which = r_prov_rel_saura value = 0 }
+		set_variable = { which = r_prov_rel_saura_pct value = 0 }
+		set_variable = { which = r_prov_rel_kubera value = 0 }
+		set_variable = { which = r_prov_rel_kubera_pct value = 0 }
+		set_variable = { which = r_prov_rel_murugan value = 0 }
+		set_variable = { which = r_prov_rel_murugan_pct value = 0 }
+		set_variable = { which = r_prov_rel_indohelen_reformed value = 0 }
+		set_variable = { which = r_prov_rel_indohelen_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_indohelen value = 0 }
+		set_variable = { which = r_prov_rel_indohelen_pct value = 0 }
+		set_variable = { which = r_prov_rel_indoh_bud value = 0 }
+		set_variable = { which = r_prov_rel_indoh_bud_pct value = 0 }
+		set_variable = { which = r_prov_rel_indoh_confucian value = 0 }
+		set_variable = { which = r_prov_rel_indoh_confucian_pct value = 0 }
+		set_variable = { which = r_prov_rel_indoh_hindu value = 0 }
+		set_variable = { which = r_prov_rel_indoh_hindu_pct value = 0 }
+		set_variable = { which = r_prov_rel_indoh_zor value = 0 }
+		set_variable = { which = r_prov_rel_indoh_zor_pct value = 0 }
+		set_variable = { which = r_prov_rel_jud_ark_reformed value = 0 }
+		set_variable = { which = r_prov_rel_jud_ark_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_judaism value = 0 }
+		set_variable = { which = r_prov_rel_judaism_pct value = 0 }
+		set_variable = { which = r_prov_rel_jud_sabaoth value = 0 }
+		set_variable = { which = r_prov_rel_jud_sabaoth_pct value = 0 }
+		set_variable = { which = r_prov_rel_jud_ark value = 0 }
+		set_variable = { which = r_prov_rel_jud_ark_pct value = 0 }
+		set_variable = { which = r_prov_rel_jud_zion value = 0 }
+		set_variable = { which = r_prov_rel_jud_zion_pct value = 0 }
+		set_variable = { which = r_prov_rel_illuyanka_reformed value = 0 }
+		set_variable = { which = r_prov_rel_illuyanka_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_tarhunt_reformed value = 0 }
+		set_variable = { which = r_prov_rel_tarhunt_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_luwian value = 0 }
+		set_variable = { which = r_prov_rel_luwian_pct value = 0 }
+		set_variable = { which = r_prov_rel_illuyanka value = 0 }
+		set_variable = { which = r_prov_rel_illuyanka_pct value = 0 }
+		set_variable = { which = r_prov_rel_tarhunt value = 0 }
+		set_variable = { which = r_prov_rel_tarhunt_pct value = 0 }
+		set_variable = { which = r_prov_rel_mand_ruha_reformed value = 0 }
+		set_variable = { which = r_prov_rel_mand_ruha_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_mandaean_reformed value = 0 }
+		set_variable = { which = r_prov_rel_mandaean_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_mand_ruha value = 0 }
+		set_variable = { which = r_prov_rel_mand_ruha_pct value = 0 }
+		set_variable = { which = r_prov_rel_yahyanism value = 0 }
+		set_variable = { which = r_prov_rel_yahyanism_pct value = 0 }
+		set_variable = { which = r_prov_rel_ahriman_reformed value = 0 }
+		set_variable = { which = r_prov_rel_ahriman_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_mani_germanic_reformed value = 0 }
+		set_variable = { which = r_prov_rel_mani_germanic_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_mani_slavic_reformed value = 0 }
+		set_variable = { which = r_prov_rel_mani_slavic_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_mani_ahriman value = 0 }
+		set_variable = { which = r_prov_rel_mani_ahriman_pct value = 0 }
+		set_variable = { which = r_prov_rel_mani_mithra value = 0 }
+		set_variable = { which = r_prov_rel_mani_mithra_pct value = 0 }
+		set_variable = { which = r_prov_rel_mani_slavic value = 0 }
+		set_variable = { which = r_prov_rel_mani_slavic_pct value = 0 }
+		set_variable = { which = r_prov_rel_mani_germanic value = 0 }
+		set_variable = { which = r_prov_rel_mani_germanic_pct value = 0 }
+		set_variable = { which = r_prov_rel_mithra value = 0 }
+		set_variable = { which = r_prov_rel_mithra_pct value = 0 }
+		set_variable = { which = r_prov_rel_mithra_christ value = 0 }
+		set_variable = { which = r_prov_rel_mithra_christ_pct value = 0 }
+		set_variable = { which = r_prov_rel_mithra_sol value = 0 }
+		set_variable = { which = r_prov_rel_mithra_sol_pct value = 0 }
+		set_variable = { which = r_prov_rel_muslim_aliite_reformed value = 0 }
+		set_variable = { which = r_prov_rel_muslim_aliite_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_muslim_domination_reformed value = 0 }
+		set_variable = { which = r_prov_rel_muslim_domination_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_ashari value = 0 }
+		set_variable = { which = r_prov_rel_ashari_pct value = 0 }
+		set_variable = { which = r_prov_rel_athari value = 0 }
+		set_variable = { which = r_prov_rel_athari_pct value = 0 }
+		set_variable = { which = r_prov_rel_maturidi value = 0 }
+		set_variable = { which = r_prov_rel_maturidi_pct value = 0 }
+		set_variable = { which = r_prov_rel_murjiah value = 0 }
+		set_variable = { which = r_prov_rel_murjiah_pct value = 0 }
+		set_variable = { which = r_prov_rel_zahiri value = 0 }
+		set_variable = { which = r_prov_rel_zahiri_pct value = 0 }
+		set_variable = { which = r_prov_rel_sufi value = 0 }
+		set_variable = { which = r_prov_rel_sufi_pct value = 0 }
+		set_variable = { which = r_prov_rel_ilm_islam value = 0 }
+		set_variable = { which = r_prov_rel_ilm_islam_pct value = 0 }
+		set_variable = { which = r_prov_rel_ghazi_islam value = 0 }
+		set_variable = { which = r_prov_rel_ghazi_islam_pct value = 0 }
+		set_variable = { which = r_prov_rel_mutazil value = 0 }
+		set_variable = { which = r_prov_rel_mutazil_pct value = 0 }
+		set_variable = { which = r_prov_rel_marabout value = 0 }
+		set_variable = { which = r_prov_rel_marabout_pct value = 0 }
+		set_variable = { which = r_prov_rel_neoplato value = 0 }
+		set_variable = { which = r_prov_rel_neoplato_pct value = 0 }
+		set_variable = { which = r_prov_rel_plato_pythagorean value = 0 }
+		set_variable = { which = r_prov_rel_plato_pythagorean_pct value = 0 }
+		set_variable = { which = r_prov_rel_porphyryan value = 0 }
+		set_variable = { which = r_prov_rel_porphyryan_pct value = 0 }
+		set_variable = { which = r_prov_rel_plato_christ value = 0 }
+		set_variable = { which = r_prov_rel_plato_christ_pct value = 0 }
+		set_variable = { which = r_prov_rel_plato_islam value = 0 }
+		set_variable = { which = r_prov_rel_plato_islam_pct value = 0 }
+		set_variable = { which = r_prov_rel_zz01_vedanta value = 0 }
+		set_variable = { which = r_prov_rel_zz01_vedanta_pct value = 0 }
+		set_variable = { which = r_prov_rel_baal_monotheistic_reformed value = 0 }
+		set_variable = { which = r_prov_rel_baal_monotheistic_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_beelshamen value = 0 }
+		set_variable = { which = r_prov_rel_beelshamen_pct value = 0 }
+		set_variable = { which = r_prov_rel_aglibol value = 0 }
+		set_variable = { which = r_prov_rel_aglibol_pct value = 0 }
+		set_variable = { which = r_prov_rel_malakbel value = 0 }
+		set_variable = { which = r_prov_rel_malakbel_pct value = 0 }
+		set_variable = { which = r_prov_rel_palmyran_pagan value = 0 }
+		set_variable = { which = r_prov_rel_palmyran_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_hadad value = 0 }
+		set_variable = { which = r_prov_rel_hadad_pct value = 0 }
+		set_variable = { which = r_prov_rel_kothar value = 0 }
+		set_variable = { which = r_prov_rel_kothar_pct value = 0 }
+		set_variable = { which = r_prov_rel_serer_reformed value = 0 }
+		set_variable = { which = r_prov_rel_serer_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_mande_pagan value = 0 }
+		set_variable = { which = r_prov_rel_mande_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_yoruba value = 0 }
+		set_variable = { which = r_prov_rel_yoruba_pct value = 0 }
+		set_variable = { which = r_prov_rel_nyame value = 0 }
+		set_variable = { which = r_prov_rel_nyame_pct value = 0 }
+		set_variable = { which = r_prov_rel_anansi value = 0 }
+		set_variable = { which = r_prov_rel_anansi_pct value = 0 }
+		set_variable = { which = r_prov_rel_perun value = 0 }
+		set_variable = { which = r_prov_rel_perun_pct value = 0 }
+		set_variable = { which = r_prov_rel_veles value = 0 }
+		set_variable = { which = r_prov_rel_veles_pct value = 0 }
+		set_variable = { which = r_prov_rel_rod value = 0 }
+		set_variable = { which = r_prov_rel_rod_pct value = 0 }
+		set_variable = { which = r_prov_rel_svaroh value = 0 }
+		set_variable = { which = r_prov_rel_svaroh_pct value = 0 }
+		set_variable = { which = r_prov_rel_dazhbog value = 0 }
+		set_variable = { which = r_prov_rel_dazhbog_pct value = 0 }
+		set_variable = { which = r_prov_rel_svetovid value = 0 }
+		set_variable = { which = r_prov_rel_svetovid_pct value = 0 }
+		set_variable = { which = r_prov_rel_sol_boreas_reformed value = 0 }
+		set_variable = { which = r_prov_rel_sol_boreas_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_sol_islam_reformed value = 0 }
+		set_variable = { which = r_prov_rel_sol_islam_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_sol_sahara_reformed value = 0 }
+		set_variable = { which = r_prov_rel_sol_sahara_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_sol value = 0 }
+		set_variable = { which = r_prov_rel_sol_pct value = 0 }
+		set_variable = { which = r_prov_rel_sol_christ value = 0 }
+		set_variable = { which = r_prov_rel_sol_christ_pct value = 0 }
+		set_variable = { which = r_prov_rel_sol_mani value = 0 }
+		set_variable = { which = r_prov_rel_sol_mani_pct value = 0 }
+		set_variable = { which = r_prov_rel_sol_apollo value = 0 }
+		set_variable = { which = r_prov_rel_sol_apollo_pct value = 0 }
+		set_variable = { which = r_prov_rel_sol_boreas value = 0 }
+		set_variable = { which = r_prov_rel_sol_boreas_pct value = 0 }
+		set_variable = { which = r_prov_rel_sol_islam value = 0 }
+		set_variable = { which = r_prov_rel_sol_islam_pct value = 0 }
+		set_variable = { which = r_prov_rel_sol_norse value = 0 }
+		set_variable = { which = r_prov_rel_sol_norse_pct value = 0 }
+		set_variable = { which = r_prov_rel_sol_slav value = 0 }
+		set_variable = { which = r_prov_rel_sol_slav_pct value = 0 }
+		set_variable = { which = r_prov_rel_sol_tsahay value = 0 }
+		set_variable = { which = r_prov_rel_sol_tsahay_pct value = 0 }
+		set_variable = { which = r_prov_rel_sol_sahara value = 0 }
+		set_variable = { which = r_prov_rel_sol_sahara_pct value = 0 }
+		set_variable = { which = r_prov_rel_erlik_reformed value = 0 }
+		set_variable = { which = r_prov_rel_erlik_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_tengri_bud_reformed value = 0 }
+		set_variable = { which = r_prov_rel_tengri_bud_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_tengri_confucian_reformed value = 0 }
+		set_variable = { which = r_prov_rel_tengri_confucian_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_tengri_mani_reformed value = 0 }
+		set_variable = { which = r_prov_rel_tengri_mani_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_tengri_rod_reformed value = 0 }
+		set_variable = { which = r_prov_rel_tengri_rod_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_vattisenyaly_reformed value = 0 }
+		set_variable = { which = r_prov_rel_vattisenyaly_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_tengri_ahriman value = 0 }
+		set_variable = { which = r_prov_rel_tengri_ahriman_pct value = 0 }
+		set_variable = { which = r_prov_rel_tengri_bud value = 0 }
+		set_variable = { which = r_prov_rel_tengri_bud_pct value = 0 }
+		set_variable = { which = r_prov_rel_tengri_confucian value = 0 }
+		set_variable = { which = r_prov_rel_tengri_confucian_pct value = 0 }
+		set_variable = { which = r_prov_rel_tengri_mani value = 0 }
+		set_variable = { which = r_prov_rel_tengri_mani_pct value = 0 }
+		set_variable = { which = r_prov_rel_tengri_rod value = 0 }
+		set_variable = { which = r_prov_rel_tengri_rod_pct value = 0 }
+		set_variable = { which = r_prov_rel_vattisenyaly value = 0 }
+		set_variable = { which = r_prov_rel_vattisenyaly_pct value = 0 }
+		set_variable = { which = r_prov_rel_erlik value = 0 }
+		set_variable = { which = r_prov_rel_erlik_pct value = 0 }
+		set_variable = { which = r_prov_rel_yazdanism_reformed value = 0 }
+		set_variable = { which = r_prov_rel_yazdanism_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_yazdanism value = 0 }
+		set_variable = { which = r_prov_rel_yazdanism_pct value = 0 }
+		set_variable = { which = r_prov_rel_yazidism value = 0 }
+		set_variable = { which = r_prov_rel_yazidism_pct value = 0 }
+		set_variable = { which = r_prov_rel_zal value = 0 }
+		set_variable = { which = r_prov_rel_zal_pct value = 0 }
+		set_variable = { which = r_prov_rel_zal_christ value = 0 }
+		set_variable = { which = r_prov_rel_zal_christ_pct value = 0 }
+		set_variable = { which = r_prov_rel_zal_mani value = 0 }
+		set_variable = { which = r_prov_rel_zal_mani_pct value = 0 }
+		set_variable = { which = r_prov_rel_mazdakism_reformed value = 0 }
+		set_variable = { which = r_prov_rel_mazdakism_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_zor_angra_reformed value = 0 }
+		set_variable = { which = r_prov_rel_zor_angra_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_zurvanism_reformed value = 0 }
+		set_variable = { which = r_prov_rel_zurvanism_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_zor_angra value = 0 }
+		set_variable = { which = r_prov_rel_zor_angra_pct value = 0 }
+		set_variable = { which = r_prov_rel_zor_hindu value = 0 }
+		set_variable = { which = r_prov_rel_zor_hindu_pct value = 0 }
+		set_variable = { which = r_prov_rel_melanesian_religion_reformed value = 0 }
+		set_variable = { which = r_prov_rel_melanesian_religion_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_melanesian_religion value = 0 }
+		set_variable = { which = r_prov_rel_melanesian_religion_pct value = 0 }
+		set_variable = { which = r_prov_rel_taiwanese_religion_reformed value = 0 }
+		set_variable = { which = r_prov_rel_taiwanese_religion_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_taiwanese_religion value = 0 }
+		set_variable = { which = r_prov_rel_taiwanese_religion_pct value = 0 }
+		set_variable = { which = r_prov_rel_philippine_religion_reformed value = 0 }
+		set_variable = { which = r_prov_rel_philippine_religion_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_philippine_religion value = 0 }
+		set_variable = { which = r_prov_rel_philippine_religion_pct value = 0 }
+		set_variable = { which = r_prov_rel_bornean_religion_reformed value = 0 }
+		set_variable = { which = r_prov_rel_bornean_religion_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_bornean_religion value = 0 }
+		set_variable = { which = r_prov_rel_bornean_religion_pct value = 0 }
+		set_variable = { which = r_prov_rel_sulawesi_religion_reformed value = 0 }
+		set_variable = { which = r_prov_rel_sulawesi_religion_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_sulawesi_religion value = 0 }
+		set_variable = { which = r_prov_rel_sulawesi_religion_pct value = 0 }
+		set_variable = { which = r_prov_rel_flores_religion_reformed value = 0 }
+		set_variable = { which = r_prov_rel_flores_religion_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_flores_religion value = 0 }
+		set_variable = { which = r_prov_rel_flores_religion_pct value = 0 }
+		set_variable = { which = r_prov_rel_java_religion_reformed value = 0 }
+		set_variable = { which = r_prov_rel_java_religion_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_java_religion value = 0 }
+		set_variable = { which = r_prov_rel_java_religion_pct value = 0 }
+		set_variable = { which = r_prov_rel_sumatran_religion_reformed value = 0 }
+		set_variable = { which = r_prov_rel_sumatran_religion_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_sumatran_religion value = 0 }
+		set_variable = { which = r_prov_rel_sumatran_religion_pct value = 0 }
+		set_variable = { which = r_prov_rel_malagasy_religion_reformed value = 0 }
+		set_variable = { which = r_prov_rel_malagasy_religion_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_malagasy_religion value = 0 }
+		set_variable = { which = r_prov_rel_malagasy_religion_pct value = 0 }
+		set_variable = { which = r_prov_rel_south_bantu_mythology_reformed value = 0 }
+		set_variable = { which = r_prov_rel_south_bantu_mythology_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_south_bantu_mythology value = 0 }
+		set_variable = { which = r_prov_rel_south_bantu_mythology_pct value = 0 }
+		set_variable = { which = r_prov_rel_east_bantu_mythology_reformed value = 0 }
+		set_variable = { which = r_prov_rel_east_bantu_mythology_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_east_bantu_mythology value = 0 }
+		set_variable = { which = r_prov_rel_east_bantu_mythology_pct value = 0 }
+		set_variable = { which = r_prov_rel_omotic_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_omotic_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_omotic_pagan value = 0 }
+		set_variable = { which = r_prov_rel_omotic_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_cushitic_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_cushitic_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_cushitic_pagan value = 0 }
+		set_variable = { which = r_prov_rel_cushitic_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_nilotic_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_nilotic_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_nilotic_pagan value = 0 }
+		set_variable = { which = r_prov_rel_nilotic_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_khoi_san_mythology_reformed value = 0 }
+		set_variable = { which = r_prov_rel_khoi_san_mythology_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_khoi_san_mythology value = 0 }
+		set_variable = { which = r_prov_rel_khoi_san_mythology_pct value = 0 }
+		set_variable = { which = r_prov_rel_inti_reformed value = 0 }
+		set_variable = { which = r_prov_rel_inti_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_inti value = 0 }
+		set_variable = { which = r_prov_rel_inti_pct value = 0 }
+		set_variable = { which = r_prov_rel_inuit_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_inuit_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_inuit_pagan value = 0 }
+		set_variable = { which = r_prov_rel_inuit_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_zemiist_reformed value = 0 }
+		set_variable = { which = r_prov_rel_zemiist_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_zemiist value = 0 }
+		set_variable = { which = r_prov_rel_zemiist_pct value = 0 }
+		set_variable = { which = r_prov_rel_kachina_reformed value = 0 }
+		set_variable = { which = r_prov_rel_kachina_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_kachina value = 0 }
+		set_variable = { which = r_prov_rel_kachina_pct value = 0 }
+		set_variable = { which = r_prov_rel_pohakantenna_reformed value = 0 }
+		set_variable = { which = r_prov_rel_pohakantenna_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_pohakantenna value = 0 }
+		set_variable = { which = r_prov_rel_pohakantenna_pct value = 0 }
+		set_variable = { which = r_prov_rel_sgaanaang_reformed value = 0 }
+		set_variable = { which = r_prov_rel_sgaanaang_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_sgaanaang value = 0 }
+		set_variable = { which = r_prov_rel_sgaanaang_pct value = 0 }
+		set_variable = { which = r_prov_rel_wakanda_reformed value = 0 }
+		set_variable = { which = r_prov_rel_wakanda_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_wakanda value = 0 }
+		set_variable = { which = r_prov_rel_wakanda_pct value = 0 }
+		set_variable = { which = r_prov_rel_wakan_tanka_reformed value = 0 }
+		set_variable = { which = r_prov_rel_wakan_tanka_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_wakan_tanka value = 0 }
+		set_variable = { which = r_prov_rel_wakan_tanka_pct value = 0 }
+		set_variable = { which = r_prov_rel_mahoma_reformed value = 0 }
+		set_variable = { which = r_prov_rel_mahoma_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_mahoma value = 0 }
+		set_variable = { which = r_prov_rel_mahoma_pct value = 0 }
+		set_variable = { which = r_prov_rel_southern_cult_reformed value = 0 }
+		set_variable = { which = r_prov_rel_southern_cult_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_southern_cult value = 0 }
+		set_variable = { which = r_prov_rel_southern_cult_pct value = 0 }
+		set_variable = { which = r_prov_rel_orenda_reformed value = 0 }
+		set_variable = { which = r_prov_rel_orenda_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_orenda value = 0 }
+		set_variable = { which = r_prov_rel_orenda_pct value = 0 }
+		set_variable = { which = r_prov_rel_algic_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_algic_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_algic_pagan value = 0 }
+		set_variable = { which = r_prov_rel_algic_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_animism_reformed value = 0 }
+		set_variable = { which = r_prov_rel_animism_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_animism value = 0 }
+		set_variable = { which = r_prov_rel_animism_pct value = 0 }
+		set_variable = { which = r_prov_rel_tupan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_tupan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_tupan value = 0 }
+		set_variable = { which = r_prov_rel_tupan_pct value = 0 }
+		set_variable = { which = r_prov_rel_chiminigagua_reformed value = 0 }
+		set_variable = { which = r_prov_rel_chiminigagua_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_chiminigagua value = 0 }
+		set_variable = { which = r_prov_rel_chiminigagua_pct value = 0 }
+		set_variable = { which = r_prov_rel_lapta_reformed value = 0 }
+		set_variable = { which = r_prov_rel_lapta_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_lapta value = 0 }
+		set_variable = { which = r_prov_rel_lapta_pct value = 0 }
+		set_variable = { which = r_prov_rel_aiwamdzu_reformed value = 0 }
+		set_variable = { which = r_prov_rel_aiwamdzu_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_aiwamdzu value = 0 }
+		set_variable = { which = r_prov_rel_aiwamdzu_pct value = 0 }
+		set_variable = { which = r_prov_rel_lakayah_reformed value = 0 }
+		set_variable = { which = r_prov_rel_lakayah_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_lakayah value = 0 }
+		set_variable = { which = r_prov_rel_lakayah_pct value = 0 }
+		set_variable = { which = r_prov_rel_tehuelchian_reformed value = 0 }
+		set_variable = { which = r_prov_rel_tehuelchian_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_tehuelchian value = 0 }
+		set_variable = { which = r_prov_rel_tehuelchian_pct value = 0 }
+		set_variable = { which = r_prov_rel_witran_mapu_reformed value = 0 }
+		set_variable = { which = r_prov_rel_witran_mapu_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_witran_mapu value = 0 }
+		set_variable = { which = r_prov_rel_witran_mapu_pct value = 0 }
+		set_variable = { which = r_prov_rel_tsarutama_reformed value = 0 }
+		set_variable = { which = r_prov_rel_tsarutama_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_tsarutama value = 0 }
+		set_variable = { which = r_prov_rel_tsarutama_pct value = 0 }
+		set_variable = { which = r_prov_rel_kaaulayawaa_reformed value = 0 }
+		set_variable = { which = r_prov_rel_kaaulayawaa_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_kaaulayawaa value = 0 }
+		set_variable = { which = r_prov_rel_kaaulayawaa_pct value = 0 }
+		set_variable = { which = r_prov_rel_baniwa_reformed value = 0 }
+		set_variable = { which = r_prov_rel_baniwa_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_baniwa value = 0 }
+		set_variable = { which = r_prov_rel_baniwa_pct value = 0 }
+		set_variable = { which = r_prov_rel_south_american_reformed value = 0 }
+		set_variable = { which = r_prov_rel_south_american_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_south_american value = 0 }
+		set_variable = { which = r_prov_rel_south_american_pct value = 0 }
+		set_variable = { which = r_prov_rel_dreamtime_religion_reformed value = 0 }
+		set_variable = { which = r_prov_rel_dreamtime_religion_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_dreamtime_religion value = 0 }
+		set_variable = { which = r_prov_rel_dreamtime_religion_pct value = 0 }
+		set_variable = { which = r_prov_rel_maori_religion_reformed value = 0 }
+		set_variable = { which = r_prov_rel_maori_religion_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_maori_religion value = 0 }
+		set_variable = { which = r_prov_rel_maori_religion_pct value = 0 }
+		set_variable = { which = r_prov_rel_ainu_pantheism_reformed value = 0 }
+		set_variable = { which = r_prov_rel_ainu_pantheism_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_ainu_pantheism value = 0 }
+		set_variable = { which = r_prov_rel_ainu_pantheism_pct value = 0 }
+		set_variable = { which = r_prov_rel_jurchen_pagan_reformed value = 0 }
+		set_variable = { which = r_prov_rel_jurchen_pagan_reformed_pct value = 0 }
+		set_variable = { which = r_prov_rel_jurchen_pagan value = 0 }
+		set_variable = { which = r_prov_rel_jurchen_pagan_pct value = 0 }
+		set_variable = { which = r_prov_rel_nat value = 0 }
+		set_variable = { which = r_prov_rel_nat_pct value = 0 }
+		set_variable = { which = r_prov_rel_sastsana_phi value = 0 }
+		set_variable = { which = r_prov_rel_sastsana_phi_pct value = 0 }
+		set_variable = { which = r_prov_rel_rmagao value = 0 }
+		set_variable = { which = r_prov_rel_rmagao_pct value = 0 }
+		set_variable = { which = r_prov_rel_benzhujiao value = 0 }
+		set_variable = { which = r_prov_rel_benzhujiao_pct value = 0 }
+		set_variable = { which = r_prov_rel_bimojiao value = 0 }
+		set_variable = { which = r_prov_rel_bimojiao_pct value = 0 }
+		set_variable = { which = r_prov_rel_ua_dab value = 0 }
+		set_variable = { which = r_prov_rel_ua_dab_pct value = 0 }
+		set_variable = { which = r_prov_rel_nugyauq value = 0 }
+		set_variable = { which = r_prov_rel_nugyauq_pct value = 0 }
+		set_variable = { which = r_prov_rel_thangiao value = 0 }
+		set_variable = { which = r_prov_rel_thangiao_pct value = 0 }
+		set_variable = { which = r_prov_rel_shingyo value = 0 }
+		set_variable = { which = r_prov_rel_shingyo_pct value = 0 }
+		set_variable = { which = r_prov_rel_nihon_shinto value = 0 }
+		set_variable = { which = r_prov_rel_nihon_shinto_pct value = 0 }
+		set_variable = { which = r_prov_rel_ryukyu_shinto value = 0 }
+		set_variable = { which = r_prov_rel_ryukyu_shinto_pct value = 0 }
 	}
 	if = {
 		limit = { num_of_count_titles_in_realm > 0 }
@@ -453,48 +1347,6 @@ emf_calc_realm_province_religion_breakdown_of_THIS_for_ROOT = {
 		any_realm_province = {
 			limit = {
 				owner_under_PREV = yes
-				religion = west_african_pagan_reformed
-			}
-			ROOT = { change_variable = { which = r_prov_rel_west_african_pagan_reformed value = 1 } }
-		}
-		any_realm_province = {
-			limit = {
-				owner_under_PREV = yes
-				religion = west_african_pagan
-			}
-			ROOT = { change_variable = { which = r_prov_rel_west_african_pagan value = 1 } }
-		}
-		any_realm_province = {
-			limit = {
-				owner_under_PREV = yes
-				religion = zun_pagan_reformed
-			}
-			ROOT = { change_variable = { which = r_prov_rel_zun_pagan_reformed value = 1 } }
-		}
-		any_realm_province = {
-			limit = {
-				owner_under_PREV = yes
-				religion = zun_pagan
-			}
-			ROOT = { change_variable = { which = r_prov_rel_zun_pagan value = 1 } }
-		}
-		any_realm_province = {
-			limit = {
-				owner_under_PREV = yes
-				religion = hellenic_pagan_reformed
-			}
-			ROOT = { change_variable = { which = r_prov_rel_hellenic_pagan_reformed value = 1 } }
-		}
-		any_realm_province = {
-			limit = {
-				owner_under_PREV = yes
-				religion = hellenic_pagan
-			}
-			ROOT = { change_variable = { which = r_prov_rel_hellenic_pagan value = 1 } }
-		}
-		any_realm_province = {
-			limit = {
-				owner_under_PREV = yes
 				religion = bon_reformed
 			}
 			ROOT = { change_variable = { which = r_prov_rel_bon_reformed value = 1 } }
@@ -532,12 +1384,12 @@ emf_calc_realm_province_religion_breakdown_of_THIS_for_ROOT = {
 				owner_under_PREV = yes
 				religion = mani
 			}
-			ROOT = { change_variable = { which = r_prov_rel_manichean value = 1 } }
+			ROOT = { change_variable = { which = r_prov_rel_mani value = 1 } }
 		}
 		any_realm_province = {
 			limit = {
 				owner_under_PREV = yes
-				religion = mand
+				religion = mandaean
 			}
 			ROOT = { change_variable = { which = r_prov_rel_mandaean value = 1 } }
 		}
@@ -546,7 +1398,7 @@ emf_calc_realm_province_religion_breakdown_of_THIS_for_ROOT = {
 				owner_under_PREV = yes
 				religion = yazidism
 			}
-			ROOT = { change_variable = { which = r_prov_rel_yazidi value = 1 } }
+			ROOT = { change_variable = { which = r_prov_rel_yazidism value = 1 } }
 		}
 		any_realm_province = {
 			limit = {
@@ -596,6 +1448,3128 @@ emf_calc_realm_province_religion_breakdown_of_THIS_for_ROOT = {
 				religion = taoist
 			}
 			ROOT = { change_variable = { which = r_prov_rel_taoist value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = titan_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_titan_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = promethean_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_promethean_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = britannic_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_britannic_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = egyptian_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_egyptian_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = egyptian_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_egyptian_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = aten_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_aten_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = bori
+			}
+			ROOT = { change_variable = { which = r_prov_rel_bori value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = a_tag_roog_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_a_tag_roog_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = a_tag_roog
+			}
+			ROOT = { change_variable = { which = r_prov_rel_a_tag_roog value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = amazigh_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_amazigh_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = amazigh
+			}
+			ROOT = { change_variable = { which = r_prov_rel_amazigh value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = vieti_orthodox
+			}
+			ROOT = { change_variable = { which = r_prov_rel_vieti_orthodox_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = hereclemasculist_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_hereclemasculist_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = vieti_mithras_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_vieti_mithras_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = britannic_hyperborean_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_britannic_hyperborean_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = romist_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_romist_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = chalcedonian
+			}
+			ROOT = { change_variable = { which = r_prov_rel_chalcedonian value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = methodist
+			}
+			ROOT = { change_variable = { which = r_prov_rel_methodist value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = arminian
+			}
+			ROOT = { change_variable = { which = r_prov_rel_arminian value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = baptist
+			}
+			ROOT = { change_variable = { which = r_prov_rel_baptist value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = unitarian
+			}
+			ROOT = { change_variable = { which = r_prov_rel_unitarian value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = anabaptist
+			}
+			ROOT = { change_variable = { which = r_prov_rel_anabaptist value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = anglican
+			}
+			ROOT = { change_variable = { which = r_prov_rel_anglican value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = lutheran
+			}
+			ROOT = { change_variable = { which = r_prov_rel_lutheran value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = hussite
+			}
+			ROOT = { change_variable = { which = r_prov_rel_hussite value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = miskito_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_miskito_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = miskito_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_miskito_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = subartic_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_subartic_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = subartic_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_subartic_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = plains_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_plains_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = plains_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_plains_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = basin_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_basin_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = basin_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_basin_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = plateau_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_plateau_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = plateau_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_plateau_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = california_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_california_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = california_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_california_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = southeast_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_southeast_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = southeast_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_southeast_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = southwest_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_southwest_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = southwest_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_southwest_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = raven_tales_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_raven_tales_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = raven_tales
+			}
+			ROOT = { change_variable = { which = r_prov_rel_raven_tales value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = caribic_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_caribic_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = caribic_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_caribic_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = pampas_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_pampas_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = pampas_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_pampas_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = chaco_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_chaco_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = chaco_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_chaco_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = amazonian_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_amazonian_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = amazonian_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_amazonian_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mapuche_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mapuche_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mapuche_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mapuche_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = muisca_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_muisca_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = muisca_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_muisca_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = caran_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_caran_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = caran_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_caran_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = chachapoyan_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_chachapoyan_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = chachapoyan_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_chachapoyan_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = chimuan_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_chimuan_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = chimuan_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_chimuan_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tiwanakan_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tiwanakan_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tiwanakan_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tiwanakan_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = chavin_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_chavin_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = chavin_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_chavin_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = otomi_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_otomi_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = otomi_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_otomi_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = corachol_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_corachol_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = corachol_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_corachol_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tarascan_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tarascan_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tarascan_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tarascan_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = nonohualcan_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_nonohualcan_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = nonohualcan_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_nonohualcan_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = wastek_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_wastek_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = wastek_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_wastek_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = zapotec_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_zapotec_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = zapotec_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_zapotec_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = totonac_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_totonac_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = totonac_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_totonac_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mixtec_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mixtec_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mixtec_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mixtec_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = yukaghir_pantheism_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_yukaghir_pantheism_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = yukaghir_pantheism
+			}
+			ROOT = { change_variable = { which = r_prov_rel_yukaghir_pantheism value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = chukchi_pantheism_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_chukchi_pantheism_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = chukchi_pantheism
+			}
+			ROOT = { change_variable = { which = r_prov_rel_chukchi_pantheism value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = druze_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_druze_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = judaism_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_judaism_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sethian_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sethian_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = muslim_sufi_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_muslim_sufi_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = cybele_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_cybele_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = ethiopian_war_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_ethiopian_war_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = waaq
+			}
+			ROOT = { change_variable = { which = r_prov_rel_waaq value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = arab_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_arab_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = almaqah
+			}
+			ROOT = { change_variable = { which = r_prov_rel_almaqah value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = talab
+			}
+			ROOT = { change_variable = { which = r_prov_rel_talab value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = shams
+			}
+			ROOT = { change_variable = { which = r_prov_rel_shams value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = allat
+			}
+			ROOT = { change_variable = { which = r_prov_rel_allat value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = hubal
+			}
+			ROOT = { change_variable = { which = r_prov_rel_hubal value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = attar
+			}
+			ROOT = { change_variable = { which = r_prov_rel_attar value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = maher
+			}
+			ROOT = { change_variable = { which = r_prov_rel_maher value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = quetzal_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_quetzal_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = quetzal
+			}
+			ROOT = { change_variable = { which = r_prov_rel_quetzal value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mayan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mayan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mayan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mayan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = northern_sun_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_northern_sun_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = dievas
+			}
+			ROOT = { change_variable = { which = r_prov_rel_dievas value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = saule
+			}
+			ROOT = { change_variable = { which = r_prov_rel_saule value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = perkunas
+			}
+			ROOT = { change_variable = { which = r_prov_rel_perkunas value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = peckols
+			}
+			ROOT = { change_variable = { which = r_prov_rel_peckols value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = bantu_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_bantu_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = nyakalagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_nyakalagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = zande_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_zande_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = zulu_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_zulu_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = kintu
+			}
+			ROOT = { change_variable = { which = r_prov_rel_kintu value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = akuj_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_akuj_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = akuj
+			}
+			ROOT = { change_variable = { which = r_prov_rel_akuj value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = baluba_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_baluba_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = baluba
+			}
+			ROOT = { change_variable = { which = r_prov_rel_baluba value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = batembuzi
+			}
+			ROOT = { change_variable = { which = r_prov_rel_batembuzi value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = bukongo_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_bukongo_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = bukongo
+			}
+			ROOT = { change_variable = { which = r_prov_rel_bukongo value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = bumuntu_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_bumuntu_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = bumuntu
+			}
+			ROOT = { change_variable = { which = r_prov_rel_bumuntu value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = byeri_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_byeri_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = byeri
+			}
+			ROOT = { change_variable = { which = r_prov_rel_byeri value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = dua
+			}
+			ROOT = { change_variable = { which = r_prov_rel_dua value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = enkai
+			}
+			ROOT = { change_variable = { which = r_prov_rel_enkai value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = imana
+			}
+			ROOT = { change_variable = { which = r_prov_rel_imana value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = imipashi_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_imipashi_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = imipashi
+			}
+			ROOT = { change_variable = { which = r_prov_rel_imipashi value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = kalunga_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_kalunga_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = kalunga
+			}
+			ROOT = { change_variable = { which = r_prov_rel_kalunga value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = odinane_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_odinane_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = odinane
+			}
+			ROOT = { change_variable = { which = r_prov_rel_odinane value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = nyasaye
+			}
+			ROOT = { change_variable = { which = r_prov_rel_nyasaye value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = nyau
+			}
+			ROOT = { change_variable = { which = r_prov_rel_nyau value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = num_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_num_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = num
+			}
+			ROOT = { change_variable = { which = r_prov_rel_num value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = nzambiist_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_nzambiist_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = nzambiist
+			}
+			ROOT = { change_variable = { which = r_prov_rel_nzambiist value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = makonde_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_makonde_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mwari
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mwari value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = muzimu_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_muzimu_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = muzimu
+			}
+			ROOT = { change_variable = { which = r_prov_rel_muzimu value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = okuruo_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_okuruo_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = okuruo
+			}
+			ROOT = { change_variable = { which = r_prov_rel_okuruo value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = zande_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_zande_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = zulu_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_zulu_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = berber_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_berber_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = berber_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_berber_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = gurzil
+			}
+			ROOT = { change_variable = { which = r_prov_rel_gurzil value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = amanai
+			}
+			ROOT = { change_variable = { which = r_prov_rel_amanai value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = bud_zen_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_bud_zen_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = bud_zor_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_bud_zor_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = bud_sthaviravada
+			}
+			ROOT = { change_variable = { which = r_prov_rel_bud_sthaviravada value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = bud_bahusrutiya
+			}
+			ROOT = { change_variable = { which = r_prov_rel_bud_bahusrutiya value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = bud_mahayana
+			}
+			ROOT = { change_variable = { which = r_prov_rel_bud_mahayana value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = bud_pureland
+			}
+			ROOT = { change_variable = { which = r_prov_rel_bud_pureland value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = bud_pratyeka
+			}
+			ROOT = { change_variable = { which = r_prov_rel_bud_pratyeka value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = bud_vajrayana
+			}
+			ROOT = { change_variable = { which = r_prov_rel_bud_vajrayana value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = bud_zen
+			}
+			ROOT = { change_variable = { which = r_prov_rel_bud_zen value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = bud_zor
+			}
+			ROOT = { change_variable = { which = r_prov_rel_bud_zor value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = celtic_christ_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_celtic_christ_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = celtic_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_celtic_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = iberian_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_iberian_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = celtic_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_celtic_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = lugh
+			}
+			ROOT = { change_variable = { which = r_prov_rel_lugh value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = endovellico
+			}
+			ROOT = { change_variable = { which = r_prov_rel_endovellico value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = lubu_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_lubu_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tao_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tao_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = confucian
+			}
+			ROOT = { change_variable = { which = r_prov_rel_confucian value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = shenjiao
+			}
+			ROOT = { change_variable = { which = r_prov_rel_shenjiao value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = lubu
+			}
+			ROOT = { change_variable = { which = r_prov_rel_lubu value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tao
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tao value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sol_taoist
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sol_taoist value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = german_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_german_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = norse_christ_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_norse_christ_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = ragnarok_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_ragnarok_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = teiwaz_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_teiwaz_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = norse_war
+			}
+			ROOT = { change_variable = { which = r_prov_rel_norse_war value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = ragnarok
+			}
+			ROOT = { change_variable = { which = r_prov_rel_ragnarok value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sowilo
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sowilo value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = nott
+			}
+			ROOT = { change_variable = { which = r_prov_rel_nott value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = german_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_german_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = irminsul
+			}
+			ROOT = { change_variable = { which = r_prov_rel_irminsul value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = allfather
+			}
+			ROOT = { change_variable = { which = r_prov_rel_allfather value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = teiwaz
+			}
+			ROOT = { change_variable = { which = r_prov_rel_teiwaz value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = cathar_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_cathar_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = christian_populist_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_christian_populist_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mari_christ_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mari_christ_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = montanist_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_montanist_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = nasrani_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_nasrani_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = priscillian_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_priscillian_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = slavic_christian_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_slavic_christian_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = antinomian
+			}
+			ROOT = { change_variable = { which = r_prov_rel_antinomian value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = donatist
+			}
+			ROOT = { change_variable = { which = r_prov_rel_donatist value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = melkite
+			}
+			ROOT = { change_variable = { which = r_prov_rel_melkite value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = montanist
+			}
+			ROOT = { change_variable = { which = r_prov_rel_montanist value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sabellianist
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sabellianist value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = valentinian
+			}
+			ROOT = { change_variable = { which = r_prov_rel_valentinian value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mari_christ
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mari_christ value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = priscillian
+			}
+			ROOT = { change_variable = { which = r_prov_rel_priscillian value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = docetist
+			}
+			ROOT = { change_variable = { which = r_prov_rel_docetist value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = apollinarist
+			}
+			ROOT = { change_variable = { which = r_prov_rel_apollinarist value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = solomonic_christ
+			}
+			ROOT = { change_variable = { which = r_prov_rel_solomonic_christ value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = audianist
+			}
+			ROOT = { change_variable = { which = r_prov_rel_audianist value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = celtic_christ
+			}
+			ROOT = { change_variable = { which = r_prov_rel_celtic_christ value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = marcionist
+			}
+			ROOT = { change_variable = { which = r_prov_rel_marcionist value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = nasrani
+			}
+			ROOT = { change_variable = { which = r_prov_rel_nasrani value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = norse_christ
+			}
+			ROOT = { change_variable = { which = r_prov_rel_norse_christ value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = pelagian
+			}
+			ROOT = { change_variable = { which = r_prov_rel_pelagian value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = semipelagian
+			}
+			ROOT = { change_variable = { which = r_prov_rel_semipelagian value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sethian
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sethian value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = slavic_christian
+			}
+			ROOT = { change_variable = { which = r_prov_rel_slavic_christian value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = unctionist
+			}
+			ROOT = { change_variable = { which = r_prov_rel_unctionist value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = amun_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_amun_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = aten_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_aten_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = isis_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_isis_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = set_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_set_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = amun
+			}
+			ROOT = { change_variable = { which = r_prov_rel_amun value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = aten
+			}
+			ROOT = { change_variable = { which = r_prov_rel_aten value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = horus_re
+			}
+			ROOT = { change_variable = { which = r_prov_rel_horus_re value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = isis
+			}
+			ROOT = { change_variable = { which = r_prov_rel_isis value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = set
+			}
+			ROOT = { change_variable = { which = r_prov_rel_set value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = chumbylat_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_chumbylat_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = voipel_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_voipel_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = ilmatar
+			}
+			ROOT = { change_variable = { which = r_prov_rel_ilmatar value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = jumala
+			}
+			ROOT = { change_variable = { which = r_prov_rel_jumala value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = chumbylat
+			}
+			ROOT = { change_variable = { which = r_prov_rel_chumbylat value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = voipel
+			}
+			ROOT = { change_variable = { which = r_prov_rel_voipel value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = graeco_roman_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_graeco_roman_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = graeco_roman
+			}
+			ROOT = { change_variable = { which = r_prov_rel_graeco_roman value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = jupiter
+			}
+			ROOT = { change_variable = { which = r_prov_rel_jupiter value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = dionysos
+			}
+			ROOT = { change_variable = { which = r_prov_rel_dionysos value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = alexandros
+			}
+			ROOT = { change_variable = { which = r_prov_rel_alexandros value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = solomonic_alexandros
+			}
+			ROOT = { change_variable = { which = r_prov_rel_solomonic_alexandros value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = roman_imperial
+			}
+			ROOT = { change_variable = { which = r_prov_rel_roman_imperial value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = cybele
+			}
+			ROOT = { change_variable = { which = r_prov_rel_cybele value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = kubera_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_kubera_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = murugan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_murugan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = saura_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_saura_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = vidharma_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_vidharma_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = vidharma
+			}
+			ROOT = { change_variable = { which = r_prov_rel_vidharma value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = saura
+			}
+			ROOT = { change_variable = { which = r_prov_rel_saura value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = kubera
+			}
+			ROOT = { change_variable = { which = r_prov_rel_kubera value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = murugan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_murugan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = indohelen_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_indohelen_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = indohelen
+			}
+			ROOT = { change_variable = { which = r_prov_rel_indohelen value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = indoh_bud
+			}
+			ROOT = { change_variable = { which = r_prov_rel_indoh_bud value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = indoh_confucian
+			}
+			ROOT = { change_variable = { which = r_prov_rel_indoh_confucian value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = indoh_hindu
+			}
+			ROOT = { change_variable = { which = r_prov_rel_indoh_hindu value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = indoh_zor
+			}
+			ROOT = { change_variable = { which = r_prov_rel_indoh_zor value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = jud_ark_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_jud_ark_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = judaism
+			}
+			ROOT = { change_variable = { which = r_prov_rel_judaism value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = jud_sabaoth
+			}
+			ROOT = { change_variable = { which = r_prov_rel_jud_sabaoth value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = jud_ark
+			}
+			ROOT = { change_variable = { which = r_prov_rel_jud_ark value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = jud_zion
+			}
+			ROOT = { change_variable = { which = r_prov_rel_jud_zion value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = illuyanka_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_illuyanka_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tarhunt_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tarhunt_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = luwian
+			}
+			ROOT = { change_variable = { which = r_prov_rel_luwian value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = illuyanka
+			}
+			ROOT = { change_variable = { which = r_prov_rel_illuyanka value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tarhunt
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tarhunt value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mand_ruha_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mand_ruha_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mandaean_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mandaean_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mand_ruha
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mand_ruha value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = yahyanism
+			}
+			ROOT = { change_variable = { which = r_prov_rel_yahyanism value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = ahriman_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_ahriman_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mani_germanic_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mani_germanic_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mani_slavic_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mani_slavic_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mani_ahriman
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mani_ahriman value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mani_mithra
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mani_mithra value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mani_slavic
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mani_slavic value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mani_germanic
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mani_germanic value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mithra
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mithra value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mithra_christ
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mithra_christ value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mithra_sol
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mithra_sol value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = muslim_aliite_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_muslim_aliite_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = muslim_domination_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_muslim_domination_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = ashari
+			}
+			ROOT = { change_variable = { which = r_prov_rel_ashari value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = athari
+			}
+			ROOT = { change_variable = { which = r_prov_rel_athari value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = maturidi
+			}
+			ROOT = { change_variable = { which = r_prov_rel_maturidi value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = murjiah
+			}
+			ROOT = { change_variable = { which = r_prov_rel_murjiah value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = zahiri
+			}
+			ROOT = { change_variable = { which = r_prov_rel_zahiri value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sufi
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sufi value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = ilm_islam
+			}
+			ROOT = { change_variable = { which = r_prov_rel_ilm_islam value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = ghazi_islam
+			}
+			ROOT = { change_variable = { which = r_prov_rel_ghazi_islam value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mutazil
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mutazil value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = marabout
+			}
+			ROOT = { change_variable = { which = r_prov_rel_marabout value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = neoplato
+			}
+			ROOT = { change_variable = { which = r_prov_rel_neoplato value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = plato_pythagorean
+			}
+			ROOT = { change_variable = { which = r_prov_rel_plato_pythagorean value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = porphyryan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_porphyryan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = plato_christ
+			}
+			ROOT = { change_variable = { which = r_prov_rel_plato_christ value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = plato_islam
+			}
+			ROOT = { change_variable = { which = r_prov_rel_plato_islam value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = zz01_vedanta
+			}
+			ROOT = { change_variable = { which = r_prov_rel_zz01_vedanta value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = baal_monotheistic_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_baal_monotheistic_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = beelshamen
+			}
+			ROOT = { change_variable = { which = r_prov_rel_beelshamen value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = aglibol
+			}
+			ROOT = { change_variable = { which = r_prov_rel_aglibol value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = malakbel
+			}
+			ROOT = { change_variable = { which = r_prov_rel_malakbel value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = palmyran_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_palmyran_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = hadad
+			}
+			ROOT = { change_variable = { which = r_prov_rel_hadad value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = kothar
+			}
+			ROOT = { change_variable = { which = r_prov_rel_kothar value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = serer_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_serer_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mande_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mande_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = yoruba
+			}
+			ROOT = { change_variable = { which = r_prov_rel_yoruba value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = nyame
+			}
+			ROOT = { change_variable = { which = r_prov_rel_nyame value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = anansi
+			}
+			ROOT = { change_variable = { which = r_prov_rel_anansi value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = perun
+			}
+			ROOT = { change_variable = { which = r_prov_rel_perun value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = veles
+			}
+			ROOT = { change_variable = { which = r_prov_rel_veles value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = rod
+			}
+			ROOT = { change_variable = { which = r_prov_rel_rod value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = svaroh
+			}
+			ROOT = { change_variable = { which = r_prov_rel_svaroh value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = dazhbog
+			}
+			ROOT = { change_variable = { which = r_prov_rel_dazhbog value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = svetovid
+			}
+			ROOT = { change_variable = { which = r_prov_rel_svetovid value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sol_boreas_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sol_boreas_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sol_islam_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sol_islam_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sol_sahara_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sol_sahara_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sol
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sol value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sol_christ
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sol_christ value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sol_mani
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sol_mani value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sol_apollo
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sol_apollo value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sol_boreas
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sol_boreas value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sol_islam
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sol_islam value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sol_norse
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sol_norse value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sol_slav
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sol_slav value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sol_tsahay
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sol_tsahay value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sol_sahara
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sol_sahara value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = erlik_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_erlik_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tengri_bud_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tengri_bud_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tengri_confucian_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tengri_confucian_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tengri_mani_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tengri_mani_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tengri_rod_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tengri_rod_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = vattisenyaly_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_vattisenyaly_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tengri_ahriman
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tengri_ahriman value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tengri_bud
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tengri_bud value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tengri_confucian
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tengri_confucian value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tengri_mani
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tengri_mani value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tengri_rod
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tengri_rod value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = vattisenyaly
+			}
+			ROOT = { change_variable = { which = r_prov_rel_vattisenyaly value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = erlik
+			}
+			ROOT = { change_variable = { which = r_prov_rel_erlik value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = yazdanism_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_yazdanism_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = yazdanism
+			}
+			ROOT = { change_variable = { which = r_prov_rel_yazdanism value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = zal
+			}
+			ROOT = { change_variable = { which = r_prov_rel_zal value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = zal_christ
+			}
+			ROOT = { change_variable = { which = r_prov_rel_zal_christ value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = zal_mani
+			}
+			ROOT = { change_variable = { which = r_prov_rel_zal_mani value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mazdakism_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mazdakism_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = zor_angra_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_zor_angra_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = zurvanism_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_zurvanism_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = zor_angra
+			}
+			ROOT = { change_variable = { which = r_prov_rel_zor_angra value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = zor_hindu
+			}
+			ROOT = { change_variable = { which = r_prov_rel_zor_hindu value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = melanesian_religion_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_melanesian_religion_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = melanesian_religion
+			}
+			ROOT = { change_variable = { which = r_prov_rel_melanesian_religion value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = taiwanese_religion_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_taiwanese_religion_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = taiwanese_religion
+			}
+			ROOT = { change_variable = { which = r_prov_rel_taiwanese_religion value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = philippine_religion_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_philippine_religion_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = philippine_religion
+			}
+			ROOT = { change_variable = { which = r_prov_rel_philippine_religion value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = bornean_religion_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_bornean_religion_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = bornean_religion
+			}
+			ROOT = { change_variable = { which = r_prov_rel_bornean_religion value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sulawesi_religion_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sulawesi_religion_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sulawesi_religion
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sulawesi_religion value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = flores_religion_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_flores_religion_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = flores_religion
+			}
+			ROOT = { change_variable = { which = r_prov_rel_flores_religion value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = java_religion_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_java_religion_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = java_religion
+			}
+			ROOT = { change_variable = { which = r_prov_rel_java_religion value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sumatran_religion_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sumatran_religion_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sumatran_religion
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sumatran_religion value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = malagasy_religion_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_malagasy_religion_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = malagasy_religion
+			}
+			ROOT = { change_variable = { which = r_prov_rel_malagasy_religion value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = south_bantu_mythology_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_south_bantu_mythology_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = south_bantu_mythology
+			}
+			ROOT = { change_variable = { which = r_prov_rel_south_bantu_mythology value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = east_bantu_mythology_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_east_bantu_mythology_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = east_bantu_mythology
+			}
+			ROOT = { change_variable = { which = r_prov_rel_east_bantu_mythology value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = omotic_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_omotic_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = omotic_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_omotic_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = cushitic_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_cushitic_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = cushitic_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_cushitic_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = nilotic_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_nilotic_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = nilotic_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_nilotic_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = khoi_san_mythology_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_khoi_san_mythology_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = khoi_san_mythology
+			}
+			ROOT = { change_variable = { which = r_prov_rel_khoi_san_mythology value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = inti_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_inti_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = inti
+			}
+			ROOT = { change_variable = { which = r_prov_rel_inti value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = inuit_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_inuit_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = inuit_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_inuit_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = zemiist_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_zemiist_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = zemiist
+			}
+			ROOT = { change_variable = { which = r_prov_rel_zemiist value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = kachina_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_kachina_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = kachina
+			}
+			ROOT = { change_variable = { which = r_prov_rel_kachina value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = pohakantenna_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_pohakantenna_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = pohakantenna
+			}
+			ROOT = { change_variable = { which = r_prov_rel_pohakantenna value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sgaanaang_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sgaanaang_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sgaanaang
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sgaanaang value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = wakanda_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_wakanda_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = wakanda
+			}
+			ROOT = { change_variable = { which = r_prov_rel_wakanda value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = wakan_tanka_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_wakan_tanka_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = wakan_tanka
+			}
+			ROOT = { change_variable = { which = r_prov_rel_wakan_tanka value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mahoma_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mahoma_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = mahoma
+			}
+			ROOT = { change_variable = { which = r_prov_rel_mahoma value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = southern_cult_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_southern_cult_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = southern_cult
+			}
+			ROOT = { change_variable = { which = r_prov_rel_southern_cult value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = orenda_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_orenda_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = orenda
+			}
+			ROOT = { change_variable = { which = r_prov_rel_orenda value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = algic_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_algic_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = algic_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_algic_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = animism_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_animism_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = animism
+			}
+			ROOT = { change_variable = { which = r_prov_rel_animism value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tupan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tupan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tupan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tupan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = chiminigagua_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_chiminigagua_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = chiminigagua
+			}
+			ROOT = { change_variable = { which = r_prov_rel_chiminigagua value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = lapta_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_lapta_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = lapta
+			}
+			ROOT = { change_variable = { which = r_prov_rel_lapta value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = aiwamdzu_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_aiwamdzu_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = aiwamdzu
+			}
+			ROOT = { change_variable = { which = r_prov_rel_aiwamdzu value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = lakayah_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_lakayah_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = lakayah
+			}
+			ROOT = { change_variable = { which = r_prov_rel_lakayah value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tehuelchian_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tehuelchian_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tehuelchian
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tehuelchian value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = witran_mapu_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_witran_mapu_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = witran_mapu
+			}
+			ROOT = { change_variable = { which = r_prov_rel_witran_mapu value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tsarutama_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tsarutama_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = tsarutama
+			}
+			ROOT = { change_variable = { which = r_prov_rel_tsarutama value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = kaaulayawaa_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_kaaulayawaa_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = kaaulayawaa
+			}
+			ROOT = { change_variable = { which = r_prov_rel_kaaulayawaa value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = baniwa_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_baniwa_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = baniwa
+			}
+			ROOT = { change_variable = { which = r_prov_rel_baniwa value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = south_american_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_south_american_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = south_american
+			}
+			ROOT = { change_variable = { which = r_prov_rel_south_american value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = dreamtime_religion_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_dreamtime_religion_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = dreamtime_religion
+			}
+			ROOT = { change_variable = { which = r_prov_rel_dreamtime_religion value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = maori_religion_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_maori_religion_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = maori_religion
+			}
+			ROOT = { change_variable = { which = r_prov_rel_maori_religion value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = ainu_pantheism_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_ainu_pantheism_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = ainu_pantheism
+			}
+			ROOT = { change_variable = { which = r_prov_rel_ainu_pantheism value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = jurchen_pagan_reformed
+			}
+			ROOT = { change_variable = { which = r_prov_rel_jurchen_pagan_reformed value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = jurchen_pagan
+			}
+			ROOT = { change_variable = { which = r_prov_rel_jurchen_pagan value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = nat
+			}
+			ROOT = { change_variable = { which = r_prov_rel_nat value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = sastsana_phi
+			}
+			ROOT = { change_variable = { which = r_prov_rel_sastsana_phi value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = rmagao
+			}
+			ROOT = { change_variable = { which = r_prov_rel_rmagao value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = benzhujiao
+			}
+			ROOT = { change_variable = { which = r_prov_rel_benzhujiao value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = bimojiao
+			}
+			ROOT = { change_variable = { which = r_prov_rel_bimojiao value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = ua_dab
+			}
+			ROOT = { change_variable = { which = r_prov_rel_ua_dab value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = nugyauq
+			}
+			ROOT = { change_variable = { which = r_prov_rel_nugyauq value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = thangiao
+			}
+			ROOT = { change_variable = { which = r_prov_rel_thangiao value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = shingyo
+			}
+			ROOT = { change_variable = { which = r_prov_rel_shingyo value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = nihon_shinto
+			}
+			ROOT = { change_variable = { which = r_prov_rel_nihon_shinto value = 1 } }
+		}
+		any_realm_province = {
+			limit = {
+				owner_under_PREV = yes
+				religion = ryukyu_shinto
+			}
+			ROOT = { change_variable = { which = r_prov_rel_ryukyu_shinto value = 1 } }
 		}
 		ROOT = {
 			if = {
@@ -833,12 +4807,6 @@ emf_calc_realm_province_religion_breakdown_of_THIS_for_ROOT = {
 				divide_variable = { which = r_prov_rel_baltic_pagan_reformed_pct which = r_prov }
 			}
 			if = {
-				limit = { check_variable = { which = r_prov_rel_baltic_pagan value > 0 } }
-				set_variable = { which = r_prov_rel_baltic_pagan_pct which = r_prov_rel_baltic_pagan }
-				multiply_variable = { which = r_prov_rel_baltic_pagan_pct value = 100 }
-				divide_variable = { which = r_prov_rel_baltic_pagan_pct which = r_prov }
-			}
-			if = {
 				limit = { check_variable = { which = r_prov_rel_finnish_pagan_reformed value > 0 } }
 				set_variable = { which = r_prov_rel_finnish_pagan_reformed_pct which = r_prov_rel_finnish_pagan_reformed }
 				multiply_variable = { which = r_prov_rel_finnish_pagan_reformed_pct value = 100 }
@@ -875,42 +4843,6 @@ emf_calc_realm_province_religion_breakdown_of_THIS_for_ROOT = {
 				divide_variable = { which = r_prov_rel_slavic_pagan_pct which = r_prov }
 			}
 			if = {
-				limit = { check_variable = { which = r_prov_rel_west_african_pagan_reformed value > 0 } }
-				set_variable = { which = r_prov_rel_west_african_pagan_reformed_pct which = r_prov_rel_west_african_pagan_reformed }
-				multiply_variable = { which = r_prov_rel_west_african_pagan_reformed_pct value = 100 }
-				divide_variable = { which = r_prov_rel_west_african_pagan_reformed_pct which = r_prov }
-			}
-			if = {
-				limit = { check_variable = { which = r_prov_rel_west_african_pagan value > 0 } }
-				set_variable = { which = r_prov_rel_west_african_pagan_pct which = r_prov_rel_west_african_pagan }
-				multiply_variable = { which = r_prov_rel_west_african_pagan_pct value = 100 }
-				divide_variable = { which = r_prov_rel_west_african_pagan_pct which = r_prov }
-			}
-			if = {
-				limit = { check_variable = { which = r_prov_rel_zun_pagan_reformed value > 0 } }
-				set_variable = { which = r_prov_rel_zun_pagan_reformed_pct which = r_prov_rel_zun_pagan_reformed }
-				multiply_variable = { which = r_prov_rel_zun_pagan_reformed_pct value = 100 }
-				divide_variable = { which = r_prov_rel_zun_pagan_reformed_pct which = r_prov }
-			}
-			if = {
-				limit = { check_variable = { which = r_prov_rel_zun_pagan value > 0 } }
-				set_variable = { which = r_prov_rel_zun_pagan_pct which = r_prov_rel_zun_pagan }
-				multiply_variable = { which = r_prov_rel_zun_pagan_pct value = 100 }
-				divide_variable = { which = r_prov_rel_zun_pagan_pct which = r_prov }
-			}
-			if = {
-				limit = { check_variable = { which = r_prov_rel_hellenic_pagan_reformed value > 0 } }
-				set_variable = { which = r_prov_rel_hellenic_pagan_reformed_pct which = r_prov_rel_hellenic_pagan_reformed }
-				multiply_variable = { which = r_prov_rel_hellenic_pagan_reformed_pct value = 100 }
-				divide_variable = { which = r_prov_rel_hellenic_pagan_reformed_pct which = r_prov }
-			}
-			if = {
-				limit = { check_variable = { which = r_prov_rel_hellenic_pagan value > 0 } }
-				set_variable = { which = r_prov_rel_hellenic_pagan_pct which = r_prov_rel_hellenic_pagan }
-				multiply_variable = { which = r_prov_rel_hellenic_pagan_pct value = 100 }
-				divide_variable = { which = r_prov_rel_hellenic_pagan_pct which = r_prov }
-			}
-			if = {
 				limit = { check_variable = { which = r_prov_rel_bon_reformed value > 0 } }
 				set_variable = { which = r_prov_rel_bon_reformed_pct which = r_prov_rel_bon_reformed }
 				multiply_variable = { which = r_prov_rel_bon_reformed_pct value = 100 }
@@ -929,10 +4861,10 @@ emf_calc_realm_province_religion_breakdown_of_THIS_for_ROOT = {
 				divide_variable = { which = r_prov_rel_zoroastrian_pct which = r_prov }
 			}
 			if = {
-				limit = { check_variable = { which = r_prov_rel_mazdaki value > 0 } }
-				set_variable = { which = r_prov_rel_mazdaki_pct which = r_prov_rel_mazdaki }
-				multiply_variable = { which = r_prov_rel_mazdaki_pct value = 100 }
-				divide_variable = { which = r_prov_rel_mazdaki_pct which = r_prov }
+				limit = { check_variable = { which = r_prov_rel_mazdakism value > 0 } }
+				set_variable = { which = r_prov_rel_mazdaksmi_pct which = r_prov_rel_mazdakism }
+				multiply_variable = { which = r_prov_rel_mazdakism_pct value = 100 }
+				divide_variable = { which = r_prov_rel_mazdakism_pct which = r_prov }
 			}
 			if = {
 				limit = { check_variable = { which = r_prov_rel_zurvanism value > 0 } }
@@ -941,10 +4873,10 @@ emf_calc_realm_province_religion_breakdown_of_THIS_for_ROOT = {
 				divide_variable = { which = r_prov_rel_zurvanism_pct which = r_prov }
 			}
 			if = {
-				limit = { check_variable = { which = r_prov_rel_manichean value > 0 } }
-				set_variable = { which = r_prov_rel_manichean_pct which = r_prov_rel_manichean }
-				multiply_variable = { which = r_prov_rel_manichean_pct value = 100 }
-				divide_variable = { which = r_prov_rel_manichean_pct which = r_prov }
+				limit = { check_variable = { which = r_prov_rel_mani value > 0 } }
+				set_variable = { which = r_prov_rel_mani_pct which = r_prov_rel_mani }
+				multiply_variable = { which = r_prov_rel_mani_pct value = 100 }
+				divide_variable = { which = r_prov_rel_mani_pct which = r_prov }
 			}
 			if = {
 				limit = { check_variable = { which = r_prov_rel_mandaean value > 0 } }
@@ -953,10 +4885,10 @@ emf_calc_realm_province_religion_breakdown_of_THIS_for_ROOT = {
 				divide_variable = { which = r_prov_rel_mandaean_pct which = r_prov }
 			}
 			if = {
-				limit = { check_variable = { which = r_prov_rel_yazidi value > 0 } }
-				set_variable = { which = r_prov_rel_yazidi_pct which = r_prov_rel_yazidi }
-				multiply_variable = { which = r_prov_rel_yazidi_pct value = 100 }
-				divide_variable = { which = r_prov_rel_yazidi_pct which = r_prov }
+				limit = { check_variable = { which = r_prov_rel_yazidism value > 0 } }
+				set_variable = { which = r_prov_rel_yazidism_pct which = r_prov_rel_yazidism }
+				multiply_variable = { which = r_prov_rel_yazidism_pct value = 100 }
+				divide_variable = { which = r_prov_rel_yazidism_pct which = r_prov }
 			}
 			if = {
 				limit = { check_variable = { which = r_prov_rel_khurmazta value > 0 } }
@@ -989,12 +4921,6 @@ emf_calc_realm_province_religion_breakdown_of_THIS_for_ROOT = {
 				divide_variable = { which = r_prov_rel_hindu_pct which = r_prov }
 			}
 			if = {
-				limit = { check_variable = { which = r_prov_rel_buddhist value > 0 } }
-				set_variable = { which = r_prov_rel_buddhist_pct which = r_prov_rel_buddhist }
-				multiply_variable = { which = r_prov_rel_buddhist_pct value = 100 }
-				divide_variable = { which = r_prov_rel_buddhist_pct which = r_prov }
-			}
-			if = {
 				limit = { check_variable = { which = r_prov_rel_jain value > 0 } }
 				set_variable = { which = r_prov_rel_jain_pct which = r_prov_rel_jain }
 				multiply_variable = { which = r_prov_rel_jain_pct value = 100 }
@@ -1005,6 +4931,210 @@ emf_calc_realm_province_religion_breakdown_of_THIS_for_ROOT = {
 				set_variable = { which = r_prov_rel_taoist_pct which = r_prov_rel_taoist }
 				multiply_variable = { which = r_prov_rel_taoist_pct value = 100 }
 				divide_variable = { which = r_prov_rel_taoist_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_titan_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_titan_pagan_pct which = r_prov_rel_titan_pagan }
+				multiply_variable = { which = r_prov_rel_titan_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_titan_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_promethean_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_promethean_pagan_pct which = r_prov_rel_promethean_pagan }
+				multiply_variable = { which = r_prov_rel_promethean_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_promethean_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_britannic_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_britannic_pagan_pct which = r_prov_rel_britannic_pagan }
+				multiply_variable = { which = r_prov_rel_britannic_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_britannic_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_egyptian_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_egyptian_pagan_reformed_pct which = r_prov_rel_egyptian_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_egyptian_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_egyptian_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_egyptian_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_egyptian_pagan_pct which = r_prov_rel_egyptian_pagan }
+				multiply_variable = { which = r_prov_rel_egyptian_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_egyptian_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_aten_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_aten_pagan_pct which = r_prov_rel_aten_pagan }
+				multiply_variable = { which = r_prov_rel_aten_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_aten_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_bori value > 0 } }
+				set_variable = { which = r_prov_rel_bori_pct which = r_prov_rel_bori }
+				multiply_variable = { which = r_prov_rel_bori_pct value = 100 }
+				divide_variable = { which = r_prov_rel_bori_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_a_tag_roog_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_a_tag_roog_reformed_pct which = r_prov_rel_a_tag_roog_reformed }
+				multiply_variable = { which = r_prov_rel_a_tag_roog_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_a_tag_roog_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_a_tag_roog value > 0 } }
+				set_variable = { which = r_prov_rel_a_tag_roog_pct which = r_prov_rel_a_tag_roog }
+				multiply_variable = { which = r_prov_rel_a_tag_roog_pct value = 100 }
+				divide_variable = { which = r_prov_rel_a_tag_roog_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_amazigh_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_amazigh_reformed_pct which = r_prov_rel_amazigh_reformed }
+				multiply_variable = { which = r_prov_rel_amazigh_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_amazigh_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_amazigh value > 0 } }
+				set_variable = { which = r_prov_rel_amazigh_pct which = r_prov_rel_amazigh }
+				multiply_variable = { which = r_prov_rel_amazigh_pct value = 100 }
+				divide_variable = { which = r_prov_rel_amazigh_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_vieti_orthodox value > 0 } }
+				set_variable = { which = r_prov_rel_vieti_orthodox_pct which = r_prov_rel_vieti_orthodox }
+				multiply_variable = { which = r_prov_rel_vieti_orthodox_pct value = 100 }
+				divide_variable = { which = r_prov_rel_vieti_orthodox_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_hereclemasculist_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_hereclemasculist_pagan_pct which = r_prov_rel_hereclemasculist_pagan }
+				multiply_variable = { which = r_prov_rel_hereclemasculist_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_hereclemasculist_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_vieti_mithras_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_vieti_mithras_pagan_pct which = r_prov_rel_vieti_mithras_pagan }
+				multiply_variable = { which = r_prov_rel_vieti_mithras_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_vieti_mithras_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_britannic_hyperborean_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_britannic_hyperborean_pagan_pct which = r_prov_rel_britannic_hyperborean_pagan }
+				multiply_variable = { which = r_prov_rel_britannic_hyperborean_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_britannic_hyperborean_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_romist_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_romist_pagan_pct which = r_prov_rel_romist_pagan }
+				multiply_variable = { which = r_prov_rel_romist_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_romist_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_chalcedonian value > 0 } }
+				set_variable = { which = r_prov_rel_chalcedonian_pct which = r_prov_rel_chalcedonian }
+				multiply_variable = { which = r_prov_rel_chalcedonian_pct value = 100 }
+				divide_variable = { which = r_prov_rel_chalcedonian_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_methodist value > 0 } }
+				set_variable = { which = r_prov_rel_methodist_pct which = r_prov_rel_methodist }
+				multiply_variable = { which = r_prov_rel_methodist_pct value = 100 }
+				divide_variable = { which = r_prov_rel_methodist_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_arminian value > 0 } }
+				set_variable = { which = r_prov_rel_arminian_pct which = r_prov_rel_arminian }
+				multiply_variable = { which = r_prov_rel_arminian_pct value = 100 }
+				divide_variable = { which = r_prov_rel_arminian_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_baptist value > 0 } }
+				set_variable = { which = r_prov_rel_baptist_pct which = r_prov_rel_baptist }
+				multiply_variable = { which = r_prov_rel_baptist_pct value = 100 }
+				divide_variable = { which = r_prov_rel_baptist_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_unitarian value > 0 } }
+				set_variable = { which = r_prov_rel_unitarian_pct which = r_prov_rel_unitarian }
+				multiply_variable = { which = r_prov_rel_unitarian_pct value = 100 }
+				divide_variable = { which = r_prov_rel_unitarian_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_anabaptist value > 0 } }
+				set_variable = { which = r_prov_rel_anabaptist_pct which = r_prov_rel_anabaptist }
+				multiply_variable = { which = r_prov_rel_anabaptist_pct value = 100 }
+				divide_variable = { which = r_prov_rel_anabaptist_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_anglican value > 0 } }
+				set_variable = { which = r_prov_rel_anglican_pct which = r_prov_rel_anglican }
+				multiply_variable = { which = r_prov_rel_anglican_pct value = 100 }
+				divide_variable = { which = r_prov_rel_anglican_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_reformed_pct which = r_prov_rel_reformed }
+				multiply_variable = { which = r_prov_rel_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_lutheran value > 0 } }
+				set_variable = { which = r_prov_rel_lutheran_pct which = r_prov_rel_lutheran }
+				multiply_variable = { which = r_prov_rel_lutheran_pct value = 100 }
+				divide_variable = { which = r_prov_rel_lutheran_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_hussite value > 0 } }
+				set_variable = { which = r_prov_rel_hussite_pct which = r_prov_rel_hussite }
+				multiply_variable = { which = r_prov_rel_hussite_pct value = 100 }
+				divide_variable = { which = r_prov_rel_hussite_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_miskito_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_miskito_pagan_reformed_pct which = r_prov_rel_miskito_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_miskito_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_miskito_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_miskito_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_miskito_pagan_pct which = r_prov_rel_miskito_pagan }
+				multiply_variable = { which = r_prov_rel_miskito_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_miskito_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_subartic_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_subartic_pagan_reformed_pct which = r_prov_rel_subartic_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_subartic_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_subartic_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_subartic_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_subartic_pagan_pct which = r_prov_rel_subartic_pagan }
+				multiply_variable = { which = r_prov_rel_subartic_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_subartic_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_plains_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_plains_pagan_reformed_pct which = r_prov_rel_plains_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_plains_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_plains_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_plains_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_plains_pagan_pct which = r_prov_rel_plains_pagan }
+				multiply_variable = { which = r_prov_rel_plains_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_plains_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_basin_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_basin_pagan_reformed_pct which = r_prov_rel_basin_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_basin_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_basin_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_basin_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_basin_pagan_pct which = r_prov_rel_basin_pagan }
+				multiply_variable = { which = r_prov_rel_basin_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_basin_pagan_pct which = r_prov }
 			}
 		}
 	}
@@ -4392,7 +8522,7 @@ emf_set_default_flags_for_zurvanism = {
 	set_flag = emf_secret_religion
 }
 
-emf_set_default_flags_for_manichean = {
+emf_set_default_flags_for_mani = {
 	set_flag = emf_playable
 	clr_flag = emf_ai_peaceful
 	clr_flag = emf_hostile_within_group
@@ -4504,7 +8634,7 @@ emf_set_default_flags_for_mandaean = {
 	set_flag = emf_secret_religion
 }
 
-emf_set_default_flags_for_yazidi = {
+emf_set_default_flags_for_yazidism = {
 	set_flag = emf_playable
 	clr_flag = emf_ai_peaceful
 	clr_flag = emf_hostile_within_group

@@ -129,8 +129,8 @@ emf_randomize_relhead_title_names = {
 		}
 	}
 	if = {
-		limit = { manichean = { is_name_randomized = yes } }
-		d_manichean = {
+		limit = { mani = { is_name_randomized = yes } }
+		d_mani = {
 			set_name = "ALT_MANICHEAN"
 			adjective = "ALT_MANICHEAN_ADJ"
 		}
@@ -143,8 +143,8 @@ emf_randomize_relhead_title_names = {
 		}
 	}
 	if = {
-		limit = { mazdaki = { is_name_randomized = yes } }
-		d_mazdaki = {
+		limit = { mazdakism = { is_name_randomized = yes } }
+		d_mazdakism = {
 			set_name = "ALT_MAZDAKI"
 			adjective = "ALT_MAZDAKI_ADJ"
 		}
@@ -262,8 +262,8 @@ emf_randomize_relhead_title_names = {
 		}
 	}
 	if = {
-		limit = { yazidi = { is_name_randomized = yes } }
-		d_yazidi = {
+		limit = { yazidism = { is_name_randomized = yes } }
+		d_yazidism = {
 			set_name = "ALT_YAZIDI"
 			adjective = "ALT_YAZIDI_ADJ"
 		}
@@ -321,16 +321,16 @@ emf_activate_randomized_relhead_titles = {
 	d_lollard = { save_event_target_as = emf_rel_title }
 	emf_activate_randomized_relhead_title = yes
 	# Manichean
-	manichean = { save_event_target_as = emf_rel }
-	d_manichean = { save_event_target_as = emf_rel_title }
+	mani = { save_event_target_as = emf_rel }
+	d_mani = { save_event_target_as = emf_rel_title }
 	emf_activate_randomized_relhead_title = yes
 	# Maronite
 	maronite = { save_event_target_as = emf_rel }
 	d_maronite = { save_event_target_as = emf_rel_title }
 	emf_activate_randomized_relhead_title = yes
 	# Mazdaki
-	mazdaki = { save_event_target_as = emf_rel }
-	d_mazdaki = { save_event_target_as = emf_rel_title }
+	mazdakism = { save_event_target_as = emf_rel }
+	d_mazdakism = { save_event_target_as = emf_rel_title }
 	emf_activate_randomized_relhead_title = yes
 	# Messalian
 	messalian = { save_event_target_as = emf_rel }

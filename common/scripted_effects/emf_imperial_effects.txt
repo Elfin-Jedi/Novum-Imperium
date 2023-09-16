@@ -16,7 +16,7 @@ emf_switch_to_feudal_gov = {
 			OR = {
 				religion = bon
 				religion = bon_reformed
-				religion = buddhist
+				religion_group = bud_group
 			}
 			higher_tier_than = BARON
 		}
@@ -29,6 +29,27 @@ emf_switch_to_feudal_gov = {
 		}
 		set_government_type = bogomilist_government
 	}
+	else_if = {
+		limit = {
+			OR = {
+				culture_group = chinese
+				culture_group = korean_group
+				culture = viet
+			}
+			has_acceptable_chinese_religion_trigger = yes # Same requirement as for Chinese Imperial
+		}
+		set_government_type = chinese_vassal_government
+	}
+	else_if = {
+		limit = {
+			OR = {
+				culture = japanese
+				religion = nihon_shinto
+				culture = ryukyuan
+			}
+		}
+		set_government_type = japanese_feudalism
+	}
 	else = {
 		set_government_type = feudal_government
 	}
@@ -40,7 +61,8 @@ emf_switch_to_imperial = {
 			primary_title = { has_title_flag = pretender_chinese_empire }
 			OR = {
 				emf_is_chinese_imperial_culture = yes
-				has_character_flag = chinese_imperial_government_preserve #keeps government when player is given culture change option
+				culture = viet
+				has_acceptable_chinese_religion_trigger = yes # Same requirement as for Chinese Imperial
 			}
 		}
 		set_government_type = chinese_imperial_government
@@ -55,7 +77,7 @@ emf_switch_to_imperial = {
 			OR = {
 				religion = bon
 				religion = bon_reformed
-				religion = buddhist
+				religion_group = bud_group
 			}
 			higher_tier_than = BARON
 		}
@@ -67,6 +89,21 @@ emf_switch_to_imperial = {
 			NOT = { d_bogomilist = { has_flag = bogomilist_formalized } }
 		}
 		set_government_type = bogomilist_imperial_government
+	}
+	else_if = {
+		OR = {
+			culture_group = korean_group
+			religion = shingyo
+		}
+		set_government_type = korean_imperial_government
+	}
+	else_if = {
+		OR = {
+			culture = japanese
+			religion = nihon_shinto
+			culture = ryukyuan
+		}
+		set_government_type = japanese_imperial_government
 	}
 	else = {
 		set_government_type = imperial_government
@@ -185,7 +222,7 @@ emf_set_viceroy_exemption = {
 				NOT = { religion = norse_pagan_reformed }
 				NOT = { religion = paulician }
 				NOT = { religion = waldensian }
-				NOT = { religion = yazidi }
+				NOT = { religion = yazidism }
 			}
 		}
 		any_demesne_title = { clr_flag = viceroy_exemption }
@@ -200,7 +237,7 @@ emf_set_viceroy_exemption = {
 					NOT = { religion = norse_pagan_reformed }
 					NOT = { religion = paulician }
 					NOT = { religion = waldensian }
-					NOT = { religion = yazidi }
+					NOT = { religion = yazidism }
 				}
 			}
 			any_demesne_title = { clr_flag = viceroy_exemption }

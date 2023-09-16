@@ -10,58 +10,6 @@
 
 emf_set_bloodline_founder_religion_flag = {
 	if = {
-		limit = { religion = norse_pagan_reformed }
-		new_bloodline = { set_bloodline_flag = requires_norse_pagan_reformed_religion }
-	}
-	else_if = {
-		limit = { religion = norse_pagan }
-		new_bloodline = { set_bloodline_flag = requires_norse_pagan_religion }
-	}
-	else_if = {
-		limit = { religion = tengri_pagan_reformed }
-		new_bloodline = { set_bloodline_flag = requires_tengri_pagan_reformed_religion }
-	}
-	else_if = {
-		limit = { religion = tengri_pagan }
-		new_bloodline = { set_bloodline_flag = requires_tengri_pagan_religion }
-	}
-	else_if = {
-		limit = { religion = baltic_pagan_reformed }
-		new_bloodline = { set_bloodline_flag = requires_baltic_pagan_reformed_religion }
-	}
-	else_if = {
-		limit = { religion = finnish_pagan_reformed }
-		new_bloodline = { set_bloodline_flag = requires_finnish_pagan_reformed_religion }
-	}
-	else_if = {
-		limit = { religion = finnish_pagan }
-		new_bloodline = { set_bloodline_flag = requires_finnish_pagan_religion }
-	}
-	else_if = {
-		limit = { religion = aztec_reformed }
-		new_bloodline = { set_bloodline_flag = requires_aztec_reformed_religion }
-	}
-	else_if = {
-		limit = { religion = aztec }
-		new_bloodline = { set_bloodline_flag = requires_aztec_religion }
-	}
-	else_if = {
-		limit = { religion = slavic_pagan_reformed }
-		new_bloodline = { set_bloodline_flag = requires_slavic_pagan_reformed_religion }
-	}
-	else_if = {
-		limit = { religion = slavic_pagan }
-		new_bloodline = { set_bloodline_flag = requires_slavic_pagan_religion }
-	}
-	else_if = {
-		limit = { religion = bon_reformed }
-		new_bloodline = { set_bloodline_flag = requires_bon_reformed_religion }
-	}
-	else_if = {
-		limit = { religion = bon }
-		new_bloodline = { set_bloodline_flag = requires_bon_religion }
-	}
-	else_if = {
 		limit = { religion = catholic }
 		new_bloodline = { set_bloodline_flag = requires_catholic_religion }
 	}
@@ -198,6 +146,58 @@ emf_set_bloodline_founder_religion_flag = {
 		new_bloodline = { set_bloodline_flag = requires_qarmatian_religion }
 	}
 	else_if = {
+		limit = { religion = norse_pagan_reformed }
+		new_bloodline = { set_bloodline_flag = requires_norse_pagan_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = norse_pagan }
+		new_bloodline = { set_bloodline_flag = requires_norse_pagan_religion }
+	}
+	else_if = {
+		limit = { religion = tengri_pagan_reformed }
+		new_bloodline = { set_bloodline_flag = requires_tengri_pagan_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = tengri_pagan }
+		new_bloodline = { set_bloodline_flag = requires_tengri_pagan_religion }
+	}
+	else_if = {
+		limit = { religion = baltic_pagan_reformed }
+		new_bloodline = { set_bloodline_flag = requires_baltic_pagan_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = finnish_pagan_reformed }
+		new_bloodline = { set_bloodline_flag = requires_finnish_pagan_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = finnish_pagan }
+		new_bloodline = { set_bloodline_flag = requires_finnish_pagan_religion }
+	}
+	else_if = {
+		limit = { religion = aztec_reformed }
+		new_bloodline = { set_bloodline_flag = requires_aztec_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = aztec }
+		new_bloodline = { set_bloodline_flag = requires_aztec_religion }
+	}
+	else_if = {
+		limit = { religion = slavic_pagan_reformed }
+		new_bloodline = { set_bloodline_flag = requires_slavic_pagan_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = slavic_pagan }
+		new_bloodline = { set_bloodline_flag = requires_slavic_pagan_religion }
+	}
+	else_if = {
+		limit = { religion = bon_reformed }
+		new_bloodline = { set_bloodline_flag = requires_bon_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = bon }
+		new_bloodline = { set_bloodline_flag = requires_bon_religion }
+	}
+	else_if = {
 		limit = { religion = zoroastrian }
 		new_bloodline = { set_bloodline_flag = requires_zoroastrian_religion }
 	}
@@ -214,11 +214,11 @@ emf_set_bloodline_founder_religion_flag = {
 		new_bloodline = { set_bloodline_flag = requires_mani_religion }
 	}
 	else_if = {
-		limit = { religion = mand }
-		new_bloodline = { set_bloodline_flag = requires_mand_religion }
+		limit = { religion = mandaean }
+		new_bloodline = { set_bloodline_flag = requires_mandaean_religion }
 	}
 	else_if = {
-		limit = { religion = yazidi }
+		limit = { religion = yazidism }
 		new_bloodline = { set_bloodline_flag = requires_yazidism_religion }
 	}
 	else_if = {
@@ -594,134 +594,6 @@ emf_set_bloodline_founder_religion_flag = {
 		new_bloodline = { set_bloodline_flag = requires_chukchi_pantheism_religion }
 	}
 	else_if = {
-		limit = { religion = antinomian }
-		new_bloodline = { set_bloodline_flag = requires_antinomian_religion }
-	}
-	else_if = {
-		limit = { religion = aten }
-		new_bloodline = { set_bloodline_flag = requires_aten_religion }
-	}
-	else_if = {
-		limit = { religion = batembuzi }
-		new_bloodline = { set_bloodline_flag = requires_batembuzi_religion }
-	}
-	else_if = {
-		limit = { religion = bud_bahusrutiya }
-		new_bloodline = { set_bloodline_flag = requires_bud_bahusrutiya_religion }
-	}
-	else_if = {
-		limit = { religion = bud_mahayana }
-		new_bloodline = { set_bloodline_flag = requires_bud_mahayana_religion }
-	}
-	else_if = {
-		limit = { religion = dionysos }
-		new_bloodline = { set_bloodline_flag = requires_dionysos_religion }
-	}
-	else_if = {
-		limit = { religion = donatist }
-		new_bloodline = { set_bloodline_flag = requires_donatist_religion }
-	}
-	else_if = {
-		limit = { religion = druze }
-		new_bloodline = { set_bloodline_flag = requires_druze_religion }
-	}
-	else_if = {
-		limit = { religion = erlik }
-		new_bloodline = { set_bloodline_flag = requires_erlik_religion }
-	}
-	else_if = {
-		limit = { religion = hubal }
-		new_bloodline = { set_bloodline_flag = requires_hubal_religion }
-	}
-	else_if = {
-		limit = { religion = illuyanka }
-		new_bloodline = { set_bloodline_flag = requires_illuyanka_religion }
-	}
-	else_if = {
-		limit = { religion = irminsul }
-		new_bloodline = { set_bloodline_flag = requires_irminsul_religion }
-	}
-	else_if = {
-		limit = { religion = jud_sabaoth }
-		new_bloodline = { set_bloodline_flag = requires_jud_sabaoth_religion }
-	}
-	else_if = {
-		limit = { religion = mand_ruha }
-		new_bloodline = { set_bloodline_flag = requires_mand_ruha_religion }
-	}
-	else_if = {
-		limit = { religion = mani_ahriman }
-		new_bloodline = { set_bloodline_flag = requires_mani_ahriman_religion }
-	}
-	else_if = {
-		limit = { religion = melkite }
-		new_bloodline = { set_bloodline_flag = requires_melkite_religion }
-	}
-	else_if = {
-		limit = { religion = montanist }
-		new_bloodline = { set_bloodline_flag = requires_montanist_religion }
-	}
-	else_if = {
-		limit = { religion = norse_war }
-		new_bloodline = { set_bloodline_flag = requires_norse_war_religion }
-	}
-	else_if = {
-		limit = { religion = pelagian }
-		new_bloodline = { set_bloodline_flag = requires_pelagian_religion }
-	}
-	else_if = {
-		limit = { religion = plato_christ }
-		new_bloodline = { set_bloodline_flag = requires_plato_christ_religion }
-	}
-	else_if = {
-		limit = { religion = plato_islam }
-		new_bloodline = { set_bloodline_flag = requires_plato_islam_religion }
-	}
-	else_if = {
-		limit = { religion = priscillian }
-		new_bloodline = { set_bloodline_flag = requires_priscillian_religion }
-	}
-	else_if = {
-		limit = { religion = ragnarok }
-		new_bloodline = { set_bloodline_flag = requires_ragnarok_religion }
-	}
-	else_if = {
-		limit = { religion = saule }
-		new_bloodline = { set_bloodline_flag = requires_saule_religion }
-	}
-	else_if = {
-		limit = { religion = saura }
-		new_bloodline = { set_bloodline_flag = requires_saura_religion }
-	}
-	else_if = {
-		limit = { religion = set }
-		new_bloodline = { set_bloodline_flag = requires_set_religion }
-	}
-	else_if = {
-		limit = { religion = sol_christ }
-		new_bloodline = { set_bloodline_flag = requires_sol_christ_religion }
-	}
-	else_if = {
-		limit = { religion = sufi }
-		new_bloodline = { set_bloodline_flag = requires_sufi_religion }
-	}
-	else_if = {
-		limit = { religion = tengri_ahriman }
-		new_bloodline = { set_bloodline_flag = requires_tengri_ahriman_religion }
-	}
-	else_if = {
-		limit = { religion = vidharma }
-		new_bloodline = { set_bloodline_flag = requires_vidharma_religion }
-	}
-	else_if = {
-		limit = { religion = yahyanism }
-		new_bloodline = { set_bloodline_flag = requires_yahyanism_religion }
-	}
-	else_if = {
-		limit = { religion = zor_angra }
-		new_bloodline = { set_bloodline_flag = requires_zor_angra_religion }
-	}
-	else_if = {
 		limit = { religion = druze_reformed }
 		new_bloodline = { set_bloodline_flag = requires_druze_reformed_religion }
 	}
@@ -770,6 +642,10 @@ emf_set_bloodline_founder_religion_flag = {
 		new_bloodline = { set_bloodline_flag = requires_allat_religion }
 	}
 	else_if = {
+		limit = { religion = hubal }
+		new_bloodline = { set_bloodline_flag = requires_hubal_religion }
+	}
+	else_if = {
 		limit = { religion = attar }
 		new_bloodline = { set_bloodline_flag = requires_attar_religion }
 	}
@@ -800,6 +676,10 @@ emf_set_bloodline_founder_religion_flag = {
 	else_if = {
 		limit = { religion = dievas }
 		new_bloodline = { set_bloodline_flag = requires_dievas_religion }
+	}
+	else_if = {
+		limit = { religion = saule }
+		new_bloodline = { set_bloodline_flag = requires_saule_religion }
 	}
 	else_if = {
 		limit = { religion = perkunas }
@@ -844,6 +724,10 @@ emf_set_bloodline_founder_religion_flag = {
 	else_if = {
 		limit = { religion = baluba }
 		new_bloodline = { set_bloodline_flag = requires_baluba_religion }
+	}
+	else_if = {
+		limit = { religion = batembuzi }
+		new_bloodline = { set_bloodline_flag = requires_batembuzi_religion }
 	}
 	else_if = {
 		limit = { religion = bukongo_reformed }
@@ -952,5 +836,1201 @@ emf_set_bloodline_founder_religion_flag = {
 	else_if = {
 		limit = { religion = okuruo }
 		new_bloodline = { set_bloodline_flag = requires_okuruo_religion }
+	}
+	else_if = {
+		limit = { religion = zande_pagan }
+		new_bloodline = { set_bloodline_flag = requires_zande_pagan_religion }
+	}
+	else_if = {
+		limit = { religion = zulu_pagan }
+		new_bloodline = { set_bloodline_flag = requires_zulu_pagan_religion }
+	}
+	else_if = {
+		limit = { religion = berber_pagan_reformed }
+		new_bloodline = { set_bloodline_flag = requires_berber_pagan_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = berber_pagan }
+		new_bloodline = { set_bloodline_flag = requires_berber_pagan_religion }
+	}
+	else_if = {
+		limit = { religion = gurzil }
+		new_bloodline = { set_bloodline_flag = requires_gurzil_religion }
+	}
+	else_if = {
+		limit = { religion = amanai }
+		new_bloodline = { set_bloodline_flag = requires_amanai_religion }
+	}
+	else_if = {
+		limit = { religion = bud_zen_reformed }
+		new_bloodline = { set_bloodline_flag = requires_bud_zen_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = bud_zor_reformed }
+		new_bloodline = { set_bloodline_flag = requires_bud_zor_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = bud_sthaviravada }
+		new_bloodline = { set_bloodline_flag = requires_bud_sthaviravada_religion }
+	}
+	else_if = {
+		limit = { religion = bud_bahusrutiya }
+		new_bloodline = { set_bloodline_flag = requires_bud_bahusrutiya_religion }
+	}
+	else_if = {
+		limit = { religion = bud_mahayana }
+		new_bloodline = { set_bloodline_flag = requires_bud_mahayana_religion }
+	}
+	else_if = {
+		limit = { religion = bud_pureland }
+		new_bloodline = { set_bloodline_flag = requires_bud_pureland_religion }
+	}
+	else_if = {
+		limit = { religion = bud_pratyeka }
+		new_bloodline = { set_bloodline_flag = requires_bud_pratyeka_religion }
+	}
+	else_if = {
+		limit = { religion = bud_vajrayana }
+		new_bloodline = { set_bloodline_flag = requires_bud_vajrayana_religion }
+	}
+	else_if = {
+		limit = { religion = bud_zen }
+		new_bloodline = { set_bloodline_flag = requires_bud_zen_religion }
+	}
+	else_if = {
+		limit = { religion = bud_zor }
+		new_bloodline = { set_bloodline_flag = requires_bud_zor_religion }
+	}
+	else_if = {
+		limit = { religion = celtic_christ_reformed }
+		new_bloodline = { set_bloodline_flag = requires_celtic_christ_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = celtic_pagan_reformed }
+		new_bloodline = { set_bloodline_flag = requires_celtic_pagan_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = iberian_pagan_reformed }
+		new_bloodline = { set_bloodline_flag = requires_iberian_pagan_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = celtic_pagan }
+		new_bloodline = { set_bloodline_flag = requires_celtic_pagan_religion }
+	}
+	else_if = {
+		limit = { religion = lugh }
+		new_bloodline = { set_bloodline_flag = requires_lugh_religion }
+	}
+	else_if = {
+		limit = { religion = endovellico }
+		new_bloodline = { set_bloodline_flag = requires_endovellico_religion }
+	}
+	else_if = {
+		limit = { religion = lubu_reformed }
+		new_bloodline = { set_bloodline_flag = requires_lubu_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = tao_reformed }
+		new_bloodline = { set_bloodline_flag = requires_tao_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = confucian }
+		new_bloodline = { set_bloodline_flag = requires_confucian_religion }
+	}
+	else_if = {
+		limit = { religion = shenjiao }
+		new_bloodline = { set_bloodline_flag = requires_shenjiao_religion }
+	}
+	else_if = {
+		limit = { religion = lubu }
+		new_bloodline = { set_bloodline_flag = requires_lubu_religion }
+	}
+	else_if = {
+		limit = { religion = tao }
+		new_bloodline = { set_bloodline_flag = requires_tao_religion }
+	}
+	else_if = {
+		limit = { religion = sol_taoist }
+		new_bloodline = { set_bloodline_flag = requires_sol_taoist_religion }
+	}
+	else_if = {
+		limit = { religion = german_pagan_reformed }
+		new_bloodline = { set_bloodline_flag = requires_german_pagan_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = norse_christ_reformed }
+		new_bloodline = { set_bloodline_flag = requires_norse_christ_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = ragnarok_reformed }
+		new_bloodline = { set_bloodline_flag = requires_ragnarok_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = teiwaz_reformed }
+		new_bloodline = { set_bloodline_flag = requires_teiwaz_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = norse_war }
+		new_bloodline = { set_bloodline_flag = requires_norse_war_religion }
+	}
+	else_if = {
+		limit = { religion = ragnarok }
+		new_bloodline = { set_bloodline_flag = requires_ragnarok_religion }
+	}
+	else_if = {
+		limit = { religion = sowilo }
+		new_bloodline = { set_bloodline_flag = requires_sowilo_religion }
+	}
+	else_if = {
+		limit = { religion = nott }
+		new_bloodline = { set_bloodline_flag = requires_nott_religion }
+	}
+	else_if = {
+		limit = { religion = german_pagan }
+		new_bloodline = { set_bloodline_flag = requires_german_pagan_religion }
+	}
+	else_if = {
+		limit = { religion = irminsul }
+		new_bloodline = { set_bloodline_flag = requires_irminsul_religion }
+	}
+	else_if = {
+		limit = { religion = allfather }
+		new_bloodline = { set_bloodline_flag = requires_allfather_religion }
+	}
+	else_if = {
+		limit = { religion = teiwaz }
+		new_bloodline = { set_bloodline_flag = requires_teiwaz_religion }
+	}
+	else_if = {
+		limit = { religion = cathar_reformed }
+		new_bloodline = { set_bloodline_flag = requires_cathar_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = christian_populist_reformed }
+		new_bloodline = { set_bloodline_flag = requires_christian_populist_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = mari_christ_reformed }
+		new_bloodline = { set_bloodline_flag = requires_mari_christ_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = montanist_reformed }
+		new_bloodline = { set_bloodline_flag = requires_montanist_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = nasrani_reformed }
+		new_bloodline = { set_bloodline_flag = requires_nasrani_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = priscillian_reformed }
+		new_bloodline = { set_bloodline_flag = requires_priscillian_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = slavic_christian_reformed }
+		new_bloodline = { set_bloodline_flag = requires_slavic_christian_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = antinomian }
+		new_bloodline = { set_bloodline_flag = requires_antinomian_religion }
+	}
+	else_if = {
+		limit = { religion = donatist }
+		new_bloodline = { set_bloodline_flag = requires_donatist_religion }
+	}
+	else_if = {
+		limit = { religion = melkite }
+		new_bloodline = { set_bloodline_flag = requires_melkite_religion }
+	}
+	else_if = {
+		limit = { religion = montanist }
+		new_bloodline = { set_bloodline_flag = requires_montanist_religion }
+	}
+	else_if = {
+		limit = { religion = sabellianist }
+		new_bloodline = { set_bloodline_flag = requires_sabellianist_religion }
+	}
+	else_if = {
+		limit = { religion = valentinian }
+		new_bloodline = { set_bloodline_flag = requires_valentinian_religion }
+	}
+	else_if = {
+		limit = { religion = mari_christ }
+		new_bloodline = { set_bloodline_flag = requires_mari_christ_religion }
+	}
+	else_if = {
+		limit = { religion = priscillian }
+		new_bloodline = { set_bloodline_flag = requires_priscillian_religion }
+	}
+	else_if = {
+		limit = { religion = docetist }
+		new_bloodline = { set_bloodline_flag = requires_docetist_religion }
+	}
+	else_if = {
+		limit = { religion = apollinarist }
+		new_bloodline = { set_bloodline_flag = requires_apollinarist_religion }
+	}
+	else_if = {
+		limit = { religion = solomonic_christ }
+		new_bloodline = { set_bloodline_flag = requires_solomonic_christ_religion }
+	}
+	else_if = {
+		limit = { religion = audianist }
+		new_bloodline = { set_bloodline_flag = requires_audianist_religion }
+	}
+	else_if = {
+		limit = { religion = celtic_christ }
+		new_bloodline = { set_bloodline_flag = requires_celtic_christ_religion }
+	}
+	else_if = {
+		limit = { religion = marcionist }
+		new_bloodline = { set_bloodline_flag = requires_marcionist_religion }
+	}
+	else_if = {
+		limit = { religion = nasrani }
+		new_bloodline = { set_bloodline_flag = requires_nasrani_religion }
+	}
+	else_if = {
+		limit = { religion = norse_christ }
+		new_bloodline = { set_bloodline_flag = requires_norse_christ_religion }
+	}
+	else_if = {
+		limit = { religion = pelagian }
+		new_bloodline = { set_bloodline_flag = requires_pelagian_religion }
+	}
+	else_if = {
+		limit = { religion = semipelagian }
+		new_bloodline = { set_bloodline_flag = requires_semipelagian_religion }
+	}
+	else_if = {
+		limit = { religion = sethian }
+		new_bloodline = { set_bloodline_flag = requires_sethian_religion }
+	}
+	else_if = {
+		limit = { religion = slavic_christian }
+		new_bloodline = { set_bloodline_flag = requires_slavic_christian_religion }
+	}
+	else_if = {
+		limit = { religion = unctionist }
+		new_bloodline = { set_bloodline_flag = requires_unctionist_religion }
+	}
+	else_if = {
+		limit = { religion = amun_reformed }
+		new_bloodline = { set_bloodline_flag = requires_amun_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = aten_reformed }
+		new_bloodline = { set_bloodline_flag = requires_aten_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = isis_reformed }
+		new_bloodline = { set_bloodline_flag = requires_isis_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = set_reformed }
+		new_bloodline = { set_bloodline_flag = requires_set_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = amun }
+		new_bloodline = { set_bloodline_flag = requires_amun_religion }
+	}
+	else_if = {
+		limit = { religion = aten }
+		new_bloodline = { set_bloodline_flag = requires_aten_religion }
+	}
+	else_if = {
+		limit = { religion = horus_re }
+		new_bloodline = { set_bloodline_flag = requires_horus_re_religion }
+	}
+	else_if = {
+		limit = { religion = isis }
+		new_bloodline = { set_bloodline_flag = requires_isis_religion }
+	}
+	else_if = {
+		limit = { religion = set }
+		new_bloodline = { set_bloodline_flag = requires_set_religion }
+	}
+	else_if = {
+		limit = { religion = chumbylat_reformed }
+		new_bloodline = { set_bloodline_flag = requires_chumbylat_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = voipel_reformed }
+		new_bloodline = { set_bloodline_flag = requires_voipel_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = ilmatar }
+		new_bloodline = { set_bloodline_flag = requires_ilmatar_religion }
+	}
+	else_if = {
+		limit = { religion = jumala }
+		new_bloodline = { set_bloodline_flag = requires_jumala_religion }
+	}
+	else_if = {
+		limit = { religion = chumbylat }
+		new_bloodline = { set_bloodline_flag = requires_chumbylat_religion }
+	}
+	else_if = {
+		limit = { religion = voipel }
+		new_bloodline = { set_bloodline_flag = requires_voipel_religion }
+	}
+	else_if = {
+		limit = { religion = graeco_roman_reformed }
+		new_bloodline = { set_bloodline_flag = requires_graeco_roman_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = graeco_roman }
+		new_bloodline = { set_bloodline_flag = requires_graeco_roman_religion }
+	}
+	else_if = {
+		limit = { religion = jupiter }
+		new_bloodline = { set_bloodline_flag = requires_jupiter_religion }
+	}
+	else_if = {
+		limit = { religion = dionysos }
+		new_bloodline = { set_bloodline_flag = requires_dionysos_religion }
+	}
+	else_if = {
+		limit = { religion = alexandros }
+		new_bloodline = { set_bloodline_flag = requires_alexandros_religion }
+	}
+	else_if = {
+		limit = { religion = solomonic_alexandros }
+		new_bloodline = { set_bloodline_flag = requires_solomonic_alexandros_religion }
+	}
+	else_if = {
+		limit = { religion = roman_imperial }
+		new_bloodline = { set_bloodline_flag = requires_roman_imperial_religion }
+	}
+	else_if = {
+		limit = { religion = cybele }
+		new_bloodline = { set_bloodline_flag = requires_cybele_religion }
+	}
+	else_if = {
+		limit = { religion = kubera_reformed }
+		new_bloodline = { set_bloodline_flag = requires_kubera_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = murugan_reformed }
+		new_bloodline = { set_bloodline_flag = requires_murugan_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = saura_reformed }
+		new_bloodline = { set_bloodline_flag = requires_saura_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = vidharma_reformed }
+		new_bloodline = { set_bloodline_flag = requires_vidharma_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = vidharma }
+		new_bloodline = { set_bloodline_flag = requires_vidharma_religion }
+	}
+	else_if = {
+		limit = { religion = saura }
+		new_bloodline = { set_bloodline_flag = requires_saura_religion }
+	}
+	else_if = {
+		limit = { religion = kubera }
+		new_bloodline = { set_bloodline_flag = requires_kubera_religion }
+	}
+	else_if = {
+		limit = { religion = murugan }
+		new_bloodline = { set_bloodline_flag = requires_murugan_religion }
+	}
+	else_if = {
+		limit = { religion = indohelen_reformed }
+		new_bloodline = { set_bloodline_flag = requires_indohelen_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = indohelen }
+		new_bloodline = { set_bloodline_flag = requires_indohelen_religion }
+	}
+	else_if = {
+		limit = { religion = indoh_bud }
+		new_bloodline = { set_bloodline_flag = requires_indoh_bud_religion }
+	}
+	else_if = {
+		limit = { religion = indoh_confucian }
+		new_bloodline = { set_bloodline_flag = requires_indoh_confucian_religion }
+	}
+	else_if = {
+		limit = { religion = indoh_hindu }
+		new_bloodline = { set_bloodline_flag = requires_indoh_hindu_religion }
+	}
+	else_if = {
+		limit = { religion = indoh_zor }
+		new_bloodline = { set_bloodline_flag = requires_indoh_zor_religion }
+	}
+	else_if = {
+		limit = { religion = jud_ark_reformed }
+		new_bloodline = { set_bloodline_flag = requires_jud_ark_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = judaism }
+		new_bloodline = { set_bloodline_flag = requires_judaism_religion }
+	}
+	else_if = {
+		limit = { religion = jud_sabaoth }
+		new_bloodline = { set_bloodline_flag = requires_jud_sabaoth_religion }
+	}
+	else_if = {
+		limit = { religion = jud_ark }
+		new_bloodline = { set_bloodline_flag = requires_jud_ark_religion }
+	}
+	else_if = {
+		limit = { religion = jud_zion }
+		new_bloodline = { set_bloodline_flag = requires_jud_zion_religion }
+	}
+	else_if = {
+		limit = { religion = illuyanka_reformed }
+		new_bloodline = { set_bloodline_flag = requires_illuyanka_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = tarhunt_reformed }
+		new_bloodline = { set_bloodline_flag = requires_tarhunt_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = luwian }
+		new_bloodline = { set_bloodline_flag = requires_luwian_religion }
+	}
+	else_if = {
+		limit = { religion = illuyanka }
+		new_bloodline = { set_bloodline_flag = requires_illuyanka_religion }
+	}
+	else_if = {
+		limit = { religion = tarhunt }
+		new_bloodline = { set_bloodline_flag = requires_tarhunt_religion }
+	}
+	else_if = {
+		limit = { religion = mand_ruha_reformed }
+		new_bloodline = { set_bloodline_flag = requires_mand_ruha_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = mandaean_reformed }
+		new_bloodline = { set_bloodline_flag = requires_mandaean_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = mand_ruha }
+		new_bloodline = { set_bloodline_flag = requires_mand_ruha_religion }
+	}
+	else_if = {
+		limit = { religion = yahyanism }
+		new_bloodline = { set_bloodline_flag = requires_yahyanism_religion }
+	}
+	else_if = {
+		limit = { religion = ahriman_reformed }
+		new_bloodline = { set_bloodline_flag = requires_ahriman_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = mani_germanic_reformed }
+		new_bloodline = { set_bloodline_flag = requires_mani_germanic_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = mani_slavic_reformed }
+		new_bloodline = { set_bloodline_flag = requires_mani_slavic_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = mani_ahriman }
+		new_bloodline = { set_bloodline_flag = requires_mani_ahriman_religion }
+	}
+	else_if = {
+		limit = { religion = mani_mithra }
+		new_bloodline = { set_bloodline_flag = requires_mani_mithra_religion }
+	}
+	else_if = {
+		limit = { religion = mani_slavic }
+		new_bloodline = { set_bloodline_flag = requires_mani_slavic_religion }
+	}
+	else_if = {
+		limit = { religion = mani_germanic }
+		new_bloodline = { set_bloodline_flag = requires_mani_germanic_religion }
+	}
+	else_if = {
+		limit = { religion = mithra }
+		new_bloodline = { set_bloodline_flag = requires_mithra_religion }
+	}
+	else_if = {
+		limit = { religion = mithra_christ }
+		new_bloodline = { set_bloodline_flag = requires_mithra_christ_religion }
+	}
+	else_if = {
+		limit = { religion = mithra_sol }
+		new_bloodline = { set_bloodline_flag = requires_mithra_sol_religion }
+	}
+	else_if = {
+		limit = { religion = muslim_aliite_reformed }
+		new_bloodline = { set_bloodline_flag = requires_muslim_aliite_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = muslim_domination_reformed }
+		new_bloodline = { set_bloodline_flag = requires_muslim_domination_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = ashari }
+		new_bloodline = { set_bloodline_flag = requires_ashari_religion }
+	}
+	else_if = {
+		limit = { religion = athari }
+		new_bloodline = { set_bloodline_flag = requires_athari_religion }
+	}
+	else_if = {
+		limit = { religion = maturidi }
+		new_bloodline = { set_bloodline_flag = requires_maturidi_religion }
+	}
+	else_if = {
+		limit = { religion = murjiah }
+		new_bloodline = { set_bloodline_flag = requires_murjiah_religion }
+	}
+	else_if = {
+		limit = { religion = zahiri }
+		new_bloodline = { set_bloodline_flag = requires_zahiri_religion }
+	}
+	else_if = {
+		limit = { religion = sufi }
+		new_bloodline = { set_bloodline_flag = requires_sufi_religion }
+	}
+	else_if = {
+		limit = { religion = ilm_islam }
+		new_bloodline = { set_bloodline_flag = requires_ilm_islam_religion }
+	}
+	else_if = {
+		limit = { religion = ghazi_islam }
+		new_bloodline = { set_bloodline_flag = requires_ghazi_islam_religion }
+	}
+	else_if = {
+		limit = { religion = mutazil }
+		new_bloodline = { set_bloodline_flag = requires_mutazil_religion }
+	}
+	else_if = {
+		limit = { religion = marabout }
+		new_bloodline = { set_bloodline_flag = requires_marabout_religion }
+	}
+	else_if = {
+		limit = { religion = neoplato }
+		new_bloodline = { set_bloodline_flag = requires_neoplato_religion }
+	}
+	else_if = {
+		limit = { religion = plato_pythagorean }
+		new_bloodline = { set_bloodline_flag = requires_plato_pythagorean_religion }
+	}
+	else_if = {
+		limit = { religion = porphyryan }
+		new_bloodline = { set_bloodline_flag = requires_porphyryan_religion }
+	}
+	else_if = {
+		limit = { religion = plato_christ }
+		new_bloodline = { set_bloodline_flag = requires_plato_christ_religion }
+	}
+	else_if = {
+		limit = { religion = plato_islam }
+		new_bloodline = { set_bloodline_flag = requires_plato_islam_religion }
+	}
+	else_if = {
+		limit = { religion = zz01_vedanta }
+		new_bloodline = { set_bloodline_flag = requires_zz01_vedanta_religion }
+	}
+	else_if = {
+		limit = { religion = baal_monotheistic_reformed }
+		new_bloodline = { set_bloodline_flag = requires_baal_monotheistic_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = beelshamen }
+		new_bloodline = { set_bloodline_flag = requires_beelshamen_religion }
+	}
+	else_if = {
+		limit = { religion = aglibol }
+		new_bloodline = { set_bloodline_flag = requires_aglibol_religion }
+	}
+	else_if = {
+		limit = { religion = malakbel }
+		new_bloodline = { set_bloodline_flag = requires_malakbel_religion }
+	}
+	else_if = {
+		limit = { religion = palmyran_pagan }
+		new_bloodline = { set_bloodline_flag = requires_palmyran_pagan_religion }
+	}
+	else_if = {
+		limit = { religion = hadad }
+		new_bloodline = { set_bloodline_flag = requires_hadad_religion }
+	}
+	else_if = {
+		limit = { religion = kothar }
+		new_bloodline = { set_bloodline_flag = requires_kothar_religion }
+	}
+	else_if = {
+		limit = { religion = serer_reformed }
+		new_bloodline = { set_bloodline_flag = requires_serer_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = mande_pagan }
+		new_bloodline = { set_bloodline_flag = requires_mande_pagan_religion }
+	}
+	else_if = {
+		limit = { religion = yoruba }
+		new_bloodline = { set_bloodline_flag = requires_yoruba_religion }
+	}
+	else_if = {
+		limit = { religion = nyame }
+		new_bloodline = { set_bloodline_flag = requires_nyame_religion }
+	}
+	else_if = {
+		limit = { religion = anansi }
+		new_bloodline = { set_bloodline_flag = requires_anansi_religion }
+	}
+	else_if = {
+		limit = { religion = perun }
+		new_bloodline = { set_bloodline_flag = requires_perun_religion }
+	}
+	else_if = {
+		limit = { religion = veles }
+		new_bloodline = { set_bloodline_flag = requires_veles_religion }
+	}
+	else_if = {
+		limit = { religion = rod }
+		new_bloodline = { set_bloodline_flag = requires_rod_religion }
+	}
+	else_if = {
+		limit = { religion = svaroh }
+		new_bloodline = { set_bloodline_flag = requires_svaroh_religion }
+	}
+	else_if = {
+		limit = { religion = dazhbog }
+		new_bloodline = { set_bloodline_flag = requires_dazhbog_religion }
+	}
+	else_if = {
+		limit = { religion = svetovid }
+		new_bloodline = { set_bloodline_flag = requires_svetovid_religion }
+	}
+	else_if = {
+		limit = { religion = sol_boreas_reformed }
+		new_bloodline = { set_bloodline_flag = requires_sol_boreas_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = sol_islam_reformed }
+		new_bloodline = { set_bloodline_flag = requires_sol_islam_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = sol_sahara_reformed }
+		new_bloodline = { set_bloodline_flag = requires_sol_sahara_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = sol }
+		new_bloodline = { set_bloodline_flag = requires_sol_religion }
+	}
+	else_if = {
+		limit = { religion = sol_christ }
+		new_bloodline = { set_bloodline_flag = requires_sol_christ_religion }
+	}
+	else_if = {
+		limit = { religion = sol_mani }
+		new_bloodline = { set_bloodline_flag = requires_sol_mani_religion }
+	}
+	else_if = {
+		limit = { religion = sol_apollo }
+		new_bloodline = { set_bloodline_flag = requires_sol_apollo_religion }
+	}
+	else_if = {
+		limit = { religion = sol_boreas }
+		new_bloodline = { set_bloodline_flag = requires_sol_boreas_religion }
+	}
+	else_if = {
+		limit = { religion = sol_islam }
+		new_bloodline = { set_bloodline_flag = requires_sol_islam_religion }
+	}
+	else_if = {
+		limit = { religion = sol_norse }
+		new_bloodline = { set_bloodline_flag = requires_sol_norse_religion }
+	}
+	else_if = {
+		limit = { religion = sol_slav }
+		new_bloodline = { set_bloodline_flag = requires_sol_slav_religion }
+	}
+	else_if = {
+		limit = { religion = sol_tsahay }
+		new_bloodline = { set_bloodline_flag = requires_sol_tsahay_religion }
+	}
+	else_if = {
+		limit = { religion = sol_sahara }
+		new_bloodline = { set_bloodline_flag = requires_sol_sahara_religion }
+	}
+	else_if = {
+		limit = { religion = erlik_reformed }
+		new_bloodline = { set_bloodline_flag = requires_erlik_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = tengri_bud_reformed }
+		new_bloodline = { set_bloodline_flag = requires_tengri_bud_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = tengri_confucian_reformed }
+		new_bloodline = { set_bloodline_flag = requires_tengri_confucian_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = tengri_mani_reformed }
+		new_bloodline = { set_bloodline_flag = requires_tengri_mani_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = tengri_rod_reformed }
+		new_bloodline = { set_bloodline_flag = requires_tengri_rod_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = vattisenyaly_reformed }
+		new_bloodline = { set_bloodline_flag = requires_vattisenyaly_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = tengri_ahriman }
+		new_bloodline = { set_bloodline_flag = requires_tengri_ahriman_religion }
+	}
+	else_if = {
+		limit = { religion = tengri_bud }
+		new_bloodline = { set_bloodline_flag = requires_tengri_bud_religion }
+	}
+	else_if = {
+		limit = { religion = tengri_confucian }
+		new_bloodline = { set_bloodline_flag = requires_tengri_confucian_religion }
+	}
+	else_if = {
+		limit = { religion = tengri_mani }
+		new_bloodline = { set_bloodline_flag = requires_tengri_mani_religion }
+	}
+	else_if = {
+		limit = { religion = tengri_rod }
+		new_bloodline = { set_bloodline_flag = requires_tengri_rod_religion }
+	}
+	else_if = {
+		limit = { religion = vattisenyaly }
+		new_bloodline = { set_bloodline_flag = requires_vattisenyaly_religion }
+	}
+	else_if = {
+		limit = { religion = erlik }
+		new_bloodline = { set_bloodline_flag = requires_erlik_religion }
+	}
+	else_if = {
+		limit = { religion = yazdanism_reformed }
+		new_bloodline = { set_bloodline_flag = requires_yazdanism_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = yazdanism }
+		new_bloodline = { set_bloodline_flag = requires_yazdanism_religion }
+	}
+	else_if = {
+		limit = { religion = zal }
+		new_bloodline = { set_bloodline_flag = requires_zal_religion }
+	}
+	else_if = {
+		limit = { religion = zal_christ }
+		new_bloodline = { set_bloodline_flag = requires_zal_christ_religion }
+	}
+	else_if = {
+		limit = { religion = zal_mani }
+		new_bloodline = { set_bloodline_flag = requires_zal_mani_religion }
+	}
+	else_if = {
+		limit = { religion = mazdakism_reformed }
+		new_bloodline = { set_bloodline_flag = requires_mazdakism_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = zor_angra_reformed }
+		new_bloodline = { set_bloodline_flag = requires_zor_angra_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = zurvanism_reformed }
+		new_bloodline = { set_bloodline_flag = requires_zurvanism_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = zor_angra }
+		new_bloodline = { set_bloodline_flag = requires_zor_angra_religion }
+	}
+	else_if = {
+		limit = { religion = zor_hindu }
+		new_bloodline = { set_bloodline_flag = requires_zor_hindu_religion }
+	}
+	else_if = {
+		limit = { religion = melanesian_religion_reformed }
+		new_bloodline = { set_bloodline_flag = requires_melanesian_religion_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = melanesian_religion }
+		new_bloodline = { set_bloodline_flag = requires_melanesian_religion_religion }
+	}
+	else_if = {
+		limit = { religion = taiwanese_religion_reformed }
+		new_bloodline = { set_bloodline_flag = requires_taiwanese_religion_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = taiwanese_religion }
+		new_bloodline = { set_bloodline_flag = requires_taiwanese_religion_religion }
+	}
+	else_if = {
+		limit = { religion = philippine_religion_reformed }
+		new_bloodline = { set_bloodline_flag = requires_philippine_religion_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = philippine_religion }
+		new_bloodline = { set_bloodline_flag = requires_philippine_religion_religion }
+	}
+	else_if = {
+		limit = { religion = bornean_religion_reformed }
+		new_bloodline = { set_bloodline_flag = requires_bornean_religion_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = bornean_religion }
+		new_bloodline = { set_bloodline_flag = requires_bornean_religion_religion }
+	}
+	else_if = {
+		limit = { religion = sulawesi_religion_reformed }
+		new_bloodline = { set_bloodline_flag = requires_sulawesi_religion_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = sulawesi_religion }
+		new_bloodline = { set_bloodline_flag = requires_sulawesi_religion_religion }
+	}
+	else_if = {
+		limit = { religion = flores_religion_reformed }
+		new_bloodline = { set_bloodline_flag = requires_flores_religion_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = flores_religion }
+		new_bloodline = { set_bloodline_flag = requires_flores_religion_religion }
+	}
+	else_if = {
+		limit = { religion = java_religion_reformed }
+		new_bloodline = { set_bloodline_flag = requires_java_religion_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = java_religion }
+		new_bloodline = { set_bloodline_flag = requires_java_religion_religion }
+	}
+	else_if = {
+		limit = { religion = sumatran_religion_reformed }
+		new_bloodline = { set_bloodline_flag = requires_sumatran_religion_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = sumatran_religion }
+		new_bloodline = { set_bloodline_flag = requires_sumatran_religion_religion }
+	}
+	else_if = {
+		limit = { religion = malagasy_religion_reformed }
+		new_bloodline = { set_bloodline_flag = requires_malagasy_religion_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = malagasy_religion }
+		new_bloodline = { set_bloodline_flag = requires_malagasy_religion_religion }
+	}
+	else_if = {
+		limit = { religion = south_bantu_mythology_reformed }
+		new_bloodline = { set_bloodline_flag = requires_south_bantu_mythology_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = south_bantu_mythology }
+		new_bloodline = { set_bloodline_flag = requires_south_bantu_mythology_religion }
+	}
+	else_if = {
+		limit = { religion = east_bantu_mythology_reformed }
+		new_bloodline = { set_bloodline_flag = requires_east_bantu_mythology_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = east_bantu_mythology }
+		new_bloodline = { set_bloodline_flag = requires_east_bantu_mythology_religion }
+	}
+	else_if = {
+		limit = { religion = omotic_pagan_reformed }
+		new_bloodline = { set_bloodline_flag = requires_omotic_pagan_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = omotic_pagan }
+		new_bloodline = { set_bloodline_flag = requires_omotic_pagan_religion }
+	}
+	else_if = {
+		limit = { religion = cushitic_pagan_reformed }
+		new_bloodline = { set_bloodline_flag = requires_cushitic_pagan_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = cushitic_pagan }
+		new_bloodline = { set_bloodline_flag = requires_cushitic_pagan_religion }
+	}
+	else_if = {
+		limit = { religion = nilotic_pagan_reformed }
+		new_bloodline = { set_bloodline_flag = requires_nilotic_pagan_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = nilotic_pagan }
+		new_bloodline = { set_bloodline_flag = requires_nilotic_pagan_religion }
+	}
+	else_if = {
+		limit = { religion = khoi_san_mythology_reformed }
+		new_bloodline = { set_bloodline_flag = requires_khoi_san_mythology_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = khoi_san_mythology }
+		new_bloodline = { set_bloodline_flag = requires_khoi_san_mythology_religion }
+	}
+	else_if = {
+		limit = { religion = inti_reformed }
+		new_bloodline = { set_bloodline_flag = requires_inti_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = inti }
+		new_bloodline = { set_bloodline_flag = requires_inti_religion }
+	}
+	else_if = {
+		limit = { religion = inuit_pagan_reformed }
+		new_bloodline = { set_bloodline_flag = requires_inuit_pagan_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = inuit_pagan }
+		new_bloodline = { set_bloodline_flag = requires_inuit_pagan_religion }
+	}
+	else_if = {
+		limit = { religion = zemiist_reformed }
+		new_bloodline = { set_bloodline_flag = requires_zemiist_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = zemiist }
+		new_bloodline = { set_bloodline_flag = requires_zemiist_religion }
+	}
+	else_if = {
+		limit = { religion = kachina_reformed }
+		new_bloodline = { set_bloodline_flag = requires_kachina_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = kachina }
+		new_bloodline = { set_bloodline_flag = requires_kachina_religion }
+	}
+	else_if = {
+		limit = { religion = pohakantenna_reformed }
+		new_bloodline = { set_bloodline_flag = requires_pohakantenna_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = pohakantenna }
+		new_bloodline = { set_bloodline_flag = requires_pohakantenna_religion }
+	}
+	else_if = {
+		limit = { religion = sgaanaang_reformed }
+		new_bloodline = { set_bloodline_flag = requires_sgaanaang_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = sgaanaang }
+		new_bloodline = { set_bloodline_flag = requires_sgaanaang_religion }
+	}
+	else_if = {
+		limit = { religion = wakanda_reformed }
+		new_bloodline = { set_bloodline_flag = requires_wakanda_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = wakanda }
+		new_bloodline = { set_bloodline_flag = requires_wakanda_religion }
+	}
+	else_if = {
+		limit = { religion = wakan_tanka_reformed }
+		new_bloodline = { set_bloodline_flag = requires_wakan_tanka_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = wakan_tanka }
+		new_bloodline = { set_bloodline_flag = requires_wakan_tanka_religion }
+	}
+	else_if = {
+		limit = { religion = mahoma_reformed }
+		new_bloodline = { set_bloodline_flag = requires_mahoma_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = mahoma }
+		new_bloodline = { set_bloodline_flag = requires_mahoma_religion }
+	}
+	else_if = {
+		limit = { religion = southern_cult_reformed }
+		new_bloodline = { set_bloodline_flag = requires_southern_cult_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = southern_cult }
+		new_bloodline = { set_bloodline_flag = requires_southern_cult_religion }
+	}
+	else_if = {
+		limit = { religion = orenda_reformed }
+		new_bloodline = { set_bloodline_flag = requires_orenda_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = orenda }
+		new_bloodline = { set_bloodline_flag = requires_orenda_religion }
+	}
+	else_if = {
+		limit = { religion = algic_pagan_reformed }
+		new_bloodline = { set_bloodline_flag = requires_algic_pagan_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = algic_pagan }
+		new_bloodline = { set_bloodline_flag = requires_algic_pagan_religion }
+	}
+	else_if = {
+		limit = { religion = animism_reformed }
+		new_bloodline = { set_bloodline_flag = requires_animism_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = animism }
+		new_bloodline = { set_bloodline_flag = requires_animism_religion }
+	}
+	else_if = {
+		limit = { religion = tupan_reformed }
+		new_bloodline = { set_bloodline_flag = requires_tupan_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = tupan }
+		new_bloodline = { set_bloodline_flag = requires_tupan_religion }
+	}
+	else_if = {
+		limit = { religion = chiminigagua_reformed }
+		new_bloodline = { set_bloodline_flag = requires_chiminigagua_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = chiminigagua }
+		new_bloodline = { set_bloodline_flag = requires_chiminigagua_religion }
+	}
+	else_if = {
+		limit = { religion = lapta_reformed }
+		new_bloodline = { set_bloodline_flag = requires_lapta_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = lapta }
+		new_bloodline = { set_bloodline_flag = requires_lapta_religion }
+	}
+	else_if = {
+		limit = { religion = aiwamdzu_reformed }
+		new_bloodline = { set_bloodline_flag = requires_aiwamdzu_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = aiwamdzu }
+		new_bloodline = { set_bloodline_flag = requires_aiwamdzu_religion }
+	}
+	else_if = {
+		limit = { religion = lakayah_reformed }
+		new_bloodline = { set_bloodline_flag = requires_lakayah_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = lakayah }
+		new_bloodline = { set_bloodline_flag = requires_lakayah_religion }
+	}
+	else_if = {
+		limit = { religion = tehuelchian_reformed }
+		new_bloodline = { set_bloodline_flag = requires_tehuelchian_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = tehuelchian }
+		new_bloodline = { set_bloodline_flag = requires_tehuelchian_religion }
+	}
+	else_if = {
+		limit = { religion = witran_mapu_reformed }
+		new_bloodline = { set_bloodline_flag = requires_witran_mapu_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = witran_mapu }
+		new_bloodline = { set_bloodline_flag = requires_witran_mapu_religion }
+	}
+	else_if = {
+		limit = { religion = tsarutama_reformed }
+		new_bloodline = { set_bloodline_flag = requires_tsarutama_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = tsarutama }
+		new_bloodline = { set_bloodline_flag = requires_tsarutama_religion }
+	}
+	else_if = {
+		limit = { religion = kaaulayawaa_reformed }
+		new_bloodline = { set_bloodline_flag = requires_kaaulayawaa_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = kaaulayawaa }
+		new_bloodline = { set_bloodline_flag = requires_kaaulayawaa_religion }
+	}
+	else_if = {
+		limit = { religion = baniwa_reformed }
+		new_bloodline = { set_bloodline_flag = requires_baniwa_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = baniwa }
+		new_bloodline = { set_bloodline_flag = requires_baniwa_religion }
+	}
+	else_if = {
+		limit = { religion = south_american_reformed }
+		new_bloodline = { set_bloodline_flag = requires_south_american_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = south_american }
+		new_bloodline = { set_bloodline_flag = requires_south_american_religion }
+	}
+	else_if = {
+		limit = { religion = dreamtime_religion_reformed }
+		new_bloodline = { set_bloodline_flag = requires_dreamtime_religion_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = dreamtime_religion }
+		new_bloodline = { set_bloodline_flag = requires_dreamtime_religion_religion }
+	}
+	else_if = {
+		limit = { religion = maori_religion_reformed }
+		new_bloodline = { set_bloodline_flag = requires_maori_religion_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = maori_religion }
+		new_bloodline = { set_bloodline_flag = requires_maori_religion_religion }
+	}
+	else_if = {
+		limit = { religion = ainu_pantheism_reformed }
+		new_bloodline = { set_bloodline_flag = requires_ainu_pantheism_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = ainu_pantheism }
+		new_bloodline = { set_bloodline_flag = requires_ainu_pantheism_religion }
+	}
+	else_if = {
+		limit = { religion = jurchen_pagan_reformed }
+		new_bloodline = { set_bloodline_flag = requires_jurchen_pagan_reformed_religion }
+	}
+	else_if = {
+		limit = { religion = jurchen_pagan }
+		new_bloodline = { set_bloodline_flag = requires_jurchen_pagan_religion }
+	}
+	else_if = {
+		limit = { religion = nat }
+		new_bloodline = { set_bloodline_flag = requires_nat_religion }
+	}
+	else_if = {
+		limit = { religion = sastsana_phi }
+		new_bloodline = { set_bloodline_flag = requires_sastsana_phi_religion }
+	}
+	else_if = {
+		limit = { religion = rmagao }
+		new_bloodline = { set_bloodline_flag = requires_rmagao_religion }
+	}
+	else_if = {
+		limit = { religion = benzhujiao }
+		new_bloodline = { set_bloodline_flag = requires_benzhujiao_religion }
+	}
+	else_if = {
+		limit = { religion = bimojiao }
+		new_bloodline = { set_bloodline_flag = requires_bimojiao_religion }
+	}
+	else_if = {
+		limit = { religion = ua_dab }
+		new_bloodline = { set_bloodline_flag = requires_ua_dab_religion }
+	}
+	else_if = {
+		limit = { religion = nugyauq }
+		new_bloodline = { set_bloodline_flag = requires_nugyauq_religion }
+	}
+	else_if = {
+		limit = { religion = thangiao }
+		new_bloodline = { set_bloodline_flag = requires_thangiao_religion }
+	}
+	else_if = {
+		limit = { religion = shingyo }
+		new_bloodline = { set_bloodline_flag = requires_shingyo_religion }
+	}
+	else_if = {
+		limit = { religion = nihon_shinto }
+		new_bloodline = { set_bloodline_flag = requires_nihon_shinto_religion }
+	}
+	else_if = {
+		limit = { religion = ryukyu_shinto }
+		new_bloodline = { set_bloodline_flag = requires_ryukyu_shinto_religion }
 	}
 }

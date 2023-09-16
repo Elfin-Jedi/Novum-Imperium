@@ -293,9 +293,9 @@ emf_religion_same_as_bloodline_founder = {
 	}
 	trigger_if = {
 		limit = {
-			FROM = { has_bloodline_flag = requires_manichean_religion }
+			FROM = { has_bloodline_flag = requires_mani_religion }
 		}
-		ROOT = { show_scope_change = no religion = manichean }
+		ROOT = { show_scope_change = no religion = mani }
 	}
 	trigger_if = {
 		limit = {
@@ -305,9 +305,9 @@ emf_religion_same_as_bloodline_founder = {
 	}
 	trigger_if = {
 		limit = {
-			FROM = { has_bloodline_flag = requires_yazidi_religion }
+			FROM = { has_bloodline_flag = requires_yazidism_religion }
 		}
-		ROOT = { show_scope_change = no religion = yazidi }
+		ROOT = { show_scope_change = no religion = yazidism }
 	}
 	trigger_if = {
 		limit = {

@@ -169,19 +169,13 @@ character_event = {
 						using_cb = new_crusade
 					}
 				}
-				OR = {
-					religion = norse_pagan
-					religion = norse_pagan_reformed
-				}
+				LI_norse_pagan_trigger = yes
 				crusade_target = {
 					is_located_in = ROOT
 				}
 			}
 			any_liege = {
-				OR = {
-					religion = norse_pagan
-					religion = norse_pagan_reformed
-				}
+				LI_norse_pagan_trigger = yes
 				any_war = {
 					OR = {
 						using_cb = crusade
@@ -201,10 +195,7 @@ character_event = {
 
 	option = {
 		trigger = {
-			OR = {
-				religion = norse_pagan
-				religion = norse_pagan_reformed
-			}
+			LI_norse_pagan_trigger = yes
 		}
 		name = "EVTOPTA8468"
 		add_trait = valhalla_bound
@@ -226,15 +217,11 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		OR = {
-			novum_imperium_is_pagan = yes
-			religion_group = jewish_group
-			religion_group = zoroastrian_group
-		}
 		NOR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
+			religion_group = christian
+			religion_group = muslim
 		}
+		LI_norse_pagan_trigger = no
 		has_crusade_trait_trigger = no
 		OR = {
 			AND = {

@@ -2543,7 +2543,9 @@ character_event = {
 		}
 		piety = 25
 		prestige = -100
+		set_character_flag = straightened_up
 		remove_trait = decadent
+		clr_character_flag = negotiated_to_drop_decadence
 	}
 }
 
@@ -2764,7 +2766,9 @@ character_event = {
 				tooltip = EVTTOOLTIP91352
 			}
 		}
+		set_character_flag = straightened_up
 		remove_trait = decadent
+		clr_character_flag = negotiated_to_drop_decadence
 	}
 	option = {
 		name = EVTOPTC91355 # Bribe (diplo)
@@ -3012,7 +3016,9 @@ character_event = {
 				}
 			}
 		}
+		set_character_flag = straightened_up
 		remove_trait = decadent
+		clr_character_flag = negotiated_to_drop_decadence
 		piety = 100
 		any_spouse = {
 			remove_spouse = ROOT
@@ -3345,7 +3351,9 @@ character_event = {
 				tooltip = EVTTOOLTIP91352
 			}
 		}
+		set_character_flag = straightened_up
 		remove_trait = decadent
+		clr_character_flag = negotiated_to_drop_decadence
 	}
 	option = {
 		name = EVTOPTC91365 # Suicide
@@ -3561,6 +3569,17 @@ character_event = {
 	}
 }
 
+# Resets flag negotiated_to_drop_decadence
+character_event = {
+	id = 91371
+	
+	hide_window = yes
+	
+	is_triggered_only = yes
+	immediate = {
+		clr_character_flag = negotiated_to_drop_decadence
+	}
+}
 # The decadent character tries to bribe dynasty head
 character_event = {
 	id = 91372
@@ -3891,4 +3910,3 @@ character_event = {
 		}
 	}
 }
-

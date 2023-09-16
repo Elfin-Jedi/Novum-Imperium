@@ -810,15 +810,15 @@ emf_sr_set_sr_and_clr_religion_char_flag = {
 	if = {
 		limit = {
 			OR = {
-				has_flag = character_was_manichean
+				has_flag = character_was_mani
 				AND = {
-					religion = manichean
+					religion = mani
 					emf_sr_has_any_religion_char_flag = no
 				}
 			}
 		}
-		set_secret_religion = manichean
-		clr_flag = character_was_manichean
+		set_secret_religion = mani
+		clr_flag = character_was_mani
 		break = yes
 	}
 	if = {
@@ -838,15 +838,15 @@ emf_sr_set_sr_and_clr_religion_char_flag = {
 	if = {
 		limit = {
 			OR = {
-				has_flag = character_was_yazidi
+				has_flag = character_was_yazidism
 				AND = {
-					religion = yazidi
+					religion = yazidism
 					emf_sr_has_any_religion_char_flag = no
 				}
 			}
 		}
-		set_secret_religion = yazidi
-		clr_flag = character_was_yazidi
+		set_secret_religion = yazidism
+		clr_flag = character_was_yazidism
 		break = yes
 	}
 	if = {
@@ -1023,9 +1023,9 @@ emf_sr_add_religion_char_flag = {
 		zoroastrian = { set_flag = character_was_zoroastrian }
 		mazdakism = { set_flag = character_was_mazdakism }
 		zurvanism = { set_flag = character_was_zurvanism }
-		manichean = { set_flag = character_was_manichean }
+		mani = { set_flag = character_was_mani }
 		mandaean = { set_flag = character_was_mandaean }
-		yazidi = { set_flag = character_was_yazidi }
+		yazidism = { set_flag = character_was_yazidism }
 		khurmazta = { set_flag = character_was_khurmazta }
 		jewish = { set_flag = character_was_jewish }
 		samaritan = { set_flag = character_was_samaritan }
@@ -1095,9 +1095,9 @@ emf_sr_clr_religion_char_flag = {
 	clr_flag = character_was_zoroastrian
 	clr_flag = character_was_mazdakism
 	clr_flag = character_was_zurvanism
-	clr_flag = character_was_manichean
+	clr_flag = character_was_mani
 	clr_flag = character_was_mandaean
-	clr_flag = character_was_yazidi
+	clr_flag = character_was_yazidism
 	clr_flag = character_was_khurmazta
 	clr_flag = character_was_jewish
 	clr_flag = character_was_samaritan
@@ -1282,14 +1282,14 @@ emf_sr_event_target_old_religion_from_flag = {
 		character_was_zurvanism = {
 			zurvanism = { save_event_target_as = old_religion }
 		}
-		character_was_manichean = {
-			manichean = { save_event_target_as = old_religion }
+		character_was_mani = {
+			mani = { save_event_target_as = old_religion }
 		}
 		character_was_mandaean = {
 			mandaean = { save_event_target_as = old_religion }
 		}
-		character_was_yazidi = {
-			yazidi = { save_event_target_as = old_religion }
+		character_was_yazidism = {
+			yazidism = { save_event_target_as = old_religion }
 		}
 		character_was_khurmazta = {
 			khurmazta = { save_event_target_as = old_religion }
@@ -2063,16 +2063,16 @@ emf_sr_flip_secret_community_provinces = {
 				}
 			}
 		}
-		secret_religious_society_manichean = {
+		secret_religious_society_mani = {
 			ROOT = {
 				any_demesne_province = {
-					limit = { has_province_modifier = secret_manichean_community }
-					religion = manichean
+					limit = { has_province_modifier = secret_mani_community }
+					religion = mani
 					religion_authority = {
 						modifier = province_converted_to
 						years = 5
 					}
-					remove_province_modifier = secret_manichean_community
+					remove_province_modifier = secret_mani_community
 				}
 			}
 		}
@@ -2089,16 +2089,16 @@ emf_sr_flip_secret_community_provinces = {
 				}
 			}
 		}
-		secret_religious_society_yazidi = {
+		secret_religious_society_yazidism = {
 			ROOT = {
 				any_demesne_province = {
-					limit = { has_province_modifier = secret_yazidi_community }
-					religion = yazidi
+					limit = { has_province_modifier = secret_yazidism_community }
+					religion = yazidism
 					religion_authority = {
 						modifier = province_converted_to
 						years = 5
 					}
-					remove_province_modifier = secret_yazidi_community
+					remove_province_modifier = secret_yazidism_community
 				}
 			}
 		}
@@ -2954,16 +2954,16 @@ emf_sr_flip_secret_community_provinces_of_PREV = {
 				}
 			}
 		}
-		secret_religious_society_manichean = {
+		secret_religious_society_mani = {
 			PREV = {
 				any_demesne_province = {
-					limit = { has_province_modifier = secret_manichean_community }
-					religion = manichean
+					limit = { has_province_modifier = secret_mani_community }
+					religion = mani
 					religion_authority = {
 						modifier = province_converted_to
 						years = 5
 					}
-					remove_province_modifier = secret_manichean_community
+					remove_province_modifier = secret_mani_community
 				}
 			}
 		}
@@ -2980,16 +2980,16 @@ emf_sr_flip_secret_community_provinces_of_PREV = {
 				}
 			}
 		}
-		secret_religious_society_yazidi = {
+		secret_religious_society_yazidism = {
 			PREV = {
 				any_demesne_province = {
-					limit = { has_province_modifier = secret_yazidi_community }
-					religion = yazidi
+					limit = { has_province_modifier = secret_yazidism_community }
+					religion = yazidism
 					religion_authority = {
 						modifier = province_converted_to
 						years = 5
 					}
-					remove_province_modifier = secret_yazidi_community
+					remove_province_modifier = secret_yazidism_community
 				}
 			}
 		}
@@ -3732,15 +3732,15 @@ emf_sr_flip_secret_community_provinces_to_my_religion = {
 				# remove_province_modifier = secret_zurvanism_community
 			}
 		}
-		manichean = {
+		mani = {
 			any_demesne_province = {
-				limit = { has_province_modifier = secret_manichean_community }
-				religion = manichean
+				limit = { has_province_modifier = secret_mani_community }
+				religion = mani
 				religion_authority = {
 					modifier = province_converted_to
 					years = 5
 				}
-				# remove_province_modifier = secret_manichean_community
+				# remove_province_modifier = secret_mani_community
 			}
 		}
 		mandaean = {
@@ -3754,15 +3754,15 @@ emf_sr_flip_secret_community_provinces_to_my_religion = {
 				# remove_province_modifier = secret_mandaean_community
 			}
 		}
-		yazidi = {
+		yazidism = {
 			any_demesne_province = {
-				limit = { has_province_modifier = secret_yazidi_community }
-				religion = yazidi
+				limit = { has_province_modifier = secret_yazidism_community }
+				religion = yazidism
 				religion_authority = {
 					modifier = province_converted_to
 					years = 5
 				}
-				# remove_province_modifier = secret_yazidi_community
+				# remove_province_modifier = secret_yazidism_community
 			}
 		}
 		khurmazta = {
@@ -4031,14 +4031,14 @@ emf_sr_set_adopt_faith_flag_of_my_cult_on_ROOT = {
 		secret_religious_society_zurvanism = {
 			ROOT = { set_flag = adopt_faith_zurvanism }
 		}
-		secret_religious_society_manichean = {
-			ROOT = { set_flag = adopt_faith_manichean }
+		secret_religious_society_mani = {
+			ROOT = { set_flag = adopt_faith_mani }
 		}
 		secret_religious_society_mandaean = {
 			ROOT = { set_flag = adopt_faith_mandaean }
 		}
-		secret_religious_society_yazidi = {
-			ROOT = { set_flag = adopt_faith_yazidi }
+		secret_religious_society_yazidism = {
+			ROOT = { set_flag = adopt_faith_yazidism }
 		}
 		secret_religious_society_khurmazta = {
 			ROOT = { set_flag = adopt_faith_khurmazta }
@@ -4160,9 +4160,9 @@ emf_sr_adopt_faith_from_flag = {
 		adopt_faith_zoroastrian = { religion = zoroastrian }
 		adopt_faith_mazdakism = { religion = mazdakism }
 		adopt_faith_zurvanism = { religion = zurvanism }
-		adopt_faith_manichean = { religion = manichean }
+		adopt_faith_mani = { religion = mani }
 		adopt_faith_mandaean = { religion = mandaean }
-		adopt_faith_yazidi = { religion = yazidi }
+		adopt_faith_yazidism = { religion = yazidism }
 		adopt_faith_khurmazta = { religion = khurmazta }
 		adopt_faith_jewish = { religion = jewish }
 		adopt_faith_samaritan = { religion = samaritan }
@@ -4305,9 +4305,9 @@ emf_sr_clr_adopt_faith_flag = {
 	clr_flag = adopt_faith_zoroastrian
 	clr_flag = adopt_faith_mazdakism
 	clr_flag = adopt_faith_zurvanism
-	clr_flag = adopt_faith_manichean
+	clr_flag = adopt_faith_mani
 	clr_flag = adopt_faith_mandaean
-	clr_flag = adopt_faith_yazidi
+	clr_flag = adopt_faith_yazidism
 	clr_flag = adopt_faith_khurmazta
 	clr_flag = adopt_faith_jewish
 	clr_flag = adopt_faith_samaritan
@@ -4493,14 +4493,14 @@ emf_sr_set_prov_flip_char_flag_of_my_cult_on_ROOT = {
 		secret_religious_society_zurvanism = {
 			ROOT = { set_flag = sr_zurvanism_prov_flip }
 		}
-		secret_religious_society_manichean = {
-			ROOT = { set_flag = sr_manichean_prov_flip }
+		secret_religious_society_mani = {
+			ROOT = { set_flag = sr_mani_prov_flip }
 		}
 		secret_religious_society_mandaean = {
 			ROOT = { set_flag = sr_mandaean_prov_flip }
 		}
-		secret_religious_society_yazidi = {
-			ROOT = { set_flag = sr_yazidi_prov_flip }
+		secret_religious_society_yazidism = {
+			ROOT = { set_flag = sr_yazidism_prov_flip }
 		}
 		secret_religious_society_khurmazta = {
 			ROOT = { set_flag = sr_khurmazta_prov_flip }
@@ -5217,17 +5217,17 @@ emf_sr_flip_secret_community_provinces_by_prov_flip_char_flag = {
 			}
 			clr_flag = sr_zurvanism_prov_flip
 		}
-		sr_manichean_prov_flip = {
+		sr_mani_prov_flip = {
 			any_demesne_province = {
-				limit = { has_province_modifier = secret_manichean_community }
-				religion = manichean
+				limit = { has_province_modifier = secret_mani_community }
+				religion = mani
 				religion_authority = {
 					modifier = province_converted_to
 					years = 5
 				}
-				remove_province_modifier = secret_manichean_community
+				remove_province_modifier = secret_mani_community
 			}
-			clr_flag = sr_manichean_prov_flip
+			clr_flag = sr_mani_prov_flip
 		}
 		sr_mandaean_prov_flip = {
 			any_demesne_province = {
@@ -5241,17 +5241,17 @@ emf_sr_flip_secret_community_provinces_by_prov_flip_char_flag = {
 			}
 			clr_flag = sr_mandaean_prov_flip
 		}
-		sr_yazidi_prov_flip = {
+		sr_yazidism_prov_flip = {
 			any_demesne_province = {
-				limit = { has_province_modifier = secret_yazidi_community }
-				religion = yazidi
+				limit = { has_province_modifier = secret_yazidism_community }
+				religion = yazidism
 				religion_authority = {
 					modifier = province_converted_to
 					years = 5
 				}
-				remove_province_modifier = secret_yazidi_community
+				remove_province_modifier = secret_yazidism_community
 			}
-			clr_flag = sr_yazidi_prov_flip
+			clr_flag = sr_yazidism_prov_flip
 		}
 		sr_khurmazta_prov_flip = {
 			any_demesne_province = {
@@ -5641,9 +5641,9 @@ emf_sr_add_secret_community_to_target_province = {
 				add_province_modifier = { name = secret_zurvanism_community duration = -1 }
 			}
 		}
-		manichean = {
+		mani = {
 			event_target:target_province = {
-				add_province_modifier = { name = secret_manichean_community duration = -1 }
+				add_province_modifier = { name = secret_mani_community duration = -1 }
 			}
 		}
 		mandaean = {
@@ -5651,9 +5651,9 @@ emf_sr_add_secret_community_to_target_province = {
 				add_province_modifier = { name = secret_mandaean_community duration = -1 }
 			}
 		}
-		yazidi = {
+		yazidism = {
 			event_target:target_province = {
-				add_province_modifier = { name = secret_yazidi_community duration = -1 }
+				add_province_modifier = { name = secret_yazidism_community duration = -1 }
 			}
 		}
 		khurmazta = {
@@ -6584,8 +6584,8 @@ emf_sr_ai_try_to_join_society = {
 			emf_sr_set_grandmaster_if_none = yes
 		}
 		150 = {
-			trigger = { can_join_society = secret_religious_society_manichean }
-			join_society = secret_religious_society_manichean
+			trigger = { can_join_society = secret_religious_society_mani }
+			join_society = secret_religious_society_mani
 			emf_sr_add_random_society_influence_if_small = yes
 			emf_sr_set_grandmaster_if_none = yes
 		}
@@ -6596,8 +6596,8 @@ emf_sr_ai_try_to_join_society = {
 			emf_sr_set_grandmaster_if_none = yes
 		}
 		150 = {
-			trigger = { can_join_society = secret_religious_society_yazidi }
-			join_society = secret_religious_society_yazidi
+			trigger = { can_join_society = secret_religious_society_yazidism }
+			join_society = secret_religious_society_yazidism
 			emf_sr_add_random_society_influence_if_small = yes
 			emf_sr_set_grandmaster_if_none = yes
 		}

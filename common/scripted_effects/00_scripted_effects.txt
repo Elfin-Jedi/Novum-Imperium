@@ -4102,102 +4102,65 @@ add_cat_effect = {
 add_crusade_trait_effect = {
 	if = {
 		limit = {
-			OR = {
-				religion = norse_pagan
-				religion = norse_pagan_reformed
-			}
+			LI_norse_pagan_trigger = yes
 		}
 		add_trait = valhalla_bound
 		break = yes
 	}
 	if = {
 		limit = {
-			OR = {
-				religion = tengri_pagan
-				religion = tengri_pagan_reformed
-			}
+			religion_group = tengri_group
 		}
 		add_trait = tengri_warrior
 		break = yes
 	}
 	if = {
 		limit = {
-			OR = {
-				religion = baltic_pagan
-				religion = baltic_pagan_reformed
-			}
+			religion_group = baltic_group
 		}
 		add_trait = romuvas_own
 		break = yes
 	}
 	if = {
 		limit = {
-			OR = {
-				religion = finnish_pagan
-				religion = finnish_pagan_reformed
-			}
+			religion_group = finnish_group
 		}
 		add_trait = ukkos_shield
 		break = yes
 	}
 	if = {
 		limit = {
-			OR = {
-				religion = aztec
-				religion = aztec_reformed
-			}
+			religion_group = mesoamerican_rel_group
 		}
 		add_trait = eagle_warrior
 		break = yes
 	}
 	if = {
 		limit = {
-			OR = {
-				religion = slavic_pagan
-				religion = slavic_pagan_reformed
-			}
+			religion_group = slavic_group
 		}
 		add_trait = peruns_chosen
 		break = yes
 	}
 	if = {
 		limit = {
-			OR = {
-				religion = west_african_pagan
-				religion = west_african_pagan_reformed
-			}
+			religion_group = serer_group
 		}
 		add_trait = nyames_shield
 		break = yes
 	}
 	if = {
 		limit = {
-			OR = {
-				religion = zun_pagan
-				religion = zun_pagan_reformed
-			}
+			religion_group = sol_group
 		}
 		add_trait = sun_warrior
 		break = yes
 	}
 	if = {
 		limit = {
-			OR = {
-				religion = hellenic_pagan
-				religion = hellenic_pagan_reformed
-			}
+			religion_group = graecoroman_group
 		}
-		add_trait = ares_own
-		break = yes
-	}
-	if = {
-		limit = {
-			OR = {
-				religion = bon
-				religion = bon_reformed
-			}
-		}
-		add_trait = kailash_guardian
+		add_trait = hetairos
 		break = yes
 	}
 	if = {
@@ -4226,6 +4189,126 @@ add_crusade_trait_effect = {
 			religion_group = jewish_group
 		}
 		add_trait = shaddai
+		break = yes
+	}
+	if = {
+		limit = {
+			religion_group = mithra_group
+		}
+		add_trait = leo_mithras
+		break = yes
+	}
+	if = {
+		limit = {
+			religion = cybele_reformed
+		}
+		add_trait = korybantes
+		break = yes
+	}
+	if = {
+		limit = {
+			religion = ethiopian_war_reformed
+		}
+		add_trait = son_of_mahrem
+		break = yes
+	}
+	if = {
+		limit = {
+			religion = almaqah
+		}
+		add_trait = mukarrib
+		break = yes
+	}
+	if = {
+		limit = {
+			religion = zande_pagan_reformed
+		}
+		add_trait = azande
+		break = yes
+	}
+	if = {
+		limit = {
+			religion = zulu_pagan_reformed
+		}
+		add_trait = induna
+		break = yes
+	}
+	if = {
+		limit = {
+			religion = nyau
+		}
+		add_trait = nyau_akakairo
+		break = yes
+	}
+	if = {
+		limit = {
+			religion = berber_pagan_reformed
+		}
+		add_trait = son_of_ifri
+		break = yes
+	}
+	if = {
+		limit = {
+			OR = {
+				religion_group = bud_group
+				religion_group = chinese_group
+			}
+		}
+		add_trait = gongfu_warrior
+		break = yes
+	}
+	if = {
+		limit = {
+			religion_group = zal_group
+		}
+		add_trait = dragon_knight
+		break = yes
+	}
+	if = {
+		limit = {
+			religion = mani
+		}
+		add_trait = guardian_of_elect
+		break = yes
+	}
+	if = {
+		limit = {
+			religion = mani_mithra
+		}
+		add_trait = seal_holder
+		break = yes
+	}
+	if = {
+		limit = {
+			religion = ahriman_reformed
+		}
+		add_trait = warrior_of_light
+		break = yes
+	}
+	if = {
+		limit = {
+			religion_group = egyptian_group
+			NOR = {
+				egyptian_pagan
+				egyptian_pagan_reformed
+				aten_pagan
+			}
+		}
+		add_trait = medjay
+		break = yes
+	}
+	if = {
+		limit = {
+			religion = murugan_reformed
+		}
+		add_trait = vel_wielder
+		break = yes
+	}
+	if = {
+		limit = {
+			religion = illuyanka_reformed
+		}
+		add_trait = serpent_warrior
 		break = yes
 	}
     if = {
@@ -4258,32 +4341,26 @@ add_crusade_trait_effect = {
 	### ACR ###
 	if = {
 		limit = {
-			OR = {
-				religion = celtic_pagan
-				AND = {
-					religion = celtic_pagan_reformed
-					NOT = { has_religion_feature = religion_matriarchal }
-				}
+			religion_group = celtic_group
+			NOT = {
+				religion = britannic_pagan
 			}
 		}
 		add_trait = lughs_own
 	}
 	if = {
 		limit = {
-			OR = {
-				religion = britannic_pagan
-				AND = {
-					religion = celtic_pagan_reformed
-					has_religion_feature = religion_matriarchal
-				}
-			}
+			religion = britannic_pagan
 		}
 
 		add_trait = morrigan
 	}
 	if = {
 		limit = {
-			religion_openly_egyptian_or_reformed_trigger = yes
+			OR = {
+				egyptian_pagan_reformed
+				egyptian_pagan
+			}
 		}
 		add_trait = montu
 	}
@@ -4336,7 +4413,6 @@ pay_back_assassins_effect = {
 				if = {
 					limit = {
 						ai = yes
-						primary_title = { title = d_hashshashin }
 					}
 					wealth = 250
 				}
@@ -4351,7 +4427,6 @@ pay_back_assassins_effect = {
 				if = {
 					limit = {
 						ai = yes
-						primary_title = { title = d_hashshashin }
 					}
 					wealth = 300
 				}
@@ -4366,7 +4441,6 @@ pay_back_assassins_effect = {
 				if = {
 					limit = {
 						ai = yes
-						primary_title = { title = d_hashshashin }
 					}
 					wealth = 500
 				}
@@ -5286,10 +5360,10 @@ join_from_devil_worshiper_society_effect = {
 		}
 		if = {
 			limit = {
-				society_member_of = the_cold_ones
+				society_member_of = the_neo_sarkites
 			}
 			ROOT = {
-				join_society = the_cold_ones
+				join_society = the_neo_sarkites
 			}
 		}
 		if = {
@@ -5310,10 +5384,42 @@ join_from_devil_worshiper_society_effect = {
 		}
 		if = {
 			limit = {
+				society_member_of = the_cult_of_balor
+			}
+			ROOT = {
+				join_society = the_cult_of_balor
+			}
+		}
+		if = {
+			limit = {
+				society_member_of = cult_of_angra_mainyu
+			}
+			ROOT = {
+				join_society = cult_of_angra_mainyu
+			}
+		}
+		if = {
+			limit = {
 				society_member_of = the_trollcrafters
 			}
 			ROOT = {
 				join_society = the_trollcrafters
+			}
+		}
+		if = {
+			limit = {
+				society_member_of = arab_jinn_sorcerers
+			}
+			ROOT = {
+				join_society = arab_jinn_sorcerers
+			}
+		}
+		if = {
+			limit = {
+				society_member_of = cult_of_apep
+			}
+			ROOT = {
+				join_society = cult_of_apep
 			}
 		}
 		if = {
@@ -5338,6 +5444,38 @@ join_from_devil_worshiper_society_effect = {
 			}
 			ROOT = {
 				join_society = followers_of_ahuiateteo
+			}
+		}
+		if = {
+			limit = {
+				society_member_of = the_ghost_gatherers
+			}
+			ROOT = {
+				join_society = the_ghost_gatherers
+			}
+		}
+		if = {
+			limit = {
+				society_member_of = the_underworld_triad
+			}
+			ROOT = {
+				join_society = the_underworld_triad
+			}
+		}
+		if = {
+			limit = {
+				society_member_of = the_sacrificers
+			}
+			ROOT = {
+				join_society = the_sacrificers
+			}
+		}
+		if = {
+			limit = {
+				society_member_of = the_procession_of_pox
+			}
+			ROOT = {
+				join_society = the_procession_of_pox
 			}
 		}
 		
@@ -5447,12 +5585,20 @@ join_prev_devil_worshiper_society_effect = {
 		join_society = the_satanists
 	}
 	if = {
-		limit = { PREV = { society_member_of = the_cold_ones } }
-		join_society = the_cold_ones
+		limit = { PREV = { society_member_of = the_neo_sarkites } }
+		join_society = the_neo_sarkites
 	}
 	if = {
 		limit = { PREV = { society_member_of = the_plaguebringers } }
 		join_society = the_plaguebringers
+	}
+	if = {
+		limit = { PREV = { society_member_of = the_cult_of_balor } }
+		join_society = the_cult_of_balor
+	}
+	if = {
+		limit = { PREV = { society_member_of = cult_of_angra_mainyu } }
+		join_society = cult_of_angra_mainyu
 	}
 	if = {
 		limit = { PREV = { society_member_of = the_cult_of_kali } }
@@ -5461,6 +5607,14 @@ join_prev_devil_worshiper_society_effect = {
 	if = {
 		limit = { PREV = { society_member_of = the_trollcrafters } }
 		join_society = the_trollcrafters
+	}
+	if = {
+		limit = { PREV = { society_member_of = arab_jinn_sorcerers } }
+		join_society = arab_jinn_sorcerers
+	}
+	if = {
+		limit = { PREV = { society_member_of = cult_of_apep } }
+		join_society = cult_of_apep
 	}
 	if = {
 		limit = { PREV = { society_member_of = the_bacchants } }
@@ -5473,6 +5627,22 @@ join_prev_devil_worshiper_society_effect = {
 	if = {
 		limit = { PREV = { society_member_of = followers_of_ahuiateteo } }
 		join_society = followers_of_ahuiateteo
+	}
+	if = {
+		limit = { PREV = { society_member_of = the_ghost_gatherers } }
+		join_society = the_ghost_gatherers
+	}
+	if = {
+		limit = { PREV = { society_member_of = the_underworld_triad } }
+		join_society = the_underworld_triad
+	}
+	if = {
+		limit = { PREV = { society_member_of = the_sacrificers } }
+		join_society = the_sacrificers
+	}
+	if = {
+		limit = { PREV = { society_member_of = the_procession_of_pox } }
+		join_society = the_procession_of_pox
 	}
 	
 	## ACR ###
@@ -5627,19 +5797,12 @@ give_this_warrior_lodge_religion_effect = { #Mostly for spawned characters.
 	if = {
 		limit = { 
 			society_member_of = warrior_lodge_west_african 
-			NOT = { has_global_flag = west_african_reformation }
-		}
-		religion = west_african_pagan
-	}
-	if = {
-		limit = { 
-			society_member_of = warrior_lodge_west_african 
 		}
 		random_list = {
-            10 = {
+            33 = {
                 religion = bori
             }
-            10 = {
+            33 = {
                 if = {
                     limit = { has_global_flag = a_tag_roog_reformation }
                     religion = a_tag_roog_reformed
@@ -5648,7 +5811,7 @@ give_this_warrior_lodge_religion_effect = { #Mostly for spawned characters.
                     religion = a_tag_roog
                 }
             }
-            10 = {
+            33 = {
                 if = {
                     limit = { has_global_flag = amazigh_reformation }
                     religion = amazigh_reformed
@@ -5661,17 +5824,17 @@ give_this_warrior_lodge_religion_effect = { #Mostly for spawned characters.
 	}
 	if = {
 		limit = { 
-			society_member_of = warrior_lodge_zun 
-			NOT = { has_global_flag = zun_reformation }
+			society_member_of = warrior_lodge_hellenic 
+			NOT = { has_global_flag = hellenic_reformation }
 		}
-		religion = zun_pagan
+		religion = graeco_roman
 	}
 	if = {
 		limit = { 
-			society_member_of = warrior_lodge_zun 
-			has_global_flag = zun_reformation
+			society_member_of = warrior_lodge_hellenic 
+			has_global_flag = hellenic_reformation
 		}
-		religion = zun_pagan_reformed
+		religion = graeco_roman_reformed
 	}
 	if = {
 		limit = { 
@@ -5686,20 +5849,6 @@ give_this_warrior_lodge_religion_effect = { #Mostly for spawned characters.
 			has_global_flag = bon_reformation
 		}
 		religion = bon_reformed
-	}
-	if = {
-		limit = { 
-			society_member_of = warrior_lodge_hellenic 
-			NOT = { has_global_flag = hellenic_reformation }
-		}
-		religion = hellenic_pagan
-	}
-	if = {
-		limit = { 
-			society_member_of = warrior_lodge_hellenic 
-			has_global_flag = hellenic_reformation
-		}
-		religion = hellenic_pagan_reformed
 	}
 	if = {
 		limit = { 
@@ -5880,6 +6029,34 @@ join_prev_monastic_order_society = {
 	if = {
 		limit = { PREV = { society_member_of = monastic_order_jain } }
 		join_society = monastic_order_jain
+	}
+	if = {
+		limit = { PREV = { society_member_of = monastic_order_adoptionist } }
+		join_society = monastic_order_adoptionist
+	}
+	if = {
+		limit = { PREV = { society_member_of = monastic_order_apollinarist } }
+		join_society = monastic_order_apollinarist
+	}
+	if = {
+		limit = { PREV = { society_member_of = monastic_order_iconoclast } }
+		join_society = monastic_order_iconoclast
+	}
+	if = {
+		limit = { PREV = { society_member_of = monastic_order_melkite } }
+		join_society = monastic_order_melkite
+	}
+	if = {
+		limit = { PREV = { society_member_of = monastic_order_monothelite } }
+		join_society = monastic_order_monothelite
+	}
+	if = {
+		limit = { PREV = { society_member_of = monastic_order_montanist } }
+		join_society = monastic_order_montanist
+	}
+	if = {
+		limit = { PREV = { society_member_of = monastic_order_pelagian } }
+		join_society = monastic_order_pelagian
 	}
 	if = {
 		limit = { PREV = { society_member_of = monastic_order_stoics } }
@@ -25124,6 +25301,588 @@ spawn_religious_reinforcements_effect = {
 	}
 }
 
+spawn_slave_army_effect = {
+	spawn_unit = {
+		province = ROOT
+		home = ROOT
+		owner = THIS
+		#leader = THIS
+		scaled_by_biggest_garrison = 0.15
+		troops = { light_infantry = { 1 1 } }
+		attrition = 1.0
+	}
+	create_random_soldier = {
+		random_traits = yes
+		dynasty = none
+		religion = ROOT
+		culture = random
+		female = no
+		trait = liberator
+		trait = former_slave
+	}
+	new_character = {
+		random_list = {
+			10 = { add_trait = skilled_warrior }
+			30 = { add_trait = trained_warrior }
+			60 = { add_trait = poor_warrior }
+		}
+		set_character_flag = escaped_slave
+		spawn_unit = {
+			province = ROOT
+			home = ROOT
+			owner = PREV
+			#leader = THIS
+			scaled_by_biggest_garrison = 0.06
+			troops = { light_infantry = { 1 1 } }
+			attrition = 1.0
+		}
+	}
+	create_random_soldier = {
+		random_traits = yes
+		dynasty = none
+		religion = ROOT
+		culture = random
+		female = no
+		trait = liberator
+		trait = former_slave
+	}
+	new_character = {
+		random_list = {
+			10 = { add_trait = skilled_warrior }
+			30 = { add_trait = trained_warrior }
+			60 = { add_trait = poor_warrior }
+		}
+		set_character_flag = escaped_slave
+		spawn_unit = {
+			province = ROOT
+			home = ROOT
+			owner = PREV
+			#leader = THIS
+			scaled_by_biggest_garrison = 0.06
+			troops = { light_infantry = { 1 1 } }
+			attrition = 1.0
+		}
+	}
+	if = {
+		limit = { can_use_dragon_abilities_trigger = yes }
+		create_random_soldier = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = random
+			female = no
+			trait = liberator
+			trait = former_slave
+		}
+		new_character = {
+			random_list = {
+				10 = { add_trait = skilled_warrior }
+				30 = { add_trait = trained_warrior }
+				60 = { add_trait = poor_warrior }
+			}
+			set_character_flag = escaped_slave
+			spawn_unit = {
+				province = ROOT
+				home = ROOT
+				owner = PREV
+				#leader = THIS
+				scaled_by_biggest_garrison = 0.15
+				troops = { light_infantry = { 1 1 } }
+				attrition = 1.0
+			}
+		}
+	}
+}
+spawn_slave_reinforcements_effect = {
+	create_random_soldier = {
+		random_traits = yes
+		dynasty = none
+		religion = FROM
+		culture = random
+		female = no
+		trait = liberator
+		trait = former_slave
+	}
+	new_character = {
+		spawn_unit = {
+			province = FROM
+			home = FROM
+			owner = ROOT
+			#leader = THIS
+			scaled_by_biggest_garrison = 0.1
+			troops = { light_infantry = { 1 1 } }
+			attrition = 1.0
+		}
+		random_list = {
+			25 = { add_trait = poor_warrior }
+			55 = { add_trait = trained_warrior }
+			10 = { add_trait = skilled_warrior }
+		}
+		set_character_flag = escaped_slave
+	}
+	create_character = {
+		random_traits = yes
+		dynasty = none
+		religion = FROM
+		culture = random
+		female = no
+		trait = liberator
+		trait = former_slave
+	}
+	new_character = {
+		spawn_unit = {
+			province = FROM
+			home = FROM
+			owner = ROOT
+			#leader = THIS
+			scaled_by_biggest_garrison = 0.1
+			troops = { light_infantry = { 1 1 } }
+			attrition = 1.0
+		}
+		set_character_flag = escaped_slave
+		random_list = {
+			25 = { add_trait = poor_warrior }
+			55 = { add_trait = trained_warrior }
+			10 = { add_trait = skilled_warrior }
+		}
+	}
+	create_character = {
+		random_traits = yes
+		dynasty = none
+		religion = FROM
+		culture = random
+		female = no
+		trait = liberator
+		trait = former_slave
+	}
+	new_character = {
+		spawn_unit = {
+			province = FROM
+			home = FROM
+			owner = ROOT
+			#leader = THIS
+			scaled_by_biggest_garrison = 0.1
+			troops = { light_infantry = { 1 1 } }
+			attrition = 1.0
+		}
+		set_character_flag = escaped_slave
+		random_list = {
+			25 = { add_trait = poor_warrior }
+			55 = { add_trait = trained_warrior }
+			10 = { add_trait = skilled_warrior }
+		}
+	}
+}
+
+spawn_martial_army_effect = {
+	if = {
+		limit = {
+			has_game_rule = {
+				name = provincial_revolt_strength
+				value = default
+			}
+		}
+		random_list = {
+			34 = {
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					#leader = THIS
+					scaled_by_biggest_garrison = 0.75
+					troops = {
+						archers = { 6 6 }
+						light_cavalry = { 4 4 }
+						light_infantry = { 10 10 }
+					}
+					attrition = 1.0
+				}
+				create_character = {
+					random_traits = yes
+					dynasty = none
+					religion = THIS
+					culture = THIS
+					female = no
+					age = 30
+					trait = martial_challenger
+					trait = tough_soldier
+				}
+				new_character = {
+					spawn_unit = {
+						province = ROOT
+						home = ROOT
+						owner = PREV
+						scaled_by_biggest_garrison = 0.75
+						troops = {
+							archers = { 6 6 }
+							light_cavalry = { 4 4 }
+							light_infantry = { 10 10 }
+						}
+						attrition = 1.0
+						disband_on_peace = yes
+					}
+				}
+				create_character = {
+					random_traits = yes
+					dynasty = none
+					religion = THIS
+					culture = THIS
+					female = no
+					age = 31
+					trait = martial_challenger
+					trait = tough_soldier
+				}
+				new_character = {
+					spawn_unit = {
+						province = ROOT
+						home = ROOT
+						owner = PREV
+						scaled_by_biggest_garrison = 0.75
+						troops = {
+							archers = { 6 6 }
+							light_cavalry = { 4 4 }
+							light_infantry = { 10 10 }
+						}
+						attrition = 1.0
+						disband_on_peace = yes
+					}
+				}
+			}
+			33 = {
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					#leader = THIS
+					scaled_by_biggest_garrison = 0.5
+					troops = {
+						archers = { 6 6 }
+						light_cavalry = { 4 4 }
+						light_infantry = { 10 10 }
+					}
+					attrition = 1.0
+				}
+				create_character = {
+					random_traits = yes
+					dynasty = none
+					religion = THIS
+					culture = THIS
+					female = no
+					age = 30
+					trait = martial_challenger
+					trait = tough_soldier
+				}
+				new_character = {
+					spawn_unit = {
+						province = ROOT
+						home = ROOT
+						owner = PREV
+						scaled_by_biggest_garrison = 0.5
+						troops = {
+							archers = { 6 6 }
+							light_cavalry = { 4 4 }
+							light_infantry = { 10 10 }
+						}
+						attrition = 1.0
+						disband_on_peace = yes
+					}
+				}
+				create_character = {
+					random_traits = yes
+					dynasty = none
+					religion = THIS
+					culture = THIS
+					female = no
+					age = 31
+					trait = martial_challenger
+					trait = tough_soldier
+				}
+				new_character = {
+					spawn_unit = {
+						province = ROOT
+						home = ROOT
+						owner = PREV
+						scaled_by_biggest_garrison = 0.5
+						troops = {
+							archers = { 6 6 }
+							light_cavalry = { 4 4 }
+							light_infantry = { 10 10 }
+						}
+						attrition = 1.0
+						disband_on_peace = yes
+					}
+				}
+			}
+			33 = {
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					#leader = THIS
+					scaled_by_biggest_garrison = 0.75
+					troops = {
+						archers = { 6 6 }
+						light_cavalry = { 3 3 }
+						light_infantry = { 11 11 }
+					}
+					attrition = 1.0
+				}
+				create_character = {
+					random_traits = yes
+					dynasty = none
+					religion = THIS
+					culture = THIS
+					female = no
+					age = 30
+					trait = martial_challenger
+					trait = tough_soldier
+				}
+				new_character = {
+					spawn_unit = {
+						province = ROOT
+						home = ROOT
+						owner = PREV
+						scaled_by_biggest_garrison = 0.75
+						troops = {
+							archers = { 6 6 }
+							light_cavalry = { 3 3 }
+							light_infantry = { 11 11 }
+						}
+						attrition = 1.0
+						disband_on_peace = yes
+					}
+				}
+				create_character = {
+					random_traits = yes
+					dynasty = none
+					religion = THIS
+					culture = THIS
+					female = no
+					age = 31
+					trait = martial_challenger
+					trait = tough_soldier
+				}
+				new_character = {
+					spawn_unit = {
+						province = ROOT
+						home = ROOT
+						owner = PREV
+						scaled_by_biggest_garrison = 0.75
+						troops = {
+							archers = { 6 6 }
+							light_cavalry = { 3 3 }
+							light_infantry = { 11 11 }
+						}
+						attrition = 1.0
+						disband_on_peace = yes
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_game_rule = {
+					name = provincial_revolt_strength
+					value = default
+				}
+			}
+		}
+		random_list = {
+			34 = {
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					#leader = THIS
+					scaled_by_biggest_garrison = 0.5
+					troops = {
+						archers = { 6 6 }
+						light_cavalry = { 3 3 }
+						light_infantry = { 11 11 }
+					}
+					attrition = 0
+				}
+				create_character = {
+					random_traits = yes
+					dynasty = none
+					religion = THIS
+					culture = THIS
+					female = no
+					age = 30
+					trait = martial_challenger
+					trait = tough_soldier
+				}
+				new_character = {
+					spawn_unit = {
+						province = ROOT
+						home = ROOT
+						owner = PREV
+						scaled_by_biggest_garrison = 0.5
+						troops = {
+							archers = { 6 6 }
+							light_cavalry = { 3 3 }
+							light_infantry = { 11 11 }
+						}
+						attrition = 0
+						disband_on_peace = yes
+					}
+				}
+				create_character = {
+					random_traits = yes
+					dynasty = none
+					religion = THIS
+					culture = THIS
+					female = no
+					age = 31
+					trait = martial_challenger
+					trait = tough_soldier
+				}
+				new_character = {
+					spawn_unit = {
+						province = ROOT
+						home = ROOT
+						owner = PREV
+						scaled_by_biggest_garrison = 0.5
+						troops = {
+							archers = { 6 6 }
+							light_cavalry = { 3 3 }
+							light_infantry = { 11 11 }
+						}
+						attrition = 0
+						disband_on_peace = yes
+					}
+				}
+			}
+			33 = {
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					#leader = THIS
+					scaled_by_biggest_garrison = 0.75
+					troops = {
+						archers = { 6 6 }
+						light_infantry = { 14 14 }
+					}
+					attrition = 0
+				}
+				create_character = {
+					random_traits = yes
+					dynasty = none
+					religion = THIS
+					culture = THIS
+					female = no
+					age = 30
+					trait = martial_challenger
+					trait = tough_soldier
+				}
+				new_character = {
+					spawn_unit = {
+						province = ROOT
+						home = ROOT
+						owner = PREV
+						scaled_by_biggest_garrison = 0.75
+						troops = {
+							archers = { 6 6 }
+							light_infantry = { 14 14 }
+						}
+						attrition = 0
+						disband_on_peace = yes
+					}
+				}
+				create_character = {
+					random_traits = yes
+					dynasty = none
+					religion = THIS
+					culture = THIS
+					female = no
+					age = 31
+					trait = martial_challenger
+					trait = tough_soldier
+				}
+				new_character = {
+					spawn_unit = {
+						province = ROOT
+						home = ROOT
+						owner = PREV
+						scaled_by_biggest_garrison = 0.75
+						troops = {
+							archers = { 6 6 }
+							light_infantry = { 14 14 }
+						}
+						attrition = 0
+						disband_on_peace = yes
+					}
+				}
+			}
+			33 = {
+				spawn_unit = {
+					province = ROOT
+					home = ROOT
+					owner = THIS
+					#leader = THIS
+					scaled_by_biggest_garrison = 0.5
+					troops = {
+						archers = { 6 6 }
+						light_infantry = { 14 14 }
+					}
+					attrition = 0
+				}
+				create_character = {
+					random_traits = yes
+					dynasty = none
+					religion = THIS
+					culture = THIS
+					female = no
+					age = 30
+					trait = martial_challenger
+					trait = tough_soldier
+				}
+				new_character = {
+					spawn_unit = {
+						province = ROOT
+						home = ROOT
+						owner = PREV
+						scaled_by_biggest_garrison = 0.5
+						troops = {
+							archers = { 6 6 }
+							light_infantry = { 14 14 }
+						}
+						attrition = 0
+						disband_on_peace = yes
+					}
+				}
+				create_character = {
+					random_traits = yes
+					dynasty = none
+					religion = THIS
+					culture = THIS
+					female = no
+					age = 31
+					trait = martial_challenger
+					trait = tough_soldier
+				}
+				new_character = {
+					spawn_unit = {
+						province = ROOT
+						home = ROOT
+						owner = PREV
+						scaled_by_biggest_garrison = 0.5
+						troops = {
+							archers = { 6 6 }
+							light_infantry = { 14 14 }
+						}
+						attrition = 0
+						disband_on_peace = yes
+					}
+				}
+			}
+		}
+	}
+}
+
 # TODO: add_ascetic_trait_effect should also add our special character titles (Brother, Sister, etc.) & also
 # Desert Father/Mother is for BOTH miaphysite and monophyste
 
@@ -25148,11 +25907,11 @@ add_ascetic_trait_effect = {
 			add_trait = aryika
 		}
 		else_if = {
-			limit = { religion = buddhist }
+			limit = { religion_group = bud_group }
 			add_trait = bhikkhuni
 		}
 		else_if = {
-			limit = { religion = hindu }
+			limit = { religion_group = indian_group }
 			add_trait = sanyasini
 		}
 		else = { # For pagans and Altstart
@@ -25179,11 +25938,11 @@ add_ascetic_trait_effect = {
 			add_trait = muni
 		}
 		else_if = {
-			limit = { religion = buddhist }
+			limit = { religion_group = bud_group }
 			add_trait = bhikkhu
 		}
 		else_if = {
-			limit = { religion = hindu }
+			limit = { religion_group = indian_group }
 			add_trait = sanyasi
 		}
 		else = { # For pagans and Altstart
@@ -25211,48 +25970,259 @@ print_scope_effect = {
 	log = "------------------------------"
 }
 
+# template
 add_sympathy_for_prevs_true_religion_effect = {
 	if = {
 		limit = { 
-			PREV = { true_religion_group_christian_trigger = yes } 
+			PREV = { true_religion_group_abrahamic_group_trigger = yes }
+			NOT = { religion_group = abrahamic_group }
+		}
+		add_trait = sympathy_abrahamics
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_anatolian_group_trigger = yes }
+			NOT = { religion_group = anatolian_group }
+		}
+		add_trait = sympathy_anatolians
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_arabpagan_group_trigger = yes }
+			NOT = { religion_group = arabpagan_group }
+		}
+		add_trait = sympathy_arabpagans
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_aztec_group_trigger = yes }
+			NOT = { religion_group = mesoamerican_rel_group }
+		}
+		add_trait = sympathy_aztecs
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_baltic_group_trigger = yes }
+			NOT = { religion_group = baltic_group }
+		}
+		add_trait = sympathy_baltics
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_bantu_group_trigger = yes }
+			NOT = { religion_group = bantu_group }
+		}
+		add_trait = sympathy_bantus
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_berberpagan_group_trigger = yes }
+			NOT = { religion_group = berberpagan_group }
+		}
+		add_trait = sympathy_berbers
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_bud_group_trigger = yes }
+			NOT = { religion_group = bud_group }
+		}
+		add_trait = sympathy_buddhists
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_celtic_group_trigger = yes }
+			NOT = { religion_group = celtic_group }
+		}
+		add_trait = sympathy_celtics
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_chinese_group_trigger = yes }
+			NOT = { religion_group = chinese_group }
+		}
+		add_trait = sympathy_chinese
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_christian_trigger = yes }
 			NOT = { religion_group = christian }
 		}
 		add_trait = sympathy_christendom
 	}
 	if = {
 		limit = { 
-			PREV = { true_religion_group_muslim_trigger = yes } 
-			NOT = { religion_group = muslim }
+			PREV = { true_religion_group_east_african_group_trigger = yes }
+			NOT = { religion_group = east_african_group }
 		}
-		add_trait = sympathy_islam
+		add_trait = sympathy_east_africans
 	}
 	if = {
 		limit = { 
-			PREV = { true_religion_group_pagan_group_trigger = yes } 
-			NOT = { religion_group = pagan_group }
+			PREV = { true_religion_group_egyptian_group_trigger = yes }
+			NOT = { religion_group = egyptian_group }
 		}
-		add_trait = sympathy_pagans
+		add_trait = sympathy_egyptian
 	}
 	if = {
 		limit = { 
-			PREV = { true_religion_group_zoroastrian_group_trigger = yes } 
-			NOT = { religion_group = zoroastrian_group }
+			PREV = { true_religion_group_finnish_group_trigger = yes }
+			NOT = { religion_group = finnish_group }
 		}
-		add_trait = sympathy_zoroastrianism
+		add_trait = sympathy_finnish
 	}
 	if = {
 		limit = { 
-			PREV = { true_religion_group_jewish_group_trigger = yes } 
+			PREV = { true_religion_group_graecoroman_group_trigger = yes }
+			NOT = { religion_group = graecoroman_group }
+		}
+		add_trait = sympathy_graecoroman
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_indian_group_trigger = yes }
+			NOT = { religion_group = indian_group }
+		}
+		add_trait = sympathy_indian
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_indohelen_group_trigger = yes }
+			NOT = { religion_group = indohelen_group }
+		}
+		add_trait = sympathy_indohellens
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_inti_group_trigger = yes }
+			NOT = { religion_group = andean_rel_group }
+		}
+		add_trait = sympathy_intis
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_inuit_group_trigger = yes }
+			NOT = { religion_group = native_american_group }
+		}
+		add_trait = sympathy_inuit
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_jewish_group_trigger = yes }
 			NOT = { religion_group = jewish_group }
 		}
 		add_trait = sympathy_judaism
 	}
 	if = {
 		limit = { 
-			PREV = { true_religion_group_indian_group_trigger = yes } 
-			NOT = { religion_group = indian_group }
+			PREV = { true_religion_group_luwian_group_trigger = yes }
+			NOT = { religion_group = luwian_group }
 		}
-		add_trait = sympathy_indian
+		add_trait = sympathy_luwians
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_mand_group_trigger = yes }
+			NOT = { religion_group = mand_group }
+		}
+		add_trait = sympathy_mande
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_mani_group_trigger = yes }
+			NOT = { religion_group = mani_group }
+		}
+		add_trait = sympathy_manichaeans
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_mithra_group_trigger = yes }
+			NOT = { religion_group = mithra_group }
+		}
+		add_trait = sympathy_mithraics
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_muslim_trigger = yes }
+			NOT = { religion_group = muslim }
+		}
+		add_trait = sympathy_islam
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_neoplato_group_trigger = yes }
+			NOT = { religion_group = neoplato_group }
+		}
+		add_trait = sympathy_platonics
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_norsegerman_group_trigger = yes }
+			NOT = { religion_group = norsegerman_group }
+		}
+		add_trait = sympathy_nordic
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_pagan_group_trigger = yes }
+			NOT = { religion_group = pagan_group }
+		}
+		add_trait = sympathy_pagans
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_palmyranpagan_group_trigger = yes }
+			NOT = { religion_group = palmyranpagan_group }
+		}
+		add_trait = sympathy_palmyrans
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_serer_group_trigger = yes }
+			NOT = { religion_group = serer_group }
+		}
+		add_trait = sympathy_sererics
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_slavic_group_trigger = yes }
+			NOT = { religion_group = slavic_group }
+		}
+		add_trait = sympathy_slavics
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_sol_group_trigger = yes }
+			NOT = { religion_group = sol_group }
+		}
+		add_trait = sympathy_sol
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_tengri_group_trigger = yes }
+			NOT = { religion_group = tengri_group }
+		}
+		add_trait = sympathy_tengri
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_yazd_group_trigger = yes }
+			NOT = { religion_group = yazd_group }
+		}
+		add_trait = sympathy_yazd
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_zal_group_trigger = yes }
+			NOT = { religion_group = zal_group }
+		}
+		add_trait = sympathy_zal
+	}
+	if = {
+		limit = { 
+			PREV = { true_religion_group_zoroastrian_group_trigger = yes }
+			NOT = { religion_group = zoroastrian_group }
+		}
+		add_trait = sympathy_zoroastrianism
 	}
 	if = {
         limit = {
@@ -25263,48 +26233,259 @@ add_sympathy_for_prevs_true_religion_effect = {
     }
 }
 
+# template
 add_sympathy_for_prevs_open_religion_effect = {
 	if = {
 		limit = { 
-			PREV = { religion_group = christian } 
+			PREV = { religion_group = abrahamic_group }
+			NOT = { religion_group = abrahamic_group }
+		}
+		add_trait = sympathy_abrahamics
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = anatolian_group }
+			NOT = { religion_group = anatolian_group }
+		}
+		add_trait = sympathy_anatolians
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = arabpagan_group }
+			NOT = { religion_group = arabpagan_group }
+		}
+		add_trait = sympathy_arabpagans
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = mesoamerican_rel_group }
+			NOT = { religion_group = mesoamerican_rel_group	}
+		}
+		add_trait = sympathy_aztecs
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = baltic_group }
+			NOT = { religion_group = baltic_group }
+		}
+		add_trait = sympathy_baltics
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = bantu_group }
+			NOT = { religion_group = bantu_group }
+		}
+		add_trait = sympathy_bantus
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = berberpagan_group }
+			NOT = { religion_group = berberpagan_group }
+		}
+		add_trait = sympathy_berbers
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = bud_group }
+			NOT = { religion_group = bud_group }
+		}
+		add_trait = sympathy_buddhists
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = celtic_group }
+			NOT = { religion_group = celtic_group }
+		}
+		add_trait = sympathy_celtics
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = chinese_group }
+			NOT = { religion_group = chinese_group }
+		}
+		add_trait = sympathy_chinese
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = christian }
 			NOT = { religion_group = christian }
 		}
 		add_trait = sympathy_christendom
 	}
 	if = {
 		limit = { 
-			PREV = { religion_group = muslim } 
-			NOT = { religion_group = muslim }
+			PREV = { religion_group = east_african_group }
+			NOT = { religion_group = east_african_group }
 		}
-		add_trait = sympathy_islam
+		add_trait = sympathy_east_africans
 	}
 	if = {
 		limit = { 
-			PREV = { religion_group = pagan_group } 
-			NOT = { religion_group = pagan_group }
+			PREV = { religion_group = egyptian_group }
+			NOT = { religion_group = egyptian_group }
 		}
-		add_trait = sympathy_pagans
+		add_trait = sympathy_egyptian
 	}
 	if = {
 		limit = { 
-			PREV = { religion_group = zoroastrian_group } 
-			NOT = { religion_group = zoroastrian_group }
+			PREV = { religion_group = finnish_group }
+			NOT = { religion_group = finnish_group }
 		}
-		add_trait = sympathy_zoroastrianism
+		add_trait = sympathy_finnish
 	}
 	if = {
 		limit = { 
-			PREV = { religion_group = jewish_group } 
+			PREV = { religion_group = graecoroman_group }
+			NOT = { religion_group = graecoroman_group }
+		}
+		add_trait = sympathy_graecoroman
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = indian_group }
+			NOT = { religion_group = indian_group }
+		}
+		add_trait = sympathy_indian
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = indohelen_group }
+			NOT = { religion_group = indohelen_group }
+		}
+		add_trait = sympathy_indohellens
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = andean_rel_group }
+			NOT = { religion_group = andean_rel_group }
+		}
+		add_trait = sympathy_intis
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = native_american_group }
+			NOT = { religion_group = native_american_group }
+		}
+		add_trait = sympathy_inuit
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = jewish_group }
 			NOT = { religion_group = jewish_group }
 		}
 		add_trait = sympathy_judaism
 	}
 	if = {
 		limit = { 
-			PREV = { religion_group = indian_group } 
-			NOT = { religion_group = indian_group }
+			PREV = { religion_group = luwian_group }
+			NOT = { religion_group = luwian_group }
 		}
-		add_trait = sympathy_indian
+		add_trait = sympathy_luwians
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = mand_group }
+			NOT = { religion_group = mand_group }
+		}
+		add_trait = sympathy_mande
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = mani_group }
+			NOT = { religion_group = mani_group }
+		}
+		add_trait = sympathy_manichaeans
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = mithra_group }
+			NOT = { religion_group = mithra_group }
+		}
+		add_trait = sympathy_mithraics
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = muslim }
+			NOT = { religion_group = muslim }
+		}
+		add_trait = sympathy_islam
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = neoplato_group }
+			NOT = { religion_group = neoplato_group }
+		}
+		add_trait = sympathy_platonics
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = norsegerman_group }
+			NOT = { religion_group = norsegerman_group }
+		}
+		add_trait = sympathy_nordic
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = pagan_group }
+			NOT = { religion_group = pagan_group }
+		}
+		add_trait = sympathy_pagans
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = palmyranpagan_group }
+			NOT = { religion_group = palmyranpagan_group }
+		}
+		add_trait = sympathy_palmyrans
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = serer_group }
+			NOT = { religion_group = serer_group }
+		}
+		add_trait = sympathy_sererics
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = slavic_group }
+			NOT = { religion_group = slavic_group }
+		}
+		add_trait = sympathy_slavics
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = sol_group }
+			NOT = { religion_group = sol_group }
+		}
+		add_trait = sympathy_sol
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = tengri_group }
+			NOT = { religion_group = tengri_group }
+		}
+		add_trait = sympathy_tengri
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = yazd_group }
+			NOT = { religion_group = yazd_group }
+		}
+		add_trait = sympathy_yazd
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = zal_group }
+			NOT = { religion_group = zal_group }
+		}
+		add_trait = sympathy_zal
+	}
+	if = {
+		limit = { 
+			PREV = { religion_group = zoroastrian_group }
+			NOT = { religion_group = zoroastrian_group }
+		}
+		add_trait = sympathy_zoroastrianism
 	}
 	if = {
 		limit = { 
@@ -26178,7 +27359,7 @@ add_mission_fail_influence_effect = {
 }
 
 add_mission_decline_influence_effect = {
-	add_society_modifier =	 {
+	add_society_modifier = {
 		modifier = declined_mission
 		years = 2
 	}
@@ -26995,6 +28176,15 @@ clean_up_after_leaving_society_effect = {
 		#quest_the_assassins_occupy_holding
 		#quest_the_assassins_protege
 		clr_character_flag = ongoing_recruitment
+		clr_character_flag = lux_wanted_assassins
+		clr_character_flag = lux_wanted_assassins_bud_mahayana
+		clr_character_flag = lux_wanted_assassins_mani_ahriman
+		clr_character_flag = lux_wanted_assassins_priscillian
+		clr_character_flag = lux_wanted_assassins_ragnarok
+		clr_character_flag = lux_wanted_assassins_set
+		clr_character_flag = lux_wanted_assassins_tengri_ahriman
+		clr_character_flag = lux_wanted_assassins_yahyanism
+		clr_character_flag = lux_wanted_assassins_zor_angra
 		clr_character_flag = approves_of_shia
 		clr_character_flag = disapproves_of_shia
 		clr_character_flag = willing_to_join
@@ -27026,11 +28216,19 @@ clean_up_after_leaving_society_effect = {
 		clr_character_flag = being_recruited_by_the_satanists
 		clr_character_flag = being_recruited_by_the_trollcrafters
 		clr_character_flag = being_recruited_by_the_cult_of_kali
-		clr_character_flag = being_recruited_by_the_cold_ones
+		clr_character_flag = being_recruited_by_the_neo_sarkites
 		clr_character_flag = being_recruited_by_the_plaguebringers
 		clr_character_flag = being_recruited_by_the_vodouns
 		clr_character_flag = being_recruited_by_the_bacchants
 		clr_character_flag = being_recruited_by_followers_of_ahuiateteo
+		clr_character_flag = being_recruited_by_the_cult_of_balor
+		clr_character_flag = being_recruited_by_cult_of_angra_mainyu
+		clr_character_flag = being_recruited_by_arab_jinn_sorcerers
+		clr_character_flag = being_recruited_by_cult_of_apep
+		clr_character_flag = being_recruited_by_the_ghost_gatherers
+		clr_character_flag = being_recruited_by_the_underworld_triad
+		clr_character_flag = being_recruited_by_the_sacrificers
+		clr_character_flag = being_recruited_by_the_procession_of_pox
 		
 		### ACR ###
 		clr_character_flag = being_recruited_by_the_unseelie
@@ -35597,9 +36795,9 @@ apply_dogmatic_on_start_effect = {
 	
 	remove_intermarry = khurmazta
 	remove_intermarry = mandaean
-	remove_intermarry = manichean
+	remove_intermarry = mani
 	remove_intermarry = mazdakism
-	remove_intermarry = yazidi
+	remove_intermarry = yazidism
 	remove_intermarry = zoroastrian
 	remove_intermarry = zurvanism
 	
@@ -35678,9 +36876,9 @@ apply_syncretic_muslim_on_start_effect = {
 apply_syncretic_zoroastrian_on_start_effect = {
 	add_intermarry = khurmazta
 	add_intermarry = mandaean
-	add_intermarry = manichean
-	add_intermarry = mazdaki
-	add_intermarry = yazidi
+	add_intermarry = mani
+	add_intermarry = mazdakism
+	add_intermarry = yazidism
 	add_intermarry = zoroastrian
 	add_intermarry = zurvanism
 	
@@ -40791,8 +41989,8 @@ give_goldsmith_artifacts_flag_okay_effect = {
 	    limit = { 
 	        OR = {
 	        	religion_group = muslim 
-	        	religion = west_african_pagan
-	        	religion = west_african_pagan_reformed
+	        	religion_group = bantu_group
+				religion_group = serer_group
 	        }
 	    }
 	    add_artifact = engraved_dagger
@@ -40811,11 +42009,7 @@ give_goldsmith_artifacts_flag_okay_effect = {
 	}
 	else_if = {
 	    limit = { 
-	        OR = {
-	        	religion_group = zoroastrian_group
-	        	religion = zun_pagan
-	        	religion = zun_pagan_reformed
-			}
+	        religion_group = zoroastrian_group
 			emf_common_coronation_requirements = yes
 		}
 	    add_artifact = circlet_of_twilight
@@ -40823,20 +42017,13 @@ give_goldsmith_artifacts_flag_okay_effect = {
 	}
 	else_if = {
 	    limit = { 
-	        OR = {
-	        	religion_group = zoroastrian_group
-	        	religion = zun_pagan
-	        	religion = zun_pagan_reformed
-			}
+	        religion_group = zoroastrian_group
 		}
         add_artifact = silver_staff
 	}
 	else_if = {
 	    limit = {
-	        OR = {
-	        	religion = norse_pagan
-	        	religion = norse_pagan_reformed
-	        }
+	        religion_group = norsegerman_group
 			emf_common_coronation_requirements = yes
 	    }
 	    add_artifact = iron_crown
@@ -40844,10 +42031,7 @@ give_goldsmith_artifacts_flag_okay_effect = {
 	}
 	else_if = {
 	    limit = {
-	        OR = {
-	        	religion = norse_pagan
-	        	religion = norse_pagan_reformed
-	        }
+	        religion_group = norsegerman_group
 	    }
         add_artifact = engraved_sword
 	}
@@ -40908,8 +42092,8 @@ give_goldsmith_artifacts_flag_good_effect = {
 	    limit = { 
 	        OR = {
 	        	religion_group = muslim 
-	        	religion = west_african_pagan
-	        	religion = west_african_pagan_reformed
+	        	religion_group = bantu_group
+				religion_group = serer_group
 	        }
 	    }
 	    add_artifact = bejeweled_dagger
@@ -40928,11 +42112,7 @@ give_goldsmith_artifacts_flag_good_effect = {
 	}
 	else_if = {
 	    limit = { 
-	        OR = {
-	        	religion_group = zoroastrian_group
-	        	religion = zun_pagan
-	        	religion = zun_pagan_reformed
-			}
+	        religion_group = zoroastrian_group
 			emf_common_coronation_requirements = yes
 		}
 	    add_artifact = circlet_of_the_heavens
@@ -40940,20 +42120,13 @@ give_goldsmith_artifacts_flag_good_effect = {
 	}
 	else_if = {
 	    limit = { 
-	        OR = {
-	        	religion_group = zoroastrian_group
-	        	religion = zun_pagan
-	        	religion = zun_pagan_reformed
-			}
+	        religion_group = zoroastrian_group
 		}
         add_artifact = golden_staff
 	}
 	else_if = {
 	    limit = {
-	        OR = {
-	        	religion = norse_pagan
-	        	religion = norse_pagan_reformed
-	        }
+	        religion_group = norsegerman_group
 			emf_common_coronation_requirements = yes
 	    }
 	    add_artifact = crown_of_the_sea
@@ -40961,10 +42134,7 @@ give_goldsmith_artifacts_flag_good_effect = {
 	}
 	else_if = {
 	    limit = {
-	       OR = {
-	        	religion = norse_pagan
-	        	religion = norse_pagan_reformed
-	        }
+			religion_group = norsegerman_group
 	    }
         add_artifact = golden_sword
 	}
@@ -41025,8 +42195,8 @@ give_goldsmith_artifacts_flag_expensive_effect = {
 	    limit = { 
 	        OR = {
 	        	religion_group = muslim 
-	        	religion = west_african_pagan
-	        	religion = west_african_pagan_reformed
+	        	religion_group = bantu_group
+				religion_group = serer_group
 	        }
 	    }
 	    add_artifact = dagger_of_glory
@@ -41045,11 +42215,7 @@ give_goldsmith_artifacts_flag_expensive_effect = {
 	}
 	else_if = {
 	    limit = { 
-	        OR = {
-	        	religion_group = zoroastrian_group
-	        	religion = zun_pagan
-	        	religion = zun_pagan_reformed
-			}
+	        religion_group = zoroastrian_group
 			emf_common_coronation_requirements = yes
 		}
 	    add_artifact = circlet_of_the_heavens
@@ -41057,20 +42223,13 @@ give_goldsmith_artifacts_flag_expensive_effect = {
 	}
 	else_if = {
 	    limit = { 
-	        OR = {
-	        	religion_group = zoroastrian_group
-	        	religion = zun_pagan
-	        	religion = zun_pagan_reformed
-			}
+	        religion_group = zoroastrian_group
 		}
 	    add_artifact = staff_of_majesty
 	}
 	else_if = {
 	    limit = {
-	        OR = {
-	        	religion = norse_pagan
-	        	religion = norse_pagan_reformed
-	        }
+	        religion_group = norsegerman_group
 			emf_common_coronation_requirements = yes
 	    }
 	    add_artifact = crown_of_crows
@@ -41078,10 +42237,7 @@ give_goldsmith_artifacts_flag_expensive_effect = {
 	}
 	else_if = {
 	    limit = {
-	        OR = {
-	        	religion = norse_pagan
-	        	religion = norse_pagan_reformed
-	        }
+	        religion_group = norsegerman_group
 	    }
 	    add_artifact = sword_of_heroes
 	}
@@ -41144,8 +42300,8 @@ give_goldsmith_artifacts_flag_amazing_effect = {
 	    limit = { 
 	        OR = {
 	        	religion_group = muslim 
-	        	religion = west_african_pagan
-	        	religion = west_african_pagan_reformed
+	        	religion_group = bantu_group
+				religion_group = serer_group
 	        }
 	    }
 	    add_artifact = dagger_of_glory_2
@@ -41164,11 +42320,7 @@ give_goldsmith_artifacts_flag_amazing_effect = {
 	}
 	else_if = {
 	    limit = { 
-	        OR = {
-	        	religion_group = zoroastrian_group
-	        	religion = zun_pagan
-	        	religion = zun_pagan_reformed
-			}
+	        religion_group = zoroastrian_group
 			emf_common_coronation_requirements = yes
 		}
 	    add_artifact = circlet_of_the_heavens_2
@@ -41176,20 +42328,13 @@ give_goldsmith_artifacts_flag_amazing_effect = {
 	}
 	else_if = {
 	    limit = { 
-	        OR = {
-	        	religion_group = zoroastrian_group
-	        	religion = zun_pagan
-	        	religion = zun_pagan_reformed
-			}
+	        religion_group = zoroastrian_group
 		}
 	    add_artifact = staff_of_majesty_2
 	}
 	else_if = {
 	    limit = {
-	        OR = {
-	        	religion = norse_pagan
-	        	religion = norse_pagan_reformed
-	        }
+	        religion_group = norsegerman_group
 			emf_common_coronation_requirements = yes
 	    }
 	    add_artifact = crown_of_crows_2
@@ -41197,10 +42342,7 @@ give_goldsmith_artifacts_flag_amazing_effect = {
 	}
 	else_if = {
 	    limit = {
-	        OR = {
-	        	religion = norse_pagan
-	        	religion = norse_pagan_reformed
-	        }
+	        religion_group = norsegerman_group
 	    }
 	    add_artifact = sword_of_heroes_2
 	}
@@ -41262,8 +42404,8 @@ give_weaponsmith_artifacts_flag_okay_effect = {
 	    limit = { 
 	        OR = {
 	        	religion_group = muslim 
-	        	religion = west_african_pagan
-	        	religion = west_african_pagan_reformed
+	        	religion_group = bantu_group
+				religion_group = serer_group
 	        }
 	    }
 	    add_artifact = engraved_dagger
@@ -41282,11 +42424,7 @@ give_weaponsmith_artifacts_flag_okay_effect = {
 	}
 	else_if = {
 	    limit = { 
-	        OR = {
-	        	religion_group = zoroastrian_group
-	        	religion = zun_pagan
-	        	religion = zun_pagan_reformed
-			}
+	        religion_group = zoroastrian_group
 			emf_common_coronation_requirements = yes
 		}
 	    add_artifact = circlet_of_twilight
@@ -41294,20 +42432,13 @@ give_weaponsmith_artifacts_flag_okay_effect = {
 	}
 	else_if = {
 	    limit = { 
-	        OR = {
-	        	religion_group = zoroastrian_group
-	        	religion = zun_pagan
-	        	religion = zun_pagan_reformed
-			}
+	        religion_group = zoroastrian_group
 		}
         add_artifact = silver_staff
 	}
 	else_if = {
 	    limit = {
-	        OR = {
-	        	religion = norse_pagan
-	        	religion = norse_pagan_reformed
-	        }
+	        religion_group = norsegerman_group
 			emf_common_coronation_requirements = yes
 	    }
 	    add_artifact = iron_crown
@@ -41315,10 +42446,7 @@ give_weaponsmith_artifacts_flag_okay_effect = {
 	}
 	else_if = {
 	    limit = {
-	        OR = {
-	        	religion = norse_pagan
-	        	religion = norse_pagan_reformed
-	        }
+	        religion_group = norsegerman_group
 	    }
         add_artifact = engraved_sword
 	}
@@ -41379,8 +42507,8 @@ give_weaponsmith_artifacts_flag_good_effect = {
 	    limit = { 
 	        OR = {
 	        	religion_group = muslim 
-	        	religion = west_african_pagan
-	        	religion = west_african_pagan_reformed
+	        	religion_group = bantu_group
+				religion_group = serer_group
 	        }
 	    }
 	    add_artifact = bejeweled_dagger
@@ -41399,11 +42527,7 @@ give_weaponsmith_artifacts_flag_good_effect = {
 	}
 	else_if = {
 	    limit = { 
-	        OR = {
-	        	religion_group = zoroastrian_group
-	        	religion = zun_pagan
-	        	religion = zun_pagan_reformed
-			}
+	        religion_group = zoroastrian_group
 			emf_common_coronation_requirements = yes
 		}
 	    add_artifact = circlet_of_the_heavens
@@ -41411,20 +42535,13 @@ give_weaponsmith_artifacts_flag_good_effect = {
 	}
 	else_if = {
 	    limit = { 
-	        OR = {
-	        	religion_group = zoroastrian_group
-	        	religion = zun_pagan
-	        	religion = zun_pagan_reformed
-			}
+	        religion_group = zoroastrian_group
 		}
         add_artifact = golden_staff
 	}
 	else_if = {
 	    limit = {
-	       OR = {
-	        	religion = norse_pagan
-	        	religion = norse_pagan_reformed
-	        }
+			religion_group = norsegerman_group
 			emf_common_coronation_requirements = yes
 	    }
 	    add_artifact = crown_of_the_sea
@@ -41432,10 +42549,7 @@ give_weaponsmith_artifacts_flag_good_effect = {
 	}
 	else_if = {
 	    limit = {
-	       OR = {
-	        	religion = norse_pagan
-	        	religion = norse_pagan_reformed
-	        }
+			religion_group = norsegerman_group
 	    }
         add_artifact = golden_sword
 	}
@@ -42226,16 +43340,12 @@ give_random_character_modifier_effect = {
 			trigger = {
 				NOT = { has_character_modifier = good_listener }
 				OR = {
-					religion = finnish_pagan
-					religion = finnish_pagan_reformed
-					religion = west_african_pagan
-					religion = west_african_pagan_reformed
-					religion = baltic_pagan
-					religion = baltic_pagan_reformed
-					religion = slavic_pagan
-					religion = slavic_pagan_reformed
-					religion = tengri_pagan
-					religion = tengri_pagan_reformed
+					religion_group = finnish_group
+					religion_group = bantu_group
+					religion_group = serer_group
+					religion_group = baltic_group
+					religion_group = slavic_group
+					religion_group = tengri_group
 					has_religion_feature = religion_beatification
 					has_religion_feature = religion_feature_baltic
 					has_religion_feature = religion_feature_slavic
@@ -42330,8 +43440,7 @@ give_random_character_modifier_effect = {
 			trigger = {
 				trait = shieldmaiden
 				OR = {
-					religion = norse_pagan
-					religion = norse_pagan_reformed
+					religion_group = norsegerman_group
 				}
 				NOR = {
 					martial = 17
@@ -42441,7 +43550,7 @@ give_random_character_modifier_effect = {
 					trait = brave
 					novum_imperium_is_pagan = yes
 					is_nomadic = yes
-					religion = buddhist
+					religion_group = bud_group
 					religion = bogomilist
 					gender_equality_trigger = yes
 				}
@@ -42783,6 +43892,245 @@ assign_random_nickname_effect = {
 		10 = {
 			trigger = { NOT = { trait = patient } }
 			give_nickname = nick_the_twitchy
+		}
+	}
+}
+
+legitimise_newborn_FROM_effect = {
+	custom_tooltip = {
+		text = EVTTOOLTIP302
+		hidden_tooltip = {
+			if = {
+				limit = { NOT = { dynasty = 0 } }
+				dynasty = mother_bastard
+			}
+			mother_even_if_dead = {
+				if = {
+					limit = { NOT = { character = ROOT } }
+					if = { #bastards who have bastards start new dynasty
+						limit = { 
+							trait = bastard
+							NOT = { dynasty = 0 }
+							PREV = { NOT = { father_even_if_dead = { always = yes } } }
+						}
+						if = {
+							limit = { mother_even_if_dead = { dynasty = PREV } }
+							dynasty = mother_bastard
+						}
+						if = {
+							limit = { father_even_if_dead = { dynasty = PREV } }
+							dynasty = father_bastard
+						}
+					}
+					random_child = {
+						limit = { character = PREVPREV }
+						dynasty = PREV
+					}
+				}	
+			}
+			father_even_if_dead = {
+				if = {
+					limit = { NOT = { character = ROOT } }
+					if = { #bastards who have bastards start new dynasty
+						limit = { 
+							trait = bastard
+							NOT = { dynasty = 0 }
+						}
+						if = {
+							limit = { mother_even_if_dead = { dynasty = PREV } }
+							dynasty = mother_bastard
+						}
+						if = {
+							limit = { father_even_if_dead = { dynasty = PREV } }
+							dynasty = father_bastard
+						}
+					}
+					random_child = {
+						limit = { character = PREVPREV }
+						dynasty = PREV
+					}
+				}	
+			}
+			ROOT = {
+				if = { #bastards who have bastards start new dynasty
+					limit = { 
+						trait = bastard
+						NOT = { dynasty = 0 }
+					}
+					if = {
+						limit = { mother_even_if_dead = { dynasty = PREV } }
+						dynasty = mother_bastard
+					}
+					if = {
+						limit = { father_even_if_dead = { dynasty = PREV } }
+						dynasty = father_bastard
+					}
+				}
+			}
+			dynasty = ROOT	
+			remove_trait = bastard
+			add_trait = legit_bastard
+			#if = {
+				#limit = {
+					#has_bastard_nickname_trigger = yes
+				#}
+				#remove_nickname = yes
+			#}
+			if = {
+				limit = { liege = { NOT = { any_child = { character = PREVPREV } } } }
+				move_character = ROOT
+			}
+			ROOT = {
+				any_owned_bloodline = {
+					add_bloodline_member = PREVPREV			
+				}
+				any_spouse = {
+					character_event = { id = 305 tooltip = EVTTOOLTIP305 } # The parent's spouse is enraged
+				}
+			}
+		}
+	}
+}
+acknowledge_newborn_FROM_effect = {
+	custom_tooltip = {
+		text = EVTTOOLTIP306
+		hidden_tooltip = {
+			if = {
+				limit = { 
+					NOT = { dynasty = 0 } 					
+				}
+				if = {
+					limit = { 
+						mother_even_if_dead = { 
+							NOT = { dynasty = 0 } 
+							NOT = { character = ROOT }
+						}						
+					}
+					dynasty = mother_bastard
+				}	
+				if = {
+					limit = { 
+						father_even_if_dead = { 
+							NOT = { dynasty = 0 } 
+							NOT = { character = ROOT }
+						}						
+					}
+					dynasty = father_bastard
+				}
+			}
+			if = {
+				limit = { 
+					mother_even_if_dead = { dynasty = 0 NOT = { character = ROOT } }
+				}
+				dynasty = none
+			}
+			if = {
+				limit = { 
+					father_even_if_dead = { dynasty = 0 NOT = { character = ROOT } }
+				}
+				dynasty = none
+			}
+			mother_even_if_dead = {
+				if = {
+					limit = { NOT = { character = ROOT } NOT = { dynasty = 0 } }
+					random_child = {
+						limit = { character = PREVPREV }
+						dynasty = PREV
+					}
+				}	
+			}
+			father_even_if_dead = {
+				if = {
+					limit = { NOT = { character = ROOT } NOT = { dynasty = 0 } }
+					random_child = {
+						limit = { character = PREVPREV }
+						dynasty = PREV
+					}
+				}	
+			}
+			dynasty = ROOT				
+			add_trait = bastard
+			#remove from bloodlines
+			ROOT = {
+				any_owned_bloodline = {
+					remove_bloodline_member = PREVPREV
+				}
+			}	
+			#if = {
+				#limit = { mother_even_if_dead = { always = yes } }
+				#bastard_nickname_mother_effect = yes	
+			#}	
+			#if = {
+				#limit = { NOT = { mother_even_if_dead = { always = yes } } }
+				#bastard_nickname_father_effect = yes	
+			#}	
+			if = {
+				limit = { mother = { is_consort = no } }
+				ROOT = {
+					any_spouse = {
+						character_event = { id = 308 tooltip = EVTTOOLTIP308 } # The father's wife is angered
+					}
+				}
+			}
+		}
+	}
+}
+denounce_newborn_FROM_effect = {
+	custom_tooltip = {
+		text = EVTTOOLTIP309
+		hidden_tooltip = {
+			if = {
+				limit = { 
+					NOT = { dynasty = 0 } 
+					mother_even_if_dead = { NOT = { dynasty = 0 } }
+				}
+				dynasty = mother_bastard
+			}
+			if = {
+				limit = { 
+					mother_even_if_dead = { dynasty = 0 }
+				}
+				dynasty = none
+			}
+			mother_even_if_dead = {
+				if = {
+					limit = { NOT = { dynasty = 0 } }
+					random_child = {
+						limit = { character = PREVPREV }
+						dynasty = PREV
+					}
+				}	
+			}
+			add_trait = bastard
+			set_father = 0
+			set_real_father = ROOT
+			#bastard_nickname_mother_effect = yes
+			set_immune_to_pruning = yes
+			#remove from bloodlines
+			ROOT = {
+				any_owned_bloodline = {
+					remove_bloodline_member = PREVPREV
+				}
+			}	
+			mother = {
+				if = {
+					limit = { is_ruler = yes is_alive = yes }
+					reverse_banish = PREV
+				}
+				if = {
+					limit = { is_ruler = no is_alive = yes }
+					liege = { reverse_banish = PREVPREV }
+				}
+			}
+			
+			if = {
+				limit = { mother = { is_consort = no } }		
+				ROOT = {
+					any_spouse = {
+						character_event = { id = 311 } # The father's wife is displeased
+					}
+				}
+			}
 		}
 	}
 }
@@ -43328,11 +44676,11 @@ abdicate_holy_order_if_religion_changes_effect = {
 		if = {
 			limit = {
 				is_title_active = d_army_light
-				religion = manichean
+				religion = mani
 				owner = { 
 					ai = yes
 					holy_order = yes 
-					NOT = { religion = manichean } 
+					NOT = { religion = mani } 
 				}
 			}
 			log = "[d_army_light.owner.GetTitledFirstName] was found to be unfit to lead the [d_army_light.GetName] and therefore removed by the abdicate holy order effect!"

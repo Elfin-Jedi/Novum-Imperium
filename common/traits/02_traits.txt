@@ -195,10 +195,7 @@ heresiarch = {
 
 berserker = {
 	potential = {
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-		}
+		LI_norse_pagan_trigger = yes
 	}
 	martial = 4
 	diplomacy = -2
@@ -266,10 +263,7 @@ viking = {
 	potential = {
 		OR = {
 			AND = {
-				OR = {
-					religion = norse_pagan
-					religion = norse_pagan_reformed
-				}
+				LI_norse_pagan_trigger = yes
 				emf_seafaring_religion = yes
 			}
 			any_owned_bloodline = {
@@ -288,8 +282,7 @@ viking = {
 	martial = 1
 	combat_rating = 10 #old value: 1
 	monthly_character_prestige = 0.3
-	norse_pagan_opinion = 10 #EMF from 15
-	norse_pagan_reformed_opinion = 10 #EMF from 10
+	same_religion_opinion = 10 #EMF from 15
 	
 	same_opinion = 5
 	#religious = yes
@@ -843,57 +836,6 @@ smartist_hindu = {
 
 	potential = { religion = hindu }
 	religious_branch = hindu
-	random = no
-	religious = yes
-	ruler_designer_cost = 0
-}
-
-mahayana_buddhist = {
-	opposites = {
-		vajrayana_buddhist
-		theravada_buddhist
-	}
-
-	opposite_opinion = -5
-
-	vassal_opinion = 5
-
-	potential = { religion = buddhist }
-	religious_branch = buddhist
-	random = no
-	religious = yes
-	ruler_designer_cost = 0
-}
-
-vajrayana_buddhist = {
-	opposites = {
-		mahayana_buddhist
-		theravada_buddhist
-	}
-
-	opposite_opinion = -5
-
-	health = 1
-
-	potential = { religion = buddhist }
-	religious_branch = buddhist
-	random = no
-	religious = yes
-	ruler_designer_cost = 0
-}
-
-theravada_buddhist = {
-	opposites = {
-		vajrayana_buddhist
-		mahayana_buddhist
-	}
-
-	opposite_opinion = -5
-
-	learning = 1
-
-	potential = { religion = buddhist }
-	religious_branch = buddhist
 	random = no
 	religious = yes
 	ruler_designer_cost = 0
@@ -2076,7 +2018,22 @@ valhalla_bound  = {
 		tengri_warrior
 		shaddai
 		gondi_shahansha
-		kailash_guardian
+		hetairos
+		leo_mithras
+		korybantes
+		son_of_mahrem
+		mukarrib
+		induna
+		nyau_akakairo
+		son_of_ifri
+		gongfu_warrior
+		guardian_of_elect
+		seal_holder
+		warrior_of_light
+		dragon_knight
+		medjay
+		vel_wielder
+		serpent_warrior
 		child_of_garki_baba
         shield_of_roog
         heir_of_dihya
@@ -2184,7 +2141,7 @@ dancing_plague = {
 	succession_gfx = yes
 }
 
-shieldmaiden  = {
+shieldmaiden = {
 
 	monthly_character_piety = 0.1
 	pagan_group_opinion = 5
@@ -2272,7 +2229,6 @@ sea_queen = {
 			emf_seafaring_religion = yes
 			any_owned_bloodline = {
 				has_bloodline_flag = bloodline_viking
-				bloodline_is_active_for = PREV
 			}
 		}
 	}
@@ -2285,8 +2241,7 @@ sea_queen = {
 	martial = 3
 	combat_rating = 20 #old value: 2
 	monthly_character_prestige = 0.5
-	norse_pagan_opinion = 25
-	norse_pagan_reformed_opinion = 25
+	same_religion_opinion = 25
 	
 	#religious = yes
 	#customizer = no
@@ -2315,7 +2270,21 @@ eagle_warrior = {
 		tengri_warrior
 		shaddai
 		gondi_shahansha
-		kailash_guardian
+		hetairos
+		leo_mithras
+		korybantes
+		son_of_mahrem
+		mukarrib
+		induna
+		nyau_akakairo
+		son_of_ifri
+		gongfu_warrior
+		dragon_knight
+		guardian_of_elect
+		seal_holder
+		warrior_of_light
+		medjay
+		vel_wielder
 		child_of_garki_baba
         shield_of_roog
         heir_of_dihya
@@ -2355,7 +2324,21 @@ sun_warrior = {
 		tengri_warrior
 		shaddai
 		gondi_shahansha
-		kailash_guardian
+		hetairos
+		leo_mithras
+		korybantes
+		son_of_mahrem
+		mukarrib
+		induna
+		nyau_akakairo
+		son_of_ifri
+		gongfu_warrior
+		dragon_knight
+		guardian_of_elect
+		seal_holder
+		warrior_of_light
+		medjay
+		vel_wielder
 		child_of_garki_baba
         shield_of_roog
         heir_of_dihya
@@ -2395,7 +2378,21 @@ ukkos_shield = {
 		tengri_warrior
 		shaddai
 		gondi_shahansha
-		kailash_guardian
+		hetairos
+		leo_mithras
+		korybantes
+		son_of_mahrem
+		mukarrib
+		induna
+		nyau_akakairo
+		son_of_ifri
+		gongfu_warrior
+		dragon_knight
+		guardian_of_elect
+		seal_holder
+		warrior_of_light
+		medjay
+		vel_wielder
 		child_of_garki_baba
         shield_of_roog
         heir_of_dihya
@@ -2435,7 +2432,21 @@ nyames_shield = {
 		tengri_warrior
 		shaddai
 		gondi_shahansha
-		kailash_guardian
+		hetairos
+		leo_mithras
+		korybantes
+		son_of_mahrem
+		mukarrib
+		induna
+		nyau_akakairo
+		son_of_ifri
+		gongfu_warrior
+		dragon_knight
+		guardian_of_elect
+		seal_holder
+		warrior_of_light
+		medjay
+		vel_wielder
 		child_of_garki_baba
         shield_of_roog
         heir_of_dihya
@@ -2475,7 +2486,21 @@ peruns_chosen = {
 		tengri_warrior
 		shaddai
 		gondi_shahansha
-		kailash_guardian
+		hetairos
+		leo_mithras
+		korybantes
+		son_of_mahrem
+		mukarrib
+		induna
+		nyau_akakairo
+		son_of_ifri
+		gongfu_warrior
+		dragon_knight
+		guardian_of_elect
+		seal_holder
+		warrior_of_light
+		medjay
+		vel_wielder
 		child_of_garki_baba
         shield_of_roog
         heir_of_dihya
@@ -2515,7 +2540,21 @@ romuvas_own = {
 		tengri_warrior
 		shaddai
 		gondi_shahansha
-		kailash_guardian
+		hetairos
+		leo_mithras
+		korybantes
+		son_of_mahrem
+		mukarrib
+		induna
+		nyau_akakairo
+		son_of_ifri
+		gongfu_warrior
+		dragon_knight
+		guardian_of_elect
+		seal_holder
+		warrior_of_light
+		medjay
+		vel_wielder
 		child_of_garki_baba
         shield_of_roog
         heir_of_dihya
@@ -2555,7 +2594,21 @@ ares_own = {
 		tengri_warrior
 		shaddai
 		gondi_shahansha
-		kailash_guardian
+		hetairos
+		leo_mithras
+		korybantes
+		son_of_mahrem
+		mukarrib
+		induna
+		nyau_akakairo
+		son_of_ifri
+		gongfu_warrior
+		dragon_knight
+		guardian_of_elect
+		seal_holder
+		warrior_of_light
+		medjay
+		vel_wielder
 		child_of_garki_baba
         shield_of_roog
         heir_of_dihya
@@ -2595,7 +2648,21 @@ tengri_warrior = {
 		ares_own
 		shaddai
 		gondi_shahansha
-		kailash_guardian
+		hetairos
+		leo_mithras
+		korybantes
+		son_of_mahrem
+		mukarrib
+		induna
+		nyau_akakairo
+		son_of_ifri
+		gongfu_warrior
+		dragon_knight
+		guardian_of_elect
+		seal_holder
+		warrior_of_light
+		medjay
+		vel_wielder
 		child_of_garki_baba
         shield_of_roog
         heir_of_dihya
@@ -2635,7 +2702,21 @@ shaddai = {
 		ares_own
 		tengri_warrior
 		gondi_shahansha
-		kailash_guardian
+		hetairos
+		leo_mithras
+		korybantes
+		son_of_mahrem
+		mukarrib
+		induna
+		nyau_akakairo
+		son_of_ifri
+		gongfu_warrior
+		dragon_knight
+		guardian_of_elect
+		seal_holder
+		warrior_of_light
+		medjay
+		vel_wielder
 		child_of_garki_baba
         shield_of_roog
         heir_of_dihya
@@ -2675,7 +2756,21 @@ gondi_shahansha = {
 		ares_own
 		tengri_warrior
 		shaddai
-		kailash_guardian
+		hetairos
+		leo_mithras
+		korybantes
+		son_of_mahrem
+		mukarrib
+		induna
+		nyau_akakairo
+		son_of_ifri
+		gongfu_warrior
+		dragon_knight
+		guardian_of_elect
+		seal_holder
+		warrior_of_light
+		medjay
+		vel_wielder
 		child_of_garki_baba
         shield_of_roog
         heir_of_dihya
@@ -2779,7 +2874,7 @@ bhikkhu = {
 	potential = {
 		is_ruler = no
 		is_female = no
-		religion = buddhist
+		LI_bud_trigger = yes
 	}
 
 	monthly_character_piety = 0.3
@@ -2798,7 +2893,7 @@ bhikkhuni = {
 	potential = {
 		is_ruler = no
 		is_female = yes
-		religion = buddhist
+		LI_bud_trigger = yes
 	}
 
 	monthly_character_piety = 0.3
@@ -3522,10 +3617,7 @@ pagan_branch_1 = {
 			has_religion_feature = religion_no_leader
 			AND = {
 				has_religion_features = no
-				OR = {
-					religion = west_african_pagan_reformed
-					religion = bon_reformed
-				}
+				religion = bon_reformed
 			}
 		}
 	}
@@ -3554,10 +3646,7 @@ pagan_branch_2 = {
 			has_religion_feature = religion_no_leader
 			AND = {
 				has_religion_features = no
-				OR = {
-					religion = west_african_pagan_reformed
-					religion = bon_reformed
-				}
+				religion = bon_reformed
 			}
 		}
 	}
@@ -3586,10 +3675,7 @@ pagan_branch_3 = {
 			has_religion_feature = religion_no_leader
 			AND = {
 				has_religion_features = no
-				OR = {
-					religion = west_african_pagan_reformed
-					religion = bon_reformed
-				}
+				religion = bon_reformed
 			}
 		}
 	}
@@ -3618,10 +3704,7 @@ pagan_branch_4 = {
 			has_religion_feature = religion_no_leader
 			AND = {
 				has_religion_features = no
-				OR = {
-					religion = west_african_pagan_reformed
-					religion = bon_reformed
-				}
+				religion = bon_reformed
 			}
 		}
 	}
@@ -4049,7 +4132,21 @@ crusader_king = {
 		tengri_warrior
 		shaddai
 		gondi_shahansha
-		kailash_guardian
+		hetairos
+		leo_mithras
+		korybantes
+		son_of_mahrem
+		mukarrib
+		induna
+		nyau_akakairo
+		son_of_ifri
+		gongfu_warrior
+		dragon_knight
+		guardian_of_elect
+		seal_holder
+		warrior_of_light
+		medjay
+		vel_wielder
 		child_of_garki_baba
         shield_of_roog
         heir_of_dihya
@@ -4088,7 +4185,21 @@ crusader_queen = {
 		tengri_warrior
 		shaddai
 		gondi_shahansha
-		kailash_guardian
+		hetairos
+		leo_mithras
+		korybantes
+		son_of_mahrem
+		mukarrib
+		induna
+		nyau_akakairo
+		son_of_ifri
+		gongfu_warrior
+		dragon_knight
+		guardian_of_elect
+		seal_holder
+		warrior_of_light
+		medjay
+		vel_wielder
 		child_of_garki_baba
         shield_of_roog
         heir_of_dihya

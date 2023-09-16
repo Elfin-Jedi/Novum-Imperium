@@ -31700,10 +31700,10 @@ emf_notify_remove_sandaliati = {
 }
 
 #### [471] [yazidi.GetName] Pilgrim: yazidi_pilgrim ####
-emf_notify_add_yazidi_pilgrim = {
+emf_notify_add_yazidism_pilgrim = {
 	if = {
-		limit = { NOT = { trait = yazidi_pilgrim } }
-		add_trait = yazidi_pilgrim
+		limit = { NOT = { trait = yazidism_pilgrim } }
+		add_trait = yazidism_pilgrim
 		hidden_tooltip = {
 			if = {
 				limit = { ai = no }
@@ -31737,10 +31737,10 @@ emf_notify_add_yazidi_pilgrim = {
 		}
 	}
 }
-emf_notify_remove_yazidi_pilgrim = {
+emf_notify_remove_yazidism_pilgrim = {
 	if = {
-		limit = { trait = yazidi_pilgrim }
-		remove_trait = yazidi_pilgrim
+		limit = { trait = yazidism_pilgrim }
+		remove_trait = yazidism_pilgrim
 		hidden_tooltip = {
 			if = {
 				limit = { ai = no }

@@ -64,12 +64,12 @@ narrative_event = {
 		activate_title = { title = d_zun_warriors status = yes }
 		if = {
 			limit = {
-				zun_pagan_reformed = { has_religion_feature = religion_matriarchal }
+				sol_sahara_reformed = { has_religion_feature = religion_matriarchal }
 			}
 			create_character = {
 				random_traits = no
 				dynasty = random
-				religion = zun_pagan_reformed
+				religion = sol_sahara_reformed
 				culture = afghan
 				female = yes
 				age = 28
@@ -83,7 +83,7 @@ narrative_event = {
 		}
 		else_if = {
 			limit = {
-				zun_pagan_reformed = {
+				sol_sahara_reformed = {
 					OR = {
 						has_religion_feature = religion_equal
 						has_religion_feature = religion_feature_bon
@@ -93,7 +93,7 @@ narrative_event = {
 			create_character = {
 				random_traits = no
 				dynasty = random
-				religion = zun_pagan_reformed
+				religion = sol_sahara_reformed
 				culture = afghan
 				female = 50
 				age = 28
@@ -109,7 +109,7 @@ narrative_event = {
 			create_character = {
 				random_traits = no
 				dynasty = random
-				religion = zun_pagan_reformed
+				religion = sol_sahara_reformed
 				culture = afghan
 				female = no
 				age = 28
@@ -135,17 +135,13 @@ narrative_event = {
 	option = {
 		name = EVTOPTA_CM_4000
 		trigger = {
-			OR = {
-				religion = zun_pagan_reformed
-				religion = zun_pagan
-			}
+			religion_group = sol_group
 		}
 	}
 	option = {
 		name = EVTOPTB_SOA_2009
 		trigger = {
-			NOT = { religion = zun_pagan_reformed }
-			NOT = { religion = zun_pagan }
+			NOT = { religion_group = sol_group }
 		}
 	}
 }
@@ -160,7 +156,7 @@ character_event = {
 	max_age = 45
 	only_capable = yes
 	prisoner = no
-	religion = zun_pagan_reformed
+	religion = sol_sahara_reformed
 
 	trigger = {
 		OR = {
@@ -752,10 +748,7 @@ letter_event = {
 			modifier = {
 				factor = 10
 				has_focus = focus_theology
-				OR = {
-					religion = zun_pagan
-					religion = zun_pagan_reformed
-				}
+				religion_group = sol_group
 			}
 			modifier  = {
 				factor = 0.1
@@ -791,10 +784,7 @@ letter_event = {
 			modifier  = {
 				factor = 5
 				NOT = {
-					OR = {
-						religion = zun_pagan
-						religion = zun_pagan_reformed
-					}
+					religion_group = sol_group
 				}
 			}
 		}
@@ -848,10 +838,7 @@ character_event = {
 				is_adult = yes
 				is_ruler = no
 				is_incapable = no
-				OR = {
-					religion = zun_pagan
-					religion = zun_pagan_reformed
-				}
+				religion_group = sol_group
 			}
 			set_character_flag = attending_zun_feast
 			narrative_event = { id = CM.4130 days = 10 } # Walking in the sun
@@ -874,10 +861,7 @@ character_event = {
 		hidden_tooltip = {
 			if = {
 				limit = {
-					OR = {
-						religion = zun_pagan
-						religion = zun_pagan_reformed
-					}
+					religion_group = sol_group
 				}
 				narrative_event = { id = CM.4130 days = 10 } # Walking in the sun
 			}

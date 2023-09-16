@@ -70,9 +70,9 @@ emf_religion_has_castes = {
 			religion = zoroastrian
 			religion = mazdakism
 			religion = zurvanism
-			religion = manichean
+			religion = mani
 			religion = mandaean
-			religion = yazidi
+			religion = yazidism
 			religion = khurmazta
 			religion = jewish
 			religion = samaritan
@@ -319,16 +319,16 @@ true_religion_is_heresy_of_FROM_true_religion = {
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = zurvanism } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = manichean }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = manichean } } }
+			limit = { true_religion = mani }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = mani } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = mandaean }
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = mandaean } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = yazidi }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = yazidi } } }
+			limit = { true_religion = yazidism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = yazidism } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = khurmazta }
@@ -597,16 +597,16 @@ true_religion_is_heresy_of_ROOT_true_religion = {
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = zurvanism } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = manichean }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = manichean } } }
+			limit = { true_religion = mani }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = mani } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = mandaean }
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = mandaean } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = yazidi }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = yazidi } } }
+			limit = { true_religion = yazidism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = yazidism } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = khurmazta }
@@ -875,16 +875,16 @@ true_religion_is_heresy_of_PREV_true_religion = {
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = zurvanism } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = manichean }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = manichean } } }
+			limit = { true_religion = mani }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = mani } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = mandaean }
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = mandaean } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = yazidi }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = yazidi } } }
+			limit = { true_religion = yazidism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = yazidism } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = khurmazta }
@@ -1153,16 +1153,16 @@ true_religion_is_heresy_of_target_ruler_true_religion = {
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = zurvanism } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = manichean }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = manichean } } }
+			limit = { true_religion = mani }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = mani } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = mandaean }
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = mandaean } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = yazidi }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = yazidi } } }
+			limit = { true_religion = yazidism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_heresy_of = yazidism } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = khurmazta }
@@ -1433,16 +1433,16 @@ true_religion_is_parent_religion_FROM_true_religion = {
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = zurvanism } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = manichean }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = manichean } } }
+			limit = { true_religion = mani }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = mani } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = mandaean }
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = mandaean } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = yazidi }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = yazidi } } }
+			limit = { true_religion = yazidism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = yazidism } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = khurmazta }
@@ -1711,16 +1711,16 @@ true_religion_is_parent_religion_ROOT_true_religion = {
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = zurvanism } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = manichean }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = manichean } } }
+			limit = { true_religion = mani }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = mani } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = mandaean }
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = mandaean } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = yazidi }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = yazidi } } }
+			limit = { true_religion = yazidism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = yazidism } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = khurmazta }
@@ -1989,16 +1989,16 @@ true_religion_is_parent_religion_PREV_true_religion = {
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = zurvanism } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = manichean }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = manichean } } }
+			limit = { true_religion = mani }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = mani } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = mandaean }
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = mandaean } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = yazidi }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = yazidi } } }
+			limit = { true_religion = yazidism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = yazidism } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = khurmazta }
@@ -2267,16 +2267,16 @@ true_religion_is_parent_religion_target_ruler_true_religion = {
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = zurvanism } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = manichean }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = manichean } } }
+			limit = { true_religion = mani }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = mani } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = mandaean }
 			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = mandaean } } }
 		}
 		trigger_else_if = {
-			limit = { true_religion = yazidi }
-			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = yazidi } } }
+			limit = { true_religion = yazidism }
+			PREV = { true_religion_scope = { persistent_event_target:emf_religion_dummy_character = { is_parent_religion = yazidism } } }
 		}
 		trigger_else_if = {
 			limit = { true_religion = khurmazta }

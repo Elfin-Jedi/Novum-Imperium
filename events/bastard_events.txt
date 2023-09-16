@@ -1294,3 +1294,182 @@ character_event = {
 		}
 	}
 }
+##AGOT events adapted
+#Lonely whilst campaigning
+character_event = {
+	id = 76100
+	desc = "EVTDESC76100"
+	picture = GFX_evt_lovers
+	
+	min_age = 16
+	only_men = yes
+	only_playable = yes
+	capable_only = yes
+	
+	is_triggered_only = yes ### Fixed this -00matthew2000 ###
+	
+	trigger = {
+		war = yes
+		in_command = yes
+		NOR = {
+			trait = chaste
+			trait = celibate
+			trait = homosexual
+		}
+		fertility = 0.4
+	}
+	
+	weight_multiplier = {
+		days = 10
+		
+		modifier = {
+			factor = 2
+			trait = lustful
+		}
+		modifier = {
+			factor = 2
+			trait = gregarious
+		}
+		modifier = {
+			factor = 2
+			trait = hedonist
+		}
+		
+		modifier = {
+			factor = 0.5
+			trait = shy
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA76100" #give her gold to shut her up
+		ai_chance = { 
+			factor = 25
+			modifier = {
+				factor = 1.3
+				trait = charitable
+			}
+			modifier = {
+				factor = 1.3
+				trait = honest
+			}
+		}	
+		piety = 35
+		scaled_wealth = -0.4
+	}
+	option = {
+		name = "EVTOPTB76100" #I name you a liar!
+		ai_chance = { 
+			factor = 25
+			modifier = {
+				factor = 0.5
+				trait = kind
+			}
+			modifier = {
+				factor = 1.3
+				trait = wroth
+			}
+			modifier = {
+				factor = 1.3
+				trait = greedy
+			}
+			modifier = {
+				factor = 1.3
+				trait = deceitful
+			}
+		}
+		prestige = -25
+		random = {
+			chance = 25
+			
+			add_trait = wroth
+			hidden_tooltip = {
+				character_event = {
+					id = 38254 #Notify wroth
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTC76100" #so what?
+		ai_chance = { 
+			factor = 25
+			modifier = {
+				factor = 1.3
+				trait = lustful
+			}
+			modifier = {
+				factor = 1.3
+				trait = arbitrary
+			}
+			modifier = {
+				factor = 1.3
+				trait = selfish
+			}
+		}	
+		piety = -35
+		if = {
+			limit = {
+				NOT = {
+					trait = lustful
+				}
+			}
+			random = {
+				chance = 25
+				
+				add_trait = lustful
+				hidden_tooltip = {
+					character_event = {
+						id = 38272 #Notify Lustful
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTD76100" #adopt the child
+		ai_chance = { 
+			factor = 25
+			modifier = {
+				factor = 1.3
+				trait = kind
+			}
+		}
+		piety = 40
+		create_character = {
+			age = 0
+			trait = bastard
+		}
+		new_character = {
+			set_father = PREV
+		}
+		if = {
+			limit = {
+				is_married = yes
+			}
+			spouse = {
+				character_event = { id = 76101 tooltip = "EVTTOOLTIP308" } # The wife is angered
+			}
+		}
+	}
+}
+# The wife is angered
+character_event = {
+	id = 76101
+	picture = "GFX_evt_quarrel"
+	
+	is_triggered_only = yes 
+		
+	desc = "EVTDESC308"
+
+	option = {
+		name = "EVTOPTA308"	
+		spouse = {
+			reverse_opinion = {
+				who = root
+				modifier = acknowledged_bastard
+				years = 10
+			}
+		}
+	}
+}

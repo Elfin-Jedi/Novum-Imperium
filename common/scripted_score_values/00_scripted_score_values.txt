@@ -2167,7 +2167,7 @@ post_reformation_ruler_conversion_score = {
 			religion = norse_pagan
 			religion = tengri_pagan
 			religion = aztec
-			religion = hellenic_pagan
+			religion = graeco_roman
 		}
 	}
 	modifier = { 
@@ -2175,7 +2175,7 @@ post_reformation_ruler_conversion_score = {
 		ROOT = { has_religion_feature = religion_defensive }
 		OR = { 
 			religion = slavic_pagan
-			religion = baltic_pagan
+			religion = dievas
 			religion = finnish_pagan
 		}
 	}
@@ -2185,7 +2185,7 @@ post_reformation_ruler_conversion_score = {
 		OR = { 
 			religion = norse_pagan
 			religion = slavic_pagan
-			religion = baltic_pagan
+			religion = dievas
 			religion = finnish_pagan
 		}
 	}
@@ -2193,8 +2193,8 @@ post_reformation_ruler_conversion_score = {
 		factor = 0.5
 		ROOT = { has_religion_feature = religion_proselytizing }
 		OR = { 
-			religion = hellenic_pagan
-			religion = west_african_pagan
+			religion = graeco_roman
+			religion = a_tag_roog
 			religion = bon
 		}
 	}
@@ -2202,9 +2202,9 @@ post_reformation_ruler_conversion_score = {
 		factor = 1.5
 		ROOT = { has_religion_feature = religion_dogmatic }
 		OR = { 
-			religion = hellenic_pagan
+			religion = graeco_roman
 			religion = bon
-			religion = west_african_pagan
+			religion = a_tag_roog
 		}
 	}
 	modifier = { 
@@ -2220,8 +2220,8 @@ post_reformation_ruler_conversion_score = {
 		ROOT = { has_religion_feature = religion_cosmopolitan }
 		OR = { 
 			religion = aztec
-			religion = zun_pagan
-			religion = baltic_pagan
+			#religion = zun_pagan
+			religion = dievas
 			religion = finnish_pagan
 		}
 	}
@@ -2229,9 +2229,9 @@ post_reformation_ruler_conversion_score = {
 		factor = 0.5
 		ROOT = { has_religion_feature = religion_cosmopolitan }
 		OR = { 
-			religion = hellenic_pagan
+			religion = graeco_roman
 			religion = bon
-			religion = west_african_pagan
+			religion = a_tag_roog
 		}
 	}
 	#Leadership
@@ -2248,7 +2248,7 @@ post_reformation_ruler_conversion_score = {
 		factor = 0.5
 		ROOT = { has_religion_feature = religion_theocratic_head }
 		OR = { 
-			religion = zun_pagan
+			#religion = zun_pagan
 			religion = tengri_pagan
 			religion = celtic_pagan
             religion = egyptian_pagan
@@ -2260,8 +2260,8 @@ post_reformation_ruler_conversion_score = {
 		OR = { 
 			religion = finnish_pagan
 			religion = slavic_pagan
-			religion = baltic_pagan
-			religion = hellenic_pagan
+			religion = dievas
+			religion = graeco_roman
 			religion = egyptian_pagan
 		}
 	}
@@ -2270,7 +2270,7 @@ post_reformation_ruler_conversion_score = {
 		ROOT = { has_religion_feature = religion_no_leader }
 		OR = { 
 			religion = bon
-			religion = west_african_pagan
+			religion = a_tag_roog
 		}
 	}
 	modifier = {
@@ -2314,7 +2314,7 @@ post_reformation_ruler_conversion_score = {
 			}
 		}
 		NOR = { 
-			religion = zun_pagan
+			#religion = zun_pagan
 			religion = tengri_pagan
 		}
 	}
@@ -2322,7 +2322,7 @@ post_reformation_ruler_conversion_score = {
 		factor = 1.5
 		ROOT = { has_religion_feature = religion_jizya }
 		NOR = {
-			religion = zun_pagan
+			#religion = zun_pagan
 			religion = tengri_pagan
 		}
 	}
@@ -2338,7 +2338,7 @@ post_reformation_ruler_conversion_score = {
 		}
 		OR = { 
 			religion = aztec
-			religion = baltic_pagan
+			religion = dievas
 			religion = finnish_pagan
 		}
 	}
@@ -2358,7 +2358,7 @@ post_reformation_ruler_conversion_score = {
 		NOR = { 
 			religion = aztec
 			religion = norse_pagan
-			religion = zun_pagan
+			#religion = zun_pagan
 		}
 	}
 	modifier = { 

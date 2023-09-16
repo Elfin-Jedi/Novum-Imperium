@@ -917,8 +917,8 @@ narrative_event = {
 		emf_has_roman_empire = yes
 		OR = {
 			religion_group = christian
-			religion = hellenic_pagan
-			religion = hellenic_pagan_reformed
+			religion_group = graecoroman_group
+			religion_group = indohelen_group
 		}
 		NOT = { has_global_flag = greek_fire }
 		in_command = no

@@ -55,14 +55,16 @@ decisions = {
 			is_tribal = yes
 			is_landed = yes
 			OR = {
-				is_primary_war_defender = yes
-				AND = {
-					is_primary_war_attacker = yes
-					NOR = {
-						religion = finnish_pagan
-						religion = west_african_pagan
-						religion = baltic_pagan
-						religion = slavic_pagan
+				any_war = {
+					OR = {
+						any_defender = {
+							character = ROOT
+							is_primary_war_defender = yes
+						}
+						any_attacker = {
+							character = ROOT
+							is_primary_war_attacker = yes
+						}
 					}
 				}
 			}
@@ -116,11 +118,12 @@ decisions = {
 			NOT = { has_dlc = "Legacy of Rome" }
 			is_tribal = yes
 			is_landed = yes
-			OR = {
-				religion = finnish_pagan
-				religion = west_african_pagan
-				religion = baltic_pagan
-				religion = slavic_pagan
+			primary_title = {
+				OR = {
+					has_law = clanic_temple_control_2
+					has_law = clanic_temple_control_3
+					has_law = clanic_temple_control_4
+				}
 			}
 		}
 
@@ -142,54 +145,24 @@ decisions = {
 
 						#Defending against heathen
 						OR = {
-							#Defender is finnish pagan but attacker is not
+							#Steppe religion
 							AND = {
 								ROOT = {
-									religion = finnish_pagan
+									steppe_religion_trigger = yes
 								}
 								attacker = {
-									NOR = {
-										religion = finnish_pagan
-										religion = finnish_pagan_reformed
-									}
+									steppe_religion_trigger = no
 								}
 							}
 
-							#Defender is west african pagan but attacker is not
+							#Messianic soul against any other religion
 							AND = {
 								ROOT = {
-									religion = west_african_pagan
+									messianic_soul_trigger = yes
 								}
 								attacker = {
-									NOR = {
-										religion = west_african_pagan
-										religion = west_african_pagan_reformed
-									}
-								}
-							}
-
-							#Defender is baltic pagan but attacker is not
-							AND = {
-								ROOT = {
-									religion = baltic_pagan
-								}
-								attacker = {
-									NOR = {
-										religion = baltic_pagan
-										religion = baltic_pagan_reformed
-									}
-								}
-							}
-
-							#Defender is slavic pagan but attacker is not
-							AND = {
-								ROOT = {
-									religion = slavic_pagan
-								}
-								attacker = {
-									NOR = {
-										religion = slavic_pagan
-										religion = slavic_pagan_reformed
+									NOT = {
+										religion = ROOT
 									}
 								}
 							}
@@ -228,4 +201,3 @@ decisions = {
 		}
 	}
 }
-

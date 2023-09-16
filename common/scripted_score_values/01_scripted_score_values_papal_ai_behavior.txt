@@ -3764,7 +3764,6 @@ ask_to_lift_excommunication_chance = {
 		any_owned_bloodline = {
 			has_bloodline_flag = saintly_bloodline
 			NOT = { has_bloodline_flag = wicked_saint }
-			bloodline_is_active_for = PREV
 		}
 	}
 	additive_modifier = {

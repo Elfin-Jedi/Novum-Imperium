@@ -67,9 +67,9 @@ emf_sr_has_any_religion_char_flag = {
 		has_flag = character_was_zoroastrian
 		has_flag = character_was_mazdakism
 		has_flag = character_was_zurvanism
-		has_flag = character_was_manichean
+		has_flag = character_was_mani
 		has_flag = character_was_mandaean
-		has_flag = character_was_yazidi
+		has_flag = character_was_yazidism
 		has_flag = character_was_khurmazta
 		has_flag = character_was_jewish
 		has_flag = character_was_samaritan
@@ -311,16 +311,16 @@ emf_sr_is_in_PREVs_interesting_society = {
 		PREV = { interested_in_society = secret_religious_society_zurvanism }
 	}
 	trigger_else_if = {
-		limit = { society_member_of = secret_religious_society_manichean }
-		PREV = { interested_in_society = secret_religious_society_manichean }
+		limit = { society_member_of = secret_religious_society_mani }
+		PREV = { interested_in_society = secret_religious_society_mani }
 	}
 	trigger_else_if = {
 		limit = { society_member_of = secret_religious_society_mandaean }
 		PREV = { interested_in_society = secret_religious_society_mandaean }
 	}
 	trigger_else_if = {
-		limit = { society_member_of = secret_religious_society_yazidi }
-		PREV = { interested_in_society = secret_religious_society_yazidi }
+		limit = { society_member_of = secret_religious_society_yazidism }
+		PREV = { interested_in_society = secret_religious_society_yazidism }
 	}
 	trigger_else_if = {
 		limit = { society_member_of = secret_religious_society_khurmazta }
@@ -587,16 +587,16 @@ emf_sr_has_any_char_old_religion = {
 			any_character = { religion = zurvanism emf_isolated_character = no }
 		}
 		AND = {
-			has_flag = character_was_manichean
-			any_character = { religion = manichean emf_isolated_character = no }
+			has_flag = character_was_mani
+			any_character = { religion = mani emf_isolated_character = no }
 		}
 		AND = {
 			has_flag = character_was_mandaean
 			any_character = { religion = mandaean emf_isolated_character = no }
 		}
 		AND = {
-			has_flag = character_was_yazidi
-			any_character = { religion = yazidi emf_isolated_character = no }
+			has_flag = character_was_yazidism
+			any_character = { religion = yazidism emf_isolated_character = no }
 		}
 		AND = {
 			has_flag = character_was_khurmazta
@@ -864,16 +864,16 @@ emf_sr_has_secret_community_of_ROOT = {
 		has_province_modifier = secret_zurvanism_community
 	}
 	trigger_else_if = {
-		limit = { ROOT = { society_member_of = secret_religious_society_manichean } }
-		has_province_modifier = secret_manichean_community
+		limit = { ROOT = { society_member_of = secret_religious_society_mani } }
+		has_province_modifier = secret_mani_community
 	}
 	trigger_else_if = {
 		limit = { ROOT = { society_member_of = secret_religious_society_mandaean } }
 		has_province_modifier = secret_mandaean_community
 	}
 	trigger_else_if = {
-		limit = { ROOT = { society_member_of = secret_religious_society_yazidi } }
-		has_province_modifier = secret_yazidi_community
+		limit = { ROOT = { society_member_of = secret_religious_society_yazidism } }
+		has_province_modifier = secret_yazidism_community
 	}
 	trigger_else_if = {
 		limit = { ROOT = { society_member_of = secret_religious_society_khurmazta } }
@@ -1425,11 +1425,11 @@ emf_sr_can_have_new_secret_community_of_FROM = {
 		}
 	}
 	trigger_else_if = {
-		limit = { FROM = { society_member_of = secret_religious_society_manichean } }
+		limit = { FROM = { society_member_of = secret_religious_society_mani } }
 		location = {
 			NOR = {
-				religion = manichean
-				has_province_modifier = secret_manichean_community
+				religion = mani
+				has_province_modifier = secret_mani_community
 			}
 		}
 	}
@@ -1443,11 +1443,11 @@ emf_sr_can_have_new_secret_community_of_FROM = {
 		}
 	}
 	trigger_else_if = {
-		limit = { FROM = { society_member_of = secret_religious_society_yazidi } }
+		limit = { FROM = { society_member_of = secret_religious_society_yazidism } }
 		location = {
 			NOR = {
-				religion = yazidi
-				has_province_modifier = secret_yazidi_community
+				religion = yazidism
+				has_province_modifier = secret_yazidism_community
 			}
 		}
 	}
@@ -1927,10 +1927,10 @@ emf_sr_has_not_religion_or_community_of_ROOT_sr = {
 		}
 	}
 	trigger_else_if = {
-		limit = { ROOT = { secret_religion = manichean } }
+		limit = { ROOT = { secret_religion = mani } }
 		NOR = {
-			religion = manichean
-			has_province_modifier = secret_manichean_community
+			religion = mani
+			has_province_modifier = secret_mani_community
 		}
 	}
 	trigger_else_if = {
@@ -1941,10 +1941,10 @@ emf_sr_has_not_religion_or_community_of_ROOT_sr = {
 		}
 	}
 	trigger_else_if = {
-		limit = { ROOT = { secret_religion = yazidi } }
+		limit = { ROOT = { secret_religion = yazidism } }
 		NOR = {
-			religion = yazidi
-			has_province_modifier = secret_yazidi_community
+			religion = yazidism
+			has_province_modifier = secret_yazidism_community
 		}
 	}
 	trigger_else_if = {
@@ -2106,9 +2106,9 @@ emf_sr_cult_requires_dlc_unlock = {
 		society_member_of = secret_religious_society_zoroastrian
 		society_member_of = secret_religious_society_mazdakism
 		society_member_of = secret_religious_society_zurvanism
-		society_member_of = secret_religious_society_manichean
+		society_member_of = secret_religious_society_mani
 		society_member_of = secret_religious_society_mandaean
-		society_member_of = secret_religious_society_yazidi
+		society_member_of = secret_religious_society_yazidism
 		society_member_of = secret_religious_society_khurmazta
 		society_member_of = secret_religious_society_jewish
 		society_member_of = secret_religious_society_samaritan
@@ -2191,9 +2191,9 @@ emf_sr_does_TOG_unlock_cult = {
 		society_member_of = secret_religious_society_zoroastrian
 		society_member_of = secret_religious_society_mazdakism
 		society_member_of = secret_religious_society_zurvanism
-		society_member_of = secret_religious_society_manichean
+		society_member_of = secret_religious_society_mani
 		society_member_of = secret_religious_society_mandaean
-		society_member_of = secret_religious_society_yazidi
+		society_member_of = secret_religious_society_yazidism
 		society_member_of = secret_religious_society_khurmazta
 		society_member_of = secret_religious_society_norse_pagan_reformed
 		society_member_of = secret_religious_society_norse_pagan
@@ -2458,16 +2458,16 @@ emf_sr_old_religion_is_liege_sr = {
 			liege = { secret_religion = zurvanism }
 		}
 		AND = {
-			has_flag = character_was_manichean
-			liege = { secret_religion = manichean }
+			has_flag = character_was_mani
+			liege = { secret_religion = mani }
 		}
 		AND = {
 			has_flag = character_was_mandaean
 			liege = { secret_religion = mandaean }
 		}
 		AND = {
-			has_flag = character_was_yazidi
-			liege = { secret_religion = yazidi }
+			has_flag = character_was_yazidism
+			liege = { secret_religion = yazidism }
 		}
 		AND = {
 			has_flag = character_was_khurmazta

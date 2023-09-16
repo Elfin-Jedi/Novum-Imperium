@@ -25,8 +25,6 @@ character_event = {
 	only_capable = yes
 	prisoner = no
 	lacks_dlc = "Conclave"
-	
-	is_triggered_only = yes
 
 	trigger = {
 		NOT = {
@@ -67,9 +65,27 @@ character_event = {
 			}
 		}
 	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			is_primary_heir = yes
+		}
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+		
+		modifier = {
+			factor = 2
+			trait = shy
+		}
+	}
 
 	immediate = {
-		any_host_courtier = {
+		random_host_courtier = {
 			limit = {
 				is_abroad = no
 				prisoner = no
@@ -99,10 +115,6 @@ character_event = {
 				NOT = {
 					is_rival = ROOT
 				}
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			save_event_target_as = troublemaker_child
 		}
@@ -255,7 +267,7 @@ character_event = {
 	}
 
 	immediate = {
-		any_host_courtier = {
+		random_host_courtier = {
 			limit = {
 				NOT = { character = ROOT }
 				at_location = ROOT
@@ -269,10 +281,6 @@ character_event = {
 				NOT = { sibling = ROOT }
 				trait = shy
 				NOT = { is_inaccessible_trigger = yes }
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			save_event_target_as = shy_child
 		}
@@ -499,7 +507,7 @@ character_event = {
 	prisoner = no
 
 	trigger = {
-		educator = { always = yes }
+		has_guardian = yes
 		trait = slothful
 		NOT = {
 			num_of_friends = 2
@@ -508,10 +516,10 @@ character_event = {
 			num_of_rivals = 2
 		}
 		is_inaccessible_trigger = no
-		any_host_courtier = {
+		host = {
 			NOT = { character = ROOT }
 			is_female = no
-			educator = { ROOT = { educator = { character = PREVPREV } } }
+			same_guardian = ROOT
 			NOT = {
 				sibling = ROOT
 			}
@@ -549,11 +557,11 @@ character_event = {
 	}
 
 	immediate = {
-		any_host_courtier = {
+		random_host_courtier = {
 			limit = {
 				NOT = { character = ROOT }
 				is_female = no
-				educator = { ROOT = { educator = { character = PREVPREV } } }
+				same_guardian = ROOT
 				NOT = {
 					sibling = ROOT
 				}
@@ -576,11 +584,39 @@ character_event = {
 					is_rival = ROOT
 				}
 			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
+		}
+	}
+	immediate = {
+		host = {
+			random_courtier = {
+				limit = {
+					NOT = { character = ROOT }
+					is_female = no
+					same_guardian = ROOT
+					NOT = {
+						sibling = ROOT
+					}
+					OR = {
+						trait = charitable
+						trait = kind
+						trait = ambitious
+					}
+					NOT = { is_inaccessible_trigger = yes }
+					NOT = {
+						num_of_friends = 3
+					}
+					NOT = {
+						num_of_rivals = 3
+					}
+					NOT = {
+						is_friend = ROOT
+					}
+					NOT = {
+						is_rival = ROOT
+					}
+				}
+				save_event_target_as = helping_child
 			}
-			save_event_target_as = helping_child
 		}
 	}
 
@@ -831,7 +867,7 @@ character_event = { # Relay event for rulers
 	}
 
 	immediate = {
-		any_courtier = {
+		random_courtier = {
 			limit = {
 				is_female = no
 				is_inaccessible_trigger = no
@@ -848,10 +884,6 @@ character_event = { # Relay event for rulers
 					trait = charitable
 				}
 			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
-			}
 			save_event_target_as = lustful_courtier
 		}
 		if = {
@@ -860,7 +892,7 @@ character_event = { # Relay event for rulers
 			}
 			save_event_target_as = lustful_courtier
 		}
-		any_courtier = {
+		random_courtier = {
 			limit = {
 				NOT = { character = event_target:lustful_courtier }
 				at_location = event_target:lustful_courtier
@@ -880,10 +912,6 @@ character_event = { # Relay event for rulers
 					religion_group = muslim
 				}
 				trait = shy
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			save_event_target_as = shy_courtier
 		}
@@ -1257,7 +1285,7 @@ character_event = {
 	}
 
 	immediate = {
-		any_courtier = {
+		random_courtier = {
 			limit = {
 				is_female = no
 				is_inaccessible_trigger = no
@@ -1282,10 +1310,6 @@ character_event = {
 				}
 				war = no
 			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
-			}
 			save_event_target_as = shy_courtier
 		}
 		if = {
@@ -1294,7 +1318,7 @@ character_event = {
 			}
 			save_event_target_as = shy_courtier
 		}
-		any_courtier = {
+		random_courtier = {
 			limit = {
 				at_location = event_target:shy_courtier
 				is_female = no
@@ -1328,10 +1352,6 @@ character_event = {
 					is_rival = event_target:shy_courtier
 				}
 				war = no
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			save_event_target_as = lustful_courtier
 		}
@@ -1621,8 +1641,6 @@ character_event = {
 	prisoner = no
 	min_age = 4
 	max_age = 14
-	
-	is_triggered_only = yes
 
 	trigger = {
 		is_inaccessible_trigger = no
@@ -1680,9 +1698,13 @@ character_event = {
 			}
 		}
 	}
+	
+	mean_time_to_happen = {
+		months = 80
+	}
 
 	immediate = {
-		any_courtier = {
+		random_courtier = {
 			limit = {
 				is_female = yes
 				is_inaccessible_trigger = no
@@ -1736,50 +1758,44 @@ character_event = {
 					}
 				}
 			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
-			}
 			save_event_target_as = child_1
-			any_host_courtier = {
-				limit = {
-					NOT = {
-						character = PREVPREV
-					}
-					at_location = PREVPREV
-					is_female = yes
-					is_inaccessible_trigger = no
-					prisoner = no
-					age = 4
-					NOT = {
-						age = 14
-					}
-					NOT = {
-						sibling = PREVPREV
-					}
-					NOT = {
-						num_of_friends = 2
-					}
-					NOT = {
-						num_of_rivals = 2
-					}
-					NOT = {
-						is_friend = PREVPREV
-					}
-					NOT = {
+			host = {
+				random_courtier = {
+					limit = {
+						NOT = {
+							character = PREVPREV
+						}
+						at_location = PREVPREV
+						is_female = yes
+						is_inaccessible_trigger = no
+						prisoner = no
+						age = 4
+						NOT = {
+							age = 14
+						}
+						NOT = {
+							sibling = PREVPREV
+						}
+						NOT = {
+							num_of_friends = 2
+						}
+						NOT = {
+							num_of_rivals = 2
+						}
+						NOT = {
+							is_friend = PREVPREV
+						}
+						NOT = {
 						is_rival = PREVPREV
-					}
-					OR = {
-						trait = ambitious
-						trait = diligent
-						trait = just
-					}
+						}
+						OR = {
+							trait = ambitious
+							trait = diligent
+							trait = just
+						}
+					}	
+					save_event_target_as = child_2
 				}
-				score_value = { #Prioritizes selecting an interesting courtier...
-					value = 10
-					interesting_courtier_selection_score = yes
-				}
-				save_event_target_as = child_2
 			}
 			character_event = { id = 100035 }
 		}
@@ -1919,8 +1935,6 @@ character_event = {
 	only_capable = yes
 	min_age = 11
 	max_age = 16
-	
-	is_triggered_only = yes
 
 	trigger = {
 		NOT = {
@@ -1965,7 +1979,7 @@ character_event = {
 	}
 
 	immediate = {
-		any_host_courtier = {
+		random_host_courtier = {
 			limit = {
 				is_inaccessible_trigger = no
 				at_location = ROOT
@@ -1993,11 +2007,20 @@ character_event = {
 					is_rival = ROOT
 				}
 			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
-			}
 			save_event_target_as = target_courtier
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2
+			trait = cruel
 		}
 	}
 
@@ -2153,8 +2176,6 @@ character_event = {
 	only_capable = yes
 	min_age = 16
 	max_age = 25
-	
-	is_triggered_only = yes
 
 	trigger = {
 		is_inaccessible_trigger = no
@@ -2204,7 +2225,7 @@ character_event = {
 	}
 
 	immediate = {
-		any_host_courtier = {
+		random_courtier = {
 			limit = {
 				is_inaccessible_trigger = no
 				prisoner = no
@@ -2237,11 +2258,29 @@ character_event = {
 					is_rival = ROOT
 				}
 			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
-			}
 			save_event_target_as = target_courtier
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.5
+			trait = trusting
+		}
+		
+		modifier = {
+			factor = 2
+			trait = wroth
+		}
+		modifier = {
+			factor = 2
+			trait = envious
 		}
 	}
 
@@ -2458,8 +2497,6 @@ character_event = {
 	max_age = 16
 	prisoner = no
 	only_capable = yes
-	
-	is_triggered_only = yes
 
 	trigger = {
 		is_inaccessible_trigger = no
@@ -2498,7 +2535,7 @@ character_event = {
 	}
 
 	immediate = {
-		any_host_courtier = {
+		random_host_courtier = {
 			limit = {
 				martial = 5
 				this_can_duel_with_root_trigger = yes
@@ -2522,11 +2559,28 @@ character_event = {
 					is_rival = ROOT
 				}
 			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
-			}
 			save_event_target_as = target_courtier
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			trait = brave
+		}
+		modifier = {
+			factor = 2
+			trait = craven
+		}
+		modifier = {
+			factor = 0.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2
+			trait = content
 		}
 	}
 
@@ -2597,8 +2651,6 @@ character_event = {
 	prisoner = no
 	min_age = 4
 	max_age = 14
-	
-	is_triggered_only = yes
 
 	trigger = {
 		is_inaccessible_trigger = no
@@ -2611,6 +2663,7 @@ character_event = {
 		NOT = {
 			num_of_rivals = 2
 		}
+		NOT = { has_character_modifier = in_seclusion }
 		any_host_courtier = {
 			is_inaccessible_trigger = no
 			prisoner = no
@@ -2628,10 +2681,31 @@ character_event = {
 			}
 		}
 	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			trait = brave
+		}
+		modifier = {
+			factor = 0.5
+			trait = rowdy
+		}
+		modifier = {
+			factor = 2
+			trait = craven
+		}
+		modifier = {
+			factor = 2
+			trait = timid
+		}
+	}
 
 	immediate = {
 		set_character_flag = childhood_was_bullied
-		any_host_courtier = {
+		random_host_courtier = {
 			limit = {
 				is_inaccessible_trigger = no
 				prisoner = no
@@ -2647,10 +2721,6 @@ character_event = {
 					is_friend = ROOT
 					is_rival = ROOT
 				}
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			save_event_target_as = target_courtier
 		}
@@ -2884,8 +2954,6 @@ character_event = {
 	only_capable = yes
 	min_age = 11
 	max_age = 16
-	
-	is_triggered_only = yes
 
 	trigger = {
 		NOT = {
@@ -2924,9 +2992,30 @@ character_event = {
 			}
 		}
 	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 2
+			trait = honest
+		}
+		modifier = {
+			factor = 0.5
+			trait = deceitful
+		}
+		modifier = {
+			factor = 0.5
+			intrigue = 5
+		}
+		modifier = {
+			factor = 2
+			NOT = { intrigue = 5 }
+		}
+	}
 
 	immediate = {
-		any_host_courtier = {
+		random_host_courtier = {
 			limit = {
 				is_inaccessible_trigger = no
 				prisoner = no
@@ -2949,10 +3038,6 @@ character_event = {
 				NOT = {
 					is_rival = ROOT
 				}
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			save_event_target_as = target_courtier
 		}
@@ -3190,8 +3275,6 @@ character_event = {
 	only_capable = yes
 	only_playable = yes
 	religion_group = christian
-	
-	is_triggered_only = yes
 
 	trigger = {
 		is_inaccessible_trigger = no
@@ -3227,6 +3310,35 @@ character_event = {
 			}
 		}
 	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			piety = 50
+		}
+		modifier = {
+			factor = 2
+			NOT = { piety = 50 }
+		}
+		modifier = {
+			factor = 0.5
+			trait = diligent
+		}
+		modifier = {
+			factor = 2
+			trait = slothful
+		}
+		modifier = {
+			factor = 0.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2
+			trait = content
+		}
+	}
 
 	option = {
 		name = EVTOPTA100080
@@ -3234,7 +3346,7 @@ character_event = {
 	}
 	option = {
 		name = EVTOPTB100080
-		any_host_courtier = {
+		random_host_courtier = {
 			limit = {
 				is_inaccessible_trigger = no
 				prisoner = no
@@ -3263,10 +3375,6 @@ character_event = {
 				NOT = {
 					is_rival = ROOT
 				}
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			character_event = {
 				id = 100081
@@ -3411,8 +3519,6 @@ character_event = {
 	max_age = 16
 	prisoner = no
 	only_capable = yes
-	
-	is_triggered_only = yes
 
 	trigger = {
 		is_inaccessible_trigger = no
@@ -3455,9 +3561,22 @@ character_event = {
 			}
 		}
 	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 3
+			trait = envious
+		}
+		modifier = {
+			factor = 0.5
+			trait = kind
+		}
+	}
 
 	immediate = {
-		any_host_courtier = {
+		random_host_courtier = {
 			limit = {
 				is_inaccessible_trigger = no
 				is_female = yes
@@ -3485,10 +3604,6 @@ character_event = {
 				NOT = {
 					is_rival = ROOT
 				}
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			save_event_target_as = embroidery_prodigy
 		}
@@ -3687,8 +3802,6 @@ character_event = {
 	min_age = 4
 	max_age = 14
 	prisoner = no
-	
-	is_triggered_only = yes
 
 	trigger = {
 		is_inaccessible_trigger = no
@@ -3716,9 +3829,46 @@ character_event = {
 			}
 		}
 	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			trait = kind
+		}
+		modifier = {
+			factor = 0.5
+			trait = humble
+		}
+		modifier = {
+			factor = 0.5
+			trait = timid
+		}
+		modifier = {
+			factor = 0.5
+			trait = affectionate
+		}
+		modifier = {
+			factor = 0.5
+			trait = wroth
+		}
+		modifier = {
+			factor = 0.5
+			trait = envious
+		}
+		modifier = {
+			factor = 0.5
+			trait = rowdy
+		}
+		modifier = {
+			factor = 0.5
+			trait = brooding
+		}
+	}
 
 	immediate = {
-		any_host_courtier = {
+		random_host_courtier = {
 			limit = {
 				is_inaccessible_trigger = no
 				is_female = yes
@@ -3735,10 +3885,6 @@ character_event = {
 					is_friend = ROOT
 					is_rival = ROOT
 				}
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			save_event_target_as = doll_stealer
 		}
@@ -3920,8 +4066,6 @@ character_event = {
 	only_capable = yes
 	religion_group = christian
 	war = yes
-	
-	is_triggered_only = yes
 
 	trigger = {
 		is_inaccessible_trigger = no
@@ -3959,9 +4103,39 @@ character_event = {
 			}
 		}
 	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 2
+			trait = deceitful
+		}
+		modifier = {
+			factor = 2
+			trait = paranoid
+		}
+		modifier = {
+			factor = 2
+			trait = cynical
+		}
+		
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.5
+			trait = brave
+		}
+		modifier = {
+			factor = 0.5
+			trait = honest
+		}
+	}
 
 	immediate = {
-		any_host_courtier = {
+		random_host_courtier = {
 			limit = {
 				is_inaccessible_trigger = no
 				prisoner = no
@@ -3986,10 +4160,6 @@ character_event = {
 				NOT = {
 					is_rival = ROOT
 				}
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			save_event_target_as = fellow_crusader
 		}
@@ -4247,8 +4417,6 @@ character_event = {
 	prisoner = no
 	capable_only = yes
 	only_rulers = yes
-	
-	is_triggered_only = yes
 
 	trigger = {
 		is_inaccessible_trigger = no
@@ -4327,11 +4495,63 @@ character_event = {
 			}
 		}
 	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.5
+			trait = trusting
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				trait = quick
+				trait = shrewd
+			}
+		}
+		modifier = {
+			factor = 0.3
+			trait = genius
+		}
+		modifier = {
+			factor = 0.5
+			trait = diligent
+		}
+		
+		modifier = {
+			factor = 2
+			trait = slothful
+		}
+		modifier = {
+			factor = 2
+			trait = paranoid
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				trait = slow
+				trait = dull
+			}
+		}
+		modifier = {
+			factor = 5
+			trait = imbecile
+		}
+		modifier = {
+			factor = 2
+			trait = content
+		}
+	}
 
 	option = {
 		name = EVTOPTA100110
 		liege = {
-			any_courtier_or_vassal = {
+			random_courtier_or_vassal = {
 				limit = {
 					is_inaccessible_trigger = no
 					#is_female = no
@@ -4387,10 +4607,6 @@ character_event = {
 					NOT = {
 						is_rival = ROOT
 					}
-				}
-				score_value = { #Prioritizes selecting an interesting courtier...
-					value = 10
-					interesting_courtier_to_ROOT_selection_score = yes
 				}
 				character_event = {
 					id = 100111
@@ -4809,8 +5025,6 @@ character_event = {
 	min_age = 16
 	prisoner = no
 	only_capable = yes
-	
-	is_triggered_only = yes
 
 	trigger = {
 		is_pregnant = yes
@@ -4852,10 +5066,48 @@ character_event = {
 			current_scope_and_root_make_sense_as_friendlies_trigger = yes
 		}
 	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.5
+			trait = honest
+		}
+		modifier = {
+			factor = 0.5
+			trait = trusting
+		}
+		modifier = {
+			factor = 0.5
+			trait = kind
+		}
+		
+		modifier = {
+			factor = 2
+			trait = shy
+		}
+		modifier = {
+			factor = 2
+			trait = deceitful
+		}
+		modifier = {
+			factor = 2
+			trait = paranoid
+		}
+		modifier = {
+			factor = 2
+			trait = cruel
+		}
+	}
 
 	option = {
 		name = EVTOPTA100115
-		any_host_courtier = {
+		random_host_courtier = {
 			limit = {
 				is_female = yes
 				is_pregnant = yes
@@ -4870,10 +5122,6 @@ character_event = {
 					is_rival = ROOT
 				}
 				current_scope_and_root_make_sense_as_friendlies_trigger = yes
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			add_friend = ROOT
 			character_event = {
@@ -5022,8 +5270,6 @@ character_event = {
 	capable_only = yes
 	war = no
 	friends = yes
-	
-	is_triggered_only = yes
 
 	trigger = {
 		in_command = no
@@ -5046,6 +5292,19 @@ character_event = {
 			}
 		}
 	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		modifier = {
+			factor = 0.5
+			trait = charitable
+		}
+		modifier = {
+			factor = 2
+			trait = greedy
+		}
+	}
 
 	immediate = {
 		add_character_modifier = {
@@ -5057,7 +5316,7 @@ character_event = {
 
 	option = {
 		name = EVTOPTB100150
-		any_friend = {
+		random_friend = {
 			limit = {
 				is_inaccessible_trigger = no
 				is_ruler = yes
@@ -5068,10 +5327,6 @@ character_event = {
 					is_primary_war_attacker = yes
 					is_primary_war_defender = yes
 				}
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			opinion = {
 				modifier = opinion_grateful
@@ -5098,7 +5353,7 @@ character_event = {
 		name = EVTOPTC100150
 		random = {
 			chance = 10
-			any_friend = {
+			random_friend = {
 				limit = {
 					is_inaccessible_trigger = no
 					is_ruler = yes
@@ -5109,10 +5364,6 @@ character_event = {
 						is_primary_war_attacker = yes
 						is_primary_war_defender = yes
 					}
-				}
-				score_value = { #Prioritizes selecting an interesting courtier...
-					value = 10
-					interesting_courtier_selection_score = yes
 				}
 				opinion = {
 					modifier = opinion_disappointed
@@ -5229,8 +5480,6 @@ character_event = {
 	capable_only = yes
 	war = yes
 	friends = yes
-	
-	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -5247,9 +5496,23 @@ character_event = {
 			ROOT = { NOT = { is_liege_of = PREV } }
 		}
 	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 5
+			trait = proud
+		}
+		
+		modifier = {
+			factor = 0.5
+			trait = trusting
+		}		
+	}
 
 	immediate = {
-		any_friend = {
+		random_friend = {
 			limit = {
 				is_inaccessible_trigger = no
 				war = no
@@ -5257,10 +5520,6 @@ character_event = {
 				is_ruler = yes
 				prisoner = no
 				ROOT = { NOT = { is_liege_of = PREV } }
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			save_event_target_as = friend_during_war
 		}
@@ -5430,8 +5689,6 @@ character_event = {
 	only_capable = yes
 	war = no
 	friends = yes
-	
-	is_triggered_only = yes
 
 	trigger = {
 		in_command = no
@@ -5459,9 +5716,47 @@ character_event = {
 			}
 		}
 	}
+	
+	mean_time_to_happen = {
+		months = 240
+		
+		modifier = {
+			factor = 0.5
+			trait = honest
+		}
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.5
+			trait = kind
+		}
+		modifier = {
+			factor = 0.5
+			trait = trusting
+		}
+		
+		modifier = {
+			factor = 2
+			trait = deceitful
+		}
+		modifier = {
+			factor = 2
+			trait = shy
+		}
+		modifier = {
+			factor = 2
+			trait = cruel
+		}
+		modifier = {
+			factor = 2
+			trait = paranoid
+		}
+	}
 
 	immediate = {
-		any_friend = {
+		random_friend = {
 			limit = {
 				is_inaccessible_trigger = no
 				prisoner = no
@@ -5481,13 +5776,9 @@ character_event = {
 					}
 				}
 			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
-			}
 			save_event_target_as = my_friend
 			event_target:my_friend = {
-				any_friend = {
+				random_friend = {
 					limit = {
 						is_inaccessible_trigger = no
 						prisoner = no
@@ -5503,10 +5794,6 @@ character_event = {
 							is_consort = ROOT
 							ROOT = { is_consort = PREV }
 						}
-					}
-					score_value = { #Prioritizes selecting an interesting courtier...
-						value = 10
-						interesting_courtier_to_ROOT_selection_score = yes
 					}
 					save_event_target_as = friends_friend
 				}
@@ -5868,8 +6155,6 @@ character_event = {
 	war = no
 	friends = yes
 	
-	is_triggered_only = yes
-
 	trigger = {
 		is_inaccessible_trigger = no
 		is_heretic = no
@@ -5881,7 +6166,6 @@ character_event = {
 			religion_group = jewish_group
 			religion_group = zoroastrian_group
 		}
-		has_secret_religion = no
 		NOT = {
 			has_character_modifier = heretic_friend_timer
 		}
@@ -5898,6 +6182,80 @@ character_event = {
 			}
 		}
 	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.5
+			trait = kind
+		}
+		modifier = {
+			factor = 0.5
+			trait = trusting
+		}
+		
+		modifier = {
+			factor = 2
+			trait = cynical
+		}
+		modifier = {
+			factor = 2
+			trait = shy
+		}
+		modifier = {
+			factor = 2
+			trait = cruel
+		}
+		modifier = {
+			factor = 2
+			trait = paranoid
+		}
+	}mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.5
+			trait = kind
+		}
+		modifier = {
+			factor = 0.5
+			trait = trusting
+		}
+		
+		modifier = {
+			factor = 2
+			trait = cynical
+		}
+		modifier = {
+			factor = 2
+			trait = shy
+		}
+		modifier = {
+			factor = 2
+			trait = cruel
+		}
+		modifier = {
+			factor = 2
+			trait = paranoid
+		}
+	}
 
 	immediate = {
 		add_character_modifier = {
@@ -5905,7 +6263,34 @@ character_event = {
 			duration = 1095
 			hidden = yes
 		}
-		any_friend = {
+	}
+	option = {
+		name = EVTOPTA100180
+		random_friend = {
+			limit = {
+				is_inaccessible_trigger = no
+				war = no
+				in_command = no
+				prisoner = no
+				OR = {
+					is_heretic = yes
+					NOT = {
+						religion = ROOT
+					}
+				}
+			}
+			character_event = {
+				id = 100181
+				days = 7
+				random = 14
+				tooltip = EVTTOOLTIP100181
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB100180
+		piety = -10
+		random_friend = {
 			limit = {
 				is_inaccessible_trigger = no
 				war = no
@@ -5917,32 +6302,6 @@ character_event = {
 					}
 				}
 			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
-			}
-			save_event_target_as = heretic_friend
-		}
-	}
-
-	option = {
-		name = EVTOPTA100180
-		event_target:heretic_friend = {
-			show_scope_change = no
-			character_event = {
-				id = 100181
-				days = 7
-				random = 14
-				tooltip = EVTTOOLTIP100181
-			}
-		}
-		show_portrait = event_target:heretic_friend
-	}
-	option = {
-		name = EVTOPTB100180
-		piety = -10
-		event_target:heretic_friend = {
-			show_scope_change = no
 			character_event = {
 				id = 100182
 				days = 7
@@ -5950,12 +6309,21 @@ character_event = {
 				tooltip = EVTTOOLTIP100182
 			}
 		}
-		show_portrait = event_target:heretic_friend
 	}
 	option = {
 		name = EVTOPTC100180
-		event_target:heretic_friend = {
-			show_scope_change = no
+		random_friend = {
+			limit = {
+				is_inaccessible_trigger = no
+				war = no
+				prisoner = no
+				OR = {
+					is_heretic = yes
+					NOT = {
+						religion = ROOT
+					}
+				}
+			}
 			opinion = {
 				modifier = opinion_glad
 				who = ROOT
@@ -5968,7 +6336,6 @@ character_event = {
 				tooltip = EVTTOOLTIP100183
 			}
 		}
-		show_portrait = event_target:heretic_friend
 	}
 	option = {
 		name = EVTOPTD100180
@@ -5976,8 +6343,18 @@ character_event = {
 		trigger = {
 			trait = zealous
 		}
-		event_target:heretic_friend = {
-			show_scope_change = no
+		random_friend = {
+			limit = {
+				is_inaccessible_trigger = no
+				war = no
+				prisoner = no
+				OR = {
+					is_heretic = yes
+					NOT = {
+						religion = ROOT
+					}
+				}
+			}
 			remove_friend = ROOT
 			character_event = {
 				id = 100184
@@ -5993,8 +6370,18 @@ character_event = {
 		trigger = {
 			trait = cynical
 		}
-		event_target:heretic_friend = {
-			show_scope_change = no
+		random_friend = {
+			limit = {
+				is_inaccessible_trigger = no
+				war = no
+				prisoner = no
+				OR = {
+					is_heretic = yes
+					NOT = {
+						religion = ROOT
+					}
+				}
+			}
 			random = {
 				chance = 50
 				ROOT = {
@@ -6215,8 +6602,6 @@ character_event = {
 	capable_only = yes
 	war = no
 	friends = yes
-	
-	is_triggered_only = yes
 
 	trigger = {
 		is_inaccessible_trigger = no
@@ -6243,6 +6628,44 @@ character_event = {
 			}
 		}
 	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			trait = honest
+		}
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.5
+			trait = kind
+		}
+		modifier = {
+			factor = 0.5
+			trait = trusting
+		}
+		
+		modifier = {
+			factor = 2
+			trait = deceitful
+		}
+		modifier = {
+			factor = 2
+			trait = shy
+		}
+		modifier = {
+			factor = 2
+			trait = cruel
+		}
+		modifier = {
+			factor = 2
+			trait = paranoid
+		}
+	}
 
 	immediate = {
 		hidden_tooltip = {
@@ -6256,7 +6679,7 @@ character_event = {
 
 	option = {
 		name = EVTOPTA100190
-		any_friend = {
+		random_friend = {
 			limit = {
 				is_adult = yes
 				is_inaccessible_trigger = no
@@ -6267,10 +6690,6 @@ character_event = {
 				NOT = {
 					has_job_title = job_chancellor
 				}
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			character_event = {
 				id = 100191
@@ -6535,8 +6954,6 @@ character_event = {
 	capable_only = yes
 	war = no
 	friends = yes
-	
-	is_triggered_only = yes
 
 	trigger = {
 		is_inaccessible_trigger = no
@@ -6587,7 +7004,7 @@ character_event = {
 
 	option = {
 		name = EVTOPTA100200
-		any_friend = {
+		random_friend = {
 			limit = {
 				is_adult = yes
 				is_inaccessible_trigger = no
@@ -6606,10 +7023,6 @@ character_event = {
 				NOT = {
 					has_job_title = job_marshal
 				}
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			character_event = {
 				id = 100201
@@ -6878,8 +7291,6 @@ character_event = {
 	friends = yes
 	war = no
 	
-	is_triggered_only = yes
-
 	trigger = {
 		in_command = no
 		stewardship = 5
@@ -6912,6 +7323,44 @@ character_event = {
 			is_inaccessible_trigger = no
 		}
 	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			trait = honest
+		}
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.5
+			trait = kind
+		}
+		modifier = {
+			factor = 0.5
+			trait = trusting
+		}
+		
+		modifier = {
+			factor = 2
+			trait = deceitful
+		}
+		modifier = {
+			factor = 2
+			trait = shy
+		}
+		modifier = {
+			factor = 2
+			trait = cruel
+		}
+		modifier = {
+			factor = 2
+			trait = paranoid
+		}
+	}
 
 	immediate = {
 		hidden_tooltip = {
@@ -6925,7 +7374,7 @@ character_event = {
 
 	option = {
 		name = EVTOPTA100210
-		any_friend = {
+		random_friend = {
 			limit = {
 				war = no
 				in_command = no
@@ -6936,10 +7385,6 @@ character_event = {
 					is_councillor = yes
 				}
 				is_inaccessible_trigger = no
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			character_event = {
 				id = 100211
@@ -6999,6 +7444,11 @@ character_event = {
 	option = {
 		name = EVTOPTA100211
 		FROM = {
+			opinion = {
+				modifier = opinion_very_grateful
+				who = FROM
+				years = 5
+			}
 			character_event = {
 				id = 100212
 				days = 7
@@ -7006,26 +7456,21 @@ character_event = {
 				tooltip = EVTTOOLTIP100212
 			}
 		}
-		reverse_opinion = {
-			modifier = opinion_very_grateful
-			who = FROM
-			years = 5
-		}
 	}
 	option = {
 		name = EVTOPTB100211
 		FROM = {
+			opinion = {
+				modifier = opinion_disappointed
+				who = FROM
+				years = 5
+			}
 			character_event = {
 				id = 100213
 				days = 7
 				random = 7
 				tooltip = EVTTOOLTIP100213
 			}
-		}
-		reverse_opinion = {
-			modifier = opinion_disappointed
-			who = FROM
-			years = 5
 		}
 	}
 	option = {
@@ -7216,8 +7661,6 @@ character_event = {
 	capable_only = yes
 	war = no
 	friends = yes
-	
-	is_triggered_only = yes
 
 	trigger = {
 		in_command = no
@@ -7238,6 +7681,44 @@ character_event = {
 			is_inaccessible_trigger = no
 		}
 	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			trait = honest
+		}
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.5
+			trait = kind
+		}
+		modifier = {
+			factor = 0.5
+			trait = trusting
+		}
+		
+		modifier = {
+			factor = 2
+			trait = deceitful
+		}
+		modifier = {
+			factor = 2
+			trait = shy
+		}
+		modifier = {
+			factor = 2
+			trait = cruel
+		}
+		modifier = {
+			factor = 2
+			trait = paranoid
+		}
+	}
 
 	immediate = {
 		hidden_tooltip = {
@@ -7251,7 +7732,7 @@ character_event = {
 
 	option = {
 		name = EVTOPTA100220
-		any_friend = {
+		random_friend = {
 			limit = {
 				war = no
 				in_command = no
@@ -7259,10 +7740,6 @@ character_event = {
 				intrigue = 11
 				NOT = { has_job_title = job_spymaster }
 				is_inaccessible_trigger = no
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			character_event = {
 				id = 100221
@@ -7601,8 +8078,6 @@ character_event = {
 	war = no
 	friends = yes
 	
-	is_triggered_only = yes
-
 	trigger = {
 		in_command = no
 		learning = 5
@@ -7636,6 +8111,44 @@ character_event = {
 			is_inaccessible_trigger = no
 		}
 	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			trait = honest
+		}
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.5
+			trait = kind
+		}
+		modifier = {
+			factor = 0.5
+			trait = trusting
+		}
+		
+		modifier = {
+			factor = 2
+			trait = deceitful
+		}
+		modifier = {
+			factor = 2
+			trait = shy
+		}
+		modifier = {
+			factor = 2
+			trait = cruel
+		}
+		modifier = {
+			factor = 2
+			trait = paranoid
+		}
+	}
 
 	immediate = {
 		hidden_tooltip = {
@@ -7649,7 +8162,7 @@ character_event = {
 
 	option = {
 		name = EVTOPTA100230
-		any_friend = {
+		random_friend = {
 			limit = {
 				war = no
 				in_command = no
@@ -7665,10 +8178,6 @@ character_event = {
 				religion = ROOT
 				is_heretic = no
 				is_inaccessible_trigger = no
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			character_event = {
 				id = 100231
@@ -7953,8 +8462,6 @@ character_event = {
 	war = no
 	friends = yes
 	
-	is_triggered_only = yes
-
 	trigger = {
 		in_command = no
 		NOT = {
@@ -7974,9 +8481,31 @@ character_event = {
 			is_inaccessible_trigger = no
 		}
 	}
+	
+	mean_time_to_happen = {
+		months = 200
+		
+		modifier = {
+			factor = 0.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.5
+			trait = chaste
+		}
+		
+		modifier = {
+			factor = 2
+			trait = slothful
+		}
+		modifier = {
+			factor = 2
+			trait = lustful
+		}
+	}
 
 	immediate = {
-		any_friend = {
+		random_friend = {
 			limit = {
 				war = no
 				in_command = no
@@ -7984,10 +8513,6 @@ character_event = {
 				trait = celibate
 				same_sex = ROOT
 				is_inaccessible_trigger = no
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			save_event_target_as = celibate_friend
 		}
@@ -8147,8 +8672,6 @@ character_event = {
 	prisoner = no
 	war = no
 	friends = yes
-	
-	is_triggered_only = yes
 
 	trigger = {
 		in_command = no
@@ -8165,19 +8688,37 @@ character_event = {
 			is_inaccessible_trigger = no
 		}
 	}
+	
+	mean_time_to_happen = {
+		months = 200
+		
+		modifier = {
+			factor = 2
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2
+			trait = chaste
+		}
+		
+		modifier = {
+			factor = 0.5
+			trait = slothful
+		}
+		modifier = {
+			factor = 0.5
+			trait = lustful
+		}
+	}
 
 	immediate = {
-		any_friend = {
+		random_friend = {
 			limit = {
 				war = no
 				in_command = no
 				prisoner = no
 				trait = hedonist
 				is_inaccessible_trigger = no
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			save_event_target_as = hedonist_friend
 		}
@@ -8186,7 +8727,6 @@ character_event = {
 	option = {
 		name = EVTOPTA100250
 		event_target:hedonist_friend = {
-			show_scope_change = no
 			character_event = {
 				id = 100251
 				days = 7
@@ -8198,19 +8738,18 @@ character_event = {
 	option = {
 		name = EVTOPTB100250
 		event_target:hedonist_friend = {
-			show_scope_change = no
-			character_event = {
-				id = 100252
-				days = 7
-				random = 7
-				tooltip = EVTTOOLTIP100252
-			}
 			tooltip = {
 				opinion = {
 					modifier = opinion_irritated
 					who = ROOT
 					years = 2
 				}
+			}
+			character_event = {
+				id = 100252
+				days = 7
+				random = 7
+				tooltip = EVTTOOLTIP100252
 			}
 		}
 	}
@@ -8358,8 +8897,6 @@ character_event = {
 	war = no
 	friends = yes
 	
-	is_triggered_only = yes
-
 	trigger = {
 		in_command = no
 		#num_of_children = 1
@@ -8371,19 +8908,37 @@ character_event = {
 			is_inaccessible_trigger = no
 		}
 	}
+	
+	mean_time_to_happen = {
+		months = 200
+		
+		modifier = {
+			factor = 0.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.5
+			learning = 15
+		}
+		
+		modifier = {
+			factor = 2
+			trait = slothful
+		}
+		modifier = {
+			factor = 2
+			trait = content
+		}
+	}
 
 	immediate = {
-		any_friend = {
+		random_friend = {
 			limit = {
 				war = no
 				in_command = no
 				prisoner = no
 				trait = scholar
 				is_inaccessible_trigger = no
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			save_event_target_as = scholar_friend
 		}
@@ -8548,8 +9103,6 @@ character_event = {
 	war = no
 	friends = yes
 	
-	is_triggered_only = yes
-
 	trigger = {
 		in_command = no
 		is_inaccessible_trigger = no
@@ -8581,32 +9134,29 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		days = 1
+	mean_time_to_happen = {
+		months = 1000
+		
 		modifier = {
-			factor = 0.25
+			factor = 4
 			trait = gregarious
-		}		
+		}
 		modifier = {
-			factor = 0.25
+			factor = 4
 			trait = trusting
 		}
 		modifier = {
-			factor = 0.25
-			trait = socializer
-		}		
-		modifier = {
-			factor = 3
+			factor = 0.5
 			trait = paranoid
-		}		
+		}
 		modifier = {
-			factor = 3
+			factor = 0.5
 			trait = shy
 		}
 	}
 
 	immediate = {
-		any_friend = {
+		random_friend = {
 			limit = {
 				war = no
 				in_command = no
@@ -8630,10 +9180,6 @@ character_event = {
 				}
 				is_inaccessible_trigger = no
 				NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_not_abandon_friendship } }
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			save_event_target_as = mean_friend
 		}
@@ -8802,8 +9348,6 @@ character_event = {
 	capable_only = yes
 	war = no
 	friends = yes
-	
-	is_triggered_only = yes
 
 	trigger = {
 		in_command = no
@@ -8842,20 +9386,21 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		days = 1
+	mean_time_to_happen = {
+		months = 200
 		modifier = {
-			factor = 0.25
-			trait = craven
-		}		
-		modifier = {
-			factor = 2
+			factor = 0.5
 			trait = brave
+		}
+		
+		modifier = {
+			factor = 3
+			trait = craven
 		}		
 	}
 
 	immediate = {
-		any_friend = {
+		random_friend = {
 			limit = {
 				war = no
 				in_command = no
@@ -8885,12 +9430,8 @@ character_event = {
 					is_inaccessible_trigger = no
 				}
 			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
-			}
 			save_event_target_as = friend_in_danger
-			any_rival = {
+			random_rival = {
 				limit = {
 					war = no
 					in_command = no
@@ -8907,10 +9448,6 @@ character_event = {
 					}
 					can_be_maimed_trigger = yes
 					is_inaccessible_trigger = no
-				}
-				score_value = { #Prioritizes selecting an interesting courtier...
-					value = 10
-					interesting_courtier_to_ROOT_selection_score = yes
 				}
 				save_event_target_as = rival_of_friend
 			}
@@ -9047,8 +9584,6 @@ character_event = {
 	prisoner = no
 	war = no
 	rivals = yes
-	
-	is_triggered_only = yes
 
 	trigger = {
 		NOT = { practical_age = 60 }
@@ -9125,22 +9660,22 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		days = 1
+	mean_time_to_happen = {
+		months = 1500
 		modifier = {
-			factor = 2
+			factor = 0.5
 			trait = just
-		}		
+		}
+		modifier = {
+			factor = 0.5
+			trait = cruel
+		}
 		modifier = {
 			factor = 2
-			trait = cruel
-		}		
-		modifier = {
-			factor = 0.5
 			trait = arbitrary
-		}		
+		}
 		modifier = {
-			factor = 0.5
+			factor = 2
 			trait = kind
 		}		
 		modifier = {
@@ -9158,7 +9693,7 @@ character_event = {
 	}
 
 	immediate = {
-		any_rival = {
+		random_rival = {
 			limit = {
 				this_can_duel_with_root_trigger = yes
 				war = no
@@ -9206,10 +9741,6 @@ character_event = {
 						}
 					}
 				}
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			save_event_target_as = duel_rival
 		}
@@ -9713,8 +10244,6 @@ character_event = {
 	war = no
 	rivals = yes
 	has_character_flag = attending_tournament
-	
-	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -9760,38 +10289,38 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		days = 1
+	mean_time_to_happen = {
+		months = 200
 		modifier = {
-			factor = 0.25
+			factor = 3
 			trait = honest
 		}
 		modifier = {
 			factor = 0.5
-			trait = trusting
-		}
-		modifier = {
-			factor = 0.5
-			trait = shy
-		}
-		modifier = {
-			factor = 0.5
-			trait = cruel
-		}
-		modifier = {
-			factor = 2
 			trait = gregarious
 		}
 		modifier = {
-			factor = 2
+			factor = 0.5
 			trait = kind
 		}
 		modifier = {
 			factor = 2
+			trait = trusting
+		}
+		modifier = {
+			factor = 0.5
 			trait = deceitful
 		}
 		modifier = {
 			factor = 2
+			trait = shy
+		}
+		modifier = {
+			factor = 2
+			trait = cruel
+		}
+		modifier = {
+			factor = 0.5
 			trait = paranoid
 		}
 	}
@@ -10444,8 +10973,6 @@ character_event = {
 	religion_group = christian
 	war = no
 	rivals = yes
-	
-	is_triggered_only = yes
 
 	trigger = {
 		in_command = no
@@ -10462,10 +10989,24 @@ character_event = {
 			}
 		}
 	}
+	
+	mean_time_to_happen = {
+		months = 300
+		
+		modifier = {
+			factor = 0.5
+			trait = zealous
+		}
+		
+		modifier = {
+			factor = 2
+			trait = cynical
+		}
+	}
 
 	option = {
 		name = EVTOPTA100440
-		any_rival = {
+		random_rival = {
 			limit = {
 				war = no
 				is_adult = yes
@@ -10476,10 +11017,6 @@ character_event = {
 				NOT = {
 					trait = excommunicated
 				}
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			set_character_flag = rival_excommunicated_me
 		}
@@ -10498,7 +11035,7 @@ character_event = {
 	}
 	option = {
 		name = EVTOPTC100440
-		any_rival = {
+		random_rival = {
 			limit = {
 				war = no
 				is_adult = yes
@@ -10509,10 +11046,6 @@ character_event = {
 				NOT = {
 					trait = excommunicated
 				}
-			}
-			score_value = { #Prioritizes selecting an interesting courtier...
-				value = 10
-				interesting_courtier_selection_score = yes
 			}
 			ROOT = {
 				random = {
@@ -10682,8 +11215,6 @@ character_event = {
 	war = no
 	rivals = yes
 	
-	is_triggered_only = yes
-
 	trigger = {
 		in_command = no
 		independent = no
@@ -10701,6 +11232,20 @@ character_event = {
 				opinion = { who = ROOT value = 10 }
 				opinion = { who = PREV value = 10 }
 			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+		
+		modifier = {
+			factor = 0.5
+			trait = wroth
+		}
+		
+		modifier = {
+			factor = 2
+			trait = honest
 		}
 	}
 
@@ -10955,8 +11500,6 @@ character_event = {
 	prisoner = no
 	war = no
 	rivals = yes
-	
-	is_triggered_only = yes
 
 	trigger = {
 		emf_male_homosexual_indifferent_religion = no
@@ -10988,6 +11531,28 @@ character_event = {
 				num_of_vassals = 1
 			}
 			save_event_target_as = target_rival
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+		
+		modifier = {
+			factor = 0.5
+			trait = cruel
+		}
+		modifier = {
+			factor = 0.5
+			trait = wroth
+		}
+		
+		modifier = {
+			factor = 2
+			trait = kind
+		}
+		modifier = {
+			factor = 2
+			trait = charitable
 		}
 	}
 
@@ -11132,8 +11697,6 @@ character_event = {
 	prisoner = no
 	war = no
 	rivals = yes
-	
-	is_triggered_only = yes
 
 	trigger = {
 		in_command = no
@@ -11148,6 +11711,20 @@ character_event = {
 			prisoner = no
 			same_sex = ROOT
 			lower_tier_than = ROOT
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+		
+		modifier = {
+			factor = 0.5
+			trait = proud
+		}
+		
+		modifier = {
+			factor = 2
+			trait = wroth
 		}
 	}
 
@@ -11246,8 +11823,6 @@ character_event = {
 	prisoner = no
 	war = no
 	rivals = yes
-	
-	is_triggered_only = yes
 
 	trigger = {
 		in_command = no
@@ -11258,6 +11833,20 @@ character_event = {
 			in_command = no
 			prisoner = no
 			is_rival = ROOT
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+		
+		modifier = {
+			factor = 0.5
+			trait = diligent
+		}
+		
+		modifier = {
+			factor = 2
+			trait = envious
 		}
 	}
 
@@ -11776,13 +12365,11 @@ character_event = {
 	war = no
 	rivals = yes
 	
-	is_triggered_only = yes
-
 	trigger = {
 		in_command = no
 		independent = no
 		NOT = {
-			has_character_modifier = holding_grand_hunt
+			has_character_flag = holding_grand_hunt
 		}
 		NOT = {
 			has_character_modifier = hunting_rival_timer
@@ -11791,7 +12378,7 @@ character_event = {
 			war = no
 			in_command = no
 			is_abroad = no
-			has_character_modifier = holding_grand_hunt
+			has_character_flag = holding_grand_hunt
 		}
 		any_rival = {
 			war = no
@@ -11804,8 +12391,30 @@ character_event = {
 			}
 			can_be_maimed_trigger = yes
 			NOT = {
-				has_character_modifier = holding_grand_hunt
+				has_character_flag = holding_grand_hunt
 			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+		
+		modifier = {
+			factor = 0.5
+			trait = brave
+		}
+		modifier = {
+			factor = 0.5
+			trait = deceitful
+		}
+		
+		modifier = {
+			factor = 2
+			trait = craven
+		}
+		modifier = {
+			factor = 2
+			trait = honest
 		}
 	}
 
@@ -11833,7 +12442,7 @@ character_event = {
 				}
 				can_be_maimed_trigger = yes
 				NOT = {
-					has_character_modifier = holding_grand_hunt
+					has_character_flag = holding_grand_hunt
 				}
 			}
 			random_list = {
@@ -11925,7 +12534,7 @@ character_event = {
 				}
 				can_be_maimed_trigger = yes
 				NOT = {
-					has_character_modifier = holding_grand_hunt
+					has_character_flag = holding_grand_hunt
 				}
 			}
 			random_list = {
@@ -12254,8 +12863,6 @@ character_event = {
 	prisoner = no
 	war = no
 	has_character_flag = guest_feast_started
-	
-	is_triggered_only = yes
 
 	trigger = {
 		in_command = no
@@ -12277,22 +12884,23 @@ character_event = {
 		}
 	}
 
-	weight_multiplier = {
-		days = 1
+	mean_time_to_happen = {
+		months = 100
+		
 		modifier = {
-			factor = 2
-			trait = patient
+			factor = 0.5
+			trait = deceitful
 		}
 		modifier = {
-			factor = 1.5
+			factor = 0.9
 			intrigue = 10
 		}
 		modifier = {
-			factor = 1.5
+			factor = 0.9
 			intrigue = 15
 		}
 		modifier = {
-			factor = 1.5
+			factor = 0.9
 			intrigue = 20
 		}
 	}
@@ -12968,8 +13576,6 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	rivals = yes
-	
-	is_triggered_only = yes
 
 	trigger = {
 		in_command = no
@@ -12984,6 +13590,28 @@ character_event = {
 		}
 	}
 
+	mean_time_to_happen = {
+		months = 500
+		
+		modifier = {
+			factor = 0.5
+			trait = impaler
+		}
+		modifier = {
+			factor = 0.5
+			trait = wroth
+		}
+		
+		modifier = {
+			factor = 2
+			trait = kind
+		}
+		modifier = {
+			factor = 2
+			trait = poet
+		}
+	}
+	
 	immediate = {
 		hidden_tooltip = {
 			add_character_modifier = {
@@ -14033,8 +14661,6 @@ character_event = {
 	prisoner = no
 	war = no
 	rivals = yes
-	
-	is_triggered_only = yes
 
 	trigger = {
 		in_command = no
@@ -14050,6 +14676,28 @@ character_event = {
 			prisoner = no
 			this_can_duel_with_root_trigger = yes
 			reverse_has_opinion_modifier = { who = ROOT modifier = opinion_killed_father }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 500
+		
+		modifier = {
+			factor = 0.5
+			trait = impaler
+		}
+		modifier = {
+			factor = 0.5
+			trait = wroth
+		}
+		
+		modifier = {
+			factor = 2
+			trait = kind
+		}
+		modifier = {
+			factor = 2
+			trait = poet
 		}
 	}
 
@@ -15085,8 +15733,6 @@ character_event = {
 	war = no
 	friends = yes
 	religion_group = muslim
-	
-	is_triggered_only = yes
 
 	trigger = {
 		in_command = no
@@ -15117,6 +15763,19 @@ character_event = {
 			sunni = {
 				is_name_randomized = yes
 			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 2
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.5
+			trait = cynical
 		}
 	}
 

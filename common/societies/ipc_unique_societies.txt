@@ -5576,16 +5576,16 @@ imperial_court_arabia = {
 					trait = koasasa_samael
 					trait = koasasa_nurael
 				}
-				top_liege = { religion = yazidi }
+				top_liege = { religion = yazidism }
 			}
 			value = 5
 		}
 		triggered_gain = {
-			desc = ipc_yazidi_pilgrim_gain
+			desc = ipc_yazidism_pilgrim_gain
 			trigger = {
 				has_global_flag = ipc_hip_detected
-				trait = yazidi_pilgrim
-				top_liege = { religion = yazidi }
+				trait = yazidism_pilgrim
+				top_liege = { religion = yazidism }
 			}
 			value = 1
 		}

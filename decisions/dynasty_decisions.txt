@@ -131,7 +131,6 @@ targetted_decisions = {
 						NOT = {
 							any_owned_bloodline = {
 								has_bloodline_flag = bloodline_legitimize
-								bloodline_is_active_for = PREV
 							}
 						}
 					}
@@ -561,19 +560,13 @@ targetted_decisions = {
 					OR = {	
 						religion_group = christian
 						religion = hindu
-						religion = buddhist
 						religion = jain
-						religion = manichean
-						religion = west_african_pagan
+						religion = mani
 					}
 				}
 				has_religion_feature = religion_monastic
 				has_religion_feature = religion_feature_west_african
 				has_religion_feature = religion_syncretic_christian
-				AND = {
-					religion = west_african_pagan_reformed
-					has_religion_features = no
-				}
 			}
 		}
 		
@@ -612,13 +605,11 @@ targetted_decisions = {
 							dynasty = ROOT
 							any_owned_bloodline = {
 								has_bloodline_flag = bloodline_easy_monks
-								bloodline_is_active_for = PREV
 							}
 						}
 						ROOT = { 
 							any_owned_bloodline = {
 								has_bloodline_flag = bloodline_easy_monks
-								bloodline_is_active_for = PREV
 							}
 						}
 					}
@@ -739,7 +730,7 @@ targetted_decisions = {
 				limit = { 
 					has_dlc = "Mystics" 
 					is_in_society = no
-					religion = buddhist 
+					religion_group = bud_group
 				}
 				custom_tooltip = { text = tooltip_vows_monk_joins_society }
 				hidden_tooltip = { 
@@ -755,6 +746,83 @@ targetted_decisions = {
 				custom_tooltip = { text = tooltip_vows_monk_joins_society }
 				hidden_tooltip = { 
 					join_society = monastic_order_jain
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Mystics" 
+					is_in_society = no
+					religion = adoptionist 
+				}
+				custom_tooltip = { text = tooltip_vows_monk_joins_society }
+				hidden_tooltip = { 
+					join_society = monastic_order_adoptionist
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Mystics" 
+					is_in_society = no
+					religion = apollinarist 
+				}
+				custom_tooltip = { text = tooltip_vows_monk_joins_society }
+				hidden_tooltip = { 
+					join_society = monastic_order_apollinarist
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Mystics" 
+					is_in_society = no
+					religion = iconoclast 
+				}
+				custom_tooltip = { text = tooltip_vows_monk_joins_society }
+				hidden_tooltip = { 
+					join_society = monastic_order_iconoclast
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Mystics" 
+					is_in_society = no
+					religion = melkite 
+				}
+				custom_tooltip = { text = tooltip_vows_monk_joins_society }
+				hidden_tooltip = { 
+					join_society = monastic_order_melkite
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Mystics" 
+					is_in_society = no
+					religion = monothelite 
+				}
+				custom_tooltip = { text = tooltip_vows_monk_joins_society }
+				hidden_tooltip = { 
+					join_society = monastic_order_monothelite
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Mystics" 
+					is_in_society = no
+					religion = montanist 
+				}
+				custom_tooltip = { text = tooltip_vows_monk_joins_society }
+				hidden_tooltip = { 
+					join_society = monastic_order_montanist
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Mystics" 
+					is_in_society = no
+					religion = pelagian 
+				}
+				custom_tooltip = { text = tooltip_vows_monk_joins_society }
+				hidden_tooltip = { 
+					join_society = monastic_order_pelagian
 				}
 			}
 			if = {

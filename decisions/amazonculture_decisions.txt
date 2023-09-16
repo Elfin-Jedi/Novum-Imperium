@@ -3707,7 +3707,7 @@ decisions = {
 				religion = monothelite
 				religion = iconoclast
 				religion = paulician
-				religion = manichean
+				religion = mani
 				religion = khurmazta
 			}
 			OR = {
@@ -3812,8 +3812,8 @@ decisions = {
 							NOT = { has_global_flag = zikri_seminary_flag }
 						}
 						AND = {
-							religion = yazidi 
-							NOT = { has_global_flag = yazidi_seminary_flag }
+							religion = yazidism
+							NOT = { has_global_flag = yazidism_seminary_flag }
 						}
 						AND = {
 							religion = ibadi 
@@ -3955,8 +3955,8 @@ decisions = {
 					has_global_flag = zikri_seminary_flag 
 				}
 				AND = {
-					religion = yazidi 
-					has_global_flag = yazidi_seminary_flag 
+					religion = yazidism
+					has_global_flag = yazidism_seminary_flag 
 				}
 				AND = {
 					religion = ibadi 
@@ -4679,10 +4679,10 @@ decisions = {
 					}
 				}
 				AND = {
-					religion = yazidi
+					religion = yazidism
 					NOR = {
-						has_global_flag = yazidi_abs_cognatic_flag
-						has_global_flag = yazidi_enat_cognatic_flag
+						has_global_flag = yazidism_abs_cognatic_flag
+						has_global_flag = yazidism_enat_cognatic_flag
 					}
 					OR = {
 						has_game_rule = { 
@@ -4819,8 +4819,8 @@ decisions = {
 					}
 				}
 				AND = {
-					religion = yazidi 
-					NOT = { has_global_flag = yazidi_reformed_marriage_flag }
+					religion = yazidism
+					NOT = { has_global_flag = yazidism_reformed_marriage_flag }
 					realm_character_percent = {		# 40% of characters
 						target = 0.40
 						religion = ROOT
@@ -4914,7 +4914,7 @@ decisions = {
 					}
 				}
 				AND = {
-					religion = yazidi 
+					religion = yazidism
 					OR = {
 						culture = themiskyran_amz
 						culture = valkyrie_amz
@@ -4927,8 +4927,8 @@ decisions = {
 						culture = illyrian_amz
 						culture = valascan_amz
 					}
-					has_global_flag = yazidi_reformed_marriage_flag
-					NOT = { has_global_flag = yazidi_concubines_flag }
+					has_global_flag = yazidism_reformed_marriage_flag
+					NOT = { has_global_flag = yazidism_concubines_flag }
 					realm_character_percent = {		# 50% of characters
 						target = 0.50
 						religion = ROOT
@@ -5050,10 +5050,10 @@ decisions = {
 							}
 						}
 						AND = {
-							religion = yazidi
+							religion = yazidism
 							OR = {
-								has_global_flag = yazidi_abs_cognatic_flag
-								has_global_flag = yazidi_enat_cognatic_flag
+								has_global_flag = yazidism_abs_cognatic_flag
+								has_global_flag = yazidism_enat_cognatic_flag
 								NOT = {
 									has_game_rule = { 
 										name = succession_law_amz
@@ -5184,10 +5184,10 @@ decisions = {
 					}
 				}
 				AND = {
-					religion = yazidi
+					religion = yazidism
 					OR = {
-						has_global_flag = yazidi_enat_cognatic_flag
-						has_global_flag = yazidi_reformed_marriage_flag 
+						has_global_flag = yazidism_enat_cognatic_flag
+						has_global_flag = yazidism_reformed_marriage_flag 
 					}
 				}
 				AND = {

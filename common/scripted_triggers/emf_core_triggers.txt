@@ -318,7 +318,10 @@ emf_astrology_religion = {
 			OR = {
 				AND = {
 					has_random_religions = no
-					religion = hellenic_pagan
+					OR = {
+						religion_group = graecoroman_group
+						religion_group = indohelen_group
+					}
 				}
 				trigger_if = {
 					limit = { has_religion_features = yes }
@@ -326,9 +329,6 @@ emf_astrology_religion = {
 						has_religion_feature = religion_feature_hellenic
 						has_religion_feature = religion_astrology
 					}
-				}
-				trigger_else = {
-					religion = hellenic_pagan_reformed
 				}
 			}
 		}

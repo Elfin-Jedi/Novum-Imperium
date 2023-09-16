@@ -404,16 +404,16 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = zurvanist
+		localisation_key = zurvanism
 		trigger = {
-			true_religion = zurvanist
+			true_religion = zurvanism
 			NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		}
 	}
 	text = {
-		localisation_key = manichean
+		localisation_key = mani
 		trigger = {
-			true_religion = manichean
+			true_religion = mani
 			NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		}
 	}
@@ -425,9 +425,9 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = yazidi
+		localisation_key = yazidism
 		trigger = {
-			true_religion = yazidi
+			true_religion = yazidism
 			NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		}
 	}
@@ -888,16 +888,16 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = zurvanist
+		localisation_key = zurvanism
 		trigger = {
-			true_religion = zurvanist
+			true_religion = zurvanism
 			NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		}
 	}
 	text = {
-		localisation_key = manichean
+		localisation_key = mani
 		trigger = {
-			true_religion = manichean
+			true_religion = mani
 			NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		}
 	}
@@ -909,9 +909,9 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = yazidi
+		localisation_key = yazidism
 		trigger = {
-			true_religion = yazidi
+			true_religion = yazidism
 			NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		}
 	}
@@ -1372,16 +1372,16 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = zurvanist
+		localisation_key = zurvanism
 		trigger = {
-			religion = zurvanist
+			religion = zurvanism
 			NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		}
 	}
 	text = {
-		localisation_key = manichean
+		localisation_key = mani
 		trigger = {
-			religion = manichean
+			religion = mani
 			NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		}
 	}
@@ -1393,9 +1393,9 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = yazidi
+		localisation_key = yazidism
 		trigger = {
-			religion = yazidi
+			religion = yazidism
 			NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		}
 	}

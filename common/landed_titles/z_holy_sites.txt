@@ -108,7 +108,7 @@ c_mecca = { # Makkah (719) # Mecca
 	holy_site = sunni
 	holy_site = shiite
 	holy_site = pagan
-	holy_site = yazidi
+	holy_site = yazidism
 	holy_site = ibadi
 	holy_site = ismaili
 	holy_site = zaydi
@@ -234,51 +234,39 @@ c_massat = { # Asfí (844)
 	holy_site = nabawiyya
 }
 c_ghana = { # Wagadu (913)
-	holy_site = west_african_pagan
-	holy_site = west_african_pagan_reformed
 }
 c_mali = { # Manding (925)
-	holy_site = west_african_pagan
-	holy_site = west_african_pagan_reformed
 }
 c_timbuktu = { # Timbuktu (911)
-	holy_site = west_african_pagan
-	holy_site = west_african_pagan_reformed
 }
 c_esfahan = { # Isfahan (646)
-	holy_site = manichean
-	holy_site = zun_pagan
-	holy_site = zun_pagan_reformed
+	holy_site = mani
 }
 c_shiraz = { # Shíráz (644) # Shiraz
 	holy_site = nabawiyya
-	holy_site = zun_pagan
-	holy_site = zun_pagan_reformed
 }
 c_larestan = { # Darabjird (642) # Larestan
 	holy_site = zoroastrian # The Great Fire of Adur Farnbag (unidentified location in Pars, possibly near Juyum)
-	holy_site = mazdaki
-	holy_site = manichean
+	holy_site = mazdakism
+	holy_site = mani
 }
 c_sistan = { # Sistan (637)
 	holy_site = zoroastrian # Fire temple of Karkuya
-	holy_site = mazdaki
+	holy_site = mazdakism
 }
 c_maragheh = { # Maragheh (650)
 	holy_site = zoroastrian # The Great Fire of Adur Gushnasp (Shiz, Media)
-	holy_site = mazdaki
-	holy_site = yazidi # Placeholder
+	holy_site = mazdakism
+	holy_site = yazidism # Placeholder
 }
 c_nishapur = { # Níshápúr (634) # Nishápur
 	holy_site = zoroastrian # The Great Fire of Adur Burzen-Mehr (on a mountain near Nishapur)
-	holy_site = mazdaki
-	holy_site = manichean
-	holy_site = yazidi
-	holy_site = zun_pagan
-	holy_site = zun_pagan_reformed
+	holy_site = mazdakism
+	holy_site = mani
+	holy_site = yazidism
 }
 c_samarqand = { # Samarkand (903)
-	holy_site = manichean
+	holy_site = mani
 }
 c_al_nadjaf = { # Qadisiyyah (692) # Al Nadjaf
 	holy_site = ismaili
@@ -290,9 +278,9 @@ c_kufa = { # Al-Kufah (655) # Kufa
 c_baghdad = { # Baghdad (693)
 	holy_site = sunni
 	holy_site = nestorian
-	holy_site = manichean
+	holy_site = mani
 	holy_site = zoroastrian # Great fire temples of Ctesiphon and Madain
-	holy_site = mazdaki
+	holy_site = mazdakism
 }
 c_mathura = { # Mathura (1664)
 	holy_site = hindu
@@ -345,7 +333,7 @@ c_jerusalem = { # Jérusalem (774)
 	holy_site = nestorian
 	holy_site = syriac
 	holy_site = pagan
-	holy_site = yazidi
+	holy_site = yazidism
 	holy_site = jewish
 	holy_site = samaritan
 	holy_site = karaite
@@ -390,7 +378,7 @@ c_mardin = { # Mardin (1239)
 	holy_site = nestorian
 }
 c_nineveh = { # Ninawa (685)
-	holy_site = yazidi
+	holy_site = yazidism
 }
 c_mecklemburg = { # Mecklemburg (260) # Mecklenburg
 	holy_site = slavic_pagan

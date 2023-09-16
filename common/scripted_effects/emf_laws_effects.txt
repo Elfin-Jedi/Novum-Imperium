@@ -969,7 +969,7 @@ emf_laws_investiture_law_0_pass = {
 				religion_authority = { modifier = ruler_enacted_investiture_elder }
 			}
 			if = {
-				limit = { religion = manichean }
+				limit = { religion = mani }
 				religion_authority = { modifier = ruler_enacted_investiture_mani_leader }
 			}
 		}

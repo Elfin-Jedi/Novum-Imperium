@@ -1765,7 +1765,200 @@ character_event = {
 			factor = 0.5
 			trait = has_small_pox
 		}
-
+		modifier = {
+			factor = 1.1
+			trait = has_aztec_disease
+		}
+		#LIBERT3 v11 LI additional modifiers (mostly using incorporated FF/VIET traits and some vanilla traits)
+		modifier = {
+			factor = 2.5
+			trait = duelist
+			}
+		modifier = {
+			factor = 1.25
+			trait = falconer
+			}
+		modifier = {
+			factor = 1.25
+			trait = impaler
+			}
+		modifier = {
+			factor = 1.5
+			trait = agile
+			}
+		modifier = {
+			factor = 1.5
+			trait = perceptive
+			}
+		modifier = {
+			factor = 1.5
+			trait = powerful_voice
+			}
+		modifier = {
+			factor = 1.5
+			trait = ambidextrous
+			}
+		modifier = {
+			factor = 1.5
+			trait = lefthanded
+			}
+		modifier = {
+			factor = 0.5
+			trait = deaf
+			}
+		modifier = {
+			factor = 0.5
+			trait = absentminded
+			}
+		modifier = {
+			factor = 0.75
+			trait = poor_warrior
+			}
+		modifier = {
+			factor = 1.5
+			trait = trained_warrior
+			}
+		modifier = {
+			factor = 2
+			trait = skilled_warrior
+			}
+		modifier = {
+			factor = 2.5
+			trait = master_warrior
+			}
+		modifier = {
+			factor = 1.25
+			trait = tall
+			}
+		modifier = {
+			factor = 1.25
+			trait = rude
+			}
+		modifier = {
+			factor = 1.5
+			trait = unpredictable
+			}
+		modifier = {
+			factor = 1.5
+			trait = clever
+			}
+		modifier = {
+			factor = 1.25
+			trait = loud
+			}
+		modifier = {
+			factor = 1.5
+			trait = practical
+			}
+		modifier = {
+			factor = 1.5
+			trait = callous
+			}
+		modifier = {
+			factor = 0.25
+			trait = gullible
+			}
+		modifier = {
+			factor = 2.5
+			trait = analytical
+			}
+		modifier = {
+			factor = 0.5
+			trait = weakwilled
+			}
+		modifier = {
+			factor = 0.25
+			trait = submissive
+			}
+		modifier = {
+			factor = 1.5
+			trait = cunning
+			}
+		modifier = {
+			factor = 1.5
+			trait = disciplined
+		}	
+		modifier = {
+			factor = 1.5
+			trait = calm
+		}	
+		modifier = {
+			factor = 1.5
+			trait = authoritative
+		}	
+		modifier = {
+			factor = 2.5
+			trait = carefulplanner
+		}	
+		modifier = {
+			factor = 1.5
+			trait = energetic
+		}
+		modifier = {
+			factor = 2.5
+			trait = impulsive
+		}	
+		modifier = {
+			factor = 2.5
+			trait = confident
+		}
+		modifier = {
+			factor = 0.5
+			trait = arrogant
+		}
+		modifier = {
+			factor = 1.5
+			trait = restless
+		}
+		modifier = {
+			factor = 0.25
+			trait = predictable
+		}
+		modifier = {
+			factor = 0.25
+			trait = nervous
+		}
+		modifier = {
+			factor = 1.5
+			trait = patient
+		}	
+		modifier = {
+			factor = 0.5
+			trait = impatient
+		}
+		modifier = {
+			factor = 5
+			trait = noblespirit
+		}
+		modifier = {
+			factor = 2.5
+			trait = goodintuition
+		}
+		
+		modifier = {
+			factor = 2.5
+			trait = naturalleader
+		}
+		modifier = {
+			factor = 2.5
+			trait = firstinline
+		}
+		modifier = {
+			factor = 0.5
+			trait = bloodthirsty
+		}
+		modifier = {
+			factor = 0.5
+			trait = careless
+		}
+		modifier = {
+			factor = 2.5
+			trait = risktaker
+		}
+		modifier = {
+			factor = 5
+			trait = kind
+		}
 	}
 	
 	immediate = {
@@ -1776,6 +1969,43 @@ character_event = {
 			16 = { character_event = { id = 265 } }
 			16 = { character_event = { id = 266 } }
 			16 = { character_event = { id = 267 } }
+		}
+		
+		#Promote battle trait
+		if = {
+			limit = {
+				trait = skilled_warrior
+				NOT = { has_character_flag = promoted_cta }
+			}
+			add_trait = master_warrior
+			break = yes
+		}
+		if = {
+			limit = { 
+				trait = trained_warrior
+				NOT = { has_character_flag = promoted_cta }
+			}
+			add_trait = skilled_warrior
+			break = yes
+		}
+		if = {
+			limit = {
+				trait = poor_warrior
+				NOT = { has_character_flag = promoted_cta }
+			}
+			add_trait = trained_warrior
+			break = yes
+		}
+		if = {
+			limit = {
+				NOR = {
+					trait = poor_warrior
+					trait = trained_warrior
+					trait = skilled_warrior
+					trait = master_warrior
+				}
+			}
+			add_trait = poor_warrior
 		}
 	}
 
@@ -1905,6 +2135,107 @@ character_event = {
 		modifier = {
 			factor = 0.9
 			has_character_modifier = bad_battle_omen
+		}
+		modifier = {
+			factor = 2.5
+			trait = goodintuition
+		}
+		modifier = {
+			factor = 2.5
+			trait = noblespirit
+		}
+		modifier = {
+			factor = 1.5
+			trait = confident
+		}
+		modifier = {
+			factor = 2.5
+			trait = naturalleader
+		}
+		modifier = {
+			factor = 2.5
+			trait = firstinline
+		}
+		#LIBERT3 tradtrait modifiers
+		modifier = {
+			trait = tradtrait_martial_a1
+			factor = 1.25
+		}
+		modifier = {
+			trait = tradtrait_martial_a2
+			factor = 1.5
+		}
+		modifier = {
+			trait = tradtrait_martial_a3
+			factor = 2
+		}					
+		modifier = {
+			trait = tradtrait_martial_a4
+			factor = 2.5
+		}					
+		modifier = {
+			trait = tradtrait_martial_a5
+			factor = 3
+		}					
+		modifier = {
+			trait = tradtrait_martial_b1
+			factor = 1.25
+		}
+		modifier = {
+			trait = tradtrait_martial_b2
+			factor = 1.5
+		}
+		modifier = {
+			trait = tradtrait_martial_b3
+			factor = 2
+		}					
+		modifier = {
+			trait = tradtrait_martial_b4
+			factor = 2.5
+		}					
+		modifier = {
+			trait = tradtrait_martial_b5
+			factor = 3
+		}			
+		modifier = {
+			trait = tradtrait_martial_c1
+			factor = 1.25
+		}
+		modifier = {
+			trait = tradtrait_martial_c2
+			factor = 1.5
+		}
+		modifier = {
+			trait = tradtrait_martial_c3
+			factor = 2
+		}					
+		modifier = {
+			trait = tradtrait_martial_c4
+			factor = 2.5
+		}					
+		modifier = {
+			trait = tradtrait_martial_c5
+			factor = 3
+		}						
+		modifier = {
+			trait = tradtrait_martial_d1
+			factor = 1.25
+		}
+		modifier = {
+			trait = tradtrait_martial_d2
+			factor = 1.5
+		}
+		modifier = {
+			trait = tradtrait_martial_d3
+			factor = 2
+		}					
+		modifier = {
+			trait = tradtrait_martial_d4
+			factor = 2.5
+		}					
+		modifier = {
+			trait = tradtrait_martial_d5
+			factor = 3
 		}
 	}
 
@@ -2076,7 +2407,6 @@ character_event = {
 			FROM = {
 				any_owned_bloodline = {
 					has_bloodline_flag = bloodline_fearsome
-					bloodline_is_active_for = PREV
 				}
 			}
 		}
@@ -2094,6 +2424,381 @@ character_event = {
 				has_wonder_upgrade_flag = hidden_passageways
 				is_active = yes
 			}
+		}
+		modifier = {
+			factor = 1.25
+			trait = brave
+		}
+		modifier = {
+			factor = 0.25
+			trait = craven
+		}
+		modifier = {
+			factor = 0.25
+			trait = paranoid
+		}
+
+		modifier = {
+			factor = 1.25
+			trait = stressed
+		}
+		modifier = {
+			factor = 1.25
+			trait = depressed
+		}
+		modifier = {
+			factor = 1.5
+			trait = lunatic
+		}
+		modifier = {
+			OR = {
+				trait = quick
+				trait = shrewd
+			}
+			factor = 0.5
+		}	
+		modifier = {
+			OR = {
+				trait = slow
+				trait = dull
+			}
+			factor = 5.0
+		}
+		
+		modifier = {
+			trait = imbecile
+			factor = 5.0
+		}
+		modifier = {
+			trait = inbred
+			factor = 5.0
+		}
+		modifier = {
+			is_strong_trigger = yes
+			factor = 0.5
+		}
+		modifier = {
+			is_weak_trigger = yes
+			factor = 5
+		}		
+		
+		modifier = {
+			factor = 1.5
+			trait = stressed
+		}
+		modifier = {
+			factor = 1.5
+			trait = depressed
+		}
+		modifier = {
+			factor = 2.5
+			trait = lunatic
+		}
+		modifier = {
+			factor = 2.5
+			trait = possessed
+		}
+		modifier = {
+			factor = 1.1
+			is_ill = yes
+		}
+		modifier = {
+			factor = 1.25
+			trait = pneumonic
+		}
+		modifier = {
+			factor = 1.25
+			trait = syphilitic
+		}
+		modifier = {
+			factor = 2.0
+			trait = leper
+		}
+		modifier = {
+			factor = 1.15
+			trait = wounded
+		}
+		modifier = {
+			factor = 1.25
+			is_maimed_trigger = yes
+		}
+		modifier = {
+			factor = 2.0
+			trait = infirm
+		}
+		modifier = {
+			factor = 3.0
+			trait = incapable
+		}
+		modifier = {
+			factor = 1.1
+			trait = drunkard
+		}
+		modifier = {
+			factor = 1.1
+			trait = has_tuberculosis
+		}
+		modifier = {
+			factor = 1.1
+			trait = has_typhoid_fever
+		}
+		modifier = {
+			factor = 1.5
+			trait = has_typhus
+		}
+		modifier = {
+			factor = 1.5
+			trait = has_bubonic_plague
+		}
+		modifier = {
+			factor = 1.1
+			trait = has_measles
+		}		
+		modifier = {
+			factor = 1.1
+			trait = has_small_pox
+		}
+		modifier = {
+			factor = 1.1
+			trait = has_aztec_disease
+		}
+		#LIBERT3 v11 LI additional modifiers (mostly using incorporated FF/VIET traits and some vanilla traits)
+		modifier = {
+			factor = 0.5
+			trait = duelist
+			}
+		modifier = {
+			factor = 0.9
+			trait = falconer
+			}
+		modifier = {
+			factor = 0.9
+			trait = impaler
+			}
+		modifier = {
+			factor = 0.75
+			trait = hunter
+			}
+		modifier = {
+			factor = 1.25
+			trait = hunchback
+			}
+		modifier = {
+			factor = 1.25
+			trait = slothful
+			}
+		modifier = {
+			factor = 1.25
+			trait = wroth
+			}
+		modifier = {
+			factor = 1.5
+			trait = ambitious
+			}
+		modifier = {
+			factor = 0.75
+			trait = content
+			}
+		modifier = {
+			factor = 2.5
+			trait = aggressive_leader
+			}
+		modifier = {
+			factor = 0.5
+			trait = defensive_leader
+			}	
+		
+		modifier = {
+			factor = 0.75
+			trait = agile
+			}
+		modifier = {
+			factor = 0.75
+			trait = perceptive
+			}
+		modifier = {
+			factor = 0.75
+			trait = powerful_voice
+			}
+		modifier = {
+			factor = 0.75
+			trait = ambidextrous
+			}
+		modifier = {
+			factor = 0.75
+			trait = lefthanded
+			}
+		modifier = {
+			factor = 2.5
+			trait = deaf
+			}
+		modifier = {
+			factor = 2.5
+			trait = absentminded
+			}
+		modifier = {
+			factor = 1.5
+			trait = poor_warrior
+			}
+		modifier = {
+			factor = 0.75
+			trait = trained_warrior
+			}
+		modifier = {
+			factor = 0.5
+			trait = skilled_warrior
+			}
+		modifier = {
+			factor = 0.25
+			trait = master_warrior
+			}
+		modifier = {
+			factor = 0.9
+			trait = tall
+			}
+		modifier = {
+			factor = 0.9
+			trait = rude
+			}
+		modifier = {
+			factor = 0.75
+			trait = unpredictable
+			}
+		modifier = {
+			factor = 0.75
+			trait = clever
+			}
+		modifier = {
+			factor = 0.9
+			trait = loud
+			}
+		modifier = {
+			factor = 0.75
+			trait = practical
+			}
+		modifier = {
+			factor = 0.75
+			trait = callous
+			}
+		modifier = {
+			factor = 2.5
+			trait = gullible
+			}
+		modifier = {
+			factor = 0.75
+			trait = analytical
+			}
+		modifier = {
+			factor = 2.5
+			trait = weakwilled
+			}
+		modifier = {
+			factor = 2.5
+			trait = submissive
+			}
+		modifier = {
+			factor = 0.75
+			trait = cunning
+			}
+		modifier = {
+			factor = 0.75
+			trait = disciplined
+		}	
+		modifier = {
+			factor = 0.75
+			trait = calm
+		}	
+		modifier = {
+			factor = 1.5
+			trait = authoritative
+		}	
+		modifier = {
+			factor = 0.9
+			trait = carefulplanner
+		}	
+		modifier = {
+			factor = 0.9
+			trait = energetic
+		}
+		modifier = {
+			factor = 1.5
+			trait = impulsive
+		}	
+		modifier = {
+			factor = 1.5
+			trait = confident
+		}
+		modifier = {
+			factor = 2
+			trait = arrogant
+		}
+		modifier = {
+			factor = 0.75
+			trait = restless
+		}
+		modifier = {
+			factor = 2.5
+			trait = predictable
+		}
+		modifier = {
+			factor = 1.5
+			trait = nervous
+		}
+		modifier = {
+			factor = 0.75
+			trait = patient
+		}	
+		modifier = {
+			factor = 1.5
+			trait = impatient
+		}
+		modifier = {
+			factor = 0.75
+			trait = cautious
+		}
+		modifier = {
+			factor = 0.75
+			trait = goodintuition
+		}
+		modifier = {
+			factor = 2.5
+			trait = noblespirit
+		}
+		modifier = {
+			factor = 2.5
+			trait = naturalleader
+		}
+		modifier = {
+			factor = 5
+			trait = firstinline
+		}
+		modifier = {
+			factor = 5
+			trait = bloodthirsty
+		}
+		modifier = {
+			factor = 2.5
+			trait = careless
+		}
+		modifier = {
+			factor = 2.5
+			trait = risktaker
+		}
+		modifier = {
+			factor = 1.5
+			trait = misguided_warrior
+		}
+		modifier = {
+			factor = 0.5
+			trait = tough_soldier
+		}
+		modifier = {
+			factor = 0.25
+			trait = skilled_tactician
+		}
+		modifier = {
+			factor = 0.125
+			trait = brilliant_strategist
 		}
 	}
 	
