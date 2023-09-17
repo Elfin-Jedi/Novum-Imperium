@@ -1,3 +1,5 @@
+# -*- ck2.traits -*-
+
 ########################################################################################################
 # WARNING: IF YOU DON'T ADD NEW TRAITS LAST (IN THE LAST READ TRAIT FILE), IT WILL BREAK OLD SAVE GAMES!
 ########################################################################################################
@@ -7,10 +9,10 @@ eunuch = {
 	fertility = -50.0
 
 	customizer = no
-	
+
 	cannot_marry = yes
 	cannot_inherit = yes
-	
+
 	male_insult = INSULT_EUNUCH
 	male_insult_adj = INSULT_UNMANNED
 	child_insult_adj = INSULT_SILLY
@@ -22,34 +24,39 @@ blinded = {
 	stewardship = -2
 	intrigue = -2
 	health = -1
-	
+
 	#customizer = no
 	
 	combat_rating = -100 #old value: -10
 	
 	blinding = yes
-	
+
 	male_insult_adj = INSULT_BLIND
 	female_insult_adj = INSULT_BLIND
+
+	command_modifier = { # EMF
+		damage = -0.05
+		defence = -0.05
+	}
 }
 
 # Hard coded to be given correctly and affect inheritance laws in the ERE
 born_in_the_purple = {
 	customizer = no
-	
-	vassal_opinion = 5
+
+	vassal_opinion = 3 # EMF
 	monthly_character_prestige = 0.5
-	
+
 	male_compliment_adj = COMPL_PURPLE_BORN
 	female_compliment_adj = COMPL_PURPLE_BORN
 }
 
 augustus = {
 	customizer = no
-	
+
 	vassal_opinion = 10
 	monthly_character_prestige = 0.5
-	
+
 	male_compliment = COMPL_AUGUSTUS
 	female_compliment = COMPL_AUGUSTUS
 }
@@ -57,7 +64,7 @@ augustus = {
 flat_terrain_leader = {
 	leader = yes
 	random = no
-	
+
 	command_modifier = {
 		terrain = plains
 		terrain = farmlands
@@ -68,17 +75,18 @@ flat_terrain_leader = {
 rough_terrain_leader = {
 	leader = yes
 	random = no
-	
+
 	command_modifier = {
 		terrain = forest
 		terrain = hills
+		terrain = marsh
 	}
 }
 
 mountain_terrain_leader = {
 	leader = yes
 	random = no
-	
+
 	command_modifier = {
 		terrain = mountain
 	}
@@ -87,7 +95,7 @@ mountain_terrain_leader = {
 desert_terrain_leader = {
 	leader = yes
 	random = no
-	
+
 	command_modifier = {
 		terrain = desert
 	}
@@ -98,11 +106,11 @@ desert_terrain_leader = {
 
 holy_warrior = {
 	leader = yes
-	
+
 	command_modifier = {
 		religious_enemy = 0.3
 	}
-	
+
 	male_compliment = COMPL_HOLY_WARRIOR
 	female_compliment = COMPL_HOLY_WARRIOR
 	male_insult = INSULT_FANATIC
@@ -111,7 +119,7 @@ holy_warrior = {
 
 unyielding_leader = {
 	leader = yes
-	
+
 	command_modifier = {
 		morale_defence = 0.2
 		defence = 0.1
@@ -121,17 +129,17 @@ unyielding_leader = {
 has_aztec_disease = {
 	is_epidemic = yes
 	is_illness = yes
-	
+
 	sex_appeal_opinion = -10
 
 	general_opinion = -5
-	
+
 	diplomacy_penalty = -3
 	stewardship_penalty = -2
 	martial_penalty = -2
 	intrigue_penalty = -3
 	learning_penalty = -2
-	
+
 	health_penalty = -4
 	fertility_penalty = -0.2
 	
@@ -153,14 +161,17 @@ child_of_consort = {
 peasant_leader = {
 	diplomacy = -5
 	combat_rating = 3 #new value!
-	
+
+	opposites = { peasant_ruler }
+
+	opposite_opinion = 10
 	same_opinion = 25
-	
+
 	vassal_opinion = -10
 
 	rebel_inherited = yes
 	#customizer = no
-	
+
 	male_insult = INSULT_PEASANT
 	male_insult_adj = INSULT_LOWBORN
 	female_insult = INSULT_PEASANT_WOMAN
@@ -169,14 +180,14 @@ peasant_leader = {
 
 heresiarch = {
 	infidel_opinion = -15
-	
+
 	same_religion_opinion = 25
 	combat_rating = 3 #new value!
-	
+
 	rebel_inherited = yes
 	#customizer = no
 	religious = yes
-	
+
 	male_insult = INSULT_HERESIARCH
 	female_insult = INSULT_HERESIARCH
 	child_insult = INSULT_PEABRAIN
@@ -194,9 +205,9 @@ berserker = {
 	combat_rating = 25 #old value: 3
 	
 	same_opinion = 10
-	
+
 	ai_rationality = -5
-	
+
 	male_compliment = COMPL_BERSERKER
 	female_compliment = COMPL_BERSERKER
 	male_insult = INSULT_LUNATIC
@@ -205,6 +216,11 @@ berserker = {
 	male_insult_adj = INSULT_CRAZED
 	female_insult_adj = INSULT_CRAZED
 	child_insult_adj = INSULT_CRAZY
+
+	command_modifier = { # EMF
+		damage = 0.05
+		defence = -0.05
+	}
 }
 
 varangian = {
@@ -214,39 +230,57 @@ varangian = {
 	combat_rating = 10 #old value: 2
 	
 	same_opinion = 10
-	
+
 	#customizer = no
+
+	command_modifier = { # EMF
+		defence = 0.03
+	}
 }
 
 saoshyant = {
 	zoroastrian_opinion = 10
-	
+
 	customizer = no
 	
 	combat_rating = 20 #old value: 5
 	
 	male_compliment = COMPL_SAOSHYANT
 	female_compliment = COMPL_SAOSHYANT
+
+	command_modifier = { # EMF
+		center = 0.05
+		morale_defence = 0.05
+		morale_offence = 0.05
+	}
 }
 
 saoshyant_descendant = {
-	
+
 	zoroastrian_opinion = 5
-	
+
 	customizer = no
 }
 
 viking = {
 	potential = {
 		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
+			AND = {
+				OR = {
+					religion = norse_pagan
+					religion = norse_pagan_reformed
+				}
+				emf_seafaring_religion = yes
+			}
 			any_owned_bloodline = {
 				has_bloodline_flag = bloodline_viking
+				bloodline_is_active_for = PREV
 			}
 		}
 	}
-	opposites =  {
+	opposites = {
+		pirate
+		raider
 		ravager
 		seaking
 		sea_queen
@@ -254,8 +288,8 @@ viking = {
 	martial = 1
 	combat_rating = 10 #old value: 1
 	monthly_character_prestige = 0.3
-	norse_pagan_opinion = 15
-	norse_pagan_reformed_opinion = 15
+	norse_pagan_opinion = 10 #EMF from 15
+	norse_pagan_reformed_opinion = 10 #EMF from 10
 	
 	same_opinion = 5
 	#religious = yes
@@ -273,16 +307,16 @@ monk = {
 		is_ruler = no
 		is_female = no
 	}
-	
+
 	monthly_character_piety = 0.3
 	same_religion_opinion = 5
-	
+
 	religious = yes # Lost immediately on religion change
 	cannot_marry = yes
 	cannot_inherit = yes
 	customizer = no
 	random = no
-	
+
 	male_compliment = COMPL_MONK
 }
 
@@ -291,16 +325,16 @@ nun = {
 		is_ruler = no
 		is_female = yes
 	}
-	
+
 	monthly_character_piety = 0.3
 	same_religion_opinion = 5
-	
+
 	religious = yes # Lost immediately on religion change
 	cannot_marry = yes
 	cannot_inherit = yes
 	customizer = no
 	random = no
-	
+
 	female_compliment = COMPL_NUN
 }
 
@@ -310,13 +344,13 @@ on_pilgrimage = {
 		religion_group = christian
 		NOT = { trait = pilgrim }
 	}
-	
-	cached = yes    # Keep a cache of all trait holders, to use with the corresponding event trigger 
-	
+
+	cached = yes	# Keep a cache of all trait holders, to use with the corresponding event trigger
+
 	monthly_character_piety = 0.2
 	same_religion_opinion = 5
-	
-	pilgrimage = yes    # Will need a regent, but can still be guardian to children
+
+	pilgrimage = yes	# Will need a regent, but can still be guardian to children
 	customizer = no
 }
 
@@ -324,43 +358,43 @@ on_pilgrimage = {
 sickly = {
 	is_health = yes
 	is_illness = yes
-	
+
 	potential = {
 		NOT = { age = 6 }
 	}
-	
-	health = -2.5
-	
+
+	health = -3
+
 	customizer = no
 	random = no
 }
 
 mutazilite = {
 	learning = 5
-	
+
 	religious = yes # Lost immediately on religion change
-	
+
 	opposites =  {
 		ashari
 	}
-	
+
 	opposite_opinion = -30
-	
+
 	customizer = no
 	random = no
 }
 
 ashari = {
 	monthly_character_piety = 1
-	
+
 	religious = yes # Lost immediately on religion change
-	
+
 	opposites =  {
 		mutazilite
 	}
-	
+
 	opposite_opinion = -30
-	
+
 	customizer = no
 	random = no
 }
@@ -369,13 +403,13 @@ sympathy_christendom = {
 	opposites =  {
 		zealous
 	}
-	
+
 	potential = {
 		NOT = { religion_group = christian }
 	}
 
 	tolerates_christian = yes		# Tolerates and is tolerated by Christians
-	
+
 	same_opinion_if_same_religion = 5
 
 	#customizer = no
@@ -389,11 +423,11 @@ sympathy_christendom = {
 }
 
 sympathy_islam = {
-	
+
 	opposites =  {
 		zealous
 	}
-	
+
 	potential = {
 		NOT = { religion_group = muslim }
 	}
@@ -413,11 +447,11 @@ sympathy_islam = {
 }
 
 sympathy_pagans = {
-	
+
 	opposites =  {
 		zealous
 	}
-	
+
 	potential = {
 		NOT = { religion_group = pagan_group }
 	}
@@ -437,11 +471,11 @@ sympathy_pagans = {
 }
 
 sympathy_zoroastrianism = {
-	
+
 	opposites =  {
 		zealous
 	}
-	
+
 	potential = {
 		NOT = { religion_group = zoroastrian_group }
 	}
@@ -461,11 +495,11 @@ sympathy_zoroastrianism = {
 }
 
 sympathy_judaism = {
-	
+
 	opposites =  {
 		zealous
 	}
-	
+
 	potential = {
 		NOT = { religion_group = jewish_group }
 	}
@@ -490,7 +524,7 @@ bad_priest_christian = {
 
 	potential = {
 		OR = {
-			is_theocracy = yes
+			rtp_is_theocracy_government = yes
 			is_ruler = no
 		}
 	}
@@ -512,18 +546,14 @@ bad_priest_christian = {
 }
 
 bad_priest_muslim = {
-	
+
 	religious = yes
 
 	potential = {
-		OR = {
-			controls_religion = sunni
-			controls_religion = shiite
-			controls_religion = ibadi
-			controls_religion = hurufi
-		}
+		religion_group = muslim
+		controls_religion = yes
 	}
-	
+
 	church_opinion = -10
 	same_opinion_if_same_religion = 25
 
@@ -541,17 +571,17 @@ bad_priest_muslim = {
 }
 
 bad_priest_norse = {
-	
+
 	religious = yes
 
 	potential = {
 		OR = {
-			is_theocracy = yes
+			rtp_is_theocracy_government = yes
 			is_ruler = no
 			controls_religion = norse_pagan_reformed
 		}
 	}
-	
+
 	church_opinion = -10
 	same_opinion_if_same_religion = 25
 
@@ -569,16 +599,16 @@ bad_priest_norse = {
 }
 
 bad_priest_tengri = {
-	
+
 	religious = yes
 
 	potential = {
 		OR = {
-			is_theocracy = yes
+			rtp_is_theocracy_government = yes
 			is_ruler = no
 		}
 	}
-	
+
 	church_opinion = -10
 	same_opinion_if_same_religion = 25
 
@@ -596,12 +626,12 @@ bad_priest_tengri = {
 }
 
 bad_priest_zoroastrian = {
-	
+
 	religious = yes
 
 	potential = {
 		OR = {
-			is_theocracy = yes
+			rtp_is_theocracy_government = yes
 			is_ruler = no
 		}
 	}
@@ -623,12 +653,12 @@ bad_priest_zoroastrian = {
 }
 
 bad_priest_aztec = {
-	
+
 	religious = yes
 
 	potential = {
 		OR = {
-			is_theocracy = yes
+			rtp_is_theocracy_government = yes
 			is_ruler = no
 		}
 	}
@@ -651,7 +681,7 @@ bad_priest_aztec = {
 
 narrow_flank_leader = {
 	leader = yes
-	
+
 	command_modifier = {
 		narrow_flank = 0.5
 	}
@@ -659,20 +689,21 @@ narrow_flank_leader = {
 
 brahmin = {
 	potential = {
+		emf_religion_has_castes = yes
+	}
+	is_visible = {
 		OR = {
-			religion = buddhist
-			religion = hindu
-			religion = jain
+			emf_hidden = yes
+			emf_religion_has_caste_opinions = yes
+			FROM = { emf_religion_has_caste_opinions = yes }
 		}
 	}
 	opposites = {
 		kshatriya
 		vaishya
 	}
-	
-	caste_tier = 3
 
-	monthly_character_piety = 0.1
+	caste_tier = 3
 
 	#customizer = no
 	random = no
@@ -680,10 +711,13 @@ brahmin = {
 
 kshatriya = {
 	potential = {
+		emf_religion_has_castes = yes
+	}
+	is_visible = {
 		OR = {
-			religion = buddhist
-			religion = hindu
-			religion = jain
+			emf_hidden = yes
+			emf_religion_has_caste_opinions = yes
+			FROM = { emf_religion_has_caste_opinions = yes }
 		}
 	}
 	opposites = {
@@ -693,18 +727,19 @@ kshatriya = {
 
 	caste_tier = 2
 
-	monthly_character_prestige = 0.1
-
 	#customizer = no
 	random = no
 }
 
 vaishya = {
 	potential = {
+		emf_religion_has_castes = yes
+	}
+	is_visible = {
 		OR = {
-			religion = buddhist
-			religion = hindu
-			religion = jain
+			emf_hidden = yes
+			emf_religion_has_caste_opinions = yes
+			FROM = { emf_religion_has_caste_opinions = yes }
 		}
 	}
 	opposites = {
@@ -714,8 +749,6 @@ vaishya = {
 
 	caste_tier = 1
 
-	monthly_character_wealth = 0.03
-	
 	#customizer = no
 	random = no
 }
@@ -724,7 +757,7 @@ sympathy_indian = {
 	opposites =  {
 		zealous
 	}
-	
+
 	potential = {
 		NOT = { religion_group = indian_group }
 	}
@@ -751,9 +784,9 @@ shaivist_hindu = {
 	}
 
 	opposite_opinion = -5
-	
+
 	monthly_character_prestige = 0.5
-	
+
 	potential = { religion = hindu }
 	religious_branch = hindu
 	random = no
@@ -769,7 +802,7 @@ vaishnavist_hindu = {
 	}
 
 	opposite_opinion = -5
-	
+
 	vassal_opinion = 5
 
 	potential = { religion = hindu }
@@ -787,7 +820,7 @@ shaktist_hindu = {
 	}
 
 	opposite_opinion = -5
-	
+
 	fertility = 0.2
 
 	potential = { religion = hindu }
@@ -805,7 +838,7 @@ smartist_hindu = {
 	}
 
 	opposite_opinion = -5
-	
+
 	monthly_character_piety = 0.5
 
 	potential = { religion = hindu }
@@ -822,7 +855,7 @@ mahayana_buddhist = {
 	}
 
 	opposite_opinion = -5
-	
+
 	vassal_opinion = 5
 
 	potential = { religion = buddhist }
@@ -839,7 +872,7 @@ vajrayana_buddhist = {
 	}
 
 	opposite_opinion = -5
-	
+
 	health = 1
 
 	potential = { religion = buddhist }
@@ -856,7 +889,7 @@ theravada_buddhist = {
 	}
 
 	opposite_opinion = -5
-	
+
 	learning = 1
 
 	potential = { religion = buddhist }
@@ -874,7 +907,7 @@ digambara_jain = {
 	opposite_opinion = -5
 
 	health = 1
-	
+
 	potential = { religion = jain }
 	religious_branch = jain
 	random = no
@@ -888,7 +921,7 @@ svetambara_jain = {
 	}
 
 	opposite_opinion = -5
-	
+
 	vassal_opinion = 5
 
 	potential = { religion = jain }
@@ -907,15 +940,20 @@ decadent = {
 	potential = {
 		religion_group = muslim
 	}
-	
+
 	customizer = no
 	random = no
-	
+
+	muslim_opinion = -15
+	monthly_character_piety = -1.0
+	ai_zeal = -50
+	ai_greed = 20
+	ai_honor = -20
 	combat_rating = -10 #old value: -1
-	
+
 	male_insult = INSULT_SYBARITE
 	female_insult = INSULT_SYBARITE
-	child_insult_adj = INSULT_FARTMASTER
+	child_insult = INSULT_FARTMASTER
 	male_insult_adj = INSULT_DECADENT
 	female_insult_adj = INSULT_DECADENT
 	child_insult_adj = INSULT_LAZY
@@ -930,7 +968,7 @@ reincarnation = {
 war_elephant_leader = {
 	leader = yes
 	random = no
-	
+
 	command_modifier = {
 		war_elephants = 0.2
 		morale_offence = 0.2
@@ -940,7 +978,7 @@ war_elephant_leader = {
 jungle_terrain_leader = {
 	leader = yes
 	random = no
-	
+
 	command_modifier = {
 		terrain = jungle
 	}
@@ -957,7 +995,7 @@ in_hiding = {
 	monthly_character_prestige = -2
 	diplomacy = -5
 	vassal_opinion = -5
-	
+
 	in_hiding = yes
 
 	customizer = no
@@ -972,120 +1010,123 @@ in_hiding = {
 winter_soldier = {
 	leader = yes
 	random = no
-	
+
 	command_modifier = {
 		winter_supply = 4
 		winter_combat = 0.5
-	}	
+		terrain = arctic
+	}
 }
 
 seducer = {
 	lifestyle = yes
-	
+
 	opposites =  {
 		celibate
 		seductress
+		perfecti
 	}
-	
+
 	potential = {
 		is_female = no
 	}
-	
+
 	intrigue = 2
 	diplomacy = 1
-	
+
 	sex_appeal_opinion = 50
-	
+
 	male_insult = INSULT_WHOREMONGER
 	male_insult_adj = INSULT_WHORING
 	male_compliment = COMPL_SEDUCER
 	male_compliment_adj = COMPL_CHARMING
-	
-	#ruler_designer_cost = 12
+
+	#ruler_designer_cost = 0
 }
 
 seductress = {
 	lifestyle = yes
-	
+
 	opposites =  {
 		celibate
 		seducer
+		perfecti
 	}
-	
+
 	potential = {
 		is_female = yes
 	}
-	
+
 	intrigue = 2
 	diplomacy = 1
-	
+
 	sex_appeal_opinion = 50
-	
+
 	female_insult = INSULT_TEMPTRESS
 	female_insult_adj = INSULT_DEBASED
 	female_compliment = COMPL_ENCHANTRESS
 	female_compliment_adj = COMPL_RAVISHING
-	
-	#ruler_designer_cost = 12
+
+	#ruler_designer_cost = 0
 }
 
 administrator = {
 	lifestyle = yes
-	
+
 	stewardship = 3
-	
+
 	command_modifier = {
 		speed = 0.1
 	}
-	
-	#ruler_designer_cost = 10
+
+	#ruler_designer_cost = 0
 }
 
 architect = {
 	lifestyle = yes
-	
+
 	same_opinion = 10
-	
+
 	stewardship = 2
 	martial = 1
 	wonder_build_cost_modifier = -0.03
 	wonder_build_time_modifier = -0.05
-	
+
 	command_modifier = {
 		siege = 0.2
 	}
-	
-	#ruler_designer_cost = 10
-	
+
+	#ruler_designer_cost = 0
+
 	male_compliment = COMPL_ARCHITECT
 	female_compliment = COMPL_ARCHITECT
 }
 
 strategist = {
 	lifestyle = yes
-	
+
 	same_opinion = 10
-	
+
 	martial = 2
 	stewardship = 1
-	
+
 	command_modifier = {
 		defence = 0.2
 	}
-	
-	#ruler_designer_cost = 12
+
+	#ruler_designer_cost = 0
 }
 
 socializer = {
 	lifestyle = yes
-	
+
 	same_opinion = 10
 	sex_appeal_opinion = 10
-	
+
 	diplomacy = 3
-	
-	#ruler_designer_cost = 12
-	
+
+	#ruler_designer_cost = 0
+
 	male_insult = INSULT_BLABBERER
 	female_insult = INSULT_BLABBERER
 	male_insult_adj = INSULT_SCHEMING
@@ -1095,12 +1136,12 @@ socializer = {
 
 schemer = {
 	lifestyle = yes
-	
+
 	same_opinion = -5
-	
+
 	intrigue = 3
-	
-	#ruler_designer_cost = 10
+
+	#ruler_designer_cost = 0
 
 	male_insult = INSULT_INSTIGATOR
 	female_insult = INSULT_INSTIGATOR
@@ -1112,11 +1153,11 @@ schemer = {
 
 theologian = {
 	lifestyle = yes
-	
+
 	learning = 2
 	intrigue = 1
-	
-	#ruler_designer_cost = 10
+
+	#ruler_designer_cost = 0
 
 	male_insult = INSULT_BOOKWORM
 	female_insult = INSULT_BOOKWORM
@@ -1130,17 +1171,17 @@ theologian = {
 
 gamer = {
 	lifestyle = yes
-	
+
 	diplomacy = 2
 	martial = 1
-	
+
 	command_modifier = {
 		narrow_flank = 0.3
 	}
-	
+
 	same_opinion = 10
-	
-	#ruler_designer_cost = 10
+
+	#ruler_designer_cost = 0
 }
 
 adventurer = {
@@ -1150,11 +1191,11 @@ adventurer = {
 	combat_rating = 10 #old value: 1
 	global_levy_size = 0.2
 	max_manpower_mult = 0.1
-	
+
 	same_opinion = 10
 
 	ai_ambition = 40
-	
+
 	#customizer = no
 	random = no
 
@@ -1172,12 +1213,12 @@ adventurer = {
 
 erudite = {
 	personality = yes
-	
+
 	learning = 2
 	combat_rating = -2 #new value!
 	
 	church_opinion = 5
-	
+
 	male_insult = INSULT_WINDBAG
 	female_insult = INSULT_WINDBAG
 	child_insult = INSULT_BORE
@@ -1191,7 +1232,7 @@ erudite = {
 
 stubborn = {
 	personality = yes
-	
+
 	stewardship = 1
 	diplomacy = -1
 	combat_rating = 3 #new value!
@@ -1199,7 +1240,7 @@ stubborn = {
 	vassal_opinion = -5
 	ai_ambition = 10
 	ai_zeal = 10
-	
+
 	male_insult = INSULT_MULE
 	female_insult = INSULT_MULE
 	male_insult_adj = INSULT_PIGHEADED
@@ -1211,7 +1252,7 @@ stubborn = {
 
 haughty = {
 	childhood = yes
-	
+
 	martial = 1
 
 	male_insult = INSULT_BRAT
@@ -1226,7 +1267,7 @@ haughty = {
 
 affectionate = {
 	childhood = yes
-	
+
 	diplomacy = 1
 
 	male_insult = INSULT_TICK
@@ -1240,7 +1281,7 @@ affectionate = {
 
 timid = {
 	childhood = yes
-	
+
 	opposites =  {
 		rowdy
 	}
@@ -1259,7 +1300,7 @@ rowdy = {
 	opposites =  {
 		timid
 	}
-	
+
 	martial = 1
 
 	male_insult = INSULT_RUFFIAN
@@ -1271,7 +1312,7 @@ rowdy = {
 
 willful = {
 	childhood = yes
-	
+
 	intrigue = 1
 
 	male_insult = INSULT_MULE
@@ -1282,7 +1323,7 @@ willful = {
 
 brooding = {
 	childhood = yes
-	
+
 	intrigue = 1
 
 	male_insult = INSULT_BORE
@@ -1297,16 +1338,16 @@ indolent = {
 	childhood = yes
 
 	intrigue = 1
-	
+
 	male_insult_adj = INSULT_USELESS
 	female_insult_adj = INSULT_USELESS
 }
 
 playful = {
 	childhood = yes
-	
+
 	diplomacy = 1
-	
+
 	male_compliment_adj = COMPL_LOVELY
 	female_compliment_adj = COMPL_LOVELY
 }
@@ -1322,7 +1363,7 @@ conscientious = {
 
 fussy = {
 	childhood = yes
-	
+
 	stewardship = 1
 
 	male_insult_adj = INSULT_USELESS
@@ -1331,16 +1372,16 @@ fussy = {
 
 curious = {
 	childhood = yes
-	
+
 	learning = 1
-	
+
 	male_insult = INSULT_SNEAK
 	female_insult = INSULT_SNEAK
 }
 
 idolizer = {
 	childhood = yes
-	
+
 	learning = 1
 
 	male_insult = INSULT_WORM
@@ -1363,7 +1404,7 @@ horse = {
 
 	customizer = no
 	random = no
-	
+
 	cannot_marry = yes
 	cannot_inherit = yes
 	can_hold_titles = no # Hopefully this will block Glitterhoof from becoming pope again
@@ -1377,36 +1418,40 @@ horse = {
 robust = {
 	opposites =  {
 		feeble
+		sturdy
 	}
-	
+
 	diplomacy = 1
 	martial = 2
-	
+
 	health = 1
 	
 	combat_rating = 10 #old value: 1
 	
 	sex_appeal_opinion = 5
-	vassal_opinion = 5
-	tribal_opinion = 5
-	
+	vassal_opinion = 3
+	tribal_opinion = 6
+
 	male_compliment_adj = COMPL_STRONG
 }
 
 feeble = {
 	opposites =  {
 		robust
+		sturdy
+		powerful_voice
+		imposing
 	}
-	
+
 	martial = -1
 	combat_rating = -10 #old value: -1
 	
 	health = -0.5
-	
+
 	sex_appeal_opinion = -5
-	vassal_opinion = -5
-	tribal_opinion = -5
-	
+	vassal_opinion = -3
+	tribal_opinion = -6
+
 	male_insult = INSULT_WEAKLING
 }
 
@@ -1414,7 +1459,7 @@ shrewd = {
 	opposites =  {
 		dull
 	}
-	
+
 	diplomacy = 2
 	intrigue = 2
 	stewardship = 2
@@ -1429,7 +1474,7 @@ dull = {
 	opposites =  {
 		shrewd
 	}
-	
+
 	diplomacy = -2
 	intrigue = -2
 	stewardship = -2
@@ -1438,7 +1483,7 @@ dull = {
 	combat_rating = -3 #new value!
 	
 	ai_rationality = -15
-	
+
 	male_insult = INSULT_DULLARD
 	female_insult = INSULT_NITWIT
 	male_insult_adj = INSULT_DIM
@@ -1457,7 +1502,7 @@ cough = {
 
 	diplomacy_penalty = -1
 	health_penalty = -0.25
-	
+
 	customizer = no
 
 	male_insult = INSULT_INVALID
@@ -1569,7 +1614,7 @@ cramps = {
 	is_illness = yes
 
 	martial_penalty = -2
-	
+
 	health_penalty = -0.5
 
 	combat_rating = -10 #old value: -1
@@ -1592,9 +1637,9 @@ rash = {
 	sex_appeal_opinion = -5
 
 	health_penalty = -0.5
-	
+
 	fertility_penalty = -0.1
-	
+
 	customizer = no
 
 	male_insult = INSULT_INVALID
@@ -1618,7 +1663,7 @@ headache = {
 	combat_rating = -10 #old value: -1
 
 	ai_rationality = -10
-	
+
 	customizer = no
 
 	male_insult = INSULT_INVALID
@@ -1635,9 +1680,9 @@ abdominal_pain = {
 	is_illness = yes
 
 	health_penalty = -1
-	
+
 	fertility_penalty = -0.1
-	
+
 	customizer = no
 
 	male_insult = INSULT_INVALID
@@ -1659,7 +1704,7 @@ fatigue = {
 	health_penalty = -0.25
 
 	ai_rationality = -20
-	
+
 	customizer = no
 
 	male_insult = INSULT_INVALID
@@ -1676,7 +1721,7 @@ malaise = {
 	is_illness = yes
 
 	health_penalty = -0.75
-	
+
 	customizer = no
 
 	male_insult = INSULT_INVALID
@@ -1702,7 +1747,7 @@ infection = {
 	combat_rating = -10 #old value: -1
 	
 	health_penalty = -2
-	
+
 	customizer = no
 
 	male_insult = INSULT_INVALID
@@ -1711,7 +1756,7 @@ infection = {
 	male_insult_adj = INSULT_SICKLY
 	female_insult_adj = INSULT_SICKLY
 	child_insult_adj = INSULT_SICKLY
-	
+
 	succession_gfx = yes
 }
 
@@ -1719,7 +1764,11 @@ infection = {
 
 one_eyed = {
 	is_health = yes
-	
+
+	opposites = {
+		beauty
+	}
+
 	sex_appeal_opinion = -5
 	pagan_group_opinion = 10
 	same_opinion = 5
@@ -1739,15 +1788,20 @@ one_eyed = {
 one_handed = {
 	is_health = yes
 
+	opposites = {
+		ambidextrous
+		beauty
+	}
+
 	learning = 1
-	
+
 	sex_appeal_opinion = -5
 	same_opinion = 5
 	
 	combat_rating = -20 #old value: -2
 	
 	#customizer = no
-	
+
 	male_insult = INSULT_CRIPPLE
 	female_insult = INSULT_CRIPPLE
 	child_insult = INSULT_CRIPPLE
@@ -1759,15 +1813,20 @@ one_handed = {
 one_legged = {
 	is_health = yes
 
+	opposites = {
+		agile
+		beauty
+	}
+
 	learning = 1
-	
+
 	sex_appeal_opinion = -10
 	same_opinion = 5
 	
 	combat_rating = -30 #old value: -3
 
 	#customizer = no
-	
+
 	male_insult = INSULT_CRIPPLE
 	female_insult = INSULT_CRIPPLE
 	child_insult = INSULT_CRIPPLE
@@ -1779,12 +1838,16 @@ one_legged = {
 
 disfigured = {
 	is_health = yes
-	
+
+	opposites = {
+		beauty
+	}
+
 	sex_appeal_opinion = -20
 	same_opinion = 5
-	
+
 	diplomacy = -4
-	
+
 	#customizer = no
 
 	male_insult = INSULT_FREAK
@@ -1797,12 +1860,16 @@ disfigured = {
 
 mangled = {
 	is_health = yes
+
+	opposites = {
+		beauty
+	}
 	
 	sex_appeal_opinion = -5
 	same_opinion = 5
-	
-	fertility_penalty = -0.5 
-	
+
+	fertility_penalty = -0.5
+
 	intrigue = -2
 	diplomacy = -2
 	martial = -2
@@ -1812,7 +1879,7 @@ mangled = {
 	combat_rating = -40 #old value: -4
 
 	health = -3
-	
+
 	#customizer = no
 
 	male_insult = INSULT_CRIPPLE
@@ -1826,25 +1893,25 @@ mangled = {
 
 severely_injured = {
 	is_health = yes
-	
+
 	sex_appeal_opinion = -10
 	same_opinion = 5
-	
-	fertility_penalty = -0.25 
-	
+
+	fertility_penalty = -0.25
+
 	intrigue_penalty = -2
 	martial_penalty = -2
 	
 	combat_rating = -20 #old value: -2
 
 	health_penalty = -2
-	
+
 	customizer = no
-	
+
 	male_insult = INSULT_CRIPPLE
 	male_insult_adj = INSULT_USELESS
 	female_insult_adj = INSULT_USELESS
-	
+
 	succession_gfx = yes
 }
 
@@ -1882,7 +1949,7 @@ dysentery = {
 	martial_penalty = -3
 
 	fertility_penalty = -0.25
-	
+
 	health_penalty = -4
 	
 	combat_rating = -20 #old value: -2
@@ -1897,7 +1964,7 @@ dysentery = {
 gout = {
 	is_health = yes
 	is_illness = yes
-	
+
 	stewardship_penalty = -2
 	martial_penalty = -1
 
@@ -1926,7 +1993,7 @@ food_poisoning = {
 	martial_penalty = -2
 	stewardship_penalty = -2
 	learning_penalty = -2
-	
+
 	fertility_penalty = -0.5
 
 	health_penalty = -3
@@ -1946,7 +2013,7 @@ rabies = {
 
 	vassal_opinion = -5
 	sex_appeal_opinion = -20
-	
+
 	ai_rationality = -50
 
 	diplomacy_penalty = -3
@@ -1957,7 +2024,7 @@ rabies = {
 	combat_rating = 30 #old value: 3
 
 	health_penalty = -7
-	
+
 	customizer = no
 
 	male_insult = INSULT_MANIAC
@@ -1974,9 +2041,9 @@ cancer = {
 
 	fertility_penalty = -0.20
 	health_penalty = -3
-	
+
 	customizer = no
-	
+
 	male_insult = INSULT_INVALID
 	female_insult = INSULT_INVALID
 	child_insult = INSULT_INVALID
@@ -1996,6 +2063,8 @@ immortal = {
 valhalla_bound  = {
 	opposites = {
 		crusader
+		crusader_king
+		crusader_queen
 		mujahid
 		eagle_warrior
 		sun_warrior
@@ -2008,17 +2077,22 @@ valhalla_bound  = {
 		shaddai
 		gondi_shahansha
 		kailash_guardian
+		child_of_garki_baba
+        shield_of_roog
+        heir_of_dihya
+		rtp_maharathi_tr
 	}
-	
+
 	martial = 2
 	combat_rating = 10 #old value: 1
 	
 	pagan_group_opinion = 5
 	same_opinion_if_same_religion = 15
-	
+
 	ai_zeal = 10
 	#customizer = no
-	
+	random = no
+
 	male_compliment = COMPL_VALHALLA_BOUND_MALE
 	female_compliment = COMPL_VALHALLA_BOUND_FEMALE
 }
@@ -2026,14 +2100,10 @@ valhalla_bound  = {
 ravager = {
 	potential = {
 		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
+			emf_seafaring_religion = yes
 			any_owned_bloodline = {
 				has_bloodline_flag = bloodline_viking
-			}
-			AND = {
-				has_religion_feature = religion_adventuring
-				has_religion_feature = religion_seafaring
+				bloodline_is_active_for = PREV
 			}
 		}
 	}
@@ -2041,13 +2111,14 @@ ravager = {
 		pirate
 		viking
 		seaking
+		raider
 		sea_queen
 	}
 	martial = 2
 	combat_rating = 20 #old value: 2
 	monthly_character_prestige = 0.4
-	norse_pagan_opinion = 20
-	norse_pagan_reformed_opinion = 20
+	norse_pagan_opinion = 15#EMF
+	norse_pagan_reformed_opinion = 15#EMF
 	
 	same_opinion = 5
 	#religious = yes
@@ -2063,14 +2134,10 @@ ravager = {
 seaking = {
 	potential = {
 		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
+			emf_seafaring_religion = yes
 			any_owned_bloodline = {
 				has_bloodline_flag = bloodline_viking
-			}
-			AND = {
-				has_religion_feature = religion_adventuring
-				has_religion_feature = religion_seafaring
+				bloodline_is_active_for = PREV
 			}
 		}
 	}
@@ -2078,13 +2145,14 @@ seaking = {
 		pirate
 		viking
 		ravager
+		raider
 		sea_queen
 	}
 	martial = 3
 	combat_rating = 20 #old value: 2
 	monthly_character_prestige = 0.5
-	norse_pagan_opinion = 25
-	norse_pagan_reformed_opinion = 25
+	norse_pagan_opinion = 20 #EMF
+	norse_pagan_reformed_opinion = 20 #EMF
 	
 	#religious = yes
 	
@@ -2099,7 +2167,7 @@ seaking = {
 dancing_plague = {
 	is_epidemic = yes
 	is_illness = yes
-	
+
 	health_penalty = -2
 	diplomacy_penalty = -1
 	intrigue_penalty = -1
@@ -2107,17 +2175,16 @@ dancing_plague = {
 	stewardship_penalty = -1
 	learning_penalty = -1
 	fertility = 0.25
-	
-	customizer = no
 
+	customizer = no
 	male_insult_adj = INSULT_SICKLY
 	female_insult_adj = INSULT_SICKLY
 	child_insult_adj = INSULT_SICKLY
-	
+
 	succession_gfx = yes
 }
 
-shieldmaiden  = {	
+shieldmaiden  = {
 
 	monthly_character_piety = 0.1
 	pagan_group_opinion = 5
@@ -2126,7 +2193,6 @@ shieldmaiden  = {
 	combat_rating = 10 #new value!
 
 	ai_zeal = 10
-	
 	#customizer = no
 
 	female_compliment = COMPL_VALKYRIE
@@ -2134,17 +2200,17 @@ shieldmaiden  = {
 }
 
 physician = {
-	
+
 	diplomacy = 1
 	learning = 2
 	monthly_character_prestige = 0.25
 	health = 0.5
-	
+
 	general_opinion = 5
-	
+
 	#customizer = no
 	random = no
-	
+
 	male_compliment = COMPL_SCHOLAR
 	female_compliment = COMPL_SCHOLAR
 	child_compliment = COMPL_SMARTY
@@ -2161,7 +2227,7 @@ physician = {
 scurvy = {
 	is_health = yes
 	is_illness = yes
-	
+
 	health_penalty = -3
 	diplomacy_penalty = -1
 	martial_penalty = -1
@@ -2179,24 +2245,23 @@ scurvy = {
 
 sick_incapable = {
 	is_health = yes
-	
+
 	hidden = yes
-	
+
 	incapacitating = yes # Will need a regent
-	
+
 	customizer = no
 	random = no
-	
+
 	male_insult = INSULT_VEGETABLE
 	female_insult = INSULT_VEGETABLE
 	male_insult_adj = INSULT_USELESS
 	female_insult_adj = INSULT_USELESS
 }
-
 cannot_marry = {
 	cannot_marry = yes
 	hidden = yes
-	
+
 	customizer = no
 	random = no
 }
@@ -2204,14 +2269,10 @@ cannot_marry = {
 sea_queen = {
 	potential = {
 		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
+			emf_seafaring_religion = yes
 			any_owned_bloodline = {
 				has_bloodline_flag = bloodline_viking
-			}
-			AND = {
-				has_religion_feature = religion_adventuring
-				has_religion_feature = religion_seafaring
+				bloodline_is_active_for = PREV
 			}
 		}
 	}
@@ -2229,7 +2290,7 @@ sea_queen = {
 	
 	#religious = yes
 	#customizer = no
-	
+
 	male_insult = COMPL_PIRATE
 	female_insult = COMPL_PIRATE
 	male_compliment = COMPL_VIKING
@@ -2240,6 +2301,8 @@ sea_queen = {
 
 eagle_warrior = {
 	opposites = {
+		crusader_king
+		crusader_queen
 		mujahid
 		valhalla_bound
 		crusader
@@ -2253,17 +2316,21 @@ eagle_warrior = {
 		shaddai
 		gondi_shahansha
 		kailash_guardian
+		child_of_garki_baba
+        shield_of_roog
+        heir_of_dihya
+		rtp_maharathi_tr
 	}
-	
+
 	martial = 2
 	combat_rating = 10 #old value: 1
 	
 	church_opinion = 15
 	same_opinion_if_same_religion = 15
-	
+
 	ai_zeal = 10
 	#customizer = no
-	
+
 	male_insult = INSULT_FANATIC
 	female_insult = INSULT_FANATIC
 	male_insult_adj = INSULT_NARROWMINDED
@@ -2274,6 +2341,8 @@ eagle_warrior = {
 
 sun_warrior = {
 	opposites = {
+		crusader_king
+		crusader_queen
 		mujahid
 		valhalla_bound
 		crusader
@@ -2287,17 +2356,21 @@ sun_warrior = {
 		shaddai
 		gondi_shahansha
 		kailash_guardian
+		child_of_garki_baba
+        shield_of_roog
+        heir_of_dihya
+		rtp_maharathi_tr
 	}
-	
+
 	martial = 2
 	combat_rating = 10 #old value: 1
 	
 	church_opinion = 15
 	same_opinion_if_same_religion = 15
-	
+
 	ai_zeal = 10
 	#customizer = no
-	
+
 	male_insult = INSULT_FANATIC
 	female_insult = INSULT_FANATIC
 	male_insult_adj = INSULT_NARROWMINDED
@@ -2308,6 +2381,8 @@ sun_warrior = {
 
 ukkos_shield = {
 	opposites = {
+		crusader_king
+		crusader_queen
 		mujahid
 		valhalla_bound
 		crusader
@@ -2321,14 +2396,18 @@ ukkos_shield = {
 		shaddai
 		gondi_shahansha
 		kailash_guardian
+		child_of_garki_baba
+        shield_of_roog
+        heir_of_dihya
+		rtp_maharathi_tr
 	}
-	
+
 	martial = 2
 	combat_rating = 10 #old value: 1
 	
 	church_opinion = 15
 	same_opinion_if_same_religion = 15
-	
+
 	ai_zeal = 10
 	#customizer = no
 
@@ -2342,6 +2421,8 @@ ukkos_shield = {
 
 nyames_shield = {
 	opposites = {
+		crusader_king
+		crusader_queen
 		mujahid
 		valhalla_bound
 		crusader
@@ -2355,17 +2436,21 @@ nyames_shield = {
 		shaddai
 		gondi_shahansha
 		kailash_guardian
+		child_of_garki_baba
+        shield_of_roog
+        heir_of_dihya
+		rtp_maharathi_tr
 	}
-	
+
 	martial = 2
 	combat_rating = 10 #old value: 1
 	
 	church_opinion = 15
 	same_opinion_if_same_religion = 15
-	
+
 	ai_zeal = 10
 	#customizer = no
-	
+
 	male_insult = INSULT_FANATIC
 	female_insult = INSULT_FANATIC
 	male_insult_adj = INSULT_NARROWMINDED
@@ -2376,6 +2461,8 @@ nyames_shield = {
 
 peruns_chosen = {
 	opposites = {
+		crusader_king
+		crusader_queen
 		mujahid
 		valhalla_bound
 		crusader
@@ -2389,17 +2476,21 @@ peruns_chosen = {
 		shaddai
 		gondi_shahansha
 		kailash_guardian
+		child_of_garki_baba
+        shield_of_roog
+        heir_of_dihya
+		rtp_maharathi_tr
 	}
-	
+
 	martial = 2
 	combat_rating = 10 #old value: 1
 	
 	church_opinion = 15
 	same_opinion_if_same_religion = 15
-	
+
 	ai_zeal = 10
 	#customizer = no
-	
+
 	male_insult = INSULT_FANATIC
 	female_insult = INSULT_FANATIC
 	male_insult_adj = INSULT_NARROWMINDED
@@ -2410,6 +2501,8 @@ peruns_chosen = {
 
 romuvas_own = {
 	opposites = {
+		crusader_king
+		crusader_queen
 		mujahid
 		valhalla_bound
 		crusader
@@ -2423,17 +2516,21 @@ romuvas_own = {
 		shaddai
 		gondi_shahansha
 		kailash_guardian
+		child_of_garki_baba
+        shield_of_roog
+        heir_of_dihya
+		rtp_maharathi_tr
 	}
-	
+
 	martial = 2
 	combat_rating = 10 #old value: 1
 	
 	church_opinion = 15
 	same_opinion_if_same_religion = 15
-	
+
 	ai_zeal = 10
 	#customizer = no
-	
+
 	male_insult = INSULT_FANATIC
 	female_insult = INSULT_FANATIC
 	male_insult_adj = INSULT_NARROWMINDED
@@ -2444,6 +2541,8 @@ romuvas_own = {
 
 ares_own = {
 	opposites = {
+		crusader_king
+		crusader_queen
 		mujahid
 		valhalla_bound
 		crusader
@@ -2457,17 +2556,21 @@ ares_own = {
 		shaddai
 		gondi_shahansha
 		kailash_guardian
+		child_of_garki_baba
+        shield_of_roog
+        heir_of_dihya
+		rtp_maharathi_tr
 	}
-	
+
 	martial = 2
 	combat_rating = 10 #old value: 1
 	
 	church_opinion = 15
 	same_opinion_if_same_religion = 15
-	
+
 	ai_zeal = 10
 	#customizer = no
-	
+
 	male_insult = INSULT_FANATIC
 	female_insult = INSULT_FANATIC
 	male_insult_adj = INSULT_NARROWMINDED
@@ -2478,6 +2581,8 @@ ares_own = {
 
 tengri_warrior = {
 	opposites = {
+		crusader_king
+		crusader_queen
 		mujahid
 		valhalla_bound
 		crusader
@@ -2491,17 +2596,21 @@ tengri_warrior = {
 		shaddai
 		gondi_shahansha
 		kailash_guardian
+		child_of_garki_baba
+        shield_of_roog
+        heir_of_dihya
+		rtp_maharathi_tr
 	}
-	
+
 	martial = 2
 	combat_rating = 10 #old value: 1
 	
 	church_opinion = 15
 	same_opinion_if_same_religion = 15
-	
+
 	ai_zeal = 10
 	#customizer = no
-	
+
 	male_insult = INSULT_FANATIC
 	female_insult = INSULT_FANATIC
 	male_insult_adj = INSULT_NARROWMINDED
@@ -2512,6 +2621,8 @@ tengri_warrior = {
 
 shaddai = {
 	opposites = {
+		crusader_king
+		crusader_queen
 		mujahid
 		valhalla_bound
 		crusader
@@ -2525,17 +2636,21 @@ shaddai = {
 		tengri_warrior
 		gondi_shahansha
 		kailash_guardian
+		child_of_garki_baba
+        shield_of_roog
+        heir_of_dihya
+		rtp_maharathi_tr
 	}
-	
+
 	martial = 2
 	combat_rating = 10 #old value: 1
 	
 	church_opinion = 15
 	same_opinion_if_same_religion = 15
-	
+
 	ai_zeal = 10
 	#customizer = no
-	
+
 	male_insult = INSULT_FANATIC
 	female_insult = INSULT_FANATIC
 	male_insult_adj = INSULT_NARROWMINDED
@@ -2546,6 +2661,8 @@ shaddai = {
 
 gondi_shahansha = {
 	opposites = {
+		crusader_king
+		crusader_queen
 		mujahid
 		valhalla_bound
 		crusader
@@ -2559,17 +2676,21 @@ gondi_shahansha = {
 		tengri_warrior
 		shaddai
 		kailash_guardian
+		child_of_garki_baba
+        shield_of_roog
+        heir_of_dihya
+		rtp_maharathi_tr
 	}
-	
+
 	martial = 2
 	combat_rating = 10 #old value: 1
 	
 	church_opinion = 15
 	same_opinion_if_same_religion = 15
-	
+
 	ai_zeal = 10
 	#customizer = no
-	
+
 	male_insult = INSULT_FANATIC
 	female_insult = INSULT_FANATIC
 	male_insult_adj = INSULT_NARROWMINDED
@@ -2584,25 +2705,25 @@ cannibal_trait = {
 	combat_rating = 10 #old value: 1
 	
 	same_opinion = 25
-	
+
 	ai_rationality = -20
 	ai_honor = -10
-	
+
 	male_insult = INSULT_CANNIBAL
 	female_insult = INSULT_CANNIBAL
-	male_insult_adj = INSULT_CANNIBALISTIC  
-	female_insult_adj = INSULT_CANNIBALISTIC  
+	male_insult_adj = INSULT_CANNIBALISTIC
+	female_insult_adj = INSULT_CANNIBALISTIC
 }
 
 lovers_pox = {
 	sex_appeal_opinion = -5
-	
+
 	customizer = no
 	
 	male_insult_adj = INSULT_POX_RIDDEN
 	female_insult_adj = INSULT_POX_RIDDEN
 	child_insult_adj = INSULT_POX_RIDDEN
-} 
+}
 
 disinherited = {
 	cannot_inherit = yes
@@ -2613,3499 +2734,8 @@ disinherited = {
 
 ###SECRET RELIGION TRAITS###
 
-#Catholic
-secretly_catholic = {
-
-	potential = {
-		NOT = {
-			religion = catholic
-		}
-	}
-	
-	opposites = {
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	is_visible = {
-		OR = {
-			character = FROM
-			society_member_of = secret_religious_society_catholic
-			AND = {
-				is_close_relative = FROM
-				trait = secretly_catholic
-			}
-		}
-	}
-
-	same_opinion = 15
-	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_cathar = {
-	
-	potential = {
-		NOT = {
-			religion = cathar
-		}
-	}
-	
-	opposites = {
-		secretly_catholic
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_fraticelli = {
-
-	potential = {
-		NOT = {
-			religion = fraticelli
-		}
-	}
-	
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_waldensian = {
-
-	potential = {
-		NOT = {
-			religion = waldensian
-		}
-	}
-	
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_lollard = {
-
-	potential = {
-		NOT = {
-			religion = lollard
-		}
-	}
-	
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-#Orthodox
-secretly_orthodox = {
-
-	potential = {
-		NOT = {
-			religion = orthodox
-		}
-	}
-	
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	is_visible = {
-		OR = {
-			character = FROM
-			society_member_of = secret_religious_society_orthodox
-			AND = {
-				is_close_relative = FROM
-				trait = secretly_orthodox
-			}
-		}
-	}
-
-	same_opinion = 15
-
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_bogomilist = {
-
-	potential = {
-		NOT = {
-			religion = bogomilist
-		}
-	}
-	
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_monothelite = {
-
-	potential = {
-		NOT = {
-			religion = monothelite
-		}
-	}
-	
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_iconoclast = {
-
-	potential = {
-		NOT = {
-			religion = iconoclast
-		}
-	}
-	
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_paulician = {
-
-	potential = {
-		NOT = {
-			religion = paulician
-		}
-	}
-	
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-#Miaphysite
-secretly_miaphysite = {
-
-	potential = {
-		NOT = {
-			religion = miaphysite
-		}
-	}
-	
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_monophysite = {
-
-	potential = {
-		NOT = {
-			religion = monophysite
-		}
-	}
-	
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-#Nestorian
-secretly_nestorian = {
-
-	potential = {
-		NOT = {
-			religion = nestorian
-		}
-	}
-	
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_messalian = {
-
-	potential = {
-		NOT = {
-			religion = messalian
-		}
-	}
-	
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-#Sunni
-secretly_sunni = {
-	potential = {
-		NOT = {
-			religion = sunni
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Sword of Islam"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	is_visible = {
-		OR = {
-			character = FROM
-			society_member_of = secret_religious_society_sunni
-			AND = {
-				is_close_relative = FROM
-				trait = secretly_sunni
-			}
-		}
-	}
-
-	same_opinion = 15
-
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_zikri = {
-	potential = {
-		NOT = {
-			religion = zikri
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Sword of Islam"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_yazidi = {
-	potential = {
-		NOT = {
-			religion = yazidi
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Sword of Islam"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-#Shia
-secretly_shiite = {
-	potential = {
-		NOT = {
-			religion = shiite
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Sword of Islam"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	is_visible = {
-		OR = {
-			character = FROM
-			society_member_of = secret_religious_society_shiite
-			AND = {
-				is_close_relative = FROM
-				trait = secretly_shiite
-			}
-		}
-	}
-
-	same_opinion = 15
-
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_druze = {
-	potential = {
-		NOT = {
-			religion = druze
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Sword of Islam"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_hurufi = {
-	potential = {
-		NOT = {
-			religion = hurufi
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Sword of Islam"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-#Ibadi
-secretly_ibadi = {
-	potential = {
-		NOT = {
-			religion = ibadi
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Sword of Islam"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_kharijite = {
-	potential = {
-		NOT = {
-			religion = kharijite
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Sword of Islam"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-#Judaism
-secretly_jewish = {
-	potential = {
-		NOT = {
-			religion = jewish
-		}
-		OR = {
-			ai = yes
-			has_dlc = "Sons of Abraham"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	is_visible = {
-		OR = {
-			character = FROM
-			society_member_of = secret_religious_society_jewish
-			AND = {
-				is_close_relative = FROM
-				trait = secretly_jewish
-			}
-		}
-	}	
-
-	same_opinion = 15
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_samaritan = {
-	potential = {
-		NOT = {
-			religion = samaritan
-		}
-		OR = {
-			ai = yes
-			has_dlc = "Sons of Abraham"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_karaite = {
-	potential = {
-		NOT = {
-			religion = karaite
-		}
-		OR = {
-			ai = yes
-			has_dlc = "Sons of Abraham"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-#Zoroastrian
-secretly_zoroastrian = {
-	potential = {
-		NOT = {
-			religion = zoroastrian
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Old Gods"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	is_visible = {
-		OR = {
-			character = FROM
-			society_member_of = secret_religious_society_zoroastrian
-			AND = {
-				is_close_relative = FROM
-				trait = secretly_zoroastrian
-			}
-		}
-	}
-
-	same_opinion = 15
-
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_mazdaki = {
-	potential = {
-		NOT = {
-			religion = mazdaki
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Old Gods"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_manichean = {
-	potential = {
-		NOT = {
-			religion = manichean
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Old Gods"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-#Hinduism
-secretly_hinduism = {
-	potential = {
-		NOT = {
-			religion = hindu
-		}
-		OR = {
-			ai = yes
-			has_dlc = "Rajas of India"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	is_visible = {
-		OR = {
-			character = FROM
-			society_member_of = secret_religious_society_hinduism
-			AND = {
-				is_close_relative = FROM
-				trait = secretly_hinduism
-			}
-		}
-	}
-
-	same_opinion = 15
-
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-#Buddhism
-secretly_buddhism = {
-	potential = {
-		NOT = {
-			religion = buddhist
-		}
-		OR = {
-			ai = yes
-			has_dlc = "Rajas of India"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	is_visible = {
-		OR = {
-			character = FROM
-			society_member_of = secret_religious_society_buddhism
-			AND = {
-				is_close_relative = FROM
-				trait = secretly_buddhism
-			}
-		}
-	}
-
-	same_opinion = 15
-
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-#Jainism
-secretly_jain = {
-	potential = {
-		NOT = {
-			religion = jain
-		}
-		OR = {
-			ai = yes
-			has_dlc = "Rajas of India"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	is_visible = {
-		OR = {
-			character = FROM
-			society_member_of = secret_religious_society_jain
-			AND = {
-				is_close_relative = FROM
-				trait = secretly_jain
-			}
-		}
-	}
-
-	same_opinion = 15
-
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-#Pagan
-secretly_norse_pagan = {
-	potential = {
-		NOT = {
-			religion = norse_pagan
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Old Gods"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_norse_pagan_reformed = {
-	potential = {
-		NOT = {
-			religion = norse_pagan_reformed
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Old Gods"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	is_visible = {
-		OR = {
-			character = FROM
-			society_member_of = secret_religious_society_norse_pagan_reformed
-			AND = {
-				is_close_relative = FROM
-				trait = secretly_norse_pagan_reformed
-			}
-		}
-	}
-
-	same_opinion = 15
-
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_baltic_pagan = {
-	potential = {
-		NOT = {
-			religion = baltic_pagan
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Old Gods"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_baltic_pagan_reformed = {
-	potential = {
-		NOT = {
-			religion = baltic_pagan_reformed
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Old Gods"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	is_visible = {
-		OR = {
-			character = FROM
-			society_member_of = secret_religious_society_baltic_pagan_reformed
-			AND = {
-				is_close_relative = FROM
-				trait = secretly_baltic_pagan_reformed
-			}
-		}
-	}
-
-	same_opinion = 15
-
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_finnish_pagan = {
-	potential = {
-		NOT = {
-			religion = finnish_pagan
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Old Gods"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_finnish_pagan_reformed = {
-	potential = {
-		NOT = {
-			religion = finnish_pagan_reformed
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Old Gods"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	is_visible = {
-		OR = {
-			character = FROM
-			society_member_of = secret_religious_society_finnish_pagan_reformed
-			AND = {
-				is_close_relative = FROM
-				trait = secretly_finnish_pagan_reformed
-			}
-		}
-	}
-
-	same_opinion = 15
-
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_slavic_pagan = {
-	potential = {
-		NOT = {
-			religion = slavic_pagan
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Old Gods"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_slavic_pagan_reformed = {
-	potential = {
-		NOT = {
-			religion = slavic_pagan_reformed
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Old Gods"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	is_visible = {
-		OR = {
-			character = FROM
-			society_member_of = secret_religious_society_slavic_pagan_reformed
-			AND = {
-				is_close_relative = FROM
-				trait = secretly_slavic_pagan_reformed
-			}
-		}
-	}
-
-	same_opinion = 15
-
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_tengri_pagan = {
-	potential = {
-		NOT = {
-			religion = tengri_pagan
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Old Gods"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_tengri_pagan_reformed = {
-	potential = {
-		NOT = {
-			religion = tengri_pagan_reformed
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Old Gods"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	is_visible = {
-		OR = {
-			character = FROM
-			society_member_of = secret_religious_society_tengri_pagan_reformed
-			AND = {
-				is_close_relative = FROM
-				trait = secretly_tengri_pagan_reformed
-			}
-		}
-	}
-
-	same_opinion = 15
-
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_aztec = {
-	potential = {
-		NOT = {
-			religion = aztec
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Old Gods"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_aztec_reformed = {
-	potential = {
-		NOT = {
-			religion = aztec_reformed
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Old Gods"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_west_african_pagan = {
-	potential = {
-		NOT = {
-			religion = west_african_pagan
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Old Gods"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_west_african_pagan_reformed = {
-	potential = {
-		NOT = {
-			religion = west_african_pagan_reformed
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Old Gods"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	is_visible = {
-		OR = {
-			character = FROM
-			society_member_of = secret_religious_society_west_african_pagan_reformed
-			AND = {
-				is_close_relative = FROM
-				trait = secretly_west_african_pagan_reformed
-			}
-		}
-	}
-
-	same_opinion = 15
-
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_zun_pagan = {
-	potential = {
-		NOT = {
-			religion = zun_pagan
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Old Gods"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_zun_pagan_reformed = {
-	potential = {
-		NOT = {
-			religion = zun_pagan_reformed
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Old Gods"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_hellenic_pagan
-		secretly_pagan
-	}
-
-	is_visible = {
-		OR = {
-			character = FROM
-			society_member_of = secret_religious_society_zun_pagan_reformed
-			AND = {
-				is_close_relative = FROM
-				trait = secretly_zun_pagan_reformed
-			}
-		}
-	}
-
-	same_opinion = 15
-		
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_hellenic_pagan = {
-	potential = {
-		NOT = {
-			religion = hellenic_pagan
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Old Gods"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
-
-secretly_pagan = {
-	potential = {
-		NOT = {
-			religion = pagan
-		}
-		OR = {
-			ai = yes
-			has_dlc = "The Old Gods"
-			is_nomadic = yes
-		}
-	}
-	opposites = {
-		secretly_catholic
-		secretly_cathar
-		secretly_fraticelli
-		secretly_waldensian
-		secretly_lollard
-		secretly_orthodox
-		secretly_bogomilist
-		secretly_monothelite
-		secretly_iconoclast
-		secretly_paulician
-		secretly_miaphysite
-		secretly_monophysite
-		secretly_nestorian
-		secretly_messalian
-		secretly_sunni
-		secretly_zikri
-		secretly_yazidi
-		secretly_shiite
-		secretly_druze
-		secretly_hurufi
-		secretly_ibadi
-		secretly_kharijite
-		secretly_jewish
-		secretly_samaritan
-		secretly_karaite
-		secretly_zoroastrian
-		secretly_mazdaki
-		secretly_manichean
-		secretly_hinduism
-		secretly_buddhism
-		secretly_jain
-		secretly_norse_pagan
-		secretly_norse_pagan_reformed
-		secretly_baltic_pagan
-		secretly_baltic_pagan_reformed
-		secretly_finnish_pagan
-		secretly_finnish_pagan_reformed
-		secretly_slavic_pagan
-		secretly_slavic_pagan_reformed
-		secretly_tengri_pagan
-		secretly_tengri_pagan_reformed
-		secretly_aztec
-		secretly_aztec_reformed
-		secretly_west_african_pagan
-		secretly_west_african_pagan_reformed
-		secretly_zun_pagan
-		secretly_zun_pagan_reformed
-		secretly_hellenic_pagan
-	}
-
-	hidden_from_others = yes	
-	random = no
-	customizer = no
-	ai_zeal = -50
-}
+### Since they're no longer referenced anywhere in vanilla or EMF and are obsolete, the secret religion traits have been
+### removed.
 
 muni = {
 	potential = {
@@ -6113,16 +2743,16 @@ muni = {
 		is_female = no
 		religion = jain
 	}
-	
+
 	monthly_character_piety = 0.3
 	same_religion_opinion = 5
-	
+
 	religious = yes # Lost immediately on religion change
 	cannot_marry = yes
 	cannot_inherit = yes
 	customizer = no
 	random = no
-	
+
 	male_compliment = COMPL_MONK
 }
 
@@ -6132,16 +2762,16 @@ aryika = {
 		is_female = yes
 		religion = jain
 	}
-	
+
 	monthly_character_piety = 0.3
 	same_religion_opinion = 5
-	
+
 	religious = yes # Lost immediately on religion change
 	cannot_marry = yes
 	cannot_inherit = yes
 	customizer = no
 	random = no
-	
+
 	female_compliment = COMPL_NUN
 }
 
@@ -6151,16 +2781,16 @@ bhikkhu = {
 		is_female = no
 		religion = buddhist
 	}
-	
+
 	monthly_character_piety = 0.3
 	same_religion_opinion = 5
-	
+
 	religious = yes # Lost immediately on religion change
 	cannot_marry = yes
 	cannot_inherit = yes
 	customizer = no
 	random = no
-	
+
 	male_compliment = COMPL_MONK
 }
 
@@ -6170,16 +2800,16 @@ bhikkhuni = {
 		is_female = yes
 		religion = buddhist
 	}
-	
+
 	monthly_character_piety = 0.3
 	same_religion_opinion = 5
-	
+
 	religious = yes # Lost immediately on religion change
 	cannot_marry = yes
 	cannot_inherit = yes
 	customizer = no
 	random = no
-	
+
 	female_compliment = COMPL_NUN
 }
 
@@ -6189,16 +2819,16 @@ sanyasi = {
 		is_female = no
 		religion = hindu
 	}
-	
+
 	monthly_character_piety = 0.3
 	same_religion_opinion = 5
-	
+
 	religious = yes # Lost immediately on religion change
 	cannot_marry = yes
 	cannot_inherit = yes
 	customizer = no
 	random = no
-	
+
 	male_compliment = COMPL_MONK
 }
 
@@ -6208,16 +2838,16 @@ sanyasini = {
 		is_female = yes
 		religion = hindu
 	}
-	
+
 	monthly_character_piety = 0.3
 	same_religion_opinion = 5
-	
+
 	religious = yes # Lost immediately on religion change
 	cannot_marry = yes
 	cannot_inherit = yes
 	customizer = no
 	random = no
-	
+
 	female_compliment = COMPL_NUN
 }
 
@@ -6227,10 +2857,10 @@ indian_pilgrim = {
 	potential = {
 		has_dharmic_religion_trigger = yes
 	}
-	
+
 	same_religion_opinion = 5
 	monthly_character_piety = 0.1
-	
+
 	male_compliment = COMPL_PILGRIM
 	female_compliment = COMPL_PILGRIM
 }
@@ -6241,13 +2871,13 @@ on_indian_pilgrimage = {
 		has_dharmic_religion_trigger = yes
 		NOT = { trait = pilgrim }
 	}
-	
-	cached = yes    # Keep a cache of all trait holders, to use with the corresponding event trigger 
-	
+
+	cached = yes	# Keep a cache of all trait holders, to use with the corresponding event trigger
+
 	monthly_character_piety = 0.2
 	same_religion_opinion = 5
-	
-	pilgrimage = yes    # Will need a regent, but can still be guardian to children
+
+	pilgrimage = yes	# Will need a regent, but can still be guardian to children
 	customizer = no
 }
 
@@ -6456,20 +3086,21 @@ kow_tow_completed_tier_3 = {
 	random = no
 }
 giant = {
-	birth = 50
-	inherit_chance = 5
+	#birth = 15
+	random = no
 	
 	opposites =  {
 		dwarf
+		tall #EMF
+		short
+		tiny
 	}
 	
-	fertility = -0.20
-	health = -0.5
+	health = -0.2
 	combat_rating = 10
-	
 	vassal_opinion = 5
 	tribal_opinion = 10
-	sex_appeal_opinion = -5
+	sex_appeal_opinion = -15
 	
 	male_insult = INSULT_ABOMINATION
 	female_insult = INSULT_FREAK
@@ -6485,6 +3116,11 @@ crowned_by_priest = {
 		crowned_by_bishop
 		crowned_by_pope
 		crowned_by_myself
+		uncrowned
+		emf_crowned
+		emf_crowned_by_pope
+		strong_basileus
+		weak_basileus
 	}
 	
 	monthly_character_prestige = 0.05
@@ -6498,6 +3134,11 @@ crowned_by_bishop = {
 		crowned_by_priest
 		crowned_by_pope
 		crowned_by_myself
+		uncrowned
+		emf_crowned
+		emf_crowned_by_pope
+		strong_basileus
+		weak_basileus
 	}
 	church_opinion = 5
 	
@@ -6512,6 +3153,11 @@ crowned_by_pope = {
 		crowned_by_priest
 		crowned_by_bishop
 		crowned_by_myself
+		uncrowned
+		emf_crowned
+		emf_crowned_by_pope
+		strong_basileus
+		weak_basileus
 	}
 	church_opinion = 10
 	vassal_opinion = 5
@@ -6528,6 +3174,11 @@ crowned_by_myself = {
 		crowned_by_priest
 		crowned_by_bishop
 		crowned_by_pope
+		uncrowned
+		emf_crowned
+		emf_crowned_by_pope
+		strong_basileus
+		weak_basileus
 	}
 	church_opinion = -25
 	vassal_opinion = 10
@@ -6540,6 +3191,16 @@ crowned_by_myself = {
 }
 
 uncrowned = { #Used to handle portrait appearance
+	opposites =  {
+		crowned_by_priest
+		crowned_by_bishop
+		crowned_by_pope
+		crowned_by_myself
+		emf_crowned
+		emf_crowned_by_pope
+		strong_basileus
+		weak_basileus
+	}
 	hidden = yes
 	customizer = no
 	random = no
@@ -6585,21 +3246,7 @@ troubled_pregnancy = {
 	ai_rationality = -15
 }
 
-lefthanded = {
-	inherit_chance = 25
-	birth = 75
-
-	combat_rating = 15
-	same_opinion = 5
-	
-	customizer = yes
-	
-	christian_church_opinion = -10
-	muslim_opinion = -10
-
-	male_insult_adj = INSULT_LEFTHANDED
-	female_insult_adj = INSULT_LEFTHANDED
-}
+# EMF: lefthanded preexists in HIP_congenital_traits
 
 freckles = { #Inherited via script - Base version.
 #	inherit_chance = 40
@@ -6633,16 +3280,13 @@ freckles = { #Inherited via script - Base version.
 }
 
 sturdy = {
-	
 	opposites = { 
 		feeble
 		robust 
 	}
 
 	health = 0.25
-	
 	combat_rating = 2
-	
 }
 is_fat = {
 
@@ -6729,7 +3373,7 @@ baptized_by_satan = {
 
 	is_visible = {
 		OR = {
-			character = FROM
+			emf_hidden_from_others = yes
 			society_member_of = the_satanists 
 		}
 	}
@@ -6839,8 +3483,18 @@ hellenic_leader = {
 	random = no
 	command_modifier = {
 		speed = 0.1
+		morale_defence = 0.15
+		morale_offence = 0.2
+	}
+}
+aztec_leader = {
+	leader = yes
+	random = no
+	trait_effect_capture_commanders = 1 #Bonus to capturing commanders
+	command_modifier = {
+		terrain = jungle
 		morale_defence = 0.2
-		morale_offence = 0.3
+		morale_offence = 0.2
 	}
 }
 
@@ -6862,7 +3516,19 @@ pagan_branch_1 = {
 	
 	ai_zeal = -30
 
-	potential = { has_religion_feature = religion_no_leader }
+	potential = {
+		NOT = { religion = a_tag_roog_reformed }
+		OR = {
+			has_religion_feature = religion_no_leader
+			AND = {
+				has_religion_features = no
+				OR = {
+					religion = west_african_pagan_reformed
+					religion = bon_reformed
+				}
+			}
+		}
+	}
 	random = no
 	religious = yes
 	ruler_designer_cost = 0
@@ -6882,7 +3548,19 @@ pagan_branch_2 = {
 	
 	ai_zeal = 30
 	
-	potential = { has_religion_feature = religion_no_leader }
+	potential = {
+		NOT = { religion = a_tag_roog_reformed }
+		OR = {
+			has_religion_feature = religion_no_leader
+			AND = {
+				has_religion_features = no
+				OR = {
+					religion = west_african_pagan_reformed
+					religion = bon_reformed
+				}
+			}
+		}
+	}
 	random = no
 	religious = yes
 	ruler_designer_cost = 0
@@ -6902,7 +3580,19 @@ pagan_branch_3 = {
 	
 	ai_ambition = 20
 	
-	potential = { has_religion_feature = religion_no_leader }
+	potential = {
+		NOT = { religion = a_tag_roog_reformed }
+		OR = {
+			has_religion_feature = religion_no_leader
+			AND = {
+				has_religion_features = no
+				OR = {
+					religion = west_african_pagan_reformed
+					religion = bon_reformed
+				}
+			}
+		}
+	}
 	random = no
 	religious = yes
 	ruler_designer_cost = 0
@@ -6922,7 +3612,19 @@ pagan_branch_4 = {
 	
 	ai_honor = 10
 	
-	potential = { has_religion_feature = religion_no_leader }
+	potential = {
+		NOT = { religion = a_tag_roog_reformed }
+		OR = {
+			has_religion_feature = religion_no_leader
+			AND = {
+				has_religion_features = no
+				OR = {
+					religion = west_african_pagan_reformed
+					religion = bon_reformed
+				}
+			}
+		}
+	}
 	random = no
 	religious = yes
 	ruler_designer_cost = 0
@@ -7054,11 +3756,7 @@ blessed_ancestor = {
 #Zodiac Signs
 zodiac_aquarius = {
 	potential = {
-		OR = {
-			religion = hellenic_pagan
-			religion = hellenic_pagan_reformed
-			has_religion_feature = religion_astrology
-		}
+		emf_astrology_religion = yes
 	}
 	opposites = {
 		zodiac_leo
@@ -7067,7 +3765,7 @@ zodiac_aquarius = {
 	diplomacy = -1
 	monthly_character_prestige = 0.05
 
-	random = no	
+	random = no
 	opposite_opinion = -10
 	same_opinion = 5
 
@@ -7080,11 +3778,7 @@ zodiac_aries = {
 		zodiac_libra
 	}
 	potential = {
-		OR = {
-			religion = hellenic_pagan
-			religion = hellenic_pagan_reformed
-			has_religion_feature = religion_astrology
-		}
+		emf_astrology_religion = yes
 	}
 
 	diplomacy = 1
@@ -7104,11 +3798,7 @@ zodiac_cancer = {
 		zodiac_capricorn
 	}
 	potential = {
-		OR = {
-			religion = hellenic_pagan
-			religion = hellenic_pagan_reformed
-			has_religion_feature = religion_astrology
-		}
+		emf_astrology_religion = yes
 	}
 	diplomacy = -1
 	combat_rating = 5
@@ -7126,11 +3816,7 @@ zodiac_capricorn = {
 		zodiac_cancer
 	}
 	potential = {
-		OR = {
-			religion = hellenic_pagan
-			religion = hellenic_pagan_reformed
-			has_religion_feature = religion_astrology
-		}
+		emf_astrology_religion = yes
 	}
 	martial = -1
 	learning = 1
@@ -7148,11 +3834,7 @@ zodiac_gemini = {
 		zodiac_sagittarius
 	}
 	potential = {
-		OR = {
-			religion = hellenic_pagan
-			religion = hellenic_pagan_reformed
-			has_religion_feature = religion_astrology
-		}
+		emf_astrology_religion = yes
 	}
 	stewardship = 1
 	general_opinion = -5
@@ -7171,11 +3853,7 @@ zodiac_leo = {
 		zodiac_aquarius
 	}
 	potential = {
-		OR = {
-			religion = hellenic_pagan
-			religion = hellenic_pagan_reformed
-			has_religion_feature = religion_astrology
-		}
+		emf_astrology_religion = yes
 	}
 	martial = 1
 
@@ -7196,11 +3874,7 @@ zodiac_libra = {
 		zodiac_aries
 	}
 	potential = {
-		OR = {
-			religion = hellenic_pagan
-			religion = hellenic_pagan_reformed
-			has_religion_feature = religion_astrology
-		}
+		emf_astrology_religion = yes
 	}
 
 	stewardship = 1
@@ -7219,11 +3893,7 @@ zodiac_pisces = {
 		zodiac_virgo
 	}
 	potential = {
-		OR = {
-			religion = hellenic_pagan
-			religion = hellenic_pagan_reformed
-			has_religion_feature = religion_astrology
-		}
+		emf_astrology_religion = yes
 	}
 	diplomacy = -1
 	dynasty_opinion = 10
@@ -7242,11 +3912,7 @@ zodiac_sagittarius = {
 		zodiac_gemini
 	}
 	potential = {
-		OR = {
-			religion = hellenic_pagan
-			religion = hellenic_pagan_reformed
-			has_religion_feature = religion_astrology
-		}
+		emf_astrology_religion = yes
 	}
 	martial = 1
 	diplomacy = 1
@@ -7265,11 +3931,7 @@ zodiac_scorpio = {
 		zodiac_taurus
 	}
 	potential = {
-		OR = {
-			religion = hellenic_pagan
-			religion = hellenic_pagan_reformed
-			has_religion_feature = religion_astrology
-		}
+		emf_astrology_religion = yes
 	}
 	intrigue = 1
 
@@ -7289,11 +3951,7 @@ zodiac_taurus = {
 		zodiac_scorpio
 	}
 	potential = {
-		OR = {
-			religion = hellenic_pagan
-			religion = hellenic_pagan_reformed
-			has_religion_feature = religion_astrology
-		}
+		emf_astrology_religion = yes
 	}
 	martial = 1
 	intrigue = -1
@@ -7311,11 +3969,7 @@ zodiac_virgo = {
 		zodiac_pisces
 	}
 	potential = {
-		OR = {
-			religion = hellenic_pagan
-			religion = hellenic_pagan_reformed
-			has_religion_feature = religion_astrology
-		}
+		emf_astrology_religion = yes
 	}
 	stewardship = 1
 	monthly_character_prestige = -0.05
@@ -7379,64 +4033,6 @@ dead_crown_aztec_fylkir = {
 	customizer = no
 }
 
-crowned_by_priest_rd = { #Only for Ruler Designer
-	opposites =  {
-		crowned_by_bishop_rd
-		crowned_by_pope_rd
-	}
-	potential = {
-		OR = {
-			religion = catholic
-			religion = fraticelli
-		}
-	}
-	
-	monthly_character_prestige = 0.05
-	monthly_character_piety = 0.1
-	
-	customizer = yes
-	random = no
-}
-crowned_by_bishop_rd = {
-	opposites =  {
-		crowned_by_priest_rd
-		crowned_by_pope_rd
-	}
-	potential = {
-		OR = {
-			religion = catholic
-			religion = fraticelli
-		}
-	}
-	church_opinion = 5
-	
-	monthly_character_prestige = 0.25
-	monthly_character_piety = 0.25
-	
-	customizer = yes
-	random = no
-}
-crowned_by_pope_rd = {
-	opposites =  {
-		crowned_by_priest_rd
-		crowned_by_bishop_rd
-	}
-	potential = {
-		OR = {
-			religion = catholic
-			religion = fraticelli
-		}
-	}
-	church_opinion = 10
-	vassal_opinion = 5
-
-	monthly_character_prestige = 0.5
-	monthly_character_piety = 0.5
-	
-	customizer = yes
-	random = no
-}
-
 crusader_king = {
 	opposites = {
 		crusader
@@ -7454,6 +4050,10 @@ crusader_king = {
 		shaddai
 		gondi_shahansha
 		kailash_guardian
+		child_of_garki_baba
+        shield_of_roog
+        heir_of_dihya
+		rtp_maharathi_tr
 	}
 	
 	ai_zeal = 20
@@ -7489,6 +4089,10 @@ crusader_queen = {
 		shaddai
 		gondi_shahansha
 		kailash_guardian
+		child_of_garki_baba
+        shield_of_roog
+        heir_of_dihya
+		rtp_maharathi_tr
 	}
 
 	ai_zeal = 20
@@ -7510,13 +4114,8 @@ crusader_queen = {
 pirate = {
 	potential = {
 		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
+			emf_seafaring_religion = yes
 			has_character_flag = acquired_pirate_trait_by_bloodline
-			AND = {
-				has_religion_feature = religion_adventuring
-				has_religion_feature = religion_seafaring
-			}
 		}
 	}
 	opposites =  {
@@ -7540,11 +4139,7 @@ pirate = {
 
 bloodthirsty_gods_1 = { #10 burned_hearts_points
 	potential = {
-		OR = {
-			has_religion_feature = religion_ritual_sacrifice
-			religion = aztec
-			religion = aztec_reformed
-		}
+		emf_ritual_sacrifice_religion = yes
 	}
 	opposites =  {
 		bloodthirsty_gods_2
@@ -7576,11 +4171,7 @@ bloodthirsty_gods_1 = { #10 burned_hearts_points
 }
 bloodthirsty_gods_2 = { #50 burned_hearts_points
 	potential = {
-		OR = {
-			has_religion_feature = religion_ritual_sacrifice
-			religion = aztec
-			religion = aztec_reformed
-		}
+		emf_ritual_sacrifice_religion = yes
 	}
 	opposites =  {
 		bloodthirsty_gods_1
@@ -7612,11 +4203,7 @@ bloodthirsty_gods_2 = { #50 burned_hearts_points
 }
 bloodthirsty_gods_3 = { #100 burned_hearts_points
 	potential = {
-		OR = {
-			has_religion_feature = religion_ritual_sacrifice
-			religion = aztec
-			religion = aztec_reformed
-		}
+		emf_ritual_sacrifice_religion = yes
 	}
 	opposites =  {
 		bloodthirsty_gods_2
