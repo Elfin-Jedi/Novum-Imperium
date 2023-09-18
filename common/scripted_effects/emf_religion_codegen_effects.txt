@@ -5136,6 +5136,696 @@ emf_calc_realm_province_religion_breakdown_of_THIS_for_ROOT = {
 				multiply_variable = { which = r_prov_rel_basin_pagan_pct value = 100 }
 				divide_variable = { which = r_prov_rel_basin_pagan_pct which = r_prov }
 			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_plateau_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_basin_pagan_pct which = r_prov_rel_plateau_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_plateau_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_plateau_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_plateau_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_plateau_pagan_pct which = r_prov_rel_plateau_pagan }
+				multiply_variable = { which = r_prov_rel_plateau_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_plateau_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_california_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_california_pagan_reformed_pct which = r_prov_rel_california_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_california_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_california_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_california_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_california_pagan_pct which = r_prov_rel_california_pagan }
+				multiply_variable = { which = r_prov_rel_california_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_california_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_southeast_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_southeast_pagan_reformed_pct which = r_prov_rel_southeast_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_southeast_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_southeast_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_southeast_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_southeast_pagan_pct which = r_prov_rel_southeast_pagan }
+				multiply_variable = { which = r_prov_rel_southeast_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_southeast_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_southwest_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_southwest_pagan_reformed_pct which = r_prov_rel_southwest_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_southwest_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_southwest_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_southwest_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_southwest_pagan_pct which = r_prov_rel_southwest_pagan }
+				multiply_variable = { which = r_prov_rel_southwest_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_southwest_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_raven_tales_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_raven_tales_reformed_pct which = r_prov_rel_raven_tales_reformed }
+				multiply_variable = { which = r_prov_rel_raven_tales_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_raven_tales_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_raven_tales value > 0 } }
+				set_variable = { which = r_prov_rel_raven_tales_pct which = r_prov_rel_raven_tales }
+				multiply_variable = { which = r_prov_rel_raven_tales_pct value = 100 }
+				divide_variable = { which = r_prov_rel_raven_tales_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_caribic_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_caribic_pagan_reformed_pct which = r_prov_rel_caribic_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_caribic_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_caribic_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_caribic_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_caribic_pagan_pct which = r_prov_rel_caribic_pagan }
+				multiply_variable = { which = r_prov_rel_caribic_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_caribic_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_pampas_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_pampas_pagan_reformed_pct which = r_prov_rel_pampas_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_pampas_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_pampas_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_pampas_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_pampas_pagan_pct which = r_prov_rel_pampas_pagan }
+				multiply_variable = { which = r_prov_rel_pampas_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_pampas_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_chaco_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_chaco_pagan_reformed_pct which = r_prov_rel_chaco_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_chaco_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_chaco_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_chaco_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_chaco_pagan_pct which = r_prov_rel_chaco_pagan }
+				multiply_variable = { which = r_prov_rel_chaco_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_chaco_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_amazonian_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_amazonian_pagan_reformed_pct which = r_prov_rel_amazonian_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_amazonian_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_amazonian_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_amazonian_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_amazonian_pagan_pct which = r_prov_rel_amazonian_pagan }
+				multiply_variable = { which = r_prov_rel_amazonian_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_amazonian_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_mapuche_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_mapuche_pagan_reformed_pct which = r_prov_rel_mapuche_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_mapuche_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_mapuche_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_mapuche_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_mapuche_pagan_pct which = r_prov_rel_mapuche_pagan }
+				multiply_variable = { which = r_prov_rel_mapuche_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_mapuche_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_muisca_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_muisca_pagan_reformed_pct which = r_prov_rel_muisca_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_muisca_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_muisca_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_muisca_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_muisca_pagan_pct which = r_prov_rel_muisca_pagan }
+				multiply_variable = { which = r_prov_rel_muisca_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_muisca_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_caran_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_caran_pagan_reformed_pct which = r_prov_rel_caran_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_caran_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_caran_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_caran_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_caran_pagan_pct which = r_prov_rel_caran_pagan }
+				multiply_variable = { which = r_prov_rel_caran_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_caran_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_chachapoyan_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_chachapoyan_pagan_reformed_pct which = r_prov_rel_chachapoyan_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_chachapoyan_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_chachapoyan_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_chachapoyan_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_chachapoyan_pagan_pct which = r_prov_rel_chachapoyan_pagan }
+				multiply_variable = { which = r_prov_rel_chachapoyan_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_chachapoyan_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_chimuan_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_chachapoyan_pagan_reformed_pct which = r_prov_rel_chimuan_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_chimuan_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_chimuan_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_chimuan_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_chimuan_pagan_pct which = r_prov_rel_chimuan_pagan }
+				multiply_variable = { which = r_prov_rel_chimuan_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_chimuan_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_tiwanakan_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_tiwanakan_pagan_reformed_pct which = r_prov_rel_tiwanakan_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_tiwanakan_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_tiwanakan_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_tiwanakan_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_tiwanakan_pagan_pct which = r_prov_rel_tiwanakan_pagan }
+				multiply_variable = { which = r_prov_rel_tiwanakan_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_tiwanakan_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_chavin_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_chavin_pagan_reformed_pct which = r_prov_rel_chavin_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_chavin_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_chavin_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_chavin_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_chavin_pagan_pct which = r_prov_rel_chavin_pagan }
+				multiply_variable = { which = r_prov_rel_chavin_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_chavin_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_otomi_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_otomi_pagan_reformed_pct which = r_prov_rel_otomi_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_otomi_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_otomi_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_otomi_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_otomi_pagan_pct which = r_prov_rel_otomi_pagan }
+				multiply_variable = { which = r_prov_rel_otomi_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_otomi_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_corachol_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_corachol_pagan_reformed_pct which = r_prov_rel_corachol_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_corachol_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_corachol_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_corachol_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_corachol_pagan_pct which = r_prov_rel_corachol_pagan }
+				multiply_variable = { which = r_prov_rel_corachol_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_corachol_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_tarascan_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_tarascan_pagan_reformed_pct which = r_prov_rel_tarascan_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_tarascan_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_tarascan_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_tarascan_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_tarascan_pagan_pct which = r_prov_rel_tarascan_pagan }
+				multiply_variable = { which = r_prov_rel_tarascan_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_tarascan_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_nonohualcan_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_nonohualcan_pagan_reformed_pct which = r_prov_rel_nonohualcan_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_nonohualcan_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_nonohualcan_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_nonohualcan_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_nonohualcan_pagan_pct which = r_prov_rel_nonohualcan_pagan }
+				multiply_variable = { which = r_prov_rel_nonohualcan_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_nonohualcan_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_wastek_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_wastek_pagan_reformed_pct which = r_prov_rel_wastek_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_wastek_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_wastek_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_wastek_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_wastek_pagan_pct which = r_prov_rel_wastek_pagan }
+				multiply_variable = { which = r_prov_rel_wastek_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_wastek_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_zapotec_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_zapotec_pagan_reformed_pct which = r_prov_rel_zapotec_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_zapotec_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_zapotec_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_zapotec_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_zapotec_pagan_pct which = r_prov_rel_zapotec_pagan }
+				multiply_variable = { which = r_prov_rel_zapotec_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_zapotec_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_totonac_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_totonac_pagan_reformed_pct which = r_prov_rel_totonac_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_totonac_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_totonac_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_totonac_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_totonac_pagan_pct which = r_prov_rel_totonac_pagan }
+				multiply_variable = { which = r_prov_rel_totonac_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_totonac_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_mixtec_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_mixtec_pagan_reformed_pct which = r_prov_rel_mixtec_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_mixtec_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_mixtec_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_mixtec_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_mixtec_pagan_pct which = r_prov_rel_mixtec_pagan }
+				multiply_variable = { which = r_prov_rel_mixtec_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_mixtec_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_yukaghir_pantheism_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_yukaghir_pantheism_reformed_pct which = r_prov_rel_yukaghir_pantheism_reformed }
+				multiply_variable = { which = r_prov_rel_yukaghir_pantheism_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_yukaghir_pantheism_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_yukaghir_pantheism value > 0 } }
+				set_variable = { which = r_prov_rel_yukaghir_pantheism_pct which = r_prov_rel_yukaghir_pantheism }
+				multiply_variable = { which = r_prov_rel_yukaghir_pantheism_pct value = 100 }
+				divide_variable = { which = r_prov_rel_yukaghir_pantheism_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_chukchi_pantheism_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_chukchi_pantheism_reformed_pct which = r_prov_rel_chukchi_pantheism_reformed }
+				multiply_variable = { which = r_prov_rel_chukchi_pantheism_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_chukchi_pantheism_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_chukchi_pantheism value > 0 } }
+				set_variable = { which = r_prov_rel_chukchi_pantheism_pct which = r_prov_rel_chukchi_pantheism }
+				multiply_variable = { which = r_prov_rel_chukchi_pantheism_pct value = 100 }
+				divide_variable = { which = r_prov_rel_chukchi_pantheism_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_druze_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_druze_reformed_pct which = r_prov_rel_druze_reformed }
+				multiply_variable = { which = r_prov_rel_druze_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_druze_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_judaism_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_judaism_reformed_pct which = r_prov_rel_judaism_reformed }
+				multiply_variable = { which = r_prov_rel_judaism_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_judaism_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_sethian_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_sethian_reformed_pct which = r_prov_rel_sethian_reformed }
+				multiply_variable = { which = r_prov_rel_sethian_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_sethian_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_muslim_sufi_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_muslim_sufi_reformed_pct which = r_prov_rel_muslim_sufi_reformed }
+				multiply_variable = { which = r_prov_rel_muslim_sufi_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_muslim_sufi_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_cybele_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_cybele_reformed_pct which = r_prov_rel_cybele_reformed }
+				multiply_variable = { which = r_prov_rel_cybele_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_cybele_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_ethiopian_war_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_ethiopian_war_reformed_pct which = r_prov_rel_ethiopian_war_reformed }
+				multiply_variable = { which = r_prov_rel_ethiopian_war_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_ethiopian_war_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_waaq value > 0 } }
+				set_variable = { which = r_prov_rel_waaq_pct which = r_prov_rel_waaq }
+				multiply_variable = { which = r_prov_rel_waaq_pct value = 100 }
+				divide_variable = { which = r_prov_rel_waaq_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_arab_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_arab_pagan_reformed_pct which = r_prov_rel_arab_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_arab_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_arab_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_almaqah value > 0 } }
+				set_variable = { which = r_prov_rel_almaqah_pct which = r_prov_rel_almaqah }
+				multiply_variable = { which = r_prov_rel_almaqah_pct value = 100 }
+				divide_variable = { which = r_prov_rel_almaqah_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_talab value > 0 } }
+				set_variable = { which = r_prov_rel_talab_pct which = r_prov_rel_talab }
+				multiply_variable = { which = r_prov_rel_talab_pct value = 100 }
+				divide_variable = { which = r_prov_rel_talab_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_shams value > 0 } }
+				set_variable = { which = r_prov_rel_shams_pct which = r_prov_rel_shams }
+				multiply_variable = { which = r_prov_rel_shams_pct value = 100 }
+				divide_variable = { which = r_prov_rel_shams_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_allat value > 0 } }
+				set_variable = { which = r_prov_rel_allat_pct which = r_prov_rel_allat }
+				multiply_variable = { which = r_prov_rel_allat_pct value = 100 }
+				divide_variable = { which = r_prov_rel_allat_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_hubal value > 0 } }
+				set_variable = { which = r_prov_rel_hubal_pct which = r_prov_rel_hubal }
+				multiply_variable = { which = r_prov_rel_hubal_pct value = 100 }
+				divide_variable = { which = r_prov_rel_hubal_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_attar value > 0 } }
+				set_variable = { which = r_prov_rel_attar_pct which = r_prov_rel_attar }
+				multiply_variable = { which = r_prov_rel_attar_pct value = 100 }
+				divide_variable = { which = r_prov_rel_attar_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_maher value > 0 } }
+				set_variable = { which = r_prov_rel_maher_pct which = r_prov_rel_maher }
+				multiply_variable = { which = r_prov_rel_maher_pct value = 100 }
+				divide_variable = { which = r_prov_rel_maher_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_quetzal_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_quetzal_reformed_pct which = r_prov_rel_quetzal_reformed }
+				multiply_variable = { which = r_prov_rel_quetzal_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_quetzal_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_quetzal value > 0 } }
+				set_variable = { which = r_prov_rel_quetzal_pct which = r_prov_rel_quetzal }
+				multiply_variable = { which = r_prov_rel_quetzal_pct value = 100 }
+				divide_variable = { which = r_prov_rel_quetzal_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_mayan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_mayan_reformed_pct which = r_prov_rel_mayan_reformed }
+				multiply_variable = { which = r_prov_rel_mayan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_mayan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_mayan value > 0 } }
+				set_variable = { which = r_prov_rel_mayan_pct which = r_prov_rel_mayan }
+				multiply_variable = { which = r_prov_rel_mayan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_mayan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_northern_sun_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_northern_sun_reformed_pct which = r_prov_rel_northern_sun_reformed }
+				multiply_variable = { which = r_prov_rel_northern_sun_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_northern_sun_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_dievas value > 0 } }
+				set_variable = { which = r_prov_rel_dievas_pct which = r_prov_rel_dievas }
+				multiply_variable = { which = r_prov_rel_dievas_pct value = 100 }
+				divide_variable = { which = r_prov_rel_dievas_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_saule value > 0 } }
+				set_variable = { which = r_prov_rel_saule_pct which = r_prov_rel_saule }
+				multiply_variable = { which = r_prov_rel_saule_pct value = 100 }
+				divide_variable = { which = r_prov_rel_saule_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_perkunas value > 0 } }
+				set_variable = { which = r_prov_rel_perkunas_pct which = r_prov_rel_perkunas }
+				multiply_variable = { which = r_prov_rel_perkunas_pct value = 100 }
+				divide_variable = { which = r_prov_rel_perkunas_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_peckols value > 0 } }
+				set_variable = { which = r_prov_rel_peckols_pct which = r_prov_rel_peckols }
+				multiply_variable = { which = r_prov_rel_peckols_pct value = 100 }
+				divide_variable = { which = r_prov_rel_peckols_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_bantu_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_bantu_pagan_reformed_pct which = r_prov_rel_bantu_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_bantu_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_bantu_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_nyakalagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_nyakalagan_reformed_pct which = r_prov_rel_nyakalagan_reformed }
+				multiply_variable = { which = r_prov_rel_nyakalagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_nyakalagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_zande_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_zande_pagan_reformed_pct which = r_prov_rel_zande_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_zande_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_zande_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_zulu_pagan_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_zulu_pagan_reformed_pct which = r_prov_rel_zulu_pagan_reformed }
+				multiply_variable = { which = r_prov_rel_zulu_pagan_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_zulu_pagan_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_kintu value > 0 } }
+				set_variable = { which = r_prov_rel_kintu_pct which = r_prov_rel_kintu }
+				multiply_variable = { which = r_prov_rel_kintu_pct value = 100 }
+				divide_variable = { which = r_prov_rel_kintu_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_akuj_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_akuj_reformed_pct which = r_prov_rel_akuj_reformed }
+				multiply_variable = { which = r_prov_rel_akuj_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_akuj_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_akuj value > 0 } }
+				set_variable = { which = r_prov_rel_akuj_pct which = r_prov_rel_akuj }
+				multiply_variable = { which = r_prov_rel_akuj_pct value = 100 }
+				divide_variable = { which = r_prov_rel_akuj_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_baluba_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_baluba_reformed_pct which = r_prov_rel_baluba_reformed }
+				multiply_variable = { which = r_prov_rel_baluba_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_baluba_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_baluba value > 0 } }
+				set_variable = { which = r_prov_rel_baluba_pct which = r_prov_rel_baluba }
+				multiply_variable = { which = r_prov_rel_baluba_pct value = 100 }
+				divide_variable = { which = r_prov_rel_baluba_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_batembuzi value > 0 } }
+				set_variable = { which = r_prov_rel_batembuzi_pct which = r_prov_rel_batembuzi }
+				multiply_variable = { which = r_prov_rel_batembuzi_pct value = 100 }
+				divide_variable = { which = r_prov_rel_batembuzi_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_bukongo_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_bukongo_reformed_pct which = r_prov_rel_bukongo_reformed }
+				multiply_variable = { which = r_prov_rel_bukongo_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_bukongo_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_bukongo value > 0 } }
+				set_variable = { which = r_prov_rel_bukongo_pct which = r_prov_rel_bukongo }
+				multiply_variable = { which = r_prov_rel_bukongo_pct value = 100 }
+				divide_variable = { which = r_prov_rel_bukongo_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_bumuntu_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_bumuntu_reformed_pct which = r_prov_rel_bumuntu_reformed }
+				multiply_variable = { which = r_prov_rel_bumuntu_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_bumuntu_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_bumuntu value > 0 } }
+				set_variable = { which = r_prov_rel_bumuntu_pct which = r_prov_rel_bumuntu }
+				multiply_variable = { which = r_prov_rel_bumuntu_pct value = 100 }
+				divide_variable = { which = r_prov_rel_bumuntu_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_byeri_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_byeri_reformed_pct which = r_prov_rel_byeri_reformed }
+				multiply_variable = { which = r_prov_rel_byeri_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_byeri_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_byeri value > 0 } }
+				set_variable = { which = r_prov_rel_byeri_pct which = r_prov_rel_byeri }
+				multiply_variable = { which = r_prov_rel_byeri_pct value = 100 }
+				divide_variable = { which = r_prov_rel_byeri_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_dua value > 0 } }
+				set_variable = { which = r_prov_rel_dua_pct which = r_prov_rel_dua }
+				multiply_variable = { which = r_prov_rel_dua_pct value = 100 }
+				divide_variable = { which = r_prov_rel_dua_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_enkai value > 0 } }
+				set_variable = { which = r_prov_rel_enkai_pct which = r_prov_rel_enkai }
+				multiply_variable = { which = r_prov_rel_enkai_pct value = 100 }
+				divide_variable = { which = r_prov_rel_enkai_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_imana value > 0 } }
+				set_variable = { which = r_prov_rel_imana_pct which = r_prov_rel_imana }
+				multiply_variable = { which = r_prov_rel_imana_pct value = 100 }
+				divide_variable = { which = r_prov_rel_imana_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_imipashi_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_imipashi_reformed_pct which = r_prov_rel_imipashi_reformed }
+				multiply_variable = { which = r_prov_rel_imipashi_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_imipashi_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_imipashi value > 0 } }
+				set_variable = { which = r_prov_rel_imipashi_pct which = r_prov_rel_imipashi }
+				multiply_variable = { which = r_prov_rel_imipashi_pct value = 100 }
+				divide_variable = { which = r_prov_rel_imipashi_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_kalunga_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_kalunga_reformed_pct which = r_prov_rel_kalunga_reformed }
+				multiply_variable = { which = r_prov_rel_kalunga_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_kalunga_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_kalunga value > 0 } }
+				set_variable = { which = r_prov_rel_kalunga_pct which = r_prov_rel_kalunga }
+				multiply_variable = { which = r_prov_rel_kalunga_pct value = 100 }
+				divide_variable = { which = r_prov_rel_kalunga_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_odinane_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_odinane_reformed_pct which = r_prov_rel_odinane_reformed }
+				multiply_variable = { which = r_prov_rel_odinane_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_odinane_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_odinane value > 0 } }
+				set_variable = { which = r_prov_rel_odinane_pct which = r_prov_rel_odinane }
+				multiply_variable = { which = r_prov_rel_odinane_pct value = 100 }
+				divide_variable = { which = r_prov_rel_odinane_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_nyasaye value > 0 } }
+				set_variable = { which = r_prov_rel_nyasaye_pct which = r_prov_rel_nyasaye }
+				multiply_variable = { which = r_prov_rel_nyasaye_pct value = 100 }
+				divide_variable = { which = r_prov_rel_nyasaye_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_nyau value > 0 } }
+				set_variable = { which = r_prov_rel_nyau_pct which = r_prov_rel_nyau }
+				multiply_variable = { which = r_prov_rel_nyau_pct value = 100 }
+				divide_variable = { which = r_prov_rel_nyau_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_num_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_num_reformed_pct which = r_prov_rel_num_reformed }
+				multiply_variable = { which = r_prov_rel_num_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_num_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_num value > 0 } }
+				set_variable = { which = r_prov_rel_num_pct which = r_prov_rel_num }
+				multiply_variable = { which = r_prov_rel_num_pct value = 100 }
+				divide_variable = { which = r_prov_rel_num_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_nzambiist_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_nzambiist_reformed_pct which = r_prov_rel_nzambiist_reformed }
+				multiply_variable = { which = r_prov_rel_nzambiist_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_nzambiist_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_nzambiist value > 0 } }
+				set_variable = { which = r_prov_rel_nzambiist_pct which = r_prov_rel_nzambiist }
+				multiply_variable = { which = r_prov_rel_nzambiist_pct value = 100 }
+				divide_variable = { which = r_prov_rel_nzambiist_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_makonde_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_makonde_pagan_pct which = r_prov_rel_makonde_pagan }
+				multiply_variable = { which = r_prov_rel_makonde_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_makonde_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_mwari value > 0 } }
+				set_variable = { which = r_prov_rel_mwari_pct which = r_prov_rel_mwari }
+				multiply_variable = { which = r_prov_rel_mwari_pct value = 100 }
+				divide_variable = { which = r_prov_rel_mwari_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_muzimu_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_muzimu_reformed_pct which = r_prov_rel_muzimu_reformed }
+				multiply_variable = { which = r_prov_rel_muzimu_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_muzimu_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_muzimu value > 0 } }
+				set_variable = { which = r_prov_rel_muzimu_pct which = r_prov_rel_muzimu }
+				multiply_variable = { which = r_prov_rel_muzimu_pct value = 100 }
+				divide_variable = { which = r_prov_rel_muzimu_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_okuruo_reformed value > 0 } }
+				set_variable = { which = r_prov_rel_okuruo_reformed_pct which = r_prov_rel_okuruo_reformed }
+				multiply_variable = { which = r_prov_rel_okuruo_reformed_pct value = 100 }
+				divide_variable = { which = r_prov_rel_okuruo_reformed_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_okuruo value > 0 } }
+				set_variable = { which = r_prov_rel_okuruo_pct which = r_prov_rel_okuruo }
+				multiply_variable = { which = r_prov_rel_okuruo_pct value = 100 }
+				divide_variable = { which = r_prov_rel_okuruo_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_zande_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_zande_pagan_pct which = r_prov_rel_zande_pagan }
+				multiply_variable = { which = r_prov_rel_zande_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_zande_pagan_pct which = r_prov }
+			}
+			if = {
+				limit = { check_variable = { which = r_prov_rel_zulu_pagan value > 0 } }
+				set_variable = { which = r_prov_rel_zulu_pagan_pct which = r_prov_rel_zulu_pagan }
+				multiply_variable = { which = r_prov_rel_zulu_pagan_pct value = 100 }
+				divide_variable = { which = r_prov_rel_zulu_pagan_pct which = r_prov }
+			}
 		}
 	}
 }

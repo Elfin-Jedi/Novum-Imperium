@@ -4070,10 +4070,7 @@ settlement_decisions = {
 					any_realm_province = { has_province_flag = flag_great_pillar_finnish } 
 				}
 				AND = { 
-					OR = {
-						religion_group = serer_group
-						religion_group = african_group
-					}
+					religion_group = serer_group
 					any_realm_province = { has_province_flag = flag_great_pillar_west_african } 
 				}
 				AND = { 
@@ -4089,7 +4086,7 @@ settlement_decisions = {
 					any_realm_province = { has_province_flag = flag_great_pillar_bon } 
 				}
 				AND = { 
-					religion_group = sol_group
+					religion = indoh_zor
 					any_realm_province = { has_province_flag = flag_great_pillar_zun } 
 				}
 				AND = { 
@@ -4229,7 +4226,7 @@ settlement_decisions = {
 					}
 				}
 				if = {  
-					limit = { FROM = { OR = { religion_group = serer_group religion_group = african_group } } }
+					limit = { FROM = { religion_group = serer_group } }
 					hidden_tooltip = {
 						location = {
 							set_province_flag = flag_great_pillar_west_african
@@ -4253,7 +4250,7 @@ settlement_decisions = {
 					}
 				}
 				if = {  
-					limit = { FROM = { religion_group = sol_group } }
+					limit = { FROM = { religion = indoh_zor } }
 					hidden_tooltip = {
 						location = {
 							set_province_flag = flag_great_pillar_zun
@@ -4505,7 +4502,7 @@ settlement_decisions = {
 						clr_province_flag = flag_great_pillar_west_african
 					}
 					any_realm_character = {
-						limit = { OR = { religion_group = serer_group religion_group = african_group } }
+						limit = { religion_group = serer_group }
 						character_event = { id = HF.23477 }
 					}
 				}
@@ -4541,7 +4538,7 @@ settlement_decisions = {
 						clr_province_flag = flag_great_pillar_zun
 					}
 					any_realm_character = {
-						limit = { religion_group = sol_group }
+						limit = { religion = indoh_zor }
 						character_event = { id = HF.23477 }
 					}
 				}

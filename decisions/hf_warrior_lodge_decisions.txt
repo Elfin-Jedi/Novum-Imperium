@@ -1827,8 +1827,9 @@ society_decisions = {
 				trait = zealous
 				OR = {
 					novum_imperium_is_pagan = no
-					religion = graeco_roman
-					religion = bon
+					religion_group = graecoroman_group
+					religion_group = indohelen_group
+					religion_group = chinese_group
 				}
 			}
 			modifier = {
@@ -1954,6 +1955,7 @@ society_decisions = {
 			OR = {
 				religion_group = serer_group
 				religion_group = african_group
+				religion_group = african_pagan_group
 			}
 			OR = {
 				ai = no

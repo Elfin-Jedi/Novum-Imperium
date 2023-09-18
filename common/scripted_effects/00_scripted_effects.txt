@@ -5757,7 +5757,7 @@ give_this_warrior_lodge_religion_effect = { #Mostly for spawned characters.
 			society_member_of = warrior_lodge_baltic 
 			NOT = { has_global_flag = baltic_reformation }
 		}
-		religion = baltic_pagan
+		religion = dievas
 	}
 	if = {
 		limit = { 
@@ -5855,14 +5855,28 @@ give_this_warrior_lodge_religion_effect = { #Mostly for spawned characters.
 			society_member_of = warrior_lodge_aztec
 			NOT = { has_global_flag = aztec_reformation }
 		}
-		religion = aztec
+		random_list = {
+			50 = {
+				religion = aztec
+			}
+			50 = {
+				religion = quetzal
+			}
+		}
 	}
 	if = {
 		limit = { 
 			society_member_of = warrior_lodge_aztec
 			has_global_flag = aztec_reformation
 		}
-		religion = aztec_reformed
+		random_list = {
+			50 = {
+				religion = aztec_reformed
+			}
+			50 = {
+				religion = quetzal_reformed
+			}
+		}
 	}
 }
 

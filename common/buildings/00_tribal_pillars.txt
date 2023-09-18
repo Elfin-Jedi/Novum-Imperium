@@ -259,20 +259,10 @@ tribal = {
 		is_active_trigger = {
 			FROM = { 
 				is_tribal = yes
-				OR = {
-					religion_group = african_group
-					religion_group = serer_group
-					religion_group = bantu_group
-					religion_group = african_pagan_group
-				}
+				religion_group = serer_group
 				liege = { 
 					is_tribal = yes 
-					OR = {
-						religion_group = african_group
-						religion_group = serer_group
-						religion_group = bantu_group
-						religion_group = african_pagan_group
-					}
+					religion_group = serer_group
 				} 
 			}
 		}
@@ -367,10 +357,10 @@ tribal = {
 		is_active_trigger = {
 			FROM = { 
 				is_tribal = yes 
-				religion_group = chinese_group
+				religion = bon
 				liege = { 
 					is_tribal = yes 
-					religion_group = chinese_group
+					religion = bon
 				} 
 			}
 		} 
@@ -414,10 +404,10 @@ tribal = {
 		is_active_trigger = {
 			FROM = { 
 				is_tribal = yes 
-				religion_group = sol_group
+				religion = indoh_zor
 				liege = { 
 					is_tribal = yes 
-					religion_group = sol_group
+					religion = indoh_zor
 				} 
 			}
 		} 

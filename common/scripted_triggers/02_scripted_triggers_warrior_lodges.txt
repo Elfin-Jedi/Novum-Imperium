@@ -235,7 +235,10 @@ has_religion_matching_joined_warrior_lodge_trigger = {
 				society_member_of = warrior_lodge_bon
 			}
 			AND = {
-				religion_group = graecoroman_group
+				OR = {
+					religion_group = graecoroman_group
+					religion_group = indohelen_group
+				}
 				society_member_of = warrior_lodge_hellenic
 			}
 			AND = {
@@ -319,6 +322,7 @@ has_religion_matching_available_warrior_lodge_trigger = {
 			OR = {
                 religion_openly_west_african_or_reformed_trigger = yes
                 religion_group = african_group
+				religion_group = african_pagan_group
             }
 			warrior_lodge_west_african = { society_has_members = yes }
 		}
@@ -332,6 +336,7 @@ has_religion_matching_available_warrior_lodge_trigger = {
 		}
 		AND = {
 			religion_group = graecoroman_group
+			religion_group = indohelen_group
 			warrior_lodge_hellenic = { society_has_members = yes }
 		}
 		AND = {
@@ -409,6 +414,7 @@ has_religion_matching_warrior_lodge_in_need_of_members_trigger = {
 			OR = {
                 religion_openly_west_african_or_reformed_trigger = yes
                 religion_group = african_group
+				religion_group = african_pagan_group
             }
 			warrior_lodge_west_african = { num_of_society_members < 30 }
 		}
@@ -422,6 +428,7 @@ has_religion_matching_warrior_lodge_in_need_of_members_trigger = {
 		}
 		AND = {
 			religion_group = graecoroman_group
+			religion_group = indohelen_group
 			warrior_lodge_hellenic = { num_of_society_members < 30 }
 		}
 		AND = {
@@ -510,6 +517,7 @@ has_religion_matching_empty_warrior_lodge_trigger = {
 			OR = {
                 religion_openly_west_african_or_reformed_trigger = yes
                 religion_group = african_group
+				religion_group = african_pagan_group
             }
 			NOT = { warrior_lodge_west_african = { society_has_members = yes } }
 		}
@@ -523,6 +531,7 @@ has_religion_matching_empty_warrior_lodge_trigger = {
 		}
 		AND = {
 			religion_group = graecoroman_group
+			religion_group = indohelen_group
 			NOT = { warrior_lodge_hellenic = { society_has_members = yes } }
 		}
 		AND = {
@@ -861,18 +870,21 @@ special_join_warrior_lodge_trigger = {
 							any_vassal = {
                                 OR = {
                                     religion_openly_west_african_or_reformed_trigger = yes
-                                    religion_group = african_group
+                                    religion_group = african_pagan_group
+									religion_group = african_group
                                 }
                             }
 							any_liege = {
                                 OR = {
                                     religion_openly_west_african_or_reformed_trigger = yes
+									religion_group = african_pagan_group
                                     religion_group = african_group
                                 }
                             }
 							any_neighbor_independent_ruler = {
                                 OR = {
                                     religion_openly_west_african_or_reformed_trigger = yes
+									religion_group = african_pagan_group
                                     religion_group = african_group
                                 }
                             }
@@ -915,6 +927,9 @@ special_join_warrior_lodge_trigger = {
 							any_vassal = { religion_group = graecoroman_group }
 							any_liege = { religion_group = graecoroman_group }
 							any_neighbor_independent_ruler = { religion_group = graecoroman_group }
+							any_vassal = { religion_group = indohelen_group }
+							any_liege = { religion_group = indohelen_group }
+							any_neighbor_independent_ruler = { religion_group = indohelen_group }
 						}
 					}
 				}

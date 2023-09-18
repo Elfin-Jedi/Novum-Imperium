@@ -114,10 +114,10 @@ character_event = {
 											port = yes
 											TECH_NAVAL = 1
 											OR = {
-												has_building = tb_shipyard_1
-												has_building = ca_shipyard_1
-												has_building = tp_shipyard_1
-												has_building = ct_shipyard_1
+												has_building = ct_port_1
+												has_building = ct_shipw_1
+												#has_building = tp_shipyard_1
+												has_building = pp_shipyard_1
 											}
 											can_naval_path_to = { target = PREVPREV distance < 250 }
 										}
@@ -418,10 +418,10 @@ society_quest_event = {
 									port = yes
 									TECH_NAVAL = 1
 									OR = {
-										has_building = tb_shipyard_1
-										has_building = ca_shipyard_1
-										has_building = tp_shipyard_1
-										has_building = ct_shipyard_1
+										has_building = ct_port_1
+										has_building = ct_shipw_1
+										#has_building = tp_shipyard_1
+										has_building = pp_shipyard_1
 									}
 									can_naval_path_to = { target = PREVPREV distance < 250 }
 								}
@@ -457,10 +457,10 @@ society_quest_event = {
 									port = yes
 									TECH_NAVAL = 1
 									OR = {
-										has_building = tb_shipyard_1
-										has_building = ca_shipyard_1
-										has_building = tp_shipyard_1
-										has_building = ct_shipyard_1
+										has_building = ct_port_1
+										has_building = ct_shipw_1
+										#has_building = tp_shipyard_1
+										has_building = pp_shipyard_1
 									}
 									can_naval_path_to = { target = PREVPREV distance < 250 }
 								}

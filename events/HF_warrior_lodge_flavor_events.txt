@@ -3653,34 +3653,55 @@ character_event = {
     portrait = event_target:weapon_forger
 
     immediate = {
-    	FROM = {
-    		any_close_relative = {
-    			limit = {
-    				is_alive = yes
-					OR = {
-						prisoner = no
-						host = { character = ROOT }
+    	if = { # Correct as written; vanilla is wrong!
+			limit = {
+				FROM = {
+					any_close_relative = {
+    					is_alive = yes
 					}
     			}
-    			save_event_target_as = potential_sacrifice
     		}
+			FROM = {
+				random_close_relative = {
+					limit = {
+						is_alive = yes
+					}
+					save_event_target_as = potential_sacrifice
+				}
+			}
     	}
-
-    	random_courtier = {
+		if = { # Correct as written; vanilla is wrong!
     		limit = {
-    			OR = {
-    				is_learned_trigger = yes
-    				has_character_flag = is_court_physician
-    				has_minor_title = title_court_physician
-    				has_minor_title = title_teacher
-    				has_minor_title = title_volva
-    				has_minor_title = title_lawspeaker
-    				has_minor_title = title_court_skald
-    				has_minor_title = title_venerable_elder
-    				learning = 18
+				any_courtier = {
+    				OR = {
+    					is_learned_trigger = yes
+    					has_character_flag = is_court_physician
+    					has_minor_title = title_court_physician
+    					has_minor_title = title_teacher
+    					has_minor_title = title_volva
+    					has_minor_title = title_lawspeaker
+    					has_minor_title = title_court_skald
+    					has_minor_title = title_venerable_elder
+    					learning = 18
+    				}
     			}
-    		}
-    		save_event_target_as = weapon_forger
+			}
+			random_courtier = {
+				limit = {
+					OR = {
+						is_learned_trigger = yes
+						has_character_flag = is_court_physician
+						has_minor_title = title_court_physician
+						has_minor_title = title_teacher
+						has_minor_title = title_volva
+						has_minor_title = title_lawspeaker
+						has_minor_title = title_court_skald
+						has_minor_title = title_venerable_elder
+						learning = 18
+					}
+				}
+    			save_event_target_as = weapon_forger
+			}
     	}
     }
 
@@ -3892,19 +3913,23 @@ character_event = {
     }
 
     immediate = {
-    	random_courtier = {
-    		limit = {
-    			block_general_event_trigger = no
+    	#if = { # Correct as written; vanilla is wrong!
+    		random_courtier = {
+    			limit = {
+    				block_general_event_trigger = no
+    			}
+    			save_event_target_as = witness1
     		}
-    		save_event_target_as = witness1
-    	}
-    	random_courtier = {
-    		limit = {
-    			block_general_event_trigger = no
-    			NOT= { character = event_target:witness1 } 
+    	#}
+    	#if = { # Correct as written; vanilla is wrong!
+    		random_courtier = {
+    			limit = {
+    				block_general_event_trigger = no
+    				NOT= { character = event_target:witness1} 
+    			}
+    			save_event_target_as = witness2
     		}
-    		save_event_target_as = witness2
-    	}
+    	#}
     }
 
     option = # No! It's not what you think!
@@ -4088,7 +4113,7 @@ character_event = {
     		limit = {
     			event_target:weapon_forger = { is_alive = no }
    			}
-	    	random_courtier = {
+	    	any_courtier = {
 	    		limit = {
 	    			OR = {
 	    				is_learned_trigger = yes
@@ -4169,7 +4194,7 @@ character_event = {
     		limit = {
     			event_target:weapon_forger = { is_alive = no }
    			}
-	    	random_courtier = {
+	    	any_courtier = {
 	    		limit = {
 	    			OR = {
 	    				is_learned_trigger = yes
@@ -4308,7 +4333,7 @@ character_event = {
     		limit = {
     			event_target:weapon_forger = { is_alive = no }
    			}
-	    	random_courtier = {
+	    	any_courtier = {
 	    		limit = {
 	    			OR = {
 	    				is_learned_trigger = yes
@@ -4325,7 +4350,7 @@ character_event = {
 	   			save_event_target_as = weapon_forger
 	   		}
 	   	}
-	   	random_courtier = {
+	   	any_courtier = {
 	   		limit = {
 	    		is_adult = no
 	    		NOT = { is_inaccessible_or_incapable_trigger = yes }
@@ -4401,7 +4426,7 @@ character_event = {
     		limit = {
     			event_target:weapon_forger = { is_alive = no }
    			}
-	    	random_courtier = {
+	    	any_courtier = {
 	    		limit = {
 	    			OR = {
 	    				is_learned_trigger = yes
@@ -4498,7 +4523,7 @@ character_event = {
     		limit = {
     			event_target:weapon_forger = { is_alive = no }
    			}
-	    	random_courtier = {
+	    	any_courtier = {
 	    		limit = {
 	    			OR = {
 	    				is_learned_trigger = yes
@@ -4580,7 +4605,7 @@ character_event = {
     		limit = {
     			event_target:weapon_forger = { is_alive = no }
    			}
-	    	random_courtier = {
+	    	any_courtier = {
 	    		limit = {
 	    			OR = {
 	    				is_learned_trigger = yes

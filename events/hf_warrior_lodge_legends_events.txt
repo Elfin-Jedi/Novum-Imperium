@@ -87,7 +87,7 @@ character_event = {
         	save_event_target_as = legendary_society
         }
         random_province = { #Because societies cannot process events...! D: 
-            limit = { has_owner = yes }
+            limit = { is_land = yes }
             #log = "LEGENDARY JOURNEY: [This.GetName] is the province"
 			set_province_flag = initiating_legendary_journey
 			province_event = { id = HF.12000 days = 5 random = 7 } #Checks status of society...
@@ -3188,7 +3188,6 @@ character_event = {
     	NOT = { has_character_modifier = pet_hunting_eagle }
     	any_owned_bloodline = {
 			has_bloodline_flag = bloodline_pet_eagle
-			bloodline_is_active_for = PREV
 		}
     	is_inaccessible_trigger = no
 		war = no
@@ -3200,14 +3199,13 @@ character_event = {
     			NOT = { has_character_modifier = pet_hunting_eagle }
     			any_owned_bloodline = {
 					has_bloodline_flag = bloodline_pet_eagle
-					bloodline_is_active_for = PREV
 				}
     			OR = {
     				is_inaccessible_trigger = yes
     				war = yes
     			}
     		}
-    		repeat_event = { id = HF.12400 days = 365 random = 60 } #Check back if you have yet not received a new bird...
+    		character_event = { id = HF.12400 days = 365 random = 60 } #Check back if you have yet not received a new bird...
     	}
     }
 
@@ -3276,7 +3274,6 @@ character_event = {
     	NOT = { has_character_modifier = pet_hunting_dog }
     	any_owned_bloodline = {
 			has_bloodline_flag = bloodline_pet_dog
-			bloodline_is_active_for = PREV
 		}
     	is_inaccessible_trigger = no
 		war = no
@@ -3288,14 +3285,13 @@ character_event = {
     			NOT = { has_character_modifier = pet_hunting_dog }
     			any_owned_bloodline = {
 					has_bloodline_flag = bloodline_pet_dog
-					bloodline_is_active_for = PREV
 				}
     			OR = {
     				is_inaccessible_trigger = yes
     				war = yes
     			}
     		}
-    		repeat_event = { id = HF.12401 days = 365 random = 60 } #Check back if you have yet not received a new bird...
+    		character_event = { id = HF.12401 days = 365 random = 60 } #Check back if you have yet not received a new bird...
     	}
     }
 

@@ -779,7 +779,7 @@ character_event = { #Fires for the adult child (from decision)
         trigger = { # Kids only say yes if they not already a secret member of some kind...
             is_secret_religious_society_member_trigger = no
             is_devil_worshiper_trigger = no
-            NOT = { society_member_of = the_assassins }
+            is_assassin = yes
         }
     }
     option = {      
@@ -809,7 +809,7 @@ character_event = { #Fires for the adult child (from decision)
                 }
                 is_secret_religious_society_member_trigger = yes
                 is_devil_worshiper_trigger = yes
-                society_member_of = the_assassins
+                is_assassin = yes
             }
         }
     }
@@ -2827,7 +2827,7 @@ character_event = {
     immediate = {
         if = {
             limit = {
-                religion_openly_norse_or_reformed_trigger = yes
+                religion_group = norsegerman_group
                 can_join_society = warrior_lodge_norse
             }
             join_society = warrior_lodge_norse
@@ -2856,7 +2856,7 @@ character_event = {
         else_if = {
             limit = {
                 OR = {
-                    religion_openly_west_african_or_reformed_trigger = yes
+					religion_group = serer_group
                     religion_group = african_group
                 }
                 can_join_society = warrior_lodge_west_african
@@ -2865,14 +2865,14 @@ character_event = {
         }
         else_if = {
             limit = {
-                religion_openly_zun_or_reformed_trigger = yes
+                religion = sol_group
                 can_join_society = warrior_lodge_zun
             }
             join_society = warrior_lodge_zun
         }
         else_if = {
             limit = {
-                religion_openly_bon_or_reformed_trigger = yes
+                religion_group = chinese_group
                 can_join_society = warrior_lodge_bon
             }
             join_society = warrior_lodge_bon

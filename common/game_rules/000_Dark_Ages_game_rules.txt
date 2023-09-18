@@ -161,7 +161,12 @@ debates_difficulty = {
 personal_traits = {
 	name = "RULE_DARK_AGES_PT"
 	group = "RULE_GROUP_DARKAGES"
-	alt_start_default = yes5
+	alt_start_default = no
+	option = {
+		name = no
+		text = "RULE_DARK_AGES_NO"
+		desc = "RULE_DARK_AGES_PT_NO_DESC"
+	}
 	option = {
 		name = yes5
 		text = "RULE_DARK_AGES_YES5"
@@ -176,13 +181,7 @@ personal_traits = {
 		name = yes7
 		text = "RULE_DARK_AGES_YES7"
 		desc = "RULE_DARK_AGES_PT_YES7_DESC"
-	}	
-	option = {
-		name = no
-		text = "RULE_DARK_AGES_NO"
-		desc = "RULE_DARK_AGES_PT_NO_DESC"
 	}
-
 }
 
 genetic_traits = {

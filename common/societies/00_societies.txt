@@ -15447,6 +15447,7 @@ warrior_lodge_west_african = {
 		OR = {
 			religion_group = african_group
 			religion_group = serer_group
+			religion_group = african_pagan_group
 			AND = {
 				custom_tooltip = {
 					text = society_has_at_least_10_members_tt
@@ -15477,18 +15478,21 @@ warrior_lodge_west_african = {
                         OR = {
                             religion_group = african_group
 							religion_group = serer_group
+							religion_group = african_pagan_group
                         }
                     }
 					any_liege = {
                         OR = {
                             religion_group = african_group
 							religion_group = serer_group
+							religion_group = african_pagan_group
                         }
                     }
 					any_neighbor_independent_ruler = {
                         OR = {
                             religion_group = african_group
 							religion_group = serer_group
+							religion_group = african_pagan_group
                         }
                     }
 				}
@@ -15509,8 +15513,11 @@ warrior_lodge_west_african = {
 			religion_openly_west_african_or_reformed_trigger = yes
 			religion_group = african_group
 			AND = {
-				NOT = { religion_group = african_group }
-				NOT = { religion_group = serer_group }
+				NOR = {
+					religion_group = african_group
+					religion_group = serer_group
+					religion_group = african_pagan_group
+				}
 				NOT = { trait = zealous }
 			}
 		}
@@ -16030,6 +16037,7 @@ warrior_lodge_west_african = {
 		   	OR = {
                 religion_group = african_group
 				religion_group = serer_group
+				religion_group = african_pagan_group
             }
 			is_adult = yes
 			is_in_society = no
@@ -17294,6 +17302,7 @@ warrior_lodge_hellenic = {
 		}
 		OR = {
 			religion_group = graecoroman_group
+			religion_group = indohelen_group
 			AND = {
 				custom_tooltip = {
 					text = society_has_at_least_10_members_tt
@@ -17338,9 +17347,13 @@ warrior_lodge_hellenic = {
 	potential = { #if you change religion or become zealous while NOT pagan, you are kicked out
 		OR = {
 			religion_group = graecoroman_group
+			religion_group = indohelen_group
 			NOT = { religion = titan_pagan }
 			AND = {
-				NOT = { religion_group = graecoroman_group }
+				NOR = {
+					religion_group = graecoroman_group
+					religion_group = indohelen_group
+				}
 				NOT = { trait = zealous }
 			}
 		}
