@@ -376,89 +376,140 @@ random_government_effect = {
 			}
 		}
 		save_event_target_as = target_theocracy
-		random_list = {
-			16 = {
-				if = {
-					limit = {
-						is_government_potential = muslim_government
-					}
-					set_government_type = muslim_government
-				}
-				else_if = {
-					limit = {
-						is_government_potential = bogomilist_government
-					}
-					set_government_type = bogomilist_government
-				}
-				else_if = {
-					limit = {
-						is_government_potential = bureaucratic_government
-					}
-					set_government_type = bureaucratic_government
-				}
-				else_if = {
-					limit = {
-						is_government_potential = theocratic_feudal_government
-					}
-					set_government_type = theocratic_feudal_government
-				}
-				else = {
-					set_government_type = feudal_government
-				}
+		if = {
+			limit = {
+				tier = EMPEROR
 			}
-			16 = {
-				set_government_type = tribal_government
-			}
-			16 = {
-				set_government_type = nomadic_government
-			}
-			16 = {
-				set_government_type = playable_republic_government
-			}
-			16 = {
-				set_government_type = playable_theocracy_government
-			}
-			16 = {
-				if = {
-					limit = {
-						is_government_potential = bogomilist_merchant_republic_government
-					}
-					set_government_type = bogomilist_merchant_republic_government
+			if = {
+				limit = {
+					is_government_potential = muslim_imperial_government
 				}
-				else_if = {
-					limit = {
-						is_government_potential = muslim_merchant_republic_government
-					}
-					set_government_type = muslim_merchant_republic_government
-				}
-				else = {
-					set_government_type = merchant_republic_government
-				}
+				set_government_type = muslim_imperial_government
 			}
-			4 = {
-				random_list = {
-					25 = {
-						set_government_type = order_government
+			else_if = {
+				limit = {
+					is_government_potential = bogomilist_imperial_government
+				}
+				set_government_type = bogomilist_imperial_government
+			}
+			else_if = {
+				limit = {
+					is_government_potential = theocratic_imperial_government
+				}
+				set_government_type = theocratic_imperial_government
+			}
+			else = {
+				set_government_type = imperial_government
+			}
+		}
+		else = {
+			random_list = {
+				20 = {
+					if = {
+						limit = {
+							is_government_potential = muslim_government
+						}
+						set_government_type = muslim_government
 					}
-					25 = {
-						set_government_type = rtp_confederation_g
+					else_if = {
+						limit = {
+							is_government_potential = bogomilist_government
+						}
+						set_government_type = bogomilist_government
 					}
-					25 = {
-						set_government_type = rtp_mercenary_g
+					else_if = {
+						limit = {
+							is_government_potential = bureaucratic_government
+						}
+						set_government_type = bureaucratic_government
 					}
-					25 = {
-						if = {
-							limit = {
-								is_government_potential = rtp_privateer_g
+					else_if = {
+						limit = {
+							is_government_potential = theocratic_feudal_government
+						}
+						set_government_type = theocratic_feudal_government
+					}
+					else = {
+						set_government_type = feudal_government
+					}
+				}
+				20 = {
+					set_government_type = tribal_government
+				}
+				20 = {
+					set_government_type = nomadic_government
+				}
+				20 = {
+					random_list = {
+						50 = {
+							set_government_type = playable_republic_government
+						}
+						50 = {
+							if = {
+								limit = {
+									is_government_potential = bogomilist_merchant_republic_government
+								}
+								set_government_type = bogomilist_merchant_republic_government
 							}
-							set_government_type = rtp_privateer_g
+							else_if = {
+								limit = {
+									is_government_potential = muslim_merchant_republic_government
+								}
+								set_government_type = muslim_merchant_republic_government
+							}
+							else = {
+								set_government_type = merchant_republic_government
+							}
 						}
-						else = {
-							set_government_type = merchant_republic_government
+					}
+				}
+				20 = {
+					random_list = {
+						50 = {
+							set_government_type = playable_theocracy_government
+						50 = {
+							random_list = {
+								25 = {
+									set_government_type = order_government
+								}
+								25 = {
+									set_government_type = rtp_confederation_g
+								}
+								25 = {
+									set_government_type = rtp_mercenary_g
+								}
+								25 = {
+									if = {
+										limit = {
+											is_government_potential = rtp_privateer_g
+										}
+										set_government_type = rtp_privateer_g
+									}
+									else = {
+										set_government_type = merchant_republic_government
+									}
+								}
+							}
 						}
 					}
 				}
 			}
+		}
+	}
+	if = {
+		any_character = {
+			limit = {
+				government_type = republic_government
+			}
+		set_government_type = playable_republic_government
+		}
+	}
+	if = {
+		any_character = {
+			limit = {
+				government_type = theocracy_government
+			}
+		set_government_type = playable_theocracy_government
 		}
 	}
 	any_demesne_province = {
