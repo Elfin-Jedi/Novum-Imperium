@@ -6751,37 +6751,37 @@ death_no_trace_trigger = {
 	}
 }
 
-proselytize_convert_independent_trigger = {
-	owner = {
-		OR = { 
-			FROM = { NOT = { religion_group = pagan_group } } 
-			FROM = { has_religion_feature = religion_proselytizing }
-		}
-		independent = yes
-		NOT = { religion = FROM }
-		religion_group = pagan_group
-		OR = {
-			NOT = { religion = aztec }
-			year = 1350
-		}
-		is_reformed_religion = no
-		capital_scope = {
-			province = ROOT
-		}
-		controls_religion = no
-		FROM = {
-			higher_tier_than = COUNT
-			OR = {
-				independent = yes
-				higher_tier_than = DUKE
-			}
-		}
-		NOT = {
-			has_opinion_modifier = { who = FROM modifier = opinion_sent_preacher }
-		}
-		is_within_diplo_range = FROM
-	}
-}
+# proselytize_convert_independent_trigger = {
+	# owner = {
+		# OR = { 
+			# FROM = { NOT = { religion_group = pagan_group } } 
+			# FROM = { has_religion_feature = religion_proselytizing }
+		# }
+		# independent = yes
+		# NOT = { religion = FROM }
+		# religion_group = pagan_group
+		# OR = {
+			# NOT = { religion = aztec }
+			# year = 1350
+		# }
+		# is_reformed_religion = no
+		# capital_scope = {
+			# province = ROOT
+		# }
+		# controls_religion = no
+		# FROM = {
+			# higher_tier_than = COUNT
+			# OR = {
+				# independent = yes
+				# higher_tier_than = DUKE
+			# }
+		# }
+		# NOT = {
+			# has_opinion_modifier = { who = FROM modifier = opinion_sent_preacher }
+		# }
+		# is_within_diplo_range = FROM
+	# }
+# }
 
 is_toddler_age_trigger = {
 	age = 0
