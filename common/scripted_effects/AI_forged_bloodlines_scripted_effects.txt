@@ -77,7 +77,7 @@ AI_forged_bloodlines_helper_efect = {
 	if = {
 		limit = {
 			OR = {
-				trait = cannibal
+				trait = cannibal_trait
 				trait = impaler
 			}
 		}

@@ -8,8 +8,8 @@ decisions = {
 			trait = impotent
 			has_assigned_minor_title = title_court_physician
 			NOT = { 
-				has_character_flag = { recent_ED_treatment }
-				has_character_flag = { failed_ED_treatment }
+				has_character_flag = recent_ED_treatment
+				has_character_flag = failed_ED_treatment
 			}
 		}
 		
@@ -30,7 +30,7 @@ decisions = {
 				}
 				character_event = { id = SRR.102 } 
 			}
-			set_character_flag = { recent_ED_treatment_ED_treatment }
+			set_character_flag = recent_ED_treatment_ED_treatment
 		}
 		revoke_allowed = {
 			always = no
