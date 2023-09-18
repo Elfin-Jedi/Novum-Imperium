@@ -100,23 +100,6 @@ is_slaver_group = {
 	}
 }
 
-# Different tooltip text, and should generally be used in place of 'trait = slave' to be easily altered for the sake of compatibility
-is_enslaved = {
-	custom_tooltip = {
-		text = mta_is_a_slave_TT
-		OR = {
-			trait = slave
-			trait = mamluk
-			trait = siqlabi
-			trait = abid_shira
-			trait = anatolian_mamluk
-			trait = bahriyya_mamluk
-			trait = burji_mamluk
-			trait = trainee_ghulam
-		}
-	}
-}
-
 is_tmm_slave = {
 	OR = {
 		trait = mamluk

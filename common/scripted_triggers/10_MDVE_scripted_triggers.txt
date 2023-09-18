@@ -1,7 +1,17 @@
 is_enslaved = {
 	custom_tooltip = {
 		text = custom_is_enslaved
-		trait = slave_trait
+		OR = {
+			trait = slave
+			trait = slave_trait
+			trait = mamluk
+			trait = siqlabi
+			trait = abid_shira
+			trait = anatolian_mamluk
+			trait = bahriyya_mamluk
+			trait = burji_mamluk
+			trait = trainee_ghulam
+		}
 	}
 }
 
