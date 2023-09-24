@@ -1,0 +1,19 @@
+elective_leagues = {
+	name = "RULE_ELECTIVE_LEAGUES"
+	group = RULE_GROUP_ELECTIVE_LEAGUES
+	option = {
+		name = leagues_all
+		text = RULE_LEAGUES_ALL_TEXT
+		desc = RULE_LEAGUES_ALL_DESC
+	}
+    option = {
+		name = leagues_ai_limited
+		text = RULE_LEAGUES_AI_LIMITED_TEXT
+		desc = RULE_LEAGUES_AI_LIMITED_DESC
+	}
+	option = {
+		name = leagues_player_only
+		text = RULE_LEAGUES_PLAYER_ONLY_TEXT
+		desc = RULE_LEAGUES_PLAYER_ONLY_DESC
+	}
+}

@@ -1,0 +1,515 @@
+#######################################
+#
+# Roman Events
+#
+#
+#######################################
+
+
+namespace = LoR
+namespace = ancrel
+
+# Claim on HRE
+narrative_event = {
+	id = RIA.73
+	title = EVTTITLE_RI_1
+	desc = EVTDESC_RI_1
+	picture = GFX_evt_roman_conquest
+	
+	only_playable = yes
+	religion_group = pagan_group
+	only_independent = yes
+	only_capable = yes
+	min_age = 16
+	prisoner = no 
+	war = no
+
+	trigger = {
+		year = 1070
+		OR = {
+			AND = {
+				OR = {
+					culture = roman
+					culture = greek
+					culture = italian
+				}
+				NOT = {
+					religion_group = christian
+				}
+				NOT = { year = 1090 }
+				is_feudal = yes
+			}
+		}
+		has_landed_title = e_roman_empire
+		has_global_flag = roman_arrival
+		has_global_flag = roman_wars3
+		e_hre = {
+			holder_scope = {
+				religion_group = christian
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = EVTOPTA_CM_1100 # Attack
+		ai_chance = { factor = 100 }
+		piety = 50
+		add_claim = e_hre
+		e_hre = {
+			holder_scope = {
+				reverse_war = {
+					target = ROOT
+					casus_belli = claim
+					thirdparty_title = PREV
+					infamy = 0
+				}
+			}
+		}
+		set_global_flag = roman_wars
+	}
+	option = {
+		name = EVTOPTB_CM_1100 # Not now
+		ai_chance = { factor = 0 }
+		prestige = -100
+		piety = -100
+		set_global_flag = roman_wars
+	}
+}
+
+# Claim on Eastern Roman Empire
+narrative_event = {
+	id = RIA.74
+	title = EVTTITLE_RI_2
+	desc = EVTDESC_RI_2
+	picture = GFX_evt_roman_battle
+	
+	only_playable = yes
+	religion_group = pagan_group
+	only_independent = yes
+	only_capable = yes
+	min_age = 16
+	prisoner = no 
+	war = no
+
+	trigger = {
+		year = 1070
+		OR = {
+			AND = {
+				OR = {
+					culture = roman
+					culture = greek
+					culture = italian
+				}
+				NOT = {
+					religion_group = christian
+				}
+				NOT = { year = 1095 }
+				is_feudal = yes
+			}
+		}
+		has_landed_title = e_roman_empire
+		has_global_flag = roman_arrival
+		has_global_flag = roman_wars3
+		e_byzantium = {
+			holder_scope = {
+				religion_group = christian
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = EVTOPTA_CM_1100 # Attack
+		ai_chance = { factor = 100 }
+		piety = 50
+		add_claim = e_byzantium
+		e_byzantium = {
+			holder_scope = {
+				reverse_war = {
+					target = ROOT
+					casus_belli = claim
+					thirdparty_title = PREV
+					infamy = 0
+				}
+			}
+		}
+		set_global_flag = roman_wars2
+	}
+	option = {
+		name = EVTOPTB_CM_1100 # Not now
+		ai_chance = { factor = 0 }
+		prestige = -100
+		piety = -100
+		set_global_flag = roman_wars2
+	}
+}
+
+# Claim on Latium
+narrative_event = {
+	id = RIA.75
+	title = EVTTITLE_RI_3
+	desc = EVTDESC_RI_3
+	picture = GFX_evt_irminsul_shrine
+	
+	only_playable = yes
+	religion_group = pagan_group
+	only_independent = yes
+	only_capable = yes
+	min_age = 16
+	prisoner = no 
+	war = no
+
+	trigger = {
+		year = 1070
+		OR = {
+			AND = {
+				OR = {
+					culture = roman
+					culture = greek
+					culture = italian
+				}
+				NOT = {
+					religion_group = christian
+				}
+				NOT = { year = 1200 }
+				is_feudal = yes
+			}
+		}
+		has_landed_title = e_roman_empire
+		has_global_flag = roman_arrival
+		d_latium = {
+			holder_scope = {
+				religion_group = christian
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = EVTOPTA_CM_1100 # Attack
+		ai_chance = { factor = 100 }
+		piety = 50
+		add_claim = d_latium
+		d_latium = {
+			holder_scope = {
+				reverse_war = {
+					target = ROOT
+					casus_belli = claim
+					thirdparty_title = PREV
+					infamy = 0
+				}
+			}
+		}
+		set_global_flag = roman_wars3
+	}
+	option = {
+		name = EVTOPTB_CM_1100 # Not now
+		ai_chance = { factor = 0 }
+		prestige = -100
+		piety = -100
+		set_global_flag = roman_wars3
+	}
+}
+
+# Claim on Africa
+narrative_event = {
+	id = RIA.76
+	title = EVTTITLE_RI_5
+	desc = EVTDESC_RI_5
+	picture = GFX_evt_irminsul_shrine
+	
+	only_playable = yes
+	religion_group = pagan_group
+	only_independent = yes
+	only_capable = yes
+	min_age = 16
+	prisoner = no 
+	war = no
+
+	trigger = {
+		year = 1078
+		OR = {
+			AND = {
+				OR = {
+					culture = roman
+					culture = greek
+					culture = italian
+				}
+				NOT = {
+					religion_group = christian
+				}
+				NOT = { year = 1190 }
+				is_feudal = yes
+			}
+		}
+		NOT = { has_global_flag = roman_wars6 }
+		has_landed_title = e_roman_empire
+		k_africa = {
+			holder_scope = {
+				OR = {
+					religion_group = christian
+					religion_group = muslim
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = EVTOPTA_CM_1100 # Attack
+		ai_chance = { factor = 100 }
+		piety = 50
+		add_claim = k_africa
+		k_africa = {
+			holder_scope = {
+				reverse_war = {
+					target = ROOT
+					casus_belli = claim
+					thirdparty_title = PREV
+					infamy = 0
+				}
+			}
+		}
+		set_global_flag = roman_wars6
+	}
+	option = {
+		name = EVTOPTB_CM_1100 # Not now
+		ai_chance = { factor = 0 }
+		prestige = -100
+		piety = -100
+		set_global_flag = roman_wars6
+	}
+}
+
+# Claim on Africa Continued
+narrative_event = {
+	id = RIA.77
+	title = EVTTITLE_RI_5
+	desc = EVTDESC_RI_5
+	picture = GFX_evt_irminsul_shrine
+	
+	only_playable = yes
+	religion_group = pagan_group
+	only_independent = yes
+	only_capable = yes
+	min_age = 16
+	prisoner = no 
+	war = no
+
+	trigger = {
+		year = 1080
+		OR = {
+			AND = {
+				OR = {
+					culture = roman
+					culture = greek
+					culture = italian
+				}
+				NOT = {
+					religion_group = christian
+				}
+				NOT = { year = 1190 }
+				is_feudal = yes
+			}
+		}
+		NOT = { has_global_flag = roman_wars7 }
+		has_landed_title = e_roman_empire
+		d_tripolitania = {
+			holder_scope = {
+				OR = {
+					religion_group = christian
+					religion_group = muslim
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = EVTOPTA_CM_1100 # Attack
+		ai_chance = { factor = 100 }
+		piety = 50
+		add_claim = d_tripolitania
+		d_tripolitania = {
+			holder_scope = {
+				reverse_war = {
+					target = ROOT
+					casus_belli = claim
+					thirdparty_title = PREV
+					infamy = 0
+				}
+			}
+		}
+		set_global_flag = roman_wars7
+	}
+	option = {
+		name = EVTOPTB_CM_1100 # Not now
+		ai_chance = { factor = 0 }
+		prestige = -100
+		piety = -100
+		set_global_flag = roman_wars7
+	}
+}
+
+
+# Claim on Egypt
+narrative_event = {
+	id = RIA.78
+	title = EVTTITLE_RI_4
+	desc = EVTDESC_RI_4
+	picture = GFX_evt_irminsul_shrine
+	
+	only_playable = yes
+	religion_group = pagan_group
+	only_independent = yes
+	only_capable = yes
+	min_age = 16
+	prisoner = no 
+	war = no
+
+	trigger = {
+		year = 1083
+		OR = {
+			AND = {
+				OR = {
+					culture = roman
+					culture = greek
+					culture = italian
+				}
+				NOT = {
+					religion_group = christian
+				}
+				NOT = { year = 1200 }
+				is_feudal = yes
+			}
+		}
+		NOT = { has_global_flag = roman_wars4 }
+		has_landed_title = e_roman_empire
+		k_egypt = {
+			holder_scope = {
+				OR = {
+					religion_group = christian
+					religion_group = muslim
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = EVTOPTA_CM_1100 # Attack
+		ai_chance = { factor = 100 }
+		piety = 50
+		add_claim = k_egypt
+		k_egypt = {
+			holder_scope = {
+				reverse_war = {
+					target = ROOT
+					casus_belli = claim
+					thirdparty_title = PREV
+					infamy = 0
+				}
+			}
+		}
+		set_global_flag = roman_wars4
+	}
+	option = {
+		name = EVTOPTB_CM_1100 # Not now
+		ai_chance = { factor = 0 }
+		prestige = -100
+		piety = -100
+		set_global_flag = roman_wars4
+	}
+}
+
+# Claim on Croatia
+narrative_event = {
+	id = RIA.79
+	title = EVTTITLE_RI_5
+	desc = EVTDESC_RI_5
+	picture = GFX_evt_irminsul_shrine
+	
+	only_playable = yes
+	religion_group = pagan_group
+	only_independent = yes
+	only_capable = yes
+	min_age = 16
+	prisoner = no 
+	war = no
+
+	trigger = {
+		year = 1085
+		OR = {
+			AND = {
+				OR = {
+					culture = roman
+					culture = greek
+					culture = italian
+				}
+				NOT = {
+					religion_group = christian
+				}
+				NOT = { year = 1200 }
+				is_feudal = yes
+			}
+		}
+		NOT = { has_global_flag = roman_wars5 }
+		has_landed_title = e_roman_empire
+		k_croatia = {
+			holder_scope = {
+				OR = {
+					religion_group = christian
+					religion_group = muslim
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = EVTOPTA_CM_1100 # Attack
+		ai_chance = { factor = 100 }
+		piety = 50
+		add_claim = k_croatia
+		k_croatia = {
+			holder_scope = {
+				reverse_war = {
+					target = ROOT
+					casus_belli = claim
+					thirdparty_title = PREV
+					infamy = 0
+				}
+			}
+		}
+		set_global_flag = roman_wars5
+	}
+	option = {
+		name = EVTOPTB_CM_1100 # Not now
+		ai_chance = { factor = 0 }
+		prestige = -100
+		piety = -100
+		set_global_flag = roman_wars5
+	}
+}

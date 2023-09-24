@@ -1,0 +1,94 @@
+decisions = {
+    #Found elective League Decision
+    create_elective_league = {
+
+        potential = {
+            ai = no  # adjacency calculation is expensive, so ai instead uses MTTH event ElectiveLeagues.30
+            NOR = {
+                has_law = succ_elective_league
+                has_law = succ_tribal_league
+            }
+            league_potential_trigger = yes
+            lower_real_tier_than = EMPEROR
+        }
+
+        allow = {
+            NOT={trait = content}
+            not_founding_or_refused_league = yes
+            religion_allows_feudal_elective_trigger = yes
+            any_neighbor_independent_ruler = {
+                THIS_and_PREV_same_rank_trigger = yes
+                THIS_can_join_PREV_league_trigger = yes
+            }
+            prestige = 150
+            wealth  = 250
+        }
+
+        effect = {
+            custom_tooltip = {
+                text = create_elective_league_effect
+                hidden_tooltip = {
+                    long_character_event = { id = ElectiveLeagues.31 }
+                }
+                add_character_modifier = {
+                    name = founding_elective_league
+                    hidden = no
+                    years = 1
+                }
+            }
+            prestige = -100
+            wealth  = -250
+        }
+    }
+}
+
+
+#FROM is TAKER
+#ROOT is target CHARACTER
+targetted_decisions = {
+    #Invite to existing league decision
+    vassalize_new_elector = {
+
+        from_potential = {
+            ai = no  # "ai_target_filter = all" is expensive, so ai instead uses MTTH event ElectiveLeagues.40
+            league_potential_trigger = yes
+            primary_title = {
+                OR = {
+                    has_law = succ_elective_league
+                    has_law = succ_tribal_league
+                }
+                is_titular = yes
+            }
+        }
+
+        potential = {
+            NOT = { character = FROM }
+            league_potential_trigger = yes
+            not_founding_or_refused_league = yes
+        }
+
+        allow = {
+            FROM = {
+                # Sorry for the indent, players, but it gets the scopes correct for sharing scripted triggers
+                ROOT = {
+                    custom_tooltip = {
+                        text = LOWER_RANK_THAN_US
+                        lower_real_tier_than = PREV
+                    }
+                    not_founding_or_refused_league = yes
+                    THIS_can_be_elector_of_PREV_trigger = yes
+                    THIS_can_join_PREV_league_trigger = yes
+                    THIS_and_FROM_are_adjacent_trigger = yes
+
+                    NOT = { has_opinion_modifier = { who = FROM  modifier = opinion_granted_independence } }
+                }
+            }
+        }
+
+        effect = {
+            FROM = { #FROM gets the Event to fix the scopes which then sends the invite to ROOT
+                character_event = { id = ElectiveLeagues.45 }
+            }
+        }
+    }
+}

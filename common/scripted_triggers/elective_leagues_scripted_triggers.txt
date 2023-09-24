@@ -1,0 +1,128 @@
+# Basic requirements to found, co-found, or join leagues.
+# Intended to be unseen, used in "potential" rather than "allow".
+league_potential_trigger = {
+	is_landed = yes
+	independent = yes
+	higher_real_tier_than = BARON
+	is_adult = yes
+	in_revolt = no
+	mercenary = no
+	OR = {
+		is_feudal = yes
+		is_tribal = yes
+	}
+}
+
+not_founding_or_refused_league = {
+	NOR = {
+		has_character_modifier = founding_elective_league
+		has_character_modifier = invited_to_elective_league
+		has_character_modifier = refused_elective_league
+	}
+}
+
+religion_allows_feudal_elective_trigger = { #Maybe deprecated with the new government types?
+	custom_tooltip = {
+		text = ELECTIVE_LEAGUE_ELECTIVE_REQUIREMENT
+		OR = {
+			has_dlc = "Zeus"
+			NOR = {
+				religion_group = indian_group
+				religion_group = muslim
+			}
+		}
+	}
+}
+
+# Visible requirements for co-founding or joining leagues.
+THIS_can_join_PREV_league_trigger = {
+	# Not checked here: rank requirements (different for initial creation vs later additions)
+	# Not checked here: adjacency requirements (graph traversal for initial creation)
+
+	#Not already in elective league or founding
+	custom_tooltip = {
+		text = ELECTIVE_LEAGUE_NO_ELECTIVE_LEAGUE
+		NOR = {
+			has_law = succ_elective_league
+			has_law = succ_tribal_league
+		}
+		not_founding_or_refused_league = yes 
+	}
+	
+	# Same religion group
+	custom_tooltip = {
+		text = SAME_RELIGION_GROUP  # Less confusing than e.g. "Is Christian"
+		religion_group = PREV
+	}
+
+	#Same government type
+	custom_tooltip = {
+		text = ELECTIVE_LEAGUE_SAME_GOVERNMENT_TYPE 
+		government = PREV
+	}
+
+	is_primary_war_defender = no
+
+	# Ally or potential ally
+	custom_tooltip = {
+		text = ELECTIVE_LEAGUE_ALLY_ETC
+		OR = {
+			is_allied_with = PREV                # Strong ally
+			AND = {
+				#OR = {
+					#is_friend = PREV                     # Weak ally
+					has_non_aggression_pact_with = PREV  # Potential ally, even if the AI hasn't bothered
+					#is_close_relative = PREV             # Potential ally, even if the AI hasn't bothered
+				#}
+				PREV = { ai = yes }
+			}
+		}
+	}
+
+	# We like PREV enough to voluntarily create an alliance
+	opinion = { who = PREV  value = 26 }
+}
+
+THIS_can_be_elector_of_PREV_trigger = {
+	custom_tooltip = {
+		text = CAN_BE_ELECTOR
+	    OR = {
+	        AND = { real_tier = COUNT    PREV = { tier = DUKE    } }
+			AND = { real_tier = DUKE     PREV = { tier = KING    } }
+			AND = { real_tier = KING     PREV = { tier = EMPEROR } }
+	    }
+	}
+}
+
+THIS_and_PREV_same_rank_trigger = { #Mind that Empires have been commented out
+	custom_tooltip = {
+		text = SAME_RANK
+		OR = {
+			AND = { tier = COUNT    PREV = { tier = COUNT   } }
+			AND = { tier = DUKE     PREV = { tier = DUKE    } }
+			AND = { tier = KING     PREV = { tier = KING    } }
+#			AND = { tier = EMPEROR  PREV = { tier = EMPEROR } } 
+		}
+	}
+}
+
+# Checks whether two *independent* realms control adjacent *provinces*.
+THIS_and_FROM_are_adjacent_trigger = {
+
+	# Using "FROM" rather than "PREV" because the latter would require
+	# "PREVPREVPREVPREVPREV" but it's only allowed to chain 4 levels.
+	# Luckily, all users are happy with FROM, so no duplication is necessary.
+
+	custom_tooltip = {
+		text = ADJACENT_REALM
+		any_realm_province = {
+			any_neighbor_province = {
+				owner = {
+					top_liege = {
+						character = FROM
+					}
+				}
+			}
+		}
+	}
+}

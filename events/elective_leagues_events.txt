@@ -1,0 +1,568 @@
+namespace = ElectiveLeagues
+#TODO: add things it does when someone dies (don't need that cuz I smarts and everything expires after one year)
+
+# AI ruler tries to create a new league
+character_event = {      
+    id = ElectiveLeagues.30
+    hide_window = yes
+    only_playable = yes # This counts only every count and above ruler.
+    ai = yes  # Players instead use a similar decision, create_elective_league
+
+    trigger = {
+        NOT = {
+            has_game_rule = {
+                name = elective_leagues
+                value = leagues_player_only
+            }
+        }
+        league_potential_trigger = yes
+        religion_allows_feudal_elective_trigger = yes
+        not_founding_or_refused_league = yes
+        NOR = {
+            has_law = succ_elective_league
+            has_law = succ_tribal_league
+        }
+        any_neighbor_independent_ruler = {
+            THIS_and_PREV_same_rank_trigger = yes
+            THIS_can_join_PREV_league_trigger = yes
+        }
+    }
+
+    mean_time_to_happen = {
+        years = 1
+    }
+
+    immediate = {
+        add_character_modifier = {
+            name = founding_elective_league
+            hidden = no
+            years = 1
+        }
+        long_character_event = { id = ElectiveLeagues.31 }
+    }
+}
+
+
+# ROOT tries to create a new league (players from decision; AI from event ElectiveLeagues.30)
+long_character_event = {
+    id = ElectiveLeagues.31
+    is_triggered_only = yes
+    hide_window = no
+    picture = GFX_evt_prospering_province
+    desc = ElectiveLeagues_event_31_DESC
+
+    option = {
+        name = elective_league_31_event_yes
+        ai_chance = { factor = 100 }
+        hidden_tooltip = {
+            set_character_flag = elective_league_founder 
+            set_variable = { which = num_cofounders  value = 0 }
+            character_event = { id = ElectiveLeagues.32 days = 1}  # Find recursively-adjacent cofounders
+        }
+    }
+    option = {
+        name = elective_league_31_event_no
+        remove_character_modifier = founding_elective_league
+    }
+}
+
+# ROOT is looking for cofounders cofounders (recursive). Realms adjacent to FROM are now eligible to join.
+character_event = {
+    id = ElectiveLeagues.32
+    is_triggered_only = yes
+    hide_window = yes
+    #desc = ElectiveLeagues_event_32_DESC
+
+    immediate = {
+        any_independent_ruler = {
+            limit = {
+                # Not already in ROOT's league
+                NOT = { character = ROOT }
+                # Can join ROOT's league...
+                THIS_and_PREV_same_rank_trigger = yes
+                THIS_can_join_PREV_league_trigger = yes
+
+                # ...by virtue of being adjacent to FROM (who could be ROOT or another cofounder)
+                THIS_and_FROM_are_adjacent_trigger = yes
+            }
+            set_character_flag = invited_to_league_@ROOT
+            add_character_modifier = {
+                name = invited_to_elective_league
+                hidden = yes
+                years = 1
+            }
+            character_event = { id = ElectiveLeagues.33 }  # Bounce back here with THIS as FROM
+        }
+    }
+
+    #option = { #don't forget to uncomment if hide_window = no
+    #    name = OK
+    #}
+}
+
+# Bounce event # CONFIRmATION EVENT
+character_event = {
+    id = ElectiveLeagues.33
+    is_triggered_only = yes
+    hide_window = no
+    desc = ElectiveLeagues_event_33_DESC
+    picture = GFX_evt_diplomat_hf
+
+    option = {
+        name = accept_league
+
+        ai_chance = { 
+            factor = 95 
+            modifier = {
+                factor = 0.01
+                realm_size >= 250
+            }
+            modifier = {
+                factor = 0.05
+                realm_size >= 150
+                NOT = { realm_size >= 250}
+            }
+            modifier = {
+                factor = 0.1
+                trait = ambitious
+            }
+            modifier = {
+                factor = 0.2
+                OR = {
+                    trait = proud
+                    trait = stubborn
+                }
+            }
+            modifier = {
+                factor = 0.4
+                OR = {
+                    trait = content
+                    trait = cynical
+                    trait = dull
+                }
+            }
+            modifier = {
+                factor = 1.5
+                OR = {
+                    trait = gregarious
+                    trait = shrewd
+                }
+            }
+            modifier = {
+                factor = 6
+                trait = trusting
+            }
+        }
+
+        FROM = {
+            #change_variable = { which = num_cofounders  value = 1 }
+            character_event = { id = ElectiveLeagues.32 }
+        }
+        hidden_tooltip = {
+            random_list = {
+                10 = {
+                    FROM = { 
+                        letter_event = { id = ElectiveLeagues.35 days = 1 }
+                    }
+                }
+                20 = {
+                    FROM = { 
+                        letter_event = { id = ElectiveLeagues.35 days = 2 }
+                    }
+                }
+                10 = {
+                    FROM = { 
+                        letter_event = { id = ElectiveLeagues.35 days = 3 }
+                    }
+                }
+                10 = {
+                  FROM = { 
+                        letter_event = { id = ElectiveLeagues.35 days = 4 }
+                    }
+                }
+            }
+        }
+        add_character_modifier = {
+            name = founding_elective_league
+            hidden = no
+            years = 1
+        }
+    }
+
+    option = {
+        name = refuse_league
+        ai_chance = {
+            factor = 1
+        }
+        THIS_refused_FROM_league_effect = yes
+        hidden_tooltip = {
+            random_list = {
+                10 = {
+                    FROM = { 
+                        letter_event = { id = ElectiveLeagues.34 days = 1 }
+                    }
+                }
+                20 = {
+                    FROM = { 
+                        letter_event = { id = ElectiveLeagues.34 days = 2 }
+                    }
+                }
+                10 = {
+                    FROM = { 
+                        letter_event = { id = ElectiveLeagues.34 days = 3 }
+                    }
+                }
+                10 = {
+                    FROM = { 
+                        letter_event = { id = ElectiveLeagues.34 days = 4 }
+                    }
+                }
+            }
+        }
+        clr_character_flag = invited_to_league_@FROM
+    }
+    after = {
+        hidden_tooltip = {
+            remove_character_modifier = invited_to_elective_league
+        }
+    }
+}
+
+#ROOT gets notified about someone refusing to join the league
+letter_event = {
+    id = ElectiveLeagues.34
+    desc = ElectiveLeagues_event_34_DESC
+    is_triggered_only = yes
+
+    option = {
+        name = UNFORTUNATE
+        trigger = {
+            ROOT = { NOT = { trait = wroth } }
+        }
+    }
+    
+    option = {
+        tooltip_info = wroth
+        trigger = {
+            ROOT = { trait = wroth }
+        }
+        name = EVTOPTAHFP30036
+        opinion = { who = FROM  modifier = opinion_outraged years = 3}
+    }
+}
+
+#ROOT gets notified about someone accepting to join the league
+letter_event = {
+    id = ElectiveLeagues.35
+    desc = ElectiveLeagues_event_35_DESC
+    is_triggered_only = yes
+
+    option = {
+        name = OK
+    }
+}
+
+# ROOT has counted their cofounders and may be able to create a new elective realm
+character_event = {
+    id = ElectiveLeagues.36
+    is_triggered_only = no
+    desc = ElectiveLeagues_event_36_DESC
+    picture = GFX_evt_state_diplomacy
+    only_playable = yes
+    has_character_flag = elective_league_founder
+
+    mean_time_to_happen = {
+        days = 16
+    }
+
+    trigger = {
+        NOT = {
+            any_independent_ruler = {
+                has_character_flag = invited_to_league_@ROOT
+                has_character_modifier = invited_to_elective_league
+            }
+        }
+    }
+    #Count cofounders here to account for random deaths?
+    immediate = {
+        any_independent_ruler = {
+            limit = {
+                has_character_flag = invited_to_league_@ROOT
+                has_character_modifier = founding_elective_league
+            }
+            ROOT = { change_variable = { which = num_cofounders value = 1}}
+        }
+    }
+    option = {
+        trigger = {
+            tier = COUNT
+            OR = {
+                check_variable = { which = num_cofounders  value >= 2 }
+                AND = {
+                    any_player = {
+                        has_character_flag = invited_to_league_@ROOT
+                        has_character_modifier = founding_elective_league
+                    }
+                    check_variable = { which = num_cofounders  value >= 1 }
+                }
+            }   
+        }
+        name = ElectiveLeagues_event_35_DUCHY
+        ai_chance = { factor = 97 }
+
+        primary_title = {
+            create_title = {
+                tier = DUKE
+                landless = no
+                temporary = no
+                custom_created = yes
+                culture = ROOT
+                holder = ROOT
+                base_title = THIS
+                copy_title_laws = yes
+                name = ELECTIVE_REALM_NAME_DUKE
+                short_name = yes
+            }
+        }
+
+        create_league_effect = yes
+    }
+
+    option = {
+        trigger = {
+            tier = DUKE
+            OR = { #WENN NICHT FNKTIONIER OR ENTFERNEN UND ANY_PLAYER
+                check_variable = { which = num_cofounders  value >= 2 }
+                AND = {
+                    any_player = {
+                        has_character_flag = invited_to_league_@ROOT
+                        has_character_modifier = founding_elective_league
+                    }
+                    check_variable = { which = num_cofounders  value >= 1 }
+                }
+            }
+        }
+        name = ElectiveLeagues_event_35_KINGDOM
+        ai_chance = { factor = 97 }
+
+        primary_title = {
+            create_title = {
+                tier = KING
+                landless = no
+                temporary = no
+                custom_created = yes
+                culture = ROOT
+                holder = ROOT
+                base_title = THIS
+                copy_title_laws = yes
+                name = ELECTIVE_REALM_NAME_KING
+                short_name = yes
+            }
+        }
+
+        create_league_effect = yes
+    }
+
+    option = {
+        trigger = {
+            tier = KING
+            OR = {
+                check_variable = { which = num_cofounders  value >= 2 }
+                AND = {
+                    any_player = {
+                        has_character_flag = invited_to_league_@ROOT
+                        has_character_modifier = founding_elective_league
+                    }
+                    check_variable = { which = num_cofounders  value >= 1 }
+                }
+            }
+        }
+        name = ElectiveLeagues_event_35_EMPIRE
+        ai_chance = { factor = 97 }
+
+        primary_title = {
+            create_title = {
+                tier = EMPEROR
+                landless = no
+                temporary = no
+                custom_created = yes
+                culture = ROOT
+                holder = ROOT
+                base_title = THIS
+                copy_title_laws = yes
+                name = ELECTIVE_REALM_NAME_EMPEROR
+                short_name = yes
+            }
+        }
+
+        create_league_effect = yes
+    }
+
+    option = {
+        name = ElectiveLeagues_event_35_NEVER_MIND
+        ai_chance = { factor = 3 }
+        trigger = {
+             check_variable = { which = num_cofounders  value >= 2 }
+        }
+        remove_character_modifier = founding_elective_league
+        any_independent_ruler = {
+            limit = {
+                has_character_flag = invited_to_league_@ROOT
+            }
+            hidden_tooltip = {
+                clr_character_flag = invited_to_league_@ROOT
+                remove_character_modifier = founding_elective_league
+            }
+        }
+    }
+
+    option = {
+        name = ElectiveLeagues_event_35_CANNOT
+        ai_chance = { factor = 3 }
+        trigger = {
+             check_variable = { which = num_cofounders  value < 2 }
+        }
+        remove_character_modifier = founding_elective_league
+        any_independent_ruler = {
+            limit = {
+                has_character_flag = invited_to_league_@ROOT
+            }
+            hidden_tooltip = {
+                clr_character_flag = invited_to_league_@ROOT
+                remove_character_modifier = founding_elective_league
+            }
+        }
+    }
+    after = {
+        clr_character_flag = elective_league_founder
+    }
+}
+
+
+# AI ruler of an elective league tries to vassalize more neighbors
+character_event = {
+    id = ElectiveLeagues.40
+    min_age = 14
+    hide_window = yes
+    only_independent = yes # Excludes vassals and tributaries and counts only every count and above ruler.
+    ai = yes  # Players instead use a targeted decision, vassalize_new_elector
+
+    trigger = {
+        primary_title = {
+            OR = {
+                has_law = succ_tribal_league
+                has_law = succ_elective_league
+            }
+            is_titular = yes
+        }
+        has_game_rule = {
+            name = elective_leagues
+            value = leagues_all
+        }
+        higher_real_tier_than = COUNT
+        independent = yes
+        in_revolt = no
+        not_founding_or_refused_league = yes
+    }
+
+    mean_time_to_happen = {
+        years = 2
+    }
+
+    immediate = {
+        any_neighbor_independent_ruler = {
+            limit = {
+                lower_real_tier_than = PREV
+                NOT = { character = ROOT }
+                league_potential_trigger = yes           
+                THIS_can_be_elector_of_PREV_trigger = yes
+                THIS_can_join_PREV_league_trigger = yes
+                NOT = { has_opinion_modifier = { who = ROOT  modifier = opinion_granted_independence } }
+            }
+            letter_event = { id = ElectiveLeagues.46 }
+            add_character_modifier = {
+                name = invited_to_elective_league
+                years = 1
+            }
+        }
+    }
+}
+
+#Helper event for the player decision
+#Fixes scopes for EL.46 add_THIS_to_FROM_existing_league_effect
+character_event = {
+    id = ElectiveLeagues.45
+    is_triggered_only = yes
+    hide_window = yes
+    immediate = {
+        FROM = {
+            letter_event = { id = ElectiveLeagues.46 days = 1}
+            add_character_modifier = {
+                name = invited_to_elective_league
+                years = 1
+            }
+        }
+    }
+    #option = { #in case I make visible for debugs
+    #    name = OK
+    #}
+}
+
+# ROOT is asked by FROM to join an existing elective league
+# Triggered by AI event ElectiveLeagues.40
+# Player decision vassalize_new_elector does use the event after a bounce from EL45 to fix scopes
+letter_event = {
+    id = ElectiveLeagues.46
+    desc = ElectiveLeagues_event_46_DESC
+    is_triggered_only = yes
+
+    option = {
+        name = accept_league
+        ai_chance = { 
+            factor = 10 
+        }
+        add_THIS_to_FROM_existing_league_effect = yes   
+        FROM = { letter_event = { id = ElectiveLeagues.35 days = 1 } }
+        any_vassal = {
+            letter_event = { id = ElectiveLeagues.50 }
+        }
+    }
+    option = {
+        name = refuse_league
+        ai_chance = {
+            factor = 1
+        }
+        THIS_refused_FROM_league_effect = yes
+        FROM = { letter_event = { id = ElectiveLeagues.34 days = 1 } }
+    }
+    after = {
+        hidden_tooltip = {
+            remove_character_modifier = invited_to_elective_league
+        }
+    }
+}
+
+#NOTIFY vassals event
+letter_event = {
+    id = ElectiveLeagues.50
+    desc = ElectiveLeagues_event_50_DESC
+    is_triggered_only = yes
+
+    option = {
+        name = ElectiveLeagues_event_50_Take #This might take power away from us
+    }
+    option = {
+        name = ElectiveLeagues_event_50_Opportunity #or it could pose to be an opportunity
+    }
+}
+
+##For testing |wipe_council_effect|
+#character_event = {
+#    id = ElectiveLeagues.60
+#    is_triggered_only = yes
+#    hide_window = yes
+#
+#    immediate = {
+#        wipe_council_effect = yes
+#    }
+#}

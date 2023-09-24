@@ -1,0 +1,1844 @@
+###################################
+#
+# ROMAN INVASION
+# - TRUE HEIRS TO EUROPE
+#
+###################################
+
+# Written by CanadaMan7
+namespace = RIA
+
+# First Contact - Strange Scholars
+province_event = {
+	id = RIA.1
+	desc = EVTDESC_RIA_001
+	
+	picture = GFX_evt_roman_scholars
+	border = GFX_event_normal_frame_war
+
+	has_dlc = "Sunset Invasion"
+	
+	trigger = {
+		AND = {
+			year = 1066
+			AND = {
+				has_game_rule = {
+					name = roman_invasion
+					value = 1066
+				}
+				total_years_played = 1
+			}
+		}
+		NOR = {
+			year = 1250
+			has_global_flag = roman_scholars 
+			has_game_rule = {
+				name = roman_invasion
+				value = off
+			}
+		}
+		OR = {
+			province_id = 350 # Ancona
+			province_id = 355 # Padua
+			province_id = 323 # Lucca
+		}
+	}
+	
+	immediate = {
+		log = "ROMAN INVASION IMMEDIATE 5532432005"
+		set_global_flag = roman_scholars
+		set_province_flag = roman_scholars
+		activate_title = { title = e_roman_empire status = yes }
+		
+		k_papal_state = {
+			holder_scope = {
+				create_random_soldier = {
+					random_traits = no
+					dynasty = 8648 # Octavianus
+					culture = roman
+					religion = hellenic_pagan
+					age = 20
+					attributes = {
+						martial = 8
+						diplomacy = 6
+						stewardship = 6
+						intrigue = 6
+						learning = 6
+					}
+					health = 6
+					fertility = 0.7
+					trait = brilliant_strategist
+					trait = genius
+					trait = strong
+					trait = zealous
+					trait = ambitious
+					trait = diligent
+					trait = ares_own
+					trait = patient
+					trait = augustus
+				}
+				new_character = {
+					e_roman_empire = {
+						grant_title = PREV
+					}
+					set_government_type = feudal_government
+					e_roman_empire = {
+						add_law = succ_primogeniture
+						add_law = agnatic_succession
+						add_law = centralization_3
+						add_law = imperial_administration
+						add_law = vice_royalty_2
+						if = {
+							limit = {
+								has_dlc = "Zeus"
+							}
+							add_law = revoke_title_law_2
+						}
+						if = {
+							limit = {
+								NOT = { has_dlc = "Zeus" }
+							}
+							add_law = crown_authority_2
+						}
+					}
+					set_defacto_liege = THIS
+					narrative_event = { id = RIA.2 days = 7 }
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.1
+			has_game_rule = {
+				name = roman_invasion
+				value = 1066
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_RIA_001
+	}
+}
+
+# Rumors of people from across the Atlantic
+narrative_event = {
+	id = RIA.2
+	title = EVTNAME_RIA_002
+	desc = EVTDESC_RIA_002
+	major = yes
+	
+	picture = GFX_evt_roman_duress
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	
+	major_trigger = {
+		FROM = { owner = { NOT = { character = PREVPREV } } }
+	}
+	
+	immediate = {
+		e_roman_empire = {
+			holder_scope = {
+				character_event = { id = CM.10018 }  # Chronicle
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_RIA_002
+	}
+}
+
+# First Landing of the Romans
+province_event = {
+	id = RIA.3
+	desc = EVTDESC_RIA_003
+	
+	picture = GFX_evt_roman_conquest
+	border = GFX_event_normal_frame_war
+	
+	trigger = {
+		OR = {
+			year = 1066
+			AND = {
+				has_game_rule = {
+					name = roman_invasion
+					value = 1066
+				}
+				total_years_played = 1
+			}
+		}
+		NOT = { has_global_flag = roman_arrival }
+		had_province_flag = { flag = roman_scholars days = 730 }
+	}
+	
+	immediate = {
+		set_global_flag = roman_arrival
+#		culture = roman
+#		religion = hellenic_pagan
+		e_roman_empire = {
+			holder_scope = {
+				narrative_event = { id = RIA.4 }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = EVTOPTA_RIA_003
+	}
+}
+
+# First Landing of the romans
+narrative_event = {
+	id = RIA.4
+	title = EVTNAME_RIA_004
+	desc = EVTDESC_RIA_004
+	major = yes
+	hide_new = yes
+	
+	picture = GFX_evt_roman_conquest
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	
+	major_trigger = {
+		FROM = { owner = { NOT = { character = PREVPREV } } }
+	}
+	
+	immediate = {
+		any_playable_ruler = {
+			limit = {
+				ai = no
+				capital_scope = {
+					NOT = { region = world_india }
+				}
+			}
+			character_event = { id = CM.10020 }  # Chronicle
+		}
+	
+		wealth = 25000
+		FROM = {
+			kingdom = {
+				ROOT = {
+					war = {
+						casus_belli = tribal_invasion
+						target = PREVPREV # The top liege of the province owner
+						thirdparty_title = PREV # The de jure kingdom
+					}
+				}
+			}
+		}
+		
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 30
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops = 
+				{
+					heavy_infantry = { 4800 4800 }
+					light_infantry = { 3400 3300 }
+					archers = { 4400 4300 }
+				}
+			}
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 25
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 4800 4800 }
+					light_infantry = { 3400 3300 }
+					archers = { 4400 4300 }
+				}
+			}
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 22
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 4800 4800 }
+					light_infantry = { 3400 3300 }
+					archers = { 4400 4300 }
+				}
+			}
+		}
+		
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 31
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 4800 4800 }
+					light_infantry = { 3400 3300 }
+					archers = { 4400 4300 }
+				}
+			}
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 24
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 4800 4800 }
+					light_infantry = { 3400 3300 }
+					archers = { 4400 4300 }
+				}
+			}
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 23
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 4800 4800 }
+					light_infantry = { 3400 3300 }
+					archers = { 4400 4300 }
+				}
+			}
+		}
+		
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 30
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 4800 4800 }
+					light_infantry = { 3400 3300 }
+					archers = { 4400 4300 }
+				}
+			}
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 25
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 4800 4800 }
+					light_infantry = { 3400 3300 }
+					archers = { 4400 4300 }
+				}
+			}
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 22
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 4800 4800 }
+					light_infantry = { 3400 3300 }
+					archers = { 4400 4300 }
+				}
+			}
+		}
+		
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 18
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 4800 4800 }
+					light_infantry = { 3400 3300 }
+					archers = { 4400 4300 }
+				}
+			}
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 28
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 4800 4800 }
+					light_infantry = { 3400 3300 }
+					archers = { 4400 4300 }
+				}
+			}
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 29
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 4800 4800 }
+					light_infantry = { 3400 3300 }
+					archers = { 4400 4300 }
+				}
+			}
+		}
+		
+		random = {
+			chance = 50
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = hellenic_pagan
+				culture = roman
+				female = no
+				age = 30
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					troops =
+					{
+						heavy_infantry = { 4800 4800 }
+						light_infantry = { 3400 3300 }
+						archers = { 4400 4300 }
+					}
+				}
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = hellenic_pagan
+				culture = roman
+				female = no
+				age = 25
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					troops =
+					{
+						heavy_infantry = { 4800 4800 }
+						light_infantry = { 3400 3300 }
+						archers = { 4400 4300 }
+					}
+				}
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = hellenic_pagan
+				culture = roman
+				female = no
+				age = 22
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					troops =
+					{
+						heavy_infantry = { 4800 4800 }
+						light_infantry = { 3400 3300 }
+						archers = { 4400 4300 }
+					}
+				}
+			}
+		}
+		
+		random = {
+			chance = 50
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = hellenic_pagan
+				culture = roman
+				female = no
+				age = 30
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					troops =
+					{
+						heavy_infantry = { 4800 4800 }
+						light_infantry = { 3400 3300 }
+						archers = { 4400 4300 }
+					}
+				}
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = hellenic_pagan
+				culture = roman
+				female = no
+				age = 25
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					troops =
+					{
+						heavy_infantry = { 4800 4800 }
+						light_infantry = { 3400 3300 }
+						archers = { 4400 4300 }
+					}
+				}
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = hellenic_pagan
+				culture = roman
+				female = no
+				age = 22
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					troops =
+					{
+						heavy_infantry = { 4800 4800 }
+						light_infantry = { 3400 3300 }
+						archers = { 4400 4300 }
+					}
+				}
+			}
+		}
+		
+		random = {
+			chance = 50
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = hellenic_pagan
+				culture = roman
+				female = no
+				age = 30
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					troops =
+					{
+						heavy_infantry = { 4800 4800 }
+						light_infantry = { 3400 3300 }
+						archers = { 4400 4300 }
+					}
+				}
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = hellenic_pagan
+				culture = roman
+				female = no
+				age = 25
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					troops =
+					{
+						heavy_infantry = { 4800 4800 }
+						light_infantry = { 3400 3300 }
+						archers = { 4400 4300 }
+					}
+				}
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = hellenic_pagan
+				culture = roman
+				female = no
+				age = 22
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					troops =
+					{
+						heavy_infantry = { 4800 4800 }
+						light_infantry = { 3400 3300 }
+						archers = { 4400 4300 }
+					}
+				}
+			}
+		}
+		
+		# Ships
+		if = {
+			limit = {
+				FROM = { 
+					OR = {
+						province_id = 1 # Vestisland
+						province_id = 9 # Connacht
+						province_id = 35 # Inse Gall
+						province_id = 31 # Cornwall
+					}
+				}
+			}
+			FROM = {
+				sea_zone = {
+					ROOT = {
+						spawn_unit = {
+							province = PREV
+							home = FROM
+							owner = ROOT
+							earmark = roman_invasion_fleet
+							troops =
+							{
+								galleys = { 1000 1000 }
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		# Some extra courtiers
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 16
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 18
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 18
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 20
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 25
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 26
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 28
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 16
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 17
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 18
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 16
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = yes
+			age = 16
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = yes
+			age = 17
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = yes
+			age = 18
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = yes
+			age = 18
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = yes
+			age = 20
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = yes
+			age = 16
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = yes
+			age = 16
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_SSI_004
+	}
+}
+
+# Second Landing of the Romans
+province_event = {
+	id = RIA.5
+	desc = EVTDESC_RIA_005
+	
+	picture = GFX_evt_roman_conquest
+	border = GFX_event_normal_frame_war
+
+	has_global_flag = roman_arrival
+	
+	trigger = {
+		OR = {
+			year = 1066
+			AND = {
+				has_game_rule = {
+					name = roman_invasion
+					value = 1066
+				}
+				total_years_played = 1
+			}
+		}
+		NOT = { has_global_flag = roman_arrival_2 }
+		OR = {
+			province_id = 346 # Bari
+			province_id = 338 # Reggio
+			province_id = 339 # Messina
+		}
+		owner = {
+			NOT = { religion = hellenic_pagan }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = roman_arrival_2
+		set_province_flag = roman_second_wave
+#		culture = roman
+#		religion = hellenic_pagan
+		e_roman_empire = {
+			holder_scope = {
+				narrative_event = { id = RIA.6 }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = EVTOPTA_RIA_005
+	}
+}
+
+# Second Landing of the Romans
+narrative_event = {
+	id = RIA.6
+	title = EVTNAME_RIA_006
+	desc = EVTDESC_RIA_006
+	major = yes
+	hide_new = yes
+	
+	picture = GFX_evt_roman_conquest
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	
+	major_trigger = {
+		FROM = { owner = { NOT = { character = PREVPREV } } }
+	}
+	
+	immediate = {
+		FROM = {
+			kingdom = {
+				ROOT = {
+					war = {
+						casus_belli = tribal_invasion
+						target = PREVPREV # The top liege of the province owner
+						thirdparty_title = PREV # The de jure kingdom
+					}
+				}
+			}
+		}
+		
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 30
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 3800 3800 }
+					light_infantry = { 2400 2300 }
+					archers = { 2400 2300 }
+				}
+			}
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 25
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 3800 3800 }
+					light_infantry = { 2400 2300 }
+					archers = { 2400 2300 }
+				}
+			}
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 22
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 3800 3800 }
+					light_infantry = { 2400 2300 }
+					archers = { 2400 2300 }
+				}
+			}
+		}
+		
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 30
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 3800 3800 }
+					light_infantry = { 1400 1300 }
+					archers = { 1400 1300 }
+				}
+			}
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 25
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 3800 3800 }
+					light_infantry = { 2400 2300 }
+					archers = { 2400 2300 }
+				}
+			}
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 22
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 3800 3800 }
+					light_infantry = { 2400 2300 }
+					archers = { 2400 2300 }
+				}
+			}
+		}
+		
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 30
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 2800 2800 }
+					light_infantry = { 1400 1300 }
+					archers = { 1400 1300 }
+				}
+			}
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 25
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 2800 2800 }
+					light_infantry = { 1400 1300 }
+					archers = { 1400 1300 }
+				}
+			}
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 22
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 2800 2800 }
+					light_infantry = { 1400 1300 }
+					archers = { 1400 1300 }
+				}
+			}
+		}
+		
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 30
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 2800 2800 }
+					light_infantry = { 1400 1300 }
+					archers = { 1400 1300 }
+				}
+			}
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 25
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 2800 2800 }
+					light_infantry = { 1400 1300 }
+					archers = { 1400 1300 }
+				}
+			}
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = hellenic_pagan
+			culture = roman
+			female = no
+			age = 22
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = FROM
+				home = FROM
+				troops =
+				{
+					heavy_infantry = { 2800 2800 }
+					light_infantry = { 1400 1300 }
+					archers = { 1400 1300 }
+				}
+			}
+		}
+		
+		random = {
+			chance = 50
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = hellenic_pagan
+				culture = roman
+				female = no
+				age = 30
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					troops =
+					{
+						heavy_infantry = { 2800 2800 }
+						light_infantry = { 1400 1300 }
+						archers = { 1400 1300 }
+					}
+				}
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = hellenic_pagan
+				culture = roman
+				female = no
+				age = 25
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					troops =
+					{
+						heavy_infantry = { 2800 2800 }
+						light_infantry = { 1400 1300 }
+						archers = { 1400 1300 }
+					}
+				}
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = hellenic_pagan
+				culture = roman
+				female = no
+				age = 22
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					troops =
+					{
+						heavy_infantry = { 2800 2800 }
+						light_infantry = { 1400 1300 }
+						archers = { 1400 1300 }
+					}
+				}
+			}
+		}
+		
+		random = {
+			chance = 50
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = hellenic_pagan
+				culture = roman
+				female = no
+				age = 30
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					troops =
+					{
+						heavy_infantry = { 2800 2800 }
+						light_infantry = { 1400 1300 }
+						archers = { 1400 1300 }
+					}
+				}
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = hellenic_pagan
+				culture = roman
+				female = no
+				age = 25
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					troops =
+					{
+						heavy_infantry = { 2800 2800 }
+						light_infantry = { 1400 1300 }
+						archers = { 1400 1300 }
+					}
+				}
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = hellenic_pagan
+				culture = roman
+				female = no
+				age = 22
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					troops =
+					{
+						heavy_infantry = { 2800 2800 }
+						light_infantry = { 1400 1300 }
+						archers = { 1400 1300 }
+					}
+				}
+			}
+		}
+		
+		random = {
+			chance = 50
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = hellenic_pagan
+				culture = roman
+				female = no
+				age = 30
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					troops =
+					{
+						heavy_infantry = { 2800 2800 }
+						light_infantry = { 1400 1300 }
+						archers = { 1400 1300 }
+					}
+				}
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = hellenic_pagan
+				culture = roman
+				female = no
+				age = 25
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					troops =
+					{
+						heavy_infantry = { 2800 2800 }
+						light_infantry = { 1400 1300 }
+						archers = { 1400 1300 }
+					}
+				}
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = hellenic_pagan
+				culture = roman
+				female = no
+				age = 22
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = FROM
+					home = FROM
+					troops =
+					{
+						heavy_infantry = { 3800 3800 }
+						light_infantry = { 2400 2300 }
+						archers = { 2400 2300 }
+					}
+				}
+			}
+		}
+		
+		# Ships
+		if = {
+			limit = {
+				FROM = { 
+					OR = {
+						province_id = 1 # Vestisland
+						province_id = 9 # Connacht
+						province_id = 35 # Inse Gall
+						province_id = 31 # Cornwall
+					}
+				}
+			}
+			FROM = {
+				sea_zone = {
+					ROOT = {
+						spawn_unit = {
+							province = PREV
+							home = FROM
+							owner = ROOT
+							earmark = roman_invasion_fleet
+							troops =
+							{
+								galleys = { 1000 1000 }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_SSI_006
+	}
+}
+
+# romans Thrown Back Into the Sea
+narrative_event = {
+	id = RIA.105
+	title = EVTNAME_SSI_105
+	desc = EVTDESC_SSI_105
+	
+	picture = GFX_evt_aztec_arrival
+	border = GFX_event_narrative_frame_war
+	
+	major = yes
+	
+	has_global_flag = roman_arrival_2
+	only_playable = yes
+	
+	trigger = {
+		NOT = { has_global_flag = romans_defeated }
+		has_landed_title = e_roman_empire
+		has_regiments = no
+		is_landed = no
+	}
+	
+	major_trigger = {
+		ai = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		activate_title = { title = e_roman_empire status = no }
+		set_global_flag = romans_defeated
+	}
+	
+	option = {
+		name = EVTOPTA_SSI_105
+	}
+}
+
+# Romans Hold Sicily
+character_event = {
+	id = RIA.40
+	desc = EVTDESC_RIA_040
+	
+	picture = GFX_evt_roman_emperor
+	border = GFX_event_normal_frame_war
+	
+	major = yes
+	
+	only_playable = yes
+	has_global_flag = roman_arrival
+	
+	trigger = {
+		has_landed_title = e_roman_empire
+		NOT = { has_global_flag = roman_sicily }
+		completely_controls = d_apulia
+	}
+	
+	major_trigger = {
+		ai = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+		
+	immediate = {
+		set_global_flag = roman_sicily
+	}
+	
+	option = {
+		name = EVTOPTA_RIA_040
+		trigger = {
+			NOT = { has_landed_title = e_roman_empire }
+		}
+	}
+	option = {
+		name = EVTOPTB_SSI_040
+		trigger = {
+			has_landed_title = e_roman_empire
+		}
+	}
+}
+
+# romans Hold Byzantium
+character_event = {
+	id = RIA.41
+	desc = EVTDESC_RIA_041
+	
+	picture = GFX_evt_roman_emperor
+	border = GFX_event_normal_frame_war
+	
+	major = yes
+	
+	only_playable = yes
+	has_global_flag = roman_arrival
+	
+	trigger = {
+		has_landed_title = e_roman_empire
+		NOT = { has_global_flag = roman_byzantium }
+		has_landed_title = e_byzantium		
+	}
+	
+	major_trigger = {
+		ai = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+		
+	immediate = {
+		set_global_flag = roman_byzantium
+	}
+	
+	option = {
+		name = EVTOPTA_RIA_041
+		trigger = {
+			NOT = { has_landed_title = e_roman_empire }
+		}
+	}
+	option = {
+		name = EVTOPTB_SSI_040
+		trigger = {
+			has_landed_title = e_roman_empire
+		}
+	}
+}
+
+# Pretenders No More
+character_event = {
+	id = RIA.42
+	desc = EVTDESC_RIA_042
+	
+	picture = GFX_evt_roman_emperor
+	border = GFX_event_normal_frame_war
+	
+	major = yes
+	
+	only_playable = yes
+	has_global_flag = roman_arrival
+	
+	trigger = {
+		has_landed_title = e_roman_empire
+		NOT = { has_global_flag = roman_pretenders }
+		has_landed_title = e_hre
+		has_landed_title = e_byzantium
+	}
+	
+	major_trigger = {
+		ai = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+		
+	immediate = {
+		set_global_flag = roman_pretenders
+	}
+	
+	option = {
+		name = EVTOPTA_RIA_042
+		trigger = {
+			NOT = { has_landed_title = e_roman_empire }
+		}
+	}
+	option = {
+		name = EVTOPTB_SSI_040
+		trigger = {
+			has_landed_title = e_roman_empire
+		}
+	}
+}
+
+# romans Hold Rome
+character_event = {
+	id = RIA.45
+	desc = EVTDESC_RIA_045
+	
+	picture = GFX_evt_roman_rome
+	border = GFX_event_normal_frame_war
+	
+	major = yes
+	
+	only_playable = yes
+	has_global_flag = roman_arrival
+	
+	trigger = {
+		has_landed_title = e_roman_empire
+		completely_controls = c_roma
+		NOT = { has_global_flag = roman_rome }
+	}
+	
+	major_trigger = {
+		ai = no
+	}	
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+		
+	immediate = {
+		set_global_flag = roman_rome
+	}
+	
+	option = {
+		name = EVTOPTA_RIA_043
+		trigger = {
+			NOT = { has_landed_title = e_roman_empire }
+		}
+	}
+	option = {
+		name = EVTOPTB_SSI_040
+		trigger = {
+			has_landed_title = e_roman_empire
+		}
+	}
+}
+
+# romans Hold Constantinople
+character_event = {
+	id = RIA.46
+	desc = EVTDESC_RIA_046
+	
+	picture = GFX_evt_roman_constantinople
+	border = GFX_event_normal_frame_war
+	
+	major = yes
+	
+	only_playable = yes
+	has_global_flag = roman_arrival
+	
+	trigger = {
+		has_landed_title = e_roman_empire
+		completely_controls = c_byzantion
+		NOT = { has_global_flag = roman_constantinople }
+	}
+	
+	major_trigger = {
+		ai = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+		
+	immediate = {
+		set_global_flag = roman_constantinople
+	}
+	
+	option = {
+		name = EVTOPTA_RIA_043
+		trigger = {
+			NOT = { has_landed_title = e_roman_empire }
+		}
+	}
+	option = {
+		name = EVTOPTB_SSI_040
+		trigger = {
+			has_landed_title = e_roman_empire
+		}
+	}
+}

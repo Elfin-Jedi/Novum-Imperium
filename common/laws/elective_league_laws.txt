@@ -1,0 +1,75 @@
+succession_laws = {
+	succ_elective_league = {
+		oldest_child_opinion = -10
+		child_opinion = -6
+		dynasty_opinion = -4
+		vassal_opinion = 17
+		potential = {
+			holder_scope = { is_feudal = yes }
+			#independent = yes
+			#always = no
+			has_title_flag = elective_league_title
+		}
+		allow = {
+			has_title_flag = elective_league_title
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = elective_league
+			}
+			if = { #Added all the laws
+			limit = { has_dlc = "Zeus" }
+				add_law_w_cooldown = law_voting_power_1
+			    add_law_w_cooldown = war_voting_power_1
+			    add_law_w_cooldown = revoke_title_voting_power_1
+				add_law_w_cooldown = imprison_voting_power_1
+				add_law_w_cooldown = grant_title_voting_power_1
+				add_law_w_cooldown = banish_voting_power_1
+				add_law_w_cooldown = execution_voting_power_1
+				add_law_w_cooldown = revoke_title_law_0
+			#add_law_w_cooldown = succession_voting_power_1  # Allows feudal elective in Muslim & Indian realms :)
+			}
+			else = {
+				add_law_w_cooldown = crown_authority_0
+			}
+		}	
+	}
+	succ_tribal_league = {
+		oldest_child_opinion = -17
+		child_opinion = -15
+		dynasty_opinion = -7
+		vassal_opinion = 25
+		potential = {
+			holder_scope = { is_tribal = yes }
+			#independent = yes
+			#always = no
+			has_title_flag = elective_league_title
+		}
+		allow = {
+			has_title_flag = elective_league_title
+			
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = tribal_league
+			}
+			if = { #Added all the laws
+            	limit = { has_dlc = "Zeus" }
+	        	add_law_w_cooldown = law_voting_power_1
+	       		add_law_w_cooldown = war_voting_power_1
+	       		add_law_w_cooldown = revoke_title_voting_power_1
+            	add_law_w_cooldown = imprison_voting_power_1
+            	add_law_w_cooldown = grant_title_voting_power_1
+            	add_law_w_cooldown = banish_voting_power_1
+            	add_law_w_cooldown = execution_voting_power_1
+            	add_law_w_cooldown = revoke_title_law_0
+            #add_law_w_cooldown = succession_voting_power_1  # Allows feudal elective in Muslim & Indian realms :)
+        	}
+        	else = {
+        	    add_law_w_cooldown = crown_authority_0
+        	}
+		}
+	}
+}

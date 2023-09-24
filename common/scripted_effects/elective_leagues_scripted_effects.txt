@@ -1,0 +1,102 @@
+#Effect when creating a new elective league
+create_league_effect = {
+    #Title Effects
+	primary_title = {
+		hidden_tooltip = {  # Hide tooltip because it would refer to old primary title
+			# TODO: if already elective, do i need sneakiness for the cooldowns?
+        }
+        if = { #adjective
+            limit = { tier = DUKE }
+            adjective = ELECTIVE_REALM_ADJECTIVE_DUKE
+        } 
+        else = {
+            adjective = "[Root.Culture.GetName]"
+        }
+        if = { #determine which succession law (tribal, feudal)
+            limit = {
+              holder_scope = {
+                  is_tribal = yes
+               }
+            }
+            add_law_w_cooldown = succ_tribal_league
+        }
+        else = {
+            add_law_w_cooldown = succ_elective_league
+        }
+        set_title_flag = elective_league_title
+	}
+
+    #Founder Effects
+    remove_character_modifier = founding_elective_league
+    prestige = 200
+    #Cofounder Effects
+    any_independent_ruler = {
+        limit = {
+            has_character_flag = invited_to_league_@ROOT
+            has_character_modifier = founding_elective_league
+        }
+        prestige = 50
+        hidden_tooltip = {
+            clr_character_flag = invited_to_league_@ROOT
+            remove_character_modifier = founding_elective_league
+            reverse_opinion = { who = PREV  modifier = opinion_cofounded }
+            opinion = { who = PREV  modifier = opinion_cofounded }
+        }
+        #Vassals get notified
+        any_vassal = {
+            letter_event = { id = ElectiveLeagues.50}
+        }
+        #Cofounder gets vassalized
+        set_defacto_liege = PREV
+    }
+
+    custom_tooltip = {
+    	text = NAPS_WITH_NEW_VASSALS
+    }
+
+    wipe_council_effect = yes
+}
+
+#Effect when somone is added to a league
+add_THIS_to_FROM_existing_league_effect = {
+    set_defacto_liege = FROM
+    remove_character_modifier = invited_to_elective_league
+    reverse_opinion = { who = FROM  modifier = opinion_joined_league }
+    custom_tooltip = {
+    	text = NAPS_WITH_JOINED_VASSAL
+    }
+}
+
+THIS_refused_FROM_league_effect = {
+    add_character_modifier = {
+        name = refused_elective_league
+        years = 6
+    }
+    reverse_opinion = { who = FROM  modifier = opinion_refused_league }
+}
+
+#Wipes the entire council
+wipe_council_effect = {
+
+    custom_tooltip = {
+        text = BYE_COUNCIL
+        hidden_tooltip = {
+            # Help both the player and AI remember that they need a new council, and allow free 'firing' of old council
+            # (This is important with Conclave "Expects a council position" opinion modifier)
+            job_chancellor = { remove_title = job_chancellor }
+            job_marshal    = { remove_title = job_marshal    }
+            job_treasurer  = { remove_title = job_treasurer  }
+            job_spymaster  = { remove_title = job_spymaster  }
+            job_spiritual  = { remove_title = job_spiritual  }
+
+            # Remove Advisor, too, if any (requires conclave dlc, king rank, empowered council)
+            any_vassal = {
+                limit = {
+                    has_minor_title = title_councilmember_king
+                }
+                remove_title = title_councilmember_king
+            }
+        }
+    }
+
+}
