@@ -417,7 +417,7 @@ decisions = {
 				factor = 1.5
 				OR = { 
 					religion = zoroastrian
-					religion = mazdaki
+					religion = mazdakism
 					religion = manichean
 					religion = khurmazta
 					religion = zun_pagan
@@ -1668,7 +1668,7 @@ decisions = {
 					has_global_flag = bogomilist_enat_cognatic_flag
 				}
 				AND = {
-					religion = mazdaki
+					religion = mazdakism
 					has_global_flag = mazdaki_enat_cognatic_flag
 				}
 			}
@@ -1733,7 +1733,7 @@ decisions = {
 					has_global_flag = bogomilist_enatic_flag
 				}
 				AND = {
-					religion = mazdaki
+					religion = mazdakism
 					has_global_flag = mazdaki_enatic_flag
 				}
 				has_religion_feature = religion_matriarchal
@@ -1851,7 +1851,7 @@ decisions = {
 					}
 				}
 				AND = {
-					religion = mazdaki
+					religion = mazdakism
 					NOR = {
 						has_global_flag = mazdaki_enat_cognatic_flag
 						has_global_flag = mazdaki_enatic_flag
@@ -3829,7 +3829,7 @@ decisions = {
 							NOT = { has_global_flag = bogomilist_seminary_flag }
 						}
 						AND = {
-							religion = mazdaki 
+							religion = mazdakism
 							NOT = { has_global_flag = mazdaki_seminary_flag }
 						}
 					}
@@ -3977,7 +3977,7 @@ decisions = {
 					has_global_flag = bogomilist_seminary_flag 
 				}
 				AND = {
-					religion = mazdaki 
+					religion = mazdakism
 					has_global_flag = mazdaki_seminary_flag 
 				}
 				AND = {
@@ -4482,7 +4482,7 @@ decisions = {
 					}
 				}
 				AND = {															
-					religion = mazdaki
+					religion = mazdakism
 					NOR = {
 						has_global_flag = mazdaki_abs_cognatic_flag
 						has_global_flag = mazdaki_enat_cognatic_flag
@@ -4536,7 +4536,7 @@ decisions = {
 					}
 				}
 				AND = {														
-					religion = mazdaki
+					religion = mazdakism
 					NOT = { has_global_flag = mazdaki_special_feature }
 					realm_character_percent = {		# 25% of characters
 						target = 0.25
@@ -4568,7 +4568,7 @@ decisions = {
 					}
 				}
 				AND = {														
-					religion = mazdaki
+					religion = mazdakism
 					NOT = { has_global_flag = mazdaki_concubines_flag }
 					realm_character_percent = {		# 50% of characters
 						target = 0.50

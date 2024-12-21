@@ -39,6 +39,9 @@ theocracy_governments = {
 		title_prefix = "temple_"
 		potential = {
 			emf_theocracy_softcoded_potential = yes
+			NOT = {
+				is_government_potential = rtp_baron_theocracy_g
+			}
 		}
 		
 		vassal_call_to_arms = {

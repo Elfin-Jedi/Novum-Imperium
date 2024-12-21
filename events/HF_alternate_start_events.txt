@@ -1646,7 +1646,7 @@ character_event = { # Alternate Start general maintenance
 			d_maronite = { set_random_coa_effect = yes }
 		}
 		if = {
-			limit = { mazdaki = { is_name_randomized = yes } }
+			limit = { mazdakism = { is_name_randomized = yes } }
 			d_mazdaki = { set_random_coa_effect = yes }
 		}
 		if = {

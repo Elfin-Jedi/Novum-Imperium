@@ -172,7 +172,7 @@ has_character_was_religion_flag_trigger = {
 		has_character_flag = character_was_karaite
 		has_character_flag = character_was_samaritan
 		has_character_flag = character_was_zoroastrian
-		has_character_flag = character_was_mazdaki
+		has_character_flag = character_was_mazdakism
 		has_character_flag = character_was_manichean
 		has_character_flag = character_was_khurmazta
 		has_character_flag = character_was_bon
@@ -212,10 +212,7 @@ has_character_was_religion_flag_trigger = {
 }
 
 religion_openly_celtic_or_reformed_trigger = {
-	OR = {
-		religion = celtic_pagan
-		religion = celtic_pagan_reformed
-	}
+	religion_group = celtic_group
 }
 
 religion_secretly_celtic_or_reformed_trigger = {
@@ -247,10 +244,7 @@ true_religion_hellenic_or_reformed_trigger = {
 }
 
 religion_openly_egyptian_or_reformed_trigger = {
-	OR = {
-		religion = egyptian_pagan
-		religion = egyptian_pagan_reformed
-	}
+	religion_group = egyptian_group
 }
 
 religion_secretly_egyptian_or_reformed_trigger = {

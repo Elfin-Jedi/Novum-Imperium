@@ -1,0 +1,137 @@
+namespace = UCP
+
+# Usurpation!
+character_event = {
+	id = UCP.55333
+	desc = EVTDESCUCP.55333
+	picture = GFX_evt_war_planning
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAUCP.55333
+		primary_title = {
+			revoke_law = war_voting_power_1
+			revoke_law = law_voting_power_1
+			disable_council_voting_on_issue = enforce_peace
+			revoke_law = revoke_title_voting_power_1
+			disable_council_voting_on_issue = revoke_title_interaction
+			revoke_law = imprison_voting_power_1
+			disable_council_voting_on_issue = imprison_character_interaction
+			revoke_law = grant_title_voting_power_1
+			disable_council_voting_on_issue = grant_landed_title_interaction
+			revoke_law = banish_voting_power_1
+			disable_council_voting_on_issue = exile_imprisoned_interaction
+			revoke_law = execution_voting_power_1
+			disable_council_voting_on_issue = execute_imprisoned_interaction
+			revoke_law = succession_voting_power_1
+			disable_council_voting_on_issue = laws
+			add_law_w_cooldown = law_voting_power_0
+			add_law_w_cooldown = war_voting_power_0
+			add_law_w_cooldown = revoke_title_voting_power_0
+			add_law_w_cooldown = imprison_voting_power_0
+			add_law_w_cooldown = grant_title_voting_power_0
+			add_law_w_cooldown = banish_voting_power_0
+			add_law_w_cooldown = imprison_voting_power_0
+			add_law_w_cooldown = execution_voting_power_0 
+			add_law_w_cooldown = succession_voting_power_0
+		}
+		add_character_modifier = {
+				name = char_dishonorable
+				duration = 3650
+		}
+	}
+	option = {
+		name = EVTOPTBUCP.55333
+		tooltip_info = intrigue	
+		trigger = { intrigue = 20 }
+		primary_title = {
+			revoke_law = war_voting_power_1
+			revoke_law = law_voting_power_1
+			disable_council_voting_on_issue = enforce_peace
+			revoke_law = revoke_title_voting_power_1
+			disable_council_voting_on_issue = revoke_title_interaction
+			revoke_law = imprison_voting_power_1
+			disable_council_voting_on_issue = imprison_character_interaction
+			revoke_law = grant_title_voting_power_1
+			disable_council_voting_on_issue = grant_landed_title_interaction
+			revoke_law = banish_voting_power_1
+			disable_council_voting_on_issue = exile_imprisoned_interaction
+			revoke_law = execution_voting_power_1
+			disable_council_voting_on_issue = execute_imprisoned_interaction
+			revoke_law = succession_voting_power_1
+			disable_council_voting_on_issue = laws
+			add_law_w_cooldown = law_voting_power_0
+			add_law_w_cooldown = war_voting_power_0
+			add_law_w_cooldown = revoke_title_voting_power_0
+			add_law_w_cooldown = imprison_voting_power_0
+			add_law_w_cooldown = grant_title_voting_power_0
+			add_law_w_cooldown = banish_voting_power_0
+			add_law_w_cooldown = imprison_voting_power_0
+			add_law_w_cooldown = execution_voting_power_0 
+			add_law_w_cooldown = succession_voting_power_0
+		}
+	}
+	option = {
+		name = EVTOPTCUCP.55333
+		tooltip_info = martial
+		trigger = { martial = 20 }
+		primary_title = {
+			revoke_law = war_voting_power_1
+			revoke_law = law_voting_power_1
+			disable_council_voting_on_issue = enforce_peace
+			revoke_law = revoke_title_voting_power_1
+			disable_council_voting_on_issue = revoke_title_interaction
+			revoke_law = imprison_voting_power_1
+			disable_council_voting_on_issue = imprison_character_interaction
+			revoke_law = grant_title_voting_power_1
+			disable_council_voting_on_issue = grant_landed_title_interaction
+			revoke_law = banish_voting_power_1
+			disable_council_voting_on_issue = exile_imprisoned_interaction
+			revoke_law = execution_voting_power_1
+			disable_council_voting_on_issue = execute_imprisoned_interaction
+			revoke_law = succession_voting_power_1
+			disable_council_voting_on_issue = laws
+			add_law_w_cooldown = law_voting_power_0
+			add_law_w_cooldown = war_voting_power_0
+			add_law_w_cooldown = revoke_title_voting_power_0
+			add_law_w_cooldown = imprison_voting_power_0
+			add_law_w_cooldown = grant_title_voting_power_0
+			add_law_w_cooldown = banish_voting_power_0
+			add_law_w_cooldown = imprison_voting_power_0
+			add_law_w_cooldown = execution_voting_power_0 
+			add_law_w_cooldown = succession_voting_power_0
+		}
+	}
+	option = {
+		name = EVTOPTDUCP.55333
+		tooltip_info = diplomacy
+		trigger = { diplomacy = 20 }
+		primary_title = {
+			revoke_law = war_voting_power_1
+			revoke_law = law_voting_power_1
+			disable_council_voting_on_issue = enforce_peace
+			revoke_law = revoke_title_voting_power_1
+			disable_council_voting_on_issue = revoke_title_interaction
+			revoke_law = imprison_voting_power_1
+			disable_council_voting_on_issue = imprison_character_interaction
+			revoke_law = grant_title_voting_power_1
+			disable_council_voting_on_issue = grant_landed_title_interaction
+			revoke_law = banish_voting_power_1
+			disable_council_voting_on_issue = exile_imprisoned_interaction
+			revoke_law = execution_voting_power_1
+			disable_council_voting_on_issue = execute_imprisoned_interaction
+			revoke_law = succession_voting_power_1
+			disable_council_voting_on_issue = laws
+			add_law_w_cooldown = law_voting_power_0
+			add_law_w_cooldown = war_voting_power_0
+			add_law_w_cooldown = revoke_title_voting_power_0
+			add_law_w_cooldown = imprison_voting_power_0
+			add_law_w_cooldown = grant_title_voting_power_0
+			add_law_w_cooldown = banish_voting_power_0
+			add_law_w_cooldown = imprison_voting_power_0
+			add_law_w_cooldown = execution_voting_power_0 
+			add_law_w_cooldown = succession_voting_power_0
+		}
+	}
+}

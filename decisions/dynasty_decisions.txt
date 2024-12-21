@@ -1163,7 +1163,10 @@ targetted_decisions = {
 		ai_check_interval = 12
 
 		from_potential = {
-			is_ruler = yes
+			OR = {
+				is_ruler = yes
+				has_landed_title = c_landless_t
+			}
 			has_regent = no
 			has_children = yes
 		}
@@ -1592,6 +1595,7 @@ targetted_decisions = {
 		potential = {
 			OR = {
 				is_ruler = yes
+				has_landed_title = c_landless_t
 				NOR = {
 					# Spouse can take them out of hiding
 					any_spouse = {
@@ -2093,7 +2097,10 @@ targetted_decisions = {
 		ai_check_interval = 12
 
 		from_potential = {
-			is_ruler = yes
+			OR = {
+				is_ruler = yes
+				has_landed_title = c_landless_t
+			}
 			has_regent = no
 		}
 

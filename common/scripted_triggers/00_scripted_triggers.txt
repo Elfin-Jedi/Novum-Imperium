@@ -888,53 +888,119 @@ has_any_lifestyle_trait = {
 has_crusade_trait_trigger = {
 	OR = {
 		AND = {
-			OR = {
-				religion = norse_pagan
-				religion = norse_pagan_reformed
-			}
+			LI_norse_pagan_trigger = yes
 			trait = valhalla_bound
 		}
 		AND = {
-			OR = {
-				religion = tengri_pagan
-				religion = tengri_pagan_reformed
-			}
+			religion_group = tengri_group
 			trait = tengri_warrior
 		}
 		AND = {
-			OR = {
-				religion = baltic_pagan
-				religion = baltic_pagan_reformed
-			}
+			religion_group = baltic_group
 			trait = romuvas_own
 		}
 		AND = {
-			OR = {
-				religion = finnish_pagan
-				religion = finnish_pagan_reformed
-			}
+			religion_group = finnish_group
 			trait = ukkos_shield
 		}
 		AND = {
-			OR = {
-				religion = aztec
-				religion = aztec_reformed
-			}
+			religion = quetzal
 			trait = eagle_warrior
 		}
 		AND = {
-			OR = {
-				religion = slavic_pagan
-				religion = slavic_pagan_reformed
-			}
+			religion_group = slavic_group
 			trait = peruns_chosen
 		}
 		AND = {
-			OR = {
-				religion = west_african_pagan
-				religion = west_african_pagan_reformed
-			}
+			religion_group = serer_group
 			trait = nyames_shield
+		}
+		AND = {
+			religion_group = sol_group
+			trait = sun_warrior
+		}
+		AND = {
+			religion_group = graecoroman_group
+			trait = hetairos
+		}
+		AND = {
+			religion_group = muslim
+			trait = mujahid
+		}
+		AND = {
+			religion_group = christian
+			trait = crusader
+		}
+		AND = {
+			religion_group = zoroastrian_group
+			trait = gondi_shahansha
+		}
+		AND = {
+			religion_group = jewish_group
+			trait = shaddai
+		}
+		AND = {
+			religion_group = mithra_group
+			trait = leo_mithras
+		}
+		AND = {
+			religion = cybele_reformed
+			trait = korybantes
+		}
+		AND = {
+			religion = ethiopian_war_reformed
+			trait = son_of_mahrem
+		}
+		AND = {
+			religion = almaqah
+			trait = mukarrib
+		}
+		AND = {
+			religion = zande_pagan_reformed
+			trait = azande
+		}
+		AND = {
+			religion = zulu_pagan_reformed
+			trait = induna
+		}
+		AND = {
+			religion = nyau
+			trait = nyau_akakairo
+		}
+		AND = {
+			religion = berber_pagan_reformed
+			trait = son_of_ifri
+		}
+		AND = {
+			OR = {
+				religion_group = bud_group
+				religion_group = chinese_group
+			}
+			trait = gongfu_warrior
+		}
+		AND = {
+			religion_group = zal_group
+			trait = dragon_knight
+		}
+		AND = {
+			religion = mani
+			trait = guardian_of_elect
+		}
+		AND = {
+			religion = mani_mithra
+			trait = seal_holder
+		}
+		AND = {
+			religion = ahriman_reformed
+			trait = warrior_of_light
+		}
+		AND = {
+			religion_group = egyptian_group
+			trait = medjay
+		}
+		AND = {
+			religion = murugan_reformed
+			trait = vel_wielder
 		}
 		AND = {
 			OR = {
@@ -2398,10 +2464,6 @@ true_religion_catholic_trigger = {
 	true_religion = catholic
 }
 
-true_religion_cathar_trigger = {
-	true_religion = cathar
-}
-
 true_religion_fraticelli_trigger = {
 	true_religion = fraticelli
 }
@@ -2424,10 +2486,6 @@ true_religion_bogomilist_trigger = {
 
 true_religion_monothelite_trigger = {
 	true_religion = monothelite
-}
-
-true_religion_iconoclast_trigger = {
-	true_religion = iconoclast
 }
 
 true_religion_paulician_trigger = {
@@ -2466,22 +2524,6 @@ true_religion_shiite_trigger = {
 	true_religion = shiite
 }
 
-true_religion_druze_trigger = {
-	true_religion = druze
-}
-
-true_religion_hurufi_trigger = {
-	true_religion = hurufi
-}
-
-true_religion_ibadi_trigger = {
-	true_religion = ibadi
-}
-
-true_religion_kharijite_trigger = {
-	true_religion = kharijite
-}
-
 true_religion_jewish_trigger = {
 	true_religion = jewish
 }
@@ -2496,10 +2538,6 @@ true_religion_karaite_trigger = {
 
 true_religion_zoroastrian_trigger = {
 	true_religion = zoroastrian
-}
-
-true_religion_mazdaki_trigger = {
-	true_religion = mazdaki
 }
 
 true_religion_manichean_trigger = {
@@ -2582,14 +2620,6 @@ true_religion_aztec_reformed_trigger = {
 	true_religion = aztec_reformed
 }
 
-true_religion_west_african_pagan_trigger = {
-	true_religion = west_african_pagan
-}
-
-true_religion_west_african_pagan_reformed_trigger = {
-	true_religion = west_african_pagan_reformed
-}
-
 true_religion_zun_pagan_trigger = {
 	true_religion = zun_pagan
 }
@@ -2610,8 +2640,220 @@ true_religion_pagan_trigger = {
 	true_religion = pagan
 }
 
+#True religion triggers
+true_religion_antinomian_trigger = {
+    true_religion = antinomian
+}	
+true_religion_aten_trigger = {
+    true_religion = aten
+}	
+true_religion_batembuzi_trigger = {
+    true_religion = batembuzi
+}	
+true_religion_bud_bahusrutiya_trigger = {
+    true_religion = bud_bahusrutiya
+}	
+true_religion_bud_mahayana_trigger = {
+    true_religion = bud_mahayana
+}	
+true_religion_cathar_trigger = {
+    true_religion = cathar
+}	
+true_religion_dionysos_trigger = {
+    true_religion = dionysos
+}	
+true_religion_donatist_trigger = {
+    true_religion = donatist
+}	
+true_religion_druze_trigger = {
+    true_religion = druze
+}	
+true_religion_erlik_trigger = {
+    true_religion = erlik
+}	
+true_religion_haruri_trigger = {
+    true_religion = haruri
+}	
+true_religion_hubal_trigger = {
+    true_religion = hubal
+}	
+true_religion_hurufi_trigger = {
+    true_religion = hurufi
+}	
+true_religion_ibadi_trigger = {
+    true_religion = ibadi
+}	
+true_religion_iconoclast_trigger = {
+    true_religion = iconoclast
+}	
+true_religion_illuyanka_trigger = {
+    true_religion = illuyanka
+}	
+true_religion_irminsul_trigger = {
+    true_religion = irminsul
+}	
+true_religion_jud_sabaoth_trigger = {
+    true_religion = jud_sabaoth
+}	
+true_religion_kharijite_trigger = {
+    true_religion = kharijite
+}	
+true_religion_mand_ruha_trigger = {
+    true_religion = mand_ruha
+}	
+true_religion_mani_ahriman_trigger = {
+    true_religion = mani_ahriman
+}	
+true_religion_mazdakism_trigger = {
+    true_religion = mazdakism
+}	
+true_religion_melkite_trigger = {
+    true_religion = melkite
+}	
+true_religion_montanist_trigger = {
+    true_religion = montanist
+}	
+true_religion_norse_war_trigger = {
+    true_religion = norse_war
+}	
+true_religion_pelagian_trigger = {
+    true_religion = pelagian
+}	
+true_religion_plato_christ_trigger = {
+    true_religion = plato_christ
+}	
+true_religion_plato_islam_trigger = {
+    true_religion = plato_islam
+}	
+true_religion_priscillian_trigger = {
+    true_religion = priscillian 
+}	
+true_religion_qarmatian_trigger = {
+    true_religion = qarmatian
+}	
+true_religion_ragnarok_trigger = {
+    true_religion = ragnarok
+}	
+true_religion_saule_trigger = {
+    true_religion = saule
+}	
+true_religion_saura_trigger = {
+    true_religion = saura
+}	
+true_religion_set_trigger = {
+    true_religion = set
+}	
+true_religion_sol_christ_trigger = {
+    true_religion = sol_christ
+}	
+true_religion_sufi_trigger = {
+    true_religion = sufi
+}	
+true_religion_tengri_ahriman_trigger = {
+    true_religion = tengri_ahriman
+}	
+true_religion_vidharma_trigger = {
+    true_religion = vidharma
+}	
+true_religion_yahyanism_trigger = {
+    true_religion = yahyanism
+}	
+true_religion_zor_angra_trigger = {
+    true_religion = zor_angra
+}
+
+true_religion_group_abrahamic_group_trigger = {
+	true_religion_group = abrahamic_group
+}
+true_religion_group_anatolian_group_trigger = {
+	true_religion_group = anatolian_group
+}
+true_religion_group_arabpagan_group_trigger = {
+	true_religion_group = arabpagan_group
+}
+true_religion_group_aztec_group_trigger = {
+	true_religion_group = aztec_group
+}
+true_religion_group_baltic_group_trigger = {
+	true_religion_group = baltic_group
+}
+true_religion_group_bantu_group_trigger = {
+	true_religion_group = bantu_group
+}
+true_religion_group_berberpagan_group_trigger = {
+	true_religion_group = berberpagan_group
+}
+true_religion_group_bud_group_trigger = {
+	true_religion_group = bud_group
+}
+true_religion_group_celtic_group_trigger = {
+	true_religion_group = celtic_group
+}
+true_religion_group_chinese_group_trigger = {
+	true_religion_group = chinese_group
+}
 true_religion_group_christian_trigger = {
 	true_religion_group = christian
+}
+true_religion_group_east_african_group_trigger = {
+	true_religion_group = east_african_group
+}
+true_religion_group_egyptian_group_trigger = {
+	true_religion_group = egyptian_group
+}
+true_religion_group_finnish_group_trigger = {
+	true_religion_group = finnish_group
+}
+true_religion_group_graecoroman_group_trigger = {
+	true_religion_group = graecoroman_group
+}
+true_religion_group_indohelen_group_trigger = {
+	true_religion_group = indohelen_group
+}
+true_religion_group_inti_group_trigger = {
+	true_religion_group = inti_group
+}
+true_religion_group_inuit_group_trigger = {
+	true_religion_group = inuit_group
+}
+true_religion_group_luwian_group_trigger = {
+	true_religion_group = luwian_group
+}
+true_religion_group_mand_group_trigger = {
+	true_religion_group = mand_group
+}
+true_religion_group_mani_group_trigger = {
+	true_religion_group = mani_group
+}
+true_religion_group_mithra_group_trigger = {
+	true_religion_group = mithra_group
+}
+true_religion_group_neoplato_group_trigger = {
+	true_religion_group = neoplato_group
+}
+true_religion_group_norsegerman_group_trigger = {
+	true_religion_group = norsegerman_group
+}
+true_religion_group_palmyranpagan_group_trigger = {
+	true_religion_group = palmyranpagan_group
+}
+true_religion_group_serer_group_trigger = {
+	true_religion_group = serer_group
+}
+true_religion_group_slavic_group_trigger = {
+	true_religion_group = slavic_group
+}
+true_religion_group_sol_group_trigger = {
+	true_religion_group = sol_group
+}
+true_religion_group_tengri_group_trigger = {
+	true_religion_group = tengri_group
+}
+true_religion_group_yazd_group_trigger = {
+	true_religion_group = yazd_group
+}
+true_religion_group_zal_group_trigger = {
+	true_religion_group = zal_group
 }
 
 true_religion_group_muslim_trigger = {
@@ -4405,8 +4647,8 @@ looting_artifact_event_religious_artifacts_trigger = {
 				NOT = { has_artifact_flag = zoroastrian }
 			}
 			trigger_else_if = {
-				limit = { ROOT = { religion = mazdaki } }
-				NOT = { has_artifact_flag = mazdaki }
+				limit = { ROOT = { religion = mazdakism } }
+				NOT = { has_artifact_flag = mazdakism }
 			}
 			trigger_else_if = {
 				limit = { ROOT = { religion = manichean } }
@@ -6282,8 +6524,8 @@ religion_openly_norse_or_reformed_trigger = {
 		text = religion_openly_norse_or_reformed_tooltip
 		hidden_trigger = {
 			OR = {
-				religion = norse_pagan
-				religion = norse_pagan_reformed
+				religion_group = norsegerman_group
+				religion_group = pagan_group
 			}
 		}
 	}
@@ -6293,10 +6535,7 @@ religion_openly_baltic_or_reformed_trigger = {
 	custom_tooltip = {
 		text = religion_openly_baltic_or_reformed_tooltip
 		hidden_trigger = {
-			OR = {
-				religion = baltic_pagan
-				religion = baltic_pagan_reformed
-			}
+			religion_group = baltic_group
 		}
 	}
 }
@@ -6305,10 +6544,7 @@ religion_openly_finnish_or_reformed_trigger = {
 	custom_tooltip = {
 		text = religion_openly_finnish_or_reformed_tooltip
 		hidden_trigger = {
-			OR = {
-				religion = finnish_pagan
-				religion = finnish_pagan_reformed
-			}
+			religion_group = finnish_group
 		}
 	}
 }
@@ -6317,10 +6553,7 @@ religion_openly_slavic_or_reformed_trigger = {
 	custom_tooltip = {
 		text = religion_openly_slavic_or_reformed_tooltip
 		hidden_trigger = {
-			OR = {
-				religion = slavic_pagan
-				religion = slavic_pagan_reformed
-			}
+			religion_group = slavic_group
 		}
 	}
 }
@@ -6329,10 +6562,7 @@ religion_openly_tengri_or_reformed_trigger = {
 	custom_tooltip = {
 		text = religion_openly_tengri_or_reformed_tooltip
 		hidden_trigger = {
-			OR = {
-				religion = tengri_pagan
-				religion = tengri_pagan_reformed
-			}
+			religion_group = tengri_group
 		}
 	}
 }
@@ -6342,8 +6572,12 @@ religion_openly_west_african_or_reformed_trigger = {
 		text = religion_openly_west_african_or_reformed_tooltip
 		hidden_trigger = {
 			OR = {
-				religion = west_african_pagan
-				religion = west_african_pagan_reformed
+				religion_group = african_group
+				religion_group = east_african_group
+				religion_group = bantu_group
+				religion_group = berberpagan_group
+				religion_group = serer_group
+				religion_group = african_pagan_group
 			}
 		}
 	}
@@ -6353,10 +6587,7 @@ religion_openly_zun_or_reformed_trigger = {
 	custom_tooltip = {
 		text = religion_openly_zun_or_reformed_tooltip
 		hidden_trigger = {
-			OR = {
-				religion = zun_pagan
-				religion = zun_pagan_reformed
-			}
+			religion_group = sol_group
 		}
 	}
 }
@@ -6366,8 +6597,10 @@ religion_openly_bon_or_reformed_trigger = {
 		text = religion_openly_bon_or_reformed_tooltip
 		hidden_trigger = {
 			OR = {
-				religion = bon
-				religion = bon_reformed
+				religion_group = chinese_group
+				religion_group = eastern_folk_group
+				religion_group = asian_religion_group
+				religion_group = austronesian_group
 			}
 		}
 	}
@@ -6377,8 +6610,12 @@ religion_openly_hellenic_or_reformed_trigger = {
 		text = religion_openly_hellenic_or_reformed_tooltip
 		hidden_trigger = {
 			OR = {
-				religion = hellenic_pagan
-				religion = hellenic_pagan_reformed
+				religion_group = anatolian_group
+				religion_group = graecoroman_group
+				religion_group = indohelen_group
+				religion_group = mithra_group
+				religion_group = neoplato_group
+				religion_group = zal_group
 			}
 		}
 	}
@@ -6389,8 +6626,10 @@ religion_openly_aztec_or_reformed_trigger = {
 		text = religion_openly_aztec_or_reformed_tooltip
 		hidden_trigger = {
 			OR = {
-				religion = aztec
-				religion = aztec_reformed
+				religion_group = aztec_group
+				religion_group = inti_group
+				religion_group = inuit_group
+				religion_group = native_american_group
 			}
 		}
 	}
@@ -6398,9 +6637,8 @@ religion_openly_aztec_or_reformed_trigger = {
 
 has_dharmic_religion_trigger = {
 	OR = {
-		religion = hindu
-		religion = buddhist
-		religion = jain
+		religion_group = indian_group
+		religion_group = bud_group
 	}
 }
 
@@ -6807,7 +7045,7 @@ likes_zoroastrians = {
 	religion = zoroastrian
 }
 likes_mazdakis = {
-	religion = mazdaki
+	religion = mazdakism
 }
 likes_manicheans = {
 	religion = manichean

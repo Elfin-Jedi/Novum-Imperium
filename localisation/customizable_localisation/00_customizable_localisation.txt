@@ -2981,7 +2981,7 @@ defined_text = {
 				is_christian_secret_religious_society_member_trigger = yes
 				society_member_of = secret_religious_society_yazidi
 				society_member_of = secret_religious_society_druze
-				society_member_of = secret_religious_society_mazdaki
+				society_member_of = secret_religious_society_mazdakism
 				society_member_of = secret_religious_society_manichean
 			}
 			NOT = {
@@ -3168,7 +3168,7 @@ defined_text = {
 				is_christian_secret_religious_society_member_trigger = yes 
 				society_member_of = secret_religious_society_yazidi
 				society_member_of = secret_religious_society_druze
-				society_member_of = secret_religious_society_mazdaki
+				society_member_of = secret_religious_society_mazdakism
 				society_member_of = secret_religious_society_manichean
 			}
 			NOT = {
@@ -4380,12 +4380,12 @@ defined_text = {
         localisation_key = String_Gathas
         trigger = { 
             true_religion_group_zoroastrian_group_trigger = yes 
-            NOT = { true_religion_mazdaki_trigger = yes }
+            NOT = { true_religion_mazdakism_trigger = yes }
         }
     }
     text = { 
         localisation_key = String_Great_Secret
-        trigger = { true_religion_mazdaki_trigger = yes }
+        trigger = { true_religion_mazdakism_trigger = yes }
     }
     text = { 
         localisation_key = String_Mahabharata
@@ -17343,8 +17343,8 @@ defined_text = {
 						religion = apostolic
 						religion = nestorian
 						religion = zoroastrian
-						religion = mazdaki
-						religion = zurvanist
+						religion = mazdakism
+						religion = zurvanism
 						religion = manichean
 						religion = khurmazta
 						religion = jewish
@@ -17374,8 +17374,8 @@ defined_text = {
 						religion = apostolic
 						religion = nestorian
 						religion = zoroastrian
-						religion = mazdaki
-						religion = zurvanist
+						religion = mazdakism
+						religion = zurvanism
 						religion = manichean
 						religion = khurmazta
 						religion = jewish
@@ -17413,8 +17413,8 @@ defined_text = {
 						religion = apostolic
 						religion = nestorian
 						religion = zoroastrian
-						religion = mazdaki
-						religion = zurvanist
+						religion = mazdakism
+						religion = zurvanism
 						religion = manichean
 						religion = khurmazta
 						religion = jewish
@@ -17437,8 +17437,8 @@ defined_text = {
 						religion = apostolic
 						religion = nestorian
 						religion = zoroastrian
-						religion = mazdaki
-						religion = zurvanist
+						religion = mazdakism
+						religion = zurvanism
 						religion = manichean
 						religion = khurmazta
 						religion = jewish

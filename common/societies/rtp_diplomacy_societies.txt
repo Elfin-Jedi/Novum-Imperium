@@ -40,56 +40,12 @@ rtp_diplomacy_civilized = {
 	}
 
 	show_society = {
-		OR = {
-			religion_group = christian
-			religion_group = muslim
-			religion_group = jewish_group
-			religion_group = zoroastrian_group
-			religion_group = indian_group
-			religion = norse_pagan_reformed
-			religion = zun_pagan_reformed
-			religion = hellenic_pagan_reformed
-			religion = aztec_reformed
-			religion = finnish_pagan_reformed
-			religion = west_african_pagan_reformed
-			religion = slavic_pagan_reformed
-			religion = baltic_pagan_reformed
-			religion = tengri_pagan_reformed
-			religion = bon_reformed
-			religion = bori
-			religion = a_tag_roog_reformed
-			religion = amazigh_reformed
-			religion = celtic_pagan_reformed
-			religion = britannic_pagan
-			religion = egyptian_pagan_reformed
-		}
+		is_organized_religion_trigger = yes
 	}
 
 	potential = {
 		lower_tier_than = KING
-		OR = {
-			religion_group = christian
-			religion_group = muslim
-			religion_group = jewish_group
-			religion_group = zoroastrian_group
-			religion_group = indian_group
-			religion = norse_pagan_reformed
-			religion = zun_pagan_reformed
-			religion = hellenic_pagan_reformed
-			religion = aztec_reformed
-			religion = finnish_pagan_reformed
-			religion = west_african_pagan_reformed
-			religion = slavic_pagan_reformed
-			religion = baltic_pagan_reformed
-			religion = tengri_pagan_reformed
-			religion = bon_reformed
-			religion = bori
-			religion = a_tag_roog_reformed
-			religion = amazigh_reformed
-			religion = celtic_pagan_reformed
-			religion = britannic_pagan
-			religion = egyptian_pagan_reformed
-		}
+		is_organized_religion_trigger = yes
 	}
 	
 	society_rank = {
@@ -234,29 +190,7 @@ rtp_diplomacy_civilized = {
 			lower_tier_than = KING
 			rtp_is_capable_adult = yes
 			is_in_society = no
-			OR = {
-				religion_group = christian
-				religion_group = muslim
-				religion_group = jewish_group
-				religion_group = zoroastrian_group
-				religion_group = indian_group
-				religion = norse_pagan_reformed
-				religion = zun_pagan_reformed
-				religion = hellenic_pagan_reformed
-				religion = aztec_reformed
-				religion = finnish_pagan_reformed
-				religion = west_african_pagan_reformed
-				religion = slavic_pagan_reformed
-				religion = baltic_pagan_reformed
-				religion = tengri_pagan_reformed
-				religion = bon_reformed
-				religion = bori
-				religion = a_tag_roog_reformed
-				religion = amazigh_reformed
-				religion = celtic_pagan_reformed
-				religion = britannic_pagan
-				religion = egyptian_pagan_reformed
-			}
+			is_organized_religion_trigger = yes
 		}
 	}
 }
@@ -297,56 +231,14 @@ rtp_diplomacy_pagan = {
 	}
 
 	show_society = {
-		OR = {
-			religion = norse_pagan
-			religion = zun_pagan
-			religion = hellenic_pagan
-			religion = aztec
-			religion = finnish_pagan
-			religion = west_african_pagan
-			religion = slavic_pagan
-			religion = baltic_pagan
-			religion = tengri_pagan
-			religion = bon
-			religion = a_tag_roog
-			religion = amazigh
-			religion = titan_pagan
-			religion = promethean_pagan
-			religion = celtic_pagan
-			religion = egyptian_pagan
-			religion = aten_pagan
-			religion = hereclemasculist_pagan
-			religion = vieti_mithras_pagan
-			religion = britannic_hyperborean_pagan
-			religion = romist_pagan
-		}
+		novum_imperium_is_pagan = yes
+		is_organized_religion_trigger = no
 	}
 
 	potential = {
 		lower_tier_than = KING
-		OR = {
-			religion = norse_pagan
-			religion = zun_pagan
-			religion = hellenic_pagan
-			religion = aztec
-			religion = finnish_pagan
-			religion = west_african_pagan
-			religion = slavic_pagan
-			religion = baltic_pagan
-			religion = tengri_pagan
-			religion = bon
-			religion = a_tag_roog
-			religion = amazigh
-			religion = titan_pagan
-			religion = promethean_pagan
-			religion = celtic_pagan
-			religion = egyptian_pagan
-			religion = aten_pagan
-			religion = hereclemasculist_pagan
-			religion = vieti_mithras_pagan
-			religion = britannic_hyperborean_pagan
-			religion = romist_pagan
-		}
+		novum_imperium_is_pagan = yes
+		is_organized_religion_trigger = no
 	}
 	
 	society_rank = {
@@ -491,29 +383,8 @@ rtp_diplomacy_pagan = {
 			lower_tier_than = KING
 			rtp_is_capable_adult = yes
 			is_in_society = no
-			OR = {
-				religion = norse_pagan
-				religion = zun_pagan
-				religion = hellenic_pagan
-				religion = aztec
-				religion = finnish_pagan
-				religion = west_african_pagan
-				religion = slavic_pagan
-				religion = baltic_pagan
-				religion = tengri_pagan
-				religion = bon
-				religion = a_tag_roog
-				religion = amazigh
-				religion = titan_pagan
-				religion = promethean_pagan
-				religion = celtic_pagan
-				religion = egyptian_pagan
-				religion = aten_pagan
-				religion = hereclemasculist_pagan
-				religion = vieti_mithras_pagan
-				religion = britannic_hyperborean_pagan
-				religion = romist_pagan
-			}
+			novum_imperium_is_pagan = yes
+			is_organized_religion_trigger = no
 		}
 	}
 }

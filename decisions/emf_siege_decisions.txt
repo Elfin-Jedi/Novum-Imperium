@@ -53,9 +53,12 @@ targetted_decisions = {
 		}
 		allow = {
 			NOT = { trait = in_hiding }
-			capital_holding = {
-				has_siege = no
-				is_occupied = no
+			OR = {
+				rtp_is_landless = yes
+				capital_holding = {
+					has_siege = no
+					is_occupied = no
+				}
 			}
 		}
 		effect = {

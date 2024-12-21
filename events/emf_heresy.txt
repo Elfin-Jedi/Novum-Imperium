@@ -1514,7 +1514,7 @@ province_event = {
 			random_traits = yes
 			dynasty = 100639 #Khorramdin
 			name = "Babak"
-			religion = mazdaki
+			religion = mazdakism
 			culture = persian
 			female = no
 			age = 24
@@ -1858,7 +1858,7 @@ narrative_event = {
 			limit = {
 				in_revolt = no
 				pf_war_trait_trigger = no
-				religion = mazdaki
+				religion = mazdakism
 				capital_holding = { is_holy_site = ROOT }
 				prisoner = no
 				is_incapable = no
@@ -1873,7 +1873,7 @@ narrative_event = {
 			limit = {
 				in_revolt = no
 				pf_war_trait_trigger = no
-				religion = mazdaki
+				religion = mazdakism
 				capital_holding = { holding_type = temple }
 				prisoner = no
 				is_incapable = no
@@ -1894,7 +1894,7 @@ narrative_event = {
 		create_random_priest = {
 			random_traits = yes
 			dynasty = random
-			religion = mazdaki
+			religion = mazdakism
 			culture = ROOT
 			age = 40
 			health = 7
@@ -1929,13 +1929,13 @@ narrative_event = {
 	option = {
 		name = I_SEE
 		trigger = {
-			NOT = { religion = mazdaki }
+			NOT = { religion = mazdakism }
 		}
 		event_target:new_mazdaki_leader = { }
 	}
 	option = {
 		name = EVTOPTA_emf_heresy_258
-		trigger = { religion = mazdaki }
+		trigger = { religion = mazdakism }
 		event_target:new_mazdaki_leader = { }
 	}
 }
@@ -1966,7 +1966,7 @@ character_event = {
 	option = {
 		name = EVTOPTA_emf_heresy_259
 		if = {
-			limit = { religion = mazdaki }
+			limit = { religion = mazdakism }
 			add_character_modifier = {
 				name = patron_discernment
 				duration = -1
@@ -1976,7 +1976,7 @@ character_event = {
 	option = {
 		name = EVTOPTB_emf_heresy_259
 		if = {
-			limit = { religion = mazdaki }
+			limit = { religion = mazdakism }
 			add_character_modifier = {
 				name = patron_understanding
 				duration = -1
@@ -1986,7 +1986,7 @@ character_event = {
 	option = {
 		name = EVTOPTC_emf_heresy_259
 		if = {
-			limit = { religion = mazdaki }
+			limit = { religion = mazdakism }
 			add_character_modifier = {
 				name = patron_preservation
 				duration = -1
@@ -1996,7 +1996,7 @@ character_event = {
 	option = {
 		name = EVTOPTD_emf_heresy_259
 		if = {
-			limit = { religion = mazdaki }
+			limit = { religion = mazdakism }
 			add_character_modifier = {
 				name = patron_joy
 				duration = -1

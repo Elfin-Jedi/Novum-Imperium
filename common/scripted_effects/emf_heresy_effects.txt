@@ -1788,7 +1788,7 @@ emf_zoroastrian_conversion = {
 		75 = {
 			modifier = {
 				factor = 0
-				religion = mazdaki
+				religion = mazdakism
 			}
 			modifier = {
 				factor = 0
@@ -1798,12 +1798,12 @@ emf_zoroastrian_conversion = {
 					religion = yazidi
 				}
 			}
-			religion = mazdaki
+			religion = mazdakism
 		}
 		50 = {
 			modifier = {
 				factor = 0
-				religion = zurvanist
+				religion = zurvanism
 			}
 			modifier = {
 				factor = 0
@@ -1813,7 +1813,7 @@ emf_zoroastrian_conversion = {
 					religion = yazidi
 				}
 			}
-			religion = zurvanist
+			religion = zurvanism
 		}
 		75 = {
 			modifier = {
@@ -1824,8 +1824,8 @@ emf_zoroastrian_conversion = {
 				factor = 0.25
 				OR = {
 					religion = zoroastrian
-					religion = mazdaki
-					religion = zurvanist
+					religion = mazdakism
+					religion = zurvanism
 					religion = yazidi
 				}
 			}
@@ -1858,8 +1858,8 @@ emf_zoroastrian_conversion = {
 				factor = 0
 				OR = {
 					religion = zoroastrian
-					religion = mazdaki
-					religion = zurvanist
+					religion = mazdakism
+					religion = zurvanism
 					religion = yazidi
 				}
 			}

@@ -8304,7 +8304,7 @@ character_event = {
 			OR = {
 				religion_group = zoroastrian_group
 				not = { religion = manichean }
-				not = { religion = mazdaki }
+				not = { religion = mazdakism }
 			}
 		}
 		set_character_flag = attending_sadah
@@ -8325,7 +8325,7 @@ character_event = {
 		trigger = {
 			NOT = { religion_group = zoroastrian_group }
 				not = { religion = manichean }
-				not = { religion = mazdaki }
+				not = { religion = mazdakism }
 		}
 		FROM = {
 			character_event = { id = 39822 days = 5 tooltip = DIPLOWINDOW_REJECT }

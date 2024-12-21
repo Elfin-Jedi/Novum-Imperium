@@ -48,7 +48,13 @@ warrior_lodge_ws_mazdan = {
 		}
 		OR = {	
 			AND = {
-				religion_group = zoroastrian_group
+				OR = {
+					religion_group = zoroastrian_group
+					religion_group = mand_group
+					religion_group = mani_group
+					religion_group = yazd_group
+					religion_group = arabpagan_group
+				}
 				is_heretic = no # Cannot be a Mazdan heretic anymore
 			}
 			AND = {
@@ -63,7 +69,13 @@ warrior_lodge_ws_mazdan = {
 				}
 				NOT = { trait = zealous }
 				NAND = {
-					religion_group = zoroastrian_group
+					OR = {
+						religion_group = zoroastrian_group
+						religion_group = mand_group
+						religion_group = mani_group
+						religion_group = yazd_group
+						religion_group = arabpagan_group
+					}
 					is_heretic = yes # Cannot be a Mazdan heretic anymore
 				}
 			}
@@ -73,7 +85,13 @@ warrior_lodge_ws_mazdan = {
 	show_society = {
 		OR = {
 			#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
-			religion_group = zoroastrian_group
+			OR = {
+				religion_group = zoroastrian_group
+				religion_group = mand_group
+				religion_group = mani_group
+				religion_group = yazd_group
+				religion_group = arabpagan_group
+			}
 			AND = {
 				#You are of a religion that doesn't match *any* warrior lodge
 				has_religion_matching_available_warrior_lodge_trigger = no
@@ -86,7 +104,13 @@ warrior_lodge_ws_mazdan = {
 				}
 			}
 			NOT = { #Hide if: you don't have a religion that corresponds to this lodge, but there is another society available to you already
-				religion_group = zoroastrian_group
+				OR = {
+					religion_group = zoroastrian_group
+					religion_group = mand_group
+					religion_group = mani_group
+					religion_group = yazd_group
+					religion_group = arabpagan_group
+				}
 				has_religion_matching_available_warrior_lodge_trigger = yes
 			}
 			#Always show if: You are already a member. Duh.
@@ -97,11 +121,23 @@ warrior_lodge_ws_mazdan = {
 	potential = { #if you change religion or become zealous while NOT Mazdan, you are kicked out
 		OR = {
 			AND = {
-				religion_group = zoroastrian_group
+				OR = {
+					religion_group = zoroastrian_group
+					religion_group = mand_group
+					religion_group = mani_group
+					religion_group = yazd_group
+					religion_group = arabpagan_group
+				}
 				is_heretic = no # Cannot be a Mazdan heretic anymore
 			}
 			AND = {
-				NOT = { religion_group = zoroastrian_group }
+				NOR = {
+					religion_group = zoroastrian_group
+					religion_group = mand_group
+					religion_group = mani_group
+					religion_group = yazd_group
+					religion_group = arabpagan_group
+				}
 				NOT = { trait = zealous }
 			}
 		}
@@ -523,12 +559,12 @@ warrior_lodge_ws_mazdan = {
 	    trigger = {
 			ai = yes
 	    	controls_religion = no
-		   	religion_group = zoroastrian_group
-			OR = {
-				religion = zoroastrian
-				religion = mazdaki
-				religion = zurvanist
-				religion = khurmazta
+		   	OR = {
+				religion_group = zoroastrian_group
+				religion_group = mand_group
+				religion_group = mani_group
+				religion_group = yazd_group
+				religion_group = arabpagan_group
 			}
 			is_heretic = no # Cannot be a Mazdan heretic anymore
 			is_adult = yes
@@ -599,6 +635,9 @@ warrior_lodge_ws_eastern = {
 		}
 		OR = {
 			religion_group = indian_group
+			religion_group = bud_group
+			religion_group = asian_religion_group
+			religion_group = austronesian_group
 			AND = {
 				custom_tooltip = {
 					text = society_has_at_least_10_members_tt
@@ -618,19 +657,41 @@ warrior_lodge_ws_eastern = {
 		OR = {
 			#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
 			religion_group = indian_group
+			religion_group = bud_group
+			religion_group = asian_religion_group
+			religion_group = austronesian_group
 			AND = {
 				#You are of a religion that doesn't match *any* warrior lodge
 				has_religion_matching_available_warrior_lodge_trigger = no
 				
 				OR = {
 					#You have neighbors, etc, of the correct religion...
-					any_vassal = { religion_group = indian_group }
-					any_liege = { religion_group = indian_group }
+					any_vassal = {
+						OR = {
+							religion_group = indian_group
+							religion_group = bud_group
+							religion_group = asian_religion_group
+							religion_group = austronesian_group
+						}
+					}
+					any_liege = {
+						OR = {
+							religion_group = indian_group
+							religion_group = bud_group
+							religion_group = asian_religion_group
+							religion_group = austronesian_group
+						}	
+					}
 					any_neighbor_independent_ruler = { religion_group = indian_group }
 				}
 			}
 			NOT = { #Hide if: you don't have a religion that corresponds to this lodge, but there is another society available to you already
-				religion_group = indian_group
+				OR = {
+					religion_group = indian_group
+					religion_group = bud_group
+					religion_group = asian_religion_group
+					religion_group = austronesian_group
+				}
 				has_religion_matching_available_warrior_lodge_trigger = yes
 			}
 			#Always show if: You are already a member. Duh.
@@ -641,8 +702,16 @@ warrior_lodge_ws_eastern = {
 	potential = { #if you change religion or become zealous while NOT Eastern, you are kicked out
 		OR = {
 			religion_group = indian_group
+			religion_group = bud_group
+			religion_group = asian_religion_group
+			religion_group = austronesian_group
 			AND = {
-				NOT = { religion_group = indian_group }
+				NOR = {
+					religion_group = indian_group
+					religion_group = bud_group
+					religion_group = asian_religion_group
+					religion_group = austronesian_group
+				}
 				NOT = { trait = zealous }
 			}
 		}
@@ -1092,7 +1161,12 @@ warrior_lodge_ws_eastern = {
 	    trigger = {
 			ai = yes
 	    	controls_religion = no
-		   	religion_group = indian_group
+			OR = {
+				religion_group = indian_group
+				religion_group = bud_group
+				religion_group = asian_religion_group
+				religion_group = austronesian_group
+			}
 			is_adult = yes
 			is_in_society = no
 			OR = {
@@ -2210,7 +2284,12 @@ warrior_lodge_ws_jewish = {
 		}
 		OR = {
 			AND = {
-				religion_group = jewish_group
+				OR = {
+					religion_group = jewish_group
+					religion_group = abrahamic_group
+					religion_group = luwian_group
+					religion_group = palmyranpagan_group
+				}
 				is_heretic = no # Cannot be a Jewish heretic anymore
 			}
 			AND = {
@@ -2225,7 +2304,12 @@ warrior_lodge_ws_jewish = {
 				}
 				NOT = { trait = zealous }
 				NAND = {
-					religion_group = jewish_group
+					OR = {
+						religion_group = jewish_group
+						religion_group = abrahamic_group
+						religion_group = luwian_group
+						religion_group = palmyranpagan_group
+					}
 					is_heretic = yes # Cannot be a Jewish heretic anymore
 				}
 			}
@@ -2236,19 +2320,48 @@ warrior_lodge_ws_jewish = {
 		OR = {
 			#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
 			religion_group = jewish_group
+			religion_group = abrahamic_group
+			religion_group = luwian_group
+			religion_group = palmyranpagan_group
 			AND = {
 				#You are of a religion that doesn't match *any* warrior lodge
 				has_religion_matching_available_warrior_lodge_trigger = no
 				
 				OR = {
 					#You have neighbors, etc, of the correct religion...
-					any_vassal = { religion_group = jewish_group }
-					any_liege = { religion_group = jewish_group }
-					any_neighbor_independent_ruler = { religion_group = jewish_group }
+					any_vassal = {
+						OR = {
+							religion_group = jewish_group
+							religion_group = abrahamic_group
+							religion_group = luwian_group
+							religion_group = palmyranpagan_group
+						}
+					}
+					any_liege = {
+						OR = {
+							religion_group = jewish_group
+							religion_group = abrahamic_group
+							religion_group = luwian_group
+							religion_group = palmyranpagan_group
+						}
+					}
+					any_neighbor_independent_ruler = {
+						OR = {
+							religion_group = jewish_group
+							religion_group = abrahamic_group
+							religion_group = luwian_group
+							religion_group = palmyranpagan_group
+						}
+					}
 				}
 			}
 			NOT = { #Hide if: you don't have a religion that corresponds to this lodge, but there is another society available to you already
-				religion_group = jewish_group
+				OR = {
+					religion_group = jewish_group
+					religion_group = abrahamic_group
+					religion_group = luwian_group
+					religion_group = palmyranpagan_group
+				}
 				has_religion_matching_available_warrior_lodge_trigger = yes
 			}
 			#Always show if: You are already a member. Duh.
@@ -2259,11 +2372,23 @@ warrior_lodge_ws_jewish = {
 	potential = { #if you change religion or become zealous while NOT Mazdan, you are kicked out
 		OR = {
 			AND = {
-				religion_group = jewish_group
+				OR = {
+					religion_group = jewish_group
+					religion_group = abrahamic_group
+					religion_group = luwian_group
+					religion_group = palmyranpagan_group
+				}
 				is_heretic = no # Cannot be a Jewish heretic anymore
 			}
 			AND = {
-				NOT = { religion_group = jewish_group }
+				NOT = {
+					OR = {
+						religion_group = jewish_group
+						religion_group = abrahamic_group
+						religion_group = luwian_group
+						religion_group = palmyranpagan_group
+					}	
+				}
 				NOT = { trait = zealous }
 			}
 		}
@@ -2653,7 +2778,12 @@ warrior_lodge_ws_jewish = {
 	    trigger = {
 			ai = yes
 	    	controls_religion = no
-		   	religion_group = jewish_group
+		   	OR = {
+				religion_group = jewish_group
+				religion_group = abrahamic_group
+				religion_group = luwian_group
+				religion_group = palmyranpagan_group
+			}
 			is_heretic = no # Cannot be a Jewish heretic anymore
 			is_adult = yes
 			is_in_society = no

@@ -94,7 +94,7 @@ character_event = {
 					}
 				}				
 			}
-			else_if = {
+			else_if {
 				limit = {
 					father = { any_owned_bloodline = { has_bloodline_flag = is_ebl_bloodline } }
 				}
@@ -113,7 +113,7 @@ character_event = {
 				}
 	
 			}
-			else_if = {
+			else_if {
 				limit = {
 					mother = { any_owned_bloodline = { has_bloodline_flag = is_ebl_bloodline } }
 				}

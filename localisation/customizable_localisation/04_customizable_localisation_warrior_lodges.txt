@@ -151,6 +151,7 @@ defined_text = { #Used in HFP.11028 (battle event)
 		trigger = { society_member_of = warrior_lodge_ws_jewish }
 		localisation_key = string_jewish_symbol
 	}
+	text = {
         trigger = { society_member_of = warrior_lodge_celtic }
         localisation_key = string_celtic_symbol
     }

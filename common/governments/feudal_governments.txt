@@ -706,6 +706,7 @@ feudal_governments = {
 					primary_title = { has_title_flag = chinese_imperial_government_preserve }
 				}
 			}
+			higher_real_tier_than = BARON
 			is_patrician = no
 			NOT = { primary_title = { has_title_flag = viceroy_exemption } }
 			OR = {
@@ -819,6 +820,7 @@ feudal_governments = {
 					primary_title = { has_title_flag = chinese_imperial_government_preserve }
 				}
 			}
+			higher_real_tier_than = BARON
 			is_patrician = no
 			NOT = { primary_title = { has_title_flag = viceroy_exemption } }
 			OR = {
@@ -939,6 +941,7 @@ feudal_governments = {
 					primary_title = { has_title_flag = chinese_imperial_government_preserve }
 				}
 			}
+			higher_real_tier_than = BARON
 			is_patrician = no
 			NOT = { primary_title = { has_title_flag = viceroy_exemption } }
 			OR = {
@@ -1053,6 +1056,7 @@ feudal_governments = {
 					primary_title = { has_title_flag = chinese_imperial_government_preserve }
 				}
 			}
+			higher_real_tier_than = BARON
 			is_patrician = no
 			NOT = { primary_title = { has_title_flag = viceroy_exemption } }
 			OR = {
@@ -1133,6 +1137,7 @@ feudal_governments = {
 				emf_is_chinese_imperial_culture = yes
 				primary_title = { has_title_flag = chinese_imperial_government_preserve }
 			}
+			higher_real_tier_than = BARON
 			is_patrician = no
 		}
 		
@@ -1321,10 +1326,11 @@ feudal_governments = {
 		frame_suffix = "_republic"
 		title_prefix = "city_"
 		potential = {
-	    NOT = { government = merchant_republic_government }
-	    NOT = { is_government_potential = merchant_republic_government }
-        NOT = {tier = baron}
-		NAND = {
+			NOT = { government = merchant_republic_government }
+			NOT = { is_government_potential = merchant_republic_government }
+			NOT = { is_government_potential = rtp_baron_republic_g }
+			NOT = {tier = baron}
+			NAND = {
 				controls_religion = yes
 				can_head_religion_trigger = no
 			}
@@ -1344,7 +1350,7 @@ feudal_governments = {
 		can_build_tribal = no        
 	}
 
-   playable_theocracy_government = {
+	playable_theocracy_government = {
 		preferred_holdings = { TEMPLE }
 		allowed_holdings = {
 			TEMPLE
@@ -1369,6 +1375,7 @@ feudal_governments = {
 		potential = {
 			NOT = {	religion_group = muslim }
 			is_patrician = no
+			NOT = { is_government_potential = rtp_baron_theocracy_g }
             NOT = {	tier = baron }
 
 		}
