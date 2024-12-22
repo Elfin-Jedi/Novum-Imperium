@@ -1283,12 +1283,8 @@ culture =
 	}
 }
 #AZTECS
-culture =
-{
-	religion = {
-		"aztec"		
-		"aztec_reformed"	
-	}
+culture = {
+	religion_group = aztec group
 
 	templates = { 
 		"coa_plain_aztec:1"
@@ -2946,12 +2942,10 @@ culture = {
 
 #tENGRI AND bON
 culture = {
+	religion_group = "chinese_group"
 	religion = {
 		"tengri_pagan_reformed"
 		"tengri_pagan"
-		"bon"
-		"bon_reformed"
-		"britannic_hyperborean_pagan"
 	}
 	
 	templates = { 
@@ -3606,11 +3600,14 @@ culture =
 }
 
 culture = {
+	religion_group = indian_group
+	religion_group = bud_group
 	religion = {
-		"buddhist"
-		"hindu"
-		"jain"
-		"taoist"
+		"indoh_bud"
+		"tengri_bud"
+		"tengri_bud_reformed"
+		"indoh_bud"
+		"indoh_hindu"
 	}
 	
 	templates = { 

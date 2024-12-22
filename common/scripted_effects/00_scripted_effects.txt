@@ -38598,10 +38598,122 @@ stable_attribute_improvement_effect = {
 add_sympathy_for_religion_effect = {
 	if = {
 		limit = {
+			religion_group = abrahamic_group
+		}
+		ROOT = {
+			add_trait = sympathy_abrahamics
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = anatolian_group
+		}
+		ROOT = {
+			add_trait = sympathy_anatolians
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = arabpagan_group
+		}
+		ROOT = {
+			add_trait = sympathy_arabpagans
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = aztec_group
+		}
+		ROOT = {
+			add_trait = sympathy_aztecs
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = baltic_group
+		}
+		ROOT = {
+			add_trait = sympathy_baltics
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = bantu_group
+		}
+		ROOT = {
+			add_trait = sympathy_bantus
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = berberpagan_group
+		}
+		ROOT = {
+			add_trait = sympathy_berbers
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = bud_group
+		}
+		ROOT = {
+			add_trait = sympathy_buddhists
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = celtic_group
+		}
+		ROOT = {
+			add_trait = sympathy_celtics
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = chinese_group
+		}
+		ROOT = {
+			add_trait = sympathy_chinese
+		}
+	}
+	else_if = {
+		limit = {
 			religion_group = christian
 		}
 		ROOT = {
 			add_trait = sympathy_christendom
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = east_african_group
+		}
+		ROOT = {
+			add_trait = sympathy_east_africans
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = egyptian_group
+		}
+		ROOT = {
+			add_trait = sympathy_egyptian
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = finnish_group
+		}
+		ROOT = {
+			add_trait = sympathy_finnish
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = graecoroman_group
+		}
+		ROOT = {
+			add_trait = sympathy_graecoroman
 		}
 	}
 	else_if = {
@@ -38614,10 +38726,26 @@ add_sympathy_for_religion_effect = {
 	}
 	else_if = {
 		limit = {
-			religion_group = muslim
+			religion_group = indohelen_group
 		}
 		ROOT = {
-			add_trait = sympathy_islam
+			add_trait = sympathy_indohellens
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = inti_group
+		}
+		ROOT = {
+			add_trait = sympathy_intis
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = inuit_group
+		}
+		ROOT = {
+			add_trait = sympathy_inuit
 		}
 	}
 	else_if = {
@@ -38630,10 +38758,122 @@ add_sympathy_for_religion_effect = {
 	}
 	else_if = {
 		limit = {
+			religion_group = luwian_group
+		}
+		ROOT = {
+			add_trait = sympathy_luwians
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = mand_group
+		}
+		ROOT = {
+			add_trait = sympathy_mande
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = mani_group
+		}
+		ROOT = {
+			add_trait = sympathy_manichaeans
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = mithra_group
+		}
+		ROOT = {
+			add_trait = sympathy_mithraics
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = muslim
+		}
+		ROOT = {
+			add_trait = sympathy_islam
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = neoplato_group
+		}
+		ROOT = {
+			add_trait = sympathy_platonics
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = norsegerman_group
+		}
+		ROOT = {
+			add_trait = sympathy_nordic
+		}
+	}
+	else_if = {
+		limit = {
 			religion_group = pagan_group
 		}
 		ROOT = {
 			add_trait = sympathy_pagans
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = palmyranpagan_group
+		}
+		ROOT = {
+			add_trait = sympathy_palmyrans
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = serer_group
+		}
+		ROOT = {
+			add_trait = sympathy_sererics
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = slavic_group
+		}
+		ROOT = {
+			add_trait = sympathy_slavics
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = sol_group
+		}
+		ROOT = {
+			add_trait = sympathy_sol
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = tengri_group
+		}
+		ROOT = {
+			add_trait = sympathy_tengri
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = yazd_group
+		}
+		ROOT = {
+			add_trait = sympathy_yazd
+		}
+	}
+	else_if = {
+		limit = {
+			religion_group = zal_group
+		}
+		ROOT = {
+			add_trait = sympathy_zal
 		}
 	}
 	else_if = {

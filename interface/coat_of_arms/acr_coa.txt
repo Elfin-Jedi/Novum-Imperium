@@ -1,13 +1,10 @@
 culture = {
-	religion = {
-		"hellenic_pagan"
-		"hellenic_pagan_reformed"
-		"titan_pagan"
-		"promethean_pagan"
-		"vieti_mithras_pagan"
-		"hereclemasculist_pagan"
-		"romist_pagan"
-	}
+	religion_group = anatolian_group
+	religion_group = graecoroman_group
+	religion_group = indohelen_group
+	religion_group = mithra_group
+	religion_group = neoplato_group
+	religion_group = zal_group
 	
 	templates = { 
 		"coa_plain_hellenic:1"
@@ -238,11 +235,7 @@ culture = {
 }
 
 culture = {
-	religion = {
-		"egyptian_pagan"
-		"egyptian_pagan_reformed"
-		"aten_pagan"
-	}
+	religion_group = egyptian_group
 	
 	templates = { 
 		"coa_plain_kemetic:1"
@@ -420,11 +413,7 @@ culture = {
 }
 
 culture = {
-	religion = {
-		"celtic_pagan"
-		"celtic_pagan_reformed"
-		"britannic_pagan"
-	}
+	religion_group = celtic_group
 	
 	templates = { 
 		"coa_plain_celtic:1"

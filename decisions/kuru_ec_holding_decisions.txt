@@ -1320,7 +1320,7 @@ settlement_decisions = {
 						add_building = tb_steppe_stable_3
 						add_building = tb_steppe_stable_4
 					}
-					else if = {
+					else_if = {
 						limit = {
 							location = {
 								terrain = desert
