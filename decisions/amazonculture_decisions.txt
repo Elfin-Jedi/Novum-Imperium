@@ -3846,7 +3846,7 @@ decisions = {
 							NOT = { has_global_flag = zikri_seminary_flag }
 						}
 						AND = {
-							religion = yazidi 
+							religion = yazidism
 							NOT = { has_global_flag = yazidi_seminary_flag }
 						}
 						AND = {
@@ -3989,7 +3989,7 @@ decisions = {
 					has_global_flag = zikri_seminary_flag 
 				}
 				AND = {
-					religion = yazidi 
+					religion = yazidism
 					has_global_flag = yazidi_seminary_flag 
 				}
 				AND = {
@@ -4713,7 +4713,7 @@ decisions = {
 					}
 				}
 				AND = {
-					religion = yazidi
+					religion = yazidism
 					NOR = {
 						has_global_flag = yazidi_abs_cognatic_flag
 						has_global_flag = yazidi_enat_cognatic_flag
@@ -4853,7 +4853,7 @@ decisions = {
 					}
 				}
 				AND = {
-					religion = yazidi 
+					religion = yazidism
 					NOT = { has_global_flag = yazidi_reformed_marriage_flag }
 					realm_character_percent = {		# 40% of characters
 						target = 0.40
@@ -4948,7 +4948,7 @@ decisions = {
 					}
 				}
 				AND = {
-					religion = yazidi 
+					religion = yazidism
 					OR = {
 						culture = themiskyran_amz
 						culture = valkyrie_amz
@@ -5084,7 +5084,7 @@ decisions = {
 							}
 						}
 						AND = {
-							religion = yazidi
+							religion = yazidism
 							OR = {
 								has_global_flag = yazidi_abs_cognatic_flag
 								has_global_flag = yazidi_enat_cognatic_flag
@@ -5218,7 +5218,7 @@ decisions = {
 					}
 				}
 				AND = {
-					religion = yazidi
+					religion = yazidism
 					OR = {
 						has_global_flag = yazidi_enat_cognatic_flag
 						has_global_flag = yazidi_reformed_marriage_flag 

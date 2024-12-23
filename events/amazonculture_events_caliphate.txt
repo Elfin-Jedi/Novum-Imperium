@@ -45,7 +45,7 @@ namespace = AmzCal	# Amazonian Caliphate
 							has_global_flag = yazidi_abs_cognatic_flag
 							has_global_flag = yazidi_enat_cognatic_flag
 						}
-						religion = yazidi
+						religion = yazidism
 					}
 					AND = {
 						NOR = {
@@ -162,7 +162,7 @@ namespace = AmzCal	# Amazonian Caliphate
 								}
 							}
 						}
-						religion = yazidi
+						religion = yazidism
 					}
 					AND = {
 						OR = {
@@ -232,7 +232,7 @@ namespace = AmzCal	# Amazonian Caliphate
 						NOT = { has_global_flag = ibadi_reformed_marriage_flag }
 					}
 					AND = {
-						religion = yazidi 
+						religion = yazidism
 						NOT = { has_global_flag = yazidi_reformed_marriage_flag }
 					}
 					AND = {
@@ -314,7 +314,7 @@ namespace = AmzCal	# Amazonian Caliphate
 						NOT = { has_global_flag = ibadi_concubines_flag }
 					}
 					AND = {
-						religion = yazidi 
+						religion = yazidism
 						OR = {
 							culture = themiskyran_amz
 							culture = valkyrie_amz
@@ -437,7 +437,7 @@ namespace = AmzCal	# Amazonian Caliphate
 					set_global_flag = ibadi_abs_cognatic_flag
 				}
 				if = {
-					limit = { religion = yazidi }
+					limit = { religion = yazidism }
 					set_global_flag = yazidi_abs_cognatic_flag
 				}
 				if = {
@@ -513,7 +513,7 @@ namespace = AmzCal	# Amazonian Caliphate
 					set_global_flag = ibadi_enat_cognatic_flag
 				}
 				if = {
-					limit = { religion = yazidi }
+					limit = { religion = yazidism }
 					set_global_flag = yazidi_enat_cognatic_flag
 				}
 				if = {
@@ -594,7 +594,7 @@ namespace = AmzCal	# Amazonian Caliphate
 					set_max_wives = 1
 				}
 				if = {
-					limit = { religion = yazidi } 
+					limit = { religion = yazidism } 
 					set_global_flag = yazidi_reformed_marriage_flag
 					set_max_wives = 1
 				}
@@ -681,7 +681,7 @@ namespace = AmzCal	# Amazonian Caliphate
 					set_global_flag = ibadi_concubines_flag	
 				}
 				if = {
-					limit = { religion = yazidi }
+					limit = { religion = yazidism }
 					set_global_flag = yazidi_concubines_flag	
 				}
 				if = {
@@ -884,7 +884,7 @@ namespace = AmzCal	# Amazonian Caliphate
 				set_global_flag = ibadi_abs_cognatic_flag
 			}
 			if = { 
-				limit = { religion = yazidi }
+				limit = { religion = yazidism }
 				clr_global_flag = yazidi_enat_cognatic_flag
 				clr_global_flag = yazidi_reformed_marriage_flag
 				clr_global_flag = yazidi_concubines_flag	
@@ -1106,7 +1106,7 @@ namespace = AmzCal	# Amazonian Caliphate
 					}
 				}
 				AND = {
-					religion = yazidi
+					religion = yazidism
 					OR = {
 						has_global_flag = yazidi_abs_cognatic_flag
 						has_global_flag = yazidi_enat_cognatic_flag

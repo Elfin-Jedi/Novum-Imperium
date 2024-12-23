@@ -569,7 +569,7 @@ castle = {
 	ca_r_walls_7 = {
 		desc = ca_r_walls_7_desc
 		upgrades_from = ca_r_walls_6
-		potential { TECH_FORTIFICATIONS_CONSTRUCTION = 3}
+		potential = { TECH_FORTIFICATIONS_CONSTRUCTION = 3}
 		trigger = {
 			TECH_FORTIFICATIONS_CONSTRUCTION = 3
 			OR = {
@@ -605,7 +605,7 @@ castle = {
 	ca_r_walls_8 = {
 		desc = ca_r_walls_8_desc
 		upgrades_from = ca_r_walls_7
-		potential { TECH_FORTIFICATIONS_CONSTRUCTION = 3}
+		potential = { TECH_FORTIFICATIONS_CONSTRUCTION = 3}
 		trigger = {
 			TECH_FORTIFICATIONS_CONSTRUCTION = 3
 			OR = {
@@ -640,7 +640,7 @@ castle = {
 	ca_r_walls_9 = {
 		desc = ca_r_walls_9_desc
 		upgrades_from = ca_r_walls_8
-		potential { TECH_FORTIFICATIONS_CONSTRUCTION = 3}
+		potential = { TECH_FORTIFICATIONS_CONSTRUCTION = 3}
 		trigger = {
 			TECH_FORTIFICATIONS_CONSTRUCTION = 3
 			OR = {
@@ -674,7 +674,7 @@ castle = {
 	ca_r_walls_10 = {
 		desc = ca_r_walls_10_desc
 		upgrades_from = ca_r_walls_9
-		potential { TECH_FORTIFICATIONS_CONSTRUCTION = 4}
+		potential = { TECH_FORTIFICATIONS_CONSTRUCTION = 4}
 		trigger = {
 			TECH_FORTIFICATIONS_CONSTRUCTION = 4
 			has_province_modifier = tsk_infra_5
@@ -765,7 +765,7 @@ castle = {
 	ca_r_town_3 = {
 		desc = ca_r_town_3_desc
 		upgrades_from = ca_r_town_2
-		potential { TECH_CASTLE_CONSTRUCTION = 1}
+		potential = { TECH_CASTLE_CONSTRUCTION = 1}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 1
 			OR = {
@@ -803,7 +803,7 @@ castle = {
 	ca_r_town_4 = {
 		desc = ca_r_town_4_desc
 		upgrades_from = ca_r_town_3
-		potential { TECH_CASTLE_CONSTRUCTION = 2}
+		potential = { TECH_CASTLE_CONSTRUCTION = 2}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 2
 			OR = {
@@ -840,7 +840,7 @@ castle = {
 	ca_r_town_5 = {
 		desc = ca_r_town_5_desc
 		upgrades_from = ca_r_town_4
-		potential { TECH_CASTLE_CONSTRUCTION = 2}
+		potential = { TECH_CASTLE_CONSTRUCTION = 2}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 2
 			OR = {
@@ -877,7 +877,7 @@ castle = {
 	ca_r_town_6 = {
 		desc = ca_r_town_6_desc
 		upgrades_from = ca_r_town_5
-		potential { TECH_CASTLE_CONSTRUCTION = 3}
+		potential = { TECH_CASTLE_CONSTRUCTION = 3}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 2
 			OR = {
@@ -913,7 +913,7 @@ castle = {
 	ca_r_town_7 = {
 		desc = ca_r_town_7_desc
 		upgrades_from = ca_r_town_6
-		potential { TECH_CASTLE_CONSTRUCTION = 3}
+		potential = { TECH_CASTLE_CONSTRUCTION = 3}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 3
 			OR = {
@@ -949,7 +949,7 @@ castle = {
 	ca_r_town_8 = {
 		desc = ca_r_town_8_desc
 		upgrades_from = ca_r_town_7
-		potential { TECH_CASTLE_CONSTRUCTION = 3}
+		potential = { TECH_CASTLE_CONSTRUCTION = 3}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 3
 			OR = {
@@ -985,7 +985,7 @@ castle = {
 	ca_r_town_9 = {
 		desc = ca_r_town_9_desc
 		upgrades_from = ca_r_town_8
-		potential { TECH_CASTLE_CONSTRUCTION = 3}
+		potential = { TECH_CASTLE_CONSTRUCTION = 3}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 3
 			OR = {
@@ -1020,7 +1020,7 @@ castle = {
 	ca_r_town_10 = {
 		desc = ca_r_town_10_desc
 		upgrades_from = ca_r_town_9
-		potential { TECH_CASTLE_CONSTRUCTION = 4}
+		potential = { TECH_CASTLE_CONSTRUCTION = 4}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 4
 			OR = {
@@ -1055,7 +1055,7 @@ castle = {
 	ca_r_town_11 = {
 		desc = ca_r_town_11_desc
 		upgrades_from = ca_r_town_10
-		potential { TECH_CASTLE_CONSTRUCTION = 4}
+		potential = { TECH_CASTLE_CONSTRUCTION = 4}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 4
 			has_province_modifier = tsk_infra_5
@@ -2754,7 +2754,7 @@ castle = {
 	ca_r_smith_4 = {
 		desc = ca_r_smith_4_desc
 		upgrades_from = ca_r_smith_3
-		potential { TECH_CASTLE_CONSTRUCTION = 2}
+		potential = { TECH_CASTLE_CONSTRUCTION = 2}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 2
 			OR = {
@@ -2787,7 +2787,7 @@ castle = {
 	ca_r_smith_5 = {
 		desc = ca_r_smith_5_desc
 		upgrades_from = ca_r_smith_4
-		potential { TECH_CASTLE_CONSTRUCTION = 3}
+		potential = { TECH_CASTLE_CONSTRUCTION = 3}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 3
 			OR = {
@@ -2819,7 +2819,7 @@ castle = {
 	ca_r_smith_6 = {
 		desc = ca_r_smith_6_desc
 		upgrades_from = ca_r_smith_5
-		potential { TECH_CASTLE_CONSTRUCTION = 3}
+		potential = { TECH_CASTLE_CONSTRUCTION = 3}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 3
 			OR = {

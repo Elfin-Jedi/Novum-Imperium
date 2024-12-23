@@ -641,7 +641,7 @@ decisions = {
 									any_realm_title = { title = b_etchmiadzin }
 								}
 								AND = {
-									religion = yazidi
+									religion = yazidism
 									any_realm_title = { title = b_karamlish }
 								}
 								AND = {
@@ -720,7 +720,7 @@ decisions = {
 					}
 					if = {
 						limit = {
-							religion = yazidi
+							religion = yazidism
 							any_realm_title = { title = b_karamlish }
 						}
 						b_karamlish = { grant_title = PREVPREV }
@@ -4050,7 +4050,7 @@ decisions = {
 	yazidi_peacock_feast = {
 		only_playable = yes
 		potential = {
-			religion = yazidi
+			religion = yazidism
 			num_of_vassals = 1
 			OR = {
 				is_feudal = yes
@@ -4083,7 +4083,7 @@ decisions = {
 				text = HAS_THREE_YAZIDI_VASSALS_AVAILABLE
 				hidden_tooltip = {
 					any_vassal = {
-						religion = yazidi
+						religion = yazidism
 						prisoner = no
 						is_incapable = no
 						emf_can_disturb = yes
@@ -4147,7 +4147,7 @@ decisions = {
 	yazidi_pilgrimage = {
 		only_playable = yes
 		potential = {
-			religion = yazidi
+			religion = yazidism
 			is_female = no
 			NOR = {
 				is_inaccessible_trigger = yes

@@ -2042,7 +2042,7 @@ character_event = {
 		set_flag = holding_peacock_feast
 		any_vassal = {
 			limit = {
-				religion = yazidi
+				religion = yazidism
 				prisoner = no
 				is_incapable = no
 				emf_can_disturb = yes
@@ -2516,7 +2516,7 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 
 	only_playable = yes
-	religion = yazidi
+	religion = yazidism
 	war = yes
 
 	trigger = {
@@ -2665,7 +2665,7 @@ narrative_event = {
 	max_age = 20
 	prisoner = no
 	capable_only = yes
-	religion = yazidi
+	religion = yazidism
 
 	trigger = {
 		is_reincarnated = no
@@ -2706,7 +2706,7 @@ narrative_event = {
 	}
 
 	major_trigger = {
-		religion = yazidi
+		religion = yazidism
 		same_realm = ROOT
 	}
 

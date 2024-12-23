@@ -379,23 +379,601 @@ society_decisions = {
 					else_if = {
 						limit = {
 							NOR = {
+								trait = sympathy_abrahamics
+								trait = sympathy_anatolians
+								trait = sympathy_arabpagans
+								trait = sympathy_aztecs
+								trait = sympathy_baltics
+								trait = sympathy_bantus
+								trait = sympathy_berbers
+								trait = sympathy_buddhists
+								trait = sympathy_celtics
+								trait = sympathy_chinese
 								trait = sympathy_christendom
+								trait = sympathy_east_africans
+								trait = sympathy_egyptian
+								trait = sympathy_finnish
+								trait = sympathy_graecoroman
 								trait = sympathy_indian
-								trait = sympathy_islam
+								trait = sympathy_indohellens
+								trait = sympathy_intis
+								trait = sympathy_inuit
 								trait = sympathy_judaism
+								trait = sympathy_luwians
+								trait = sympathy_mande
+								trait = sympathy_manichaeans
+								trait = sympathy_mithraics
+								trait = sympathy_islam
+								trait = sympathy_platonics
+								trait = sympathy_nordic
 								trait = sympathy_pagans
+								trait = sympathy_palmyrans
+								trait = sympathy_sererics
+								trait = sympathy_slavics
+								trait = sympathy_sol
+								trait = sympathy_tengri
+								trait = sympathy_yazd
+								trait = sympathy_zal
 								trait = sympathy_zoroastrianism
+								trait = sympathy_african
 							}
 						}
-
-						trigger_switch = {
-							on_trigger = religion_group
-							christian = 			{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							muslim = 				{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							zoroastrian_group = 	{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } } }
-							jewish_group = 			{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							indian_group = 			{ random_list = { 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							pagan_group = 			{ random_list = { 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_zoroastrianism } } }
+						random_list = {
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = abrahamic_group }
+									}
+									add_trait = sympathy_abrahamics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = anatolian_group }
+									}
+									add_trait = sympathy_anatolians
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = arabpagan_group }
+									}
+									add_trait = sympathy_arabpagans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = aztec_group }
+									}
+									add_trait = sympathy_aztecs
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = baltic_group }
+									}
+									add_trait = sympathy_baltics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = bantu_group }
+									}
+									add_trait = sympathy_bantus
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = berberpagan_group }
+									}
+									add_trait = sympathy_berbers
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = bud_group }
+									}
+									add_trait = sympathy_buddhists
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = celtic_group }
+									}
+									add_trait = sympathy_celtics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = chinese_group }
+									}
+									add_trait = sympathy_chinese
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = christian }
+									}
+									add_trait = sympathy_christendom
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = east_african_group }
+									}
+									add_trait = sympathy_east_africans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = egyptian_group }
+									}
+									add_trait = sympathy_egyptian
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = finnish_group }
+									}
+									add_trait = sympathy_finnish
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = graecoroman_group }
+									}
+									add_trait = sympathy_graecoroman
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = indian_group }
+									}
+									add_trait = sympathy_indian
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = indohelen_group }
+									}
+									add_trait = sympathy_indohellens
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = inti_group }
+									}
+									add_trait = sympathy_intis
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = inuit_group }
+									}
+									add_trait = sympathy_inuit
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = jewish_group }
+									}
+									add_trait = sympathy_judaism
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = luwian_group }
+									}
+									add_trait = sympathy_luwians
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = mand_group }
+									}
+									add_trait = sympathy_mande
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = mani_group }
+									}
+									add_trait = sympathy_manichaeans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = mithra_group }
+									}
+									add_trait = sympathy_mithraics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = muslim }
+									}
+									add_trait = sympathy_islam
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = neoplato_group }
+									}
+									add_trait = sympathy_platonics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = norsegerman_group }
+									}
+									add_trait = sympathy_nordic
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = pagan_group }
+									}
+									add_trait = sympathy_pagans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = palmyranpagan_group }
+									}
+									add_trait = sympathy_palmyrans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = serer_group }
+									}
+									add_trait = sympathy_sererics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = slavic_group }
+									}
+									add_trait = sympathy_slavics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = sol_group }
+									}
+									add_trait = sympathy_sol
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = tengri_group }
+									}
+									add_trait = sympathy_tengri
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = yazd_group }
+									}
+									add_trait = sympathy_yazd
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = zal_group }
+									}
+									add_trait = sympathy_zal
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = zoroastrian_group }
+									}
+									add_trait = sympathy_zoroastrianism
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = african_group }
+									}
+									add_trait = sympathy_african
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
 						}
 					}
 					else = {
@@ -427,23 +1005,616 @@ society_decisions = {
 					else_if = {
 						limit = {
 							NOR = {
+								trait = sympathy_abrahamics
+								trait = sympathy_anatolians
+								trait = sympathy_arabpagans
+								trait = sympathy_aztecs
+								trait = sympathy_baltics
+								trait = sympathy_bantus
+								trait = sympathy_berbers
+								trait = sympathy_buddhists
+								trait = sympathy_celtics
+								trait = sympathy_chinese
 								trait = sympathy_christendom
+								trait = sympathy_east_africans
+								trait = sympathy_egyptian
+								trait = sympathy_finnish
+								trait = sympathy_graecoroman
 								trait = sympathy_indian
-								trait = sympathy_islam
+								trait = sympathy_indohellens
+								trait = sympathy_intis
+								trait = sympathy_inuit
 								trait = sympathy_judaism
+								trait = sympathy_luwians
+								trait = sympathy_mande
+								trait = sympathy_manichaeans
+								trait = sympathy_mithraics
+								trait = sympathy_islam
+								trait = sympathy_platonics
+								trait = sympathy_nordic
 								trait = sympathy_pagans
+								trait = sympathy_palmyrans
+								trait = sympathy_sererics
+								trait = sympathy_slavics
+								trait = sympathy_sol
+								trait = sympathy_tengri
+								trait = sympathy_yazd
+								trait = sympathy_zal
 								trait = sympathy_zoroastrianism
+								trait = sympathy_african
 							}
 						}
-
-						trigger_switch = {
-							on_trigger = religion_group
-							christian = 			{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							muslim = 				{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							zoroastrian_group = 	{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } } }
-							jewish_group = 			{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							indian_group = 			{ random_list = { 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							pagan_group = 			{ random_list = { 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_zoroastrianism } } }
+						random_list = {
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = abrahamic_group }
+									}
+									add_trait = sympathy_abrahamics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = anatolian_group }
+									}
+									add_trait = sympathy_anatolians
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = arabpagan_group }
+									}
+									add_trait = sympathy_arabpagans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = aztec_group }
+									}
+									add_trait = sympathy_aztecs
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = baltic_group }
+									}
+									add_trait = sympathy_baltics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = bantu_group }
+									}
+									add_trait = sympathy_bantus
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = berberpagan_group }
+									}
+									add_trait = sympathy_berbers
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = bud_group }
+									}
+									add_trait = sympathy_buddhists
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = celtic_group }
+									}
+									add_trait = sympathy_celtics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = chinese_group }
+									}
+									add_trait = sympathy_chinese
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = christian }
+									}
+									add_trait = sympathy_christendom
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = east_african_group }
+									}
+									add_trait = sympathy_east_africans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = egyptian_group }
+									}
+									add_trait = sympathy_egyptian
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = finnish_group }
+									}
+									add_trait = sympathy_finnish
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = graecoroman_group }
+									}
+									add_trait = sympathy_graecoroman
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = indian_group }
+									}
+									add_trait = sympathy_indian
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = indohelen_group }
+									}
+									add_trait = sympathy_indohellens
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = inti_group }
+									}
+									add_trait = sympathy_intis
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = inuit_group }
+									}
+									add_trait = sympathy_inuit
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = jewish_group }
+									}
+									add_trait = sympathy_judaism
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = jewish_group }
+									}
+									add_trait = sympathy_judaism
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = luwian_group }
+									}
+									add_trait = sympathy_luwians
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = mand_group }
+									}
+									add_trait = sympathy_mande
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = mani_group }
+									}
+									add_trait = sympathy_manichaeans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = mithra_group }
+									}
+									add_trait = sympathy_mithraics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = muslim }
+									}
+									add_trait = sympathy_islam
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = neoplato_group }
+									}
+									add_trait = sympathy_platonics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = norsegerman_group }
+									}
+									add_trait = sympathy_nordic
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = pagan_group }
+									}
+									add_trait = sympathy_pagans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = palmyranpagan_group }
+									}
+									add_trait = sympathy_palmyrans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = serer_group }
+									}
+									add_trait = sympathy_sererics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = slavic_group }
+									}
+									add_trait = sympathy_slavics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = sol_group }
+									}
+									add_trait = sympathy_sol
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = tengri_group }
+									}
+									add_trait = sympathy_tengri
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = yazd_group }
+									}
+									add_trait = sympathy_yazd
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = zal_group }
+									}
+									add_trait = sympathy_zal
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = zoroastrian_group }
+									}
+									add_trait = sympathy_zoroastrianism
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = african_group }
+									}
+									add_trait = sympathy_african
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
 						}
 					}
 					else = {
@@ -472,23 +1643,616 @@ society_decisions = {
 					else_if = {
 						limit = {
 							NOR = {
+								trait = sympathy_abrahamics
+								trait = sympathy_anatolians
+								trait = sympathy_arabpagans
+								trait = sympathy_aztecs
+								trait = sympathy_baltics
+								trait = sympathy_bantus
+								trait = sympathy_berbers
+								trait = sympathy_buddhists
+								trait = sympathy_celtics
+								trait = sympathy_chinese
 								trait = sympathy_christendom
+								trait = sympathy_east_africans
+								trait = sympathy_egyptian
+								trait = sympathy_finnish
+								trait = sympathy_graecoroman
 								trait = sympathy_indian
-								trait = sympathy_islam
+								trait = sympathy_indohellens
+								trait = sympathy_intis
+								trait = sympathy_inuit
 								trait = sympathy_judaism
+								trait = sympathy_luwians
+								trait = sympathy_mande
+								trait = sympathy_manichaeans
+								trait = sympathy_mithraics
+								trait = sympathy_islam
+								trait = sympathy_platonics
+								trait = sympathy_nordic
 								trait = sympathy_pagans
+								trait = sympathy_palmyrans
+								trait = sympathy_sererics
+								trait = sympathy_slavics
+								trait = sympathy_sol
+								trait = sympathy_tengri
+								trait = sympathy_yazd
+								trait = sympathy_zal
 								trait = sympathy_zoroastrianism
+								trait = sympathy_african
 							}
 						}
-
-						trigger_switch = {
-							on_trigger = religion_group
-							christian = 			{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							muslim = 				{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							zoroastrian_group = 	{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } } }
-							jewish_group = 			{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							indian_group = 			{ random_list = { 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							pagan_group = 			{ random_list = { 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_zoroastrianism } } }
+						random_list = {
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = abrahamic_group }
+									}
+									add_trait = sympathy_abrahamics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = anatolian_group }
+									}
+									add_trait = sympathy_anatolians
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = arabpagan_group }
+									}
+									add_trait = sympathy_arabpagans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = aztec_group }
+									}
+									add_trait = sympathy_aztecs
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = baltic_group }
+									}
+									add_trait = sympathy_baltics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = bantu_group }
+									}
+									add_trait = sympathy_bantus
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = berberpagan_group }
+									}
+									add_trait = sympathy_berbers
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = bud_group }
+									}
+									add_trait = sympathy_buddhists
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = celtic_group }
+									}
+									add_trait = sympathy_celtics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = chinese_group }
+									}
+									add_trait = sympathy_chinese
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = christian }
+									}
+									add_trait = sympathy_christendom
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = east_african_group }
+									}
+									add_trait = sympathy_east_africans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = egyptian_group }
+									}
+									add_trait = sympathy_egyptian
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = finnish_group }
+									}
+									add_trait = sympathy_finnish
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = graecoroman_group }
+									}
+									add_trait = sympathy_graecoroman
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = indian_group }
+									}
+									add_trait = sympathy_indian
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = indohelen_group }
+									}
+									add_trait = sympathy_indohellens
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = inti_group }
+									}
+									add_trait = sympathy_intis
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = inuit_group }
+									}
+									add_trait = sympathy_inuit
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = jewish_group }
+									}
+									add_trait = sympathy_judaism
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = jewish_group }
+									}
+									add_trait = sympathy_judaism
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = luwian_group }
+									}
+									add_trait = sympathy_luwians
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = mand_group }
+									}
+									add_trait = sympathy_mande
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = mani_group }
+									}
+									add_trait = sympathy_manichaeans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = mithra_group }
+									}
+									add_trait = sympathy_mithraics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = muslim }
+									}
+									add_trait = sympathy_islam
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = neoplato_group }
+									}
+									add_trait = sympathy_platonics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = norsegerman_group }
+									}
+									add_trait = sympathy_nordic
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = pagan_group }
+									}
+									add_trait = sympathy_pagans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = palmyranpagan_group }
+									}
+									add_trait = sympathy_palmyrans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = serer_group }
+									}
+									add_trait = sympathy_sererics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = slavic_group }
+									}
+									add_trait = sympathy_slavics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = sol_group }
+									}
+									add_trait = sympathy_sol
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = tengri_group }
+									}
+									add_trait = sympathy_tengri
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = yazd_group }
+									}
+									add_trait = sympathy_yazd
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = zal_group }
+									}
+									add_trait = sympathy_zal
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = zoroastrian_group }
+									}
+									add_trait = sympathy_zoroastrianism
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = african_group }
+									}
+									add_trait = sympathy_african
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
 						}
 					}
 					else = {

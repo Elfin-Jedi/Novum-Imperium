@@ -2516,10 +2516,6 @@ true_religion_zikri_trigger = {
 	true_religion = zikri
 }
 
-true_religion_yazidi_trigger = {
-	true_religion = yazidi
-}
-
 true_religion_shiite_trigger = {
 	true_religion = shiite
 }
@@ -4607,8 +4603,8 @@ looting_artifact_event_religious_artifacts_trigger = {
 				NOT = { has_artifact_flag = zikri }
 			}
 			trigger_else_if = {
-				limit = { ROOT = { religion = yazidi } }
-				NOT = { has_artifact_flag = yazidi }
+				limit = { ROOT = { religion = yazidism } }
+				NOT = { has_artifact_flag = yazidism }
 			}
 			trigger_else_if = {
 				limit = { ROOT = { religion = shiite } }

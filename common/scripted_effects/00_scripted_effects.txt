@@ -25468,7 +25468,7 @@ add_sympathy_for_prevs_true_religion_effect = {
 
 # template
 add_sympathy_for_prevs_open_religion_effect = {
-		if = {
+	if = {
 		limit = { 
 			PREV = { religion_group = abrahamic_group }
 			NOT = { religion_group = abrahamic_group }
@@ -36099,7 +36099,7 @@ apply_dogmatic_on_start_effect = {
 	remove_intermarry = mandaean
 	remove_intermarry = manichean
 	remove_intermarry = mazdakism
-	remove_intermarry = yazidi
+	remove_intermarry = yazidism
 	remove_intermarry = zoroastrian
 	remove_intermarry = zurvanism
 	
@@ -36180,7 +36180,7 @@ apply_syncretic_zoroastrian_on_start_effect = {
 	add_intermarry = mandaean
 	add_intermarry = manichean
 	add_intermarry = mazdakism
-	add_intermarry = yazidi
+	add_intermarry = yazidism
 	add_intermarry = zoroastrian
 	add_intermarry = zurvanism
 	
