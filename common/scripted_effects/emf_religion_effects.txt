@@ -340,7 +340,7 @@ emf_character_abandon_heresy = {
 		trigger_switch = { # Choose branch
 			on_trigger = religion
 			hindu = { character_event = { id = RoI.110 } }
-			buddhist = { character_event = { id = RoI.111 } }
+			bud_zen = { character_event = { id = RoI.111 } }
 			jain = { character_event = { id = RoI.112 } }
 		}
 	}
@@ -511,7 +511,7 @@ emf_character_set_religion_to_ROOT = {
 		trigger_switch = { # Choose branch
 			on_trigger = religion
 			hindu = { character_event = { id = RoI.110 } }
-			buddhist = { character_event = { id = RoI.111 } }
+			bud_zen = { character_event = { id = RoI.111 } }
 			jain = { character_event = { id = RoI.112 } }
 		}
 	}
@@ -682,7 +682,7 @@ emf_character_set_religion_to_FROM = {
 		trigger_switch = { # Choose branch
 			on_trigger = religion
 			hindu = { character_event = { id = RoI.110 } }
-			buddhist = { character_event = { id = RoI.111 } }
+			bud_zen = { character_event = { id = RoI.111 } }
 			jain = { character_event = { id = RoI.112 } }
 		}
 	}
@@ -853,7 +853,7 @@ emf_character_set_religion_to_FROMFROM = {
 		trigger_switch = { # Choose branch
 			on_trigger = religion
 			hindu = { character_event = { id = RoI.110 } }
-			buddhist = { character_event = { id = RoI.111 } }
+			bud_zen = { character_event = { id = RoI.111 } }
 			jain = { character_event = { id = RoI.112 } }
 		}
 	}
@@ -1024,7 +1024,7 @@ emf_character_set_religion_to_target_religion = {
 		trigger_switch = { # Choose branch
 			on_trigger = religion
 			hindu = { character_event = { id = RoI.110 } }
-			buddhist = { character_event = { id = RoI.111 } }
+			bud_zen = { character_event = { id = RoI.111 } }
 			jain = { character_event = { id = RoI.112 } }
 		}
 	}

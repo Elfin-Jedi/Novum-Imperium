@@ -12527,7 +12527,7 @@ buddhist_holy_war = {
 	can_use = {
 		emf_cb_can_use = yes
 		ROOT = {
-			religion = buddhist
+			religion_group = bud_group
 			NOT = { same_realm = FROM }
 			emf_hostile_religion_to_FROM = yes
 			top_liege = {
@@ -12570,7 +12570,7 @@ buddhist_holy_war = {
 
 	is_valid = {
 		ROOT = {
-			religion = buddhist
+			religion_group = bud_group
 			NOT = { same_realm = FROM }
 			emf_hostile_religion_to_FROM = yes
 			top_liege = {

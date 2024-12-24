@@ -89,7 +89,7 @@ title_cathar_deacon = {
 }
 
 title_manichean_apostle = {
-	religion = manichean
+	religion = mani
 	can_elect_head = yes
 	revoke_allowed = no
 
@@ -105,7 +105,7 @@ title_manichean_apostle = {
 	monthly_prestige = 0.5
 
 	allow = {
-		religion = manichean
+		religion = mani
 		is_theocracy = yes
 		d_manichean = {
 			holder_scope = {

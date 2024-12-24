@@ -536,7 +536,7 @@ narrative_event = { # Activate GHW's and holy orders when running randomized rel
 		create_character = {
 			random_traits = no
 			dynasty = random
-			religion = buddhist
+			religion = bud_zen
 			culture = marathi
 			female = no
 			age = 33
@@ -810,7 +810,7 @@ narrative_event = { # Activate GHW's and holy orders when running randomized rel
 		activate_title = { title = d_army_light status = yes }
 		create_character = {
 			random_traits = yes
-			religion = manichean
+			religion = mani
 			culture = persian
 			dynasty = NONE
 			female = no
@@ -1609,7 +1609,7 @@ character_event = { # Alternate Start general maintenance
 			d_bon_reformed = { set_random_coa_effect = yes }
 		}
 		if = {
-			limit = { manichean = { is_name_randomized = yes } }
+			limit = { mani = { is_name_randomized = yes } }
 			d_manichean = { set_random_coa_effect = yes }
 		}
 		# EMF-unique religious head titles:
@@ -1999,7 +1999,7 @@ character_event = { # Alternate Start general maintenance
 		}
 		if = {
 			limit = {
-				buddhist = {
+				bud_zen = {
 					is_name_randomized = yes
 				}
 			}
@@ -2074,7 +2074,7 @@ character_event = { # Alternate Start general maintenance
 		}
 		if = {
 			limit = {
-				manichean = {
+				mani = {
 					is_name_randomized = yes
 				}
 			}

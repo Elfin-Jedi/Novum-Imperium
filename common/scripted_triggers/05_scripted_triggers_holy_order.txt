@@ -111,7 +111,7 @@ holy_order_check_active_trigger = {
 			}
 			AND = {
 				OR = {
-					religion = manichean
+					religion = mani
 					religion = mandaean
 				}
 				is_title_active = d_army_light
@@ -166,7 +166,7 @@ holy_order_check_active_trigger = {
 			}
 			AND = {
 				OR = {
-					religion = buddhist
+					religion = bud_zen
 				}
 				is_title_active = d_ashokas_chosen
 			}

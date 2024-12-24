@@ -1896,7 +1896,7 @@ decisions = {
 						culture_group = tibetan_group
 						OR = {
 							religion = bon
-							religion = buddhist
+							religion_group = bud_group
 						}
 						higher_tier_than = BARON
 					}
@@ -2182,7 +2182,7 @@ decisions = {
 						culture_group = tibetan_group
 						OR = {
 							religion = bon
-							religion = buddhist
+							religion_group = bud_group
 						}
 						higher_tier_than = BARON
 					}

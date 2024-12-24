@@ -16,7 +16,7 @@ emf_switch_to_feudal_gov = {
 			OR = {
 				religion = bon
 				religion = bon_reformed
-				religion = buddhist
+				religion_group = bud_group
 			}
 			higher_tier_than = BARON
 		}
@@ -55,7 +55,7 @@ emf_switch_to_imperial = {
 			OR = {
 				religion = bon
 				religion = bon_reformed
-				religion = buddhist
+				religion_group = bud_group
 			}
 			higher_tier_than = BARON
 		}

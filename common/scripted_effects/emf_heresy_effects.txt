@@ -108,7 +108,7 @@ emf_character_become_heretic = {
 		trigger_switch = { # Choose branch
 			on_trigger = religion
 			hindu = { character_event = { id = RoI.110 } }
-			buddhist = { character_event = { id = RoI.111 } }
+			bud_zen = { character_event = { id = RoI.111 } }
 			jain = { character_event = { id = RoI.112 } }
 		}
 	}
@@ -615,7 +615,7 @@ emf_catholic_conversion = {
 				factor = 0.5
 				year = 1200
 			}
-			religion = manichean
+			religion = mani
 		}
 		10 = {
 			modifier = {
@@ -1081,7 +1081,7 @@ emf_eastern_conversion = {
 				factor = 0.5
 				year = 1200
 			}
-			religion = manichean
+			religion = mani
 		}
 		10 = {
 			modifier = {
@@ -1742,7 +1742,7 @@ emf_muslim_conversion = {
 				factor = 0.5
 				year = 1200
 			}
-			religion = manichean
+			religion = mani
 		}
 		10 = {
 			modifier = {
@@ -1778,7 +1778,7 @@ emf_zoroastrian_conversion = {
 			modifier = {
 				factor = 0.25
 				OR = {
-					religion = manichean
+					religion = mani
 					religion = mandaean
 					religion = yazidism
 				}
@@ -1793,7 +1793,7 @@ emf_zoroastrian_conversion = {
 			modifier = {
 				factor = 0
 				OR = {
-					religion = manichean
+					religion = mani
 					religion = mandaean
 					religion = yazidism
 				}
@@ -1808,7 +1808,7 @@ emf_zoroastrian_conversion = {
 			modifier = {
 				factor = 0
 				OR = {
-					religion = manichean
+					religion = mani
 					religion = mandaean
 					religion = yazidism
 				}
@@ -1818,7 +1818,7 @@ emf_zoroastrian_conversion = {
 		75 = {
 			modifier = {
 				factor = 0
-				religion = manichean
+				religion = mani
 			}
 			modifier = {
 				factor = 0.25
@@ -1847,7 +1847,7 @@ emf_zoroastrian_conversion = {
 				factor = 0.5
 				year = 1200
 			}
-			religion = manichean
+			religion = mani
 		}
 		75 = {
 			modifier = {
@@ -2321,7 +2321,7 @@ emf_jewish_conversion = {
 				factor = 0.5
 				year = 1200
 			}
-			religion = manichean
+			religion = mani
 		}
 		10 = {
 			modifier = {

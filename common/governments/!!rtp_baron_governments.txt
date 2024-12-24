@@ -297,7 +297,7 @@ feudal_governments = {
 				OR = {
 					religion = bon
 					religion = bon_reformed
-					religion = buddhist
+					religion_group = bud_group
 				}
 				higher_tier_than = BARON
 			}
@@ -474,7 +474,7 @@ feudal_governments = {
 			OR = {
 				religion = bon
 				religion = bon_reformed
-				religion = buddhist
+				religion_group = bud_group
 			}
 			higher_tier_than = BARON
 			NAND = {
@@ -571,7 +571,7 @@ tribal_government = {
 				OR = {
 					religion = bon
 					religion = bon_reformed
-					religion = buddhist
+					religion_group = bud_group
 				}
 				higher_tier_than = BARON
 			}

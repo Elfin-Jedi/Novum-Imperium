@@ -4599,7 +4599,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		NOT = { character = FROM } #Do not judge yourself.
 		OR = {
 			religion_group = christian
-			religion = buddhist
+			religion_group = bud_group
 		}
 		NOT = { trait = lustful }
 		FROM = { trait = chaste }
@@ -4834,7 +4834,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		NOT = { character = FROM } #Do not judge yourself.
 		OR = {
 			religion_group = christian
-			religion = buddhist
+			religion_group = bud_group
 			religion = bon
 			religion = bon_reformed
 			religion = hellenic_pagan
@@ -4886,7 +4886,7 @@ emf_succession_voting_candidate_traits_score_common = {
 			religion_group = christian
 			religion_group = muslim
 			religion_group = jewish_group
-			religion = buddhist
+			religion_group = bud_group
 		}
 		OR = {
 			trait = arbitrary #No need for consistency
@@ -5092,7 +5092,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		localisation_key = tooltip_feudal_elector_vote_content_positive
 		NOT = { character = FROM } #Do not judge yourself.
 		OR = {
-			religion = buddhist
+			religion_group = bud_group
 			religion = jain
 			religion = bon
 			pacifist = yes

@@ -366,14 +366,14 @@ walakriotic_texts_in_china = {
 	infidel_opinion = 15
 	same_religion_opinion = -5
 	active = {
-	OR = {
-	trait = cynical
-	trait = lunatic
-	religion = taoist
-	religion = buddhist
-	religion = manichean
-	religion = hindu
-	}
+		OR = {
+			trait = cynical
+			trait = lunatic
+			religion = taoist
+			religion_group = bud_group
+			religion_group = mani_group
+			religion = hindu
+		}
 	}
 	flags = { chinese book created }
 	picture = "GFX_book_chinese_diary"

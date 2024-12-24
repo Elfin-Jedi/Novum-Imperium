@@ -3104,7 +3104,7 @@ character_event = {
 		name = "EVTOPTA64090" #Ask for God's help with our childless marriage
 		trigger = {
 			NOR = {
-				religion = buddhist
+				religion_group = bud_group
 				religion = jain
 				religion_group = muslim
 			}

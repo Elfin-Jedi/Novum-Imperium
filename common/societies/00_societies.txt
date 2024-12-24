@@ -1834,7 +1834,7 @@ monastic_order_buddhist = {
 			}
 		}
 		is_adult = yes
-		religion = buddhist
+		religion_group = bud_group
 		custom_tooltip = {
 			text = did_not_betray_society
 			NOT = { has_character_flag = betrayed_monastic_order_buddhist }
@@ -1851,7 +1851,7 @@ monastic_order_buddhist = {
 
 	show_society = {
 		OR = {
-			religion = buddhist
+			religion_group = bud_group
 			religion = taoist
 			society_member_of = monastic_order_buddhist
 		}
@@ -1859,7 +1859,7 @@ monastic_order_buddhist = {
 
 	potential = {
 		OR = {
-			religion = buddhist
+			religion_group = bud_group
 			religion = taoist
 		}
 	}
@@ -2048,7 +2048,7 @@ monastic_order_buddhist = {
 	    trigger = {
 			ai = yes
 	    	controls_religion = no
-		   	religion = buddhist
+		   	religion_group = bud_group
 			is_adult = yes
 			is_in_society = no
 			NOT = { higher_tier_than = DUKE }
@@ -2382,7 +2382,7 @@ monastic_order_stoics = {
 					religion_group = jewish_group 
 					religion = bon
 					religion = bon_reformed
-					religion = buddhist
+					religion_group = bud_group
 				}
 			}
 		}
@@ -2421,7 +2421,7 @@ monastic_order_stoics = {
 					religion_group = jewish_group 
 					religion = bon
 					religion = bon_reformed
-					religion = buddhist
+					religion_group = bud_group
 				}
 			}
 			society_member_of = monastic_order_stoics
@@ -2443,7 +2443,7 @@ monastic_order_stoics = {
 					religion_group = jewish_group 
 					religion = bon
 					religion = bon_reformed
-					religion = buddhist
+					religion_group = bud_group
 				}
 			}
 		}
@@ -2689,7 +2689,7 @@ monastic_order_stoics = {
 						religion_group = jewish_group 
 						religion = bon
 						religion = bon_reformed
-						religion = buddhist
+						religion_group = bud_group
 					}
 				}
 			}

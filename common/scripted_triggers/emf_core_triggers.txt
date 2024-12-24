@@ -58,10 +58,7 @@ emf_polytheist_religion = {
 					religion = zun_pagan
 				}
 			}
-			AND = {
-				religion_group = indian_group
-				NOT = { religion = buddhist }
-			}
+			religion_group = indian_group
 			religion = zurvanism
 		}
 	}

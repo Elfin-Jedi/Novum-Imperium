@@ -1203,7 +1203,7 @@ targeted_decisions = {
 
 	convert_to_buddhism = {
 		only_playable = yes
-		icon_religion = buddhist
+		icon_religion = bud_zen
 
 		filter = self
 		ai_target_filter = self
@@ -1212,7 +1212,7 @@ targeted_decisions = {
 		potential = {
 			is_playable = yes
 			has_dharmic_religion_trigger = yes
-			NOT = { religion = buddhist }
+			NOT = { religion_group = bud_group }
 			is_theocracy = no
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -1225,7 +1225,7 @@ targeted_decisions = {
 			prestige = 500
 			NOT = { trait = zealous }
 			any_realm_province = {
-				religion = buddhist
+				religion_group = bud_group
 			}
 			custom_tooltip = {
 				text = indian_has_not_converted
@@ -1233,7 +1233,7 @@ targeted_decisions = {
 			}
 		}
 		effect = {
-			buddhist = { save_event_target_as = target_religion }
+			bud_zen = { save_event_target_as = target_religion }
 			emf_character_set_religion_to_target_religion = yes
 			prestige = -500
 			piety = 100
@@ -1313,10 +1313,10 @@ targeted_decisions = {
 				limit = { religion = hindu }
 				character_event = { id = RoI.115 } # Choose branch
 			}
-			if = {
-				limit = { religion = buddhist }
-				character_event = { id = RoI.116 } # Choose branch
-			}
+			#if = {
+			#	limit = { religion = buddhist }
+			#	character_event = { id = RoI.116 } # Choose branch
+			#}
 			if = {
 				limit = { religion = jain }
 				character_event = { id = RoI.117 } # Confirm conversion

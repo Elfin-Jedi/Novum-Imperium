@@ -2398,7 +2398,7 @@ eldership_rules_afr = {
 			localisation_key = tooltip_feudal_elector_vote_content_positive
 			NOT = { character = FROM } #Do not judge yourself.
 			OR = { 
-				religion = buddhist
+				religion_group = bud_group
 				religion = jain
 				religion = bon
 				pacifist = yes
@@ -5474,7 +5474,7 @@ eldership_rules_afr = {
 			localisation_key = tooltip_feudal_elector_vote_content_positive
 			NOT = { character = FROM } #Do not judge yourself.
 			OR = { 
-				religion = buddhist
+				religion_group = bud_group
 				religion = jain
 				religion = bon
 				pacifist = yes

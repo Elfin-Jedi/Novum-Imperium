@@ -4393,7 +4393,7 @@ character_event = {
 					create_character = {
 						random_traits = no
 						dynasty = random
-						religion = buddhist
+						religion = bud_zen
 						culture = sogdian
 						female = yes
 						historical = yes
@@ -4411,7 +4411,7 @@ character_event = {
 						random_list = {
 							30 = { }
 							25 = { religion = khurmazta }
-							25 = { religion = manichean }
+							25 = { religion = mani }
 							20 = { religion = nestorian }
 						}
 						#Appearance randomizer
@@ -5150,7 +5150,7 @@ character_event = {
 						random_list = {
 							60 = { }
 							20 = { religion = sunni }
-							10 = { religion = buddhist }
+							10 = { religion = bud_zen }
 							10 = { religion = jain }
 						}
 						#Appearance randomizer
@@ -6357,7 +6357,7 @@ character_event = {
 						create_character = {
 							random_traits = no
 							dynasty = none
-							religion = buddhist
+							religion = bud_zen
 							culture = sogdian
 							female = yes
 							historical = yes
@@ -6377,7 +6377,7 @@ character_event = {
 								20 = { }
 								20 = { religion = khurmazta }
 								20 = { religion = zoroastrian }
-								20 = { religion = manichean }
+								20 = { religion = mani }
 								20 = { religion = nestorian }
 							}
 							add_trait = seductress
@@ -6469,7 +6469,7 @@ character_event = {
 						create_character = {
 							random_traits = no
 							dynasty = none
-							religion = buddhist
+							religion = bud_zen
 							culture = tocharian
 							female = yes
 							historical = yes
@@ -6920,7 +6920,7 @@ character_event = {
 							random_list = {
 								70 = { }
 								10 = { religion = mazdakism }
-								10 = { religion = manichean }
+								10 = { religion = mani }
 								10 = { religion = sunni }
 							}
 							add_trait = seductress
@@ -7138,7 +7138,7 @@ character_event = {
 							}
 							random_list = {
 								70 = { }
-								10 = { religion = buddhist }
+								10 = { religion = bud_zen }
 								20 = { religion = jain }
 							}
 							add_trait = seductress
@@ -7246,7 +7246,7 @@ character_event = {
 							}
 							random_list = {
 								70 = { }
-								10 = { religion = buddhist }
+								10 = { religion = bud_zen }
 								20 = { religion = jain }
 							}
 							add_trait = seductress
@@ -7693,7 +7693,7 @@ character_event = {
 						create_random_steward = {
 							random_traits = yes
 							dynasty = none
-							religion = buddhist
+							religion = bud_zen
 							culture = sogdian
 							female = yes
 							historical = yes
@@ -7714,7 +7714,7 @@ character_event = {
 								20 = { }
 								20 = { religion = khurmazta }
 								20 = { religion = zoroastrian }
-								20 = { religion = manichean }
+								20 = { religion = mani }
 								20 = { religion = nestorian }
 							}
 							#add_random_education_trait = diplomacy
@@ -7733,7 +7733,7 @@ character_event = {
 						create_random_steward = {
 							random_traits = yes
 							dynasty = none
-							religion = buddhist
+							religion = bud_zen
 							culture = tocharian
 							female = yes
 							historical = yes
@@ -7830,7 +7830,7 @@ character_event = {
 							random_list = {
 								70 = { }
 								10 = { religion = mazdakism }
-								10 = { religion = manichean }
+								10 = { religion = mani }
 								10 = { religion = sunni }
 							}
 							#add_random_education_trait = diplomacy
@@ -7904,7 +7904,7 @@ character_event = {
 							}
 							random_list = {
 								70 = { }
-								10 = { religion = buddhist }
+								10 = { religion = bud_zen }
 								20 = { religion = jain }
 							}
 							#add_random_education_trait = diplomacy
@@ -8591,7 +8591,7 @@ character_event = {
 						create_random_priest = {
 							random_traits = no
 							dynasty = none
-							religion = buddhist
+							religion = bud_zen
 							culture = sogdian
 							female = yes
 							historical = yes
@@ -8613,7 +8613,7 @@ character_event = {
 								20 = { }
 								20 = { religion = khurmazta }
 								20 = { religion = zoroastrian }
-								20 = { religion = manichean }
+								20 = { religion = mani }
 								20 = { religion = nestorian }
 							}
 							#add_random_education_trait = diplomacy
@@ -8700,7 +8700,7 @@ character_event = {
 						create_random_priest = {
 							random_traits = no
 							dynasty = none
-							religion = buddhist
+							religion = bud_zen
 							culture = tocharian
 							female = yes
 							historical = yes
@@ -8936,7 +8936,7 @@ character_event = {
 							random_list = {
 								70 = { }
 								10 = { religion = mazdakism }
-								10 = { religion = manichean }
+								10 = { religion = mani }
 								10 = { religion = sunni }
 							}
 							#add_random_education_trait = diplomacy
@@ -9148,7 +9148,7 @@ character_event = {
 							}
 							random_list = {
 								70 = { }
-								10 = { religion = buddhist }
+								10 = { religion = bud_zen }
 								20 = { religion = jain }
 							}
 							#add_random_education_trait = diplomacy
@@ -9411,8 +9411,8 @@ character_event = {
 					random_list = {
 						20 = { }
 						20 = { religion = khurmazta }
-						20 = { religion = buddhist }
-						20 = { religion = manichean }
+						20 = { religion = bud_zen }
+						20 = { religion = mani }
 						20 = { religion = nestorian }
 					}
 					#Ethnic origin randomizer
@@ -9484,7 +9484,7 @@ character_event = {
 					add_trait = quick
 					random_list = {
 						70 = { }
-						10 = { religion = manichean }
+						10 = { religion = mani }
 						10 = { religion = zoroastrian }
 						10 = { religion = zun_pagan }
 					}

@@ -8298,7 +8298,7 @@ character_event = {
 	option = {
 		name = "EVTOPTA1000109436" #Impressive sight
 		trigger = {
-			NOT = { religion = buddhist }
+			NOT = { religion_group = bud_group }
 		}
 		ai_chance = {
 			factor = 1
@@ -8324,7 +8324,7 @@ character_event = {
 	option = {
 		name = "EVTOPTB1000109436" #HEATHENS
 		trigger = {
-			NOT = { religion = buddhist }
+			NOT = { religion_group = bud_group }
 		}
 		ai_chance = {
 			factor = 1
@@ -8350,7 +8350,7 @@ character_event = {
 	option = {
 		name = "EVTOPTC1000109436" #Buddhist awesome
 		trigger = {
-			religion = buddhist
+			religion_group = bud_group
 		}
 		random_list = {
 			50 = { prestige = 3 }

@@ -25140,7 +25140,7 @@ add_ascetic_trait_effect = {
 			add_trait = aryika
 		}
 		else_if = {
-			limit = { religion = buddhist }
+			limit = { religion_group = bud_group }
 			add_trait = bhikkhuni
 		}
 		else_if = {
@@ -25171,7 +25171,7 @@ add_ascetic_trait_effect = {
 			add_trait = muni
 		}
 		else_if = {
-			limit = { religion = buddhist }
+			limit = { religion_group = bud_group }
 			add_trait = bhikkhu
 		}
 		else_if = {
@@ -25810,7 +25810,7 @@ flip_to_secret_religion_effect = {
 		trigger_switch = { # Choose branch
 			on_trigger = religion
 			hindu = { character_event = { id = RoI.110 } }
-			buddhist = { character_event = { id = RoI.111 } }
+			bud_zen = { character_event = { id = RoI.111 } }
 			jain = { character_event = { id = RoI.112 } }
 		}
 	}
@@ -36091,13 +36091,13 @@ apply_dogmatic_on_start_effect = {
 	remove_intermarry = karaite
 	
 	remove_intermarry = hindu
-	remove_intermarry = buddhist
+	remove_intermarry = bud_group
 	remove_intermarry = jain
 	remove_intermarry = taoist
 	
 	remove_intermarry = khurmazta
 	remove_intermarry = mandaean
-	remove_intermarry = manichean
+	remove_intermarry = mani_group
 	remove_intermarry = mazdakism
 	remove_intermarry = yazidism
 	remove_intermarry = zoroastrian
@@ -36178,7 +36178,7 @@ apply_syncretic_muslim_on_start_effect = {
 apply_syncretic_zoroastrian_on_start_effect = {
 	add_intermarry = khurmazta
 	add_intermarry = mandaean
-	add_intermarry = manichean
+	add_intermarry = mani_group
 	add_intermarry = mazdakism
 	add_intermarry = yazidism
 	add_intermarry = zoroastrian
@@ -36188,7 +36188,7 @@ apply_syncretic_zoroastrian_on_start_effect = {
 }
 apply_syncretic_indian_on_start_effect = {
 	add_intermarry = hindu
-	add_intermarry = buddhist
+	add_intermarry = bud_group
 	add_intermarry = jain
 	add_intermarry = taoist
 	
@@ -43181,7 +43181,7 @@ give_random_character_modifier_effect = {
 					trait = brave
 					religion_group = pagan_group
 					is_nomadic = yes
-					religion = buddhist
+					religion = bud_group
 					religion = bogomilist
 					gender_equality_trigger = yes
 				}
@@ -43971,11 +43971,11 @@ abdicate_holy_order_if_religion_changes_effect = {
 		if = {
 			limit = {
 				is_title_active = d_ashokas_chosen
-				religion = buddhist 
+				religion = bud_zen
 				owner = { 
 					ai = yes
 					holy_order = yes 
-					NOT = { religion = buddhist } 
+					NOT = { religion = bud_zen } 
 				}
 			}
 			log = "[d_ashokas_chosen.owner.GetTitledFirstName] was found to be unfit to lead the [d_ashokas_chosen.GetName] and therefore removed by the abdicate holy order effect!"
@@ -44068,11 +44068,11 @@ abdicate_holy_order_if_religion_changes_effect = {
 		if = {
 			limit = {
 				is_title_active = d_army_light
-				religion = manichean
+				religion = mani
 				owner = { 
 					ai = yes
 					holy_order = yes 
-					NOT = { religion = manichean } 
+					NOT = { religion = mani } 
 				}
 			}
 			log = "[d_army_light.owner.GetTitledFirstName] was found to be unfit to lead the [d_army_light.GetName] and therefore removed by the abdicate holy order effect!"

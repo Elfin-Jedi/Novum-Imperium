@@ -2536,10 +2536,6 @@ true_religion_zoroastrian_trigger = {
 	true_religion = zoroastrian
 }
 
-true_religion_manichean_trigger = {
-	true_religion = manichean
-}
-
 true_religion_khurmazta_trigger = {
 	true_religion = khurmazta
 }
@@ -2558,10 +2554,6 @@ true_religion_taoist_trigger = {
 
 true_religion_hindu_trigger = {
 	true_religion = hindu
-}
-
-true_religion_buddhist_trigger = {
-	true_religion = buddhist
 }
 
 true_religion_jain_trigger = {
@@ -4604,7 +4596,7 @@ looting_artifact_event_religious_artifacts_trigger = {
 			}
 			trigger_else_if = {
 				limit = { ROOT = { religion = yazidism } }
-				NOT = { has_artifact_flag = yazidism }
+				NOT = { has_artifact_flag = yazidi }
 			}
 			trigger_else_if = {
 				limit = { ROOT = { religion = shiite } }
@@ -4644,10 +4636,10 @@ looting_artifact_event_religious_artifacts_trigger = {
 			}
 			trigger_else_if = {
 				limit = { ROOT = { religion = mazdakism } }
-				NOT = { has_artifact_flag = mazdakism }
+				NOT = { has_artifact_flag = mazdaki }
 			}
 			trigger_else_if = {
-				limit = { ROOT = { religion = manichean } }
+				limit = { ROOT = { religion = mani } }
 				NOT = { has_artifact_flag = manichean }
 			}
 			trigger_else_if = {
@@ -4663,7 +4655,7 @@ looting_artifact_event_religious_artifacts_trigger = {
 				NOT = { has_artifact_flag = hindu }
 			}
 			trigger_else_if = {
-				limit = { ROOT = { religion = buddhist } }
+				limit = { ROOT = { religion_group = bud_group } }
 				NOT = { has_artifact_flag = buddhist }
 			}
 			trigger_else_if = {
@@ -7023,13 +7015,13 @@ likes_mazdakis = {
 	religion = mazdakism
 }
 likes_manicheans = {
-	religion = manichean
+	religion = mani
 }
 likes_khurmaztans = {
 	religion = khurmazta
 }
 likes_buddhists = {
-	religion = buddhist
+	religion_group = bud_group
 }
 likes_hindus = {
 	religion = hindu

@@ -16,7 +16,7 @@ monastic_feudal_time = {
 			OR = { 
 				religion = bon
 				religion = bon_reformed
-				religion = buddhist
+				religion_group = bud_group
 				religion = hindu
 				religion = taoist
 				religion = jain
@@ -47,7 +47,7 @@ monastic_feudal_time = {
 				NOT = { culture_group = tibetan_group }
 				NOR = { 
 					religion = bon
-					religion = buddhist
+					religion_group = bud_group
 				}
 			}
 			culture = bodpa
@@ -57,7 +57,7 @@ monastic_feudal_time = {
 			limit = {
 				NOR = { 
 					religion = bon
-					religion = buddhist
+					religion_group = bud_group
 				}
 			}
 			religion = bon
@@ -67,7 +67,7 @@ monastic_feudal_time = {
 			limit = {
 				OR = { 
 					religion = bon
-					religion = buddhist
+					religion_group = bud_group
 				}
 				NOT = { culture_group = tibetan_group }
 			}

@@ -2982,7 +2982,7 @@ defined_text = {
 				society_member_of = secret_religious_society_yazidism
 				society_member_of = secret_religious_society_druze
 				society_member_of = secret_religious_society_mazdakism
-				society_member_of = secret_religious_society_manichean
+				society_member_of = secret_religious_society_mani
 			}
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -3169,7 +3169,7 @@ defined_text = {
 				society_member_of = secret_religious_society_yazidism
 				society_member_of = secret_religious_society_druze
 				society_member_of = secret_religious_society_mazdakism
-				society_member_of = secret_religious_society_manichean
+				society_member_of = secret_religious_society_mani
 			}
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -17345,7 +17345,7 @@ defined_text = {
 						religion = zoroastrian
 						religion = mazdakism
 						religion = zurvanism
-						religion = manichean
+						religion = mani
 						religion = khurmazta
 						religion = jewish
 						religion = samaritan
@@ -17376,7 +17376,7 @@ defined_text = {
 						religion = zoroastrian
 						religion = mazdakism
 						religion = zurvanism
-						religion = manichean
+						religion = mani
 						religion = khurmazta
 						religion = jewish
 						religion = samaritan
@@ -17415,7 +17415,7 @@ defined_text = {
 						religion = zoroastrian
 						religion = mazdakism
 						religion = zurvanism
-						religion = manichean
+						religion = mani
 						religion = khurmazta
 						religion = jewish
 						religion = samaritan
@@ -17439,7 +17439,7 @@ defined_text = {
 						religion = zoroastrian
 						religion = mazdakism
 						religion = zurvanism
-						religion = manichean
+						religion = mani
 						religion = khurmazta
 						religion = jewish
 						religion = samaritan
@@ -18632,7 +18632,7 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			religion = manichean
+			religion = mani
 		}
 		localisation_key = Holy_Order_Manichean
 	}

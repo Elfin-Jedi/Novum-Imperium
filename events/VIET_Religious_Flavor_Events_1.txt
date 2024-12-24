@@ -3161,7 +3161,7 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	religion = buddhist
+	religion_group = bud_group
 	only_rulers = yes
 	min_age = 16
 	capable_only = yes
@@ -3301,7 +3301,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	only_rulers = yes
-	religion = buddhist
+	religion_group = bud_group
 	min_age = 16
 	capable_only = yes
 	prisoner = no
@@ -3436,7 +3436,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	only_rulers = yes
-	religion = buddhist
+	religion_group = bud_group
 	min_age = 16
 	capable_only = yes
 	prisoner = no
@@ -3518,7 +3518,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	only_rulers = yes
-	religion = buddhist
+	religion_group = bud_group
 	min_age = 16
 	capable_only = yes
 	prisoner = no
@@ -3633,7 +3633,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	only_rulers = yes
-	religion = buddhist
+	religion_group = bud_group
 	min_age = 16
 	capable_only = yes
 	prisoner = no
@@ -3738,7 +3738,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	only_rulers = yes
-	religion = buddhist
+	religion_group = bud_group
 	min_age = 16
 	capable_only = yes
 	prisoner = no
@@ -3829,7 +3829,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	only_rulers = yes
-	religion = buddhist
+	religion_group = bud_group
 	min_age = 16
 	capable_only = yes
 	prisoner = no
@@ -4015,7 +4015,7 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	religion = buddhist
+	religion_group = bud_group
 	min_age = 16
 	capable_only = yes
 	prisoner = no
@@ -4029,7 +4029,7 @@ character_event = {
 		in_command = no
 		prisoner = no
 		spouse = {
-			religion = buddhist
+			religion_group = bud_group
 			prisoner = no
 			is_alive = yes
 			OR = {

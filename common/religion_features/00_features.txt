@@ -1814,7 +1814,7 @@ religion_doctrine = {
 							OR = {
 								is_holy_site = khurmazta
 								is_holy_site = mandaean
-								is_holy_site = manichean
+								is_holy_site = mani
 								is_holy_site = mazdakism
 								is_holy_site = yazidism
 								is_holy_site = zoroastrian
@@ -1900,7 +1900,7 @@ religion_doctrine = {
 						any_realm_title = {
 							OR = {
 								is_holy_site = hindu
-								is_holy_site = buddhist
+								is_holy_site = bud_zen
 								is_holy_site = jain
 								is_holy_site = taoist
 							}
@@ -4284,13 +4284,13 @@ religion_leadership = {
 							religion = zoroastrian
 							religion = mazdakism
 							religion = zurvanism
-							religion = manichean
+							religion_group = mani
 							religion = khurmazta
 							religion = jewish
 							religion = samaritan
 							religion = karaite
 							religion = hindu
-							religion = buddhist
+							religion_group = bud_group
 							religion = jain
 							religion = taoist
 							religion_openly_in_celtic_subgroup_trigger = yes
@@ -4317,7 +4317,7 @@ religion_leadership = {
 							religion = zoroastrian
 							religion = mazdakism
 							religion = zurvanism
-							religion = manichean
+							religion = mani
 							religion = khurmazta
 							religion = jewish
 							religion = samaritan
@@ -4353,7 +4353,7 @@ religion_leadership = {
 				}
 				if = {
 					limit = { 
-						religion = buddhist
+						religion = bud_zen
 						NOT = {
 							has_alternate_start_parameter = { key = religion_names value = random }
 						}
@@ -4419,7 +4419,7 @@ religion_leadership = {
 				}
 				if = {
 					limit = {
-						religion = buddhist
+						religion = bud_zen
 						has_alternate_start_parameter = { key = religion_names value = random }
 					}
 					random_list = {
