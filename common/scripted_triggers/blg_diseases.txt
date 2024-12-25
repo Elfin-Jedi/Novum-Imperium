@@ -30,6 +30,7 @@ blg_crippled = {
 	OR = {
 		trait = one_legged
 		trait = mangled
+		trait = crippled
 		has_character_modifier = swollen_ankle
 	}
 }
@@ -231,6 +232,7 @@ blg_werewolf = {
 	OR = {
 		has_character_modifier = wolf_blood
 		has_character_modifier = lycanthropy
+		trait = changeling
 		AND = {
 			OR = {
 				trait = rtp_feral_werewolf_tr

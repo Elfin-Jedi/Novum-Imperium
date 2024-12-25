@@ -167,7 +167,7 @@ blg_artifact_scepter_hellenic = {
 		AND = {
 			blg_priest = yes
 			rightful_religious_head = ROOT
-			religion_openly_hellenic_or_reformed_trigger = yes
+			religion_group = graecoroman_group
 		}
 		any_artifact = {
 			is_artifact_equipped = yes

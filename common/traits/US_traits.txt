@@ -103,7 +103,7 @@ dharma = {
 youxia = {
 	lifestyle = yes
 	potential = {
-		culture_group = chinese
+		culture_group = chinese_group
 	}
 	opposites =  {
 		ruthless
@@ -153,7 +153,7 @@ tea_master = {
 	potential = {
 	OR = {
 		culture_group = far_east
-		culture_group = chinese
+		culture_group = chinese_group
 		culture_group = korean_group
 		culture_group = vietic
 		}
@@ -193,7 +193,7 @@ go_player = {
 	potential = {
 	OR = {
 		culture_group = far_east
-		culture_group = chinese
+		culture_group = chinese_group
 		culture_group = korean_group
 		culture_group = vietic
 		}

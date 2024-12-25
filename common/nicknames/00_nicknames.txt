@@ -719,7 +719,7 @@ nick_priest_hater = {
 		age = 20
 		NOT = { piety = -100 }
 		trait = cynical
-		NOT = { religion = buddhist }
+		NOT = { religion_group = bud_group }
 		NOT = { religion = jain }
 	}
 	chance = {
@@ -4118,7 +4118,6 @@ nick_the_lioness = {
 	allow = {
 		is_female = yes
 		has_landed_title = e_persia
-		}
 	}
 	chance = {
 		factor = 10

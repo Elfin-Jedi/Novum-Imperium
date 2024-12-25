@@ -26,6 +26,8 @@ blg_devout = {
 		has_character_flag = guru
 		trait = doctores
 		has_minor_title = preacher_mt
+		trait = druid
+		trait = learning_druidic_arts
 	}
 }
 
@@ -50,6 +52,7 @@ blg_fashionable = {
 	OR = {
 		trait = proud
 		trait = beauty
+		trait = fashion
 	}
 }
 
@@ -60,6 +63,7 @@ blg_guard = {
 		trait = shieldmaiden
 		trait = gladiator
 		trait = imperial_guard
+		trait = celtic_knight
 		has_character_flag = rtp_temporary_soldier
 		has_character_flag = rtp_temporary_mercenary
 		has_character_flag = rtp_temporary_crusader
@@ -135,6 +139,7 @@ blg_naval = {
 # Peasant leader.
 blg_peasant = {
 	OR = {
+		government = anarchist_government
 		trait = peasant_leader
 		trait = peasant_ruler
 		trait = heresiarch
@@ -180,7 +185,10 @@ blg_seducer = {
 
 # Enslaved.
 blg_slave = {
-	death_reason = death_slavery
+	OR = {
+		trait = slave
+		death_reason = death_slavery
+	}
 }
 
 # Socializer personality.
@@ -188,6 +196,8 @@ blg_socializer = {
 	OR = {
 		trait = gregarious
 		trait = socializer
+		trait = sociable
+		trait = friendly
 		trait = gamer
 		trait = rtp_chef_tr
 		has_minor_title = server_mt
@@ -296,6 +306,7 @@ blg_pilgrimage = {
 	OR = {
 		trait = on_pilgrimage
 		trait = on_indian_pilgrimage
+		trait = on_retreat
 	}
 }
 
@@ -323,6 +334,8 @@ blg_travelling = {
 		trait = kow_tow_travels
 		has_character_modifier = holding_grand_hunt
 		has_character_flag = holding_tiger_hunt
+		trait = nm_on_viking
+		trait = nm_exploring_vinland
 	}
 }
 

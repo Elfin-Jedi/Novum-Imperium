@@ -202,6 +202,10 @@ blg_society_monophysite = {
 	OR = {
 		portrait_society = monastic_order_monophysite
 		portrait_society = monastic_order_nestorian
+		portrait_society = monastic_order_adoptionist
+		portrait_society = monastic_order_apollinarist
+		portrait_society = monastic_order_iconoclast
+		portrait_society = monastic_order_pelagian
 	}
 }
 
@@ -212,7 +216,12 @@ blg_society_norse = {
 
 # Orthodox order.
 blg_society_orthodox = {
-	portrait_society = monastic_order_orthodox
+	OR = {
+		portrait_society = monastic_order_orthodox
+		portrait_society = monastic_order_melkite
+		portrait_society = monastic_order_monothelite
+		portrait_society = monastic_order_montanist
+	}
 }
 
 # Pagan Satanists society.
@@ -235,7 +244,10 @@ blg_society_slavic = {
 
 # Hellenic Stoic order.
 blg_society_stoics = {
-	portrait_society = monastic_order_stoics
+	OR = {
+		portrait_society = monastic_order_stoics
+		portrait_has_trait = vestalis
+	}
 }
 
 # Tengri warrior lodge.

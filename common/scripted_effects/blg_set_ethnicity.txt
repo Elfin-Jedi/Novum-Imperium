@@ -192,7 +192,7 @@ blg_set_ethnicity_east_african = {
 				blg_culture_middleeast = yes
 				blg_culture_steppes = yes
 				blg_culture_indian = yes
-				likes_tibetans = yes
+				culture = bodpa
 				blg_culture_chinese = yes
 				blg_culture_mediterranean = yes
 				blg_culture_eastern_european = yes
@@ -202,7 +202,7 @@ blg_set_ethnicity_east_african = {
 			limit = {
 				NOT = { graphical_culture = somaligfx }
 			}
-			set_graphical_culture = somali
+			set_graphical_culture = fur
 		}
 	}
 	else_if = {
@@ -329,7 +329,7 @@ blg_set_ethnicity_gothic = {
 		limit = {
 			NOT = { graphical_culture = crimeangfx }
 		}
-		set_graphical_culture = crimean_gothic
+		set_graphical_culture = ostrogothic
 	}
 }
 
@@ -348,7 +348,7 @@ blg_set_ethnicity_iberian = {
 					blg_culture_eastern_european = yes
 				}
 			}
-			set_graphical_culture = castillan
+			set_graphical_culture = catalan
 		}
 		else = {
 			set_graphical_culture = andalusian_arabic
@@ -361,7 +361,7 @@ blg_set_ethnicity_indian = {
 		limit = {
 			NOT = { graphical_culture = indiangfx }
 		}
-		set_graphical_culture = hindustani
+		set_graphical_culture = hindavi
 	}
 }
 
@@ -370,7 +370,7 @@ blg_set_ethnicity_indus = {
 		limit = {
 			NOT = { graphical_culture = indusgfx }
 		}
-		set_graphical_culture = panjabi
+		set_graphical_culture = saurashtra
 	}
 }
 
@@ -426,7 +426,7 @@ blg_set_ethnicity_levantine = {
 			limit = {
 				NOT = { graphical_culture = semitegfx }
 			}
-			set_graphical_culture = assyrian
+			set_graphical_culture = syroaramean
 		}
 	}
 	else_if = {
@@ -487,14 +487,14 @@ blg_set_ethnicity_mongol = {
 			limit = {
 				NOT = { graphical_culture = khitangfx }
 			}
-			set_graphical_culture = khitan
+			set_graphical_culture = dienviet
 		}
 	}
 	else_if = {
 		limit = {
 			NOT = { graphical_culture = mongolgfx }
 		}
-		set_graphical_culture = mongol
+		set_graphical_culture = xiongnu
 	}
 }
 
@@ -516,7 +516,7 @@ blg_set_ethnicity_norse = {
 				graphical_culture = norsegaelgfx
 			}
 		}
-		set_graphical_culture = norse
+		set_graphical_culture = danish
 	}
 }
 
@@ -545,7 +545,7 @@ blg_set_ethnicity_persian = {
 				blg_culture_afghan = yes
 				blg_culture_sogdian = yes
 				blg_culture_indian = yes
-				likes_tibetans = yes
+				culture = bodpa
 				blg_culture_chinese = yes
 			}
 		}
@@ -599,7 +599,7 @@ blg_set_ethnicity_sogdian = {
 				blg_culture_afghan = yes
 				blg_culture_steppes = yes
 				blg_culture_indian = yes
-				likes_tibetans = yes
+				culture = bodpa
 				blg_culture_chinese = yes
 			}
 		}
@@ -622,7 +622,7 @@ blg_set_ethnicity_southindian = {
 	if = {
 		limit = {
 			OR = {
-				likes_indians = yes
+				culture_group = indoaryan
 				blg_culture_western_european = yes
 				blg_culture_eastern_european = yes
 				blg_culture_mediterranean = yes
@@ -669,7 +669,7 @@ blg_set_ethnicity_southslavic = {
 		limit = {
 			year >= 950
 			OR = {
-				likes_finno_ugrics = yes
+				culture_group = finno_ugric
 				blg_culture_steppes = yes
 				blg_culture_chinese = yes
 			}
@@ -725,7 +725,7 @@ blg_set_ethnicity_tibetan = {
 			limit = {
 				NOT = { graphical_culture = tangutgfx }
 			}
-			set_graphical_culture = tangut
+			set_graphical_culture = viethellenic
 		}
 	}
 	else_if = {
@@ -796,7 +796,11 @@ blg_set_ethnicity_ugric = {
 blg_set_ethnicity_westafrican = {
 	if = {
 		limit = {
-			culture_group = west_african
+			OR = {
+				culture_group = west_african
+				culture_group = congo_nigerian
+				culture_group = bantu
+			}
 		}
 		if = {
 			limit = {

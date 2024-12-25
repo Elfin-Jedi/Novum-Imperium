@@ -542,7 +542,7 @@
 217717 = { #李溫 Li Wen or 李漼 Li Cui. Emperor Yizong of Tang (lived 833-873)(reigned 853-873)
 	dynasty = 1051150 #Longxi Li
 	name = "Wen"
-	religion = buddhist #clearly favored Buddhism and sponsored many Buddhist rituals towards the end of his reign
+	religion = bud_zen #clearly favored Buddhism and sponsored many Buddhist rituals towards the end of his reign
 	culture = han
 	father = 217716 # Emperor Xuanzong
 	#mother = 元昭皇后晁氏
@@ -550,7 +550,7 @@
 	trait = "slothful" #left state matters into the hands of the eunuchs and made no effort to remedy it
 	trait = "trusting" #rampant favoritism in the court and the bureaucracy during his reign
 	trait = "content"
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	833.12.28 = {
 		birth = yes
 	}

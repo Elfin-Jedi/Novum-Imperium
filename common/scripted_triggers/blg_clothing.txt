@@ -44,7 +44,7 @@ blg_jewelry = {
 
 # Facial makeup expected for those under traditional Han filial piety rules.
 blg_chinese_makeup = {
-	culture_group = chinese_group
+	blg_culture_chinese = yes
 	is_female = yes
 	prisoner = no
 	OR = {
@@ -338,6 +338,7 @@ blg_clothes_military = {
 			OR = {
 				is_landed = no
 				trait = travelling
+				trait = nm_on_viking
 			}
 		}
 	}
