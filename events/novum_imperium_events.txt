@@ -3,6 +3,7 @@ character_event = {
 	id = novum_imperium.1
 	desc = desc_novum_imperium.1
 	picture = GFX_evt_da_ancient_book
+	hide_window = yes
 	
 	ai = no
 	
@@ -17,7 +18,6 @@ character_event = {
 	}
 
 	option = {
-		name = optanovum_imperium.1 # Nothing to do.
 		ROOT = {
 			random_list = {
 				100 = {
@@ -601,6 +601,5 @@ character_event = {
 				}
 			}
 		}
-		tooltip = "EVTOOLTIP2490"
 	}
 }
