@@ -96,10 +96,34 @@ character_event = { 		#Multiplexer event
 				modifier = {
 					factor = 0
 					regent = { trait = humble }
-				}				
+				}
+				modifier = {
+					factor = 0
+					regent = { trait = temperate }
+				}
+				modifier = {
+					factor = -2.00
+					regent = { trait = money }
+				}
+				modifier = {
+					factor = -2.00
+					regent = { trait = frugal }
+				}
+				modifier = {
+					factor = -2.00
+					regent = { trait = frugalff }
+				}
+				modifier = {
+					factor = 2
+					regent = { trait = gluttonous }
+				}
 				modifier = {
 					factor = 5
 					regent = { trait = proud }
+				}
+				modifier = {
+					factor = 7
+					regent = { trait = frivolous }
 				}
 
 				character_event = { id = darkages.72705 }

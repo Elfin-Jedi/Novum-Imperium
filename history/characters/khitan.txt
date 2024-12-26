@@ -3,13 +3,13 @@
 188905 = { #耶律大石 Yelü Dashi
 	name="Dashi" #Yelü Dashi
 	dynasty=1000102400
-	religion=buddhist
+	religion=bud_zen
 	culture="khitan"
 	learning=7
 	martial=8
 	trait="skilled_tactician"
 	trait="unyielding_leader"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	trait="patient"
 	trait="diligent"
 	trait="ambitious"
@@ -34,9 +34,9 @@
 	name="Tabuy�n"
 	female = yes
 	dynasty=1000102401
-	religion=buddhist
+	religion=bud_zen
 	culture="khitan"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	father=1231510 #fictional relation
 	1110.5.5={
 		birth = yes
@@ -62,9 +62,9 @@
 188907 = { #耶律夷列 Yelü Yilie
 	name="Iriy�r" #Yelü Yilie
 	dynasty=1000102400
-	religion=buddhist
+	religion=bud_zen
 	culture="khitan"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	father = 188905
 	mother = 188906
 	1135.5.5={
@@ -83,9 +83,9 @@
 	name="Pusu�n"
 	female = yes
 	dynasty=1000102400
-	religion=buddhist
+	religion=bud_zen
 	culture="khitan"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	trait="deceitful"
 	trait="lustful"
 	father = 188905
@@ -107,9 +107,9 @@
 188909 = { #　蕭斡里剌 Xiao Wolila
 	name="Orila" #Khitan transliteration guesswork; Wolila; Duolubu's father
 	dynasty=1000102409
-	religion=buddhist
+	religion=bud_zen
 	culture="khitan"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	trait="tough_soldier"
 	1110.5.5={
 		birth = yes
@@ -125,9 +125,9 @@
 188910 = { #蕭朵魯不 Xiao Duolubu
 	name="D�rub" #Khitan transliteration guesswork; Duolubu; Pusuwan's husband
 	dynasty=1000102409
-	religion=buddhist
+	religion=bud_zen
 	culture="khitan"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	father = 188909
 	1134.5.5={
 		birth = yes
@@ -152,9 +152,9 @@
 188911 = { #蕭朴古只 Xiao Fuguzhi
 	name="Boguji" #Khitan transliteration guesswork; Fuguzhi; Duolubu's brother, Pusuwan's lover
 	dynasty=1000102409
-	religion=buddhist
+	religion=bud_zen
 	culture="khitan"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	trait="lustful"
 	father = 188909
 	1136.5.5={
@@ -173,9 +173,9 @@
 	dna = eboqtsnbtbn
 	properties = fm00gd000000000000
 	dynasty=1000102400
-	religion=buddhist
+	religion=bud_zen
 	culture="khitan"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	father = 188907
 	1157.5.5={
 		birth = yes
@@ -189,9 +189,9 @@
 	name="Hon-hu" #Khitan transliteration guesswork; Zhilugu's daughter, wife of K�chl�g, the Naiman usurper
 	female=yes
 	dynasty=1000102400
-	religion=buddhist
+	religion=bud_zen
 	culture="khitan"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	father = 188912
 	mother = 1231501
 	1186.5.5={
@@ -368,12 +368,12 @@
 194330 = { #耶律賢 Yelü Xian, Khitan name 明扆 Mingyi, courtesy name 賢寧 Xianning. 遼景宗 Liao Jingzong.
 	name="M�n" # Khitan transliteration guesswork; Jingzong
 	dynasty=1000102400 # Liao Dynasty
-	religion=buddhist
+	religion=bud_zen
 	culture=khitan
 	father=194328
 	mother=1413508
 	trait=thrifty_clerk
-	trait=mahayana_buddhist
+	#trait=mahayana_buddhist
 	948.9.1 = {
 		birth = yes
 	}
@@ -392,7 +392,7 @@
 	martial=7
 	diplomacy=8
 	stewardship=8
-	religion=buddhist
+	religion=bud_zen
 	culture=khitan
 	father=194330
 	mother=1413617
@@ -401,7 +401,7 @@
 	trait=patient
 	trait=just
 	trait=gregarious
-	trait=mahayana_buddhist
+	#trait=mahayana_buddhist
 	972.1.16 = {
 		birth = yes
 	}
@@ -418,13 +418,13 @@
 194332 = { #耶律宗真 Yelü Zongzhen, Khitan name 只骨, courtesy name 夷不菫 Yibujin (興宗皇帝哀冊) (Ëbëgin in Khitan). 遼興宗 Liao Xingzong.
 	name="Jirgu" # Khitan transliteration guesswork; Xingzong
 	dynasty=1000102400 # Liao Dynasty
-	religion=buddhist
+	religion=bud_zen
 	culture=khitan
 	father=194331
 	mother=1413540
 	trait=tough_soldier
 	trait=greedy
-	trait=mahayana_buddhist
+	#trait=mahayana_buddhist
 	1016.4.3 = {
 		birth = yes
 	}
@@ -448,14 +448,14 @@
 194333 = { #耶律洪基 Yelü Hongji, Khitan name 查剌 Chala, courtesy name 涅鄰 Nielin (契丹仁聖大孝文帝哀冊文). 遼道宗 Liao Daozong.
 	name="Chala" # Daozong
 	dynasty=1000102400 # Liao Dynasty
-	religion=buddhist
+	religion=bud_zen
 	culture=khitan
 	father=194332
 	mother=1413517
 	trait=thrifty_clerk
 	trait=trusting
 	trait=arbitrary
-	trait=mahayana_buddhist
+	#trait=mahayana_buddhist
 	1032.9.14 = {
 		birth = yes
 	}
@@ -470,14 +470,14 @@
 194401 = { #耶律濬 Yelü Jun, Khitan name 耶魯斡 Yelüwo. 遼順宗 Liao Shunzong. In 1077.6.30 imprisoned and stripped of titles. (遼史/卷23) In 1077.11.19 murdered by Yelü Yixin. (遼史/卷23)
 	name="Y�ru-on" #Khitan transliteration guesswork; Jun
 	dynasty=1000102400 # Liao Dynasty
-	religion=buddhist
+	religion=bud_zen
 	culture=khitan
 	father=194333
 	mother=194402
 	#spouse = 1413796
 	trait=gregarious #????
 	trait=diligent #????
-	trait=mahayana_buddhist
+	#trait=mahayana_buddhist
 	1058.1.1 = {
 		birth = yes
 	}
@@ -493,13 +493,13 @@
 	name="Guanin" #Khitan transliteration guesswork
 	female=yes
 	dynasty=1000102403 # Shulu or Bali?
-	religion=buddhist
+	religion=bud_zen
 	culture=khitan
 	father = 1413534 #Xiaozhong was the husband of Guanyin's mother and his name is present on her eulogy. However, according to 遼史 Hui was the father. Most likely her mater married Hui after Zhong's death in a levirate tradition, and as Guanyin was a small child, she was adopted by Hui.
 	mother = 1413091
 	trait="fair"
 	trait="poet"
-	trait=mahayana_buddhist
+	#trait=mahayana_buddhist
 	1040.5.5 = {
 		birth = yes
 	}
@@ -514,14 +514,14 @@
 194334 = { #耶律延禧 Yelü Yanxi, Khitan name 阿果 Agua, courtesy name 延寧 Yanning. In 1125.3.7 captured by Jin. (遼史/卷30)
 	name="Ago" # Tianzuo
 	dynasty=1000102400 # Liao Dynasty
-	religion=buddhist
+	religion=bud_zen
 	culture=khitan
 	father=194401
 	mother = 1413796
 	#spouse = 1413997
 	trait="indulgent_wastrel"
 	trait="arbitrary"
-	trait=mahayana_buddhist
+	#trait=mahayana_buddhist
 	1075.6.5 = {
 		birth = yes
 	}
@@ -541,9 +541,9 @@
 	martial=6
 	stewardship=7
 	diplomacy=6
-	religion=buddhist
+	religion=bud_zen
 	culture=khitan
-	trait=mahayana_buddhist
+	#trait=mahayana_buddhist
 	#trait="sympathy_christendom"
 	#trait="sympathy_islam"
 	#trait="sympathy_zoroastrianism"
