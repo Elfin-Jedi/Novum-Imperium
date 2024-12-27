@@ -2771,7 +2771,14 @@ culture = {
 			noOfFrames = 8
 			color = 0
 			random = no # Only needed for Ironman compatibility
-		}		
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\tai_dyn_nonchristian_ironman.tga"
+			size = { x = 16 y = 7 }
+			noOfFrames = 31
+			color = 0
+			emblem = no
+		}
 	}
 }
 
@@ -4327,6 +4334,13 @@ culture = {
 			color = 0
 			random = no # Do not use for random CoAs
 		}
+		texture = {
+			file = "gfx\\coats_of_arms\\tai_dyn_eastern.tga"
+			size = { x = 16 y = 7 }
+			noOfFrames = 64
+			color = 0
+			random = no
+		}
 	}
 }
 
@@ -4514,6 +4528,13 @@ culture = {
 			noOfFrames = 2
 			color = 0
 			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\tai_dyn_eastern.tga"
+			size = { x = 16 y = 7 }
+			noOfFrames = 64
+			color = 0
+			random = no
 		}
 	}
 }

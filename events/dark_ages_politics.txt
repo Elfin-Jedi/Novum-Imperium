@@ -1040,7 +1040,11 @@ character_event = {			#DIPLOMATIC: STANCE TRICKY
 				modifier = {
 					factor = 0.66
 					trait = shy
-				}				
+				}
+				modifier = {
+					factor = 2
+					trait = manipulative
+				}
 				modifier = {
 					factor = 3
 					trait = deceitful
@@ -1235,7 +1239,14 @@ character_event = {			#DIPLOMATIC: STANCE TRICKY
 						trait = shy
 						has_character_flag = debate_foe						
 					}
-				}				
+				}
+				modifier = {
+					factor = 2
+					any_voter = {
+						trait = manipulative
+						has_character_flag = debate_foe						
+					}
+				}
 				modifier = {
 					factor = 3
 					any_voter = {
@@ -2271,7 +2282,11 @@ character_event = {			#MILITARY: STANCE TRICKY
 				modifier = {
 					factor = 0.66
 					trait = shy
-				}				
+				}
+				modifier = {
+					factor = 2
+					trait = manipulative
+				}
 				modifier = {
 					factor = 3
 					trait = deceitful
@@ -2467,7 +2482,14 @@ character_event = {			#MILITARY: STANCE TRICKY
 						trait = shy
 						has_character_flag = debate_foe						
 					}
-				}				
+				}
+				modifier = {
+					factor = 2
+					any_voter = {
+						trait = manipulative
+						has_character_flag = debate_foe						
+					}
+				}
 				modifier = {
 					factor = 3
 					any_voter = {
@@ -3539,7 +3561,11 @@ character_event = {			#MANAGEMENT: STANCE TRICKY
 				modifier = {
 					factor = 0.66
 					trait = shy
-				}				
+				}
+				modifier = {
+					factor = 2
+					trait = manipulative
+				}
 				modifier = {
 					factor = 3
 					trait = deceitful
@@ -3735,7 +3761,14 @@ character_event = {			#MANAGEMENT: STANCE TRICKY
 						trait = shy
 						has_character_flag = debate_foe						
 					}
-				}				
+				}
+				modifier = {
+					factor = 2
+					any_voter = {
+						trait = manipulative
+						has_character_flag = debate_foe						
+					}
+				}
 				modifier = {
 					factor = 3
 					any_voter = {
@@ -4806,7 +4839,11 @@ character_event = {			#INTRIGUE: STANCE TRICKY
 				modifier = {
 					factor = 0.66
 					trait = shy
-				}				
+				}
+				modifier = {
+					factor = 2
+					trait = manipulative
+				}
 				modifier = {
 					factor = 3
 					trait = deceitful
@@ -5002,7 +5039,14 @@ character_event = {			#INTRIGUE: STANCE TRICKY
 						trait = shy
 						has_character_flag = debate_foe						
 					}
-				}				
+				}
+				modifier = {
+					factor = 2
+					any_voter = {
+						trait = manipulative
+						has_character_flag = debate_foe						
+					}
+				}
 				modifier = {
 					factor = 3
 					any_voter = {
@@ -6074,6 +6118,10 @@ character_event = {			#LEARNING: STANCE TRICKY
 					trait = shy
 				}				
 				modifier = {
+					factor = 2
+					trait = manipulative
+				}
+				modifier = {
 					factor = 3
 					trait = deceitful
 				}
@@ -6268,7 +6316,14 @@ character_event = {			#LEARNING: STANCE TRICKY
 						trait = shy
 						has_character_flag = debate_foe						
 					}
-				}				
+				}
+				modifier = {
+					factor = 2
+					any_voter = {
+						trait = manipulative
+						has_character_flag = debate_foe						
+					}
+				}
 				modifier = {
 					factor = 3
 					any_voter = {
