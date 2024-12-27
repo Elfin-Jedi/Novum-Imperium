@@ -13,8 +13,8 @@
 	dynasty = 1000060001 #Khuc
 	name = "Thua Du"
 	culture = vietnamese
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	trait = skilled_tactician
 	trait = ambitious
 	#Birth date unknown
@@ -29,9 +29,9 @@
 	dynasty = 1000060001 #Khuc
 	name = "Hao"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418001
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = midas_touched
 	trait = brave
 	trait = diligent
@@ -49,9 +49,9 @@
 	dynasty = 1000060001 #Khuc
 	name = "Thua My"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418002
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = charismatic_negotiator
 	trait = ambitious
 	#Birth and death dates unknown
@@ -67,8 +67,8 @@
 	dynasty = 1000060002 #Duong
 	name = "Dinh Nghe"
 	culture = vietnamese
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	trait = brilliant_strategist
 	trait = brave
 	trait = ambitious
@@ -86,9 +86,9 @@
 	dynasty = 1000060002 #Duong
 	name = "Thieu Hong"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418004
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = skilled_tactician
 	trait = brave
 	trait = ambitious
@@ -107,9 +107,9 @@
 	dynasty = 1000060002 #Duong
 	name = "Tam Nuong" #ficitious
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418004
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	female = yes
 	#Birth and death dates unknown
 	905.1.1 = {
@@ -124,9 +124,9 @@
 	dynasty = 1000060002 #Duong
 	name = "Van Nga"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418005 #unknown but possible
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	female = yes
 	952.1.1 = {
 		birth=yes
@@ -140,8 +140,8 @@
 	dynasty = 1000060003 #Kieu
 	name = "Cong Tien"
 	culture = vietnamese
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	trait = skilled_tactician
 	trait = deceitful
 	trait = ambitious
@@ -160,8 +160,8 @@
 	dynasty = 1000060004 #Ngo
 	name = "Man"
 	culture = vietnamese
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	trait = thrifty_clerk
 	#birth and death dates unknown
 	863.1.1 = {
@@ -175,10 +175,10 @@
 	dynasty = 1000060004 #Ngo
 	name = "Quyen"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418009
 	#spouse = 1418006
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = brilliant_strategist
 	trait = just
 	trait = bright
@@ -194,10 +194,10 @@
 	dynasty = 1000060004 #Ngo
 	name = "Xuong Ngap"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418010
 	#mother = 1418006
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth date unknown
 	916.1.1 = {
 		birth=yes
@@ -210,9 +210,9 @@
 	dynasty = 1000060004 #Ngo
 	name = "Xuong Xi"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418011
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth date unknown
 	932.1.1 = {
 		birth=yes
@@ -225,9 +225,9 @@
 	dynasty = 1000060004 #Ngo
 	name = "Chan Luu"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418011
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = grey_eminence
 	933.1.1 = {
 		birth=yes
@@ -245,10 +245,10 @@
 	dynasty = 1000060004 #Ngo
 	name = "Xuong Van"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418010
 	mother = 1418006
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = thrifty_clerk
 	935.1.1 = {
 		birth=yes
@@ -263,10 +263,10 @@
 	dynasty = 1000060004 #Ngo
 	name = "Nam Hung"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418010
 	mother = 1418006
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	936.1.1 = {
 		birth=yes
@@ -281,10 +281,10 @@
 	dynasty = 1000060004 #Ngo
 	name = "Can Hung"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418010
 	mother = 1418006
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	939.1.1 = {
 		birth=yes
@@ -299,8 +299,8 @@
 	dynasty = 1000060005 #Dinh
 	name = "Gia Hung" #ficitious
 	culture = vietnamese
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	850.1.1 = {
 		birth=yes
@@ -313,9 +313,9 @@
 	dynasty = 1000060005 #Dinh
 	name = "Cong Tru"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418017
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = skilled_tactician
 	877.1.1 = {
 		birth=yes
@@ -328,8 +328,8 @@
 	dynasty = 1000060006 #Dam
 	name = "Vien Ngoai" #ficitious?
 	culture = vietnamese
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	880.1.1 = {
 		birth=yes
@@ -342,9 +342,9 @@
 	dynasty = 1000060006 #Dam
 	name = "Thiem Nuong" #ficitious?
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418019
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	female = yes
 	#birth and death dates unknown
 	902.1.1 = {
@@ -359,9 +359,9 @@
 	dynasty = 1000060005 #Dinh
 	name = "Du"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418017
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = skilled_tactician
 	#birth and death dates unknown
 	890.1.1 = {
@@ -375,10 +375,10 @@
 	dynasty = 1000060005 #Dinh
 	name = "Hoan"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418018
 	mother = 1418020
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = brilliant_strategist
 	trait = bright
 	trait = just
@@ -394,7 +394,7 @@
 	dynasty = 1000060005 #Dinh
 	name = "Lien"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418022
 	#spouse = 1418025
 	#birth date unknown
@@ -409,11 +409,11 @@
 	dynasty = 1000060004 #Ngo
 	name = "Nhat Khanh"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418015 #unknown but possible
 	mother = 1418026
 	#spouse = 1418029
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = skilled_tactician
 	#birth date unknown
 	950.1.1 = {
@@ -427,9 +427,9 @@
 	dynasty = 1000060004 #Ngo
 	name = "Ngoc" #ficitious
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418015 #unknown but possible
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	female = yes
 	#birth and death dates unknown
 	952.1.1 = {
@@ -444,8 +444,8 @@
 	dynasty = 1000060007 #Hoang
 	name = "Thi" #ficitious?
 	culture = vietnamese
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	female = yes
 	#birth and death dates unknown
 	933.1.1 = {
@@ -461,7 +461,7 @@
 	dynasty = 1000060005 #Dinh
 	name = "Toan"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418022
 	mother = 1418007
 	974.1.1 = {
@@ -476,7 +476,7 @@
 	dynasty = 1000060005 #Dinh
 	name = "Hang Lang"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418022
 	mother = 1418026
 	#birth date unknown
@@ -491,7 +491,7 @@
 	dynasty = 1000060005 #Dinh
 	name = "Phat Kim"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418022
 	female = yes
 	#birth and death dates unknown
@@ -507,7 +507,7 @@
 	dynasty = 1000060005 #Dinh
 	name = "Phu Dung"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418022
 	#mother = 貞淑皇后丁氏
 	female = yes
@@ -523,7 +523,7 @@
 	dynasty = 1000060005 #Dinh
 	name = "Minh Chau"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418022
 	female = yes
 	#birth and death dates unknown
@@ -538,7 +538,7 @@
 	dynasty = 1000060005 #Dinh
 	name = "Lien Hoa"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418022
 	#mother = 阮氏蓮
 	female = yes
@@ -554,7 +554,7 @@
 	dynasty = 1000060005 #Dinh
 	name = "Ngoc Nuong"
 	culture = vietnamese
-	religion = buddhist
+	religion = bud_zen
 	father = 1418022
 	#mother = 楊月娘
 	female = yes

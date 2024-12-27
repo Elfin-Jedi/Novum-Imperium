@@ -459,10 +459,10 @@
 1410730 = { #阿連撒羅 Aliansaluo
 	name="Aliansala" #ruler of Kucha Uyghurs
 	dynasty=1000101606 #dynasty randomly chosen
-	religion=buddhist
+	religion=bud_zen
 	culture="uyghur"
 	father=1410731
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	1042.1.1={
 		birth="1042.1.1"
 	}
@@ -473,10 +473,10 @@
 1410731 = { #智海 Zhihai
 	name="Chihai"
 	dynasty=1000101606 #dynasty randomly chosen
-	religion=buddhist
+	religion=bud_zen
 	culture="uyghur"
 	father=1410732
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	1018.1.1={
 		birth="1018.1.1"
 	}
@@ -487,9 +487,9 @@
 1410732 = {
 	name="Irdmin" #name fictional, but Kucha Uighurs were sending tribute to Song since 1001.
 	dynasty=1000101606 #dynasty randomly chosen
-	religion=buddhist
+	religion=bud_zen
 	culture="uyghur"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	987.1.1={
 		birth="987.1.1"
 	}
@@ -501,9 +501,9 @@
 1410733 = { #Unnamed father of both Renmi and Tegin
 	name="Bilg�" #name fictional
 	dynasty=1042190 # Yaghlakar
-	religion=buddhist
+	religion=bud_zen
 	culture="uyghur"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	father = 1410749 #unknown
 	#birth and death dates unknown
 	820.1.1={
@@ -516,9 +516,9 @@
 1410734 = { #仁美 Renmi, 英義可汗 Yingyi Khaghan, 烏母主可汗 Ormuz Khaghan
 	name="Ormuz"
 	dynasty=1042190 # Yaghlakar
-	religion=buddhist
+	religion=bud_zen
 	culture="uyghur"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	father=1410733
 	#Birth date unknown
 	865.1.1={
@@ -531,9 +531,9 @@
 1410735 = { #狄銀 Diyin, Tägin
 	name="T�gin"
 	dynasty=1042190 # Yaghlakar
-	religion=buddhist
+	religion=bud_zen
 	culture="uyghur"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	father=1410733
 	#Birth date unknown
 	867.1.1={
@@ -546,9 +546,9 @@
 1410736 = { #阿咄欲 Aduoyu, chinese name 仁裕 Renyu, Regnal title 順化可汗 Shunhua Khaghan, later 奉化可汗 Fenghua Khaghan.
 	name="Atoriok"
 	dynasty=1042190 # Yaghlakar
-	religion=buddhist
+	religion=bud_zen
 	culture="uyghur"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	father=1410733 #unknown
 	#Birth date unknown
 	871.1.1={
@@ -561,9 +561,9 @@
 1410737 = { #景瓊 Jingqiong
 	name="Kienggieng"
 	dynasty=1042190 # Yaghlakar
-	religion=buddhist
+	religion=bud_zen
 	culture="uyghur"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	father=1410736
 	#Birth date unknown
 	900.1.1={
@@ -576,9 +576,9 @@
 1410738 = { #夜落紇密禮遏 Yaghlaqar Bilgä 
 	name="Bilg�"
 	dynasty=1042190 # Yaghlakar
-	religion=buddhist
+	religion=bud_zen
 	culture="uyghur"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	father=1410737 #relation unknown
 	#Birth date unknown
 	930.1.1={
@@ -591,9 +591,9 @@
 1410739 = { #麽囉 Meluo
 	name="Mala"
 	dynasty=1042190 # Yaghlakar
-	religion=buddhist
+	religion=bud_zen
 	culture="uyghur"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	father=1410738 #mentioned as prince during the reign of Bilgä
 	#Birth and death dates unknown
 	950.1.1={
@@ -606,9 +606,9 @@
 1410740 = { #邈拿 Miaona
 	name="Makna"
 	dynasty=1042190 # Yaghlakar
-	religion=buddhist
+	religion=bud_zen
 	culture="uyghur"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	father=1410738 #mentioned as prince during the reign of Bilgä
 	#Birth and death dates unknown
 	953.1.1={
@@ -621,9 +621,9 @@
 1410741 = { #忠順保德可汗, 耶剌里 Yelali. In 1008.12.30 was raided by Liao and forced to pay tribute. (遼史/卷14)
 	name="Baode"
 	dynasty=1042190 # Yaghlakar
-	religion=buddhist
+	religion=bud_zen
 	culture="uyghur"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	father=1410738 #relation unknown
 	#Birth date unknown
 	960.1.1={
@@ -636,9 +636,9 @@
 1410742 = { #夜落隔·歸化 Yaghlaqar Guihua
 	name="Kuihua"
 	dynasty=1042190 # Yaghlakar
-	religion=buddhist
+	religion=bud_zen
 	culture="uyghur"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	father=1410741 #relation unknown
 	#Birth date unknown
 	980.1.1={
@@ -651,9 +651,9 @@
 1410743 = { #夜落隔通順 Yaghlaqar Tongshun, 歸忠保順可汗, 寶國可汗, 寶物可汗
 	name="Thongshun"
 	dynasty=1042190 # Yaghlakar
-	religion=buddhist
+	religion=bud_zen
 	culture="uyghur"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	father=1410741#relation unknown
 	#Birth date unknown
 	989.1.1={
@@ -666,9 +666,9 @@
 1410744 = { #伊嚕格勒·雅蘇 Yaghlaqar Yasu
 	name="Ngaso"
 	dynasty=1042190 # Yaghlakar
-	religion=buddhist
+	religion=bud_zen
 	culture="uyghur"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	father=1410743 #relation unknown
 	#Birth date unknown
 	995.1.1={
