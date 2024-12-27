@@ -3584,7 +3584,7 @@ defined_text = {
 	}
 	text = {
 		localisation_key = GetHouseOfWorship_Buddhist
-		trigger = { religion = buddhist }
+		trigger = { religion_group = bud_group }
 	}
 	text = {
 		localisation_key = GetHouseOfWorship_Jain
@@ -3642,7 +3642,7 @@ defined_text = {
 	}
 	text = {
 		localisation_key = string_Temple
-		trigger = { religion = buddhist }
+		trigger = { religion_group = bud_group }
 	}
 	text = {
 		localisation_key = string_Temple
@@ -3890,7 +3890,7 @@ defined_text = {
 	text = {
 		localisation_key = String_Buddhist
 		trigger = {
-			religion = buddhist
+			religion_group = bud_group
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -17144,13 +17144,13 @@ defined_text = {
 				FROM = {
 					OR = { 
 						religion = hindu
-						religion = buddhist
+						religion_group = bud_group
 					}
 				}
 				ROOT = {
 					OR = { 
 						religion = hindu
-						religion = buddhist
+						religion_group = bud_group
 					}
 				}
 			}
@@ -17351,7 +17351,7 @@ defined_text = {
 						religion = samaritan
 						religion = karaite
 						religion = hindu
-						religion = buddhist
+						religion = bud_zen
 						religion = jain
 						religion = taoist
 					}
@@ -17382,7 +17382,7 @@ defined_text = {
 						religion = samaritan
 						religion = karaite
 						religion = hindu
-						religion = buddhist
+						religion = bud_zen
 						religion = jain
 						religion = taoist
 					}

@@ -23837,13 +23837,6 @@ character_event = {
 	
 	ai = no
 	
-	potential = {
-		OR = {
-			rtp_is_landless = no
-			society_member_of = the_guilds
-		}
-	}
-	
 	trigger = {
 		has_game_rule = {
 			name = guilds_rule_war
@@ -23877,13 +23870,6 @@ character_event = {
     is_triggered_only = yes
 	
 	ai = no
-	
-	potential = {
-		OR = {
-			rtp_is_landless = no
-			society_member_of = the_guilds
-		}
-	}
 	
 	trigger = {
 		NOT = { has_global_flag = guilds_market_crash_start }
@@ -23979,13 +23965,6 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	AI = NO
-	
-	potential = {
-		OR = {
-			rtp_is_landless = no
-			society_member_of = the_guilds
-		}
-	}
 	
 	desc = {
 		trigger = { society_member_of = the_guilds }

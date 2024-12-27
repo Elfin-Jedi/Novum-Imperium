@@ -1,14 +1,5 @@
 culture = { 
-	#christian
 	religion_group = "christian"
-#	religion = {
-#		"catholic"
-#		 "cathar"
-#		 "fraticelli"
-#		 "waldensian"
-#		 "lollard"
-#	}
-	
 
 	templates = { 
 		"coa_plain:1"
@@ -178,26 +169,26 @@ culture = {
 		noOfFrames = 48
 		random = no
 	}
-#	emblem = {
-#		file = "gfx\\coats_of_arms\\war_of_the_roses_non_random.tga"
-#		noOfFrames = 2
-#		random = no
-#	}
+	emblem = {
+		file = "gfx\\coats_of_arms\\war_of_the_roses_non_random.tga"
+		noOfFrames = 2
+		random = no
+	}
 	emblem = {
 		file = "gfx\\coats_of_arms\\war_of_the_roses_emblems.tga"
 		noOfFrames = 7
 		random = no
 	}
-#	emblem = {
-#		file = "gfx\\coats_of_arms\\pdxcon_emblems.tga"
-#		noOfFrames = 17
-#		random = no
-#	}
-#	emblem = {
-#		file = "gfx\\coats_of_arms\\pdxcon_emblems_2.tga"
-#		noOfFrames = 1
-#		random = no
-#	}
+	emblem = {
+		file = "gfx\\coats_of_arms\\pdxcon_emblems.tga"
+		noOfFrames = 17
+		random = no
+	}
+	emblem = {
+		file = "gfx\\coats_of_arms\\pdxcon_emblems_2.tga"
+		noOfFrames = 1
+		random = no
+	}
 	
 	# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
 	textures = {
@@ -388,13 +379,172 @@ culture = {
 			emblem = no
 			color = 2
 			random = no			
-		}	
+		}
+				texture = {
+			file = "gfx\\coats_of_arms\\pattern.tga"
+			size = { x = 10 y = 5 }
+			noOfFrames = 47
+			color = 2
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern2.tga"
+			size = { x = 10 y = 3 }
+			noOfFrames = 22
+			color = 3
+			emblem_chance = 30
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern3.tga"
+			size = { x = 10 y = 5 }
+			noOfFrames = 45
+			color = 3
+			emblem = no
+		}
+		
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties.tga"
+			size = { x = 16 y = 4 }
+			noOfFrames = 51
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern4.tga"
+			size = { x = 10 y = 5 }
+			noOfFrames = 47
+			color = 2
+			emblem = no
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties2.tga"
+			size = { x = 16 y = 4 }
+			noOfFrames = 50
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\patricians.tga"
+			size = { x = 16 y = 2 }
+			noOfFrames = 25
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties3.tga"
+			size = { x = 16 y = 4 }
+			noOfFrames = 51
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties4.tga"
+			size = { x = 16 y = 4 }
+			noOfFrames = 52
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties5.tga"
+			size = { x = 1 y = 1 }
+			noOfFrames = 1
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\uralic_dynasties.tga"
+			size = { x = 16 y = 7 }
+			noOfFrames = 64
+			color = 0
+			random = no
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\tai_dyn_christian.tga"
+			size = { x = 16 y = 15 }
+			noOfFrames = 235
+			color = 0
+			random = no
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern_tai.tga"
+			size = { x = 10 y = 2 }
+			noOfFrames = 20
+			color = 2
+			emblem = no
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern_tai_2.tga"
+			size = { x = 10 y = 1 }
+			noOfFrames = 10
+			color = 3
+			emblem = no
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern_tai_3.tga"
+			size = { x = 10 y = 2 }
+			noOfFrames = 20
+			color = 3
+			emblem = no
+		}
+		
+#ADDITIONS
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties.tga"
+			size = { x = 16 y = 4 }
+			noOfFrames = 50
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties2.tga"
+			size = { x = 16 y = 4 }
+			noOfFrames = 49
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties3.tga"
+			size = { x = 16 y = 4 }
+			noOfFrames = 50
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties4.tga"
+			size = { x = 16 y = 4 }
+			noOfFrames = 51
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\leftout.tga"
+			size = { x = 7 y = 1 }
+			noOfFrames = 6
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynastyshieldspatricianX.tga"
+			size = { x = 16 y = 2 }
+			noOfFrames = 25
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynastyshieldspaganX.tga"
+			size = { x = 11 y = 2 }
+			noOfFrames = 21
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynastyshields4muslimX.tga"
+			size = { x = 4 y = 1 }
+			noOfFrames = 3
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynastyshields4indianX.tga"
+			size = { x = 3 y = 1 }
+			noOfFrames = 3
+			color = 0
+		}
 		# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
 	}
 }
-culture =
-{ #christian
-	#religion_group = "christian"
+culture = {
 	religion = {
 		"orthodox"
 		"miaphysite"
@@ -565,26 +715,26 @@ culture =
 		noOfFrames = 48
 		random = no
 	}
-#	emblem = {
-#		file = "gfx\\coats_of_arms\\war_of_the_roses_non_random.tga"
-#		noOfFrames = 2
-#		random = no
-#	}
+	emblem = {
+		file = "gfx\\coats_of_arms\\war_of_the_roses_non_random.tga"
+		noOfFrames = 2
+		random = no
+	}
 	emblem = {
 		file = "gfx\\coats_of_arms\\war_of_the_roses_emblems.tga"
 		noOfFrames = 7
 		random = no
 	}
-#	emblem = {
-#		file = "gfx\\coats_of_arms\\pdxcon_emblems.tga"
-#		noOfFrames = 17
-#		random = no
-#	}
-#	emblem = {
-#		file = "gfx\\coats_of_arms\\pdxcon_emblems_2.tga"
-#		noOfFrames = 1
-#		random = no
-#	}
+	emblem = {
+		file = "gfx\\coats_of_arms\\pdxcon_emblems.tga"
+		noOfFrames = 17
+		random = no
+	}
+	emblem = {
+		file = "gfx\\coats_of_arms\\pdxcon_emblems_2.tga"
+		noOfFrames = 1
+		random = no
+	}
 	
 	# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
 	textures = {
@@ -760,7 +910,7 @@ culture =
 			emblem = no
 			color = 2
 		}
-				texture = { #4 from 5
+		texture = { #4 from 5
 			file = "gfx\\coats_of_arms\\part4_solo.tga"
 			size = { x = 10 y = 24 }
 			noOfFrames = 186
@@ -776,6 +926,167 @@ culture =
 			color = 2
 			random = no			
 		}	
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern.tga"
+			size = { x = 10 y = 5 }
+			noOfFrames = 47
+			color = 2
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern2.tga"
+			size = { x = 10 y = 3 }
+			noOfFrames = 22
+			color = 3
+			emblem_chance = 30
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern3.tga"
+			size = { x = 10 y = 5 }
+			noOfFrames = 45
+			color = 3
+			emblem = no
+		}
+		
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties.tga"
+			size = { x = 16 y = 4 }
+			noOfFrames = 51
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern4.tga"
+			size = { x = 10 y = 5 }
+			noOfFrames = 47
+			color = 2
+			emblem = no
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties2.tga"
+			size = { x = 16 y = 4 }
+			noOfFrames = 50
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\patricians.tga"
+			size = { x = 16 y = 2 }
+			noOfFrames = 25
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties3.tga"
+			size = { x = 16 y = 4 }
+			noOfFrames = 51
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties4.tga"
+			size = { x = 16 y = 4 }
+			noOfFrames = 52
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties5.tga"
+			size = { x = 1 y = 1 }
+			noOfFrames = 1
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\uralic_dynasties.tga"
+			size = { x = 16 y = 7 }
+			noOfFrames = 64
+			color = 0
+			random = no
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\tai_dyn_christian.tga"
+			size = { x = 16 y = 15 }
+			noOfFrames = 235
+			color = 0
+			random = no
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern_tai.tga"
+			size = { x = 10 y = 2 }
+			noOfFrames = 20
+			color = 2
+			emblem = no
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern_tai_2.tga"
+			size = { x = 10 y = 1 }
+			noOfFrames = 10
+			color = 3
+			emblem = no
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern_tai_3.tga"
+			size = { x = 10 y = 2 }
+			noOfFrames = 20
+			color = 3
+			emblem = no
+		}
+		
+#ADDITIONS
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties.tga"
+			size = { x = 16 y = 4 }
+			noOfFrames = 50
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties2.tga"
+			size = { x = 16 y = 4 }
+			noOfFrames = 49
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties3.tga"
+			size = { x = 16 y = 4 }
+			noOfFrames = 50
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties4.tga"
+			size = { x = 16 y = 4 }
+			noOfFrames = 51
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\leftout.tga"
+			size = { x = 7 y = 1 }
+			noOfFrames = 6
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynastyshieldspatricianX.tga"
+			size = { x = 16 y = 2 }
+			noOfFrames = 25
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynastyshieldspaganX.tga"
+			size = { x = 11 y = 2 }
+			noOfFrames = 21
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynastyshields4muslimX.tga"
+			size = { x = 4 y = 1 }
+			noOfFrames = 3
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynastyshields4indianX.tga"
+			size = { x = 3 y = 1 }
+			noOfFrames = 3
+			color = 0
+		}
 		# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
 	}
 }
@@ -952,10 +1263,10 @@ culture =
 	banned_colors = {
 	}
 
-	#emblem = {
-	#	file = "gfx\\coats_of_arms\\emblem_muslim.dds"
-	#	noOfFrames = 1
-	#}
+	emblem = {
+		file = "gfx\\coats_of_arms\\emblem_muslim.dds"
+		noOfFrames = 1
+	}
 	emblem = {
 		file = "gfx\\coats_of_arms\\Arko_emblem_cust_MUSLIM.dds"
 		noOfFrames = 18
@@ -1018,11 +1329,47 @@ culture =
 			color = 0
 			emblem = no
 		}
-				texture = { #0
+		texture = { #0
 			file = "gfx\\coats_of_arms\\solo_islamic_part1.tga"
 			size = { x = 10 y = 15 }
 			noOfFrames = 114
 			color = 2
+			emblem = no
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern_muslim.tga"
+			size = { x = 10 y = 4 }
+			noOfFrames = 35
+			color = 2
+			emblem = no
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern2_muslim.tga"
+			size = { x = 10 y = 6 }
+			noOfFrames = 55
+			color = 3
+			emblem = no
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties4_muslim.tga"
+			size = { x = 3 y = 1 }
+			noOfFrames = 3
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\tai_dyn_muslim.tga"
+			size = { x = 16 y = 7 }
+			noOfFrames = 64
+			color = 0
+			random = no
+		}
+#ADDITIONS
+		texture = {
+			file = "gfx\\coats_of_arms\\dynastyshields4muslimX.tga"
+			size = { x = 4 y = 1 }
+			noOfFrames = 4
+			color = 0
 			emblem = no
 		}
 	}
@@ -3974,6 +4321,10 @@ culture = {
 
 	templates = { 
 		"coa_plain:1"
+		"coa_party_per_fess:2"
+		"coa_party_per_pale:2"
+		"coa_party_per_cross:4"
+		"coa_party_triangle:3"
 	}
 
 	color = {
@@ -4123,6 +4474,30 @@ culture = {
 		file = "gfx\\coats_of_arms\\emblem_muslim.dds"
 		noOfFrames = 1
 	}
+	emblem = {
+		file = "gfx\\coats_of_arms\\emblem.tga"
+		noOfFrames = 64
+	}
+	emblem = {
+		file = "gfx\\coats_of_arms\\war_of_the_roses_non_random.tga"
+		noOfFrames = 2
+		random = no
+	}
+	emblem = {
+		file = "gfx\\coats_of_arms\\war_of_the_roses_random.tga"
+		noOfFrames = 5
+		random = yes
+	}
+	emblem = {
+		file = "gfx\\coats_of_arms\\pdxcon_emblems.tga"
+		noOfFrames = 17
+		random = yes
+	}
+	emblem = {
+		file = "gfx\\coats_of_arms\\pdxcon_emblems_2.tga"
+		noOfFrames = 1
+		random = no
+	}
 
 	# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
 	textures = {
@@ -4146,7 +4521,89 @@ culture = {
 			noOfFrames = 20
 			color = 2
 			emblem = no
-		}		
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern.tga"
+			size = { x = 10 y = 5 }
+			noOfFrames = 54
+			color = 2
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern2.tga"
+			size = { x = 10 y = 3 }
+			noOfFrames = 22
+			color = 3
+			emblem_chance = 30
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern3.tga"
+			size = { x = 10 y = 5 }
+			noOfFrames = 44
+			color = 3
+			emblem = no
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern4.tga"
+			size = { x = 10 y = 5 }
+			noOfFrames = 47
+			color = 2
+			emblem = no
+		}
+#ADDITIONS
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties.tga"
+			size = { x = 16 y = 4 }
+			noOfFrames = 50
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties2.tga"
+			size = { x = 16 y = 4 }
+			noOfFrames = 49
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties3.tga"
+			size = { x = 16 y = 4 }
+			noOfFrames = 50
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties4.tga"
+			size = { x = 16 y = 4 }
+			noOfFrames = 51
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\leftout.tga"
+			size = { x = 7 y = 1 }
+			noOfFrames = 5
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynastyshieldspatricianX.tga"
+			size = { x = 16 y = 2 }
+			noOfFrames = 25
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynastyshieldspaganX.tga"
+			size = { x = 11 y = 2 }
+			noOfFrames = 21
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynastyshields4muslimX.tga"
+			size = { x = 4 y = 1 }
+			noOfFrames = 3
+			color = 0
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynastyshields4indianX.tga"
+			size = { x = 3 y = 1 }
+			noOfFrames = 3
+			color = 0
+		}
 		
 		# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
 	}
