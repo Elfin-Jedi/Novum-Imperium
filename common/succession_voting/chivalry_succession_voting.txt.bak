@@ -2270,7 +2270,7 @@ succ_chiholy_elective = {
 			OR = { 
 				trait = lustful 
 				AND = { 
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { religion = bon }
 					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
@@ -2308,7 +2308,7 @@ succ_chiholy_elective = {
 			OR = { 
 				trait = gluttonous
 				AND = { 
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { religion = bon }
 					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
@@ -2428,7 +2428,7 @@ succ_chiholy_elective = {
 			NOT = { character = FROM } #Do not judge yourself.
 			OR = { 
 				AND = { 
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { religion = bon }
 					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
@@ -2447,7 +2447,7 @@ succ_chiholy_elective = {
 			NOT = { character = FROM } #Do not judge yourself.
 			OR = { 
 				AND = { 
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { religion = bon }
 					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
@@ -2486,7 +2486,7 @@ succ_chiholy_elective = {
 			NOT = { character = FROM } #Do not judge yourself.
 			OR = { 
 				AND = { 
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { religion = bon }
 					NOT = { religion = bon_reformed }
 					NOT = { religion = hellenic_pagan }
@@ -2525,7 +2525,7 @@ succ_chiholy_elective = {
 			NOT = { character = FROM } #Do not judge yourself.
 			OR = { 
 				AND = { 
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { religion = bon }
 					NOT = { religion = bon_reformed }
 				}
@@ -2607,7 +2607,7 @@ succ_chiholy_elective = {
 			value = 15
 			localisation_key = tooltip_feudal_elector_vote_proud_positive
 			NOT = { character = FROM } #Do not judge yourself.
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOR = { 
 				religion = bon
 				religion = bon_reformed
@@ -2643,7 +2643,7 @@ succ_chiholy_elective = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_ambitious_positive
 			NOT = { character = FROM } #Do not judge yourself.
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOR = { 
 				religion = bon
 				religion = bon_reformed
@@ -2742,7 +2742,7 @@ succ_chiholy_elective = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_content_negative
 			NOT = { character = FROM } #Do not judge yourself.
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOR = { 
 				trait = content
 				religion = bon
@@ -2800,7 +2800,7 @@ succ_chiholy_elective = {
 			}
 			OR = { 
 				is_reformed_religion = yes
-				NOT = { religion_group = pagan_group }
+				NOT = { novum_imperium_is_pagan = yes }
 			}
 			FROM = { 
 				trait = cynical

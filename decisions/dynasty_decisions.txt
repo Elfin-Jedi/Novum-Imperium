@@ -389,7 +389,7 @@ targetted_decisions = {
 					any_liege = { holy_order = yes }
 					AND = {
 						NOR = {
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 							religion_group = muslim
 						}
 						OR = {

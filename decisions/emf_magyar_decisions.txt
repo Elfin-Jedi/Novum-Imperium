@@ -19,7 +19,7 @@ decisions = {
 			}
 			trigger_else = {
 				culture = hungarian
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			year < 920
 			any_realm_province = { region = emf_region_etelkoz }

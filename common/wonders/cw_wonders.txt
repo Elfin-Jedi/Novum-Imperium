@@ -9,11 +9,11 @@ wonder_oxford_university = {
 			religion_group = jewish_group
 			religion_group = zoroastrian_group
 			religion_group = indian_group
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 		trigger_if = {
 			limit = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			is_reformed_religion = yes
 		}
@@ -21,7 +21,7 @@ wonder_oxford_university = {
 	active = {
 		trigger_if = {
 			limit = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			ROOT = {
 				is_reformed_religion = yes

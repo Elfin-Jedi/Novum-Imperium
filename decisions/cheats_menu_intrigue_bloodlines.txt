@@ -1985,7 +1985,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				create_bloodline = { 
 					type = event_religion_peaceful_bloodline_04
@@ -2095,7 +2095,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				create_bloodline = { 
 					type = event_religion_aggressive_bloodline_04
@@ -4206,7 +4206,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_germanic_01
@@ -4228,7 +4228,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				new_bloodline = {
 					set_name = blessed_bloodline_01
@@ -4367,7 +4367,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				new_bloodline = {
 					set_name = blessed_bloodline_02
@@ -4585,7 +4585,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_germanic_03
@@ -4607,7 +4607,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				new_bloodline = {
 					set_name = blessed_bloodline_03
@@ -4827,7 +4827,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_germanic_04
@@ -4849,7 +4849,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				new_bloodline = {
 					set_name = blessed_bloodline_04
@@ -5067,7 +5067,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_germanic_05
@@ -5089,7 +5089,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				new_bloodline = {
 					set_name = blessed_bloodline_05
@@ -5309,7 +5309,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_germanic_06
@@ -5331,7 +5331,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				new_bloodline = {
 					set_name = blessed_bloodline_06
