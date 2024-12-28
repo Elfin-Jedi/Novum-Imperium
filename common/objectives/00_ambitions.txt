@@ -2554,7 +2554,7 @@ obj_become_king = {
 
 		modifier = {
 			factor = 0
-			NOT = { true_religion_group = pagan_group }
+			NOT = { novum_imperium_is_pagan = yes }
 			NOT = { trait = ambitious }
 		}
 		modifier = { # AI won't pick this ambition if they're disqualified from creating the title and it's not held

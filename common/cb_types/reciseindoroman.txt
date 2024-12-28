@@ -37,7 +37,7 @@ indoroman_invasion = {
 			NOT = { is_liege_or_above = FROM }
 			is_nomadic = no
 			is_tribal = no
-			#NOT = { religion_group = pagan_group }
+			#NOT = { novum_imperium_is_pagan = yes }
 		}
 	}
 
@@ -310,7 +310,7 @@ indoroman_invasion = {
 			NOT = { is_liege_or_above = FROM }
 			is_nomadic = no
 			is_tribal = no
-			#NOT = { religion_group = pagan_group }
+			#NOT = { novum_imperium_is_pagan = yes }
 		}
 	}
 
@@ -738,7 +738,7 @@ indoroman_invasion = {
 			NOT = { is_liege_or_above = FROM }
 			is_nomadic = no
 			is_tribal = no
-			#NOT = { religion_group = pagan_group }
+			#NOT = { novum_imperium_is_pagan = yes }
 		}
 	}
 

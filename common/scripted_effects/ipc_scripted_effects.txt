@@ -263,7 +263,7 @@ set_as_new_imperial_court_effect = {
 		
 		##pagan courts
 		else_if = {
-			limit = { religion_group = pagan_group }
+			limit = { novum_imperium_is_pagan = yes }
 			event_target:new_empire = {
 				set_title_flag = imperial_court_active
 				if = {

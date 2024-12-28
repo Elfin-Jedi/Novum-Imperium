@@ -1144,7 +1144,7 @@ d_rus_company = { # Rus Company
 			trigger = { is_alternate_start = no }
 			year = 950
 			OR = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				religion_group = christian
 			}
 		}
@@ -1383,7 +1383,7 @@ d_rus_band = { # Rus Band
 			year = 950
 			OR = {
 				religion_group = christian
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -1412,7 +1412,7 @@ d_finnish_band = { # Finnish Band
 			trigger = { is_alternate_start = no }
 			OR = {
 				religion_group = christian
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -1441,7 +1441,7 @@ d_lappish_band = { # Sami Band
 			trigger = { is_alternate_start = no }
 			OR = {
 				religion_group = christian
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -1470,7 +1470,7 @@ d_lithuanian_band = { # Lithuanian Band
 			trigger = { is_alternate_start = no }
 			OR = {
 				religion_group = christian
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -17164,7 +17164,7 @@ e_scandinavia = { # Nordmannia
 	allow = {
 		OR = {
 			religion_group = christian
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			FROM = { is_de_jure_title = yes }
 		}
 		has_landed_title = k_denmark
@@ -18268,7 +18268,7 @@ e_russia = { # Rus
 	allow = {
 		OR = {
 			religion_group = christian
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			FROM = { is_de_jure_title = yes }
 		}
 		title_emperor_basic_allow = yes

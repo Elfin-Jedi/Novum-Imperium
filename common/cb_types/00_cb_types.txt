@@ -2810,7 +2810,7 @@ tribal_invasion = {
 						has_flag = horde_invader
 						AND = {
 							independent = yes
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 							OR = {
 								culture_group = altaic
 								trigger_if = {
@@ -2823,7 +2823,7 @@ tribal_invasion = {
 								culture_group = mesoamerican
 							}
 							FROM = {
-								NOT = { religion_group = pagan_group } # Should subjugate these instead
+								NOT = { novum_imperium_is_pagan = yes } # Should subjugate these instead
 							}
 							OR = {
 								is_tribal = yes
@@ -2841,7 +2841,7 @@ tribal_invasion = {
 					independent = yes
 					higher_tier_than = COUNT
 					OR = {
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 						AND = {
 							OR = {
 								has_horde_culture = yes
@@ -2866,7 +2866,7 @@ tribal_invasion = {
 						has_horde_culture = yes
 						has_flag = horde_invader
 						FROM = {
-							NOT = { religion_group = pagan_group } # Should subjugate these instead
+							NOT = { novum_imperium_is_pagan = yes } # Should subjugate these instead
 						}
 					}
 					OR = {
@@ -3359,7 +3359,7 @@ tribal_invasion = {
 				trigger_else = {
 					culture = hungarian
 				}
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				primary_title = {
 					OR = {
 						title = k_hungary
@@ -3504,7 +3504,7 @@ crusade = {
 				}
 			}
 			trigger_else_if = {
-				limit = { religion_group = pagan_group }
+				limit = { novum_imperium_is_pagan = yes }
 				custom_tooltip = {
 					text = CTT_PAGAN_GHWS_UNLOCKED
 					has_global_flag = pagan_ghws_unlocked
@@ -3581,7 +3581,7 @@ crusade = {
 						AND = {
 							NOT = { is_reformed_religion = PREV }
 							NOT = { emf_syncretized_religion_with_PREV = yes }
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 						}
 						religion = paulician
 						religion = kharijite
@@ -3616,7 +3616,7 @@ crusade = {
 					has_global_flag = emf_muslim_crusades_unlocked
 				}
 				trigger_else_if = {
-					limit = { religion_group = pagan_group }
+					limit = { novum_imperium_is_pagan = yes }
 					has_global_flag = emf_pagan_crusades_unlocked
 				}
 				trigger_else = {
@@ -3692,7 +3692,7 @@ crusade = {
 						AND = {
 							NOT = { is_reformed_religion = PREV }
 							NOT = { emf_syncretized_religion_with_PREV = yes }
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 						}
 						religion = paulician
 						religion = kharijite
@@ -4147,7 +4147,7 @@ new_crusade = {
 						AND = {
 							NOT = { is_reformed_religion = PREV }
 							NOT = { emf_syncretized_religion_with_PREV = yes }
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 						}
 						religion_group = muslim
 						religion = paulician
@@ -4250,7 +4250,7 @@ new_crusade = {
 						AND = {
 							NOT = { is_reformed_religion = PREV }
 							NOT = { emf_syncretized_religion_with_PREV = yes }
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 						}
 						religion_group = muslim
 						religion = paulician
@@ -5682,7 +5682,7 @@ new_crusade = {
 		any_defender = {
 			limit = {
 				ai = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			set_flag = achievement_pagan_fury
 		}
@@ -9385,7 +9385,7 @@ pagan_subjugation = {
 				trigger_else = {
 					culture = hungarian
 				}
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				capital_scope = { kingdom = { title = k_hungary } }
 			}
 			NOT = { has_global_flag = emf_conquest_hungary_completed }
@@ -9404,7 +9404,7 @@ pagan_subjugation = {
 						trigger_else = {
 							culture = hungarian
 						}
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 				FROM = {
@@ -9416,7 +9416,7 @@ pagan_subjugation = {
 						trigger_else = {
 							culture = hungarian
 						}
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -11028,10 +11028,7 @@ pagan_county_conquest = {
 	can_use = {
 		emf_cb_can_use = yes
 		ROOT = {
-			OR = {
-				religion_group = pagan_group
-				religion_group = african_group
-			}
+			novum_imperium_is_pagan = yes
 			OR = {
 				AND = {
 					is_nomadic = yes
@@ -11075,10 +11072,7 @@ pagan_county_conquest = {
 			ROOT = { is_nomadic = yes }
 			AND = {
 				ROOT = {
-					OR = {
-						religion_group = pagan_group
-						religion_group = african_group
-					}
+					novum_imperium_is_pagan = yes
 					NOT = { same_realm = FROM }
 					NOT = { emf_syncretized_religion_with_FROM = yes }
 				}
@@ -11330,10 +11324,7 @@ pagan_county_conquest = {
 			has_global_flag = viking_age_started
 			FROM = {
 				NOT = {
-					OR = {
-						religion_group = pagan_group
-						religion_group = african_group
-					}
+					novum_imperium_is_pagan = yes
 				}
 			}
 			location = { port = yes }
@@ -13963,10 +13954,7 @@ tributary_cb = {
 				trigger_else = {
 					culture = hungarian
 				}
-				OR = {
-					religion_group = pagan_group
-					religion_group = african_group
-				}
+				novum_imperium_is_pagan = yes
 				capital_scope = { kingdom = { title = k_hungary } }
 			}
 			has_global_flag = emf_magyar_migration_completed
@@ -13984,10 +13972,7 @@ tributary_cb = {
 					trigger_else = {
 						culture = hungarian
 					}
-					OR = {
-						religion_group = pagan_group
-						religion_group = african_group
-					}
+					novum_imperium_is_pagan = yes
 				}
 			}
 			NOT = { has_global_flag = emf_magyar_migration_completed }
@@ -15134,7 +15119,7 @@ nomad_subjugation = {
 				trigger_else = {
 					culture = hungarian
 				}
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				capital_scope = { kingdom = { title = k_hungary } }
 			}
 			NOT = { has_global_flag = emf_conquest_hungary_completed }
@@ -15153,7 +15138,7 @@ nomad_subjugation = {
 						trigger_else = {
 							culture = hungarian
 						}
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 				FROM = {
@@ -15165,7 +15150,7 @@ nomad_subjugation = {
 						trigger_else = {
 							culture = hungarian
 						}
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -19109,7 +19094,7 @@ ducal_county_conquest = { # New4
 			}
 			NOR = { # These all have other ways to expand in the early game
 				religion_group = muslim
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				is_nomadic = yes
 			}
 			OR = {
@@ -20054,7 +20039,7 @@ unjust_conquest = { # New7
 			NOR = {
 				religion_group = muslim # Use 'muslim_county_conquest' instead
 				AND = {
-					religion_group = pagan_group # Use 'pagan_county_conquest' or 'emf_pagan_county_conquest_nonholy' instead
+					novum_imperium_is_pagan = yes # Use 'pagan_county_conquest' or 'emf_pagan_county_conquest_nonholy' instead
 					NOT = { emf_syncretized_religion_with_FROM = yes }
 				}
 			}
@@ -23146,7 +23131,7 @@ abrahamic_antihellenic_revolt = {
 			limit = {
 				FROM = {
 					current_heir = { 
-						NOT = { religion_group = pagan_group }
+						NOT = { novum_imperium_is_pagan = yes }
 					}
 				}
 			}
@@ -23540,7 +23525,7 @@ childrens_crusade = {
 				is_heresy_of = ROOT
 				is_parent_religion = ROOT
 				AND = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					ROOT = { NOT = { emf_syncretized_religion_with_PREV = yes } }
 					NOT = { religion = ROOT }
 				}
@@ -23565,7 +23550,7 @@ childrens_crusade = {
 				is_heresy_of = ROOT
 				is_parent_religion = ROOT
 				AND = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					ROOT = { NOT = { emf_syncretized_religion_with_PREV = yes } }
 					NOT = { religion = ROOT }
 				}
@@ -29663,7 +29648,7 @@ emf_liberate_nomad_county = {
 			NOT = { same_realm = FROM }
 			# Prefer pagan_county_conquest
 			NAND = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				NOT = { emf_syncretized_religion_with_FROM = yes }
 				NOT = { religion = FROM }
 			}
@@ -32970,7 +32955,7 @@ emf_magyar_raid = {
 				culture = hungarian
 			}
 			capital_scope = { kingdom = { title = k_hungary } }
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 		FROM = {
 			independent = yes
@@ -32988,7 +32973,7 @@ emf_magyar_raid = {
 				culture = hungarian
 			}
 			capital_scope = { region = emf_region_carpathia }
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 		FROM = {
 			independent = yes
@@ -34452,7 +34437,7 @@ emf_pagan_subjugation_religious = {
 				trigger_else = {
 					culture = hungarian
 				}
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				capital_scope = { kingdom = { title = k_hungary } }
 			}
 			NOT = { has_global_flag = emf_conquest_hungary_completed }
@@ -34471,7 +34456,7 @@ emf_pagan_subjugation_religious = {
 						trigger_else = {
 							culture = hungarian
 						}
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 				FROM = {
@@ -34483,7 +34468,7 @@ emf_pagan_subjugation_religious = {
 						trigger_else = {
 							culture = hungarian
 						}
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}

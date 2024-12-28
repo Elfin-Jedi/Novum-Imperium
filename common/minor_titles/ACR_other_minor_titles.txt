@@ -16,7 +16,7 @@ title_court_wizard = {
 		is_female = no
 		is_ruler = no
 		trait = mystic
-		true_religion_group = pagan_group
+		novum_imperium_is_pagan = yes
 		NOT = {
 			# for removing the title
 			has_minor_title = title_court_druid
@@ -135,7 +135,7 @@ title_master_arms = {
 	}
 
 	allowed_to_grant = {
-		religion_group = pagan_group
+		novum_imperium_is_pagan = yes
 	}
 	
 	gain_effect = {

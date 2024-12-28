@@ -101,7 +101,7 @@ emf_scimitar_culture = {
 					culture_group = magyar
 					OR = {
 						religion_group = muslim
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 						religion_group = indian_group
 					}
 				}

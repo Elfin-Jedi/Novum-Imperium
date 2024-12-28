@@ -20,7 +20,7 @@ emf_not_unreformed_pagan = {
 emf_true_unreformed_pagan = {
 	custom_tooltip = {
 		text = TRUE_RELIGION_IS_UNREFORMED_PAGAN
-		true_religion_group = pagan_group
+		true_religion_is_pagan = yes
 		trigger_if = {
 			limit = {
 				OR = {
@@ -51,7 +51,7 @@ emf_polytheist_religion = {
 		text = RELIGION_IS_POLYTHEISTIC
 		OR = {
 			AND = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				NOR = {
 					has_religion_feature = religion_dogmatic
 					religion = zun_pagan_reformed
@@ -1011,7 +1011,7 @@ emf_religion_unsafe_for_player_if_not_nomad = {
 			NOT = { has_dlc = "The Old Gods" }
 		}
 		trigger_else_if = {
-			limit = { secret_religion_group = pagan_group }
+			limit = { secret_religion_is_pagan = yes }
 			NOR = {
 				has_dlc = "The Old Gods"
 				has_dlc = "Holy Fury"

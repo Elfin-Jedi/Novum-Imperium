@@ -676,7 +676,11 @@ character_event = {			#DIPLOMATIC: STANCE DEFENSIVE
 				modifier = {
 					factor = 2
 					trait = shrewd
-				}				
+				}
+				modifier = {
+					factor = 2
+					trait = calm
+				}
 				modifier = {
 					factor = 0.5
 					trait = dull
@@ -886,7 +890,14 @@ character_event = {			#DIPLOMATIC: STANCE DEFENSIVE
 						trait = shrewd
 						has_character_flag = debate_foe						
 					}
-				}				
+				}
+				modifier = {
+					factor = 2
+					any_voter = {
+						trait = calm
+						has_character_flag = debate_foe						
+					}
+				}
 				modifier = {
 					factor = 0.5
 					any_voter = {
@@ -1918,7 +1929,11 @@ character_event = {			#MILITARY: STANCE DEFENSIVE
 				modifier = {
 					factor = 2
 					trait = shrewd
-				}				
+				}
+				modifier = {
+					factor = 2
+					trait = calm
+				}
 				modifier = {
 					factor = 0.5
 					trait = dull
@@ -2129,7 +2144,14 @@ character_event = {			#MILITARY: STANCE DEFENSIVE
 						trait = shrewd
 						has_character_flag = debate_foe						
 					}
-				}				
+				}
+				modifier = {
+					factor = 2
+					any_voter = {
+						trait = calm
+						has_character_flag = debate_foe						
+					}
+				}
 				modifier = {
 					factor = 0.5
 					any_voter = {
@@ -3197,7 +3219,11 @@ character_event = {			#MANAGEMENT: STANCE DEFENSIVE
 				modifier = {
 					factor = 2
 					trait = shrewd
-				}				
+				}
+				modifier = {
+					factor = 2
+					trait = calm
+				}
 				modifier = {
 					factor = 0.5
 					trait = dull
@@ -3803,7 +3829,14 @@ character_event = {			#MANAGEMENT: STANCE TRICKY
 						trait = shrewd
 						has_character_flag = debate_foe						
 					}
-				}				
+				}
+				modifier = {
+					factor = 2
+					any_voter = {
+						trait = calm
+						has_character_flag = debate_foe						
+					}
+				}
 				modifier = {
 					factor = 0.5
 					any_voter = {
@@ -4475,7 +4508,11 @@ character_event = {			#INTRIGUE: STANCE DEFENSIVE
 				modifier = {
 					factor = 2
 					trait = shrewd
-				}				
+				}
+				modifier = {
+					factor = 2
+					trait = calm
+				}
 				modifier = {
 					factor = 0.5
 					trait = dull
@@ -4686,7 +4723,14 @@ character_event = {			#INTRIGUE: STANCE DEFENSIVE
 						trait = shrewd
 						has_character_flag = debate_foe						
 					}
-				}				
+				}
+				modifier = {
+					factor = 2
+					any_voter = {
+						trait = calm
+						has_character_flag = debate_foe						
+					}
+				}
 				modifier = {
 					factor = 0.5
 					any_voter = {
@@ -5751,7 +5795,11 @@ character_event = {			#LEARNING: STANCE DEFENSIVE
 				modifier = {
 					factor = 2
 					trait = shrewd
-				}				
+				}
+				modifier = {
+					factor = 2
+					trait = calm
+				}
 				modifier = {
 					factor = 0.5
 					trait = dull
@@ -5962,7 +6010,14 @@ character_event = {			#LEARNING: STANCE DEFENSIVE
 						trait = shrewd
 						has_character_flag = debate_foe						
 					}
-				}				
+				}
+				modifier = {
+					factor = 2
+					any_voter = {
+						trait = calm
+						has_character_flag = debate_foe						
+					}
+				}
 				modifier = {
 					factor = 0.5
 					any_voter = {

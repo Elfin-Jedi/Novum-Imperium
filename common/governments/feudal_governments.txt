@@ -43,7 +43,7 @@ feudal_governments = {
 							religion = west_african_pagan
 							religion = west_african_pagan_reformed
 							AND = {
-								NOT = { religion_group = pagan_group }
+								NOT = { novum_imperium_is_pagan = yes }
 								NOT = { religion_group = zoroastrian_group }
 								NOT = { religion_group = indian_group }
 								NOT = { religion_group = christian }
@@ -80,7 +80,7 @@ feudal_governments = {
 							religion = west_african_pagan
 							religion = west_african_pagan_reformed
 							AND = {
-								NOT = { religion_group = pagan_group }
+								NOT = { novum_imperium_is_pagan = yes }
 								NOT = { religion_group = zoroastrian_group }
 								NOT = { religion_group = indian_group }
 								NOT = { religion_group = christian }
@@ -221,7 +221,7 @@ feudal_governments = {
 							religion = west_african_pagan
 							religion = west_african_pagan_reformed
 							AND = {
-								NOT = { religion_group = pagan_group }
+								NOT = { novum_imperium_is_pagan = yes }
 								NOT = { religion_group = zoroastrian_group }
 								NOT = { religion_group = indian_group }
 								NOT = { religion_group = christian }
@@ -257,7 +257,7 @@ feudal_governments = {
 						religion = west_african_pagan
 						religion = west_african_pagan_reformed
 						AND = {
-							NOT = { religion_group = pagan_group }
+							NOT = { novum_imperium_is_pagan = yes }
 							NOT = { religion_group = zoroastrian_group }
 							NOT = { religion_group = indian_group }
 							NOT = { religion_group = christian }
@@ -402,7 +402,7 @@ feudal_governments = {
 							religion = promethean_pagan
 							religion = titan_pagan
 							AND = {
-								NOT = { religion_group = pagan_group }
+								NOT = { novum_imperium_is_pagan = yes }
 								NOT = { religion_group = zoroastrian_group }
 								NOT = { religion_group = indian_group }
 							}
@@ -440,7 +440,7 @@ feudal_governments = {
 							religion = promethean_pagan
 							religion = titan_pagan
 							AND = {
-								NOT = { religion_group = pagan_group }
+								NOT = { novum_imperium_is_pagan = yes }
 								NOT = { religion_group = zoroastrian_group }
 								NOT = { religion_group = indian_group }
 							}

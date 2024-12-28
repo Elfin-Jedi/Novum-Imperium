@@ -1542,8 +1542,8 @@ can_be_spymaster_trigger = {
 					liege = { emf_feminist_religion = yes }
 				}
 				AND = {
-					religion_group = pagan_group
-					liege = { religion_group = pagan_group }
+					novum_imperium_is_pagan = yes
+					liege = { novum_imperium_is_pagan = yes }
 				}
 				liege = {
 					OR = {
@@ -2795,6 +2795,9 @@ true_religion_group_finnish_group_trigger = {
 true_religion_group_graecoroman_group_trigger = {
 	true_religion_group = graecoroman_group
 }
+true_religion_group_indian_group_trigger = {
+	true_religion_group = indian_group
+}
 true_religion_group_indohelen_group_trigger = {
 	true_religion_group = indohelen_group
 }
@@ -2803,6 +2806,9 @@ true_religion_group_inti_group_trigger = {
 }
 true_religion_group_inuit_group_trigger = {
 	true_religion_group = inuit_group
+}
+true_religion_group_jewish_group_trigger = {
+	true_religion_group = jewish_group
 }
 true_religion_group_luwian_group_trigger = {
 	true_religion_group = luwian_group
@@ -2816,11 +2822,17 @@ true_religion_group_mani_group_trigger = {
 true_religion_group_mithra_group_trigger = {
 	true_religion_group = mithra_group
 }
+true_religion_group_muslim_trigger = {
+	true_religion_group = muslim
+}
 true_religion_group_neoplato_group_trigger = {
 	true_religion_group = neoplato_group
 }
 true_religion_group_norsegerman_group_trigger = {
 	true_religion_group = norsegerman_group
+}
+true_religion_group_pagan_group_trigger = {
+	true_religion_group = pagan_group
 }
 true_religion_group_palmyranpagan_group_trigger = {
 	true_religion_group = palmyranpagan_group
@@ -2843,25 +2855,11 @@ true_religion_group_yazd_group_trigger = {
 true_religion_group_zal_group_trigger = {
 	true_religion_group = zal_group
 }
-
-true_religion_group_muslim_trigger = {
-	true_religion_group = muslim
-}
-
-true_religion_group_jewish_group_trigger = {
-	true_religion_group = jewish_group
-}
-
 true_religion_group_zoroastrian_group_trigger = {
 	true_religion_group = zoroastrian_group
 }
-
-true_religion_group_indian_group_trigger = {
-	true_religion_group = indian_group
-}
-
-true_religion_group_pagan_group_trigger = {
-	true_religion_group = pagan_group
+true_religion_group_african_group_trigger = {
+	true_religion_group = african_group
 }
 
 relationship_with_root_trigger = {
@@ -2899,10 +2897,7 @@ FROMs_religion_is_playable_trigger = {
 	trigger_else_if = {
 		limit = {
 			FROM = {
-				OR = {
-					religion_group = pagan_group
-					religion_group = african_group
-				}
+				novum_imperium_is_pagan = yes
 			}
 			NOR = { 
 				has_dlc = "The Old Gods" 
@@ -2936,10 +2931,7 @@ FROMs_religion_is_playable_trigger = {
 			}
 		}
 		trigger_else = {
-			OR = {
-				religion_group = pagan_group
-				religion_group = african_group
-			}
+			novum_imperium_is_pagan = yes
 			OR = {
 				has_dlc = "The Old Gods"
 				has_dlc = "Holy Fury"
@@ -3001,10 +2993,7 @@ ROOTs_religion_is_playable_trigger = { #For targeted decision where ROOT is the 
 	trigger_else_if = {
 		limit = {
 			ROOT = {
-				OR = {
-					religion_group = pagan_group
-					religion_group = african_group
-				}
+				novum_imperium_is_pagan = yes
 			}
 			NOR = { 
 				has_dlc = "The Old Gods" 
@@ -3038,10 +3027,7 @@ ROOTs_religion_is_playable_trigger = { #For targeted decision where ROOT is the 
 			}
 		}
 		trigger_else = {
-			OR = {
-				religion_group = pagan_group
-				religion_group = african_group
-			}
+			novum_imperium_is_pagan = yes
 			OR = {
 				has_dlc = "The Old Gods"
 				has_dlc = "Holy Fury"
@@ -3103,7 +3089,7 @@ ROOTs_secret_religion_is_playable_trigger = {
 	}
 	trigger_else_if = {
 		limit = {
-			ROOT = { secret_religion_group = pagan_group }
+			ROOT = { secret_religion_is_pagan = yes }
 			NOR = { 
 				has_dlc = "The Old Gods" 
 				has_dlc = "Holy Fury"
@@ -3136,10 +3122,7 @@ ROOTs_secret_religion_is_playable_trigger = {
 			}
 		}
 		trigger_else = {
-			OR = {
-				secret_religion_group = pagan_group
-				secret_religion_group = african_group
-			}
+			secret_religion_is_pagan = yes
 			OR = {
 				has_dlc = "The Old Gods"
 				has_dlc = "Holy Fury"
@@ -6193,10 +6176,7 @@ has_unsafe_secret_religion = {
 	}
 	trigger_else_if = {
 		limit = { 
-			OR = {
-				secret_religion_group = pagan_group
-				secret_religion_group = african_group
-			}
+			secret_religion_is_pagan = yes
 		}
 		NOR = {
 			has_dlc = "The Old Gods"
@@ -7213,7 +7193,7 @@ proselytize_convert_independent_trigger = {
 	owner = {
 		FROM = {
 			OR = { 
-				NOT = { religion_group = pagan_group }
+				NOT = { novum_imperium_is_pagan = yes }
 				religion_scope = { has_religion_feature = religion_proselytizing }
 				AND = {
 					religion = west_african_pagan_reformed
@@ -9478,10 +9458,7 @@ dlc_religion_check_trigger = {
 	}
 	trigger_else_if = {
 		limit = {
-			OR = {
-				religion_group = pagan_group
-				religion_group = african_group
-			}
+			novum_imperium_is_pagan = yes
 		}
 		OR = {
 			has_dlc = "The Old Gods"

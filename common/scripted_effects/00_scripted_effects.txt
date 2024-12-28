@@ -43179,9 +43179,9 @@ give_random_character_modifier_effect = {
 				OR = {
 					is_female = no
 					trait = brave
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					is_nomadic = yes
-					religion = bud_group
+					religion_group = bud_group
 					religion = bogomilist
 					gender_equality_trigger = yes
 				}

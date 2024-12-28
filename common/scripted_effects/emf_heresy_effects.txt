@@ -205,7 +205,7 @@ emf_become_heretic = {
 	else_if = {
 		limit = {
 			OR = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				religion_group = muslim
 			}
 			event_target:heretic_province = {

@@ -162,50 +162,6 @@ random_scenario_monastic_feudalism = {
 	}
 }
 
-random_scenario_more_theocracies = {
-	type = checkbox
-	random_default = unchecked
-	sort_priority = 994
-	#priority = 48
-	
-	potential = {
-		OR = {
-			is_random_world = yes
-			is_shattered_world = yes
-		}
-	}
-
-	checked = {
-		effect = {
-			big_theocracies_effect = yes
-		}
-	}
-	unchecked = {
-	}
-}
-
-random_scenario_more_republics = {
-	type = checkbox
-	random_default = unchecked
-	sort_priority = 994
-	#priority = 48
-	
-	potential = {
-		OR = {
-			is_random_world = yes
-			is_shattered_world = yes
-		}
-	}
-
-	checked = {
-		effect = {
-			big_repub = yes
-		}
-	}
-	unchecked = {
-	}
-}
-
 random_scenario_iqta_temples = {
 	type = checkbox
 	sort_priority = 996
@@ -221,25 +177,6 @@ random_scenario_iqta_temples = {
 	checked = {
 		effect = {
 			iqta_temples = yes
-		}
-	}
-	unchecked = {
-	}
-}
-
-random_scenario_random_governments = {
-	type = checkbox
-	random_default = unchecked
-	sort_priority = 994
-	#priority = 48
-	
-	potential = {
-		is_random_world = yes
-	}
-
-	checked = {
-		effect = {
-			random_government_effect = yes
 		}
 	}
 	unchecked = {

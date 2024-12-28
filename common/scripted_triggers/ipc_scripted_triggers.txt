@@ -150,7 +150,7 @@ is_strong_emperor_trigger = {
 			}
 		}
 		AND = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			OR = {
 				controls_religion = yes
 				trait = strong

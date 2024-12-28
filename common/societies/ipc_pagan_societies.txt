@@ -561,7 +561,7 @@ imperial_court_pagan_1 = {
 				top_liege = {
 					OR = {
 						government = tribal_government
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -575,7 +575,7 @@ imperial_court_pagan_1 = {
 				top_liege = {
 					OR = {
 						government = tribal_government
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -589,7 +589,7 @@ imperial_court_pagan_1 = {
 				top_liege = {
 					OR = {
 						government = tribal_government
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -1399,7 +1399,7 @@ imperial_court_pagan_1 = {
 			trigger = {
 				NOT = { tier = emperor }
 				trait = shieldmaiden
-				top_liege = { religion_group = pagan_group }
+				top_liege = { novum_imperium_is_pagan = yes }
 			}
 			value = 1
 		}
@@ -2668,7 +2668,7 @@ imperial_court_pagan_2 = {
 				top_liege = {
 					OR = {
 						government = tribal_government
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -2682,7 +2682,7 @@ imperial_court_pagan_2 = {
 				top_liege = {
 					OR = {
 						government = tribal_government
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -2696,7 +2696,7 @@ imperial_court_pagan_2 = {
 				top_liege = {
 					OR = {
 						government = tribal_government
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -3506,7 +3506,7 @@ imperial_court_pagan_2 = {
 			trigger = {
 				NOT = { tier = emperor }
 				trait = shieldmaiden
-				top_liege = { religion_group = pagan_group }
+				top_liege = { novum_imperium_is_pagan = yes }
 			}
 			value = 1
 		}
@@ -4775,7 +4775,7 @@ imperial_court_pagan_3 = {
 				top_liege = {
 					OR = {
 						government = tribal_government
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -4789,7 +4789,7 @@ imperial_court_pagan_3 = {
 				top_liege = {
 					OR = {
 						government = tribal_government
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -4803,7 +4803,7 @@ imperial_court_pagan_3 = {
 				top_liege = {
 					OR = {
 						government = tribal_government
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 			}
@@ -5613,7 +5613,7 @@ imperial_court_pagan_3 = {
 			trigger = {
 				NOT = { tier = emperor }
 				trait = shieldmaiden
-				top_liege = { religion_group = pagan_group }
+				top_liege = { novum_imperium_is_pagan = yes }
 			}
 			value = 1
 		}
