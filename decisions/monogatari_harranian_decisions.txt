@@ -21,10 +21,10 @@ decisions = {
 			}
 			OR = {
 				ai = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				trait = scholar
 				trait = physician
-				trait = sympathy_pagans
+				trait = sympathy_platonics
 				society_member_of = hermetics
 			}
 		}
@@ -59,8 +59,8 @@ decisions = {
 			has_global_flag = VIET_harran_temple_of_the_moon_active
 			year = 900
 			has_landed_title = c_edessa
-			NOT = { religion_group = pagan_group }
-			NOT = { secret_religion_group = pagan_group }
+			NOT = { novum_imperium_is_pagan = yes }
+			NOT = { secret_religion_is_pagan = yes }
 			has_game_rule = {
 				name = monogatari_harranian_modifiers_rule
 				value = harranian_rule_on
@@ -72,7 +72,7 @@ decisions = {
 			NOT = { trait = sympathy_pagans }
 			NOT = {
 				any_liege = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 			}
 			wealth = 50
@@ -151,7 +151,7 @@ decisions = {
 				#	has_province_modifier = VIET_harran_temple_of_the_moon
 				#}
 			}
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 		allow = {
 			custom_tooltip = { text = VIET_recent_harran_temple_visit }

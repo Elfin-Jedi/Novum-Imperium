@@ -333,7 +333,7 @@ character_event = {
 	trigger = {
 		is_ill = yes
 		completely_controls = c_innse_gall
-		NOT = { religion_group = pagan_group }
+		NOT = { religion_group = celtic_group }
 		NOT = { has_global_flag = celtic_reformation }
 		OR = {
 			has_game_rule = {
@@ -549,10 +549,7 @@ narrative_event = {
 				religion_group = christian
 				religion_group = muslim
 				religion_group = zoroastrian_group
-				AND = {
-					religion_group = pagan_group
-					religion_openly_in_celtic_subgroup_trigger = no
-				}
+				religion_group = celtic_group
 			}
 		}
 	}

@@ -273,7 +273,7 @@ decisions = {
 			prisoner = no
 			OR = {
 				religion_group = christian
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				religion_group = zoroastrian_group
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}

@@ -37,7 +37,7 @@ decisions = {
 					has_global_flag = imperial_court_muslim_3_active
 				}
 				AND = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					has_global_flag = imperial_court_pagan_1_active
 					has_global_flag = imperial_court_pagan_2_active
 					has_global_flag = imperial_court_pagan_3_active
@@ -97,7 +97,7 @@ decisions = {
 				}
 			}
 			OR = {
-				NOT = { religion_group = pagan_group }
+				NOT = { novum_imperium_is_pagan = yes }
 				is_reformed_religion = yes
 			}
 			hidden_tooltip = { NOT = { has_character_flag = establishing_imperial_court } }
