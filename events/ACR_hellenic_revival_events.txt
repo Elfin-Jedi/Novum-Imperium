@@ -48,7 +48,7 @@ character_event = {
 		NOR = {
 			realm_size = 230 						# empire is in big trouble, like at the alexiad start date
 			has_character_flag = ancrel_philosopher # hasn't had the event already
-			religion_group = pagan_group 			# is still christian
+			novum_imperium_is_pagan = yes 			# is still christian
 			any_courtier = {
 				has_character_flag = ancrel_special_priest # don't already have the priest in your court
 			}
@@ -1423,7 +1423,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 1.5
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				NOT = { religion_authority = 0.35 }
 			}
 		}
@@ -1568,7 +1568,7 @@ character_event = {
 	trigger = {
 		completely_controls = c_monemvasia
 		
-		NOT = { religion_group = pagan_group }
+		NOT = { novum_imperium_is_pagan = yes }
 		OR = {
 			culture = roman
 			culture = italian

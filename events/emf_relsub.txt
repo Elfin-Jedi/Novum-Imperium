@@ -693,7 +693,7 @@ long_character_event = {
 			}
 			modifier = {
 				factor = 1.5
-				event_target:emf_cb_loser = { religion_group = pagan_group }
+				event_target:emf_cb_loser = { novum_imperium_is_pagan = yes }
 			}
 			modifier = {
 				factor = 1.5
@@ -756,7 +756,7 @@ long_character_event = {
 					emf_western_christian_religion = yes
 					religion = paulician
 				}
-				event_target:emf_cb_loser = { NOT = { religion_group = pagan_group } }
+				event_target:emf_cb_loser = { NOT = { novum_imperium_is_pagan = yes } }
 			}
 			modifier = {
 				factor = 1.5
@@ -1348,7 +1348,7 @@ character_event = {
 				}
 				trigger_else_if = {
 					limit = { has_flag = emf_relsub_disinherit_pagan_group }
-					ROOT = { religion_group = pagan_group }
+					ROOT = { novum_imperium_is_pagan = yes }
 				}
 				trigger_else_if = {
 					limit = { has_flag = emf_relsub_disinherit_zoroastrian_group }
@@ -1394,7 +1394,7 @@ character_event = {
 						}
 						trigger_else_if = {
 							limit = { has_flag = emf_relsub_disinherit_pagan_group }
-							ROOT = { religion_group = pagan_group }
+							ROOT = { novum_imperium_is_pagan = yes }
 						}
 						trigger_else_if = {
 							limit = { has_flag = emf_relsub_disinherit_zoroastrian_group }
@@ -1434,7 +1434,7 @@ character_event = {
 						}
 						trigger_else_if = {
 							limit = { has_flag = emf_relsub_disinherit_pagan_group }
-							ROOT = { religion_group = pagan_group }
+							ROOT = { novum_imperium_is_pagan = yes }
 						}
 						trigger_else_if = {
 							limit = { has_flag = emf_relsub_disinherit_zoroastrian_group }

@@ -1408,7 +1408,7 @@ narrative_event = {
 		k_saxony = {
 			holder_scope = {
 				culture = old_saxon
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -1605,7 +1605,7 @@ narrative_event = {
 		NOT = { has_global_flag = blood_court_of_verden }
 		higher_real_tier_than = DUKE
 		NOT = { culture = old_saxon }
-		NOT = { religion_group = pagan_group }
+		NOT = { novum_imperium_is_pagan = yes }
 		any_realm_province = {
 			culture = old_saxon
 			OR = {
@@ -1680,7 +1680,7 @@ narrative_event = {
 	trigger = {
 		NOT = { has_global_flag = widukind_spawned }
 		NOT = { culture = old_saxon }
-		NOT = { religion_group = pagan_group }
+		NOT = { novum_imperium_is_pagan = yes }
 		OR = {
 			has_landed_title = k_saxony
 			has_landed_title = d_saxony
@@ -1903,7 +1903,7 @@ narrative_event = {
 			has_character_flag = is_widukind
 			is_ruler = no
 			prisoner = no
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			is_incapable = no
 		}
 	}
@@ -1918,7 +1918,7 @@ narrative_event = {
 				has_character_flag = is_widukind
 				is_ruler = no
 				prisoner = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				is_incapable = no
 			}
 			save_event_target_as = widukind

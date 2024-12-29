@@ -108,9 +108,9 @@ character_event = {
 			piety = -50
 			if = {
 				limit = {
-					NOT = { religion_group = pagan_group }
+					NOT = { religion_group = celtic_group }
 				}
-				add_trait = sympathy_pagans
+				add_trait = sympathy_celtics
 			}
 			add_character_modifier = {
 				name = celtic_ways
@@ -260,9 +260,9 @@ character_event = {
 			piety = -50
 			if = {
 				limit = {
-					NOT = { religion_group = pagan_group }
+					NOT = { religion_group = celtic_group }
 				}
-				add_trait = sympathy_pagans
+				add_trait = sympathy_celtics
 			}
 			add_character_modifier = {
 				name = celtic_ways
