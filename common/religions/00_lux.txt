@@ -557,6 +557,7 @@ east_african_group = {
 		independence_war_score_bonus = 30
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 4 # The default in LI is 5
 		hard_to_convert = yes
 
@@ -683,6 +684,7 @@ arabpagan_group = {
 		feminist = yes
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 0 # The default in LI is 5
 		hard_to_convert = yes
@@ -771,6 +773,7 @@ arabpagan_group = {
 		investiture = yes
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 2 # The default in LI is 5
 		hard_to_convert = yes
 
@@ -855,6 +858,7 @@ arabpagan_group = {
 		priests_can_marry = yes
 		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		max_consorts = 3
+		women_can_take_consorts = yes
 		hard_to_convert = yes
 		
 		religious_clothing_head = 5
@@ -931,6 +935,7 @@ arabpagan_group = {
 		female_temple_holders = yes
 		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		short_reign_opinion_year_mult = 3 # The default in LI is 5
 		hard_to_convert = yes
@@ -1015,6 +1020,7 @@ arabpagan_group = {
 		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		independence_war_score_bonus = 20 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		hard_to_convert = yes
 		short_reign_opinion_year_mult = 3 # The default in LI is 5
@@ -1100,6 +1106,7 @@ arabpagan_group = {
 		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		hard_to_convert = yes
 		short_reign_opinion_year_mult = 3 # The default in LI is 5
@@ -1172,6 +1179,7 @@ arabpagan_group = {
 		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		hard_to_convert = yes
@@ -1250,6 +1258,7 @@ arabpagan_group = {
 		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		independence_war_score_bonus = 10
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
@@ -1309,6 +1318,7 @@ aztec_group = {
 		
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		can_call_crusade = yes
 		join_crusade_if_bordering_hostile = yes
 		
@@ -1418,6 +1428,7 @@ aztec_group = {
 		
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		can_call_crusade = yes
 		join_crusade_if_bordering_hostile = yes
 		
@@ -1461,6 +1472,7 @@ aztec_group = {
 		peace_prestige_loss = yes # Lose Prestige while at peace
 		raised_vassal_opinion_loss = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = mayan_reformed
 		
@@ -1554,6 +1566,7 @@ pagan_group = {
 		independence_war_score_bonus = 20
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 4 # The default in LI is 5
@@ -1689,6 +1702,7 @@ baltic_group = {
 		independence_war_score_bonus = 20
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 4 # The default in LI is 5
@@ -1806,6 +1820,7 @@ baltic_group = {
 		independence_war_score_bonus = 40
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		hard_to_convert = yes
 		short_reign_opinion_year_mult = 7 # The default in LI is 5
@@ -1927,6 +1942,7 @@ baltic_group = {
 		can_call_crusade = no
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		female_temple_holders = yes
 		feminist = yes 
@@ -2005,6 +2021,7 @@ baltic_group = {
 #		can_hold_temples = yes
 		independence_war_score_bonus = 40
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		priests_can_marry = yes
 		short_reign_opinion_year_mult = 7 # The default in LI is 5
@@ -2115,6 +2132,7 @@ baltic_group = {
 		can_call_crusade = no
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		short_reign_opinion_year_mult = 7 # The default in LI is 5
@@ -2242,6 +2260,7 @@ bantu_group = {
 		independence_war_score_bonus = 20
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 3 # The default in LI is 5
@@ -2359,6 +2378,7 @@ bantu_group = {
 		independence_war_score_bonus = 20
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 3 # The default in LI is 5
@@ -2479,6 +2499,7 @@ bantu_group = {
 		independence_war_score_bonus = 20
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 6 # The default in LI is 5
@@ -2560,6 +2581,7 @@ bantu_group = {
 		independence_war_score_bonus = 20
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		ignores_defensive_attrition = yes
@@ -2637,6 +2659,7 @@ bantu_group = {
 		can_call_crusade = no
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
@@ -3112,6 +3135,7 @@ bantu_group = {
 		independence_war_score_bonus = 20
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 4 # The default in LI is 5
@@ -4012,6 +4036,7 @@ bantu_group = {
 		can_call_crusade = no
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		short_reign_opinion_year_mult = 6 # The default in LI is 5
@@ -4778,6 +4803,7 @@ bantu_group = {
 		can_call_crusade = no
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		short_reign_opinion_year_mult = 6 # The default in LI is 5
@@ -4897,6 +4923,7 @@ bantu_group = {
 		defensive_attrition = yes
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		short_reign_opinion_year_mult = 7 # The default in LI is 5
@@ -5403,6 +5430,7 @@ bantu_group = {
 #		can_hold_temples = yes
 		independence_war_score_bonus = 40
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		short_reign_opinion_year_mult = 6 # The default in LI is 5
@@ -5511,6 +5539,7 @@ bantu_group = {
 		can_call_crusade = no
 		independence_war_score_bonus = 40
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		ignores_defensive_attrition = yes
@@ -6580,6 +6609,7 @@ bud_group = {
 		can_call_crusade = yes
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 3 # The default in LI is 5
 		pacifist = yes
 		peace_piety_gain = 1.0
@@ -7277,6 +7307,7 @@ bud_group = {
 		}
 		can_call_crusade = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 4 # The default in LI is 5
 		has_heir_designation = yes
 		hard_to_convert = yes
@@ -8047,6 +8078,7 @@ chinese_group = {
 		independence_war_score_bonus = 10
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 3 # The default in LI is 5
 		hard_to_convert = yes
 
@@ -8139,6 +8171,7 @@ chinese_group = {
 		
 		can_call_crusade = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
@@ -8222,6 +8255,7 @@ chinese_group = {
 		defensive_attrition = yes
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		hard_to_convert = yes
 				
 		religious_clothing_head = 6
@@ -8300,6 +8334,7 @@ chinese_group = {
 		can_grant_divorce = yes
 		can_grant_invasion_cb = invasion
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		short_reign_opinion_year_mult = 3 # The default in LI is 5
 		hard_to_convert = yes
@@ -8357,6 +8392,7 @@ chinese_group = {
 		can_grant_divorce = yes
 		priests_can_inherit = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		short_reign_opinion_year_mult = 0 # No short reign penalty
 		
@@ -8450,6 +8486,7 @@ chinese_group = {
 		
 		can_call_crusade = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
@@ -8534,6 +8571,7 @@ chinese_group = {
 		can_call_crusade = no
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		hard_to_convert = yes
 		short_reign_opinion_year_mult = 4 # The default in LI is 5
@@ -8685,6 +8723,7 @@ chinese_group = {
 		can_call_crusade = no
 		independence_war_score_bonus = 10
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		short_reign_opinion_year_mult = 8 # The default in LI is 5
 		hard_to_convert = yes
@@ -8768,6 +8807,7 @@ chinese_group = {
 		can_call_crusade = no
 		independence_war_score_bonus = 10
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		short_reign_opinion_year_mult = 8 # The default in LI is 5
 		hard_to_convert = yes
@@ -8909,6 +8949,7 @@ norsegerman_group = {
 		independence_war_score_bonus = 20
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 4 # The default in LI is 5
@@ -9015,6 +9056,7 @@ norsegerman_group = {
 #		can_hold_temples = yes
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 4 # The default in LI is 5
@@ -9120,6 +9162,7 @@ norsegerman_group = {
 #		can_hold_temples = yes
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 4 # The default in LI is 5
@@ -9235,6 +9278,7 @@ norsegerman_group = {
 #		can_hold_temples = yes
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		short_reign_opinion_year_mult = 8 # The default in LI is 5
 		hard_to_convert = yes
@@ -9316,6 +9360,7 @@ norsegerman_group = {
 #		can_hold_temples = yes
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 6 # The default in LI is 5
@@ -9389,6 +9434,7 @@ norsegerman_group = {
 		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		independence_war_score_bonus = 40
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		priests_can_marry = yes
 		short_reign_opinion_year_mult = 7 # The default in LI is 5
@@ -9500,6 +9546,7 @@ norsegerman_group = {
 		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
@@ -9587,6 +9634,7 @@ norsegerman_group = {
 		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		priests_can_marry = yes
 		short_reign_opinion_year_mult = 9 # The default in LI is 5
@@ -9656,6 +9704,7 @@ norsegerman_group = {
 		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
@@ -9771,6 +9820,7 @@ norsegerman_group = {
 		feminist = yes
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		short_reign_opinion_year_mult = 9 # The default in LI is 5
@@ -9850,6 +9900,7 @@ norsegerman_group = {
 		can_call_crusade = no
 		independence_war_score_bonus = 40
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		priests_can_marry = yes
 		hard_to_convert = yes
@@ -9963,6 +10014,7 @@ norsegerman_group = {
 		can_call_crusade = no
 		independence_war_score_bonus = 30
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		female_temple_holders = yes
 		feminist = yes 
@@ -10042,6 +10094,7 @@ norsegerman_group = {
 		priests_can_marry = yes
 		independence_war_score_bonus = 50 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		hard_to_convert = yes
 		short_reign_opinion_year_mult = 8 # The default in LI is 5
@@ -13329,6 +13382,7 @@ christian = {
 		can_call_crusade = no
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 #		can_hold_temples = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
@@ -13911,6 +13965,7 @@ egyptian_group = {
 		priests_can_marry = yes
 		investiture = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 0 # The default in LI is 5
 		has_heir_designation = yes
@@ -13994,6 +14049,7 @@ egyptian_group = {
 		can_call_crusade = yes
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 2 # The default in LI is 5
@@ -14160,6 +14216,7 @@ egyptian_group = {
 		can_call_crusade = yes
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 2 # The default in LI is 5
@@ -14321,6 +14378,7 @@ egyptian_group = {
 		divine_blood = yes # Sacred Xwedodah close-kin marriage mechanics
 		can_call_crusade = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 3 # The default in LI is 5
@@ -14400,6 +14458,7 @@ egyptian_group = {
 		can_call_crusade = no
 		defensive_attrition = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		hard_to_convert = yes
 		
@@ -14480,6 +14539,7 @@ egyptian_group = {
 		can_have_antipopes = no
 		investiture = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		hard_to_convert = yes
 		short_reign_opinion_year_mult = 3 # The default in LI is 5
@@ -14569,6 +14629,7 @@ egyptian_group = {
 		can_call_crusade = no
 		defensive_attrition = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		female_temple_holders = yes
 		feminist = yes 
@@ -14663,6 +14724,7 @@ finnish_group = {
 		independence_war_score_bonus = 20
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 3 # The default in LI is 5
@@ -14770,6 +14832,7 @@ finnish_group = {
 		independence_war_score_bonus = 20
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 3 # The default in LI is 5
@@ -14880,6 +14943,7 @@ finnish_group = {
 		independence_war_score_bonus = 30
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		short_reign_opinion_year_mult = 8 # The default in LI is 5
 		ignores_defensive_attrition = yes
@@ -14953,6 +15017,7 @@ finnish_group = {
 #		can_hold_temples = yes
 		independence_war_score_bonus = 40
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		priests_can_marry = yes
 		hard_to_convert = yes
@@ -15055,6 +15120,7 @@ finnish_group = {
 		can_call_crusade = no
 		independence_war_score_bonus = 30
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		hard_to_convert = yes
@@ -15161,6 +15227,7 @@ finnish_group = {
 #		can_hold_temples = yes
 		independence_war_score_bonus = 40
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		short_reign_opinion_year_mult = 6 # The default in LI is 5
@@ -15264,6 +15331,7 @@ finnish_group = {
 #		can_hold_temples = yes
 		independence_war_score_bonus = 50
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		priests_can_marry = yes
 		short_reign_opinion_year_mult = 7 # The default in LI is 5
@@ -15375,6 +15443,7 @@ finnish_group = {
 		defensive_attrition = yes
 		independence_war_score_bonus = 30
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		female_temple_holders = yes
 		feminist = yes 
@@ -17427,6 +17496,7 @@ indohelen_group = {
 		}
 		can_call_crusade = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 1 # The default in LI is 5
@@ -17785,6 +17855,7 @@ inuit_group = {
 		priests_can_marry = yes
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		ignores_defensive_attrition = yes
 		hard_to_convert = yes
@@ -17867,6 +17938,7 @@ inuit_group = {
 #		can_hold_temples = yes
 		independence_war_score_bonus = 40
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		hard_to_convert = yes
@@ -18317,6 +18389,7 @@ luwian_group = {
 		defensive_attrition = yes
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 4 # The default in LI is 5
 		hard_to_convert = yes
 		
@@ -18390,6 +18463,7 @@ luwian_group = {
 		
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 0 # The default in LI is 5
 		has_heir_designation = yes
@@ -18470,6 +18544,7 @@ luwian_group = {
 		
 		can_call_crusade = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		allow_looting = yes
 		# can_hold_temples = yes #Otherwise it cannot have a religious head
 		priests_can_marry = yes
@@ -18553,6 +18628,7 @@ luwian_group = {
 		can_call_crusade = no
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		hard_to_convert = yes
 		short_reign_opinion_year_mult = 3 # The default in LI is 5
@@ -18622,6 +18698,7 @@ luwian_group = {
 		
 		can_call_crusade = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
@@ -22252,6 +22329,7 @@ palmyranpagan_group = {
 		can_call_crusade = no
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 0 # The default in LI is 5
 		has_heir_designation = yes
@@ -22334,6 +22412,7 @@ palmyranpagan_group = {
 		can_call_crusade = no
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 1 # The default in LI is 5
 		has_heir_designation = yes
@@ -22424,6 +22503,7 @@ palmyranpagan_group = {
 		priests_can_marry = yes
 		hard_to_convert = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 5
 		religious_clothing_priest = 5
@@ -22496,6 +22576,7 @@ palmyranpagan_group = {
 		can_call_crusade = no
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		short_reign_opinion_year_mult = 3 # The default in LI is 5
 		hard_to_convert = yes
@@ -22579,6 +22660,7 @@ palmyranpagan_group = {
 		can_call_crusade = no
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		short_reign_opinion_year_mult = 3 # The default in LI is 5
 		hard_to_convert = yes
@@ -22662,6 +22744,7 @@ palmyranpagan_group = {
 		can_call_crusade = no
 		independence_war_score_bonus = 10
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
@@ -22743,6 +22826,7 @@ palmyranpagan_group = {
 		
 		can_call_crusade = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		short_reign_opinion_year_mult = 3 # The default in LI is 5
 		hard_to_convert = yes
@@ -22839,6 +22923,7 @@ serer_group = {
 		independence_war_score_bonus = 20
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 4 # The default in LI is 5
@@ -22954,6 +23039,7 @@ serer_group = {
 #		can_hold_temples = yes
 		independence_war_score_bonus = 40
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		priests_can_marry = yes
 		short_reign_opinion_year_mult = 6 # The default in LI is 5
@@ -23186,6 +23272,7 @@ serer_group = {
 #		can_hold_temples = yes
 		independence_war_score_bonus = 40
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		short_reign_opinion_year_mult = 6 # The default in LI is 5
@@ -23297,6 +23384,7 @@ serer_group = {
 		independence_war_score_bonus = 20
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 6 # The default in LI is 5
@@ -23390,6 +23478,7 @@ slavic_group = {
 		independence_war_score_bonus = 20
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 4 # The default in LI is 5
@@ -23491,6 +23580,7 @@ slavic_group = {
 #		can_hold_temples = yes
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
@@ -23566,6 +23656,7 @@ slavic_group = {
 #		can_hold_temples = yes
 		independence_war_score_bonus = 40
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		short_reign_opinion_year_mult = 7 # The default in LI is 5
@@ -23667,6 +23758,7 @@ slavic_group = {
 #		can_hold_temples = yes
 		independence_war_score_bonus = 40
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		priests_can_marry = yes
 		short_reign_opinion_year_mult = 7 # The default in LI is 5
@@ -23768,6 +23860,7 @@ slavic_group = {
 #		can_hold_temples = yes
 		independence_war_score_bonus = 40
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		short_reign_opinion_year_mult = 7 # The default in LI is 5
@@ -23874,6 +23967,7 @@ slavic_group = {
 		can_call_crusade = no
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
@@ -23972,6 +24066,7 @@ slavic_group = {
 #		can_hold_temples = yes
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
@@ -24044,6 +24139,7 @@ slavic_group = {
 #		can_hold_temples = yes
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
@@ -25229,6 +25325,7 @@ sol_group = {
 		can_grant_invasion_cb = invasion
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
@@ -25361,6 +25458,7 @@ sol_group = {
 		can_grant_invasion_cb = invasion
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
@@ -25488,6 +25586,7 @@ sol_group = {
 		can_grant_divorce = yes
 		can_grant_invasion_cb = invasion
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
@@ -25667,6 +25766,7 @@ tengri_group = {
 		independence_war_score_bonus = 20
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		ignores_defensive_attrition = yes
@@ -25849,6 +25949,7 @@ tengri_group = {
 		independence_war_score_bonus = 10
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 3 # The default in LI is 5
 		hard_to_convert = yes
 
@@ -26031,6 +26132,7 @@ tengri_group = {
 		defensive_attrition = yes
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		priests_can_marry = yes
 		raised_vassal_opinion_loss = no
@@ -26129,6 +26231,7 @@ tengri_group = {
 		independence_war_score_bonus = 30
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 4 # The default in LI is 5
@@ -26221,6 +26324,7 @@ tengri_group = {
 		independence_war_score_bonus = 20
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 3 # The default in LI is 5
@@ -26316,6 +26420,7 @@ tengri_group = {
 		defensive_attrition = yes
 		independence_war_score_bonus = 40
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		priests_can_marry = yes
 		short_reign_opinion_year_mult = 6 # The default in LI is 5
@@ -26417,6 +26522,7 @@ tengri_group = {
 		defensive_attrition = yes
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		female_temple_holders = yes
 		feminist = yes
@@ -26493,6 +26599,7 @@ tengri_group = {
 		defensive_attrition = yes
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		short_reign_opinion_year_mult = 6 # The default in LI is 5
@@ -26605,6 +26712,7 @@ tengri_group = {
 		defensive_attrition = yes
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		peace_prestige_loss = yes
 		short_reign_opinion_year_mult = 6 # The default in LI is 5
@@ -26703,6 +26811,7 @@ tengri_group = {
 		defensive_attrition = yes
 		independence_war_score_bonus = 40
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		female_temple_holders = yes
 		feminist = yes
@@ -26798,6 +26907,7 @@ tengri_group = {
 		defensive_attrition = yes
 		independence_war_score_bonus = 30
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		female_temple_holders = yes
 		feminist = yes
@@ -26899,6 +27009,7 @@ tengri_group = {
 		defensive_attrition = yes
 		independence_war_score_bonus = 40
 		max_consorts = 3
+		women_can_take_consorts = yes
 		peace_prestige_loss = yes
 		short_reign_opinion_year_mult = 6 # The default in LI is 5
 		ignores_defensive_attrition = yes
@@ -26997,6 +27108,7 @@ tengri_group = {
 		defensive_attrition = yes
 		independence_war_score_bonus = 40
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		female_temple_holders = yes
 		feminist = yes
@@ -27088,6 +27200,7 @@ yazd_group = {
 		independence_war_score_bonus = 30
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 3 # The default in LI is 5
 		hard_to_convert = yes
 
@@ -27168,6 +27281,7 @@ yazd_group = {
 		can_grant_divorce = yes
 		independence_war_score_bonus = 30
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		short_reign_opinion_year_mult = 4 # The default in LI is 5
 		hard_to_convert = yes
@@ -27253,6 +27367,7 @@ yazd_group = {
 		can_call_crusade = no
 		independence_war_score_bonus = 20
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		short_reign_opinion_year_mult = 3 # The default in LI is 5
 		hard_to_convert = yes
@@ -27592,6 +27707,7 @@ zoroastrian_group = {
 		defensive_attrition = yes
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 6 # The default in LI is 5
 		
 		religious_clothing_head = 5
@@ -27667,6 +27783,7 @@ zoroastrian_group = {
 		defensive_attrition = yes
 		priests_can_marry = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 6 # The default in LI is 5
 		
 		religious_clothing_head = 11
@@ -27735,6 +27852,7 @@ zoroastrian_group = {
 		
 		can_call_crusade = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 4 # The default in LI is 5
 
 		# Persian open-minded (sectarian 0), can be married from the same group or civilization or related ones
@@ -27816,6 +27934,7 @@ zoroastrian_group = {
 		can_grant_invasion_cb = invasion
 		divine_blood = yes # Sacred Xwedodah close-kin marriage mechanics
 		max_consorts = 3
+		women_can_take_consorts = yes
 		pc_marriage = yes
 		short_reign_opinion_year_mult = 4 # The default in LI is 5
 
@@ -27895,6 +28014,7 @@ zoroastrian_group = {
 		can_call_crusade = no
 		divine_blood = yes # Sacred Xwedodah close-kin marriage mechanics
 		max_consorts = 3
+		women_can_take_consorts = yes
 		pc_marriage = yes
 		hard_to_convert = yes
 
@@ -27985,6 +28105,7 @@ zoroastrian_group = {
 		allow_viking_invasion = yes
 		can_call_crusade = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		short_reign_opinion_year_mult = 8 # The default in LI is 5
 		hard_to_convert = yes
@@ -28067,6 +28188,7 @@ zoroastrian_group = {
 		can_call_crusade = no
 		defensive_attrition = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		pc_marriage = yes
 		short_reign_opinion_year_mult = 7 # The default in LI is 5
 		hard_to_convert = yes
@@ -28147,6 +28269,7 @@ zoroastrian_group = {
 		raised_vassal_opinion_loss = no
 		short_reign_opinion_year_mult = 2 # The default in LI is 5
 		max_consorts = 3
+		women_can_take_consorts = yes
 		priests_can_marry = yes
 		has_heir_designation = yes
 		hard_to_convert = yes
@@ -28204,6 +28327,7 @@ asian_religion_group = {
 		female_temple_holders = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -28270,6 +28394,7 @@ asian_religion_group = {
 		defensive_attrition = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = melanesian_religion_reformed
 		
@@ -28316,6 +28441,7 @@ asian_religion_group = {
 		female_temple_holders = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -28380,6 +28506,7 @@ asian_religion_group = {
 		defensive_attrition = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = taiwanese_religion_reformed
 		
@@ -28423,6 +28550,7 @@ asian_religion_group = {
 		female_temple_holders = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -28487,6 +28615,7 @@ asian_religion_group = {
 		defensive_attrition = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = philippine_religion_reformed
 		
@@ -28530,6 +28659,7 @@ asian_religion_group = {
 		female_temple_holders = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -28594,6 +28724,7 @@ asian_religion_group = {
 		defensive_attrition = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = bornean_religion_reformed
 		
@@ -28637,6 +28768,7 @@ asian_religion_group = {
 		female_temple_holders = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -28701,6 +28833,7 @@ asian_religion_group = {
 		defensive_attrition = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = sulawesi_religion_reformed
 		
@@ -28744,6 +28877,7 @@ asian_religion_group = {
 		female_temple_holders = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -28808,6 +28942,7 @@ asian_religion_group = {
 		defensive_attrition = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = flores_religion_reformed
 		
@@ -28851,6 +28986,7 @@ asian_religion_group = {
 		female_temple_holders = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -28915,6 +29051,7 @@ asian_religion_group = {
 		defensive_attrition = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = java_religion_reformed
 		
@@ -28958,6 +29095,7 @@ asian_religion_group = {
 		female_temple_holders = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -29016,6 +29154,7 @@ asian_religion_group = {
 		defensive_attrition = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = sumatran_religion_reformed
 		
@@ -29059,6 +29198,7 @@ asian_religion_group = {
 		female_temple_holders = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -29123,6 +29263,7 @@ asian_religion_group = {
 		defensive_attrition = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = malagasy_religion_reformed
 		
@@ -29175,6 +29316,7 @@ african_pagan_group = {
 
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -29232,6 +29374,7 @@ african_pagan_group = {
 		defensive_attrition = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = south_bantu_mythology_reformed
 		
@@ -29278,6 +29421,7 @@ african_pagan_group = {
 
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -29335,6 +29479,7 @@ african_pagan_group = {
 		defensive_attrition = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = east_bantu_mythology_reformed
 		
@@ -29380,6 +29525,7 @@ african_pagan_group = {
 
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -29437,6 +29583,7 @@ african_pagan_group = {
 		defensive_attrition = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = omotic_pagan_reformed
 		
@@ -29483,6 +29630,7 @@ african_pagan_group = {
 
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -29540,6 +29688,7 @@ african_pagan_group = {
 		defensive_attrition = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = cushitic_pagan_reformed
 		
@@ -29586,6 +29735,7 @@ african_pagan_group = {
 
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -29643,6 +29793,7 @@ african_pagan_group = {
 		defensive_attrition = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = nilotic_pagan_reformed
 		
@@ -29689,6 +29840,7 @@ african_pagan_group = {
 
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -29746,6 +29898,7 @@ african_pagan_group = {
 		defensive_attrition = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = khoi_san_mythology_reformed
 		
@@ -29802,6 +29955,7 @@ inti_group = {
 		short_reign_opinion_year_mult = 1.5
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -29864,6 +30018,7 @@ inti_group = {
 		allow_looting = yes
 	
 		max_consorts = 5
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = inti_reformed
 
@@ -29927,6 +30082,7 @@ native_american_group = {
 		join_crusade_if_bordering_hostile = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 1.5
 	
 		
@@ -29979,8 +30135,9 @@ native_american_group = {
 		allow_looting = yes
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		reformed = algic_pagan_reformed
+		reformed = zemiist_reformed
 		
 		short_reign_opinion_year_mult = 2
 		
@@ -30033,6 +30190,7 @@ native_american_group = {
 		join_crusade_if_bordering_hostile = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 1.5
 	
 		
@@ -30085,8 +30243,9 @@ native_american_group = {
 		allow_looting = yes
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		reformed = algic_pagan_reformed
+		reformed = kachina_reformed
 		
 		short_reign_opinion_year_mult = 2
 		
@@ -30139,6 +30298,7 @@ native_american_group = {
 		join_crusade_if_bordering_hostile = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 1.5
 	
 		
@@ -30191,8 +30351,9 @@ native_american_group = {
 		allow_looting = yes
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		reformed = algic_pagan_reformed
+		reformed = pohakantenna_reformed
 		
 		short_reign_opinion_year_mult = 2
 		
@@ -30245,6 +30406,7 @@ native_american_group = {
 		join_crusade_if_bordering_hostile = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 1.5
 	
 		
@@ -30297,8 +30459,9 @@ native_american_group = {
 		allow_looting = yes
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		reformed = algic_pagan_reformed
+		reformed = sgaanaang_reformed
 		
 		short_reign_opinion_year_mult = 2
 		
@@ -30351,6 +30514,7 @@ native_american_group = {
 		join_crusade_if_bordering_hostile = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 1.5
 	
 		
@@ -30403,8 +30567,9 @@ native_american_group = {
 		allow_looting = yes
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		reformed = algic_pagan_reformed
+		reformed = wakanda_reformed
 		
 		short_reign_opinion_year_mult = 2
 		
@@ -30457,6 +30622,7 @@ native_american_group = {
 		join_crusade_if_bordering_hostile = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 1.5
 	
 		
@@ -30509,8 +30675,9 @@ native_american_group = {
 		allow_looting = yes
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		reformed = algic_pagan_reformed
+		reformed = wakan_tanka_reformed
 		
 		short_reign_opinion_year_mult = 2
 		
@@ -30563,6 +30730,7 @@ native_american_group = {
 		join_crusade_if_bordering_hostile = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 1.5
 	
 		
@@ -30615,8 +30783,9 @@ native_american_group = {
 		allow_looting = yes
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		reformed = algic_pagan_reformed
+		reformed = mahoma_reformed
 		
 		short_reign_opinion_year_mult = 2
 		
@@ -30669,6 +30838,7 @@ native_american_group = {
 		join_crusade_if_bordering_hostile = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 1.5
 	
 		
@@ -30721,8 +30891,9 @@ native_american_group = {
 		allow_looting = yes
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		reformed = algic_pagan_reformed
+		reformed = southern_cult_reformed
 		
 		short_reign_opinion_year_mult = 2
 		
@@ -30775,6 +30946,7 @@ native_american_group = {
 		join_crusade_if_bordering_hostile = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 1.5
 	
 		
@@ -30827,8 +30999,9 @@ native_american_group = {
 		allow_looting = yes
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		reformed = algic_pagan_reformed
+		reformed = orenda_reformed
 		
 		short_reign_opinion_year_mult = 2
 		
@@ -30881,6 +31054,7 @@ native_american_group = {
 		join_crusade_if_bordering_hostile = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 1.5
 	
 		
@@ -30933,6 +31107,7 @@ native_american_group = {
 		allow_looting = yes
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = algic_pagan_reformed
 		
@@ -30983,6 +31158,7 @@ native_american_group = {
 		short_reign_opinion_year_mult = 1.5
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -31045,6 +31221,7 @@ native_american_group = {
 		allow_looting = yes
 	
 		max_consorts = 5
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = animism_reformed
 
@@ -31060,7 +31237,7 @@ native_american_group = {
 		
 	}
 
-	tupan_reformed = {
+	tupan_reformed = { #start of inti
 		graphical_culture = mesoamericangfx
 		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
 		secondary_event_pictures = odinane
@@ -31095,6 +31272,7 @@ native_american_group = {
 		short_reign_opinion_year_mult = 1.5
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -31157,8 +31335,9 @@ native_american_group = {
 		allow_looting = yes
 	
 		max_consorts = 5
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		reformed = inti_reformed
+		reformed = tupan_reformed
 
 		short_reign_opinion_year_mult = 2
 		
@@ -31207,6 +31386,7 @@ native_american_group = {
 		short_reign_opinion_year_mult = 1.5
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -31269,8 +31449,9 @@ native_american_group = {
 		allow_looting = yes
 	
 		max_consorts = 5
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		reformed = inti_reformed
+		reformed = chiminigagua_reformed
 
 		short_reign_opinion_year_mult = 2
 		
@@ -31319,6 +31500,7 @@ native_american_group = {
 		short_reign_opinion_year_mult = 1.5
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -31381,8 +31563,9 @@ native_american_group = {
 		allow_looting = yes
 	
 		max_consorts = 5
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		reformed = inti_reformed
+		reformed = lapta_reformed
 
 		short_reign_opinion_year_mult = 2
 		
@@ -31396,7 +31579,7 @@ native_american_group = {
 		
 	}
 
-	aiwamdzu_reformed = {
+	aiwamdzu_reformed = { #start of south american
 		graphical_culture = mesoamericangfx
 		interface_skin = { zun_interface zoroastrian_interface muslim_interface }
 		secondary_event_pictures = odinane
@@ -31431,6 +31614,7 @@ native_american_group = {
 		short_reign_opinion_year_mult = 1.5
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -31492,8 +31676,9 @@ native_american_group = {
 		allow_looting = yes
 	
 		max_consorts = 5
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		reformed = south_american_reformed
+		reformed = aiwamdzu_reformed
 
 		short_reign_opinion_year_mult = 2
 		
@@ -31542,6 +31727,7 @@ native_american_group = {
 		short_reign_opinion_year_mult = 1.5
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -31603,8 +31789,9 @@ native_american_group = {
 		allow_looting = yes
 	
 		max_consorts = 5
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		reformed = south_american_reformed
+		reformed = lakayah_reformed
 
 		short_reign_opinion_year_mult = 2
 		
@@ -31653,6 +31840,7 @@ native_american_group = {
 		short_reign_opinion_year_mult = 1.5
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -31714,8 +31902,9 @@ native_american_group = {
 		allow_looting = yes
 	
 		max_consorts = 5
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		reformed = south_american_reformed
+		reformed = tehuelchian_reformed
 
 		short_reign_opinion_year_mult = 2
 		
@@ -31763,6 +31952,7 @@ native_american_group = {
 		short_reign_opinion_year_mult = 1.5
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -31825,8 +32015,9 @@ native_american_group = {
 		allow_looting = yes
 	
 		max_consorts = 5
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		reformed = south_american_reformed
+		reformed = witran_mapu_reformed
 
 		short_reign_opinion_year_mult = 2
 		
@@ -31874,6 +32065,7 @@ native_american_group = {
 		short_reign_opinion_year_mult = 1.5
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -31936,8 +32128,9 @@ native_american_group = {
 		allow_looting = yes
 	
 		max_consorts = 5
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
-		reformed = south_american_reformed
+		reformed = tsarutama_reformed
 
 		short_reign_opinion_year_mult = 2
 		
@@ -31986,6 +32179,7 @@ native_american_group = {
 		short_reign_opinion_year_mult = 1.5
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -32048,6 +32242,7 @@ native_american_group = {
 		allow_looting = yes
 	
 		max_consorts = 5
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = kaaulayawaa_reformed
 
@@ -32098,6 +32293,7 @@ native_american_group = {
 		short_reign_opinion_year_mult = 1.5
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -32160,6 +32356,7 @@ native_american_group = {
 		allow_looting = yes
 	
 		max_consorts = 5
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = baniwa_reformed
 
@@ -32210,6 +32407,7 @@ native_american_group = {
 		short_reign_opinion_year_mult = 1.5
 
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -32272,6 +32470,7 @@ native_american_group = {
 		allow_looting = yes
 	
 		max_consorts = 5
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = south_american_reformed
 
@@ -32329,6 +32528,7 @@ austronesian_group = {
 		join_crusade_if_bordering_hostile = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 1.5
 
 		
@@ -32396,6 +32596,7 @@ austronesian_group = {
 	
 		short_reign_opinion_year_mult = 2	
 		max_consorts = 1
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = dreamtime_religion_reformed
 		
@@ -32443,6 +32644,7 @@ austronesian_group = {
 		join_crusade_if_bordering_hostile = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		short_reign_opinion_year_mult = 1.5
 
 		
@@ -32510,6 +32712,7 @@ austronesian_group = {
 	
 		short_reign_opinion_year_mult = 2	
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = maori_religion_reformed
 		
@@ -32567,6 +32770,7 @@ eastern_folk_group = {
 		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		female_temple_holders = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 
 		religious_clothing_head = 6
 		religious_clothing_priest = 4
@@ -32615,6 +32819,7 @@ eastern_folk_group = {
 		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		female_temple_holders = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		reformed = ainu_pantheism_reformed
 		
 		religious_clothing_head = 6
@@ -32652,6 +32857,7 @@ eastern_folk_group = {
 		priests_can_marry = yes
 		allow_looting = yes
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		aggression = 2.0 # AI aggression factor
 		
@@ -32698,6 +32904,7 @@ eastern_folk_group = {
 		peace_prestige_loss = yes # Lose Prestige while at peace
 		raised_vassal_opinion_loss = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		reformed = jurchen_pagan_reformed
 		ignores_defensive_attrition = yes
@@ -32743,6 +32950,7 @@ eastern_folk_group = {
 		can_grant_divorce = yes
 		priests_can_inherit = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		short_reign_opinion_year_mult = 0 # No short reign penalty
 		
@@ -32799,6 +33007,7 @@ eastern_folk_group = {
 		can_grant_divorce = yes
 		priests_can_inherit = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		short_reign_opinion_year_mult = 0 # No short reign penalty
 		
@@ -32853,6 +33062,7 @@ eastern_folk_group = {
 		can_grant_divorce = yes
 		priests_can_inherit = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		short_reign_opinion_year_mult = 0 # No short reign penalty
 		
@@ -32910,6 +33120,7 @@ eastern_folk_group = {
 		can_grant_divorce = yes
 		priests_can_inherit = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		short_reign_opinion_year_mult = 0 # No short reign penalty
 		
@@ -32965,6 +33176,7 @@ eastern_folk_group = {
 		can_grant_divorce = yes
 		priests_can_inherit = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		short_reign_opinion_year_mult = 0 # No short reign penalty
 		
@@ -33021,6 +33233,7 @@ eastern_folk_group = {
 		can_grant_divorce = yes
 		priests_can_inherit = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		short_reign_opinion_year_mult = 0 # No short reign penalty
 		
@@ -33075,6 +33288,7 @@ eastern_folk_group = {
 		can_grant_divorce = yes
 		priests_can_inherit = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		short_reign_opinion_year_mult = 0 # No short reign penalty
 		
@@ -33130,6 +33344,7 @@ eastern_folk_group = {
 		can_grant_divorce = yes
 		priests_can_inherit = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		short_reign_opinion_year_mult = 0 # No short reign penalty
 		
@@ -33185,6 +33400,7 @@ eastern_folk_group = {
 		can_grant_divorce = yes
 		priests_can_inherit = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		short_reign_opinion_year_mult = 0 # No short reign penalty
 		
@@ -33250,6 +33466,7 @@ eastern_folk_group = {
 		can_grant_divorce = yes
 		priests_can_inherit = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		short_reign_opinion_year_mult = 0 # No short reign penalty
 		
@@ -33306,6 +33523,7 @@ eastern_folk_group = {
 		can_grant_divorce = yes
 		priests_can_inherit = no
 		max_consorts = 3
+		women_can_take_consorts = yes
 		
 		short_reign_opinion_year_mult = 0 # No short reign penalty
 		

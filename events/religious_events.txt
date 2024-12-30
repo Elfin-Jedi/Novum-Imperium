@@ -2142,7 +2142,7 @@ character_event = {
 				prisoner = no
 				OR = {
 					religion_group = muslim
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				OR = {
 					has_job_title = job_chancellor
@@ -2176,7 +2176,7 @@ character_event = {
 					prisoner = no
 					OR = {
 						religion_group = muslim
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 					OR = {
 						has_job_title = job_chancellor
@@ -2217,7 +2217,7 @@ character_event = {
 				prisoner = no
 				OR = {
 					religion_group = muslim
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				OR = {
 					has_job_title = job_chancellor
@@ -2347,7 +2347,7 @@ character_event = {
 				prisoner = no
 				OR = {
 					religion_group = muslim
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				OR = {
 					has_job_title = job_chancellor
@@ -2381,7 +2381,7 @@ character_event = {
 					prisoner = no
 					OR = {
 						religion_group = muslim
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 					OR = {
 						has_job_title = job_chancellor
@@ -2422,7 +2422,7 @@ character_event = {
 				prisoner = no
 				OR = {
 					religion_group = muslim
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				OR = {
 					has_job_title = job_chancellor
@@ -3902,7 +3902,7 @@ province_event = {
 		# Jains, Taoists and Bön have a hard time converting ALL non-pagans
 		modifier = {
 			factor = 3.0
-			NOT = { religion_group = pagan_group }
+			NOT = { novum_imperium_is_pagan = yes }
 			owner = {
 				top_liege = {
 					OR = {
@@ -6792,7 +6792,7 @@ narrative_event = {
 
 	only_playable = yes
 	min_age = 16
-	religion_group = pagan_group
+	novum_imperium_is_pagan = yes
 
 	trigger = {
 		controls_religion = yes
@@ -6933,7 +6933,7 @@ narrative_event = {
 	option = {
 		name = EVTOPTB39680
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOT = { religion = ROOT }
 		}
 	}
@@ -6941,7 +6941,7 @@ narrative_event = {
 	option = {
 		name = EVTOPTC39680
 		trigger = {
-			NOT = { religion_group = pagan_group }
+			NOT = { novum_imperium_is_pagan = yes }
 		}
 	}
 }
@@ -7016,10 +7016,149 @@ character_event = {
 		}
 		if = {
 			limit = {
+				religion_group = abrahamic_group
+			}
+			add_trait = sympathy_abrahamics
+		}
+		else_if = {
+			limit = {
+				religion_group = anatolian_group
+			}
+			add_trait = sympathy_anatolians
+		}
+		else_if = {
+			limit = {
+				religion_group = arabpagan_group
+			}
+			add_trait = sympathy_arabpagans
+		}
+		else_if = {
+			limit = {
+				religion_group = aztec_group
+			}
+			add_trait = sympathy_aztecs
+		}
+		else_if = {
+			limit = {
+				religion_group = baltic_group
+			}
+			add_trait = sympathy_baltics
+		}
+		else_if = {
+			limit = {
+				religion_group = bantu_group
+			}
+			add_trait = sympathy_bantus
+		}
+		else_if = {
+			limit = {
+				religion_group = berberpagan_group
+			}
+			add_trait = sympathy_berbers
+		}
+		else_if = {
+			limit = {
+				religion_group = bud_group
+			}
+			add_trait = sympathy_buddhists
+		}
+		else_if = {
+			limit = {
+				religion_group = celtic_group
+			}
+			add_trait = sympathy_celtics
+		}
+		else_if = {
+			limit = {
+				religion_group = chinese_group
+			}
+			add_trait = sympathy_chinese
+		}
+		else_if = {
+			limit = {
 				religion_group = christian
 				NOT = { FROMFROM = { has_religion_feature = religion_syncretic_christian } }
 			}
 			add_trait = sympathy_christendom
+		}
+		else_if = {
+			limit = {
+				religion_group = east_african_group
+			}
+			add_trait = sympathy_east_africans
+		}
+		else_if = {
+			limit = {
+				religion_group = egyptian_group
+			}
+			add_trait = sympathy_egyptian
+		}
+		else_if = {
+			limit = {
+				religion_group = finnish_group
+			}
+			add_trait = sympathy_finnish
+		}
+		else_if = {
+			limit = {
+				religion_group = graecoroman_group
+			}
+			add_trait = sympathy_graecoroman
+		}
+		else_if = {
+			limit = {
+				religion_group = indian_group
+				NOT = { FROMFROM = { has_religion_feature = religion_syncretic_indian } }
+			}
+			add_trait = sympathy_indian
+		}
+		else_if = {
+			limit = {
+				religion_group = indohelen_group
+			}
+			add_trait = sympathy_indohellens
+		}
+		else_if = {
+			limit = {
+				religion_group = inti_group
+			}
+			add_trait = sympathy_intis
+		}
+		else_if = {
+			limit = {
+				religion_group = inuit_group
+			}
+			add_trait = sympathy_inuit
+		}
+		else_if = {
+			limit = {
+				religion_group = jewish_group
+			}
+			add_trait = sympathy_judaism
+		}
+		else_if = {
+			limit = {
+				religion_group = luwian_group
+			}
+			add_trait = sympathy_luwians
+		}
+		else_if = {
+			limit = {
+				religion_group = mand_group
+			}
+			add_trait = sympathy_mande
+		}
+		else_if = {
+			limit = {
+				religion_group = mani_group
+			}
+			add_trait = sympathy_manichaeans
+		}
+		else_if = {
+			limit = {
+				religion_group = mithra_group
+			}
+			add_trait = sympathy_mithraics
 		}
 		else_if = {
 			limit = {
@@ -7030,9 +7169,63 @@ character_event = {
 		}
 		else_if = {
 			limit = {
+				religion_group = neoplato_group
+			}
+			add_trait = sympathy_platonics
+		}
+		else_if = {
+			limit = {
+				religion_group = norsegerman_group
+			}
+			add_trait = sympathy_nordic
+		}
+		else_if = {
+			limit = {
 				religion_group = pagan_group
 			}
 			add_trait = sympathy_pagans
+		}
+		else_if = {
+			limit = {
+				religion_group = palmyranpagan_group
+			}
+			add_trait = sympathy_palmyrans
+		}
+		else_if = {
+			limit = {
+				religion_group = serer_group
+			}
+			add_trait = sympathy_sererics
+		}
+		else_if = {
+			limit = {
+				religion_group = slavic_group
+			}
+			add_trait = sympathy_slavics
+		}
+		else_if = {
+			limit = {
+				religion_group = sol_group
+			}
+			add_trait = sympathy_sol
+		}
+		else_if = {
+			limit = {
+				religion_group = tengri_group
+			}
+			add_trait = sympathy_tengri
+		}
+		else_if = {
+			limit = {
+				religion_group = yazd_group
+			}
+			add_trait = sympathy_yazd
+		}
+		else_if = {
+			limit = {
+				religion_group = zal_group
+			}
+			add_trait = sympathy_zal
 		}
 		else_if = {
 			limit = {
@@ -7042,19 +7235,6 @@ character_event = {
 			add_trait = sympathy_zoroastrianism
 		}
 		else_if = {
-			limit = {
-				religion_group = jewish_group
-			}
-			add_trait = sympathy_judaism
-		}
-		else_if = {
-			limit = {
-				religion_group = indian_group
-				NOT = { FROMFROM = { has_religion_feature = religion_syncretic_indian } }
-			}
-			add_trait = sympathy_indian
-		}
-		if = {
             limit = {
                 religion_group = african_group
             }

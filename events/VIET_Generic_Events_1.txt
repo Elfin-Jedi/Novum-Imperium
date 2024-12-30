@@ -4384,7 +4384,7 @@ character_event = {
 			}
 			NAND = {
 				trait = zealous
-				NOT = { religion_group = pagan_group }
+				NOT = { novum_imperium_is_pagan = yes }
 			}
 			NOT = { trait = incapable }
 			NOT = { trait = temperate }
@@ -4428,7 +4428,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 1.5
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 	}
 	
@@ -4449,7 +4449,7 @@ character_event = {
 				}
 				NAND = {
 					trait = zealous
-					NOT = { religion_group = pagan_group }
+					NOT = { novum_imperium_is_pagan = yes }
 				}
 				NOT = { trait = incapable }
 				NOT = { trait = temperate }			
@@ -4470,7 +4470,7 @@ character_event = {
 			modifier = {
 				factor = 0.8
 				trait = zealous
-				NOT = { religion_group = pagan_group }
+				NOT = { novum_imperium_is_pagan = yes }
 			}
 			modifier = {
 				factor = 1.2
@@ -4524,7 +4524,7 @@ character_event = {
 			modifier = {
 				factor = 1.2
 				trait = zealous
-				NOT = { religion_group = pagan_group }
+				NOT = { novum_imperium_is_pagan = yes }
 			}
 			modifier = {
 				factor = 0.8
@@ -4553,7 +4553,7 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOT = { religion_group = pagan_group }
+				NOT = { novum_imperium_is_pagan = yes }
 			}
 			piety = 5
 		}
@@ -7570,7 +7570,7 @@ character_event = {
 	
 	trigger = {
 		in_command = no
-		#NOT = { religion_group = pagan_group }
+		#NOT = { novum_imperium_is_pagan = yes }
 		capital_scope = {
 			OR = {
 				region = world_europe_west

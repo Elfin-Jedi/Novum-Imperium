@@ -286,14 +286,14 @@ character_event = {
 		emf_can_convert_religion = yes
 
 		NOR = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			religion_authority = 0.9
 			is_inaccessible_trigger = yes
 			trait = zealous
 		}
 
 		location = {
-			NOT = { religion_group = pagan_group }
+			NOT = { novum_imperium_is_pagan = yes }
 			OR = {
 				religion_group = ROOT
 				ROOT = { emf_syncretized_religion_with_PREV = yes }

@@ -78,7 +78,7 @@ character_event = {
 					if = {
 						limit = {
 							has_religion_feature = religion_no_leader
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 						}
 						random_list = {  
 							5 = {
@@ -140,7 +140,7 @@ character_event = {
 					if = {
 						limit = {
 							has_religion_feature = religion_no_leader
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 						}
 						random_list = {  
 							5 = {
@@ -517,7 +517,7 @@ character_event = {
 					if = {
 						limit = {
 							has_religion_feature = religion_no_leader
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 						}
 						random_list = {  
 							5 = {
@@ -600,7 +600,7 @@ character_event = {
 					if = {
 						limit = {
 							has_religion_feature = religion_no_leader
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 						}
 						random_list = {  
 							5 = {
@@ -687,7 +687,7 @@ character_event = {
 					if = {
 						limit = {
 							has_religion_feature = religion_no_leader
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 						}
 						random_list = {  
 							5 = {
@@ -836,7 +836,7 @@ character_event = {
 					if = {
 						limit = {
 							has_religion_feature = religion_no_leader
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 						}
 						random_list = {  
 							5 = {
@@ -921,7 +921,7 @@ character_event = {
 					if = {
 						limit = {
 							has_religion_feature = religion_no_leader
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 						}
 						random_list = {  
 							5 = {
@@ -1009,7 +1009,7 @@ character_event = {
 					if = {
 						limit = {
 							has_religion_feature = religion_no_leader
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 						}
 						random_list = {  
 							5 = {
@@ -1216,7 +1216,7 @@ character_event = {
 					if = {
 						limit = {
 							has_religion_feature = religion_no_leader
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 						}
 						random_list = {  
 							5 = {
@@ -1358,7 +1358,7 @@ character_event = {
 					if = {
 						limit = {
 							has_religion_feature = religion_no_leader
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 						}
 						random_list = {  
 							5 = {
@@ -1476,7 +1476,7 @@ character_event = {
 					if = {
 						limit = {
 							has_religion_feature = religion_no_leader
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 						}
 						random_list = {  
 							5 = {
@@ -1585,7 +1585,7 @@ character_event = {
 					if = {
 						limit = {
 							has_religion_feature = religion_no_leader
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 						}
 						random_list = {  
 							5 = {
@@ -1856,13 +1856,13 @@ character_event = {
 	
 	picture = { 
 		trigger = { 
-			liege = { religion_group = pagan_group }
+			liege = { novum_imperium_is_pagan = yes }
 		}
 		picture = GFX_evt_feast_hf
 	}
 	picture = {
 		trigger = { 
-			liege = { NOT = { religion_group = pagan_group } }
+			liege = { NOT = { novum_imperium_is_pagan = yes } }
 		}
 		picture = GFX_evt_fancy_feast
 	}
@@ -3003,7 +3003,7 @@ character_event = {
 				if = {
 					limit = {
 						has_religion_feature = religion_no_leader
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 					random_list = {  
 						5 = {
@@ -3202,7 +3202,7 @@ character_event = {
 				if = {
 					limit = {
 						has_religion_feature = religion_no_leader
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 					random_list = {  
 						5 = {
@@ -3327,7 +3327,7 @@ character_event = {
 				if = {
 					limit = {
 						has_religion_feature = religion_no_leader
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 					random_list = {  
 						5 = {
@@ -3468,7 +3468,7 @@ character_event = {
 				if = {
 					limit = {
 						has_religion_feature = religion_no_leader
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 					random_list = {  
 						5 = {

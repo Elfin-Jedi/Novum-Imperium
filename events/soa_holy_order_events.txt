@@ -3284,7 +3284,7 @@ character_event = {
 
 	min_age = 16
 	only_playable = yes
-	religion_group = pagan_group
+	novum_imperium_is_pagan = yes
 
 	trigger = {
 		OR = {
@@ -10412,7 +10412,7 @@ character_event = {
 	}
 	desc = {
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOR = {
 				religion = aztec
 				religion = aztec_reformed

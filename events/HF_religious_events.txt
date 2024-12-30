@@ -3109,7 +3109,7 @@ character_event = {
 
 	trigger = { 
 		is_adult = yes
-		religion_group = pagan_group
+		novum_imperium_is_pagan = yes
 		OR = {
 			has_religion_feature = religion_no_leader
 			AND = {
@@ -3959,7 +3959,7 @@ narrative_event = {
 					religion_group = christian 
 					NOR = { 
 						secret_religion_group = muslim
-						secret_religion_group = pagan_group
+						secret_religion_is_pagan = yes
 					} 
 				} 
 				opinion = { 
@@ -5573,14 +5573,14 @@ narrative_event = {
 	option = {
 		name = EVTOPTB_HO_100
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOT = { religion = hellenic_pagan_reformed }
 		}
 	}
 	option = {
 		name = EVTOPTC_HO_100
 		trigger = {
-			NOT = { religion_group = pagan_group }
+			NOT = { novum_imperium_is_pagan = yes }
 		}
 	}
 }
@@ -16188,7 +16188,7 @@ character_event = {
 			factor = 80
 			modifier = {
 				factor = 0.3
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			modifier = {
 				factor = 0.4
@@ -16203,7 +16203,7 @@ character_event = {
 	option = {  #Leave it be.
 		name = EVTOPTBHF23473
 		if = {
-			limit = { NOT = { religion_group = pagan_group } } #Friend of heathens
+			limit = { NOT = { novum_imperium_is_pagan = yes } } #Friend of heathens
 			tiered_piety_negative_effect = yes
 			if = {
 				limit = { NOT = { trait = sympathy_pagans } } 
@@ -16240,7 +16240,7 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHF23474
-		trigger = { religion_group = pagan_group }
+		trigger = { novum_imperium_is_pagan = yes }
 		if = { 
 			limit = {
 				FROMFROM = { location = { has_province_flag = flag_just_destroyed_norse_pillar } }
@@ -16494,7 +16494,7 @@ character_event = {
 	}
 	option = { 
 		name = EVTOPTBHF23474
-		trigger = { NOT = { religion_group = pagan_group } }
+		trigger = { NOT = { novum_imperium_is_pagan = yes } }
 	}
 }
 

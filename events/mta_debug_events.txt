@@ -227,7 +227,7 @@ character_event = {
 				}
 			}
 			else_if = { 
-				limit = { religion_group = pagan_group }
+				limit = { novum_imperium_is_pagan = yes }
 				if = { 
 					limit = { is_female = no }
 					create_bloodline = {
@@ -377,7 +377,7 @@ character_event = {
 				}
 			}
 			else_if = { 
-				limit = { religion_group = pagan_group }
+				limit = { novum_imperium_is_pagan = yes }
 				if = { 
 					limit = { is_female = no }
 					create_bloodline = {

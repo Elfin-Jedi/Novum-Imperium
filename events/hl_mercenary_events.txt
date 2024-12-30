@@ -908,6 +908,96 @@ character_event = {
 					owner = {
 						OR = {
 							AND = {
+								religion_group = abrahamic_group
+								ROOT = {
+									OR = {
+										religion_group = abrahamic_group
+										trait = sympathy_abrahamics
+									}
+								}
+							}
+							AND = {
+								religion_group = anatolian_group
+								ROOT = {
+									OR = {
+										religion_group = anatolian_group
+										trait = sympathy_anatolians
+									}
+								}
+							}
+							AND = {
+								religion_group = arabpagan_group
+								ROOT = {
+									OR = {
+										religion_group = arabpagan_group
+										trait = sympathy_arabpagans
+									}
+								}
+							}
+							AND = {
+								religion_group = aztec_group
+								ROOT = {
+									OR = {
+										religion_group = aztec_group
+										trait = sympathy_aztecs
+									}
+								}
+							}
+							AND = {
+								religion_group = baltic_group
+								ROOT = {
+									OR = {
+										religion_group = baltic_group
+										trait = sympathy_baltics
+									}
+								}
+							}
+							AND = {
+								religion_group = bantu_group
+								ROOT = {
+									OR = {
+										religion_group = bantu_group
+										trait = sympathy_bantus
+									}
+								}
+							}
+							AND = {
+								religion_group = berberpagan_group
+								ROOT = {
+									OR = {
+										religion_group = berberpagan_group
+										trait = sympathy_berbers
+									}
+								}
+							}
+							AND = {
+								religion_group = bud_group
+								ROOT = {
+									OR = {
+										religion_group = bud_group
+										trait = sympathy_buddhists
+									}
+								}
+							}
+							AND = {
+								religion_group = celtic_group
+								ROOT = {
+									OR = {
+										religion_group = celtic_group
+										trait = sympathy_celtics
+									}
+								}
+							}
+							AND = {
+								religion_group = chinese_group
+								ROOT = {
+									OR = {
+										religion_group = chinese_group
+										trait = sympathy_chinese
+									}
+								}
+							}
+							AND = {
 								OR = {
 									religion_group = christian
 									has_religion_feature = religion_syncretic_christian
@@ -917,6 +1007,127 @@ character_event = {
 										religion_group = christian
 										trait = sympathy_christendom
 										has_religion_feature = religion_syncretic_christian
+									}
+								}
+							}
+							AND = {
+								religion_group = east_african_group
+								ROOT = {
+									OR = {
+										religion_group = east_african_group
+										trait = sympathy_east_africans
+									}
+								}
+							}
+							AND = {
+								religion_group = egyptian_group
+								ROOT = {
+									OR = {
+										religion_group = egyptian_group
+										trait = sympathy_egyptian
+									}
+								}
+							}
+							AND = {
+								religion_group = finnish_group
+								ROOT = {
+									OR = {
+										religion_group = finnish_group
+										trait = sympathy_finnish
+									}
+								}
+							}
+							AND = {
+								religion_group = graecoroman_group
+								ROOT = {
+									OR = {
+										religion_group = graecoroman_group
+										trait = sympathy_graecoroman
+									}
+								}
+							}
+							AND = {
+								OR = {
+									religion_group = indian_group
+									has_religion_feature = religion_syncretic_indian
+								}
+								ROOT = {
+									OR = {
+										religion_group = indian_group
+										trait = sympathy_indian
+										has_religion_feature = religion_syncretic_indian
+									}
+								}
+							}
+							AND = {
+								religion_group = indohelen_group
+								ROOT = {
+									OR = {
+										religion_group = indohelen_group
+										trait = sympathy_indohellens
+									}
+								}
+							}
+							AND = {
+								religion_group = inti_group
+								ROOT = {
+									OR = {
+										religion_group = inti_group
+										trait = sympathy_intis
+									}
+								}
+							}
+							AND = {
+								religion_group = inuit_group
+								ROOT = {
+									OR = {
+										religion_group = inuit_group
+										trait = sympathy_inuit
+									}
+								}
+							}
+							AND = {
+								religion_group = jewish_group
+								ROOT = {
+									OR = {
+										religion_group = jewish_group
+										trait = sympathy_judaism
+									}
+								}
+							}
+							AND = {
+								religion_group = luwian_group
+								ROOT = {
+									OR = {
+										religion_group = luwian_group
+										trait = sympathy_luwians
+									}
+								}
+							}
+							AND = {
+								religion_group = mand_group
+								ROOT = {
+									OR = {
+										religion_group = mand_group
+										trait = sympathy_mande
+									}
+								}
+							}
+							AND = {
+								religion_group = mani_group
+								ROOT = {
+									OR = {
+										religion_group = mani_group
+										trait = sympathy_manichaeans
+									}
+								}
+							}
+							AND = {
+								religion_group = mithra_group
+								ROOT = {
+									OR = {
+										religion_group = mithra_group
+										trait = sympathy_mithraics
 									}
 								}
 							}
@@ -934,9 +1145,93 @@ character_event = {
 								}
 							}
 							AND = {
+								religion_group = neoplato_group
+								ROOT = {
+									OR = {
+										religion_group = neoplato_group
+										trait = sympathy_platonics
+									}
+								}
+							}
+							AND = {
+								religion_group = norsegerman_group
+								ROOT = {
+									OR = {
+										religion_group = norsegerman_group
+										trait = sympathy_nordic
+									}
+								}
+							}
+							AND = {
 								religion_group = pagan_group
 								ROOT = {
-									trait = sympathy_pagans
+									OR = {
+										religion_group = pagan_group
+										trait = sympathy_pagans
+									}
+								}
+							}
+							AND = {
+								religion_group = palmyranpagan_group
+								ROOT = {
+									OR = {
+										religion_group = palmyranpagan_group
+										trait = sympathy_palmyrans
+									}
+								}
+							}
+							AND = {
+								religion_group = serer_group
+								ROOT = {
+									OR = {
+										religion_group = serer_group
+										trait = sympathy_sererics
+									}
+								}
+							}
+							AND = {
+								religion_group = slavic_group
+								ROOT = {
+									OR = {
+										religion_group = slavic_group
+										trait = sympathy_slavics
+									}
+								}
+							}
+							AND = {
+								religion_group = sol_group
+								ROOT = {
+									OR = {
+										religion_group = sol_group
+										trait = sympathy_sol
+									}
+								}
+							}
+							AND = {
+								religion_group = tengri_group
+								ROOT = {
+									OR = {
+										religion_group = tengri_group
+										trait = sympathy_tengri
+									}
+								}
+							}
+							AND = {
+								religion_group = yazd_group
+								ROOT = {
+									OR = {
+										religion_group = yazd_group
+										trait = sympathy_yazd
+									}
+								}
+							}
+							AND = {
+								religion_group = zal_group
+								ROOT = {
+									OR = {
+										religion_group = zal_group
+										trait = sympathy_zal
+									}
 								}
 							}
 							AND = {
@@ -953,21 +1248,11 @@ character_event = {
 								}
 							}
 							AND = {
-								religion_group = jewish_group
-								ROOT = {
-									trait = sympathy_judaism
-								}
-							}
-							AND = {
-								OR = {
-									religion_group = indian_group
-									has_religion_feature = religion_syncretic_indian
-								}
+								religion_group = african_group
 								ROOT = {
 									OR = {
-										religion_group = indian_group
-										trait = sympathy_indian
-										has_religion_feature = religion_syncretic_indian
+										religion_group = african_group
+										trait = sympathy_african
 									}
 								}
 							}
@@ -1349,7 +1634,7 @@ character_event = {
 								is_female = yes
 								OR = {
 									trait = brave
-									religion_group = pagan_group
+									novum_imperium_is_pagan = yes
 									is_nomadic = yes
 									religion_group = bud_group
 									religion = bogomilist
@@ -1428,7 +1713,7 @@ character_event = {
 									is_female = yes
 									OR = {
 										trait = brave
-										religion_group = pagan_group
+										novum_imperium_is_pagan = yes
 										is_nomadic = yes
 										religion_group = bud_group
 										religion = bogomilist

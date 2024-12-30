@@ -1054,7 +1054,7 @@ province_event = {
 		name = VIETmisc.8010.b
 		trigger = {
 			owner = {
-				NOT = { religion_group = pagan_group }
+				NOT = { novum_imperium_is_pagan = yes }
 				NOT = { religion_group = indian_group }
 			}
 		}
@@ -7163,7 +7163,7 @@ character_event = {
 		
 	trigger = {
 		in_command = no
-		religion_group = pagan_group
+		novum_imperium_is_pagan = yes
 		is_reformed_religion = no
 		NOT = { has_character_flag = VIET_pagan_future }
 		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
@@ -13354,7 +13354,7 @@ character_event = {
 	
 	trigger = {
 		in_command = no
-		#NOT = { religion_group = pagan_group }
+		#NOT = { novum_imperium_is_pagan = yes }
 		capital_scope = {
 			OR = {
 				region = world_europe_west

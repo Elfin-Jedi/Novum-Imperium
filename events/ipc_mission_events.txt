@@ -3687,7 +3687,7 @@ character_event = {
 					}
 					modifier = {
 						factor = 1.5
-						top_liege = { any_current_enemy = { religion_group = pagan_group } }
+						top_liege = { any_current_enemy = { novum_imperium_is_pagan = yes } }
 					}
 					top_liege = {
 						random_current_enemy = {
@@ -3917,7 +3917,7 @@ character_event = {
 					}
 					modifier = {
 						factor = 3
-						FROM = { religion_group = pagan_group }
+						FROM = { novum_imperium_is_pagan = yes }
 					}
 					modifier = {
 						factor = 4
@@ -3936,7 +3936,7 @@ character_event = {
 					}
 					modifier = {
 						factor = 2
-						FROM = { religion_group = pagan_group }
+						FROM = { novum_imperium_is_pagan = yes }
 					}
 					modifier = {
 						factor = 3
@@ -4055,7 +4055,7 @@ character_event = {
 					}
 					modifier = {
 						factor = 3
-						FROM = { religion_group = pagan_group }
+						FROM = { novum_imperium_is_pagan = yes }
 					}
 					modifier = {
 						factor = 4
@@ -4074,7 +4074,7 @@ character_event = {
 					}
 					modifier = {
 						factor = 2
-						FROM = { religion_group = pagan_group }
+						FROM = { novum_imperium_is_pagan = yes }
 					}
 					modifier = {
 						factor = 3

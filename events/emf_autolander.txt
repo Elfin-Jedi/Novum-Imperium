@@ -1264,6 +1264,8 @@ character_event = {
 				ROOT = {
 					trigger_switch = {
 						on_trigger = religion_group
+						abrahamic_group		= { PREV = { add_trait = sympathy_abrahamics } }
+						anatolian_group		= { PREV = { add_trait = sympathy_anatolians } }
 						christian			= { PREV = { add_trait = sympathy_christendom } }
 						muslim				= { PREV = { add_trait = sympathy_islam } }
 						pagan_group			= { PREV = { add_trait = sympathy_pagans } }

@@ -1124,9 +1124,9 @@ narrative_event = {
 		}
 		if = {
 			limit = {
-				FROM = { religion_group = pagan_group }
+				FROM = { religion_group = celtic_group }
 				NOT = { 
-					trait = sympathy_pagans 
+					trait = sympathy_celtics 
 					FROM = {
 						OR = {
 							religion_group = ROOT
@@ -1135,7 +1135,23 @@ narrative_event = {
 					}
 				} 
 			}
-			add_trait = sympathy_pagans
+			add_trait = sympathy_celtics
+		}
+		
+		if = {
+			limit = {
+				FROM = { religion_group = graecoroman_group }
+				NOT = { 
+					trait = sympathy_graecoroman 
+					FROM = {
+						OR = {
+							religion_group = ROOT
+							ROOT = { emf_syncretized_religion_with_PREV = yes }
+						}
+					}
+				} 
+			}
+			add_trait = sympathy_graecoroman
 		}
 
 		if = {
@@ -1156,9 +1172,9 @@ narrative_event = {
 
 		if = {
 			limit = {
-				FROM = { religion_group = indian_group } 
+				FROM = { religion_group = bud_group } 
 				NOT = { 
-					trait = sympathy_indian 
+					trait = sympathy_buddhists 
 					FROM = {
 						OR = {
 							religion_group = ROOT
@@ -1167,7 +1183,7 @@ narrative_event = {
 					}
 				} 
 			}
-			add_trait = sympathy_indian
+			add_trait = sympathy_buddhists
 		}
 		
 		if = {

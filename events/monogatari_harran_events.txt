@@ -1107,7 +1107,7 @@ character_event = {
 	
 	trigger = {
 		NOT = { is_inaccessible_trigger = yes }
-		NOT = { religion_group = pagan_group }
+		NOT = { novum_imperium_is_pagan = yes }
 		#NAND = {
 		#	culture = levantine_arabic
 		#	OR = {
@@ -1621,7 +1621,7 @@ province_event = {
 	
 	trigger = {
 		has_province_modifier = VIET_harran_temple_of_the_moon
-		religion_group = pagan_group
+		novum_imperium_is_pagan = yes
 		NOT = { has_province_modifier = VIET_harran_tammuz_festival_good }
 	}
 	
@@ -1641,7 +1641,7 @@ province_event = {
 		trigger = {
 			owner = {
 				trait = zealous
-				NOT = { religion_group = pagan_group }			
+				NOT = { novum_imperium_is_pagan = yes }			
 			}
 		}
 		add_province_modifier = {
@@ -1701,13 +1701,13 @@ province_event = {
 	
 	trigger = {
 		has_province_modifier = VIET_harran_neoplatonic_academy
-		NOT = { religion_group = pagan_group }
+		NOT = { novum_imperium_is_pagan = yes }
 		owner = {
-			NOT = { religion_group = pagan_group } 
+			NOT = { novum_imperium_is_pagan = yes } 
 		}
 		owner = {
 			any_liege = {
-				NOT = { religion_group = pagan_group } 
+				NOT = { novum_imperium_is_pagan = yes } 
 			}
 		}
 		year = 900
@@ -1951,7 +1951,7 @@ character_event = {
 			age = 10
 			NAND = {
 				trait = zealous
-				NOT = { religion_group = pagan_group }
+				NOT = { novum_imperium_is_pagan = yes }
 			}
 		}
 	}
@@ -1984,7 +1984,7 @@ character_event = {
 				age = 10
 				NAND = {
 					trait = zealous
-					NOT = { religion_group = pagan_group }
+					NOT = { novum_imperium_is_pagan = yes }
 				}		
 			}
 			save_event_target_as = target_VIET_harranian_student

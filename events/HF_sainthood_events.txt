@@ -2802,7 +2802,7 @@ narrative_event = {
 			}
 			else_if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				custom_tooltip = { text = TT_PAGAN_CANONIZATION_FAMILY}
 			}

@@ -554,7 +554,7 @@ character_event = {
 			name = VIETmisc.2004.b
 			if = {
 					limit = {
-							NOT = { religion_group = pagan_group }
+							NOT = { novum_imperium_is_pagan = yes }
 					}
 					piety = 4
 			}
@@ -2148,7 +2148,7 @@ character_event = {
 				}
 			}
 			AND = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				OR = {
 					trait = zealous
 					AND  = {
@@ -9987,7 +9987,7 @@ province_event = {
 		name = VIETmisc.2241.c
 		trigger = {
 			owner = {
-				NOT = { religion_group = pagan_group }
+				NOT = { novum_imperium_is_pagan = yes }
 			}
 		}
 		add_province_modifier = {
@@ -13578,7 +13578,7 @@ character_event = {
 		trigger = {
 			OR = {
 				religion_group = indian_group
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 		piety = 1

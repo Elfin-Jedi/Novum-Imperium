@@ -1670,7 +1670,7 @@ character_event = {
 	only_capable = yes
 	prisoner = no
 	has_dlc = "Sons of Abraham"
-	religion_group = pagan_group
+	religion_group = norsegerman_group
 	only_rulers = yes
 
 	trigger = {
@@ -1679,10 +1679,7 @@ character_event = {
 			diplomacy = 3
 			trait = bad_priest_norse
 		}
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-		}
+		religion_group = norsegerman_group
 		OR = {
 			controls_religion = yes
 			capital_holding = { holding_type = temple }
@@ -1750,7 +1747,7 @@ character_event = {
 	only_capable = yes
 	prisoner = no
 	has_dlc = "Sons of Abraham"
-	religion_group = pagan_group
+	religion_group = tengri_group
 	only_rulers = yes
 
 	trigger = {
@@ -1763,10 +1760,7 @@ character_event = {
 			controls_religion = yes
 			capital_holding = { holding_type = temple }
 		}
-		OR = {
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
-		}
+		religion_group = tengri_group
 		NOR = {
 			intrigue = 3
 			diplomacy = 3
@@ -1896,14 +1890,11 @@ character_event = {
 	only_capable = yes
 	prisoner = no
 	has_dlc = "Sons of Abraham"
-	religion_group = pagan_group
+	religion_group = aztec_group
 	only_rulers = yes
 
 	trigger = {
-		OR = {
-			religion = aztec
-			religion = aztec_reformed
-		}
+		religion_group = aztec_group
 		OR = {
 			controls_religion = yes
 			capital_holding = { holding_type = temple }
@@ -4327,7 +4318,7 @@ character_event = {
 	trigger = {
 		trait = sympathy_pagans
 		any_courtier = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			prisoner = no
 			is_adult = yes
 			is_incapable = no
@@ -4343,7 +4334,7 @@ character_event = {
 		name = EVTOPTA_SoA_5412
 		random_courtier = {
 			limit = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				prisoner = no
 				is_adult = yes
 				is_incapable = no
