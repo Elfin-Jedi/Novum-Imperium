@@ -27,6 +27,7 @@ Medium Mods:
 "Harranian Immersion Pack: The Last Hellenic Pagans"
 "HIP - Rowan's Resource and Building Overhaul"
 "Medieval Trade Routes (HIP map)"
+"Piety-Based Reformation"
 "Plenty More Coats of Arms"
 "Seduction and Romance Revamped"
 "VIET Events Reborn - A Flavor Event Mod"

@@ -269,7 +269,7 @@ narrative_event = {
 				NOT = { has_nickname = yes }
 				higher_real_tier_than = DUKE
 				event_target:sponsoring_king = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { religion = west_african_pagan_reformed }
 					NOT = { religion = tengri_pagan_reformed }
 					NOT = { religion = zun_pagan_reformed }
@@ -845,7 +845,7 @@ narrative_event = {
 		if = {
 			limit = {
 				NOT = { has_nickname = yes }
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				NOT = { religion = west_african_pagan_reformed }
 				NOT = { religion = tengri_pagan_reformed }
 				NOT = { religion = zun_pagan_reformed }
@@ -1263,7 +1263,7 @@ letter_event = {
 			modifier = {
 				factor = 1.5
 				NOT =  { religion = event_target:sponsoring_king }
-				NOT =  { religion_group = pagan_group }
+				NOT =  { novum_imperium_is_pagan = yes }
 			}
 			modifier = {
 				factor = 0.3
@@ -1466,7 +1466,7 @@ letter_event = {
 					trait = shy
 					trait = kind
 				}
-				event_target:sponsoring_king = { religion_group = pagan_group }
+				event_target:sponsoring_king = { novum_imperium_is_pagan = yes }
 			}
 			modifier = {
 				factor = 0.4
@@ -1481,7 +1481,7 @@ letter_event = {
 					}
 					AND = {
 						trait = sympathy_pagans
-						event_target:sponsoring_king = { religion_group = pagan_group }
+						event_target:sponsoring_king = { novum_imperium_is_pagan = yes }
 					}
 					AND = {
 						trait = sympathy_zoroastrianism
@@ -1883,7 +1883,7 @@ narrative_event = {
 			limit = {
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
 			random = { chance = 60
@@ -1959,7 +1959,7 @@ narrative_event = {
 		if = {
 			limit = {
 				trait = zealous
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
 			remove_trait = zealous
@@ -2248,7 +2248,7 @@ narrative_event = {
 			limit = {
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
 			random = { chance = 60
@@ -2324,7 +2324,7 @@ narrative_event = {
 		if = {
 			limit = {
 				trait = zealous
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
 			remove_trait = zealous
@@ -3646,7 +3646,7 @@ character_event = {
 				}
 				 modifier = {
 				 	factor = 0.5
-				 	event_target:converting_king = { religion_group = pagan_group }
+				 	event_target:converting_king = { novum_imperium_is_pagan = yes }
 				}
 				 modifier = {
 				 	factor = 1.25
@@ -3669,7 +3669,7 @@ character_event = {
 				}
 				 modifier = {
 				 	factor = 1.5
-				 	event_target:converting_king = { religion_group = pagan_group }
+				 	event_target:converting_king = { novum_imperium_is_pagan = yes }
 				}
 				 modifier = {
 				 	factor = 0.5
@@ -3692,7 +3692,7 @@ character_event = {
 				}
 				 modifier = {
 				 	factor = 0.5
-				 	event_target:converting_king = { religion_group = pagan_group }
+				 	event_target:converting_king = { novum_imperium_is_pagan = yes }
 				}
 				 modifier = {
 				 	factor = 1.25
@@ -3711,7 +3711,7 @@ character_event = {
 				}
 				 modifier = {
 				 	factor = 0.5
-				 	event_target:converting_king = { religion_group = pagan_group }
+				 	event_target:converting_king = { novum_imperium_is_pagan = yes }
 				}
 				 modifier = {
 				 	factor = 1.25
@@ -3997,7 +3997,7 @@ character_event = {
 			}
 		 	modifier = {
 		 		factor = 1.25
-		 		religion_group = pagan_group
+		 		novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -4070,7 +4070,7 @@ character_event = {
 			}
 		 	modifier = {
 		 		factor = 1.25
-		 		religion_group = pagan_group
+		 		novum_imperium_is_pagan = yes
 			}
 
 		}
@@ -4217,7 +4217,7 @@ character_event = {
 			}
 		 	modifier = {
 		 		factor = 1.25
-		 		religion_group = pagan_group
+		 		novum_imperium_is_pagan = yes
 			}
 
 		}
@@ -4288,7 +4288,7 @@ character_event = {
 			}
 		 	modifier = {
 		 		factor = 1.5
-		 		religion_group = pagan_group
+		 		novum_imperium_is_pagan = yes
 			}
 
 		}
@@ -5586,7 +5586,7 @@ character_event = {
 			}
 		 	modifier = {
 		 		factor = 1.2
-		 		religion_group = pagan_group
+		 		novum_imperium_is_pagan = yes
 			}
 		 	modifier = {
 		 		factor = 0.75
@@ -5629,7 +5629,7 @@ character_event = {
 			}
 		 	modifier = {
 		 		factor = 1.2
-		 		religion_group = pagan_group
+		 		novum_imperium_is_pagan = yes
 			}
 		 	modifier = {
 		 		factor = 0.75
@@ -5659,7 +5659,7 @@ character_event = {
 			}
 		 	modifier = {
 		 		factor = 1.2
-		 		religion_group = pagan_group
+		 		novum_imperium_is_pagan = yes
 			}
 		 	modifier = {
 		 		factor = 0.75
