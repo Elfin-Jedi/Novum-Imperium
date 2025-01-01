@@ -1,5 +1,8 @@
 culture = { 
 	religion_group = "christian"
+	religion = {
+		"sethian_reformed"
+	}
 
 	templates = { 
 		"coa_plain:1"
@@ -1108,6 +1111,8 @@ culture =
 		 "ismaili"
 		"druze"
 		 "qarmatian"
+		 "druze_reformed"
+		 "muslim_sufi_reformed"
 	}
 	templates = { 
 		"solo_islamic_frame:1"	
@@ -4339,6 +4344,9 @@ culture = {
 
 culture = {
 	religion_group = "jewish_group"
+	religion = {
+		"judaism_reformed"
+	}
 
 	templates = { 
 		"coa_plain:1"
