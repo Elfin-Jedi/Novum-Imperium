@@ -24,11 +24,92 @@ character_event = { # Sympathy for founder group
 				is_alive = no
 				OR = {
 					AND = {
-						religion_group = pagan_group
+						religion_group = abrahamic_group
 						ROOT = {
 							NOR = {
-								religion_group = pagan_group
-								trait = sympathy_pagans
+								religion_group = abrahamic_group
+								trait = sympathy_abrahamics
+							}
+						}
+					}
+					AND = {
+						religion_group = anatolian_group
+						ROOT = {
+							NOR = {
+								religion_group = anatolian_group
+								trait = sympathy_anatolians
+							}
+						}
+					}
+					AND = {
+						religion_group = arabpagan_group
+						ROOT = {
+							NOR = {
+								religion_group = arabpagan_group
+								trait = sympathy_arabpagans
+							}
+						}
+					}
+					AND = {
+						religion_group = aztec_group
+						ROOT = {
+							NOR = {
+								religion_group = aztec_group
+								trait = sympathy_aztecs
+							}
+						}
+					}
+					AND = {
+						religion_group = baltic_group
+						ROOT = {
+							NOR = {
+								religion_group = baltic_group
+								trait = sympathy_baltics
+							}
+						}
+					}
+					AND = {
+						religion_group = bantu_group
+						ROOT = {
+							NOR = {
+								religion_group = bantu_group
+								trait = sympathy_bantus
+							}
+						}
+					}
+					AND = {
+						religion_group = berberpagan_group
+						ROOT = {
+							NOR = {
+								religion_group = berberpagan_group
+								trait = sympathy_berbers
+							}
+						}
+					}
+					AND = {
+						religion_group = bud_group
+						ROOT = {
+							NOR = {
+								religion_group = bud_group
+								trait = sympathy_buddhists
+							}
+						}
+					}
+					AND = {
+						religion_group = celtic_group
+						ROOT = {
+							NOR = {
+								religion_group = celtic_group
+								trait = sympathy_celtics
+							}
+						}
+					}
+					AND = {
+						religion_group = chinese_group
+						ROOT = {
+							NOR = {
+								religion_group = chinese_group
+								trait = sympathy_chinese
 							}
 						}
 					}
@@ -42,20 +123,74 @@ character_event = { # Sympathy for founder group
 						}
 					}
 					AND = {
-						religion_group = muslim
+						religion_group = east_african_group
 						ROOT = {
 							NOR = {
-								religion_group = muslim
-								trait = sympathy_islam
+								religion_group = east_african_group
+								trait = sympathy_east_africans
 							}
 						}
 					}
 					AND = {
-						religion_group = zoroastrian_group
+						religion_group = egyptian_group
 						ROOT = {
 							NOR = {
-								religion_group = zoroastrian_group
-								trait = sympathy_zoroastrianism
+								religion_group = egyptian_group
+								trait = sympathy_egyptian
+							}
+						}
+					}
+					AND = {
+						religion_group = finnish_group
+						ROOT = {
+							NOR = {
+								religion_group = finnish_group
+								trait = sympathy_finnish
+							}
+						}
+					}
+					AND = {
+						religion_group = graecoroman_group
+						ROOT = {
+							NOR = {
+								religion_group = graecoroman_group
+								trait = sympathy_graecoroman
+							}
+						}
+					}
+					AND = {
+						religion_group = indian_group
+						ROOT = {
+							NOR = {
+								religion_group = indian_group
+								trait = sympathy_indian
+							}
+						}
+					}
+					AND = {
+						religion_group = indohelen_group
+						ROOT = {
+							NOR = {
+								religion_group = indohelen_group
+								trait = sympathy_indohellens
+							}
+						}
+					}
+					AND = {
+						religion_group = inti_group
+						ROOT = {
+							NOR = {
+								religion_group = inti_group
+								trait = sympathy_intis
+							}
+						}
+					}
+					AND = {
+						religion_group = inuit_group
+						ROOT = {
+							NOR = {
+								religion_group = inuit_group
+								trait = sympathy_inuit
 							}
 						}
 					}
@@ -69,11 +204,146 @@ character_event = { # Sympathy for founder group
 						}
 					}
 					AND = {
-						religion_group = indian_group
+						religion_group = luwian_group
 						ROOT = {
 							NOR = {
-								religion_group = indian_group
-								trait = sympathy_indian
+								religion_group = luwian_group
+								trait = sympathy_luwians
+							}
+						}
+					}
+					AND = {
+						religion_group = mand_group
+						ROOT = {
+							NOR = {
+								religion_group = mand_group
+								trait = sympathy_mande
+							}
+						}
+					}
+					AND = {
+						religion_group = mani_group
+						ROOT = {
+							NOR = {
+								religion_group = mani_group
+								trait = sympathy_manichaeans
+							}
+						}
+					}
+					AND = {
+						religion_group = mithra_group
+						ROOT = {
+							NOR = {
+								religion_group = mithra_group
+								trait = sympathy_mithraics
+							}
+						}
+					}
+					AND = {
+						religion_group = muslim
+						ROOT = {
+							NOR = {
+								religion_group = muslim
+								trait = sympathy_islam
+							}
+						}
+					}
+					AND = {
+						religion_group = neoplato_group
+						ROOT = {
+							NOR = {
+								religion_group = neoplato_group
+								trait = sympathy_platonics
+							}
+						}
+					}
+					AND = {
+						religion_group = norsegerman_group
+						ROOT = {
+							NOR = {
+								religion_group = norsegerman_group
+								trait = sympathy_nordic
+							}
+						}
+					}
+					AND = {
+						religion_group = pagan_group
+						ROOT = {
+							NOR = {
+								religion_group = pagan_group
+								trait = sympathy_pagans
+							}
+						}
+					}
+					AND = {
+						religion_group = palmyranpagan_group
+						ROOT = {
+							NOR = {
+								religion_group = palmyranpagan_group
+								trait = sympathy_palmyrans
+							}
+						}
+					}
+					AND = {
+						religion_group = serer_group
+						ROOT = {
+							NOR = {
+								religion_group = serer_group
+								trait = sympathy_sererics
+							}
+						}
+					}
+					AND = {
+						religion_group = slavic_group
+						ROOT = {
+							NOR = {
+								religion_group = slavic_group
+								trait = sympathy_slavics
+							}
+						}
+					}
+					AND = {
+						religion_group = sol_group
+						ROOT = {
+							NOR = {
+								religion_group = sol_group
+								trait = sympathy_sol
+							}
+						}
+					}
+					AND = {
+						religion_group = tengri_group
+						ROOT = {
+							NOR = {
+								religion_group = tengri_group
+								trait = sympathy_tengri
+							}
+						}
+					}
+					AND = {
+						religion_group = yazd_group
+						ROOT = {
+							NOR = {
+								religion_group = yazd_group
+								trait = sympathy_yazd
+							}
+						}
+					}
+					AND = {
+						religion_group = zal_group
+						ROOT = {
+							NOR = {
+								religion_group = zal_group
+								trait = sympathy_zal
+							}
+						}
+					}
+					AND = {
+						religion_group = zoroastrian_group
+						ROOT = {
+							NOR = {
+								religion_group = zoroastrian_group
+								trait = sympathy_zoroastrianism
 							}
 						}
 					}
@@ -101,11 +371,92 @@ character_event = { # Sympathy for founder group
 					is_alive = no
 					OR = {
 						AND = {
-							religion_group = pagan_group
+							religion_group = abrahamic_group
 							ROOT = {
 								NOR = {
-									religion_group = pagan_group
-									trait = sympathy_pagans
+									religion_group = abrahamic_group
+									trait = sympathy_abrahamics
+								}
+							}
+						}
+						AND = {
+							religion_group = anatolian_group
+							ROOT = {
+								NOR = {
+									religion_group = anatolian_group
+									trait = sympathy_anatolians
+								}
+							}
+						}
+						AND = {
+							religion_group = arabpagan_group
+							ROOT = {
+								NOR = {
+									religion_group = arabpagan_group
+									trait = sympathy_arabpagans
+								}
+							}
+						}
+						AND = {
+							religion_group = aztec_group
+							ROOT = {
+								NOR = {
+									religion_group = aztec_group
+									trait = sympathy_aztecs
+								}
+							}
+						}
+						AND = {
+							religion_group = baltic_group
+							ROOT = {
+								NOR = {
+									religion_group = baltic_group
+									trait = sympathy_baltics
+								}
+							}
+						}
+						AND = {
+							religion_group = bantu_group
+							ROOT = {
+								NOR = {
+									religion_group = bantu_group
+									trait = sympathy_bantus
+								}
+							}
+						}
+						AND = {
+							religion_group = berberpagan_group
+							ROOT = {
+								NOR = {
+									religion_group = berberpagan_group
+									trait = sympathy_berbers
+								}
+							}
+						}
+						AND = {
+							religion_group = bud_group
+							ROOT = {
+								NOR = {
+									religion_group = bud_group
+									trait = sympathy_buddhists
+								}
+							}
+						}
+						AND = {
+							religion_group = celtic_group
+							ROOT = {
+								NOR = {
+									religion_group = celtic_group
+									trait = sympathy_celtics
+								}
+							}
+						}
+						AND = {
+							religion_group = chinese_group
+							ROOT = {
+								NOR = {
+									religion_group = chinese_group
+									trait = sympathy_chinese
 								}
 							}
 						}
@@ -119,20 +470,74 @@ character_event = { # Sympathy for founder group
 							}
 						}
 						AND = {
-							religion_group = muslim
+							religion_group = east_african_group
 							ROOT = {
 								NOR = {
-									religion_group = muslim
-									trait = sympathy_islam
+									religion_group = east_african_group
+									trait = sympathy_east_africans
 								}
 							}
 						}
 						AND = {
-							religion_group = zoroastrian_group
+							religion_group = egyptian_group
 							ROOT = {
 								NOR = {
-									religion_group = zoroastrian_group
-									trait = sympathy_zoroastrianism
+									religion_group = egyptian_group
+									trait = sympathy_egyptian
+								}
+							}
+						}
+						AND = {
+							religion_group = finnish_group
+							ROOT = {
+								NOR = {
+									religion_group = finnish_group
+									trait = sympathy_finnish
+								}
+							}
+						}
+						AND = {
+							religion_group = graecoroman_group
+							ROOT = {
+								NOR = {
+									religion_group = graecoroman_group
+									trait = sympathy_graecoroman
+								}
+							}
+						}
+						AND = {
+							religion_group = indian_group
+							ROOT = {
+								NOR = {
+									religion_group = indian_group
+									trait = sympathy_indian
+								}
+							}
+						}
+						AND = {
+							religion_group = indohelen_group
+							ROOT = {
+								NOR = {
+									religion_group = indohelen_group
+									trait = sympathy_indohellens
+								}
+							}
+						}
+						AND = {
+							religion_group = inti_group
+							ROOT = {
+								NOR = {
+									religion_group = inti_group
+									trait = sympathy_intis
+								}
+							}
+						}
+						AND = {
+							religion_group = inuit_group
+							ROOT = {
+								NOR = {
+									religion_group = inuit_group
+									trait = sympathy_inuit
 								}
 							}
 						}
@@ -146,11 +551,146 @@ character_event = { # Sympathy for founder group
 							}
 						}
 						AND = {
-							religion_group = indian_group
+							religion_group = luwian_group
 							ROOT = {
 								NOR = {
-									religion_group = indian_group
-									trait = sympathy_indian
+									religion_group = luwian_group
+									trait = sympathy_luwians
+								}
+							}
+						}
+						AND = {
+							religion_group = mand_group
+							ROOT = {
+								NOR = {
+									religion_group = mand_group
+									trait = sympathy_mande
+								}
+							}
+						}
+						AND = {
+							religion_group = mani_group
+							ROOT = {
+								NOR = {
+									religion_group = mani_group
+									trait = sympathy_manichaeans
+								}
+							}
+						}
+						AND = {
+							religion_group = mithra_group
+							ROOT = {
+								NOR = {
+									religion_group = mithra_group
+									trait = sympathy_mithraics
+								}
+							}
+						}
+						AND = {
+							religion_group = muslim
+							ROOT = {
+								NOR = {
+									religion_group = muslim
+									trait = sympathy_islam
+								}
+							}
+						}
+						AND = {
+							religion_group = neoplato_group
+							ROOT = {
+								NOR = {
+									religion_group = neoplato_group
+									trait = sympathy_platonics
+								}
+							}
+						}
+						AND = {
+							religion_group = norsegerman_group
+							ROOT = {
+								NOR = {
+									religion_group = norsegerman_group
+									trait = sympathy_nordic
+								}
+							}
+						}
+						AND = {
+							religion_group = pagan_group
+							ROOT = {
+								NOR = {
+									religion_group = pagan_group
+									trait = sympathy_pagans
+								}
+							}
+						}
+						AND = {
+							religion_group = palmyranpagan_group
+							ROOT = {
+								NOR = {
+									religion_group = palmyranpagan_group
+									trait = sympathy_palmyrans
+								}
+							}
+						}
+						AND = {
+							religion_group = serer_group
+							ROOT = {
+								NOR = {
+									religion_group = serer_group
+									trait = sympathy_sererics
+								}
+							}
+						}
+						AND = {
+							religion_group = slavic_group
+							ROOT = {
+								NOR = {
+									religion_group = slavic_group
+									trait = sympathy_slavics
+								}
+							}
+						}
+						AND = {
+							religion_group = sol_group
+							ROOT = {
+								NOR = {
+									religion_group = sol_group
+									trait = sympathy_sol
+								}
+							}
+						}
+						AND = {
+							religion_group = tengri_group
+							ROOT = {
+								NOR = {
+									religion_group = tengri_group
+									trait = sympathy_tengri
+								}
+							}
+						}
+						AND = {
+							religion_group = yazd_group
+							ROOT = {
+								NOR = {
+									religion_group = yazd_group
+									trait = sympathy_yazd
+								}
+							}
+						}
+						AND = {
+							religion_group = zal_group
+							ROOT = {
+								NOR = {
+									religion_group = zal_group
+									trait = sympathy_zal
+								}
+							}
+						}
+						AND = {
+							religion_group = zoroastrian_group
+							ROOT = {
+								NOR = {
+									religion_group = zoroastrian_group
+									trait = sympathy_zoroastrianism
 								}
 							}
 						}
@@ -204,10 +744,82 @@ character_event = { # Sympathy for founder group
 		if = {
 			limit = {
 				event_target:target_bloodline_founder = {
-					religion_group = pagan_group
+					religion_group = abrahamic_group
 				}
 			}
-			add_trait = sympathy_pagans
+			add_trait = sympathy_abrahamics
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = anatolian_group
+				}
+			}
+			add_trait = sympathy_anatolians
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = arabpagan_group
+				}
+			}
+			add_trait = sympathy_arabpagans
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = aztec_group
+				}
+			}
+			add_trait = sympathy_aztecs
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = baltic_group
+				}
+			}
+			add_trait = sympathy_baltics
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = bantu_group
+				}
+			}
+			add_trait = sympathy_bantus
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = berberpagan_group
+				}
+			}
+			add_trait = sympathy_berbers
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = bud_group
+				}
+			}
+			add_trait = sympathy_buddhists
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = celtic_group
+				}
+			}
+			add_trait = sympathy_celtics
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = chinese_group
+				}
+			}
+			add_trait = sympathy_chinese
 		}
 		else_if = {
 			limit = {
@@ -220,10 +832,66 @@ character_event = { # Sympathy for founder group
 		else_if = {
 			limit = {
 				event_target:target_bloodline_founder = {
-					religion_group = muslim
+					religion_group = east_african_group
 				}
 			}
-			add_trait = sympathy_islam
+			add_trait = sympathy_east_africans
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = egyptian_group
+				}
+			}
+			add_trait = sympathy_egyptian
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = finnish_group
+				}
+			}
+			add_trait = sympathy_finnish
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = graecoroman_group
+				}
+			}
+			add_trait = sympathy_graecoroman
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = indian_group
+				}
+			}
+			add_trait = sympathy_indian
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = indohelen_group
+				}
+			}
+			add_trait = sympathy_indohellens
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = inti_group
+				}
+			}
+			add_trait = sympathy_intis
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = inuit_group
+				}
+			}
+			add_trait = sympathy_inuit
 		}
 		else_if = {
 			limit = {
@@ -236,18 +904,130 @@ character_event = { # Sympathy for founder group
 		else_if = {
 			limit = {
 				event_target:target_bloodline_founder = {
-					religion_group = zoroastrian_group
+					religion_group = luwian_group
 				}
 			}
-			add_trait = sympathy_zoroastrianism
+			add_trait = sympathy_luwians
 		}
 		else_if = {
 			limit = {
 				event_target:target_bloodline_founder = {
-					religion_group = indian_group
+					religion_group = mand_group
 				}
 			}
-			add_trait = sympathy_indian
+			add_trait = sympathy_mande
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = mani_group
+				}
+			}
+			add_trait = sympathy_manichaeans
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = mithra_group
+				}
+			}
+			add_trait = sympathy_mithraics
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = muslim
+				}
+			}
+			add_trait = sympathy_islam
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = neoplato_group
+				}
+			}
+			add_trait = sympathy_platonics
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = norsegerman_group
+				}
+			}
+			add_trait = sympathy_nordic
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = pagan_group
+				}
+			}
+			add_trait = sympathy_pagans
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = palmyranpagan_group
+				}
+			}
+			add_trait = sympathy_palmyrans
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = serer_group
+				}
+			}
+			add_trait = sympathy_sererics
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = slavic_group
+				}
+			}
+			add_trait = sympathy_slavics
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = sol_group
+				}
+			}
+			add_trait = sympathy_sol
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = tengri_group
+				}
+			}
+			add_trait = sympathy_tengri
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = yazd_group
+				}
+			}
+			add_trait = sympathy_yazd
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = zal_group
+				}
+			}
+			add_trait = sympathy_zal
+		}
+		else_if = {
+			limit = {
+				event_target:target_bloodline_founder = {
+					religion_group = zoroastrian_group
+				}
+			}
+			add_trait = sympathy_zoroastrianism
 		}
 		else_if = {
 			limit = {

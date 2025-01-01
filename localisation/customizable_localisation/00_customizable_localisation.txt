@@ -3564,7 +3564,7 @@ defined_text = {
 	text = {
 		localisation_key = GetHouseOfWorship_Pagan
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOT = {
 				religion_openly_in_celtic_subgroup_trigger = no
 			}
@@ -3626,7 +3626,7 @@ defined_text = {
 	}
 	text = {
 		localisation_key = string_Temple
-		trigger = { religion_group = pagan_group }
+		trigger = { novum_imperium_is_pagan = yes }
 	}
 	text = {
 		localisation_key = string_Temple
@@ -3671,7 +3671,7 @@ defined_text = {
 	}
 	text = {
 		localisation_key = String_worship
-		trigger = { religion_group = pagan_group }
+		trigger = { novum_imperium_is_pagan = yes }
 	}
 	text = {
 		localisation_key = String_worship
@@ -4098,7 +4098,7 @@ defined_text = {
 	text = {
 		localisation_key = String_great_hero
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOT = { religion = britannic_pagan }
 		}
 	}
@@ -4129,7 +4129,7 @@ defined_text = {
 	text = {
 		localisation_key = String_Great_Hero_cap
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOT = { religion = britannic_pagan }
 		}
 	}
@@ -17229,10 +17229,10 @@ defined_text = {
 		trigger = {
 			OR = {
 				FROM = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				ROOT = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 			}
 		}
@@ -18892,7 +18892,7 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOT = { religion_openly_egyptian_or_reformed_trigger = yes }
 		}
 		localisation_key = string_blessed_ancestor
@@ -18916,7 +18916,7 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			religion_openly_egyptian_or_reformed_trigger = no
 		}
 		localisation_key = string_saint_view_title_pagan

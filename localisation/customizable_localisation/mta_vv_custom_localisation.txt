@@ -224,14 +224,14 @@ defined_text = {
 	text = {
 		localisation_key = String_Peace_be_upon_you
 		trigger = {
-			NOT = { religion_group = pagan_group }
+			NOT = { novum_imperium_is_pagan = yes }
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
 	}
 	text = {
 		localisation_key = String_MTA_Gods_blessings
 		trigger = { 
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
 	}

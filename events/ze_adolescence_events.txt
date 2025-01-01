@@ -3765,12 +3765,42 @@ character_event = {
 							}
 						}
 						trait = cynical
+						trait = sympathy_abrahamics
+						trait = sympathy_anatolians
+						trait = sympathy_arabpagans
+						trait = sympathy_aztecs
+						trait = sympathy_baltics
+						trait = sympathy_bantus
+						trait = sympathy_berbers
+						trait = sympathy_buddhists
+						trait = sympathy_celtics
+						trait = sympathy_chinese
 						trait = sympathy_christendom
-						trait = sympathy_islam
-						trait = sympathy_pagans
-						trait = sympathy_zoroastrianism
-						trait = sympathy_judaism
+						trait = sympathy_east_africans
+						trait = sympathy_egyptian
+						trait = sympathy_finnish
+						trait = sympathy_graecoroman
 						trait = sympathy_indian
+						trait = sympathy_indohellens
+						trait = sympathy_intis
+						trait = sympathy_inuit
+						trait = sympathy_judaism
+						trait = sympathy_luwians
+						trait = sympathy_mande
+						trait = sympathy_manichaeans
+						trait = sympathy_mithraics
+						trait = sympathy_islam
+						trait = sympathy_platonics
+						trait = sympathy_nordic
+						trait = sympathy_pagans
+						trait = sympathy_palmyrans
+						trait = sympathy_sererics
+						trait = sympathy_slavics
+						trait = sympathy_sol
+						trait = sympathy_tengri
+						trait = sympathy_yazd
+						trait = sympathy_zal
+						trait = sympathy_zoroastrianism
 						trait = sympathy_african
 					}
 				}
@@ -3793,7 +3823,167 @@ character_event = {
 		if = {
 			limit = { has_character_flag = curious_sympathy_religion }
 			random_list = {
-				10 = {
+				100 = {
+					set_character_flag = add_sympathy_abrahamics
+					modifier = {
+						factor = 0
+						religion_group = abrahamic_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = abrahamic_group }
+							location = { religion_group = abrahamic_group }
+							any_friend = { religion_group = abrahamic_group }
+							any_sibling = { religion_group = abrahamic_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_anatolians
+					modifier = {
+						factor = 0
+						religion_group = anatolian_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = anatolian_group }
+							location = { religion_group = anatolian_group }
+							any_friend = { religion_group = anatolian_group }
+							any_sibling = { religion_group = anatolian_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_arabpagans
+					modifier = {
+						factor = 0
+						religion_group = arabpagan_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = arabpagan_group }
+							location = { religion_group = arabpagan_group }
+							any_friend = { religion_group = arabpagan_group }
+							any_sibling = { religion_group = arabpagan_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_aztecs
+					modifier = {
+						factor = 0
+						religion_group = aztec_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = aztec_group }
+							location = { religion_group = aztec_group }
+							any_friend = { religion_group = aztec_group }
+							any_sibling = { religion_group = aztec_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_baltics
+					modifier = {
+						factor = 0
+						religion_group = baltic_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = baltic_group }
+							location = { religion_group = baltic_group }
+							any_friend = { religion_group = baltic_group }
+							any_sibling = { religion_group = baltic_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_bantus
+					modifier = {
+						factor = 0
+						religion_group = bantu_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = bantu_group }
+							location = { religion_group = bantu_group }
+							any_friend = { religion_group = bantu_group }
+							any_sibling = { religion_group = bantu_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_berbers
+					modifier = {
+						factor = 0
+						religion_group = berberpagan_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = berberpagan_group }
+							location = { religion_group = berberpagan_group }
+							any_friend = { religion_group = berberpagan_group }
+							any_sibling = { religion_group = berberpagan_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_buddhists
+					modifier = {
+						factor = 0
+						religion_group = bud_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = bud_group }
+							location = { religion_group = bud_group }
+							any_friend = { religion_group = bud_group }
+							any_sibling = { religion_group = bud_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_celtics
+					modifier = {
+						factor = 0
+						religion_group = celtic_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = celtic_group }
+							location = { religion_group = celtic_group }
+							any_friend = { religion_group = celtic_group }
+							any_sibling = { religion_group = celtic_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_chinese
+					modifier = {
+						factor = 0
+						religion_group = chinese_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = chinese_group }
+							location = { religion_group = chinese_group }
+							any_friend = { religion_group = chinese_group }
+							any_sibling = { religion_group = chinese_group }
+						}
+					}
+				}
+				100 = {
 					set_character_flag = add_sympathy_christendom
 					modifier = {
 						factor = 0
@@ -3812,77 +4002,71 @@ character_event = {
 						}
 					}
 				}
-				10 = {
-					set_character_flag = add_sympathy_islam
+				100 = {
+					set_character_flag = add_sympathy_east_africans
 					modifier = {
 						factor = 0
-						OR = {
-							religion_group = muslim
-							has_religion_feature = religion_syncretic_muslim
-						}
+						religion_group = east_african_group
 					}
 					modifier = {
 						factor = 0
 						NOR = {
-							educator = { religion_group = muslim }
-							location = { religion_group = muslim }
-							any_friend = { religion_group = muslim }
-							any_sibling = { religion_group = muslim }
+							educator = { religion_group = east_african_group }
+							location = { religion_group = east_african_group }
+							any_friend = { religion_group = east_african_group }
+							any_sibling = { religion_group = east_african_group }
 						}
 					}
 				}
-				10 = {
-					set_character_flag = add_sympathy_pagans
+				100 = {
+					set_character_flag = add_sympathy_egyptian
 					modifier = {
 						factor = 0
-						religion_group = pagan_group
+						religion_group = egyptian_group
 					}
 					modifier = {
 						factor = 0
 						NOR = {
-							educator = { religion_group = pagan_group }
-							location = { religion_group = pagan_group }
-							any_friend = { religion_group = pagan_group }
-							any_sibling = { religion_group = pagan_group }
+							educator = { religion_group = egyptian_group }
+							location = { religion_group = egyptian_group }
+							any_friend = { religion_group = egyptian_group }
+							any_sibling = { religion_group = egyptian_group }
 						}
 					}
 				}
-				10 = {
-					set_character_flag = add_sympathy_zoroastrianism
+				100 = {
+					set_character_flag = add_sympathy_finnish
 					modifier = {
 						factor = 0
-						OR = {
-							religion_group = zoroastrian_group
-							has_religion_feature = religion_syncretic_zoroastrian
-						}
+						religion_group = finnish_group
 					}
 					modifier = {
 						factor = 0
 						NOR = {
-							educator = { religion_group = zoroastrian_group }
-							location = { religion_group = zoroastrian_group }
-							any_friend = { religion_group = zoroastrian_group }
-							any_sibling = { religion_group = zoroastrian_group }
+							educator = { religion_group = finnish_group }
+							location = { religion_group = finnish_group }
+							any_friend = { religion_group = finnish_group }
+							any_sibling = { religion_group = finnish_group }
 						}
 					}
 				}
-				10 = {
-					set_character_flag = add_sympathy_judaism
+				100 = {
+					set_character_flag = add_sympathy_graecoroman
 					modifier = {
 						factor = 0
-						religion_group = jewish_group
+						religion_group = graecoroman_group
 					}
 					modifier = {
 						factor = 0
 						NOR = {
-							educator = { religion_group = jewish_group }
-							location = { religion_group = jewish_group }
-							any_friend = { religion_group = jewish_group }
-							any_sibling = { religion_group = jewish_group }
+							educator = { religion_group = graecoroman_group }
+							location = { religion_group = graecoroman_group }
+							any_friend = { religion_group = graecoroman_group }
+							any_sibling = { religion_group = graecoroman_group }
 						}
 					}
 				}
-				10 = {
+				100 = {
 					set_character_flag = add_sympathy_indian
 					modifier = {
 						factor = 0
@@ -3901,7 +4085,333 @@ character_event = {
 						}
 					}
 				}
-				10 = {
+				100 = {
+					set_character_flag = add_sympathy_indohellens
+					modifier = {
+						factor = 0
+						religion_group = indohelen_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = indohelen_group }
+							location = { religion_group = indohelen_group }
+							any_friend = { religion_group = indohelen_group }
+							any_sibling = { religion_group = indohelen_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_intis
+					modifier = {
+						factor = 0
+						religion_group = inti_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = inti_group }
+							location = { religion_group = inti_group }
+							any_friend = { religion_group = inti_group }
+							any_sibling = { religion_group = inti_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_inuit
+					modifier = {
+						factor = 0
+						religion_group = inuit_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = inuit_group }
+							location = { religion_group = inuit_group }
+							any_friend = { religion_group = inuit_group }
+							any_sibling = { religion_group = inuit_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_judaism
+					modifier = {
+						factor = 0
+						religion_group = jewish_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = jewish_group }
+							location = { religion_group = jewish_group }
+							any_friend = { religion_group = jewish_group }
+							any_sibling = { religion_group = jewish_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_luwians
+					modifier = {
+						factor = 0
+						religion_group = luwian_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = luwian_group }
+							location = { religion_group = luwian_group }
+							any_friend = { religion_group = luwian_group }
+							any_sibling = { religion_group = luwian_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_mande
+					modifier = {
+						factor = 0
+						religion_group = mand_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = mand_group }
+							location = { religion_group = mand_group }
+							any_friend = { religion_group = mand_group }
+							any_sibling = { religion_group = mand_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_manichaeans
+					modifier = {
+						factor = 0
+						religion_group = mani_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = mani_group }
+							location = { religion_group = mani_group }
+							any_friend = { religion_group = mani_group }
+							any_sibling = { religion_group = mani_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_mithraics
+					modifier = {
+						factor = 0
+						religion_group = mithra_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = mithra_group }
+							location = { religion_group = mithra_group }
+							any_friend = { religion_group = mithra_group }
+							any_sibling = { religion_group = mithra_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_islam
+					modifier = {
+						factor = 0
+						OR = {
+							religion_group = muslim
+							has_religion_feature = religion_syncretic_muslim
+						}
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = muslim }
+							location = { religion_group = muslim }
+							any_friend = { religion_group = muslim }
+							any_sibling = { religion_group = muslim }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_platonics
+					modifier = {
+						factor = 0
+						religion_group = neoplato_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = neoplato_group }
+							location = { religion_group = neoplato_group }
+							any_friend = { religion_group = neoplato_group }
+							any_sibling = { religion_group = neoplato_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_nordic
+					modifier = {
+						factor = 0
+						religion_group = norsegerman_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = norsegerman_group }
+							location = { religion_group = norsegerman_group }
+							any_friend = { religion_group = norsegerman_group }
+							any_sibling = { religion_group = norsegerman_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_pagans
+					modifier = {
+						factor = 0
+						religion_group = pagan_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = pagan_group }
+							location = { religion_group = pagan_group }
+							any_friend = { religion_group = pagan_group }
+							any_sibling = { religion_group = pagan_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_palmyrans
+					modifier = {
+						factor = 0
+						religion_group = palmyranpagan_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = palmyranpagan_group }
+							location = { religion_group = palmyranpagan_group }
+							any_friend = { religion_group = palmyranpagan_group }
+							any_sibling = { religion_group = palmyranpagan_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_sererics
+					modifier = {
+						factor = 0
+						religion_group = serer_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = serer_group }
+							location = { religion_group = serer_group }
+							any_friend = { religion_group = serer_group }
+							any_sibling = { religion_group = serer_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_slavics
+					modifier = {
+						factor = 0
+						religion_group = slavic_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = slavic_group }
+							location = { religion_group = slavic_group }
+							any_friend = { religion_group = slavic_group }
+							any_sibling = { religion_group = slavic_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_sol
+					modifier = {
+						factor = 0
+						religion_group = sol_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = sol_group }
+							location = { religion_group = sol_group }
+							any_friend = { religion_group = sol_group }
+							any_sibling = { religion_group = sol_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_tengri
+					modifier = {
+						factor = 0
+						religion_group = tengri_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = tengri_group }
+							location = { religion_group = tengri_group }
+							any_friend = { religion_group = tengri_group }
+							any_sibling = { religion_group = tengri_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_yazd
+					modifier = {
+						factor = 0
+						religion_group = yazd_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = yazd_group }
+							location = { religion_group = yazd_group }
+							any_friend = { religion_group = yazd_group }
+							any_sibling = { religion_group = yazd_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_zal
+					modifier = {
+						factor = 0
+						religion_group = zal_group
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = zal_group }
+							location = { religion_group = zal_group }
+							any_friend = { religion_group = zal_group }
+							any_sibling = { religion_group = zal_group }
+						}
+					}
+				}
+				100 = {
+					set_character_flag = add_sympathy_zoroastrianism
+					modifier = {
+						factor = 0
+						OR = {
+							religion_group = zoroastrian_group
+							has_religion_feature = religion_syncretic_zoroastrian
+						}
+					}
+					modifier = {
+						factor = 0
+						NOR = {
+							educator = { religion_group = zoroastrian_group }
+							location = { religion_group = zoroastrian_group }
+							any_friend = { religion_group = zoroastrian_group }
+							any_sibling = { religion_group = zoroastrian_group }
+						}
+					}
+				}
+				100 = {
 					set_character_flag = add_sympathy_african
 					modifier = {
 						factor = 0
@@ -3955,12 +4465,42 @@ character_event = {
 							}
 						}
 						trait = cynical
+						trait = sympathy_abrahamics
+						trait = sympathy_anatolians
+						trait = sympathy_arabpagans
+						trait = sympathy_aztecs
+						trait = sympathy_baltics
+						trait = sympathy_bantus
+						trait = sympathy_berbers
+						trait = sympathy_buddhists
+						trait = sympathy_celtics
+						trait = sympathy_chinese
 						trait = sympathy_christendom
-						trait = sympathy_islam
-						trait = sympathy_pagans
-						trait = sympathy_zoroastrianism
-						trait = sympathy_judaism
+						trait = sympathy_east_africans
+						trait = sympathy_egyptian
+						trait = sympathy_finnish
+						trait = sympathy_graecoroman
 						trait = sympathy_indian
+						trait = sympathy_indohellens
+						trait = sympathy_intis
+						trait = sympathy_inuit
+						trait = sympathy_judaism
+						trait = sympathy_luwians
+						trait = sympathy_mande
+						trait = sympathy_manichaeans
+						trait = sympathy_mithraics
+						trait = sympathy_islam
+						trait = sympathy_platonics
+						trait = sympathy_nordic
+						trait = sympathy_pagans
+						trait = sympathy_palmyrans
+						trait = sympathy_sererics
+						trait = sympathy_slavics
+						trait = sympathy_sol
+						trait = sympathy_tengri
+						trait = sympathy_yazd
+						trait = sympathy_zal
+						trait = sympathy_zoroastrianism
 						trait = sympathy_african
 					}
 					OR = {
@@ -4141,12 +4681,42 @@ character_event = {
 				trigger_switch = {
 					on_trigger = has_character_flag
 					curious_to_cynical = { remove_trait = curious add_trait = cynical }
+					add_sympathy_abrahamics = { remove_trait = curious add_trait = sympathy_abrahamics }
+					add_sympathy_anatolians = { remove_trait = curious add_trait = sympathy_anatolians }
+					add_sympathy_arabpagans = { remove_trait = curious add_trait = sympathy_arabpagans }
+					add_sympathy_aztecs = { remove_trait = curious add_trait = sympathy_aztecs }
+					add_sympathy_baltics = { remove_trait = curious add_trait = sympathy_baltics }
+					add_sympathy_bantus = { remove_trait = curious add_trait = sympathy_bantus }
+					add_sympathy_berbers = { remove_trait = curious add_trait = sympathy_berbers }
+					add_sympathy_buddhists = { remove_trait = curious add_trait = sympathy_buddhists }
+					add_sympathy_celtics = { remove_trait = curious add_trait = sympathy_celtics }
+					add_sympathy_chinese = { remove_trait = curious add_trait = sympathy_chinese }
 					add_sympathy_christendom = { remove_trait = curious add_trait = sympathy_christendom }
-					add_sympathy_islam = { remove_trait = curious add_trait = sympathy_islam }
-					add_sympathy_pagans = { remove_trait = curious add_trait = sympathy_pagans }
-					add_sympathy_zoroastrianism = { remove_trait = curious add_trait = sympathy_zoroastrianism }
-					add_sympathy_judaism = { remove_trait = curious add_trait = sympathy_judaism }
+					add_sympathy_east_africans = { remove_trait = curious add_trait = sympathy_east_africans }
+					add_sympathy_egyptian = { remove_trait = curious add_trait = sympathy_egyptian }
+					add_sympathy_finnish = { remove_trait = curious add_trait = sympathy_finnish }
+					add_sympathy_graecoroman = { remove_trait = curious add_trait = sympathy_graecoroman }
 					add_sympathy_indian = { remove_trait = curious add_trait = sympathy_indian }
+					add_sympathy_indohellens = { remove_trait = curious add_trait = sympathy_indohellens }
+					add_sympathy_intis = { remove_trait = curious add_trait = sympathy_intis }
+					add_sympathy_inuit = { remove_trait = curious add_trait = sympathy_inuit }
+					add_sympathy_judaism = { remove_trait = curious add_trait = sympathy_judaism }
+					add_sympathy_luwians = { remove_trait = curious add_trait = sympathy_luwians }
+					add_sympathy_mande = { remove_trait = curious add_trait = sympathy_mande }
+					add_sympathy_manichaeans = { remove_trait = curious add_trait = sympathy_manichaeans }
+					add_sympathy_mithraics = { remove_trait = curious add_trait = sympathy_mithraics }
+					add_sympathy_islam = { remove_trait = curious add_trait = sympathy_islam }
+					add_sympathy_platonics = { remove_trait = curious add_trait = sympathy_platonics }
+					add_sympathy_nordic = { remove_trait = curious add_trait = sympathy_nordic }
+					add_sympathy_pagans = { remove_trait = curious add_trait = sympathy_pagans }
+					add_sympathy_palmyrans = { remove_trait = curious add_trait = sympathy_palmyrans }
+					add_sympathy_sererics = { remove_trait = curious add_trait = sympathy_sererics }
+					add_sympathy_slavics = { remove_trait = curious add_trait = sympathy_slavics }
+					add_sympathy_sol = { remove_trait = curious add_trait = sympathy_sol }
+					add_sympathy_tengri = { remove_trait = curious add_trait = sympathy_tengri }
+					add_sympathy_yazd = { remove_trait = curious add_trait = sympathy_yazd }
+					add_sympathy_zal = { remove_trait = curious add_trait = sympathy_zal }
+					add_sympathy_zoroastrianism = { remove_trait = curious add_trait = sympathy_zoroastrianism }
 					add_sympathy_african = { remove_trait = curious add_trait = sympathy_african }
 					curious_to_genius = { remove_trait = curious add_trait = shrewd }
 				}
@@ -4275,12 +4845,42 @@ character_event = {
 					OR = {
 						trait = cynical
 						trait = zealous
+						trait = sympathy_abrahamics
+						trait = sympathy_anatolians
+						trait = sympathy_arabpagans
+						trait = sympathy_aztecs
+						trait = sympathy_baltics
+						trait = sympathy_bantus
+						trait = sympathy_berbers
+						trait = sympathy_buddhists
+						trait = sympathy_celtics
+						trait = sympathy_chinese
 						trait = sympathy_christendom
-						trait = sympathy_islam
-						trait = sympathy_pagans
-						trait = sympathy_zoroastrianism
-						trait = sympathy_judaism
+						trait = sympathy_east_africans
+						trait = sympathy_egyptian
+						trait = sympathy_finnish
+						trait = sympathy_graecoroman
 						trait = sympathy_indian
+						trait = sympathy_indohellens
+						trait = sympathy_intis
+						trait = sympathy_inuit
+						trait = sympathy_judaism
+						trait = sympathy_luwians
+						trait = sympathy_mande
+						trait = sympathy_manichaeans
+						trait = sympathy_mithraics
+						trait = sympathy_islam
+						trait = sympathy_platonics
+						trait = sympathy_nordic
+						trait = sympathy_pagans
+						trait = sympathy_palmyrans
+						trait = sympathy_sererics
+						trait = sympathy_slavics
+						trait = sympathy_sol
+						trait = sympathy_tengri
+						trait = sympathy_yazd
+						trait = sympathy_zal
+						trait = sympathy_zoroastrianism
 						trait = sympathy_african
 					}
 				}
@@ -4328,12 +4928,42 @@ character_event = {
 					OR = {
 						trait = cynical
 						trait = zealous
+						trait = sympathy_abrahamics
+						trait = sympathy_anatolians
+						trait = sympathy_arabpagans
+						trait = sympathy_aztecs
+						trait = sympathy_baltics
+						trait = sympathy_bantus
+						trait = sympathy_berbers
+						trait = sympathy_buddhists
+						trait = sympathy_celtics
+						trait = sympathy_chinese
 						trait = sympathy_christendom
-						trait = sympathy_islam
-						trait = sympathy_pagans
-						trait = sympathy_zoroastrianism
-						trait = sympathy_judaism
+						trait = sympathy_east_africans
+						trait = sympathy_egyptian
+						trait = sympathy_finnish
+						trait = sympathy_graecoroman
 						trait = sympathy_indian
+						trait = sympathy_indohellens
+						trait = sympathy_intis
+						trait = sympathy_inuit
+						trait = sympathy_judaism
+						trait = sympathy_luwians
+						trait = sympathy_mande
+						trait = sympathy_manichaeans
+						trait = sympathy_mithraics
+						trait = sympathy_islam
+						trait = sympathy_platonics
+						trait = sympathy_nordic
+						trait = sympathy_pagans
+						trait = sympathy_palmyrans
+						trait = sympathy_sererics
+						trait = sympathy_slavics
+						trait = sympathy_sol
+						trait = sympathy_tengri
+						trait = sympathy_yazd
+						trait = sympathy_zal
+						trait = sympathy_zoroastrianism
 						trait = sympathy_african
 					}
 					trait = erudite
