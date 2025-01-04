@@ -9,7 +9,6 @@ Large Mods:
 
 "Lux Invicta"
 "Rise to Power"
-"Tianxia: Silk Road Expansion"
 
 Medium Mods:
 
@@ -23,6 +22,7 @@ Medium Mods:
 "BoSB Patrum Scuta+ for HIP"
 "Crusader Amazons"
 "Dark Ages v.1.2.51"
+"Enatic Kingdoms" [succession laws only]
 "Extended Bloodlines (HF)"
 "Harranian Immersion Pack: The Last Hellenic Pagans"
 "HIP - Rowan's Resource and Building Overhaul"

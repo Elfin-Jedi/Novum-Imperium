@@ -1345,6 +1345,23 @@ gender_laws = {
 						}
 					}
 				}
+				AND = {
+					has_dlc = "Zeus"
+					ROOT = { holder_scope = { primary_title = { has_law = status_of_women_4 } } }
+					OR = {
+						liege = {
+							primary_title = {
+								OR = {
+									has_law = agnatic_succession
+									has_law = cognatic_succession
+									has_law = true_cognatic_succession
+									has_law = enatic_cognatic_succession
+									has_law = enatic_succession
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 		allow = {
@@ -1449,8 +1466,11 @@ gender_laws = {
 								liege = {
 									primary_title = {
 										OR = {
-											has_law = true_cognatic_succession
+											has_law = agnatic_succession
 											has_law = cognatic_succession
+											has_law = true_cognatic_succession
+											has_law = enatic_cognatic_succession
+											has_law = enatic_succession
 										}
 									}
 								}
@@ -1557,23 +1577,80 @@ gender_laws = {
 		female_dynasty_opinion = 10
 
 		potential = {
-			holder_scope = {
-				OR = {
-					has_religion_feature = religion_matriarchal
-					has_landed_title = e_hip
-				}
-				NOT = {
-					any_liege = {
-						holy_order = yes
-						NOT = { has_religion_feature = religion_matriarchal }
+			holder_scope = { NOT = { has_religion_feature = religion_matriarchal } }
+			holder_scope = { NOT = { has_religion_feature = religion_patriarchal } }
+			OR = {
+				has_game_rule = { name = gender value = all }
+				holder_scope = {
+					NOT = {
+						any_liege = {
+							holy_order = yes
+							NOR = {
+								has_religion_feature = religion_equal
+								has_religion_feature = religion_feature_bon
+							}
+						}
+					}
+					OR = {
+						NOR = {
+							religion_group = muslim
+							has_horde_culture = yes
+							is_tribal = yes
+							is_nomadic = yes
+						}
+						has_religion_feature = religion_equal
+						has_religion_feature = religion_feature_bon
+						AND = {
+							has_dlc = "Zeus"
+							ROOT = { holder_scope = { primary_title = { has_law = status_of_women_4 } } }
+							OR = {
+								liege = {
+									primary_title = {
+										OR = {
+											has_law = agnatic_succession
+											has_law = cognatic_succession
+											has_law = true_cognatic_succession
+											has_law = enatic_cognatic_succession
+											has_law = enatic_succession
+										}
+									}
+								}
+							}
+						}
 					}
 				}
 			}
+			OR = {
+				holder_scope = {
+					is_theocracy = no
+					OR = {
+						is_republic = no
+						is_patrician = yes
+					}
+				}
+				holder_scope = {
+					OR = {
+						has_religion_feature = religion_equal
+						has_religion_feature = religion_feature_bon
+					}
+				}
+			}
+			is_primary_type_title = no
 		}
 		allow = {
-			OR = {
-				has_law = true_cognatic_succession
-				has_law = enatic_cognatic_succession
+			has_law = enatic_cognatic_succession
+			holder_scope = {
+				OR = {
+					has_game_rule = { name = gender value = all }
+					primary_title = {
+						show_scope_change = no
+						has_law = status_of_women_4
+					}
+					culture = basque
+					culture = zhangzhung
+					culture = sumpa
+					emf_feminist_religion = yes
+				}
 			}
 			emf_laws_change_succ_can_afford_prestige_cost = yes
 		}
@@ -1616,6 +1693,21 @@ gender_laws = {
 				has_game_rule = { name = gender value = all }
 			}
 			modifier = {
+				factor = 0.1
+				NOT = {
+					holder_scope = {
+						has_religion_feature = religion_equal
+					}
+				}
+			}
+			
+			modifier = {
+				factor = 100
+				holder_scope = {
+					has_religion_feature = religion_equal
+				}
+			}
+			modifier = {
 				factor = 0
 				NOT = {
 					holder_scope = {
@@ -1634,26 +1726,82 @@ gender_laws = {
 		female_dynasty_opinion = 5
 
 		potential = {
-			holder_scope = {
-				OR = {
-					has_religion_feature = religion_matriarchal
-					any_owned_bloodline = {
-						has_bloodline_flag = bloodline_enatic_cognatic
+			holder_scope = { NOT = { has_religion_feature = religion_matriarchal } }
+			holder_scope = { NOT = { has_religion_feature = religion_patriarchal } }
+			OR = {
+				has_game_rule = { name = gender value = all }
+				has_landed_title = e_hip
+				holder_scope = {
+					NOT = {
+						any_liege = {
+							holy_order = yes
+							NOR = {
+								has_religion_feature = religion_equal
+								has_religion_feature = religion_feature_bon
+							}
+						}
 					}
-					has_landed_title = e_hip
-				}
-				NOT = {
-					any_liege = {
-						holy_order = yes
-						NOT = { has_religion_feature = religion_matriarchal }
+					OR = {
+						NOR = {
+							religion_group = muslim
+							has_horde_culture = yes
+							is_tribal = yes
+							is_nomadic = yes
+						}
+						has_religion_feature = religion_equal
+						has_religion_feature = religion_feature_bon
+						AND = {
+							has_dlc = "Zeus"
+							ROOT = { holder_scope = { primary_title = { has_law = status_of_women_4 } } }
+							OR = {
+								liege = {
+									primary_title = {
+										OR = {
+											has_law = agnatic_succession
+											has_law = cognatic_succession
+											has_law = true_cognatic_succession
+											has_law = enatic_cognatic_succession
+											has_law = enatic_succession
+										}
+									}
+								}
+							}
+						}
 					}
 				}
 			}
+			OR = {
+				holder_scope = {
+					is_theocracy = no
+					OR = {
+						is_republic = no
+						is_patrician = yes
+					}
+				}
+				holder_scope = {
+					OR = {
+						has_religion_feature = religion_equal
+						has_religion_feature = religion_feature_bon
+					}
+				}
+			}
+			is_primary_type_title = no
 		}
 		allow = {
-			OR = {
-				has_law = true_cognatic_succession
-				has_law = enatic_succession
+			has_law = true_cognatic_succession
+			has_law = enatic_succession
+			holder_scope = {
+				OR = {
+					has_game_rule = { name = gender value = all }
+					primary_title = {
+						show_scope_change = no
+						has_law = status_of_women_4
+					}
+					culture = basque
+					culture = zhangzhung
+					culture = sumpa
+					emf_feminist_religion = yes
+				}
 			}
 			emf_laws_change_succ_can_afford_prestige_cost = yes
 		}
@@ -1693,6 +1841,21 @@ gender_laws = {
 			modifier = {
 				factor = 0
 				has_game_rule = { name = gender value = all }
+			}
+			modifier = {
+				factor = 0.1
+				NOT = {
+					holder_scope = {
+						has_religion_feature = religion_equal
+					}
+				}
+			}
+			
+			modifier = {
+				factor = 100
+				holder_scope = {
+					has_religion_feature = religion_equal
+				}
 			}
 			modifier = {
 				factor = 0
