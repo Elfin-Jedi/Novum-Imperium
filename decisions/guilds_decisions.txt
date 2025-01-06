@@ -3,7 +3,6 @@ society_decisions = {
 	guilds_buffing_dummy = {
 		only_playable = yes
 
-		only_rulers = yes
 		potential = {
 			always = no
 		}
@@ -25,7 +24,6 @@ society_decisions = {
 	guilds_sabotaging_dummy = {
 		only_playable = yes
 
-		only_rulers = yes
 		potential = {
 			always = no
 		}
@@ -226,7 +224,6 @@ society_decisions = {
 	guilds_shopping_caravan_ai = { #so they do not check tons of provinces every years
 		
 		ai_check_interval = 12
-		only_rulers = yes
 		potential = {
 			ai = yes
 			society_member_of = the_guilds 
@@ -1307,12 +1304,7 @@ society_decisions = {
 	guilds_show_decisions_on = {
 		# is_in_society = yes
 		
-		only_rulers = yes
 		potential = {
-			OR = {
-				is_landed = yes
-				is_patrician = yes
-			}
 			society_member_of = the_guilds
 			society_rank >= 1
 			NOT = { has_character_flag = guilds_show_decision }
@@ -1364,13 +1356,8 @@ society_decisions = {
 #Go shopping / Loan / Buy stall / Republic
 	guilds_shopping = { 
 		
-		only_rulers = yes
 		ai_check_interval = 6
 		potential = {
-			OR = {
-				is_landed = yes
-				is_patrician = yes
-			}
 			society_member_of = the_guilds
 			society_rank >= 1
 			has_character_flag = guilds_show_decision
@@ -1454,7 +1441,6 @@ society_decisions = {
 #Loan
 	guilds_loaning_one = {
 		ai_check_interval = 6
-		only_rulers = yes
 		potential = {
 			society_member_of = the_guilds
 			society_rank >= 1
@@ -1528,7 +1514,6 @@ society_decisions = {
 	}
 	guilds_loaning_two = {
 		ai_check_interval = 6
-		only_rulers = yes
 		potential = {
 			society_member_of = the_guilds
 			society_rank >= 1
@@ -1603,7 +1588,6 @@ society_decisions = {
 	}
 	guilds_loaning_three = {
 		ai_check_interval = 6
-		only_rulers = yes
 		potential = {
 			society_member_of = the_guilds
 			society_rank >= 1
@@ -1680,7 +1664,6 @@ society_decisions = {
 #Caravan Stall shop
 	guilds_buy_shop = {
 		ai_check_interval = 12
-		only_rulers = yes
 		potential = {
 			OR = {
 				is_landed = yes
@@ -1719,7 +1702,6 @@ society_decisions = {
 	guilds_caravan_option = {
 		# is_in_society = yes
 		
-		only_rulers = yes
 		potential = {
 			OR = {
 				is_landed = yes
@@ -1755,12 +1737,7 @@ society_decisions = {
 	guilds_clear_debt = {
 		# is_in_society = yes
 		ai_check_interval = 4
-		only_rulers = yes
 		potential = {
-			OR = {
-				is_landed = yes
-				is_patrician = yes
-			}
 			society_member_of = the_guilds
 			society_rank >= 3
 			has_character_flag = guilds_show_decision
@@ -1811,7 +1788,6 @@ society_decisions = {
 	guilds_become_republic = {
 		# is_in_society = yes
 		ai_check_interval = 12
-		only_rulers = yes
 		potential = {
 			is_landed = yes
 			society_member_of = the_guilds
@@ -2117,7 +2093,6 @@ society_decisions = {
 	guilds_delivery_button = {
 		# is_high_prio = yes
 		
-		only_rulers = yes
 		potential = {
 			society_member_of = the_guilds
 			has_quest = quest_guilds_delivery
@@ -2156,7 +2131,6 @@ society_decisions = {
 	guilds_craft_button = {
 		is_high_prio = yes
 		ai_check_interval = 4
-		only_rulers = yes
 		potential = {
 			society_member_of = the_guilds
 			society_rank >= 2
@@ -2399,7 +2373,6 @@ society_decisions = {
 #Society mapmode
 	guilds_society_mapmode_buy = { #disabled
 
-		only_rulers = yes
 		ai = no 
 		potential = {
 			always = no
@@ -2609,7 +2582,6 @@ society_decisions = {
 	guilds_show_warehouse_on = {
 		# is_in_society = yes
 		
-		only_rulers = yes
 		potential = {
 			OR = {
 				is_landed = yes
@@ -2639,7 +2611,6 @@ society_decisions = {
 	guilds_show_warehouse_off = {
 		# is_in_society = yes
 		
-		only_rulers = yes
 		potential = {
 			OR = {
 				is_landed = yes

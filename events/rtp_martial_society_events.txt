@@ -510,6 +510,7 @@ society_quest_event = {
 				religion = ROOT
 				culture = ROOT
 				dynasty = none
+				health = 10
 			}
 			new_character = {
 				set_character_flag = rtp_trash #Just delete this dude
@@ -923,6 +924,7 @@ society_quest_event = {
 				religion = ROOT
 				culture = ROOT
 				dynasty = random
+				health = 10
 			}
 			new_character = {
 				set_character_flag = rtp_trash #Just delete this dude
@@ -937,6 +939,7 @@ society_quest_event = {
 				religion = event_target:rtp_society_quest_target
 				culture = event_target:rtp_society_quest_target
 				dynasty = none
+				health = 10
 			}
 			new_character = {
 				set_character_flag = rtp_trash #Just delete this dude

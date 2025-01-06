@@ -12,6 +12,8 @@ tribal_governments = {
 			feudal_government
 			bogomilist_government
 			rtp_republic_g
+			playable_republic_government
+			playable_theocracy_government
 			merchant_republic_government
 			muslim_merchant_republic_government
 			bogomilist_merchant_republic_government
@@ -21,11 +23,24 @@ tribal_governments = {
 			muslim_imperial_government
 			bogomilist_imperial_government
 			theocratic_feudal_government
+			oriental_monarchy_government
 			theocratic_imperial_government
 			chinese_imperial_government
+			chinese_vassal_government
+			japanese_imperial_government
+			japanese_feudal_government
+			japanese_monastic_feudal_government
 			rtp_mercenary_g
 			rtp_privateer_g
 			nomadic_government
+		}
+		accepts_liege_governments_religion = { # only radical governments from the correct religion are accepted
+			anarchist_government
+			demagogic_government
+			mystic_government
+			absolutist_government
+			hegemonic_government
+			messianic_government
 		}
 		
 		accepts_liege_governments_culture_and_religion = { 	# Tribals have no opinion penalty towards their liege if of the same culture and religion
@@ -53,20 +68,45 @@ tribal_governments = {
 				is_feudal = no
 				has_game_started = no
 			}
+			NOT = {
+				controls_religion = yes
+			}
 			OR = {
-				controls_religion = no
-				religion_group = muslim
-				has_religion_feature = religion_temporal_head
-				AND = {
-					OR = {
-						religion = norse_pagan_reformed
-						religion = aztec_reformed
+				LI_pagan_trigger = yes
+				NOR = {
+					oriental_monarchy_government_trigger = yes
+					classical_government_trigger = yes
+					is_government_potential = chinese_imperial_government
+					is_government_potential = japanese_imperial_government
+					NAND = { 
+						culture_group = tibetan_group
+						OR = {
+							religion = bon
+							religion = bon_reformed
+							religion_group = bud_group
+						}
+						higher_tier_than = BARON
 					}
-					has_religion_features = no
+					NAND = {
+						has_acceptable_chinese_culture_cvg_trigger = yes
+						has_acceptable_chinese_religion_trigger = yes # Same requirement as for Chinese Imperial
+						higher_tier_than = BARON
+					}
+					NAND = {
+						OR = {
+							religion = nihon_shinto
+							AND = {
+								religion_group = bud_group
+								culture = japanese
+							}
+							AND = {
+								religion_group = bud_group
+								culture = nihonohellenic
+							}
+						}
+						higher_tier_than = BARON
+					}
 				}
-				religion = paulician
-				religion = waldensian
-				religion = yazidism
 			}
 			is_patrician = no
 			mercenary = no

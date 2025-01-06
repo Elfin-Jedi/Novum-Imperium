@@ -1248,7 +1248,21 @@ peasant_unrest = {
 	local_tax_modifier = -0.5
 	icon = 31
 }
-
+martial_unrest = {
+	local_revolt_risk = 0.1
+	local_tax_modifier = -0.5
+	icon = 31
+}
+messianic_unrest = {
+	local_revolt_risk = 0.1
+	local_tax_modifier = -0.5
+	icon = 31
+}
+populist_unrest = {
+	local_revolt_risk = 0.1
+	local_tax_modifier = -0.5
+	icon = 31
+}
 religious_unrest = {
 	icon = 35
 	local_revolt_risk = 0.2
@@ -1869,6 +1883,11 @@ held_jarilo_timer = { icon = 1 }
 
 held_passover_timer = { icon = 1 }
 
+held_pagan_feast_timer = {
+	monthly_character_prestige = 0.3
+	monthly_character_piety = 0.3
+	icon = 13
+}
 expelled_jews_timer = { icon = 1 }
 
 refresh_trade_route_timer = { icon = 1 }
@@ -1919,6 +1938,30 @@ expelled_d_bektashi = {
 	icon = 35
 }
 expelled_d_hashshashin = {
+	icon = 35
+}
+expelled_d_enemies_of_avidya = {
+	icon = 35
+}
+expelled_d_ahrimans_divs = {
+	icon = 35
+}
+expelled_d_holy_doctors = {
+	icon = 35
+}
+expelled_d_council_of_aesir = {
+	icon = 35
+}
+expelled_d_warriors_of_oasis = {
+	icon = 35
+}
+expelled_d_blue_wolves = {
+	icon = 35
+}
+expelled_d_order_of_righteous = {
+	icon = 35
+}
+expelled_d_avengers_of_holy_pyre = {
 	icon = 35
 }
 expelled_d_holy_sepulchre = {
@@ -3525,6 +3568,30 @@ follower_of_dan = {
 	martial = -1
 }
 
+follower_of_yemoja = {
+	icon = 61
+	diplomacy = 2
+	intrigue = -1
+}
+
+follower_of_ekwensu = {
+	icon = 4
+	stewardship = 2
+	learning = -1
+}
+
+follower_of_orunmila = {
+	icon = 2
+	learning = 2
+	intrigue = -1
+}
+
+follower_of_shango = {
+	icon = 13
+	martial = 2
+	diplomacy = -1
+}
+
 follower_of_ukko = {
 	icon = 48
 	stewardship = 2
@@ -3588,6 +3655,11 @@ tsumburburas_blessing = {
 	fertility = 0.2
 }
 
+yemojas_blessing = {
+	icon = 39
+	fertility = 0.2
+}
+
 akkas_blessing = {
 	icon = 39
 	fertility = 0.2
@@ -3599,6 +3671,11 @@ voice_of_akka = {
 }
 
 voice_of_ayyur = {
+	icon = 3
+	general_opinion = 10
+}
+
+voice_of_yemoja = {
 	icon = 3
 	general_opinion = 10
 }
@@ -3652,6 +3729,14 @@ astounding_visions = {
 	is_visible = {
 		OR = {
 			society_member_of = the_assassins
+			society_member_of = the_assassins_bud_mahayana
+			society_member_of = the_assassins_mani_ahriman
+			society_member_of = the_assassins_priscillian
+			society_member_of = the_assassins_ragnarok
+			society_member_of = the_assassins_set
+			society_member_of = the_assassins_tengri_ahriman
+			society_member_of = the_assassins_yahyanism
+			society_member_of = the_assassins_zor_angra
 			character = FROM
 		}
 	}
@@ -3667,6 +3752,14 @@ uplifting_visions = {
 	is_visible = {
 		OR = {
 			society_member_of = the_assassins
+			society_member_of = the_assassins_bud_mahayana
+			society_member_of = the_assassins_mani_ahriman
+			society_member_of = the_assassins_priscillian
+			society_member_of = the_assassins_ragnarok
+			society_member_of = the_assassins_set
+			society_member_of = the_assassins_tengri_ahriman
+			society_member_of = the_assassins_yahyanism
+			society_member_of = the_assassins_zor_angra
 			character = FROM
 		}
 	}
@@ -3682,6 +3775,14 @@ frightening_visions = {
 	is_visible = {
 		OR = {
 			society_member_of = the_assassins
+			society_member_of = the_assassins_bud_mahayana
+			society_member_of = the_assassins_mani_ahriman
+			society_member_of = the_assassins_priscillian
+			society_member_of = the_assassins_ragnarok
+			society_member_of = the_assassins_set
+			society_member_of = the_assassins_tengri_ahriman
+			society_member_of = the_assassins_yahyanism
+			society_member_of = the_assassins_zor_angra
 			character = FROM
 		}
 	}
@@ -3697,6 +3798,14 @@ hashish_addict = {
 	is_visible = {
 		OR = {
 			society_member_of = the_assassins
+			society_member_of = the_assassins_bud_mahayana
+			society_member_of = the_assassins_mani_ahriman
+			society_member_of = the_assassins_priscillian
+			society_member_of = the_assassins_ragnarok
+			society_member_of = the_assassins_set
+			society_member_of = the_assassins_tengri_ahriman
+			society_member_of = the_assassins_yahyanism
+			society_member_of = the_assassins_zor_angra
 			character = FROM
 		}
 	}
@@ -3708,6 +3817,14 @@ withdrawal_symptoms = {
 	is_visible = {
 		OR = {
 			society_member_of = the_assassins
+			society_member_of = the_assassins_bud_mahayana
+			society_member_of = the_assassins_mani_ahriman
+			society_member_of = the_assassins_priscillian
+			society_member_of = the_assassins_ragnarok
+			society_member_of = the_assassins_set
+			society_member_of = the_assassins_tengri_ahriman
+			society_member_of = the_assassins_yahyanism
+			society_member_of = the_assassins_zor_angra
 			character = FROM
 		}
 	}
@@ -4836,6 +4953,14 @@ diplomatic_insight = {
 	is_visible = {
 		OR = {
 			society_member_of = the_assassins
+			society_member_of = the_assassins_bud_mahayana
+			society_member_of = the_assassins_mani_ahriman
+			society_member_of = the_assassins_priscillian
+			society_member_of = the_assassins_ragnarok
+			society_member_of = the_assassins_set
+			society_member_of = the_assassins_tengri_ahriman
+			society_member_of = the_assassins_yahyanism
+			society_member_of = the_assassins_zor_angra
 			character = FROM
 		}
 	}
@@ -4846,6 +4971,14 @@ martial_insight = {
 	is_visible = {
 		OR = {
 			society_member_of = the_assassins
+			society_member_of = the_assassins_bud_mahayana
+			society_member_of = the_assassins_mani_ahriman
+			society_member_of = the_assassins_priscillian
+			society_member_of = the_assassins_ragnarok
+			society_member_of = the_assassins_set
+			society_member_of = the_assassins_tengri_ahriman
+			society_member_of = the_assassins_yahyanism
+			society_member_of = the_assassins_zor_angra
 			character = FROM
 		}
 	}
@@ -4856,6 +4989,14 @@ intrigue_insight = {
 	is_visible = {
 		OR = {
 			society_member_of = the_assassins
+			society_member_of = the_assassins_bud_mahayana
+			society_member_of = the_assassins_mani_ahriman
+			society_member_of = the_assassins_priscillian
+			society_member_of = the_assassins_ragnarok
+			society_member_of = the_assassins_set
+			society_member_of = the_assassins_tengri_ahriman
+			society_member_of = the_assassins_yahyanism
+			society_member_of = the_assassins_zor_angra
 			character = FROM
 		}
 	}
@@ -4866,6 +5007,14 @@ learning_insight = {
 	is_visible = {
 		OR = {
 			society_member_of = the_assassins
+			society_member_of = the_assassins_bud_mahayana
+			society_member_of = the_assassins_mani_ahriman
+			society_member_of = the_assassins_priscillian
+			society_member_of = the_assassins_ragnarok
+			society_member_of = the_assassins_set
+			society_member_of = the_assassins_tengri_ahriman
+			society_member_of = the_assassins_yahyanism
+			society_member_of = the_assassins_zor_angra
 			character = FROM
 		}
 	}
@@ -4876,6 +5025,14 @@ stewardship_insight = {
 	is_visible = {
 		OR = {
 			society_member_of = the_assassins
+			society_member_of = the_assassins_bud_mahayana
+			society_member_of = the_assassins_mani_ahriman
+			society_member_of = the_assassins_priscillian
+			society_member_of = the_assassins_ragnarok
+			society_member_of = the_assassins_set
+			society_member_of = the_assassins_tengri_ahriman
+			society_member_of = the_assassins_yahyanism
+			society_member_of = the_assassins_zor_angra
 			character = FROM
 		}
 	}

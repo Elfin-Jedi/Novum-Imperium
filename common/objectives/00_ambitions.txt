@@ -2629,6 +2629,7 @@ obj_become_king = {
 			OR = {
 				religion = finnish_pagan
 				religion = west_african_pagan
+				religion = mande_pagan
 			}
 		}
 	}
@@ -2711,7 +2712,7 @@ obj_buddhist_stop_drinking = {
 	type = character
 
 	potential = {
-		religion_group = bud_group
+		ascetic_religions_trigger = yes
 		trait = drunkard
 	}
 
@@ -2751,7 +2752,7 @@ obj_buddhist_stop_drinking = {
 	}
 	abort = {
 		OR = {
-			NOT = { religion_group = bud_group }
+			ascetic_religions_trigger = no
 			is_incapable = yes
 			trait = infirm
 			AND = {
@@ -2783,7 +2784,7 @@ obj_buddhist_reject_empty_pleasures = {
 	type = character
 
 	potential = {
-		religion_group = bud_group
+		ascetic_religions_trigger = yes
 		trait = hedonist
 	}
 
@@ -2823,7 +2824,7 @@ obj_buddhist_reject_empty_pleasures = {
 	}
 	abort = {
 		OR = {
-			NOT = { religion_group = bud_group }
+			ascetic_religions_trigger = no
 			is_incapable = yes
 			trait = infirm
 			AND = {
@@ -2855,7 +2856,7 @@ obj_buddhist_abstain_sexual_excess = {
 	type = character
 
 	potential = {
-		religion_group = bud_group
+		ascetic_religions_trigger = yes
 		trait = lustful
 	}
 
@@ -2895,7 +2896,7 @@ obj_buddhist_abstain_sexual_excess = {
 	}
 	abort = {
 		OR = {
-			NOT = { religion_group = bud_group }
+			ascetic_religions_trigger = no
 			is_incapable = yes
 			trait = infirm
 			AND = {
@@ -2927,7 +2928,7 @@ obj_buddhist_reject_cruelty = {
 	type = character
 
 	potential = {
-		religion_group = bud_group
+		ascetic_religions_trigger = yes
 		OR = {
 			trait = impaler
 			trait = cruel
@@ -2971,7 +2972,7 @@ obj_buddhist_reject_cruelty = {
 	}
 	abort = {
 		OR = {
-			NOT = { religion_group = bud_group }
+			ascetic_religions_trigger = no
 			is_incapable = yes
 			trait = infirm
 			AND = {
@@ -3003,7 +3004,7 @@ obj_buddhist_temperance_food = {
 	type = character
 
 	potential = {
-		religion_group = bud_group
+		ascetic_religions_trigger = yes
 		trait = gluttonous
 	}
 
@@ -3043,7 +3044,7 @@ obj_buddhist_temperance_food = {
 	}
 	abort = {
 		OR = {
-			NOT = { religion_group = bud_group }
+			ascetic_religions_trigger = no
 			is_incapable = yes
 			trait = infirm
 			AND = {
@@ -3075,7 +3076,7 @@ obj_buddhist_reject_greed = {
 	type = character
 
 	potential = {
-		religion_group = bud_group
+		ascetic_religions_trigger = yes
 		trait = greedy
 	}
 
@@ -3115,7 +3116,7 @@ obj_buddhist_reject_greed = {
 	}
 	abort = {
 		OR = {
-			NOT = { religion_group = bud_group }
+			ascetic_religions_trigger = no
 			is_incapable = yes
 			trait = infirm
 			AND = {
@@ -3147,7 +3148,7 @@ obj_buddhist_reject_envy = {
 	type = character
 
 	potential = {
-		religion_group = bud_group
+		ascetic_religions_trigger = yes
 		trait = envious
 	}
 
@@ -3188,7 +3189,7 @@ obj_buddhist_reject_envy = {
 	}
 	abort = {
 		OR = {
-			NOT = { religion_group = bud_group }
+			ascetic_religions_trigger = no
 			is_incapable = yes
 			trait = infirm
 			AND = {
@@ -3220,7 +3221,7 @@ obj_buddhist_reject_hate = {
 	type = character
 
 	potential = {
-		religion_group = bud_group
+		ascetic_religions_trigger = yes
 		trait = wroth
 	}
 
@@ -3260,7 +3261,7 @@ obj_buddhist_reject_hate = {
 	}
 	abort = {
 		OR = {
-			NOT = { religion_group = bud_group }
+			ascetic_religions_trigger = no
 			is_incapable = yes
 			trait = infirm
 			AND = {
@@ -3292,7 +3293,7 @@ obj_buddhist_reject_pride = {
 	type = character
 
 	potential = {
-		religion_group = bud_group
+		ascetic_religions_trigger = yes
 		trait = proud
 	}
 
@@ -3332,7 +3333,7 @@ obj_buddhist_reject_pride = {
 	}
 	abort = {
 		OR = {
-			NOT = { religion_group = bud_group }
+			ascetic_religions_trigger = no
 			is_incapable = yes
 			trait = infirm
 			AND = {
@@ -3364,7 +3365,7 @@ obj_buddhist_defeat_fear = {
 	type = character
 
 	potential = {
-		religion_group = bud_group
+		ascetic_religions_trigger = yes
 		OR = {
 			trait = paranoid
 			trait = craven
@@ -3409,7 +3410,7 @@ obj_buddhist_defeat_fear = {
 	}
 	abort = {
 		OR = {
-			NOT = { religion_group = bud_group }
+			ascetic_religions_trigger = no
 			is_incapable = yes
 			trait = infirm
 			AND = {
@@ -3441,7 +3442,7 @@ obj_become_paragon_of_enlightenment = {
 	type = character
 
 	potential = {
-		religion_group = indian_group
+		ascetic_religions_trigger = yes
 	}
 
 	allow = {
@@ -3502,7 +3503,7 @@ obj_become_paragon_of_enlightenment = {
 			is_incapable = yes
 			is_ruler = no
 			has_impious_trait_trigger = yes
-			NOT = { religion_group = indian_group }
+			ascetic_religions_trigger = no
 			AND = {
 				ai = yes
 				NOT = { has_character_modifier = emf_objective_timer }

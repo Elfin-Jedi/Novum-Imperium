@@ -538,13 +538,31 @@ laws = {
 				}
 			}
 			modifier = {
-				factor = 0.25
-				owner = { trait = greedy }
+				factor = 1.5
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = submissive
+						trait = weakwilled
+					} 
+				}
 				has_law = feudal_obligations_1
 			}
 			modifier = {
-				factor = 4
-				owner = { trait = charitable }
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+						trait = just
+						trait = practical
+					}
+				}
 				has_law = feudal_obligations_1
 			}
 			modifier = { # Slow down AI reduction of Feudal Obligations
@@ -620,12 +638,57 @@ laws = {
 			}
 			modifier = {
 				factor = 2
-				owner = { trait = greedy }
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+					}
+				}
+				has_law = feudal_obligations_2
+			}
+			modifier = {
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+						trait = content
+					}
+				}
+				has_law = feudal_obligations_2
+			}
+			modifier = {
+				factor = 2
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+						trait = just
+						trait = practical
+					}
+				}
 				has_law = feudal_obligations_0
 			}
 			modifier = {
-				factor = 0.5
-				owner = { trait = charitable }
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = humble
+						trait = content
+						trait = submissive
+						trait = weakwilled
+					}
+				}
 				has_law = feudal_obligations_0
 			}
 			modifier = { # Slow down AI reduction of Feudal Obligations
@@ -705,12 +768,62 @@ laws = {
 			}
 			modifier = {
 				factor = 2
-				owner = { trait = greedy }
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = just
+						trait = practical
+						trait = humble
+						trait = content
+						trait = submissive
+						trait = weakwilled
+					}
+				}
+				has_law = feudal_obligations_3
+			}
+			modifier = {
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+					}
+				}
+				has_law = feudal_obligations_3
+			}
+			modifier = {
+				factor = 2
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+						trait = just
+						trait = practical					
+					}
+				}
 				has_law = feudal_obligations_1
 			}
 			modifier = {
-				factor = 0.5
-				owner = { trait = charitable }
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = humble
+						trait = content
+						trait = submissive
+						trait = weakwilled
+					}
+				}
 				has_law = feudal_obligations_1
 			}
 			modifier = { # Slow down AI reduction of Feudal Obligations
@@ -789,14 +902,62 @@ laws = {
 				}
 			}
 			modifier = {
-				factor = 2
-				owner = { trait = greedy }
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = just
+						trait = content
+						trait = submissive
+						trait = weakwilled
+					}
+				}
 				has_law = feudal_obligations_2
 			}
 			modifier = {
-				factor = 0.5
-				owner = { trait = charitable }
+				factor = 2
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+					}
+				}
 				has_law = feudal_obligations_2
+			}
+			modifier = {
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+					}
+				}
+				has_law = feudal_obligations_4
+			}
+			modifier = {
+				factor = 2
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = humble
+						trait = just
+						trait = practical
+						trait = content
+						trait = submissive
+						trait = weakwilled
+					}
+				}
+				has_law = feudal_obligations_4
 			}
 			modifier = { # Slow down AI reduction of Feudal Obligations
 				factor = 0.28
@@ -871,13 +1032,32 @@ laws = {
 				}
 			}
 			modifier = {
-				factor = 2
-				owner = { trait = greedy }
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = just
+						trait = practical
+						trait = submissive
+						trait = weakwilled
+						trait = content
+					}
+				}
 				has_law = feudal_obligations_3
 			}
 			modifier = {
-				factor = 0.5
-				owner = { trait = charitable }
+				factor = 1.5
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+					}
+				}
 				has_law = feudal_obligations_3
 			}
 		}
@@ -1212,22 +1392,40 @@ laws = {
 					has_law = iqta_obligations_4
 				}
 			}
-			modifier = {
-				factor = 0.25
-				owner = { trait = greedy }
-				has_law = iqta_obligations_1
-			}
-			modifier = {
-				factor = 4
-				owner = { trait = charitable }
-				has_law = iqta_obligations_1
-			}
 			modifier = { # Slow down AI reduction of Iqta Obligations
 				factor = 0.04
 				has_law = iqta_obligations_1
 			}
+			factor = 1
+			modifier = {
+				factor = 1.5
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = submissive
+						trait = weakwilled
+					} 
+				}
+				has_law = iqta_obligations_1
+			}
+			modifier = {
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+						trait = just
+						trait = practical
+					}
+				}
+				has_law = iqta_obligations_1
+			}
 		}
-		
 	}
 
 	iqta_obligations_1 = {
@@ -1285,14 +1483,59 @@ laws = {
 				}
 			}
 			modifier = {
-				factor = 0.25
-				owner = { trait = greedy }
+				factor = 2
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+					} 
+				}
 				has_law = iqta_obligations_2
 			}
 			modifier = {
-				factor = 4
-				owner = { trait = charitable }
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+						trait = content
+					}
+				}
 				has_law = iqta_obligations_2
+			}
+			modifier = {
+				factor = 2
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+						trait = just
+						trait = practical
+					}
+				}
+				has_law = iqta_obligations_0
+			}
+			modifier = {
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = humble
+						trait = content
+						trait = submissive
+						trait = weakwilled
+					} 
+				}
+				has_law = iqta_obligations_0
 			}
 			modifier = { # Slow down AI reduction of Iqta Obligations
 				factor = 0.12
@@ -1371,12 +1614,62 @@ laws = {
 			}
 			modifier = {
 				factor = 2
-				owner = { trait = greedy }
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = just
+						trait = practical
+						trait = humble
+						trait = content
+						trait = submissive
+						trait = weakwilled
+					} 
+				}
+				has_law = iqta_obligations_3
+			}
+			modifier = {
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+					}
+				}
+				has_law = iqta_obligations_3
+			}
+			modifier = {
+				factor = 2
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+						trait = just
+						trait = practical					
+					}
+				}
 				has_law = iqta_obligations_1
 			}
 			modifier = {
-				factor = 0.5
-				owner = { trait = charitable }
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = humble
+						trait = content
+						trait = submissive
+						trait = weakwilled
+					} 
+				}
 				has_law = iqta_obligations_1
 			}
 			modifier = { # Slow down AI reduction of Iqta Obligations
@@ -1455,14 +1748,62 @@ laws = {
 				}
 			}
 			modifier = {
-				factor = 2
-				owner = { trait = greedy }
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = just
+						trait = content
+						trait = submissive
+						trait = weakwilled					
+					} 
+				}
 				has_law = iqta_obligations_2
 			}
 			modifier = {
-				factor = 0.5
-				owner = { trait = charitable }
+				factor = 2
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative					
+					}
+				}
 				has_law = iqta_obligations_2
+			}
+			modifier = {
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative					
+					}
+				}
+				has_law = iqta_obligations_4
+			}
+			modifier = {
+				factor = 2
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = humble
+						trait = just
+						trait = practical
+						trait = content
+						trait = submissive
+						trait = weakwilled
+					} 
+				}
+				has_law = iqta_obligations_4
 			}
 			modifier = { # Slow down AI reduction of Iqta Obligations
 				factor = 0.28
@@ -1537,13 +1878,32 @@ laws = {
 				}
 			}
 			modifier = {
-				factor = 2
-				owner = { trait = greedy }
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = just
+						trait = practical
+						trait = submissive
+						trait = weakwilled
+						trait = content
+					} 
+				}
 				has_law = iqta_obligations_3
 			}
 			modifier = {
-				factor = 0.5
-				owner = { trait = charitable }
+				factor = 1.5
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+					}
+				}
 				has_law = iqta_obligations_3
 			}
 		}
@@ -1864,13 +2224,31 @@ laws = {
 				}
 			}
 			modifier = {
-				factor = 0.25
-				owner = { trait = greedy }
+				factor = 1.5
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = submissive
+						trait = weakwilled
+					} 
+				}
 				has_law = temple_obligations_1
 			}
 			modifier = {
-				factor = 4
-				owner = { trait = charitable }
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+						trait = just
+						trait = practical
+					}
+				}
 				has_law = temple_obligations_1
 			}
 			modifier = { # Slow down AI reduction of Temple Obligations
@@ -1945,12 +2323,57 @@ laws = {
 			}
 			modifier = {
 				factor = 2
-				owner = { trait = greedy }
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+					} 
+				}
+				has_law = temple_obligations_2
+			}
+			modifier = {
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+						trait = content
+					}
+				}
+				has_law = temple_obligations_2
+			}
+			modifier = {
+				factor = 2
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+						trait = just
+						trait = practical
+					}
+				}
 				has_law = temple_obligations_0
 			}
 			modifier = {
-				factor = 0.5
-				owner = { trait = charitable }
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = humble
+						trait = content
+						trait = submissive
+						trait = weakwilled
+					} 
+				}
 				has_law = temple_obligations_0
 			}
 			modifier = { # Slow down AI reduction of Temple Obligations
@@ -2029,12 +2452,62 @@ laws = {
 			}
 			modifier = {
 				factor = 2
-				owner = { trait = greedy }
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = just
+						trait = practical
+						trait = humble
+						trait = content
+						trait = submissive
+						trait = weakwilled
+					} 
+				}
+				has_law = temple_obligations_3
+			}
+			modifier = {
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+					}
+				}
+				has_law = temple_obligations_3
+			}
+			modifier = {
+				factor = 2
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+						trait = just
+						trait = practical					
+					}
+				}
 				has_law = temple_obligations_1
 			}
 			modifier = {
-				factor = 0.5
-				owner = { trait = charitable }
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = humble
+						trait = content
+						trait = submissive
+						trait = weakwilled
+					} 
+				}
 				has_law = temple_obligations_1
 			}
 			modifier = { # Slow down AI reduction of Temple Obligations
@@ -2112,14 +2585,62 @@ laws = {
 				}
 			}
 			modifier = {
-				factor = 2
-				owner = { trait = greedy }
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = just
+						trait = content
+						trait = submissive
+						trait = weakwilled					
+					}
+				}
 				has_law = temple_obligations_2
 			}
 			modifier = {
-				factor = 0.5
-				owner = { trait = charitable }
+				factor = 2
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative					
+					}
+				}
 				has_law = temple_obligations_2
+			}
+			modifier = {
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative					
+					}
+				}
+				has_law = temple_obligations_4
+			}
+			modifier = {
+				factor = 2
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = humble
+						trait = just
+						trait = practical
+						trait = content
+						trait = submissive
+						trait = weakwilled
+					} 
+				}
+				has_law = temple_obligations_4
 			}
 			modifier = { # Slow down AI reduction of Temple Obligations
 				factor = 0.28
@@ -2193,13 +2714,32 @@ laws = {
 				}
 			}
 			modifier = {
-				factor = 2
-				owner = { trait = greedy }
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = just
+						trait = practical
+						trait = submissive
+						trait = weakwilled
+						trait = content
+					} 
+				}
 				has_law = temple_obligations_3
 			}
 			modifier = {
-				factor = 0.5
-				owner = { trait = charitable }
+				factor = 1.5
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+					}
+				}
 				has_law = temple_obligations_3
 			}
 		}
@@ -2520,13 +3060,31 @@ laws = {
 				}
 			}
 			modifier = {
-				factor = 0.25
-				owner = { trait = greedy }
+				factor = 1.5
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = submissive
+						trait = weakwilled
+					} 
+				}
 				has_law = city_obligations_1
 			}
 			modifier = {
-				factor = 4
-				owner = { trait = charitable }
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+						trait = just
+						trait = practical
+					}
+				}
 				has_law = city_obligations_1
 			}
 			modifier = { # Slow down AI reduction of City Obligations
@@ -2601,12 +3159,57 @@ laws = {
 			}
 			modifier = {
 				factor = 2
-				owner = { trait = greedy }
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+					} 
+				}
+				has_law = city_obligations_2
+			}
+			modifier = {
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+						trait = content
+					}
+				}
+				has_law = city_obligations_2
+			}
+			modifier = {
+				factor = 2
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+						trait = just
+						trait = practical
+					}
+				}
 				has_law = city_obligations_0
 			}
 			modifier = {
-				factor = 0.5
-				owner = { trait = charitable }
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = humble
+						trait = content
+						trait = submissive
+						trait = weakwilled
+					} 
+				}
 				has_law = city_obligations_0
 			}
 			modifier = { # Slow down AI reduction of City Obligations
@@ -2685,12 +3288,62 @@ laws = {
 			}
 			modifier = {
 				factor = 2
-				owner = { trait = greedy }
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = just
+						trait = practical
+						trait = humble
+						trait = content
+						trait = submissive
+						trait = weakwilled
+					} 
+				}
+				has_law = city_obligations_3
+			}
+			modifier = {
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+					}
+				}
+				has_law = city_obligations_3
+			}
+			modifier = {
+				factor = 2
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+						trait = just
+						trait = practical					
+					}
+				}
 				has_law = city_obligations_1
 			}
 			modifier = {
-				factor = 0.5
-				owner = { trait = charitable }
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = humble
+						trait = content
+						trait = submissive
+						trait = weakwilled
+					} 
+				}
 				has_law = city_obligations_1
 			}
 			modifier = { # Slow down AI reduction of City Obligations
@@ -2768,14 +3421,62 @@ laws = {
 				}
 			}
 			modifier = {
-				factor = 2
-				owner = { trait = greedy }
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = just
+						trait = content
+						trait = submissive
+						trait = weakwilled					
+					} 
+				}
 				has_law = city_obligations_2
 			}
 			modifier = {
-				factor = 0.5
-				owner = { trait = charitable }
+				factor = 2
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative					
+					}
+				}
 				has_law = city_obligations_2
+			}
+			modifier = {
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative					
+					}
+				}
+				has_law = city_obligations_4
+			}
+			modifier = {
+				factor = 2
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = humble
+						trait = just
+						trait = practical
+						trait = content
+						trait = submissive
+						trait = weakwilled
+					} 
+				}
+				has_law = city_obligations_4
 			}
 			modifier = { # Slow down AI reduction of City Obligations
 				factor = 0.28
@@ -2849,13 +3550,32 @@ laws = {
 				}
 			}
 			modifier = {
-				factor = 2
-				owner = { trait = greedy }
+				factor = 0
+				holder_scope = { 
+					OR = {
+						trait = charitable 
+						trait = noblespirit
+						trait = generous
+						trait = kind
+						trait = just
+						trait = practical
+						trait = submissive
+						trait = weakwilled
+						trait = content
+					} 
+				}
 				has_law = city_obligations_3
 			}
 			modifier = {
-				factor = 0.5
-				owner = { trait = charitable }
+				factor = 1.5
+				holder_scope = { 
+					OR = {
+						trait = greedy 
+						trait = cruel
+						trait = ambitious
+						trait = authoritative
+					}
+				}
 				has_law = city_obligations_3
 			}
 		}

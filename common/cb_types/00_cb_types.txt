@@ -2085,6 +2085,8 @@ change_feudal_elective_succession_law = {
 	}
 }
 
+# Sanctioned Invasion
+# availability: Christian group
 invasion = {
 	name = CB_NAME_INVASION
 	war_name = WAR_NAME_INVASION
@@ -2101,7 +2103,10 @@ invasion = {
 
 	can_use = {
 		emf_cb_can_use = yes
-		ROOT = { mercenary = no }
+		ROOT = {
+			mercenary = no
+			is_theocracy = no
+		}
 	}
 
 	can_use_title = {
@@ -2164,6 +2169,11 @@ invasion = {
 							religion_group = christian
 							religion = hellenic_pagan
 							religion = hellenic_pagan_reformed
+							culture = roman
+							culture = romanobrython
+							culture = romanogothic
+							culture = galloroman
+							culture = greek
 						}
 					}
 					character_event = {
@@ -2638,6 +2648,11 @@ invasion = {
 						religion_group = christian
 						religion = hellenic_pagan
 						religion = hellenic_pagan_reformed
+						culture = roman
+						culture = romanobrython
+						culture = romanogothic
+						culture = galloroman
+						culture = greek
 					}
 				}
 				hidden_tooltip = {
@@ -2741,6 +2756,8 @@ invasion = {
 	}
 }
 
+# Grand Invasion (retained old name for code refernce)
+# availability: Horde cultures, Mercenaries, 500 gold stockpiled
 tribal_invasion = {
 	name = CB_NAME_INVASION
 	war_name = WAR_NAME_INVASION
@@ -2802,104 +2819,48 @@ tribal_invasion = {
 				}
 			}
 			is_nomadic = no
+			is_theocracy = no
 			OR = {
 				AND = {
 					has_dlc = "Horse Lords"
-					higher_tier_than = COUNT
 					OR = {
-						has_flag = horde_invader
+						has_character_flag = horde_invader
 						AND = {
-							independent = yes
-							novum_imperium_is_pagan = yes
-							OR = {
-								culture_group = altaic
-								trigger_if = {
-									limit = { emf_has_swmh = yes }
-									culture = old_hungarian
-								}
-								trigger_else = {
-									culture_group = magyar
-								}
-								culture_group = mesoamerican
-							}
+							religion = quetzal
+							culture_group = aztecan_group
 							FROM = {
-								NOT = { novum_imperium_is_pagan = yes } # Should subjugate these instead
-							}
-							OR = {
-								is_tribal = yes
-								primary_title = {
-									has_law = succ_elective_gavelkind
+								NOT = {
+									religion = quetzal # Should subjugate these instead
 								}
-								has_landed_title = e_mongol_empire
-								has_landed_title = e_mexikha
 							}
 						}
 					}
 				}
 				AND = {
 					NOT = { has_dlc = "Horse Lords" }
-					independent = yes
 					higher_tier_than = COUNT
+					independent = yes
 					OR = {
-						novum_imperium_is_pagan = yes
-						AND = {
-							OR = {
-								has_horde_culture = yes
-								has_flag = horde_invader
-							}
-							NOT = { religion_group = christian }
+						religion = quetzal
+						OR = {
+							has_horde_culture = yes
+							has_character_flag = horde_invader
 						}
 					}
-					OR = {
-						has_flag = horde_invader
-						culture_group = altaic
-						trigger_if = {
-							limit = { emf_has_swmh = yes }
-							culture = old_hungarian
-						}
-						trigger_else = {
-							culture_group = magyar
-						}
-						culture_group = mesoamerican
-					}
-					OR = {
-						has_horde_culture = yes
-						has_flag = horde_invader
-						FROM = {
-							NOT = { novum_imperium_is_pagan = yes } # Should subjugate these instead
-						}
-					}
-					OR = {
-						has_flag = horde_invader
-						is_tribal = yes
-						primary_title = {
-							has_law = succ_elective_gavelkind
-						}
-					}
+					#NOT = { religion_group = christian }
 				}
 				AND = {
 					mercenary = yes
-					num_of_titles == 1
-				}
-				AND = {
-					has_flag = is_child_of_destiny
-					any_owned_bloodline = {
-						has_bloodline_flag = founder_invasions
-						bloodline_is_active_for = PREV
+					NOT = {
+						num_of_titles = 2
 					}
 				}
-				AND = {
-					NOT = { has_flag = flag_declared_bloodline_invasion }
-					any_owned_bloodline = {
-						has_bloodline_flag = bloodline_great_conquerors
-						bloodline_is_active_for = PREV
-					}
-				}
-				# Blank check
-				has_flag = tribal_inv_requirements_bypass
 			}
 		}
-		ROOT = { NOT = { same_realm = FROM } }
+
+		ROOT = {
+			NOT = { same_realm = FROM }
+		}
 	}
 
 	can_use_title = {
@@ -2994,6 +2955,56 @@ tribal_invasion = {
 			}
 		}
 		emf_cb_on_add = yes
+	}
+	
+	can_use_title = {
+		FROM = {
+			any_realm_title = {
+				de_jure_liege_or_above = PREVPREV
+			}
+		}
+		# Can't use this against the Tenno under some circumstances
+		OR = {
+			FROM = {
+				NAND = {
+					controls_religion = yes
+					religion = nihon_shinto
+				}
+			}
+			ROOT = {
+				NOT = {
+					top_liege = {
+						any_vassal = {
+							character = FROM
+						}
+						NOR = {
+							religion = nihon_shinto
+							AND = {
+								religion_group = bud_group
+								culture = japanese
+							}
+						}
+						NOT = {
+							government = chinese_imperial_government
+						}
+					}
+				}
+			}
+			NOR = {
+				any_direct_de_jure_vassal_title = {
+					any_direct_de_jure_vassal_title = {
+						title = c_yamashiro
+					}
+				}
+				FROM = {
+					capital_scope = {
+						kingdom = {
+							title = PREVPREVPREV # Contains the Tenno's current capital
+						}
+					}
+				}
+			}
+		}
 	}
 
 	on_success = {
@@ -3240,6 +3251,11 @@ tribal_invasion = {
 						religion_group = christian
 						religion = hellenic_pagan
 						religion = hellenic_pagan_reformed
+						culture = roman
+						culture = romanobrython
+						culture = romanogothic
+						culture = galloroman
+						culture = greek
 					}
 				}
 				hidden_tooltip = {
@@ -3542,6 +3558,21 @@ crusade = {
 					has_global_flag = african_ghws_unlocked
 				}
 			}
+			top_liege = {
+				OR = {
+					NOR = { # If your government type ignores religion, don't wage holy war!
+						government = chinese_imperial_government
+						government = chinese_vassal_government
+						government = japanese_imperial_government
+						government = japanese_feudal_government
+						government = confucian_bureaucracy # Not used at present, but should still be here...
+					}
+					FROM = {
+						has_character_modifier = known_satanist
+					}
+				}
+			}
+			piety = 500
 		}
 	}
 
@@ -3568,7 +3599,6 @@ crusade = {
 			any_demesne_title = { lower_tier_than = DUKE }
 		}
 		FROM = {
-			NOT = { religion = ROOT }
 			OR = {
 				NOR = {
 					religion_group = ROOT
@@ -3586,6 +3616,14 @@ crusade = {
 						religion = paulician
 						religion = kharijite
 					}
+				}
+			}
+			NOT = {
+				any_war = {
+					defender = {
+						character = FROM
+					}
+					using_cb = crusade
 				}
 			}
 		}
@@ -3643,6 +3681,93 @@ crusade = {
 			OR = {
 				num_of_realm_counties = { value = 6 title = PREV }
 				ROOT = { has_flag = reclaim_heresy_crusade }
+			}
+			NOT = {
+				distance_from_realm = {
+					who = ROOT
+					value = 1000
+				}
+			}
+			any_realm_province = {
+				county = {
+					de_jure_liege_or_above = PREVPREV
+				}
+				ROOT = {
+					OR = {
+						religion = catholic
+						religion = cathar_reformed
+						religion = christian_populist_reformed
+						religion = mari_christ_reformed
+						religion = slavic_christian_reformed
+						religion = melkite
+						religion = sabellianist
+						religion = adoptionist
+						religion = nestorian
+						religion = iconoclast
+						religion = monophysite
+						religion = monothelite
+						religion = apollinarist
+						religion = pelagian
+						religion = semipelagian
+						religion = cybele_reformed
+						religion = ethiopian_war_reformed
+						religion = almaqah
+						religion = quetzal
+						religion = zande_pagan_reformed
+						religion = zulu_pagan_reformed
+						religion = nyau
+						religion = berber_pagan_reformed
+						religion = bud_zen_reformed
+						religion = bud_sthaviravada
+						religion = bud_mahayana
+						religion = bud_pureland
+						religion = bud_vajrayana
+						religion = bon_reformed
+						religion = lubu_reformed
+						religion = tao_reformed
+						religion = ragnarok_reformed
+						religion = teiwaz_reformed
+						religion = aten_reformed
+						religion = isis_reformed
+						religion = set_reformed
+						religion = voipel_reformed
+						religion = alexandros
+						religion = solomonic_alexandros
+						religion = murugan_reformed
+						religion = vidharma_reformed
+						religion = jain
+						religion = inuit_pagan_reformed
+						religion = illuyanka_reformed
+						religion = mand_ruha_reformed
+						religion = mandaean_reformed
+						religion = ahriman_reformed
+						religion = mani
+						religion = mani_mithra
+						religion = mithra
+						religion = mithra_christ
+						religion = mithra_sol
+						religion = muslim_aliite_reformed
+						religion = muslim_domination_reformed
+						religion = ashari
+						religion = athari
+						religion = maturidi
+						religion = zahiri
+						religion = shiite
+						religion = mutazil
+						religion = haruri
+						religion = erlik_reformed
+						religion = tengri_bud_reformed
+						religion = tengri_confucian_reformed
+						religion = tengri_mani_reformed
+						religion = zal
+						religion = zal_christ
+						religion = zal_mani
+						religion = mazdakism_reformed
+						religion = zor_angra_reformed
+						religion = zurvanism_reformed
+						religion = zoroastrian
+					}
+				}
 			}
 		}
 		# Restrictions on crusade targets for AI religion heads
@@ -3958,6 +4083,11 @@ crusade = {
 							religion_group = christian
 							religion = hellenic_pagan
 							religion = hellenic_pagan_reformed
+							culture = roman
+							culture = romanobrython
+							culture = romanogothic
+							culture = galloroman
+							culture = greek
 						}
 					}
 					character_event = { id = LoR.30 days = 12 }
@@ -6176,11 +6306,27 @@ excommunicated_ruler = {
 
 	can_use_gui = {
 		emf_cb_can_use_gui = yes
+		ROOT = {
+			piety = 100
+			OR = {
+				trait = zealous
+				trait = spiritual
+				trait = ambitious
+				trait = dogmatic
+				trait = bible
+			}
+			NOR = {
+				trait = cynical
+				trait = tolerant
+				trait = tolerant_ruler
+			}
+		}
 	}
 
 	can_use = {
 		emf_cb_can_use = yes
 		FROM = {
+			religion = ROOT
 			excommunicated_for = ROOT
 			in_revolt = no
 			NOT = {
@@ -6195,6 +6341,7 @@ excommunicated_ruler = {
 		ROOT = {
 			NOT = { excommunicated_for = ROOT }
 			mercenary = no
+			is_nomadic = no
 		}
 	}
 
@@ -6623,6 +6770,11 @@ overthrow_ruler = {
 	}
 
 	can_use = {
+		FROM = {
+			primary_title = {
+				is_vice_royalty = no
+			}
+		}
 		ROOT = { de_facto_liege = FROM }
 	}
 
@@ -6784,6 +6936,11 @@ overthrow_ruler_no_calls = {
 
 	can_use = {
 		emf_cb_can_use = yes
+		FROM = {
+			primary_title = {
+				is_vice_royalty = no
+			}
+		}
 		ROOT = { de_facto_liege = FROM }
 	}
 
@@ -7304,6 +7461,43 @@ coastal_county_republic = {
 			}
 		}
 		emf_cb_can_use_title = yes
+		# Can't use this against the Tenno under some circumstances
+		OR = {
+			FROM = {
+				NAND = {
+					controls_religion = yes
+					religion = nihon_shinto
+				}
+			}
+			ROOT = {
+				NOT = {
+					top_liege = {
+						any_vassal = {
+							character = FROM
+						}
+						NOR = {
+							religion = nihon_shinto
+							AND = {
+								religion_group = bud_group
+								culture = japanese
+							}
+						}
+						NOT = {
+							government = chinese_imperial_government
+						}
+					}
+				}
+			}
+			NOT = {
+				FROM = {
+					capital_scope = {
+						county = {
+							title = PREVPREVPREV # Contains the Tenno's current capital
+						}
+					}
+				}
+			}
+		}
 	}
 
 	is_valid = {
@@ -8111,6 +8305,23 @@ cb_faction_independence = {
 				prestige = 100
 				reverse_opinion = { who = FROM modifier = opinion_rightful_subjugation }
 				set_flag = ai_flag_never_transfer
+				any_demesne_title = {
+					limit = {
+						controls_religion = no
+						higher_tier_than = BARON
+						FROM = {
+							OR = { # If the old liege can use the subjugation CB, give no claims
+								NOR = {
+									LI_traditional_trigger = yes
+									religion = quetzal
+									religion = tarhunt
+								}
+								NOT = { culture_group = PREVPREV }
+							}
+						}
+					}
+					add_weak_pressed_claim = FROM
+				}
 			}
 		}
 		ROOT = {
@@ -9048,6 +9259,8 @@ seize_trade_post = {
 	}
 }
 
+# Prepared Invasion
+# availability: Populist-souls (and Messianic Souls? )
 viking_invasion = {
 	name = CB_NAME_VIKING_INVASION
 	war_name = WAR_NAME_VIKING_INVASION
@@ -9084,21 +9297,18 @@ viking_invasion = {
 				who = FROM
 				modifier = preparing_to_invade
 			}
+			OR = {
+				messianic_soul_trigger = yes
+				populist_soul_trigger = yes
+			}
 			NOT = { is_liege_or_above = FROM }
-			mercenary = no
-			trigger_if = {
-				limit = {
-					ai = yes
-					is_patrician = yes
+			custom_tooltip = {
+				text = NOT_BUSY
+				hidden_tooltip = {
+					is_inaccessible_trigger = no
 				}
-				has_game_rule = { name = mr_cb_restriction value = off }
 			}
 		}
-	}
-
-	can_use_title = {
-		emf_cb_can_use_de_jure_title = yes
-		is_valid_viking_invasion_target = FROM # Checks that FROM holds the right amount of territory in the kingdom
 	}
 	
 	is_valid = {
@@ -9112,6 +9322,11 @@ viking_invasion = {
 				}
 			}
 		}
+	}
+
+	can_use_title = {
+		emf_cb_can_use_de_jure_title = yes
+		is_valid_viking_invasion_target = FROM # Checks that FROM holds the right amount of territory in the kingdom
 	}
 
 	is_valid_title = { FROM = { any_realm_province = { de_jure_liege_or_above = PREVPREV } } }
@@ -9244,6 +9459,11 @@ viking_invasion = {
 						religion_group = christian
 						religion = hellenic_pagan
 						religion = hellenic_pagan_reformed
+						culture = roman
+						culture = romanobrython
+						culture = romanogothic
+						culture = galloroman
+						culture = greek
 					}
 				}
 				hidden_tooltip = {
@@ -9295,6 +9515,8 @@ viking_invasion = {
 	}
 }
 
+# Subjugation
+# availability: non-reformed Traditional/Martial
 pagan_subjugation = {
 	name = CB_NAME_PAGAN_SUBJUGATION
 	war_name = WAR_NAME_PAGAN_SUBJUGATION
@@ -9923,6 +10145,34 @@ duchy_adventure = {
 
 	can_use = {
 		ROOT = { has_flag = duchy_adventurer }
+		# Can't use this against the Tenno under some circumstances
+		OR = {
+			FROM = {
+				NAND = {
+					controls_religion = yes
+					religion = nihon_shinto
+				}
+			}
+			ROOT = {
+				NOT = {
+					top_liege = {
+						any_vassal = {
+							character = FROM
+						}
+						NOR = {
+							religion = nihon_shinto
+							AND = {
+								religion_group = bud_group
+								culture = japanese
+							}
+						}
+						NOT = {
+							government = chinese_imperial_government
+						}
+					}
+				}
+			}
+		}
 	}
 
 	can_use_title = {
@@ -10101,6 +10351,38 @@ kingdom_adventure = { # Used mainly for Muslims adventuring into India
 			OR = {
 				has_flag = duchy_adventurer
 				has_flag = rum_creator
+			}
+			NOR = {
+				trait = treasure_fleet_preparation
+				trait = treasure_fleet_voyage
+			}
+		}
+		# Can't use this against the Tenno under some circumstances
+		OR = {
+			FROM = {
+				NAND = {
+					controls_religion = yes
+					religion = nihon_shinto
+				}
+			}
+			ROOT = {
+				NOT = {
+					top_liege = {
+						any_vassal = {
+							character = FROM
+						}
+						NOR = {
+							religion = nihon_shinto
+							AND = {
+								religion_group = bud_group
+								culture = japanese
+							}
+						}
+						NOT = {
+							government = chinese_imperial_government
+						}
+					}
+				}
 			}
 		}
 	}
@@ -13979,6 +14261,35 @@ tributary_cb = {
 			NOT = { year = 920 }
 			emf_alternate_start = no
 		}
+		
+		modifier = {
+			factor = 0.25
+			ROOT = {
+				is_chinese_emperor_trigger = yes
+			}
+			any_independent_ruler = {
+				NOR = {
+					character = ROOT
+					has_truce = ROOT
+					suzerain = {
+						character = ROOT
+					}
+				}
+				government = chinese_imperial_government
+				any_realm_province = {
+					OR = {
+						region = world_china
+					}
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			ROOT = {
+				government = japanese_imperial_government # Japan was historically isolationist, so spamming tributaries isn't good...
+			}
+		}
 	}
 }
 
@@ -14906,6 +15217,34 @@ nomad_subjugation = {
 				}
 			}
 		}
+		# Can't use this against the Tenno under some circumstances
+		OR = {
+			FROM = {
+				NAND = {
+					controls_religion = yes
+					religion = nihon_shinto
+				}
+			}
+			ROOT = {
+				NOT = {
+					top_liege = {
+						any_vassal = {
+							character = FROM
+						}
+						NOR = {
+							religion = nihon_shinto
+							AND = {
+								religion_group = bud_group
+								culture = japanese
+							}
+						}
+						NOT = {
+							government = chinese_imperial_government
+						}
+					}
+				}
+			}
+		}
 		ROOT = {
 			any_realm_province = {
 				owner_under_ROOT = yes
@@ -14916,6 +15255,7 @@ nomad_subjugation = {
 			ROOT = { ai = no }
 			FROM = { num_of_count_titles_in_realm > 4 }
 		}
+		
 	}
 
 	is_valid = {
@@ -15037,6 +15377,11 @@ nomad_subjugation = {
 						religion_group = christian
 						religion = hellenic_pagan
 						religion = hellenic_pagan_reformed
+						culture = roman
+						culture = romanobrython
+						culture = romanogothic
+						culture = galloroman
+						culture = greek
 					}
 				}
 				hidden_tooltip = {
@@ -15200,7 +15545,48 @@ nomad_invasion = {
 				}
 			}
 		}
+		# Can't use this against the Tenno under some circumstances
+		OR = {
+			FROM = {
+				NAND = {
+					controls_religion = yes
+					religion = nihon_shinto
+				}
+			}
+			ROOT = {
+				NOT = {
+					top_liege = {
+						any_vassal = {
+							character = FROM
+						}
+						NOR = {
+							religion = nihon_shinto
+							AND = {
+								religion_group = bud_group
+								culture = japanese
+							}
+						}
+						NOT = {
+							government = chinese_imperial_government
+						}
+					}
+				}
+			}
+			NOR = {
+				any_direct_de_jure_vassal_title = {
+						title = c_yamashiro
+				}
+				FROM = {
+					capital_scope = {
+						kingdom = {
+							title = PREVPREV # Contains the Tenno's current capital
+						}
+					}
+				}
+			}
+		}
 	}
+	
 
 	can_use_title = { # EMF: only if ROOT has a border with one of FROM's provinces within the kingdom
 		emf_cb_can_use_de_jure_title = yes
@@ -15380,6 +15766,11 @@ nomad_invasion = {
 						religion_group = christian
 						religion = hellenic_pagan
 						religion = hellenic_pagan_reformed
+						culture = roman
+						culture = romanobrython
+						culture = romanogothic
+						culture = galloroman
+						culture = greek
 					}
 				}
 				hidden_tooltip = {
@@ -15507,10 +15898,59 @@ nomad_expansion = {
 				}
 			}
 		}
+		# Can't use this against the Tenno under some circumstances
+		OR = {
+			FROM = {
+				NAND = {
+					controls_religion = yes
+					religion = nihon_shinto
+				}
+			}
+			ROOT = {
+				NOT = {
+					top_liege = {
+						any_vassal = {
+							character = FROM
+						}
+						NOR = {
+							religion = nihon_shinto
+							AND = {
+								religion_group = bud_group
+								culture = japanese
+							}
+						}
+						NOT = {
+							government = chinese_imperial_government
+						}
+					}
+				}
+			}
+			NOR = {
+				title = d_kinai # Contains Yamashiro
+				FROM = {
+					capital_scope = {
+						duchy = {
+							title = PREVPREVPREV # Contains the Tenno's current capital
+						}
+					}
+				}
+			}
+		}
 	}
 
 	is_valid = {
 		ROOT = {
+			NOR = {
+				pays_tribute_to = FROM
+				any_liege = {
+					OR = {
+						pays_tribute_to = FROM
+						FROM = {
+							pays_tribute_to = PREV
+						}
+					}
+				}
+			}
 			is_nomadic = yes
 			NOT = { same_realm = FROM }
 		}
@@ -33681,6 +34121,7 @@ emf_revolt_religious = {
 
 	can_use = {
 		ROOT = {
+			primary_title = { temporary = yes } # Revolter or adventurer trigger
 			has_flag = emf_revolt_religious_leader
 			emf_hostile_religion_to_FROM = yes
 			any_claim = {

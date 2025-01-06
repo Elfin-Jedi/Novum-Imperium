@@ -1234,8 +1234,11 @@ gender_laws = {
 							liege = {
 								primary_title = {
 									OR = {
-										has_law = true_cognatic_succession
+										has_law = agnatic_succession
 										has_law = cognatic_succession
+										has_law = true_cognatic_succession
+										has_law = enatic_cognatic_succession
+										has_law = enatic_succession
 									}
 								}
 							}
@@ -1788,8 +1791,10 @@ gender_laws = {
 			is_primary_type_title = no
 		}
 		allow = {
-			has_law = true_cognatic_succession
-			has_law = enatic_succession
+			OR = {
+				has_law = true_cognatic_succession
+				has_law = enatic_succession
+			}
 			holder_scope = {
 				OR = {
 					has_game_rule = { name = gender value = all }

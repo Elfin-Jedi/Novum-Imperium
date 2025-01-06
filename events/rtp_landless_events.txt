@@ -40,6 +40,7 @@ character_event = {
 
 		hidden_tooltip = {
 			set_defacto_liege = THIS
+			emf_liege_change = yes
 
 			event_target:rtp_new_title = {
 				grant_title_no_opinion = ROOT
@@ -130,6 +131,7 @@ character_event = {
 						county = {
 							grant_title = ROOT
 							set_defacto_liege = event_target:rtp_new_liege #My new liege
+							emf_liege_change = yes
 						}
 					}
 				}
@@ -639,6 +641,7 @@ character_event = {
 
 	immediate = {
 		set_defacto_liege = event_target:rtp_winner
+		emf_liege_change = yes
 
 		if = {
 			limit = {

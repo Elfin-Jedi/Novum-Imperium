@@ -140,8 +140,9 @@ feudal_governments = {
 		can_create_kingdoms = no
 		can_usurp_kingdoms_and_empires = no
 		can_build_holdings = no
-		can_be_granted_kingdoms_and_empires_by_other_government = no
+		can_be_granted_kingdoms_and_empires_by_other_government = yes
 		can_demand_religious_conversion = no
+		can_inherit = yes
 	}
 
 	#Landless - Mercenary

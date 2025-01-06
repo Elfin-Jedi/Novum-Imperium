@@ -1160,6 +1160,13 @@ laws = {
 				revoke_law = centralization_2
 				revoke_law = centralization_3
 				revoke_law = centralization_4
+				if = {
+					limit = {
+						has_law = tolerance_2
+					}
+					revoke_law = tolerance_2
+					add_law = tolerance_1
+				}
 			}
 		}
 
@@ -1171,8 +1178,49 @@ laws = {
 
 		allow = {
 			OR = {
-				has_law = centralization_0
-				has_law = centralization_2
+				has_law = centralization_2		
+				AND = {
+					has_law = centralization_0
+					holder_scope = {
+						custom_tooltip = {
+							text = centralization_1_allow_positive_tooltip
+							hidden_tooltip = {
+								OR = {
+									trait = ambitious
+									trait = diligent
+									trait = scholar
+									trait = just
+									trait = hardworking
+									trait = restless
+									trait = gregarious
+									trait = magnetic
+									trait = practical
+									trait = authoritative
+									trait = noblespirit
+									trait = naturalleader
+									trait = rebellious
+								}
+							}
+						}
+						custom_tooltip = {
+							text = centralization_1_allow_negative_tooltip
+							hidden_tooltip = {
+								NOR = { 
+									trait = slothful 
+									trait = content
+									trait = gullible
+									trait = oldfashioned
+									trait = cautious
+									#trait = callous
+									trait = submissive
+									trait = weakwilled
+								}
+							}
+						}
+						prestige = 1000
+						wealth = 100	
+					}
+				}
 			}
 			OR = {
 				owner = { is_tribal = no }
@@ -1190,6 +1238,21 @@ laws = {
 			factor = 1
 			modifier = {
 				factor = 0.9
+			}
+			modifier = {
+				factor = 2
+				holder_scope = { 
+					OR = {
+						trait = amateurish_plotter
+						trait = flamboyant_schemer
+						trait = intricate_webweaver
+						trait = elusive_shadow
+						trait = naive_appeaser
+						trait = underhanded_rogue
+						trait = charismatic_negotiator
+						trait = grey_eminence
+					}
+				}
 			}
 			modifier = {
 				factor = 0
@@ -1219,6 +1282,13 @@ laws = {
 				revoke_law = centralization_2
 				revoke_law = centralization_3
 				revoke_law = centralization_4
+				if = {
+					limit = {
+						has_law = tolerance_2
+					}
+					revoke_law = tolerance_2
+					add_law = tolerance_1
+				}
 			}
 		}
 
@@ -1231,7 +1301,48 @@ laws = {
 
 		allow = {
 			OR = {
-				has_law = centralization_1
+				AND = {
+					has_law = centralization_1
+					holder_scope = {
+						custom_tooltip = {
+							text = centralization_2_allow_positive_tooltip
+							hidden_tooltip = {
+								OR = {
+									trait = ambitious
+									trait = diligent
+									trait = scholar
+									trait = just
+									trait = hardworking
+									trait = restless
+									trait = gregarious
+									trait = magnetic
+									trait = practical
+									trait = authoritative
+									trait = noblespirit
+									trait = naturalleader
+									trait = rebellious
+								}
+							}
+						}
+						custom_tooltip = {
+							text = centralization_2_allow_negative_tooltip
+							hidden_tooltip = {
+								NOR = { 
+									trait = slothful 
+									trait = content
+									trait = gullible
+									trait = oldfashioned
+									trait = cautious
+									#trait = callous
+									trait = submissive
+									trait = weakwilled
+								}
+							}
+						}
+						prestige = 1000
+						wealth = 100
+					}
+				}
 				has_law = centralization_3
 			}
 			OR = {
@@ -1247,6 +1358,21 @@ laws = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 2
+				holder_scope = { 
+					OR = {
+						trait = amateurish_plotter
+						trait = flamboyant_schemer
+						trait = intricate_webweaver
+						trait = elusive_shadow
+						trait = naive_appeaser
+						trait = underhanded_rogue
+						trait = charismatic_negotiator
+						trait = grey_eminence
+					}
+				}
+			}
 			modifier = {
 				factor = 0
 				trigger_if = { # Raise 1->2
@@ -1287,7 +1413,46 @@ laws = {
 
 		allow = {
 			OR = {
-				has_law = centralization_2
+				AND = {
+					has_law = centralization_2
+					holder_scope = {
+						custom_tooltip = {
+							text = centralization_3_allow_positive_tooltip
+							hidden_tooltip = {
+								OR = {
+									trait = ambitious
+									trait = authoritative
+								}
+							}
+						}
+						custom_tooltip = {
+							text = centralization_3_allow_negative_tooltip
+							hidden_tooltip = {
+								NOR = { 
+									trait = slothful 
+									trait = content
+									trait = gullible
+									trait = oldfashioned
+									trait = cautious
+									#trait = callous
+									trait = submissive
+									trait = weakwilled
+									trait = practical
+									trait = noblespirit
+									trait = naturalleader
+									trait = just
+									trait = kind
+									trait = temperate
+									trait = patient
+									trait = humble
+									trait = charitable
+								}
+							}
+						}
+						prestige = 2000
+						wealth = 100
+					}
+				}
 				has_law = centralization_4
 			}
 			OR = {
@@ -1304,6 +1469,21 @@ laws = {
 			factor = 1
 			modifier = {
 				factor = 0.9
+			}
+			modifier = {
+				factor = 2
+				holder_scope = { 
+					OR = {
+						trait = amateurish_plotter
+						trait = flamboyant_schemer
+						trait = intricate_webweaver
+						trait = elusive_shadow
+						trait = naive_appeaser
+						trait = underhanded_rogue
+						trait = charismatic_negotiator
+						trait = grey_eminence
+					}
+				}
 			}
 			modifier = {
 				factor = 0
@@ -1345,6 +1525,43 @@ laws = {
 
 		allow = {
 			has_law = centralization_3
+			holder_scope = {
+				custom_tooltip = {
+					text = centralization_4_allow_positive_tooltip
+					hidden_tooltip = {
+						OR = {
+							trait = ambitious
+							trait = authoritative
+						}
+					}
+				}
+				custom_tooltip = {
+					text = centralization_4_allow_negative_tooltip
+					hidden_tooltip = {
+						NOR = { 
+							trait = slothful 
+							trait = content
+							trait = gullible
+							trait = oldfashioned
+							trait = cautious
+							#trait = callous
+							trait = submissive
+							trait = weakwilled
+							trait = practical
+							trait = noblespirit
+							trait = naturalleader
+							trait = just
+							trait = kind
+							trait = temperate
+							trait = patient
+							trait = humble
+							trait = charitable
+						}
+					}
+				}
+				prestige = 3000
+				wealth = 100
+			}
 			OR = {
 				owner = { is_tribal = no }
 				has_law = tribal_organization_4
@@ -1358,6 +1575,21 @@ laws = {
 			factor = 1
 			modifier = {
 				factor = 0.8
+			}
+			modifier = {
+				factor = 2
+				holder_scope = { 
+					OR = {
+						trait = amateurish_plotter
+						trait = flamboyant_schemer
+						trait = intricate_webweaver
+						trait = elusive_shadow
+						trait = naive_appeaser
+						trait = underhanded_rogue
+						trait = charismatic_negotiator
+						trait = grey_eminence
+					}
+				}
 			}
 			modifier = { # Raise 3->4
 				factor = 0

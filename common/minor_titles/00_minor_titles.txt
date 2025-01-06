@@ -30,6 +30,51 @@ title_regent = {
 	monthly_prestige = 0.1
 
 	gain_effect = {
+		log = "[Root.GetBestName] is now the regent of [From.GetBestName]!"
+		if = {
+			limit = {
+				FROM = {
+					trait = under_regency
+				}
+				NOT = {
+					trait = japanese_regent
+				}
+			}
+			log = "Attempting to find the proper Regent!"
+			character_event = { id = japan.54 } # Give the title to the correct character, if possible
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					trait = under_regency
+				}
+				trait = japanese_regent
+			}
+			log = "Attempting to set up Regency Loyalists!"
+			character_event = { id = japan.56 } # Set up the Regency Loyalist faction, if possible
+		}
+		if = {
+			limit = {
+				FROM = {
+					trait = under_regency2
+				}
+				NOT = {
+					trait = japanese_regent2
+				}
+			}
+			log = "Attempting to find the proper Regent!"
+			character_event = { id = japan.93 } # Give the title to the correct character, if possible
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					trait = under_regency2
+				}
+				trait = japanese_regent2
+			}
+			log = "Attempting to set up Regency Loyalists!"
+			character_event = { id = japan.95 } # Set up the Regency Loyalist faction, if possible
+		}
 	}
 	lose_effect = {
 	}
@@ -435,11 +480,9 @@ title_court_jester = {
 				tier = EMPEROR
 			}
 		}
-		OR = {
-			religion_group = christian
-			religion_group = jewish_group
-			novum_imperium_is_pagan = yes
-			has_dharmic_religion_trigger = yes
+		NOR = {
+			religion_group = muslim
+			religion_group = zoroastrian_group
 		}
 	}
 
@@ -492,10 +535,11 @@ title_keeper_of_swans = {
 			}
 		}
 		emf_has_roman_empire = no
-		OR = {
-			religion_group = christian
-			religion_group = jewish_group
+		NOR = {
+			religion_group = muslim
+			religion_group = zoroastrian_group
 		}
+		LI_pagan_trigger = no
 	}
 
 	gain_effect = {
@@ -543,10 +587,11 @@ title_master_of_the_horse = {
 			is_tribal = yes
 		}
 		emf_has_roman_empire = no
-		OR = {
-			religion_group = christian
-			religion_group = jewish_group
+		NOR = {
+			religion_group = muslim
+			religion_group = zoroastrian_group
 		}
+		LI_pagan_trigger = no
 		rtp_is_lower_baron = no
 	}
 
@@ -598,11 +643,11 @@ title_master_of_the_hunt = {
 			is_tribal = yes
 		}
 		emf_has_roman_empire = no
-		OR = {
-			religion_group = christian
-			religion_group = jewish_group
-			has_dharmic_religion_trigger = yes
+		NOR = {
+			religion_group = muslim
+			religion_group = zoroastrian_group
 		}
+		LI_pagan_trigger = no
 		NOT = { religion = jain }
 		rtp_is_landless = no
 	}
@@ -649,10 +694,11 @@ title_high_almoner = {
 			is_tribal = yes
 		}
 		emf_has_roman_empire = no
-		OR = {
-			religion_group = christian
-			religion_group = jewish_group
+		NOR = {
+			religion_group = muslim
+			religion_group = zoroastrian_group
 		}
+		LI_pagan_trigger = no
 		rtp_is_lower_baron = no
 	}
 
@@ -704,6 +750,7 @@ title_cupbearer = {
 		}
 		emf_has_roman_empire = no
 		rtp_is_landless = no
+		LI_pagan_trigger = no
 	}
 
 	gain_effect = {
@@ -759,11 +806,11 @@ title_seneschal = {
 			}
 		}
 		emf_has_roman_empire = no
-		OR = {
-			religion_group = christian
-			religion_group = jewish_group
-			has_dharmic_religion_trigger = yes
+		NOR = {
+			religion_group = muslim
+			religion_group = zoroastrian_group
 		}
+		LI_pagan_trigger = no
 	}
 
 	gain_effect = {
@@ -845,6 +892,10 @@ title_despot = {
 	allowed_to_grant = {
 		primary_title = { emf_is_roman_empire = yes }
 		is_feudal = yes
+		NOR = {
+			religion_group = muslim
+			religion_group = zoroastrian_group
+		}
 	}
 
 	gain_effect = {
@@ -892,10 +943,9 @@ title_sebastokrator = {
 	allowed_to_grant = {
 		is_feudal = yes
 		emf_has_roman_empire = yes
-		OR = {
-			religion_group = christian
-			religion_group = jewish_group
-			novum_imperium_is_pagan = yes
+		NOR = {
+			religion_group = muslim
+			religion_group = zoroastrian_group
 		}
 	}
 
@@ -928,10 +978,9 @@ title_caesar = {
 	allowed_to_grant = {
 		is_feudal = yes
 		emf_has_roman_empire = yes
-		OR = {
-			religion_group = christian
-			religion_group = jewish_group
-			novum_imperium_is_pagan = yes
+		NOR = {
+			religion_group = muslim
+			religion_group = zoroastrian_group
 		}
 		OR = {
 			ai = yes
@@ -987,10 +1036,9 @@ title_kouropalates = {
 	allowed_to_grant = {
 		is_feudal = yes
 		emf_has_roman_empire = yes
-		OR = {
-			religion_group = christian
-			religion_group = jewish_group
-			novum_imperium_is_pagan = yes
+		NOR = {
+			religion_group = muslim
+			religion_group = zoroastrian_group
 		}
 	}
 
@@ -1036,10 +1084,9 @@ title_anthypatos = {
 	allowed_to_grant = {
 		is_feudal = yes
 		emf_has_roman_empire = yes
-		OR = {
-			religion_group = christian
-			religion_group = jewish_group
-			novum_imperium_is_pagan = yes
+		NOR = {
+			religion_group = muslim
+			religion_group = zoroastrian_group
 		}
 	}
 
@@ -1082,6 +1129,10 @@ title_imperial_eunuch = {
 	allowed_to_grant = {
 		real_tier = emperor
 		is_feudal = yes
+		NOR = {
+			religion_group = muslim
+			religion_group = zoroastrian_group
+		}
 		emf_has_roman_empire = yes
 	}
 
@@ -1376,7 +1427,11 @@ title_chief_qadi = {
 			trait = scholarly_theologian
 			trait = mastermind_theologian
 		}
-		is_incapable = no
+		NOR = {
+			trait = imbecile
+			trait = slow
+			trait = incapable
+		}
 		OR = {
 			ai = yes
 			NOT = {
@@ -1446,6 +1501,10 @@ title_state_inquisitor = {
 				government = rtp_lowborn_g
 				has_character_flag = rtp_can_read #You can now read
 			}
+		}
+		NOR = {
+			trait = cynical
+			trait = incapable
 		}
 	}
 
@@ -1526,6 +1585,7 @@ title_high_judge = {
 			male_can_hold_minor_title_trigger = yes
 			female_can_hold_minor_title_trigger = yes
 		}
+		is_dumb_trigger = no
 		is_incapable = no
 		# Prevents Doges from using minor title prestige to rack up points for their heirs
 		emf_can_be_patrician_heir_if_can_inherit = no
@@ -1610,10 +1670,7 @@ title_volva = {
 		custom_tooltip = {
 			text = is_germanic_pagan_custom_tooltip
 			hidden_tooltip = {
-				OR = {
-					religion = norse_pagan
-					religion = norse_pagan_reformed
-				}
+				LI_norse_pagan_trigger = yes
 			}
 		}
 		trigger_if = { # Prevents Doges from using minor title prestige to rack up points for their heirs
@@ -1633,10 +1690,7 @@ title_volva = {
 	}
 
 	allowed_to_grant = {
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-		}
+		LI_norse_pagan_trigger = yes
 		rtp_is_lower_baron = no
 	}
 
@@ -1666,10 +1720,7 @@ title_lawspeaker = {
 		custom_tooltip = {
 			text = is_germanic_pagan_custom_tooltip
 			hidden_tooltip = {
-				OR = {
-					religion = norse_pagan
-					religion = norse_pagan_reformed
-				}
+				LI_norse_pagan_trigger = yes
 			}
 		}
 		is_incapable = no
@@ -1690,10 +1741,7 @@ title_lawspeaker = {
 			is_feudal = yes
 			is_tribal = yes
 		}
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-		}
+		LI_norse_pagan_trigger = yes
 		rtp_is_landless = no
 	}
 
@@ -1738,10 +1786,7 @@ title_drottseti = {
 			is_feudal = yes
 			is_tribal = yes
 		}
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-		}
+		LI_norse_pagan_trigger = yes
 		higher_tier_than = DUKE
 		rtp_is_lower_baron = no
 	}
@@ -1788,10 +1833,7 @@ title_court_skald = {
 			is_feudal = yes
 			is_tribal = yes
 		}
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-		}
+		LI_norse_pagan_trigger = yes
 		rtp_is_lower_baron = no
 	}
 
@@ -1841,10 +1883,7 @@ title_marksman = {
 			is_feudal = yes
 			is_tribal = yes
 		}
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-		}
+		LI_norse_pagan_trigger = yes
 		rtp_is_landless = no
 	}
 
@@ -1891,10 +1930,7 @@ title_hirdman = {
 			is_feudal = yes
 			is_tribal = yes
 		}
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-		}
+		LI_norse_pagan_trigger = yes
 		rtp_is_landless = no
 	}
 
@@ -1938,6 +1974,7 @@ title_baghatur = {
 
 	allowed_to_grant = {
 		OR = {
+			religion_group = tengri_group
 			AND = {
 				is_nomadic = yes
 				culture = mongol
@@ -1994,6 +2031,7 @@ title_cherbi = {
 
 	allowed_to_grant = {
 		OR = {
+			religion_group = tengri_group
 			AND = {
 				is_nomadic = yes
 				culture = mongol
@@ -2050,6 +2088,7 @@ title_darkhan = {
 
 	allowed_to_grant = {
 		OR = {
+			religion_group = tengri_group
 			AND = {
 				is_nomadic = yes
 				culture = mongol
@@ -2103,6 +2142,7 @@ title_noyan = {
 	}
 
 	allowed_to_grant = {
+		religion_group = tengri_group
 		OR = {
 			is_feudal = yes
 			is_tribal = yes
@@ -2152,6 +2192,7 @@ title_behi = {
 
 	allowed_to_grant = {
 		OR = {
+			religion_group = tengri_group
 			AND = {
 				is_nomadic = yes
 				culture = mongol
@@ -2207,6 +2248,7 @@ title_master_of_the_eagle = {
 
 	allowed_to_grant = {
 		OR = {
+			religion_group = tengri_group
 			AND = {
 				is_nomadic = yes
 				culture = mongol
@@ -2566,20 +2608,8 @@ title_champion = {
 			is_tribal = yes
 		}
 		OR = {
-			religion = baltic_pagan_reformed
-			religion = baltic_pagan
-			religion = finnish_pagan_reformed
-			religion = finnish_pagan
-			religion = slavic_pagan_reformed
-			religion = slavic_pagan
-			religion = west_african_pagan_reformed
-			religion = west_african_pagan
-			religion = aztec_reformed
-			religion = aztec
-			religion = zun_pagan_reformed
-			religion = zun_pagan
-			religion = bon
-			religion = bon_reformed
+			LI_traditional_trigger = yes
+			religion = irminsul
 		}
 		rtp_is_lower_baron = no
 	}
@@ -2624,6 +2654,10 @@ title_master_of_the_blade = {
 	}
 
 	allowed_to_grant = {
+		NAND = {
+			religion_group = tengri_group
+			tier = emperor
+		}
 		OR = {
 			is_feudal = yes
 			is_tribal = yes
@@ -2636,22 +2670,8 @@ title_master_of_the_blade = {
 			}
 		}
 		OR = {
-			religion = baltic_pagan_reformed
-			religion = baltic_pagan
-			religion = finnish_pagan_reformed
-			religion = finnish_pagan
-			religion = slavic_pagan_reformed
-			religion = slavic_pagan
-			religion = west_african_pagan_reformed
-			religion = west_african_pagan
-			religion = aztec_reformed
-			religion = aztec
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
-			religion = zun_pagan_reformed
-			religion = zun_pagan
-			religion = bon
-			religion = bon_reformed
+			LI_traditional_trigger = yes
+			religion = irminsul
 		}
 		rtp_is_landless = no
 	}
@@ -2696,6 +2716,10 @@ title_master_of_the_bow = {
 	}
 
 	allowed_to_grant = {
+		NAND = {
+			religion_group = tengri_group
+			tier = emperor
+		}
 		OR = {
 			is_feudal = yes
 			is_tribal = yes
@@ -2708,22 +2732,8 @@ title_master_of_the_bow = {
 			}
 		}
 		OR = {
-			religion = baltic_pagan_reformed
-			religion = baltic_pagan
-			religion = finnish_pagan_reformed
-			religion = finnish_pagan
-			religion = slavic_pagan_reformed
-			religion = slavic_pagan
-			religion = west_african_pagan_reformed
-			religion = west_african_pagan
-			religion = aztec_reformed
-			religion = aztec
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
-			religion = zun_pagan_reformed
-			religion = zun_pagan
-			religion = bon
-			religion = bon_reformed
+			LI_traditional_trigger = yes
+			religion = irminsul
 		}
 		rtp_is_landless = no
 	}
@@ -2766,6 +2776,10 @@ title_venerable_elder = {
 	}
 
 	allowed_to_grant = {
+		NAND = {
+			religion_group = tengri_group
+			tier = emperor
+		}
 		OR = {
 			is_feudal = yes
 			is_tribal = yes
@@ -2778,22 +2792,8 @@ title_venerable_elder = {
 			}
 		}
 		OR = {
-			religion = baltic_pagan_reformed
-			religion = baltic_pagan
-			religion = finnish_pagan_reformed
-			religion = finnish_pagan
-			religion = slavic_pagan_reformed
-			religion = slavic_pagan
-			religion = west_african_pagan_reformed
-			religion = west_african_pagan
-			religion = aztec_reformed
-			religion = aztec
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
-			religion = zun_pagan_reformed
-			religion = zun_pagan
-			religion = bon
-			religion = bon_reformed
+			LI_traditional_trigger = yes
+			religion = irminsul
 		}
 		rtp_is_lower_baron = no
 	}
@@ -2847,29 +2847,11 @@ title_yabgu = {
 	}
 
 	allowed_to_grant = {
-		#OR = {
-		#	AND = {
-				is_nomadic = yes
-				NOT = { culture = mongol }
-		#	}
-		#	AND = {
-		#		OR = {
-		#			is_feudal = yes
-		#			is_tribal = yes
-		#		}
-		#		NOT = {
-		#			OR = {
-		#				has_landed_title = e_mongol_empire
-		#				has_landed_title = e_golden_horde
-		#				has_landed_title = e_il-khanate
-		#			}
-		#		}
-		#		OR = {
-		#			religion = tengri_pagan
-		#			religion = tengri_pagan_reformed
-		#		}
-		#	}
-		#}
+		is_nomadic = yes
+		NAND = {
+			religion_group = tengri_group
+			tier = emperor
+		}
 	}
 
 	gain_effect = {
@@ -2913,29 +2895,11 @@ title_ishad = {
 	}
 
 	allowed_to_grant = {
-		#OR = {
-		#	AND = {
-				is_nomadic = yes
-				NOT = { culture = mongol }
-		#	}
-		#	AND = {
-		#		OR = {
-		#			is_feudal = yes
-		#			is_tribal = yes
-		#		}
-		#		NOT = {
-		#			OR = {
-		#				has_landed_title = e_mongol_empire
-		#				has_landed_title = e_golden_horde
-		#				has_landed_title = e_il-khanate
-		#			}
-		#		}
-		#		OR = {
-		#			religion = tengri_pagan
-		#			religion = tengri_pagan_reformed
-		#		}
-		#	}
-		#}
+		is_nomadic = yes
+		NAND = {
+			religion_group = tengri_group
+			tier = emperor
+		}
 	}
 
 	gain_effect = {
@@ -2975,29 +2939,11 @@ title_kundur = {
 	}
 
 	allowed_to_grant = {
-		#OR = {
-		#	AND = {
-				is_nomadic = yes
-				NOT = { culture = mongol }
-		#	}
-		#	AND = {
-		#		OR = {
-		#			is_feudal = yes
-		#			is_tribal = yes
-		#		}
-		#		NOT = {
-		#			OR = {
-		#				has_landed_title = e_mongol_empire
-		#				has_landed_title = e_golden_horde
-		#				has_landed_title = e_il-khanate
-		#			}
-		#		}
-		#		OR = {
-		#			religion = tengri_pagan
-		#			religion = tengri_pagan_reformed
-		#		}
-		#	}
-		#}
+		is_nomadic = yes
+		NAND = {
+			religion_group = tengri_group
+			tier = emperor
+		}
 	}
 
 	gain_effect = {
@@ -3107,7 +3053,7 @@ title_royal_builder = {
 				tier = EMPEROR
 			}
 		}
-		has_dharmic_religion_trigger = yes
+		religion_group = indian_group
 	}
 
 	gain_effect = {
@@ -3155,7 +3101,7 @@ title_court_poet_india = {
 			is_feudal = yes
 			is_tribal = yes
 		}
-		has_dharmic_religion_trigger = yes
+		religion_group = indian_group
 		rtp_is_lower_baron = no
 	}
 
@@ -3184,11 +3130,7 @@ title_guru = {
 			has_character_flag = fake_guru
 		}
 		is_adult = yes
-		OR = {
-			has_dharmic_religion_trigger = yes
-			religion = bon
-			religion = bon_reformed
-		}
+		LI_allows_gurus_trigger = yes
 		OR = {
 			ai = yes
 			NOT = {
@@ -3206,11 +3148,7 @@ title_guru = {
 	}
 
 	allowed_to_grant = {
-		OR = {
-			has_dharmic_religion_trigger = yes
-			religion = bon
-			religion = bon_reformed
-		}
+		LI_allows_gurus_trigger = yes
 		rtp_is_landless = no
 	}
 
@@ -3398,6 +3336,154 @@ title_councilmember_emperor = {
 
 	message = yes
 }
+title_dregvant = {
+	dignity = 0.01
+	grant_limit = 1
+	opinion_effect = -15
+	
+	monthly_prestige = -0.2
+	
+	is_unique = yes
+	allowed_to_hold = {
+		NOT = { primary_title = { temporary = yes } }
+		is_adult = yes
+		OR = {
+			trait = cruel
+			trait = kinslayer
+			trait = slothful
+			trait = wroth
+			trait = deceitful
+		}
+		NOT = {
+			trait = incapable
+		}
+	}
+	allowed_to_grant = {
+		religion_group = zoroastrian_group
+		OR = {
+			is_feudal = yes
+			is_tribal = yes
+		}
+		primary_title = {
+			OR = {
+				tier = king
+				tier = emperor
+			}
+		}
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_ashavan = {
+	dignity = 0.01
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_prestige = 0.2
+	
+	allowed_to_hold = {
+		NOT = { primary_title = { temporary = yes } }
+		is_adult = yes
+		OR = {
+			trait = kind
+			trait = diligent
+			trait = patient
+			trait = honest
+		}
+		NOT = {
+			trait = incapable
+		}
+	}
+	allowed_to_grant = {
+		religion_group = zoroastrian_group
+		is_feudal = yes
+		primary_title = {
+			higher_tier_than = duke
+		}
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_sraoshavarez = {
+	dignity = 0.01
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.02
+	monthly_prestige = 0.1
+	
+	is_unique = yes
+	allowed_to_hold = {
+		NOT = { primary_title = { temporary = yes } }
+		age = 16
+		is_female = no
+		religion_group = zoroastrian_group
+		NOT = {
+			trait = incapable
+		}
+	}
+	allowed_to_grant = {
+		religion_group = zoroastrian_group
+		is_feudal = yes
+		primary_title = {
+		higher_tier_than = duke
+		}
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_shapsheraz = {
+	dignity = 0.01
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 5
+	
+	monthly_salary = 0.02
+	monthly_prestige = 0.1
+	
+	is_unique = yes
+	allowed_to_hold = {
+		NOT = { primary_title = { temporary = yes } }
+		age = 16
+		is_female = no
+		NOT = {
+			trait = incapable
+		}
+	}
+	allowed_to_grant = {
+		religion_group = zoroastrian_group
+		is_feudal = yes
+		primary_title = {
+			higher_tier_than = count
+		}
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
 
 #TAOIST TITLES
 
@@ -3441,7 +3527,11 @@ title_court_architect = {
 				tier = emperor
 			}
 		}
-		religion = taoist
+		OR = {
+			religion = tao
+			religion = sol_taoist
+			religion = taoist
+		}
 	}
 	
 	gain_effect = {
@@ -3489,7 +3579,11 @@ title_zhangshi = {
 			is_feudal = yes
 			is_tribal = yes
 		}
-		religion = taoist
+		OR = {
+			religion = tao
+			religion = sol_taoist
+			religion = taoist
+		}
 		rtp_is_landless = no
 	}
 	
@@ -3537,7 +3631,11 @@ title_canjun = {
 			is_feudal = yes
 			is_tribal = yes
 		}
-		religion = taoist
+		OR = {
+			religion = tao
+			religion = sol_taoist
+			religion = taoist
+		}
 		rtp_is_landless = no
 	}
 	
@@ -3586,7 +3684,11 @@ title_yuhou = {
 			is_feudal = yes
 			is_tribal = yes
 		}
-		religion = taoist
+		OR = {
+			religion = tao
+			religion = sol_taoist
+			religion = taoist
+		}
 		rtp_is_lower_baron = no
 	}
 	
@@ -3636,7 +3738,11 @@ title_historiographer = {
 			is_feudal = yes
 			is_tribal = yes
 		}
-		religion = taoist
+		OR = {
+			religion = tao
+			religion = sol_taoist
+			religion = taoist
+		}
 		rtp_is_lower_baron = no
 	}
 	
@@ -4296,10 +4402,9 @@ title_augusta = {
 	allowed_to_grant = {
 		is_feudal = yes
 		emf_has_roman_empire = yes
-		OR = {
-			religion_group = christian
-			religion_group = jewish_group
-			novum_imperium_is_pagan = yes
+		NOR = {
+			religion_group = muslim
+			religion_group = zoroastrian_group
 		}
 	}
 	
@@ -4345,10 +4450,9 @@ title_patrikios = {
 	allowed_to_grant = {
 		is_feudal = yes
 		emf_has_roman_empire = yes
-		OR = {
-			religion_group = christian
-			religion_group = jewish_group
-			novum_imperium_is_pagan = yes
+		NOR = {
+			religion_group = muslim
+			religion_group = zoroastrian_group
 		}
 	}
 	
@@ -4392,10 +4496,9 @@ title_hypatos = {
 	allowed_to_grant = {
 		is_feudal = yes
 		emf_has_roman_empire = yes
-		OR = {
-			religion_group = christian
-			religion_group = jewish_group
-			novum_imperium_is_pagan = yes
+		NOR = {
+			religion_group = muslim
+			religion_group = zoroastrian_group
 		}
 	}
 	
@@ -4444,10 +4547,9 @@ title_sebastos = {
 	allowed_to_grant = {
 		is_feudal = yes
 		emf_has_roman_empire = yes
-		OR = {
-			religion_group = christian
-			religion_group = jewish_group
-			novum_imperium_is_pagan = yes
+		NOR = {
+			religion_group = muslim
+			religion_group = zoroastrian_group
 		}
 	}
 	
