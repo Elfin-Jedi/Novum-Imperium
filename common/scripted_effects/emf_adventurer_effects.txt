@@ -478,8 +478,8 @@ emf_check_adventurer_government = {
 			limit = {
 				OR = {
 					# No theocracy or republic adventurers, period
-					is_theocracy = yes
-					is_republic = yes
+					rtp_is_theocracy_government = yes
+					rtp_is_republic_government = yes
 					# Are they feudal but have no castles?
 					trigger_if = {
 						limit = { is_feudal = yes }

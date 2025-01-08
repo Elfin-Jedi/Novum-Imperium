@@ -44,13 +44,76 @@ feudal_governments = {
 			tribal_government
 		}
 		potential = {
-			NAND = {
-				controls_religion = yes
-				can_head_religion_trigger = no
+			OR = {
+				controls_religion = no
+				OR = {
+					religion_group = muslim
+					religion = aten_pagan
+					AND = {
+						OR = {
+							culture_group = arabic
+							culture_group = altaic
+							culture_group = iranian
+							culture_group = indo_aryan_group
+							culture_group = dravidian_group
+						}
+						OR = {
+							religion = west_african_pagan
+							religion = west_african_pagan_reformed
+							AND = {
+								NOT = { novum_imperium_is_pagan = yes }
+								NOT = { religion_group = zoroastrian_group }
+								NOT = { religion_group = indian_group }
+								NOT = { religion_group = christian }
+							}
+						}
+					}
+				}
+				has_religion_feature = religion_temporal_head
+				AND = {
+					OR = {
+						religion = norse_pagan_reformed
+						religion = aztec_reformed
+					}
+					has_religion_features = no
+				}
+				religion = paulician
+				religion = waldensian
+				religion = yazidi
+				religion = hip_religion # Keep e_hip playable
+			}
+			NOT = {
+				OR = {
+					religion_group = muslim
+					religion = aten_pagan
+					AND = {
+						OR = {
+							culture_group = arabic
+							culture_group = altaic
+							culture_group = iranian
+							culture_group = indo_aryan_group
+							culture_group = dravidian_group
+						}
+						OR = {
+							religion = west_african_pagan
+							religion = west_african_pagan_reformed
+							AND = {
+								NOT = { novum_imperium_is_pagan = yes }
+								NOT = { religion_group = zoroastrian_group }
+								NOT = { religion_group = indian_group }
+								NOT = { religion_group = christian }
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { religion = bogomilist }
+				d_bogomilist = { has_flag = bogomilist_formalized }
 			}
 			NOT = { has_law = people_control_0 }
 			NOT = {	religion_group = muslim	}
-			NOT = { LI_pagan_trigger = yes }
+			NOT = { novum_imperium_is_pagan = yes }
 			NOT = { oriental_monarchy_government_trigger = yes }
 			NOT = { classical_government_trigger = yes }
 			NOT = { is_government_potential = chinese_imperial_government }
@@ -85,7 +148,6 @@ feudal_governments = {
 				higher_tier_than = BARON
 			}
 			is_patrician = no
-			religion = hip_religion # Keep e_hip playable
 			OR = {
 				NOT = { religion = bogomilist }
 				d_bogomilist = { has_flag = bogomilist_formalized }

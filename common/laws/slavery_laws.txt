@@ -280,21 +280,21 @@ de_jure_laws = {
 					has_law = slavery_1
 					has_law = slavery_2
 				}
-			holder_scope = {
-				any_vassal = {
-					OR = {
-						trait = slave_owner
-						trait = slave_trader
-						AND = {
-							NOT = { trait = arbitrary }
-							abolitionist_trigger = no
+				holder_scope = {
+					any_vassal = {
+						OR = {
+							trait = slave_owner
+							trait = slave_trader
+							AND = {
+								NOT = { trait = arbitrary }
+								abolitionist_trigger = no
+							}
+							NOT = { trait = liberator }
+							relative_power_to_liege = 0.8
 						}
-						NOT = { trait = liberator }
-						relative_power_to_liege = 0.8
+						NOT = { trait = proud }
 					}
-					NOT = { trait = proud }
 				}
-			}
 			}
 			modifier = {
 				factor = 0.6

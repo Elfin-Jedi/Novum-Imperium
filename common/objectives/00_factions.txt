@@ -1512,6 +1512,26 @@ faction_independence = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				has_character_modifier = mandate_of_heaven_4
+				ROOT = {
+					has_acceptable_chinese_religion_trigger = yes
+					culture_group = PREV
+				}
+			}
+		}
+		modifier = {
+			factor = 0.25
+			liege = {
+				has_character_modifier = mandate_of_heaven_5
+				ROOT = {
+					has_acceptable_chinese_religion_trigger = yes
+					culture_group = PREV
+				}
+			}
+		}
 	}
 
 	success = {
@@ -3061,6 +3081,119 @@ faction_claimant = {
 		modifier = {
 			factor = 0.7
 			new_character = { trait = adopted }
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				has_character_modifier = mandate_of_heaven_4
+				FROM = {
+					has_acceptable_chinese_religion_trigger = yes
+					culture_group = PREV
+				}
+			}
+		}
+		modifier = {
+			factor = 0.25
+			liege = {
+				has_character_modifier = mandate_of_heaven_5
+				FROM = {
+					has_acceptable_chinese_religion_trigger = yes
+					culture_group = PREV
+				}
+			}
+		}
+			
+		# NEVER depose the Imperial Family as far as k_chrysanthemum_throne goes!
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = imperial_family_deposed
+				liege = {
+					religion = nihon_shinto
+					controls_religion = yes
+				}
+			}
+			new_character = {
+				NOT = {
+					dynasty = 1000027000 # Imperial Family
+				}
+				NOT = {
+					character = FROM # You can back yourself
+				}
+			}
+			# Assuming we care...
+			OR = {
+				religion = nihon_shinto
+				AND = {
+					religion_group = bud_group
+					culture = japanese
+				}
+			}
+			# ... and that it isn't just a faction for the Shogunate or a lesser kingdom
+			ROOT = {
+				title = k_chrysanthemum_throne
+			}
+		}
+		
+		# Do it less frequently if they previously were deposed
+		modifier = {
+			factor = 0.1
+			OR = {
+				has_global_flag = imperial_family_deposed
+				liege = {
+					religion = nihon_shinto
+					controls_religion = yes
+				}
+			}
+			new_character = {
+				NOT = {
+					dynasty = 1000027000 # Imperial Family
+				}
+				NOT = {
+					character = FROM # You can back yourself...
+				}
+			}
+			# Assuming we care...
+			OR = {
+				religion = nihon_shinto
+				AND = {
+					religion_group = bud_group
+					culture = japanese
+				}
+			}
+			# ... and that it isn't just a faction for the Shogunate or a lesser kingdom
+			ROOT = {
+				title = k_chrysanthemum_throne
+			}
+		}	
+			
+		# NEVER depose the Tenno in favour of the Regent!
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = imperial_family_deposed
+				liege = {
+					religion = nihon_shinto
+					controls_religion = yes
+				}
+			}
+			new_character = {
+				OR = {
+					trait = japanese_regent
+					trait = japanese_regent2 # The Shogun's Regent should also not be an option
+				}
+				NOT = {
+					character = ROOT # You can back yourself...
+				}
+			}
+			# Assuming we care...
+			OR = {
+				religion = nihon_shinto
+				AND = {
+					religion_group = bud_group
+					culture = japanese
+				}
+			}
 		}
 	}
 
@@ -4748,6 +4881,119 @@ faction_claimant = {
 		modifier = {
 			factor = 0.7
 			FROM = { supported_claimant = { trait = adopted } }
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				has_character_modifier = mandate_of_heaven_4
+				FROM = {
+					has_acceptable_chinese_religion_trigger = yes
+					culture_group = PREV
+				}
+			}
+		}
+		modifier = {
+			factor = 0.25
+			liege = {
+				has_character_modifier = mandate_of_heaven_5
+				FROM = {
+					has_acceptable_chinese_religion_trigger = yes
+					culture_group = PREV
+				}
+			}
+		}
+		
+		# NEVER depose the Imperial Family as far as k_chrysanthemum_throne goes!
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = imperial_family_deposed
+				liege = {
+					religion = nihon_shinto
+					controls_religion = yes
+				}
+			}
+			new_character = {
+				NOT = {
+					dynasty = 1000027000 # Imperial Family
+				}
+				NOT = {
+					character = FROM # You can back yourself
+				}
+			}
+			# Assuming we care...
+			OR = {
+				religion = nihon_shinto
+				AND = {
+					religion_group = bud_group
+					culture = japanese
+				}
+			}
+			# ... and that it isn't just a faction for the Shogunate or a lesser kingdom
+			ROOT = {
+				title = k_chrysanthemum_throne
+			}
+		}
+		
+		# Do it less frequently if they previously were deposed
+		modifier = {
+			factor = 0.1
+			OR = {
+				has_global_flag = imperial_family_deposed
+				liege = {
+					religion = nihon_shinto
+					controls_religion = yes
+				}
+			}
+			new_character = {
+				NOT = {
+					dynasty = 1000027000 # Imperial Family
+				}
+				NOT = {
+					character = FROM # You can back yourself...
+				}
+			}
+			# Assuming we care...
+			OR = {
+				religion = nihon_shinto
+				AND = {
+					religion_group = bud_group
+					culture = japanese
+				}
+			}
+			# ... and that it isn't just a faction for the Shogunate or a lesser kingdom
+			ROOT = {
+				title = k_chrysanthemum_throne
+			}
+		}
+		
+		# NEVER depose the Tenno in favour of the Regent!
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = imperial_family_deposed
+				liege = {
+					religion = nihon_shinto
+					controls_religion = yes
+				}
+			}
+			new_character = {
+				OR = {
+					trait = japanese_regent
+					trait = japanese_regent2 # The Shogun's Regent should also not be an option
+				}
+				NOT = {
+					character = ROOT # You can back yourself...
+				}
+			}
+			# Assuming we care...
+			OR = {
+				religion = nihon_shinto
+				AND = {
+					religion_group = bud_group
+					culture = japanese
+				}
+			}
 		}
 	}
 
@@ -6789,6 +7035,26 @@ faction_increase_council_power = {
 		modifier = {
 			factor = 2.0
 			ai_ambition = 40
+		}
+		modifier = {
+			factor = 0.5
+			liege = {
+				has_character_modifier = mandate_of_heaven_4
+				FROM = {
+					has_acceptable_chinese_religion_trigger = yes
+					culture_group = PREV
+				}
+			}
+		}
+		modifier = {
+			factor = 0.25
+			liege = {
+				has_character_modifier = mandate_of_heaven_5
+				FROM = {
+					has_acceptable_chinese_religion_trigger = yes
+					culture_group = PREV
+				}
+			}
 		}
 	}
 
