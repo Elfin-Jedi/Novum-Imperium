@@ -45,8 +45,9 @@ character_event = {
 				grant_title_no_opinion = ROOT
 
 				ROOT = {
-					religion = PREV
-					culture = PREV
+				    ## Keeping the original religion and culture of the ruler!
+					# religion = PREV
+					# culture = PREV
 					any_courtier = {
 						religion = PREVPREV
 						culture = PREVPREV
