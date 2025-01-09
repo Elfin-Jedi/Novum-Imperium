@@ -196,6 +196,9 @@ title_decisions = {
 				FROM = {
 					rtp_flush_jobs = yes
 					rtp_flush_buildings = yes
+					liege = {
+						save_event_target_as = destroy_title
+					}
 				}
 			}
 
@@ -271,13 +274,10 @@ title_decisions = {
 						show_scope_change = no
 						liege = {
 							show_scope_change = no
+							create_duke_title_effect = yes
 							FROM = {
 								show_scope_change = no
-								make_tributary = {
-									who = FROM
-									tributary_type = landless_under_count
-								}
-								set_defacto_liege = FROM
+								set_defacto_liege = PREV
 							}
 						}
 					}
@@ -518,6 +518,9 @@ title_decisions = {
 						}
 					}
 				}
+			}
+			event_target:destroy_title = {			
+				hidden_tooltip = { character_event = { id = nastepca.12 } }
 			}
 
 			c_landless_t = {
@@ -1635,42 +1638,6 @@ title_decisions = {
 							FROM = {
 								show_scope_change = no
 								add_artifact = rtp_wood_a
-							}
-						}
-
-						custom_tooltip = {
-							text = "rtp_will_destroy_workshop_ct"
-
-							remove_province_modifier = rtp_gems_em
-							remove_province_modifier = rtp_amber_em
-							remove_province_modifier = rtp_beer_em
-							remove_province_modifier = rtp_berries_em
-							remove_province_modifier = rtp_bread_em
-							remove_province_modifier = rtp_bricks_em
-							remove_province_modifier = rtp_cheese_em
-							remove_province_modifier = rtp_cloth_em
-							remove_province_modifier = rtp_copper_em
-							remove_province_modifier = rtp_driedfruits_em
-							remove_province_modifier = rtp_dyes_em
-							remove_province_modifier = rtp_fish_em
-							remove_province_modifier = rtp_furs_em
-							remove_province_modifier = rtp_grain_em
-							remove_province_modifier = rtp_ham_em
-							remove_province_modifier = rtp_mushrooms_em
-							remove_province_modifier = rtp_porkribs_em
-							remove_province_modifier = rtp_salt_em
-							remove_province_modifier = rtp_spirits_em
-							remove_province_modifier = rtp_venison_em
-							remove_province_modifier = rtp_wine_em
-							remove_province_modifier = rtp_wood_em
-
-							FROM = {
-								any_player = {
-									limit = {
-										has_character_flag = rtp_owns_workshop@PREVPREV
-									}
-									clr_character_flag = rtp_owns_workshop@PREVPREV
-								}
 							}
 						}
 					}

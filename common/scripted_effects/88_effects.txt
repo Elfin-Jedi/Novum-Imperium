@@ -61,3 +61,16 @@ create_heir_title_effect = {
 		}
 	}
 }
+
+create_duke_title_effect = {
+	create_title = {
+  		tier = DUKE
+ 		name = "Titular Duchy"
+ 		holder = THIS
+		landless = yes
+	}
+	new_title = {
+		set_title_flag = title_for_landless
+		set_coa = k_nastepcadummy
+	}
+}

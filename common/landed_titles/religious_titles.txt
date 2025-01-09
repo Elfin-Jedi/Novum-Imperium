@@ -178,41 +178,6 @@ d_monothelite = {
 		Sophronios Theodoros Theodosios Theodotos Theophylaktos Thomas Timotheos
 	}
 }
-
-k_papal_state = {
-	color={ 255 249 198 }
-	capital = 333 # Rome
-	dignity = 100 # Counted as having this many more counties than it does
-	
-	title = "POPE_catholic"
-	foa = "POPE_FOA"
-	short_name = yes
-	location_ruler_title = yes
-	religion = catholic
-	
-	# Always exists
-	landless = yes
-	
-	# Controls a religion
-	controls_religion = catholic
-	
-	# Cannot be held as a secondary title
-	primary = yes
-	
-	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
-	
-	# Regnal names
-	male_names = {
-		John Gregory Benedict Clement Innocent Leo Pius Boniface Stephen Alexander Urban Adrian
-		Paul Celestine Felix Martin Nicholas Sixtus Anastasius Eugene Honorius Sergius Callixtus Julius
-		Lucius Sylvester Victor Adeodatus Agapetus Damasus Gelasius "John Paul" Marcellus Marinus
-		Paschal Pelagius Theodore Agatho Anacletus Anicetus Anterus Caius Conon Constantine Cornelius
-		Dionysius Donus Eleuterus Eusebius Eutychian Evaristus Fabian Formosus Francis Hilarius
-		Hormisdas Hyginus Lando Liberius Linus Marcellinus Mark Militiades Pontian Romanus Sabinian
-		Severinus Silverius Simplicius Siricius Sisinnius Soter Symmachus Telesphorus Valentine Vigilius
-		Vitalian Zachary Zephyrinus Zosimus
-	}
-}
 k_pelagian = {
 	color = { 10 125 10 }
 	capital = 64 # Eastseaxna
@@ -1299,6 +1264,8 @@ e_shiite = {
 	# Controls a religion
 	controls_religion = shiite
 	
+	creation_requires_capital = no
+	
 	allow = {
 		OR = {
 			trait = mirza
@@ -1309,56 +1276,7 @@ e_shiite = {
 			AND = {
 				trait = sayyid
 				piety = 1000
-			}
-			custom_tooltip = { 
-				text = controls_mecca_medina
-				hidden_tooltip = {
-					719 = { # Mecca
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					718 = { # Medina
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-				}
-			}
-			custom_tooltip = {
-				text = controls_jerusalem_damascus_baghdad
-				hidden_tooltip = {
-					774 = { # Jerusalem
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					728 = { # Damascus
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					693 = { # Baghdad
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-				}
+				num_of_holy_sites = 1
 			}
 		}
 	}
@@ -1378,6 +1296,8 @@ e_sunni = {
 	# Controls a religion
 	controls_religion = sunni
 	
+	creation_requires_capital = no
+	
 	allow = {
 		OR = {
 			trait = mirza
@@ -1388,56 +1308,7 @@ e_sunni = {
 			AND = {
 				trait = sayyid
 				piety = 1000
-			}
-			custom_tooltip = { 
-				text = controls_mecca_medina
-				hidden_tooltip = {
-					719 = { # Mecca
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					718 = { # Medina
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-				}
-			}
-			custom_tooltip = {
-				text = controls_jerusalem_damascus_baghdad
-				hidden_tooltip = {
-					774 = { # Jerusalem
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					728 = { # Damascus
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					693 = { # Baghdad
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-				}
+				num_of_holy_sites = 1
 			}
 		}
 	}
@@ -1454,7 +1325,9 @@ e_umayyad = {
 	caliphate = yes
 	religion = ilm_islam
 	
-		allow = {
+	creation_requires_capital = no
+	
+	allow = {
 		OR = {
 			trait = mirza
 			trait = sayyid
@@ -1464,48 +1337,7 @@ e_umayyad = {
 			AND = {
 				trait = sayyid
 				piety = 1000
-			}
-			custom_tooltip = { 
-				text = controls_mecca_medina
-				hidden_tooltip = {
-					719 = { # Mecca
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					718 = { # Medina
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-				}
-			}
-			custom_tooltip = {
-				text = controls_jerusalem_cordoba
-				hidden_tooltip = {
-					774 = { # Jerusalem
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					181 = { # Cordoba
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-				}
+				num_of_holy_sites = 1
 			}
 		}
 	}
@@ -1541,56 +1373,7 @@ d_athari = {
 			AND = {
 				trait = sayyid
 				piety = 1000
-			}
-			custom_tooltip = {
-				text = controls_mecca_medina
-				hidden_tooltip = {
-					719 = { # Mecca
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					718 = { # Medina
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-				}
-			}
-			custom_tooltip = {
-				text = controls_jerusalem_damascus_baghdad
-				hidden_tooltip = {
-					774 = { # Jerusalem
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					728 = { # Damascus
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					693 = { # Baghdad
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-				}
+				num_of_holy_sites = 1
 			}
 		}
 	}
@@ -1623,56 +1406,7 @@ d_ashari = {
 			AND = {
 				trait = sayyid
 				piety = 1000
-			}
-			custom_tooltip = {
-				text = controls_mecca_medina
-				hidden_tooltip = {
-					719 = { # Mecca
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					718 = { # Medina
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-				}
-			}
-			custom_tooltip = {
-				text = controls_jerusalem_damascus_baghdad
-				hidden_tooltip = {
-					774 = { # Jerusalem
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					728 = { # Damascus
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					693 = { # Baghdad
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-				}
+				num_of_holy_sites = 1
 			}
 		}
 	}
@@ -1705,56 +1439,7 @@ d_haruri_caliphate = {
 			AND = {
 				trait = sayyid
 				piety = 1000
-			}
-			custom_tooltip = {
-				text = controls_mecca_medina
-				hidden_tooltip = {
-					719 = { # Mecca
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					718 = { # Medina
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-				}
-			}
-			custom_tooltip = {
-				text = controls_jerusalem_damascus_baghdad
-				hidden_tooltip = {
-					774 = { # Jerusalem
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					728 = { # Damascus
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					693 = { # Baghdad
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-				}
+				num_of_holy_sites = 1
 			}
 		}
 	}
@@ -1787,56 +1472,7 @@ d_maturidi = {
 			AND = {
 				trait = sayyid
 				piety = 1000
-			}
-			custom_tooltip = {
-				text = controls_mecca_medina
-				hidden_tooltip = {
-					719 = { # Mecca
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					718 = { # Medina
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-				}
-			}
-			custom_tooltip = {
-				text = controls_jerusalem_damascus_baghdad
-				hidden_tooltip = {
-					774 = { # Jerusalem
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					728 = { # Damascus
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					693 = { # Baghdad
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-				}
+				num_of_holy_sites = 1
 			}
 		}
 	}
@@ -1869,56 +1505,7 @@ d_murjiah = {
 			AND = {
 				trait = sayyid
 				piety = 1000
-			}
-			custom_tooltip = {
-				text = controls_mecca_medina
-				hidden_tooltip = {
-					719 = { # Mecca
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					718 = { # Medina
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-				}
-			}
-			custom_tooltip = {
-				text = controls_jerusalem_damascus_baghdad
-				hidden_tooltip = {
-					774 = { # Jerusalem
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					728 = { # Damascus
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					693 = { # Baghdad
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-				}
+				num_of_holy_sites = 1
 			}
 		}
 	}
@@ -1951,56 +1538,7 @@ d_mutazil = {
 			AND = {
 				trait = sayyid
 				piety = 1000
-			}
-			custom_tooltip = {
-				text = controls_mecca_medina
-				hidden_tooltip = {
-					719 = { # Mecca
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					718 = { # Medina
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-				}
-			}
-			custom_tooltip = {
-				text = controls_jerusalem_damascus_baghdad
-				hidden_tooltip = {
-					774 = { # Jerusalem
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					728 = { # Damascus
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					693 = { # Baghdad
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-				}
+				num_of_holy_sites = 1
 			}
 		}
 	}
@@ -2033,56 +1571,7 @@ d_zahiri = {
 			AND = {
 				trait = sayyid
 				piety = 1000
-			}
-			custom_tooltip = {
-				text = controls_mecca_medina
-				hidden_tooltip = {
-					719 = { # Mecca
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					718 = { # Medina
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-				}
-			}
-			custom_tooltip = {
-				text = controls_jerusalem_damascus_baghdad
-				hidden_tooltip = {
-					774 = { # Jerusalem
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					728 = { # Damascus
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-					693 = { # Baghdad
-						owner = {
-							OR = {
-								is_liege_or_above = ROOT
-								character = ROOT
-							}
-						}
-					}
-				}
+				num_of_holy_sites = 1
 			}
 		}
 	}
@@ -2110,16 +1599,9 @@ d_bud_pratyeka = {
 	controls_religion = bud_pratyeka
 	
 	allow = {
-			piety = 1000
-			1151 = { # Benarios
-				owner = {
-					OR = {
-						is_liege_or_above = ROOT
-						character = ROOT
-					}
-				}
-			}
-		}
+		piety = 1000
+		num_of_holy_sites = 1
+	}
 }
 
 
@@ -2141,32 +1623,8 @@ d_roman_imperial = {
 	controls_religion = roman_imperial
 	
 	allow = {
-		OR = {
-			piety = 1000
-			trait = hist_augustus
-			trait = hist_chlorus
-		}
-		custom_tooltip = {
-			text = controls_rome_constantinople
-			hidden_tooltip = {
-				333 = { # Rome
-					owner = {
-						OR = {
-							is_liege_or_above = ROOT
-							character = ROOT
-						}
-					}
-				}
-				496 = { # Constantinople
-					owner = {
-						OR = {
-							is_liege_or_above = ROOT
-							character = ROOT
-						}
-					}
-				}
-			}
-		}
+		piety = 1000
+		num_of_holy_sites = 1
 	}
 	
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
@@ -2192,29 +1650,8 @@ d_solomonic_alexandros = {
 	
 	
 	allow = {
-		OR = {
-			piety = 1000
-			trait = hist_alexander
-			#trait = hist_solomon #whenever we write this one...
-		}
-		OR = {
-			857 = { # Asosa
-				owner = {
-					OR = {
-						is_liege_or_above = ROOT
-						character = ROOT
-					}
-				}
-			}
-			999 = { # Alexandria
-				owner = {
-					OR = {
-						is_liege_or_above = ROOT
-						character = ROOT
-					}
-				}
-			}
-		}
+		piety = 1000
+		num_of_holy_sites = 1
 	}
 	
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
@@ -2234,8 +1671,8 @@ d_ahriman_reformed = {
 	
 	allow = {
 		religion = ahriman_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -2264,8 +1701,8 @@ d_arab_pagan_reformed = {
 	
 	allow = {
 		religion = arab_pagan_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -2291,10 +1728,11 @@ d_amun_reformed = {
 	foa = "HEAD_PRIEST_FOA"
 	
 	short_name = yes
-		allow = {
+	
+	allow = {
 		religion = amun_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	# Cannot be held as a secondary title
@@ -2317,10 +1755,11 @@ d_aten_reformed = {
 	foa = "BORN_OF_ATEN_FOA"
 	
 	short_name = yes
-		allow = {
+	
+	allow = {
 		religion = aten_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	
@@ -2350,8 +1789,8 @@ d_baltic_pagan_reformed = {
 	
 	allow = {
 		religion = baltic_pagan_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -2384,8 +1823,8 @@ d_bantu_pagan_reformed = {
 	
 	allow = {
 		religion = bantu_pagan_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -2416,8 +1855,8 @@ d_bon_reformed = {
 	
 	allow = {
 		religion = bon_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 
@@ -2444,8 +1883,8 @@ d_baal_monotheistic_reformed = {
 	
 	allow = {
 		religion = baal_monotheistic_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -2474,8 +1913,8 @@ d_berber_pagan_reformed = {
 	
 	allow = {
 		religion = berber_pagan_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -2504,8 +1943,8 @@ d_bud_zor_reformed = {
 	
 	allow = {
 		religion = bud_zor_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -2538,8 +1977,8 @@ d_bud_zen_reformed = {
 	
 	allow = {
 		religion = bud_zen_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -2568,8 +2007,8 @@ d_byeri_reformed = {
 	
 	allow = {
 		religion = byeri_reformed   
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -2628,8 +2067,8 @@ d_celtic_christ_reformed = {
 	
 	allow = {
 		religion = celtic_christ_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -2659,8 +2098,8 @@ d_celtic_pagan_reformed = {
 	
 	allow = {
 		religion = celtic_pagan_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -2721,8 +2160,8 @@ d_chumbylat_reformed = {
 	
 	allow = {
 		religion = chumbylat_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -2752,8 +2191,8 @@ d_cybele_reformed = {
 	
 	allow = {
 		religion = cybele_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -2783,8 +2222,8 @@ d_druze_reformed = {
 	
 	allow = {
 		religion = druze_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -2812,8 +2251,8 @@ d_ethiopian_war_reformed = {
 	
 	allow = {
 		religion = ethiopian_war_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -2845,8 +2284,8 @@ d_erlik_reformed = {
 	
 	allow = {
 		religion = erlik_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -2872,8 +2311,8 @@ d_finnish_pagan_reformed = {
 	
 	allow = {
 		religion = finnish_pagan_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -2902,8 +2341,8 @@ d_german_pagan_reformed = {
 	
 	allow = {
 		religion = german_pagan_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -2931,8 +2370,8 @@ d_graeco_roman_reformed = {
 	
 	allow = {
 		religion = graeco_roman_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -2966,8 +2405,8 @@ d_iberian_pagan_reformed = {
 	
 	allow = {
 		religion = iberian_pagan_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -2996,8 +2435,8 @@ d_inuit_pagan_reformed = {
 	
 	allow = {
 		religion = inuit_pagan_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3022,8 +2461,8 @@ d_illuyanka_reformed = {
 	
 	allow = {
 		religion = illuyanka_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3052,8 +2491,8 @@ d_indohelen_reformed = {
 	
 	allow = {
 		religion = indohelen_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3089,8 +2528,8 @@ d_isis = {
 	
 	allow = {
 		religion = isis_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	# Controls a religion
@@ -3115,8 +2554,8 @@ d_jud_ark_reformed = {
 	
 	allow = {
 		religion = jud_ark_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3145,8 +2584,8 @@ d_judaism_reformed = {
 	
 	allow = {
 		religion = judaism_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3179,8 +2618,8 @@ d_kubera_reformed = {
 	
 	allow = {
 		religion = kubera_reformed 
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3209,8 +2648,8 @@ d_lubu_reformed = {
 	
 	allow = {
 		religion = lubu_reformed 
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3237,8 +2676,8 @@ d_mand_ruha_reformed = {
 	
 	allow = {
 		religion = mand_ruha_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3267,8 +2706,8 @@ d_mandaean_reformed = {
 	
 	allow = {
 		religion = mandaean_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3299,8 +2738,8 @@ d_mani_germanic_reformed = {
 	
 	allow = {
 		religion = mani_germanic_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3331,8 +2770,8 @@ d_mani_slavic_reformed = {
 	
 	allow = {
 		religion = mani_slavic_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3361,8 +2800,8 @@ d_mari_christ_reformed = {
 	
 	allow = {
 		religion = mari_christ_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3425,8 +2864,8 @@ d_montanist_reformed = {
 	
 	allow = {
 		religion = montanist_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3457,8 +2896,8 @@ d_muslim_aliite_reformed = {
 	
 	allow = {
 		religion = muslim_aliite_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3492,8 +2931,8 @@ d_muslim_domination_reformed = {
 	
 	allow = {
 		religion = muslim_domination_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3524,8 +2963,8 @@ d_muslim_sufi_reformed = {
 	
 	allow = {
 		religion = muslim_sufi_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3561,8 +3000,8 @@ d_murugan_reformed = {
 	
 	allow = {
 		religion = murugan_reformed 
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3592,8 +3031,8 @@ d_nasrani_reformed = {
 	
 	allow = {
 		religion = nasrani_reformed 
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3621,8 +3060,8 @@ d_norse_christ_reformed = {
 	
 	allow = {
 		religion = norse_christ_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3652,8 +3091,8 @@ d_norse_pagan_reformed = {
 	
 	allow = {
 		religion = norse_pagan_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3682,8 +3121,8 @@ d_northern_sun_reformed = {
 	
 	allow = {
 		religion = northern_sun_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3717,8 +3156,8 @@ d_nyakalagan_reformed = {
 	
 	allow = {
 		religion = nyakalagan_reformed  
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 
@@ -3744,8 +3183,8 @@ d_priscillian_reformed = {
 	
 	allow = {
 		religion = priscillian_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3776,8 +3215,8 @@ d_ragnarok_reformed = {
 	
 	allow = {
 		religion = ragnarok_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3808,8 +3247,8 @@ d_serer_reformed = {
 	
 	allow = {
 		religion = serer_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3844,8 +3283,8 @@ d_set_reformed = {
 	
 	allow = {
 		religion = set_reformed 
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	# Controls a religion
@@ -3870,8 +3309,8 @@ d_sethian_reformed = {
 	
 	allow = {
 		religion = sethian_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3900,8 +3339,8 @@ d_slavic_christian_reformed = {
 	
 	allow = {
 		religion = slavic_christian_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3932,8 +3371,8 @@ d_slavic_pagan_reformed = {
 	
 	allow = {
 		religion = slavic_pagan_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3962,8 +3401,8 @@ d_sol_boreas_reformed = {
 	
 	allow = {
 		religion = sol_boreas_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -3992,8 +3431,8 @@ d_sol_islam_reformed = {
 	
 	allow = {
 		religion = sol_islam_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -4023,8 +3462,8 @@ d_sol_sahara_reformed = {
 	
 	allow = {
 		religion = sol_sahara_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -4058,8 +3497,8 @@ d_saura_reformed = {
 	
 	allow = {
 		religion = saura_reformed  
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	# Cannot be held as a secondary title
@@ -4086,8 +3525,8 @@ d_tao_reformed = {
 	
 	allow = {
 		religion = tao_reformed  
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -4114,8 +3553,8 @@ d_tarhunt_reformed = {
 	
 	allow = {
 		religion = tarhunt_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -4144,8 +3583,8 @@ d_teiwaz_reformed = {
 	
 	allow = {
 		religion = teiwaz_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -4176,8 +3615,8 @@ d_tengri_bud_reformed = {
 	
 	allow = {
 		religion = tengri_bud_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -4213,8 +3652,8 @@ d_tengri_confucian_reformed = {
 	
 	allow = {
 		religion = tengri_confucian_reformed   
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	# Is Ruler Head
@@ -4241,8 +3680,8 @@ d_tengri_mani_reformed = {
 	
 	allow = {
 		religion = tengri_mani_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -4272,8 +3711,8 @@ d_tengri_pagan_reformed = {
 	
 	allow = {
 		religion = tengri_pagan_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -4302,8 +3741,8 @@ d_tengri_rod_reformed = {
 	
 	allow = {
 		religion = tengri_rod_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -4332,8 +3771,8 @@ d_vattisenyaly_reformed = {
 	
 	allow = {
 		religion = vattisenyaly_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -4366,8 +3805,8 @@ d_vidharma_reformed = {
 	
 	allow = {
 		religion = vidharma_reformed   
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -4393,8 +3832,8 @@ d_voipel_reformed = {
 	
 	allow = {
 		religion = voipel_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -4428,8 +3867,8 @@ d_zande_pagan_reformed = {
 	
 	allow = {
 		religion = zande_pagan_reformed   
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -4460,8 +3899,8 @@ d_zor_angra_reformed = {
 	
 	allow = {
 		religion = zor_angra_reformed
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -4490,9 +3929,9 @@ d_zurvanism_reformed = {
 	
 	allow = {
 		religion = zurvanism_reformed
-		num_of_holy_sites = 3
+		num_of_holy_sites = 1
+		piety = 1000
 		religion_authority = 0.5
-		piety = 500
 	}
 	
 	short_name = yes
@@ -4522,8 +3961,8 @@ d_zulu_pagan_reformed = {
 	
 	allow = {
 		religion = zulu_pagan_reformed   
-		num_of_holy_sites = 3
-		piety = 500
+		num_of_holy_sites = 1
+		piety = 1000
 	}
 	
 	short_name = yes
@@ -4551,9 +3990,9 @@ d_yazdanism_reformed = {
 	
 	allow = {
 		religion = yazdanism_reformed
-		num_of_holy_sites = 3
+		num_of_holy_sites = 1
+		piety = 1000
 		religion_authority = 0.5
-		piety = 500
 	}
 	
 	short_name = yes

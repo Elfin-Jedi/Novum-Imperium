@@ -2366,22 +2366,15 @@ character_event = {
 	picture = GFX_evt_bad_news
 	border = GFX_event_normal_frame_economy
 
-	trigger = {
-		OR = {
-			any_demesne_title = {
-				NOT = {
-					has_title_flag = title_for_landless
-				}
-				higher_real_tier_than = BARON
-			}
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
 			ai = yes
+			any_demesne_title = {
+				has_title_flag = title_for_landless
+			}
 		}
-		any_demesne_title = {
-			has_title_flag = title_for_landless
-		}
-	}
-	option = {
-		name = NASTEPCA_12
 		any_demesne_title = {
 			if = {
 				limit = {
