@@ -38,6 +38,9 @@ rtp_flush_jobs = {
 		remove_title = sellsword_mt
 		remove_title = holy_warrior_mt
 		remove_title = bandit_mt
+		
+		# For lack of a better place, come out of seclusion when flushing jobs!
+		remove_character_modifier = in_seclusion
 	}
 }
 
