@@ -38,6 +38,9 @@ rtp_flush_jobs = {
 		remove_title = sellsword_mt
 		remove_title = holy_warrior_mt
 		remove_title = bandit_mt
+		
+		# For lack of a better place, come out of seclusion when flushing jobs!
+		remove_character_modifier = in_seclusion
 	}
 }
 
@@ -2125,71 +2128,69 @@ rtp_give_random_generic_artifact_se = {
 
 #Assigns the cost for the first artifact
 rtp_assign_artifact_cost1_se = {
-	new_artifact = {
-		if = {
-			limit = {
-				quality == 1
-			}
-			ROOT = {
-				set_variable = {
-					which = rtp_artifact_cost
-					value = 2
-				}
+	if = {
+		limit = {
+			quality == 1
+		}
+		ROOT = {
+			set_variable = {
+				which = rtp_artifact_cost
+				value = 1
 			}
 		}
-		else_if = {
-			limit = {
-				quality == 2
-			}
-			ROOT = {
-				set_variable = {
-					which = rtp_artifact_cost
-					value = 4
-				}
+	}
+	else_if = {
+		limit = {
+			quality == 2
+		}
+		ROOT = {
+			set_variable = {
+				which = rtp_artifact_cost
+				value = 4
 			}
 		}
-		else_if = {
-			limit = {
-				quality == 3
-			}
-			ROOT = {
-				set_variable = {
-					which = rtp_artifact_cost
-					value = 6
-				}
+	}
+	else_if = {
+		limit = {
+			quality == 3
+		}
+		ROOT = {
+			set_variable = {
+				which = rtp_artifact_cost
+				value = 9
 			}
 		}
-		else_if = {
-			limit = {
-				quality == 4
-			}
-			ROOT = {
-				set_variable = {
-					which = rtp_artifact_cost
-					value = 8
-				}
+	}
+	else_if = {
+		limit = {
+			quality == 4
+		}
+		ROOT = {
+			set_variable = {
+				which = rtp_artifact_cost
+				value = 16
 			}
 		}
-		else_if = {
-			limit = {
-				quality == 5
-			}
-			ROOT = {
-				set_variable = {
-					which = rtp_artifact_cost
-					value = 10
-				}
+	}
+	else_if = {
+		limit = {
+			quality == 5
+		}
+		ROOT = {
+			set_variable = {
+				which = rtp_artifact_cost
+				value = 25
 			}
 		}
-		else_if = {
-			limit = {
-				quality == 6
-			}
-			ROOT = {
-				set_variable = {
-					which = rtp_artifact_cost
-					value = 20
-				}
+	}
+	else_if = {
+		limit = {
+			quality == 6
+		}
+		ROOT = {
+			set_variable = {
+				which = rtp_artifact_cost
+				value = 36
 			}
 		}
 	}
@@ -2199,55 +2200,55 @@ rtp_assign_artifact_cost1_se = {
 			2 = {
 				multiply_variable = {
 					which = rtp_artifact_cost
-					value = 0.1
+					value = 0.55
 				}
 			}
 			4 = {
 				multiply_variable = {
 					which = rtp_artifact_cost
-					value = 0.2
+					value = 0.6
 				}
 			}
 			8 = {
 				multiply_variable = {
 					which = rtp_artifact_cost
-					value = 0.3
+					value = 0.65
 				}
 			}
 			16 = {
 				multiply_variable = {
 					which = rtp_artifact_cost
-					value = 0.4
+					value = 0.7
 				}
 			}
 			32 = {
 				multiply_variable = {
 					which = rtp_artifact_cost
-					value = 0.5
+					value = 0.75
 				}
 			}
 			64 = {
 				multiply_variable = {
 					which = rtp_artifact_cost
-					value = 0.6
+					value = 0.8
 				}
 			}
 			128 = {
 				multiply_variable = {
 					which = rtp_artifact_cost
-					value = 0.7
+					value = 0.85
 				}
 			}
 			256 = {
 				multiply_variable = {
 					which = rtp_artifact_cost
-					value = 0.8
+					value = 0.9
 				}
 			}
 			512 = {
 				multiply_variable = {
 					which = rtp_artifact_cost
-					value = 0.9
+					value = 0.95
 				}
 			}
 			1024 = {
@@ -2318,71 +2319,69 @@ rtp_assign_artifact_cost1_se = {
 
 #Assigns the cost for the second artifact
 rtp_assign_artifact_cost2_se = {
-	new_artifact = {
-		if = {
-			limit = {
-				quality == 1
-			}
-			ROOT = {
-				set_variable = {
-					which = rtp_artifact_cost1
-					value = 2
-				}
+	if = {
+		limit = {
+			quality == 1
+		}
+		ROOT = {
+			set_variable = {
+				which = rtp_artifact_cost1
+				value = 1
 			}
 		}
-		else_if = {
-			limit = {
-				quality == 2
-			}
-			ROOT = {
-				set_variable = {
-					which = rtp_artifact_cost1
-					value = 4
-				}
+	}
+	else_if = {
+		limit = {
+			quality == 2
+		}
+		ROOT = {
+			set_variable = {
+				which = rtp_artifact_cost1
+				value = 4
 			}
 		}
-		else_if = {
-			limit = {
-				quality == 3
-			}
-			ROOT = {
-				set_variable = {
-					which = rtp_artifact_cost1
-					value = 6
-				}
+	}
+	else_if = {
+		limit = {
+			quality == 3
+		}
+		ROOT = {
+			set_variable = {
+				which = rtp_artifact_cost1
+				value = 9
 			}
 		}
-		else_if = {
-			limit = {
-				quality == 4
-			}
-			ROOT = {
-				set_variable = {
-					which = rtp_artifact_cost1
-					value = 8
-				}
+	}
+	else_if = {
+		limit = {
+			quality == 4
+		}
+		ROOT = {
+			set_variable = {
+				which = rtp_artifact_cost1
+				value = 16
 			}
 		}
-		else_if = {
-			limit = {
-				quality == 5
-			}
-			ROOT = {
-				set_variable = {
-					which = rtp_artifact_cost1
-					value = 10
-				}
+	}
+	else_if = {
+		limit = {
+			quality == 5
+		}
+		ROOT = {
+			set_variable = {
+				which = rtp_artifact_cost1
+				value = 25
 			}
 		}
-		else_if = {
-			limit = {
-				quality == 6
-			}
-			ROOT = {
-				set_variable = {
-					which = rtp_artifact_cost1
-					value = 20
-				}
+	}
+	else_if = {
+		limit = {
+			quality == 6
+		}
+		ROOT = {
+			set_variable = {
+				which = rtp_artifact_cost1
+				value = 36
 			}
 		}
 	}
@@ -2392,55 +2391,55 @@ rtp_assign_artifact_cost2_se = {
 			2 = {
 				multiply_variable = {
 					which = rtp_artifact_cost1
-					value = 0.1
+					value = 0.55
 				}
 			}
 			4 = {
 				multiply_variable = {
 					which = rtp_artifact_cost1
-					value = 0.2
+					value = 0.6
 				}
 			}
 			8 = {
 				multiply_variable = {
 					which = rtp_artifact_cost1
-					value = 0.3
+					value = 0.65
 				}
 			}
 			16 = {
 				multiply_variable = {
 					which = rtp_artifact_cost1
-					value = 0.4
+					value = 0.7
 				}
 			}
 			32 = {
 				multiply_variable = {
 					which = rtp_artifact_cost1
-					value = 0.5
+					value = 0.75
 				}
 			}
 			64 = {
 				multiply_variable = {
 					which = rtp_artifact_cost1
-					value = 0.6
+					value = 0.8
 				}
 			}
 			128 = {
 				multiply_variable = {
 					which = rtp_artifact_cost1
-					value = 0.7
+					value = 0.85
 				}
 			}
 			256 = {
 				multiply_variable = {
 					which = rtp_artifact_cost1
-					value = 0.8
+					value = 0.9
 				}
 			}
 			512 = {
 				multiply_variable = {
 					which = rtp_artifact_cost1
-					value = 0.9
+					value = 0.95
 				}
 			}
 			1024 = {
@@ -2511,71 +2510,69 @@ rtp_assign_artifact_cost2_se = {
 
 #Assigns the cost for the third artifact
 rtp_assign_artifact_cost3_se = {
-	new_artifact = {
-		if = {
-			limit = {
-				quality == 1
-			}
-			ROOT = {
-				set_variable = {
-					which = rtp_artifact_cost2
-					value = 2
-				}
+	if = {
+		limit = {
+			quality == 1
+		}
+		ROOT = {
+			set_variable = {
+				which = rtp_artifact_cost2
+				value = 1
 			}
 		}
-		else_if = {
-			limit = {
-				quality == 2
-			}
-			ROOT = {
-				set_variable = {
-					which = rtp_artifact_cost2
-					value = 4
-				}
+	}
+	else_if = {
+		limit = {
+			quality == 2
+		}
+		ROOT = {
+			set_variable = {
+				which = rtp_artifact_cost2
+				value = 4
 			}
 		}
-		else_if = {
-			limit = {
-				quality == 3
-			}
-			ROOT = {
-				set_variable = {
-					which = rtp_artifact_cost2
-					value = 6
-				}
+	}
+	else_if = {
+		limit = {
+			quality == 3
+		}
+		ROOT = {
+			set_variable = {
+				which = rtp_artifact_cost2
+				value = 9
 			}
 		}
-		else_if = {
-			limit = {
-				quality == 4
-			}
-			ROOT = {
-				set_variable = {
-					which = rtp_artifact_cost2
-					value = 8
-				}
+	}
+	else_if = {
+		limit = {
+			quality == 4
+		}
+		ROOT = {
+			set_variable = {
+				which = rtp_artifact_cost2
+				value = 16
 			}
 		}
-		else_if = {
-			limit = {
-				quality == 5
-			}
-			ROOT = {
-				set_variable = {
-					which = rtp_artifact_cost2
-					value = 10
-				}
+	}
+	else_if = {
+		limit = {
+			quality == 5
+		}
+		ROOT = {
+			set_variable = {
+				which = rtp_artifact_cost2
+				value = 25
 			}
 		}
-		else_if = {
-			limit = {
-				quality == 6
-			}
-			ROOT = {
-				set_variable = {
-					which = rtp_artifact_cost2
-					value = 20
-				}
+	}
+	else_if = {
+		limit = {
+			quality == 6
+		}
+		ROOT = {
+			set_variable = {
+				which = rtp_artifact_cost2
+				value = 36
 			}
 		}
 	}
@@ -2585,55 +2582,55 @@ rtp_assign_artifact_cost3_se = {
 			2 = {
 				multiply_variable = {
 					which = rtp_artifact_cost2
-					value = 0.1
+					value = 0.55
 				}
 			}
 			4 = {
 				multiply_variable = {
 					which = rtp_artifact_cost2
-					value = 0.2
+					value = 0.6
 				}
 			}
 			8 = {
 				multiply_variable = {
 					which = rtp_artifact_cost2
-					value = 0.3
+					value = 0.65
 				}
 			}
 			16 = {
 				multiply_variable = {
 					which = rtp_artifact_cost2
-					value = 0.4
+					value = 0.7
 				}
 			}
 			32 = {
 				multiply_variable = {
 					which = rtp_artifact_cost2
-					value = 0.5
+					value = 0.75
 				}
 			}
 			64 = {
 				multiply_variable = {
 					which = rtp_artifact_cost2
-					value = 0.6
+					value = 0.8
 				}
 			}
 			128 = {
 				multiply_variable = {
 					which = rtp_artifact_cost2
-					value = 0.7
+					value = 0.85
 				}
 			}
 			256 = {
 				multiply_variable = {
 					which = rtp_artifact_cost2
-					value = 0.8
+					value = 0.9
 				}
 			}
 			512 = {
 				multiply_variable = {
 					which = rtp_artifact_cost2
-					value = 0.9
+					value = 0.95
 				}
 			}
 			1024 = {
@@ -2711,7 +2708,7 @@ rtp_assign_sellprice_artifact_cost_se = {
 		ROOT = {
 			set_variable = {
 				which = rtp_artifact_cost
-				value = 2
+				value = 1
 			}
 		}
 	}
@@ -2733,7 +2730,7 @@ rtp_assign_sellprice_artifact_cost_se = {
 		ROOT = {
 			set_variable = {
 				which = rtp_artifact_cost
-				value = 6
+				value = 9
 			}
 		}
 	}
@@ -2744,7 +2741,7 @@ rtp_assign_sellprice_artifact_cost_se = {
 		ROOT = {
 			set_variable = {
 				which = rtp_artifact_cost
-				value = 8
+				value = 16
 			}
 		}
 	}
@@ -2755,7 +2752,7 @@ rtp_assign_sellprice_artifact_cost_se = {
 		ROOT = {
 			set_variable = {
 				which = rtp_artifact_cost
-				value = 10
+				value = 25
 			}
 		}
 	}
@@ -2766,7 +2763,7 @@ rtp_assign_sellprice_artifact_cost_se = {
 		ROOT = {
 			set_variable = {
 				which = rtp_artifact_cost
-				value = 20
+				value = 36
 			}
 		}
 	}
@@ -2776,55 +2773,55 @@ rtp_assign_sellprice_artifact_cost_se = {
 			2 = {
 				multiply_variable = {
 					which = rtp_artifact_cost
-					value = 0.1
+					value = 0.55
 				}
 			}
 			4 = {
 				multiply_variable = {
 					which = rtp_artifact_cost
-					value = 0.2
+					value = 0.6
 				}
 			}
 			8 = {
 				multiply_variable = {
 					which = rtp_artifact_cost
-					value = 0.3
+					value = 0.65
 				}
 			}
 			16 = {
 				multiply_variable = {
 					which = rtp_artifact_cost
-					value = 0.4
+					value = 0.7
 				}
 			}
 			32 = {
 				multiply_variable = {
 					which = rtp_artifact_cost
-					value = 0.5
+					value = 0.75
 				}
 			}
 			64 = {
 				multiply_variable = {
 					which = rtp_artifact_cost
-					value = 0.6
+					value = 0.8
 				}
 			}
 			128 = {
 				multiply_variable = {
 					which = rtp_artifact_cost
-					value = 0.7
+					value = 0.85
 				}
 			}
 			256 = {
 				multiply_variable = {
 					which = rtp_artifact_cost
-					value = 0.8
+					value = 0.9
 				}
 			}
 			512 = {
 				multiply_variable = {
 					which = rtp_artifact_cost
-					value = 0.9
+					value = 0.95
 				}
 			}
 			1024 = {
