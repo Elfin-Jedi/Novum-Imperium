@@ -197,6 +197,11 @@ title_decisions = {
 					rtp_flush_jobs = yes
 					rtp_flush_buildings = yes
 					liege = {
+						if = {
+							limit = {
+								ai = yes
+							}
+						}
 						save_event_target_as = destroy_title
 					}
 				}
@@ -519,7 +524,7 @@ title_decisions = {
 					}
 				}
 			}
-			event_target:destroy_title = {			
+			event_target:destroy_title = {
 				hidden_tooltip = { character_event = { id = nastepca.12 } }
 			}
 

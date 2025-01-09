@@ -36626,7 +36626,535 @@ decisions = {
 			factor = 1
 		}
 	}
+	
+	vassalize_d_holyberber_pagan_reformed = {
+		only_playable = yes
+		is_high_prio = yes
 
+		potential = {
+
+			is_playable = yes
+			religion = berber_pagan_reformed
+
+
+			NOT = { has_character_modifier = expelled_d_holyberber_pagan_reformed }
+
+			is_title_active = d_holyberber_pagan_reformed
+
+			higher_tier_than = KING
+
+			has_dlc = "Sons of Abraham"
+
+			d_holyberber_pagan_reformed = {
+				holder_scope = {
+					NOT = { has_truce = ROOT }
+					ROOT = { NOT = { has_truce = PREV } }
+					liege = {
+						NOT = { character = ROOT }
+					}
+					NOT = { num_of_count_titles = 3 }
+					independent = yes
+					primary_title = { title = d_holyberber_pagan_reformed }
+				}
+			}
+		}
+
+		allow = {
+			wealth = 1500
+			piety = 1000
+			prestige = 500
+		}
+
+		effect = {
+			wealth = -1500
+			piety = -1000
+			prestige = -500
+
+			hidden_tooltip = {
+				d_holyberber_pagan_reformed = {
+					holder_scope = {
+						wealth = 1500
+						piety = 1000
+						prestige = 500
+						character_event = {
+							id = SoA.1015
+						}
+					}
+				}
+			}
+		}
+
+		#revoke_allowed = {
+			#always = no
+		#}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	vassalize_d_holybon_reformed = {
+		only_playable = yes
+		is_high_prio = yes
+
+		potential = {
+
+			is_playable = yes
+			religion = bon_reformed
+
+
+			NOT = { has_character_modifier = expelled_d_holybon_reformed }
+
+			is_title_active = d_holybon_reformed
+
+			higher_tier_than = KING
+
+			has_dlc = "Sons of Abraham"
+
+			d_holybon_reformed = {
+				holder_scope = {
+					NOT = { has_truce = ROOT }
+					ROOT = { NOT = { has_truce = PREV } }
+					liege = {
+						NOT = { character = ROOT }
+					}
+					NOT = { num_of_count_titles = 3 }
+					independent = yes
+					primary_title = { title = d_holybon_reformed }
+				}
+			}
+		}
+
+		allow = {
+			wealth = 1500
+			piety = 1000
+			prestige = 500
+		}
+
+		effect = {
+			wealth = -1500
+			piety = -1000
+			prestige = -500
+
+			hidden_tooltip = {
+				d_holybon_reformed = {
+					holder_scope = {
+						wealth = 1500
+						piety = 1000
+						prestige = 500
+						character_event = {
+							id = SoA.1015
+						}
+					}
+				}
+			}
+		}
+
+		#revoke_allowed = {
+			#always = no
+		#}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	vassalize_d_holybud_zen_reformed = {
+		only_playable = yes
+		is_high_prio = yes
+
+		potential = {
+
+			is_playable = yes
+			religion = bud_zen_reformed
+
+
+			NOT = { has_character_modifier = expelled_d_holybud_zen_reformed }
+
+			is_title_active = d_holybud_zen_reformed
+
+			higher_tier_than = KING
+
+			has_dlc = "Sons of Abraham"
+
+			d_holybud_zen_reformed = {
+				holder_scope = {
+					NOT = { has_truce = ROOT }
+					ROOT = { NOT = { has_truce = PREV } }
+					liege = {
+						NOT = { character = ROOT }
+					}
+					NOT = { num_of_count_titles = 3 }
+					independent = yes
+					primary_title = { title = d_holybud_zen_reformed }
+				}
+			}
+		}
+
+		allow = {
+			wealth = 1500
+			piety = 1000
+			prestige = 500
+		}
+
+		effect = {
+			wealth = -1500
+			piety = -1000
+			prestige = -500
+
+			hidden_tooltip = {
+				d_holybud_zen_reformed = {
+					holder_scope = {
+						wealth = 1500
+						piety = 1000
+						prestige = 500
+						character_event = {
+							id = SoA.1015
+						}
+					}
+				}
+			}
+		}
+
+		#revoke_allowed = {
+			#always = no
+		#}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	vassalize_d_holybud_zor_reformed = {
+		only_playable = yes
+		is_high_prio = yes
+
+		potential = {
+
+			is_playable = yes
+			religion = bud_zor_reformed
+
+
+			NOT = { has_character_modifier = expelled_d_holybud_zor_reformed }
+
+			is_title_active = d_holybud_zor_reformed
+
+			higher_tier_than = KING
+
+			has_dlc = "Sons of Abraham"
+
+			d_holybud_zor_reformed = {
+				holder_scope = {
+					NOT = { has_truce = ROOT }
+					ROOT = { NOT = { has_truce = PREV } }
+					liege = {
+						NOT = { character = ROOT }
+					}
+					NOT = { num_of_count_titles = 3 }
+					independent = yes
+					primary_title = { title = d_holybud_zor_reformed }
+				}
+			}
+		}
+
+		allow = {
+			wealth = 1500
+			piety = 1000
+			prestige = 500
+		}
+
+		effect = {
+			wealth = -1500
+			piety = -1000
+			prestige = -500
+
+			hidden_tooltip = {
+				d_holybud_zor_reformed = {
+					holder_scope = {
+						wealth = 1500
+						piety = 1000
+						prestige = 500
+						character_event = {
+							id = SoA.1015
+						}
+					}
+				}
+			}
+		}
+
+		#revoke_allowed = {
+			#always = no
+		#}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	vassalize_d_holycathar_reformed = {
+		only_playable = yes
+		is_high_prio = yes
+
+		potential = {
+
+			is_playable = yes
+			religion = cathar_reformed
+
+
+			NOT = { has_character_modifier = expelled_d_holycathar_reformed }
+
+			is_title_active = d_holycathar_reformed
+
+			higher_tier_than = KING
+
+			has_dlc = "Sons of Abraham"
+
+			d_holycathar_reformed = {
+				holder_scope = {
+					NOT = { has_truce = ROOT }
+					ROOT = { NOT = { has_truce = PREV } }
+					liege = {
+						NOT = { character = ROOT }
+					}
+					NOT = { num_of_count_titles = 3 }
+					independent = yes
+					primary_title = { title = d_holycathar_reformed }
+				}
+			}
+		}
+
+		allow = {
+			wealth = 1500
+			piety = 1000
+			prestige = 500
+		}
+
+		effect = {
+			wealth = -1500
+			piety = -1000
+			prestige = -500
+
+			hidden_tooltip = {
+				d_holycathar_reformed = {
+					holder_scope = {
+						wealth = 1500
+						piety = 1000
+						prestige = 500
+						character_event = {
+							id = SoA.1015
+						}
+					}
+				}
+			}
+		}
+
+		#revoke_allowed = {
+			#always = no
+		#}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	vassalize_d_holyceltic_christ_reformed = {
+		only_playable = yes
+		is_high_prio = yes
+
+		potential = {
+
+			is_playable = yes
+			religion = celtic_christ_reformed
+
+
+			NOT = { has_character_modifier = expelled_d_holyceltic_christ_reformed }
+
+			is_title_active = d_holyceltic_christ_reformed
+
+			higher_tier_than = KING
+
+			has_dlc = "Sons of Abraham"
+
+			d_holyceltic_christ_reformed = {
+				holder_scope = {
+					NOT = { has_truce = ROOT }
+					ROOT = { NOT = { has_truce = PREV } }
+					liege = {
+						NOT = { character = ROOT }
+					}
+					NOT = { num_of_count_titles = 3 }
+					independent = yes
+					primary_title = { title = d_holyceltic_christ_reformed }
+				}
+			}
+		}
+
+		allow = {
+			wealth = 1500
+			piety = 1000
+			prestige = 500
+		}
+
+		effect = {
+			wealth = -1500
+			piety = -1000
+			prestige = -500
+
+			hidden_tooltip = {
+				d_holyceltic_christ_reformed = {
+					holder_scope = {
+						wealth = 1500
+			piety = 1000
+			prestige = 500
+						character_event = {
+							id = SoA.1015
+						}
+					}
+				}
+			}
+		}
+
+		#revoke_allowed = {
+			#always = no
+		#}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	vassalize_d_holyceltic_pagan_reformed = {
+		only_playable = yes
+		is_high_prio = yes
+
+		potential = {
+
+			is_playable = yes
+			religion = celtic_pagan_reformed
+
+
+			NOT = { has_character_modifier = expelled_d_holyceltic_pagan_reformed }
+
+			is_title_active = d_holyceltic_pagan_reformed
+
+			higher_tier_than = KING
+
+			has_dlc = "Sons of Abraham"
+
+			d_holyceltic_pagan_reformed = {
+				holder_scope = {
+					NOT = { has_truce = ROOT }
+					ROOT = { NOT = { has_truce = PREV } }
+					liege = {
+						NOT = { character = ROOT }
+					}
+					NOT = { num_of_count_titles = 3 }
+					independent = yes
+					primary_title = { title = d_holyceltic_pagan_reformed }
+				}
+			}
+		}
+
+		allow = {
+			wealth = 1500
+			piety = 1000
+			prestige = 500
+		}
+
+		effect = {
+			wealth = -1500
+			piety = -1000
+			prestige = -500
+
+			hidden_tooltip = {
+				d_holyceltic_pagan_reformed = {
+					holder_scope = {
+						wealth = 1500
+						piety = 1000
+						prestige = 500
+						character_event = {
+							id = SoA.1015
+						}
+					}
+				}
+			}
+		}
+
+		#revoke_allowed = {
+			#always = no
+		#}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	vassalize_d_holychristian_populist_reformed = {
+		only_playable = yes
+		is_high_prio = yes
+
+		potential = {
+
+			is_playable = yes
+			religion = christian_populist_reformed
+
+
+			NOT = { has_character_modifier = expelled_d_holychristian_populist_reformed }
+
+			is_title_active = d_holychristian_populist_reformed
+
+			higher_tier_than = KING
+
+			has_dlc = "Sons of Abraham"
+
+			d_holychristian_populist_reformed = {
+				holder_scope = {
+					NOT = { has_truce = ROOT }
+					ROOT = { NOT = { has_truce = PREV } }
+					liege = {
+						NOT = { character = ROOT }
+					}
+					NOT = { num_of_count_titles = 3 }
+					independent = yes
+					primary_title = { title = d_holychristian_populist_reformed }
+				}
+			}
+		}
+
+		allow = {
+			wealth = 1500
+			piety = 1000
+			prestige = 500
+		}
+
+		effect = {
+			wealth = -1500
+			piety = -1000
+			prestige = -500
+
+			hidden_tooltip = {
+				d_holychristian_populist_reformed = {
+					holder_scope = {
+						wealth = 1500
+						piety = 1000
+						prestige = 500
+						character_event = {
+							id = SoA.1015
+						}
+					}
+				}
+			}
+		}
+
+		#revoke_allowed = {
+			#always = no
+		#}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	vassalize_knights_templar = { # EMF: Heavily modified from vanilla
 		only_playable = yes
 		is_high_prio = yes

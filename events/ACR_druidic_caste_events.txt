@@ -129,6 +129,7 @@ character_event = {
 	ai = no
 	
 	trigger = {
+		rtp_is_landless = no
 		OR = {
 			religion = celtic_pagan
 			religion = celtic_pagan_reformed

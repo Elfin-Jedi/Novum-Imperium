@@ -179,6 +179,8 @@ emf_set_viceroy_exemption = {
 			event_target:emf_cb_new_imperial_liege = { emf_imperial_government = yes }
 			is_feudal = yes
 			emf_imperial_government = no
+			NOT = { is_government = rtp_lowborn_g }
+			NOT = { is_government = rtp_noble_g }
 			NAND = {
 				controls_religion = yes
 				NOT = { religion_group = muslim }
