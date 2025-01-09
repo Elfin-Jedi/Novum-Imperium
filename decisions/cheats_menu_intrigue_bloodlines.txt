@@ -4096,21 +4096,15 @@ decisions = {
 			#Pagan Groups
 			else_if = {
 				limit = {
-					OR = {
-						religion = norse_pagan
-						religion = norse_pagan_reformed
-					}
+					LI_norse_pagan_trigger = yes
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_germanic_01
 				}
 			}
-						else_if = {
+			else_if = {
 				limit = {
-					OR = {
-						religion = baltic_pagan
-						religion = baltic_pagan_reformed
-					}
+					religion_group = baltic_group
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_romuva_01
@@ -4118,10 +4112,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					OR = {
-						religion = slavic_pagan
-						religion = slavic_pagan_reformed
-					}
+					religion_group = slavic_group
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_slavic_01
@@ -4129,10 +4120,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					OR = {
-						religion = tengri_pagan
-						religion = tengri_pagan_reformed
-					}
+					religion_group = tengri_group
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_tengri_01
@@ -4140,10 +4128,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					OR = {
-						religion = finnish_pagan
-						religion = finnish_pagan_reformed
-					}
+					religion_group = finnish_group
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_suomenusko_01
@@ -4151,10 +4136,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					OR = {
-						religion = aztec
-						religion = aztec_reformed
-					}
+					religion_group = aztec_group
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_aztec_01
@@ -4162,10 +4144,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					OR = {
-						religion = west_african_pagan
-						religion = west_african_pagan_reformed
-					}
+					religion_group = serer_group
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_african_01
@@ -4173,10 +4152,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					OR = {
-						religion = zun_pagan
-						religion = zun_pagan_reformed
-					}
+					religion_group = sol_group
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_zun_01
@@ -4184,10 +4160,7 @@ decisions = {
 			}	
 			else_if = {
 				limit = {
-					OR = {
-						religion = hellenic_pagan
-						religion = hellenic_pagan_reformed
-					}
+					religion_group = graecoroman_group
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_hellenic_01
@@ -4195,10 +4168,7 @@ decisions = {
 			}
 			else_if = {
 				limit = {
-					OR = {
-						religion = bon
-						religion = bon_reformed
-					}
+					religion_group = chinese_group
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_bon_01
@@ -4921,10 +4891,12 @@ decisions = {
 			#Christian Groups
 			if = {
 				limit = {
-					religion = orthodox
-					religion = iconoclast
-					religion = paulician
-					religion = monothelite
+					OR = {
+						religion = orthodox
+						religion = iconoclast
+						religion = paulician
+						religion = monothelite
+					}
 				}
 				create_bloodline = { 
 					type = saintly_bloodline_orthodox_05

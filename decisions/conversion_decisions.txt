@@ -33,6 +33,46 @@ targeted_decisions = {
 			piety = 100
 			liege = { save_event_target_as = target_religion }
 			emf_character_set_religion_to_target_religion = yes
+			if = {
+				limit = { liege = { trait = shaivist_hindu } }
+				add_trait = shaivist_hindu
+			}
+			if = {
+				limit = { liege = { trait = vaishnavist_hindu } }
+				add_trait = vaishnavist_hindu
+			}
+			if = {
+				limit = { liege = { trait = shaktist_hindu } }
+				add_trait = shaktist_hindu
+			}
+			if = {
+				limit = { liege = { trait = smartist_hindu } }
+				add_trait = smartist_hindu
+			}
+			if = {
+				limit = { liege = { trait = digambara_jain } }
+				add_trait = digambara_jain
+			}
+			if = {
+				limit = { liege = { trait = svetambara_jain } }
+				add_trait = svetambara_jain
+			}
+			if = {
+				limit = { liege = { trait = pagan_branch_1 } }
+				add_trait = pagan_branch_1
+			}
+			if = {
+				limit = { liege = { trait = pagan_branch_2 } }
+				add_trait = pagan_branch_2
+			}
+			if = {
+				limit = { liege = { trait = pagan_branch_3 } }
+				add_trait = pagan_branch_3
+			}
+			if = {
+				limit = { liege = { trait = pagan_branch_4 } }
+				add_trait = pagan_branch_4
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -71,6 +111,46 @@ targeted_decisions = {
 				prestige = -500
 				piety = 250
 				emf_character_set_religion_to_ROOT = yes
+				if = {
+					limit = { ROOT = { trait = shaivist_hindu } }
+					add_trait = shaivist_hindu
+				}
+				if = {
+					limit = { ROOT = { trait = vaishnavist_hindu } }
+					add_trait = vaishnavist_hindu
+				}
+				if = {
+					limit = { ROOT = { trait = shaktist_hindu } }
+					add_trait = shaktist_hindu
+				}
+				if = {
+					limit = { ROOT = { trait = smartist_hindu } }
+					add_trait = smartist_hindu
+				}
+				if = {
+					limit = { ROOT = { trait = digambara_jain } }
+					add_trait = digambara_jain
+				}
+				if = {
+					limit = { ROOT = { trait = svetambara_jain } }
+					add_trait = svetambara_jain
+				}
+				if = {
+					limit = { ROOT = { trait = pagan_branch_1 } }
+					add_trait = pagan_branch_1
+				}
+				if = {
+					limit = { ROOT = { trait = pagan_branch_2 } }
+					add_trait = pagan_branch_2
+				}
+				if = {
+					limit = { ROOT = { trait = pagan_branch_3 } }
+					add_trait = pagan_branch_3
+				}
+				if = {
+					limit = { ROOT = { trait = pagan_branch_4 } }
+					add_trait = pagan_branch_4
+				}
 			}
 		}
 		ai_will_do = {
@@ -507,9 +587,8 @@ targeted_decisions = {
 					religion_group = inti_group
 					NOT = { trait = sympathy_intis }
 					capital_scope = {
-						NOR = {
+						NOT = {
 							religion_group = { target = ROOT target_type = true }
-							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
 						}
 					}
 				}
@@ -1809,10 +1888,6 @@ targeted_decisions = {
 				limit = { religion = hindu }
 				character_event = { id = RoI.115 } # Choose branch
 			}
-			#if = {
-			#	limit = { religion = buddhist }
-			#	character_event = { id = RoI.116 } # Choose branch
-			#}
 			if = {
 				limit = { religion = jain }
 				character_event = { id = RoI.117 } # Confirm conversion
@@ -2955,7 +3030,12 @@ targeted_decisions = {
 		from_potential = {
 			ai = no
 			is_playable = yes
-			novum_imperium_is_pagan = yes
+			custom_tooltip = {
+				text = traditional_religion_tooltip
+				hidden_tooltip = {
+					traditional_religion_trigger = yes
+				}
+			}
 			controls_religion = no
 			emf_can_convert_religion = yes
 		}
@@ -2967,14 +3047,15 @@ targeted_decisions = {
 				FROM = { is_consort = PREV }
 			}
 			OR = {
-				religion_group = christian
-				religion_group = muslim
-				religion_group = zoroastrian_group
-				religion_group = jewish_group
-				religion_group = indian_group
 				religion = bori
                 religion = a_tag_roog_reformed
                 religion = amazigh_reformed
+				custom_tooltip = {
+					text = proselyte_religion_tooltip
+					hidden_tooltip = {
+						proselyte_religion_trigger = yes
+					}
+				}
 			}
 			is_alive = yes
 		}
@@ -3014,12 +3095,93 @@ targeted_decisions = {
                         }
 					}
 				}
+				#When spouse is Hindu
+				if = {
+					limit = {
+						ROOT = {
+							trait = shaivist_hindu
+						}
+					}
+					add_trait = shaivist_hindu
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = vaishnavist_hindu
+						}
+					}
+					add_trait = vaishnavist_hindu
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = shaktist_hindu
+						}
+					}
+					add_trait = shaktist_hindu
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = smartist_hindu
+						}
+					}
+					add_trait = smartist_hindu
+				}
+				
+				#When spouse is Jain
+				if = {
+					limit = {
+						ROOT = {
+							trait = digambara_jain
+						}
+					}
+					add_trait = digambara_jain
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = svetambara_jain
+						}
+					}
+					add_trait = svetambara_jain
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = pagan_branch_1
+						}
+					}
+					add_trait = pagan_branch_1
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = pagan_branch_2
+						}
+					}
+					add_trait = pagan_branch_2
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = pagan_branch_3
+						}
+					}
+					add_trait = pagan_branch_3
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = pagan_branch_4
+						}
+					}
+					add_trait = pagan_branch_4
+				}
 				emf_character_set_religion_to_ROOT = yes
 				piety = 200
 			}
 		}
-
-
 		ai_will_do = {
 			factor = 0
 		}

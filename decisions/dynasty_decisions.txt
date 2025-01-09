@@ -561,9 +561,8 @@ targetted_decisions = {
 					OR = {	
 						religion_group = christian
 						religion = hindu
-						religion_group = bud_group
 						religion = jain
-						religion_group = mani_group
+						religion = mani
 						religion = west_african_pagan
 					}
 				}
@@ -632,6 +631,28 @@ targetted_decisions = {
 		effect = {
 			FROM = { piety = -50 }
 			add_ascetic_trait_effect = yes #Adds religion-based monk-traits.
+			if = { #For pagans and Altstart
+				limit = { 
+					NOR = { 
+						religion_group = christian 
+						religion = hindu
+						religion = jain
+					} 
+					is_female = no
+				}
+				add_trait = monk
+			}
+			if = {
+				limit = { 
+					NOR = { 
+						religion_group = christian 
+						religion = hindu
+						religion = jain
+					} 
+					is_female = yes
+				}
+				add_trait = nun
+			}
 			if = {
 				limit = { prisoner = yes }
 				prisoner = no
@@ -757,6 +778,83 @@ targetted_decisions = {
 				custom_tooltip = { text = tooltip_vows_monk_joins_society }
 				hidden_tooltip = { 
 					join_society = monastic_order_jain
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Mystics" 
+					is_in_society = no
+					religion = adoptionist 
+				}
+				custom_tooltip = { text = tooltip_vows_monk_joins_society }
+				hidden_tooltip = { 
+					join_society = monastic_order_adoptionist
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Mystics" 
+					is_in_society = no
+					religion = apollinarist 
+				}
+				custom_tooltip = { text = tooltip_vows_monk_joins_society }
+				hidden_tooltip = { 
+					join_society = monastic_order_apollinarist
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Mystics" 
+					is_in_society = no
+					religion = iconoclast 
+				}
+				custom_tooltip = { text = tooltip_vows_monk_joins_society }
+				hidden_tooltip = { 
+					join_society = monastic_order_iconoclast
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Mystics" 
+					is_in_society = no
+					religion = melkite 
+				}
+				custom_tooltip = { text = tooltip_vows_monk_joins_society }
+				hidden_tooltip = { 
+					join_society = monastic_order_melkite
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Mystics" 
+					is_in_society = no
+					religion = monothelite 
+				}
+				custom_tooltip = { text = tooltip_vows_monk_joins_society }
+				hidden_tooltip = { 
+					join_society = monastic_order_monothelite
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Mystics" 
+					is_in_society = no
+					religion = montanist 
+				}
+				custom_tooltip = { text = tooltip_vows_monk_joins_society }
+				hidden_tooltip = { 
+					join_society = monastic_order_montanist
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Mystics" 
+					is_in_society = no
+					religion = pelagian 
+				}
+				custom_tooltip = { text = tooltip_vows_monk_joins_society }
+				hidden_tooltip = { 
+					join_society = monastic_order_pelagian
 				}
 			}
 			if = {

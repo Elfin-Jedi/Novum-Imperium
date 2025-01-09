@@ -164,6 +164,27 @@ title_decisions = {
 						}
 					}
 				}
+				conditional_tooltip = {
+					trigger = {
+						ROOT = {
+							holder_scope = {
+								top_liege = {
+									tier = COUNT
+								}
+								NOT = {
+									same_realm = FROM
+								}
+								FROM = {
+									independent = no
+									liege = {
+										is_within_diplo_range = PREVPREV
+									}
+								}
+							}
+						}
+					}
+					wealth = 8
+				}
 			}
 		}
 
@@ -238,7 +259,9 @@ title_decisions = {
 				else_if = {
 					limit = {
 						holder_scope = {
-							tier = COUNT
+							top_liege = {
+								tier = COUNT
+							}
 						}
 					}
 					holder_scope = {
@@ -251,7 +274,7 @@ title_decisions = {
 									who = FROM
 									tributary_type = landless_under_count
 								}
-								set_defacto_liege = PREV
+								set_defacto_liege = FROM
 							}
 						}
 					}

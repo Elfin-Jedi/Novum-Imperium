@@ -3542,7 +3542,12 @@ decisions = {
 		only_playable = yes
 		potential = {
 			rtp_is_lower_baron = no
-			religion_group = mani_group
+			OR = {
+				religion = mani
+				religion = mani_mithra
+				religion = mandaean
+				religion = mandaean_reformed
+			}
 			NOR = {
 				is_inaccessible_trigger = yes
 				any_demesne_title = {

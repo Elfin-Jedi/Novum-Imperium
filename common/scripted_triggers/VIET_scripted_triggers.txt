@@ -6,6 +6,8 @@ is_sinosphere_small_trigger = {
 				culture_group = chinese_group
 				culture = khitan
 				culture = jurchen
+				culture = sinohellenic
+				culture = viethellenic
 			}
 		}
 	}
@@ -19,6 +21,8 @@ is_sinosphere_large_trigger = {
 				culture_group = chinese_group
 				culture_group = serindian # exists in WtWSMS
 				culture_group = tibetan_group
+				culture_group = austronesian
+				culture_group = altaic
 				culture = tocharian
 				culture = sogdian
 				culture = khitan
@@ -45,6 +49,8 @@ is_baklava_culture_trigger = {
 				culture_group = south_slavic
 				culture_group = north_african
 				culture_group = israelite
+				culture_group = berberic
+				culture_group = altaic
 				culture = turkish
 				culture = andalusian_arabic
 			}
@@ -68,6 +74,9 @@ is_hummus_culture_trigger = {
 				culture_group = north_african
 				culture_group = israelite
 				culture_group = east_african
+				culture_group = south_slavic
+				culture_group = berberic
+				culture_group = altaic
 				culture = turkish
 				culture = andalusian_arabic
 			}

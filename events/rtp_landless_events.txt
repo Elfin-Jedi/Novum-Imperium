@@ -40,7 +40,6 @@ character_event = {
 
 		hidden_tooltip = {
 			set_defacto_liege = THIS
-			emf_liege_change = yes
 
 			event_target:rtp_new_title = {
 				grant_title_no_opinion = ROOT
@@ -82,9 +81,6 @@ character_event = {
 	trigger = {
 		liege = {
 			is_within_diplo_range = FROM
-			FROM = {
-				save_event_target_as = rtp_new_liege #My new liege
-			}
 		}
 		NOT = {
 			has_character_flag = rtp_refused_settle_tribe #Refused tribe
@@ -124,14 +120,12 @@ character_event = {
 						build_holding = {
 							type = tribal
 							holder = ROOT
-							set_government_type = rtp_baron_tribal_g
 						}
 						religion = ROOT
 						culture = ROOT
 						county = {
 							grant_title = ROOT
-							set_defacto_liege = event_target:rtp_new_liege #My new liege
-							emf_liege_change = yes
+							set_defacto_liege = FROM
 						}
 					}
 				}
@@ -641,7 +635,6 @@ character_event = {
 
 	immediate = {
 		set_defacto_liege = event_target:rtp_winner
-		emf_liege_change = yes
 
 		if = {
 			limit = {

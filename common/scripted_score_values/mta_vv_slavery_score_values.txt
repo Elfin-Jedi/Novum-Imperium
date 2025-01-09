@@ -854,7 +854,7 @@ mta_check_castration_score = {
 	modifier = {
 		factor = 4
 		OR = {
-			government = roman_imperial_government
+			government = imperial_government
 			has_landed_title = e_byzantium # Compatibility for mods not using roman_imperial_government
 			has_landed_title = e_roman_empire # Compatibility for mods not using roman_imperial_government
 		}

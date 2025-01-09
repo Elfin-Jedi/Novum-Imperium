@@ -34,6 +34,10 @@ emf_faction_has_council_blocker = {
 		primary_title = {
 			has_law = war_voting_power_1
 			emf_is_hre = no
+			NOR = {
+				has_character_modifier = mandate_of_heaven_2
+				has_character_modifier = mandate_of_heaven_1
+			}
 		}
 	}
 }
@@ -86,6 +90,10 @@ emf_faction_basic_potential = {
 	primary_title = {
 		is_primary_type_title = no
 		higher_tier_than = BARON
+	}
+	NOR = {
+		trait = treasure_fleet_preparation
+		trait = treasure_fleet_voyage
 	}
 	liege = {
 		NOR = {

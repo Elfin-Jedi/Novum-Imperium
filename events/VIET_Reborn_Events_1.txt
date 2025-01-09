@@ -27249,6 +27249,7 @@ character_event = {
 	
 	trigger = {
 		in_command = no
+		rtp_is_landless = no
 		#NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		#NOT = { has_alternate_start_parameter = { key = culture_names value = random } }
 	}

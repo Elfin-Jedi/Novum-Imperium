@@ -100,15 +100,15 @@ society_decisions = {
 					}
 					OR = {
 						society_currency >= 2000 # rank 3
-							AND = {
-								society_currency >= 1000
-								OR = {
-									any_owned_bloodline = {
-										has_bloodline_flag = the_guilds
-									}
-									trait = guilds_trait_master
+						AND = {
+							society_currency >= 1000
+							OR = {
+								any_owned_bloodline = {
+									has_bloodline_flag = the_guilds
 								}
+								trait = guilds_trait_master
 							}
+						}
 					}
 				}
 			}
@@ -1328,7 +1328,6 @@ society_decisions = {
 	guilds_show_decisions_off = {
 		# is_in_society = yes
 		ai = no
-		only_rulers = yes
 		potential = {
 			OR = {
 				is_landed = yes

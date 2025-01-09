@@ -31,33 +31,6 @@
 #
 ### Positive Intellect ###
 
-base_1 = {	#+1 to all stats
-	birth = 120
-	inherit_chance = 30
-	diplomacy = 1
-	intrigue = 1
-	stewardship = 1
-	martial = 1
-	learning = 1
-	combat_rating = 3
-	ruler_designer_cost = 5
-	opposites =  {
-		base_2
-		quick
-		quick_1
-		genius_1
-		genius
-		minus_1
-		minus_2
-		slow
-		minus_4
-		imbecile
-		minus_6
-		shrewd
-		dull
-	}
-}
-
 base_2 = {	#+2 to all stats
 	birth = 90
 	inherit_chance = 25

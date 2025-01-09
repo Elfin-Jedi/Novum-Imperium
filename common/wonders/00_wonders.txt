@@ -1712,6 +1712,8 @@ wonder_amphitheater = {
 	picture = GFX_wonder_strip_amphitheatre
 	potential = {
 		OR = {
+			culture_group = latin
+			culture_group = byzantine
 			culture = roman
 			culture = italian
 			culture = greek
@@ -2077,6 +2079,14 @@ wonder_university = {
 	picture = GFX_wonder_strip_university
 	potential = {
 		is_nomadic = no
+		OR = {
+			religion_group = christian
+			religion_group = muslim
+			religion_group = jewish_group
+			religion_group = zoroastrian_group
+			religion_group = bud_group
+			novum_imperium_is_pagan = yes
+		}
 		trigger_if = {
 			limit = {
 				novum_imperium_is_pagan = yes
@@ -2221,6 +2231,14 @@ wonder_library = {
 	picture = GFX_wonder_strip_library
 	potential = {
 		is_nomadic = no
+		OR = {
+			religion_group = christian
+			religion_group = muslim
+			religion_group = jewish_group
+			religion_group = zoroastrian_group
+			religion_group = bud_group
+			novum_imperium_is_pagan = yes
+		}
 		trigger_if = {
 			limit = {
 				novum_imperium_is_pagan = yes
@@ -2470,6 +2488,7 @@ wonder_pyramid = {
 	model = wonder_pyramid
 	potential = {
 		OR = {
+			culture_group = arabic
 			culture = egyptian_arabic
 			culture = coptic
 			culture = egyptian_coptic
@@ -2700,6 +2719,8 @@ wonder_aztec_pyramid = {
 		OR = {
 			religion = aztec_reformed
 			religion = aztec
+			religion = quetzal_reformed
+			religion = quetzal
 		}
 	}
 	active = {
@@ -2707,6 +2728,8 @@ wonder_aztec_pyramid = {
 			OR = {
 				religion = aztec_reformed
 				religion = aztec
+				religion = quetzal_reformed
+				religion = quetzal
 			}
 		}
 	}
@@ -2715,6 +2738,119 @@ wonder_aztec_pyramid = {
 		burial_ground
 		cost_high
 		pyramid
+	}
+	available_upgrades = {
+		# UNIQUE:
+		upgrade_mythological_beast
+		upgrade_hidden_room
+		upgrade_sacrificial_altar
+		upgrade_necropolis
+		upgrade_traps
+
+		# OTHER:
+		upgrade_roads
+		upgrade_watchtower_network
+		upgrade_spikes
+		upgrade_tower
+		upgrade_hypocausts
+		upgrade_heating_pipes
+		upgrade_retinue
+		upgrade_road_tolls
+		upgrade_tavern
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 300
+		gold_cost_flat = 3000
+		gold_cost_ticking = 3
+		restore_time = 150
+		loot_time = 200
+		restore_cost_flat = 400
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 300
+		gold_cost_flat = 3000
+		gold_cost_ticking = 3
+		restore_time = 200
+		loot_time = 200
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.2
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 300
+		gold_cost_flat = 3000
+		gold_cost_ticking = 3
+		restore_time = 200
+		loot_time = 20
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.2
+			monthly_character_piety = 0.1
+		}
+	}
+	stage = {
+		allow = {
+		}
+		build_time = 300
+		gold_cost_flat = 3000
+		gold_cost_ticking = 3
+		restore_time = 200
+		loot_time = 20
+		restore_cost_flat = 500
+		restore_cost_ticking = 2
+		upgrade_slots = 2
+		local_modifier = {
+		}
+		owner_modifier = {
+			monthly_character_prestige = 0.2
+			monthly_character_piety = 0.2
+		}
+	}
+}
+
+wonder_maya_pyramid = {
+	allow_coastal = no
+	picture = GFX_wonder_strip_aztec_pyramid
+	potential = {
+		OR = {
+			religion = mayan_reformed
+			religion = mayan
+		}
+	}
+	active = {
+		ROOT = {
+			OR = {
+				religion = mayan_reformed
+				religion = mayan
+			}
+		}
+	}
+	flags = {
+		is_destructible
+		burial_ground
+		cost_high
 	}
 	available_upgrades = {
 		# UNIQUE:
@@ -2821,6 +2957,7 @@ wonder_pyramid_giza = {
 	active = {
 		ROOT = {
 			OR = {
+				culture_group = arabic
 				culture = egyptian_arabic
 				culture = coptic
 				culture = egyptian_coptic

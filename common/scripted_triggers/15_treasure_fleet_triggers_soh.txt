@@ -1,0 +1,2038 @@
+notified_of_treasure_fleet_arrival_trigger = {
+	ai = no # No need to bother with the AI...
+	OR = {
+		AND = {
+			top_liege = {
+				is_chinese_emperor_trigger = yes
+			}
+			trait = treasure_fleet_voyage
+		}
+		any_realm_province = {
+			is_in_active_treasure_fleet_region_trigger = yes
+		}
+	}
+}
+
+can_interact_with_treasure_fleet_trigger = {
+	is_nomadic = no # China doesn't care about them!
+	top_liege = {
+		NOT = {
+			government = chinese_imperial_government # Pretender empire or China
+		}
+	}
+	is_inaccessible_or_incapable_trigger = no
+	any_demesne_province = {
+		is_in_active_treasure_fleet_region_trigger = yes
+	}
+}
+
+is_in_active_treasure_fleet_region_trigger = {
+	port = yes
+	OR = {
+		AND = {
+			2564 = { # Hangzhou
+				has_province_flag = treasure_fleet_in_korea
+			}
+			region = world_korea
+		}
+		AND = {
+			2564 = { # Hangzhou
+				has_province_flag = treasure_fleet_in_japan
+			}
+			#AND = { # Everything in Honshu "between" Nagato and Muro (inclusive) + Shikoku + Kyushu + minor islands in the south ### Don't think extra AND is needed BUT we'll see I guess -00matthew2000 ###
+				region = world_japan
+				NOT = {
+					province_id = 2014 #Amami
+					province_id = 2015 #Ryukyu
+					province_id = 2016 #Sakishima
+				}
+			#}
+		}
+		AND = {
+			2564 = { # Hangzhou
+				has_province_flag = treasure_fleet_in_ryukyu
+			}
+			OR = {
+				province_id = 2014 #Amami
+				province_id = 2015 #Ryukyu
+				province_id = 2016 #Sakishima
+			}
+		}
+		AND = {
+			2564 = { # Hangzhou
+				has_province_flag = treasure_fleet_in_maynila
+			}
+			region = world_tenem_lamit
+		}
+		AND = {
+			2564 = { # Hangzhou
+				has_province_flag = treasure_fleet_in_borneo
+			}
+			region = world_borneo
+		}
+		AND = {
+			2564 = { # Hangzhou
+				has_province_flag = treasure_fleet_in_champa
+			}
+			region = world_cham
+		}
+		AND = {
+			2564 = { # Hangzhou
+				has_province_flag = treasure_fleet_in_lavo
+			}
+			region = world_lavo
+		}
+		AND = {
+			2564 = { # Hangzhou
+				has_province_flag = treasure_fleet_in_temasek
+			}
+			region = world_malaysia
+		}
+		AND = {
+			2564 = { # Hangzhou
+				has_province_flag = treasure_fleet_in_palembang
+			}
+			region = world_sumatra
+		}
+		AND = {
+			2564 = { # Hangzhou
+				has_province_flag = treasure_fleet_in_java
+			}
+			region = world_java
+		}
+		AND = {
+			2564 = { # Hangzhou
+				has_province_flag = treasure_fleet_in_lamuri
+			}
+			region = world_sumatra
+		}
+		AND = {
+			2564 = { # Hangzhou
+				has_province_flag = treasure_fleet_in_dagon
+			}
+			region = world_burma
+		}
+		AND = {
+			2564 = { # Hangzhou
+				has_province_flag = treasure_fleet_in_bengal
+			}
+			region = world_india_bengal
+		}
+		AND = {
+			2564 = { # Hangzhou
+				has_province_flag = treasure_fleet_in_eastern_india
+			}
+			OR = {
+				region = world_india_bengal
+				region = world_india_south
+            }
+		}
+		AND = {
+			2564 = { # Hangzhou
+				has_province_flag = treasure_fleet_in_lanka
+			}
+			region = world_india_lanka
+		}
+		AND = {
+			2564 = { # Hangzhou
+				has_province_flag = treasure_fleet_in_western_india
+			}
+			region = world_india_north
+		}
+		AND = {
+			2564 = { # Hangzhou
+				has_province_flag = treasure_fleet_in_sindh
+			}
+			OR = {
+				province_id = 899 # Tis
+				province_id = 1139 # Makran
+				province_id = 1295 # Kutch
+				province_id = 1297 # Debul
+				province_id = 1331 # Patala
+				province_id = 1370 # Armail
+			}
+		}
+		AND = {
+			2564 = { # Hangzhou
+				has_province_flag = treasure_fleet_in_oman
+			}
+			OR = {
+				province_id = 867 # Duqm
+				province_id = 868 # Muscat
+				province_id = 869 # Hajar
+				province_id = 641 # Hormuz
+				province_id = 691 # Jabal Qufs
+			}
+		}
+		AND = {
+			2564 = { # Hangzhou
+				has_province_flag = treasure_fleet_in_persian_gulf
+			}
+			OR = {
+				province_id = 870 # Dhu Zabi
+				province_id = 653 # Bahrein
+				province_id = 1531 # Uwal
+				province_id = 652 # Al Hasa
+				province_id = 651 # Damman
+				province_id = 650 # Kuwait
+				province_id = 649 # Basra
+				region = world_persia
+			}
+		}
+		AND = {
+			2564 = { # Hangzhou
+				has_province_flag = treasure_fleet_in_socotra
+			}
+			OR = {
+				province_id = 1369 # Socotra
+				province_id = 871 # Busaso
+				province_id = 872 # Berbera
+				province_id = 1344 # Zeila
+				province_id = 874 # Tadjoura
+				province_id = 858 # Aden
+				province_id = 857 # Bayda
+				province_id = 856 # Kathiri
+				province_id = 855 # Mahra
+				province_id = 866 # Dhofar
+			}
+		}
+		AND = {
+			2564 = { # Hangzhou
+				has_province_flag = treasure_fleet_in_red_sea
+			}
+			OR = {
+				province_id = 1373 # Assab
+				province_id = 1343 # Massawa
+				province_id = 1332 # Trinkitat
+				province_id = 1330 # Suakin
+				province_id = 1320 # Aydhab
+				province_id = 794 # Aswan
+				province_id = 1781 # al-Qusair
+				province_id = 3437 # Kolzum # Al-Khulzum
+				province_id = 788 # Farama
+				province_id = 785 # Sinai
+				province_id = 786 # Eilat
+				province_id = 722 # Al 'Aqabah
+				province_id = 721 # Tabuk
+				province_id = 1536 # Khaybar
+				province_id = 716 # Jeddah
+				province_id = 1535 # Tihama
+				province_id = 1532 # Zabid
+			}
+		}
+	}
+}
+
+treasure_fleet_tech_can_spread_here_trigger = {
+	OR = {
+		treasure_fleet_tech_infantry_can_spread_here_trigger = yes
+		treasure_fleet_tech_cavalry_can_spread_here_trigger = yes
+		treasure_fleet_tech_skirmish_can_spread_here_trigger = yes
+		treasure_fleet_tech_melee_can_spread_here_trigger = yes
+		treasure_fleet_tech_siege_equipment_can_spread_here_trigger = yes
+		treasure_fleet_tech_recruitment_can_spread_here_trigger = yes
+		treasure_fleet_tech_castle_construction_can_spread_here_trigger = yes
+		treasure_fleet_tech_city_construction_can_spread_here_trigger = yes
+		treasure_fleet_tech_fortifications_construction_can_spread_here_trigger = yes
+		treasure_fleet_tech_trade_practices_can_spread_here_trigger = yes
+		treasure_fleet_tech_construction_can_spread_here_trigger = yes
+		treasure_fleet_tech_naval_can_spread_here_trigger = yes
+		treasure_fleet_tech_noble_customs_can_spread_here_trigger = yes
+		treasure_fleet_tech_popular_customs_can_spread_here_trigger = yes
+		treasure_fleet_tech_religious_customs_can_spread_here_trigger = yes
+		treasure_fleet_tech_majesty_can_spread_here_trigger = yes
+		treasure_fleet_tech_culture_flex_can_spread_here_trigger = yes
+		treasure_fleet_tech_legalism_can_spread_here_trigger = yes
+	}
+}
+
+treasure_fleet_tech_infantry_can_spread_here_trigger = {
+	OR = {
+		AND = {
+			TECH_INFANTRY < 1
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_INFANTRY >= 2
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_INFANTRY < 2
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_INFANTRY >= 3
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_INFANTRY < 3
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_INFANTRY >= 4
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_INFANTRY < 4
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_INFANTRY >= 5
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_INFANTRY < 5
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_INFANTRY >= 6
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_INFANTRY < 6
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_INFANTRY >= 7
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_INFANTRY < 7
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_INFANTRY >= 8
+					}
+				}
+			}
+		}
+	}
+}
+
+treasure_fleet_tech_cavalry_can_spread_here_trigger = {
+	OR = {
+		AND = {
+			TECH_CAVALRY < 1
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CAVALRY >= 2
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CAVALRY < 2
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CAVALRY >= 3
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CAVALRY < 3
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CAVALRY >= 4
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CAVALRY < 4
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CAVALRY >= 5
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CAVALRY < 5
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CAVALRY >= 6
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CAVALRY < 6
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CAVALRY >= 7
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CAVALRY < 7
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CAVALRY >= 8
+					}
+				}
+			}
+		}
+	}
+}
+
+treasure_fleet_tech_skirmish_can_spread_here_trigger = {
+	OR = {
+		AND = {
+			TECH_SKIRMISH < 1
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_SKIRMISH >= 2
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_SKIRMISH < 2
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_SKIRMISH >= 3
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_SKIRMISH < 3
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_SKIRMISH >= 4
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_SKIRMISH < 4
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_SKIRMISH >= 5
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_SKIRMISH < 5
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_SKIRMISH >= 6
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_SKIRMISH < 6
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_SKIRMISH >= 7
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_SKIRMISH < 7
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_SKIRMISH >= 8
+					}
+				}
+			}
+		}
+	}
+}
+
+treasure_fleet_tech_melee_can_spread_here_trigger = {
+	OR = {
+		AND = {
+			TECH_MELEE < 1
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_MELEE >= 2
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_MELEE < 2
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_MELEE >= 3
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_MELEE < 3
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_MELEE >= 4
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_MELEE < 4
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_MELEE >= 5
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_MELEE < 5
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_MELEE >= 6
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_MELEE < 6
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_MELEE >= 7
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_MELEE < 7
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_MELEE >= 8
+					}
+				}
+			}
+		}
+	}
+}
+
+treasure_fleet_tech_siege_equipment_can_spread_here_trigger = {
+	OR = {
+		AND = {
+			TECH_SIEGE_EQUIPMENT < 1
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_SIEGE_EQUIPMENT >= 2
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_SIEGE_EQUIPMENT < 2
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_SIEGE_EQUIPMENT >= 3
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_SIEGE_EQUIPMENT < 3
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_SIEGE_EQUIPMENT >= 4
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_SIEGE_EQUIPMENT < 4
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_SIEGE_EQUIPMENT >= 5
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_SIEGE_EQUIPMENT < 5
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_SIEGE_EQUIPMENT >= 6
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_SIEGE_EQUIPMENT < 6
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_SIEGE_EQUIPMENT >= 7
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_SIEGE_EQUIPMENT < 7
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_SIEGE_EQUIPMENT >= 8
+					}
+				}
+			}
+		}
+	}
+}
+
+treasure_fleet_tech_recruitment_can_spread_here_trigger = {
+	OR = {
+		AND = {
+			TECH_RECRUITMENT < 1
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_RECRUITMENT >= 2
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_RECRUITMENT < 2
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_RECRUITMENT >= 3
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_RECRUITMENT < 3
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_RECRUITMENT >= 4
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_RECRUITMENT < 4
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_RECRUITMENT >= 5
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_RECRUITMENT < 5
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_RECRUITMENT >= 6
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_RECRUITMENT < 6
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_RECRUITMENT >= 7
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_RECRUITMENT < 7
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_RECRUITMENT >= 8
+					}
+				}
+			}
+		}
+	}
+}
+
+treasure_fleet_tech_castle_construction_can_spread_here_trigger = {
+	OR = {
+		AND = {
+			TECH_CASTLE_CONSTRUCTION < 1
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CASTLE_CONSTRUCTION >= 2
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CASTLE_CONSTRUCTION < 2
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CASTLE_CONSTRUCTION >= 3
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CASTLE_CONSTRUCTION < 3
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CASTLE_CONSTRUCTION >= 4
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CASTLE_CONSTRUCTION < 4
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CASTLE_CONSTRUCTION >= 5
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CASTLE_CONSTRUCTION < 5
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CASTLE_CONSTRUCTION >= 6
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CASTLE_CONSTRUCTION < 6
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CASTLE_CONSTRUCTION >= 7
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CASTLE_CONSTRUCTION < 7
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CASTLE_CONSTRUCTION >= 8
+					}
+				}
+			}
+		}
+	}
+}
+
+treasure_fleet_tech_city_construction_can_spread_here_trigger = {
+	OR = {
+		AND = {
+			TECH_CITY_CONSTRUCTION < 1
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CITY_CONSTRUCTION >= 2
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CITY_CONSTRUCTION < 2
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CITY_CONSTRUCTION >= 3
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CITY_CONSTRUCTION < 3
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CITY_CONSTRUCTION >= 4
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CITY_CONSTRUCTION < 4
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CITY_CONSTRUCTION >= 5
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CITY_CONSTRUCTION < 5
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CITY_CONSTRUCTION >= 6
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CITY_CONSTRUCTION < 6
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CITY_CONSTRUCTION >= 7
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CITY_CONSTRUCTION < 7
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CITY_CONSTRUCTION >= 8
+					}
+				}
+			}
+		}
+	}
+}
+
+treasure_fleet_tech_fortifications_construction_can_spread_here_trigger = {
+	OR = {
+		AND = {
+			TECH_FORTIFICATIONS_CONSTRUCTION < 1
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_FORTIFICATIONS_CONSTRUCTION >= 2
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_FORTIFICATIONS_CONSTRUCTION < 2
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_FORTIFICATIONS_CONSTRUCTION >= 3
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_FORTIFICATIONS_CONSTRUCTION < 3
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_FORTIFICATIONS_CONSTRUCTION >= 4
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_FORTIFICATIONS_CONSTRUCTION < 4
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_FORTIFICATIONS_CONSTRUCTION >= 5
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_FORTIFICATIONS_CONSTRUCTION < 5
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_FORTIFICATIONS_CONSTRUCTION >= 6
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_FORTIFICATIONS_CONSTRUCTION < 6
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_FORTIFICATIONS_CONSTRUCTION >= 7
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_FORTIFICATIONS_CONSTRUCTION < 7
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_FORTIFICATIONS_CONSTRUCTION >= 8
+					}
+				}
+			}
+		}
+	}
+}
+
+treasure_fleet_tech_trade_practices_can_spread_here_trigger = {
+	OR = {
+		AND = {
+			TECH_TRADE_PRACTICES < 1
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_TRADE_PRACTICES >= 2
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_TRADE_PRACTICES < 2
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_TRADE_PRACTICES >= 3
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_TRADE_PRACTICES < 3
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_TRADE_PRACTICES >= 4
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_TRADE_PRACTICES < 4
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_TRADE_PRACTICES >= 5
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_TRADE_PRACTICES < 5
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_TRADE_PRACTICES >= 6
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_TRADE_PRACTICES < 6
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_TRADE_PRACTICES >= 7
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_TRADE_PRACTICES < 7
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_TRADE_PRACTICES >= 8
+					}
+				}
+			}
+		}
+	}
+}
+
+treasure_fleet_tech_construction_can_spread_here_trigger = {
+	OR = {
+		AND = {
+			TECH_CONSTRUCTION < 1
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CONSTRUCTION >= 2
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CONSTRUCTION < 2
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CONSTRUCTION >= 3
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CONSTRUCTION < 3
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CONSTRUCTION >= 4
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CONSTRUCTION < 4
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CONSTRUCTION >= 5
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CONSTRUCTION < 5
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CONSTRUCTION >= 6
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CONSTRUCTION < 6
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CONSTRUCTION >= 7
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CONSTRUCTION < 7
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CONSTRUCTION >= 8
+					}
+				}
+			}
+		}
+	}
+}
+
+treasure_fleet_tech_naval_can_spread_here_trigger = {
+	OR = {
+		AND = {
+			TECH_NAVAL < 1
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_NAVAL >= 2
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_NAVAL < 2
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_NAVAL >= 3
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_NAVAL < 3
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_NAVAL >= 4
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_NAVAL < 4
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_NAVAL >= 5
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_NAVAL < 5
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_NAVAL >= 6
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_NAVAL < 6
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_NAVAL >= 7
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_NAVAL < 7
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_NAVAL >= 8
+					}
+				}
+			}
+		}
+	}
+}
+
+treasure_fleet_tech_noble_customs_can_spread_here_trigger = {
+	OR = {
+		AND = {
+			TECH_NOBLE_CUSTOMS < 1
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_NOBLE_CUSTOMS >= 2
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_NOBLE_CUSTOMS < 2
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_NOBLE_CUSTOMS >= 3
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_NOBLE_CUSTOMS < 3
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_NOBLE_CUSTOMS >= 4
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_NOBLE_CUSTOMS < 4
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_NOBLE_CUSTOMS >= 5
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_NOBLE_CUSTOMS < 5
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_NOBLE_CUSTOMS >= 6
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_NOBLE_CUSTOMS < 6
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_NOBLE_CUSTOMS >= 7
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_NOBLE_CUSTOMS < 7
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_NOBLE_CUSTOMS >= 8
+					}
+				}
+			}
+		}
+	}
+}
+
+treasure_fleet_tech_popular_customs_can_spread_here_trigger = {
+	OR = {
+		AND = {
+			TECH_POPULAR_CUSTOMS < 1
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_POPULAR_CUSTOMS >= 2
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_POPULAR_CUSTOMS < 2
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_POPULAR_CUSTOMS >= 3
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_POPULAR_CUSTOMS < 3
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_POPULAR_CUSTOMS >= 4
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_POPULAR_CUSTOMS < 4
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_POPULAR_CUSTOMS >= 5
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_POPULAR_CUSTOMS < 5
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_POPULAR_CUSTOMS >= 6
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_POPULAR_CUSTOMS < 6
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_POPULAR_CUSTOMS >= 7
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_POPULAR_CUSTOMS < 7
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_POPULAR_CUSTOMS >= 8
+					}
+				}
+			}
+		}
+	}
+}
+
+treasure_fleet_tech_religious_customs_can_spread_here_trigger = {
+	OR = {
+		AND = {
+			TECH_RELIGIOUS_CUSTOMS < 1
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_RELIGIOUS_CUSTOMS >= 2
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_RELIGIOUS_CUSTOMS < 2
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_RELIGIOUS_CUSTOMS >= 3
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_RELIGIOUS_CUSTOMS < 3
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_RELIGIOUS_CUSTOMS >= 4
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_RELIGIOUS_CUSTOMS < 4
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_RELIGIOUS_CUSTOMS >= 5
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_RELIGIOUS_CUSTOMS < 5
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_RELIGIOUS_CUSTOMS >= 6
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_RELIGIOUS_CUSTOMS < 6
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_RELIGIOUS_CUSTOMS >= 7
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_RELIGIOUS_CUSTOMS < 7
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_RELIGIOUS_CUSTOMS >= 8
+					}
+				}
+			}
+		}
+	}
+}
+
+treasure_fleet_tech_majesty_can_spread_here_trigger = {
+	OR = {
+		AND = {
+			TECH_MAJESTY < 1
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_MAJESTY >= 2
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_MAJESTY < 2
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_MAJESTY >= 3
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_MAJESTY < 3
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_MAJESTY >= 4
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_MAJESTY < 4
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_MAJESTY >= 5
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_MAJESTY < 5
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_MAJESTY >= 6
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_MAJESTY < 6
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_MAJESTY >= 7
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_MAJESTY < 7
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_MAJESTY >= 8
+					}
+				}
+			}
+		}
+	}
+}
+
+treasure_fleet_tech_culture_flex_can_spread_here_trigger = {
+	OR = {
+		AND = {
+			TECH_CULTURE_FLEX < 1
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CULTURE_FLEX >= 2
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CULTURE_FLEX < 2
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CULTURE_FLEX >= 3
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CULTURE_FLEX < 3
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CULTURE_FLEX >= 4
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CULTURE_FLEX < 4
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CULTURE_FLEX >= 5
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CULTURE_FLEX < 5
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CULTURE_FLEX >= 6
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CULTURE_FLEX < 6
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CULTURE_FLEX >= 7
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_CULTURE_FLEX < 7
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_CULTURE_FLEX >= 8
+					}
+				}
+			}
+		}
+	}
+}
+
+treasure_fleet_tech_legalism_can_spread_here_trigger = {
+	OR = {
+		AND = {
+			TECH_LEGALISM < 1
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_LEGALISM >= 2
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_LEGALISM < 2
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_LEGALISM >= 3
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_LEGALISM < 3
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_LEGALISM >= 4
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_LEGALISM < 4
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_LEGALISM >= 5
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_LEGALISM < 5
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_LEGALISM >= 6
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_LEGALISM < 6
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_LEGALISM >= 7
+					}
+				}
+			}
+		}
+		AND = {
+			TECH_LEGALISM < 7
+			e_china = {
+				holder_scope = {
+					any_realm_province = {
+						port = yes
+						can_naval_path_to = PREVPREVPREV
+						TECH_LEGALISM >= 8
+					}
+				}
+			}
+		}
+	}
+}
+
+treasure_fleet_has_artifacts_trigger = {
+	2564 = { # Hangzhou
+		OR = {
+			check_variable = {
+				which = tf_jade_dragon
+				value = 1
+			}
+			check_variable = {
+				which = tf_chinese_dragon_amulet
+				value = 1
+			}
+			check_variable = {
+				which = tf_chinese_artwork
+				value = 1
+			}
+			check_variable = {
+				which = tf_chinese_calligraphy
+				value = 1
+			}
+			check_variable = {
+				which = tf_chinese_sculpture
+				value = 1
+			}
+			check_variable = {
+				which = tf_chinese_ceremonial_robes
+				value = 1
+			}
+			check_variable = {
+				which = tf_silk_shroud
+				value = 1
+			}
+			check_variable = {
+				which = tf_water_clock
+				value = 1
+			}
+			check_variable = {
+				which = tf_jian_sword
+				value = 1
+			}
+#			check_variable = {
+#				which = xxx
+#				value = 1
+#			}
+			check_variable = {
+				which = tf_chinese_arm_protector
+				value = 1
+			}
+			check_variable = {
+				which = tf_chinese_serpent_spear
+				value = 1
+			}
+			check_variable = {
+				which = tf_chinese_ji
+				value = 1
+			}
+			check_variable = {
+				which = tf_chinese_crossbow
+				value = 1
+			}
+			check_variable = {
+				which = tf_chinese_bronze_sculpture
+				value = 1
+			}
+			check_variable = {
+				which = tf_chinese_painting_of_glitterhoof
+				value = 1
+			}
+			check_variable = {
+				which = tf_chinese_tapestry
+				value = 1
+			}
+			check_variable = {
+				which = tf_chinese_tapestry_grand
+				value = 1
+			}
+			check_variable = {
+				which = tf_art_of_war
+				value = 1
+			}
+			check_variable = {
+				which = tf_classic_of_poetry
+				value = 1
+			}
+			check_variable = {
+				which = tf_chinese_book_health
+				value = 1
+			}
+			check_variable = {
+				which = tf_chinese_book_law
+				value = 1
+			}
+			check_variable = {
+				which = tf_chinese_book_history
+				value = 1
+			}
+			check_variable = {
+				which = tf_chinese_book_economy
+				value = 1
+			}
+			check_variable = {
+				which = tf_art_of_war_page
+				value = 1
+			}
+			check_variable = {
+				which = tf_random_world_sword
+				value = 1
+			}
+			check_variable = {
+				which = tf_random_world_armor
+				value = 1
+			}
+		}
+	}
+}
+
+treasure_fleet_has_characters_trigger = {
+	2564 = { # Hangzhou
+		OR = {
+			check_variable = {
+				which = tf_physician
+				value = 1
+			}
+			check_variable = {
+				which = tf_siege_engineer
+				value = 1
+			}
+			check_variable = {
+				which = tf_strategist
+				value = 1
+			}
+			check_variable = {
+				which = tf_administrator # Scholar-Bureaucrat
+				value = 1
+			}
+			check_variable = {
+				which = tf_master_engineer
+				value = 1
+			}
+			check_variable = {
+				which = tf_soldier
+				value = 1
+			}
+			check_variable = {
+				which = tf_eunuch
+				value = 1
+			}
+			check_variable = {
+				which = tf_courtesan
+				value = 1
+			}
+			check_variable = {
+				which = tf_scholar
+				value = 1
+			}
+			check_variable = {
+				which = tf_noble
+				value = 1
+			}
+		}
+	}	
+}
+
+treasure_fleet_has_modifiers_trigger = {
+	2564 = { # Hangzhou
+		OR = {
+			check_variable = {
+				which = tf_jd_paper_mill
+				value = 1
+			}
+			check_variable = {
+				which = tf_jd_fireworks_guild
+				value = 1
+			}
+			check_variable = {
+				which = tf_jd_dry_docks
+				value = 1
+			}
+			check_variable = {
+				which = tf_jd_administrative_outpost
+				value = 1
+			}
+			check_variable = {
+				which = tf_jd_blast_furnace
+				value = 1
+			}
+		}
+	}	
+}

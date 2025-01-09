@@ -14,7 +14,7 @@ settlement_decisions = {
 		potential = {
 			is_capital = yes
 			location = { NOT = { has_province_modifier = tsk_infra_5 } }
-			OWNER = {
+			owner = {
 				same_realm = FROM
 			}
 		}
@@ -106,7 +106,7 @@ settlement_decisions = {
 		potential = {
 			is_capital = yes
 			location = { NOT = { has_province_modifier = tsk_road_5 } }
-			OWNER = {
+			owner = {
 				same_realm = FROM
 			}
 		}

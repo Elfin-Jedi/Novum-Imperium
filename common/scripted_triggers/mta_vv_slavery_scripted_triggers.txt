@@ -48,18 +48,18 @@ slavery_enabled = {
 				text = mta_slavery_enabled_government
 				OR = {
 					is_nomadic = yes
-					government = imperial_government
+					emf_imperial_government = yes
 					has_landed_title = e_byzantium # Compatibility for mods not using roman_imperial_government
 					has_landed_title = e_roman_empire # Compatibility for mods not using roman_imperial_government
 					OR = {
-						has_law = rtp_slavery_0_l
-						has_law = rtp_slavery_1_l
+						has_law = slavery_2
+						has_law = slavery_3
 					}
 				}
 			}
 		}
 		NOT = {
-			has_law = rtp_slavery_2_1
+			has_law = slavery_0
 		}
 	}
 }
@@ -89,12 +89,12 @@ is_slaver_group = {
 			has_religion_feature = religion_ritual_sacrifice
 			has_religion_feature = religion_jizya
 			is_nomadic = yes
-			government = roman_imperial_government
+			government = imperial_government
 			has_landed_title = e_byzantium # Compatibility for mods not using roman_imperial_government
 			has_landed_title = e_roman_empire # Compatibility for mods not using roman_imperial_government
 			OR = {
-				has_law = rtp_slavery_0_l
-				has_law = rtp_slavery_1_l
+				has_law = slavery_2
+				has_law = slavery_3
 			}
 		}
 	}

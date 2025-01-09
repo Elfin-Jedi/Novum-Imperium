@@ -86,13 +86,15 @@ rtp_learning_reformed_pagan = {
 				is_organized_religion_trigger = yes
 			}
 			AND = {
-				is_organized_religion_trigger = yes
 				true_religion_group_christian_trigger = no
 				true_religion_group_muslim_trigger = no
 				true_religion_group_jewish_group_trigger = no
 				true_religion_group_zoroastrian_group_trigger = no
 				true_religion_group_bud_group_trigger = no
 				true_religion_group_indian_group_trigger = no
+				true_religion_group_mani_group_trigger = no
+				true_religion_group_mand_group_trigger = no
+				true_religion_group_yazd_group_trigger = no
 			}
 		}
 	}

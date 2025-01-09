@@ -135,14 +135,6 @@ supernatural_events_trigger = {
 	}
 }
 
-is_celtic_secret_religious_society_member_trigger = {
-	OR = {
-		society_member_of = secret_religious_society_celtic_pagan
-		society_member_of = secret_religious_society_celtic_pagan_reformed
-		society_member_of = secret_religious_society_britannic_pagan
-	}
-}
-
 has_character_was_religion_flag_trigger = {
 	OR = {
 		has_character_flag = character_was_catholic

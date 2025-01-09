@@ -1737,7 +1737,7 @@ emf_is_roman_empire = {
 		text = TT_IS_ROMAN_EMPIRE
 		OR = {
 			title = e_byzantium
-			title = e_roman_empire
+			title = e_hre
 		}
 	}
 }
@@ -1747,7 +1747,7 @@ emf_has_roman_empire = {
 		text = TT_HAS_ROMAN_EMPIRE
 		OR = {
 			has_landed_title = e_byzantium
-			has_landed_title = e_roman_empire
+			has_landed_title = e_hre
 		}
 	}
 }
