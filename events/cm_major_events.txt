@@ -217,30 +217,30 @@ narrative_event = {
 				if = {
 					limit = {
 						holding_type = castle
-						NOT = { has_building = ca_shipyard_1 }
+						NOT = { has_building = ca_r_port_1 }
 					}
-					add_building = ca_shipyard_1
+					add_building = ca_r_port_1
 				}
 				else_if = {
 					limit = {
 						holding_type = city
-						NOT = { has_building = ct_shipyard_1 }
+						NOT = { has_building = ct_r_port_1 }
 					}
-					add_building = ct_shipyard_1
+					add_building = ct_r_port_1
 				}
 				else_if = {
 					limit = {
 						holding_type = temple
-						NOT = { has_building = tp_shipyard_1 }
+						NOT = { has_building = tp_r_port_1 }
 					}
-					add_building = tp_shipyard_1
+					add_building = tp_r_port_1
 				}
 				else_if = {
 					limit = {
 						holding_type = tribal
-						NOT = { has_building = tb_shipyard_1 }
+						NOT = { has_building = tb_r_port_1 }
 					}
-					add_building = tb_shipyard_1
+					add_building = tb_r_port_1
 				}
 			}
 			any_realm_lord = {
@@ -261,30 +261,30 @@ narrative_event = {
 					if = {
 						limit = {
 							holding_type = castle
-							NOT = { has_building = ca_shipyard_1 }
+							NOT = { has_building = ca_r_port_1 }
 						}
-						add_building = ca_shipyard_1
+						add_building = ca_r_port_1
 					}
 					else_if = {
 						limit = {
 							holding_type = city
-							NOT = { has_building = ct_shipyard_1 }
+							NOT = { has_building = ct_r_port_1 }
 						}
-						add_building = ct_shipyard_1
+						add_building = ct_r_port_1
 					}
 					else_if = {
 						limit = {
 							holding_type = temple
-							NOT = { has_building = tp_shipyard_1 }
+							NOT = { has_building = tp_r_port_1 }
 						}
-						add_building = tp_shipyard_1
+						add_building = tp_r_port_1
 					}
 					else_if = {
 						limit = {
 							holding_type = tribal
-							NOT = { has_building = tb_shipyard_1 }
+							NOT = { has_building = tb_r_port_1 }
 						}
-						add_building = tb_shipyard_1
+						add_building = tb_r_port_1
 					}
 				}
 			}

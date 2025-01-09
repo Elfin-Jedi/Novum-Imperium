@@ -202,14 +202,14 @@ intermediate_genetic_traits = {
 	name = "RULE_INTERMEDIATE_GENETIC_TRAITS"
 	group = "RULE_GROUP_EMF"
 	option = {
-		name = hidden
-		text = "RULE_OPTION_HIDDEN_DEFAULT"
-		desc = "RULE_INTERMEDIATE_GENETIC_TRAITS_HIDDEN_DESC"
-	}
-	option = {
 		name = visible
 		text = "RULE_OPTION_VISIBLE"
 		desc = "RULE_INTERMEDIATE_GENETIC_TRAITS_VISIBLE_DESC"
+	}
+	option = {
+		name = hidden
+		text = "RULE_OPTION_HIDDEN_DEFAULT"
+		desc = "RULE_INTERMEDIATE_GENETIC_TRAITS_HIDDEN_DESC"
 	}
 }
 

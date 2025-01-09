@@ -1075,7 +1075,7 @@ character_event = {
 		trigger = {
 			OR = {
 				religion = hindu
-				religion = buddhist
+				religion_group = bud_group
 			}
 		}
 		unprotected_sex_effect_stranger = yes
@@ -1164,7 +1164,7 @@ character_event = {
 		trigger = {
 			OR = {
 				religion = hindu
-				religion = buddhist
+				religion_group = bud_group
 			}
 		}
 		unprotected_sex_effect_stranger = yes
@@ -1531,7 +1531,7 @@ character_event = {
 		if = {
 			limit = {
 				has_character_modifier = holding_diwali_feast
-				religion = buddhist
+				religion_group = bud_group
 			}
 			character_event = { id = RoI.1173 } # Buddhist
 		}

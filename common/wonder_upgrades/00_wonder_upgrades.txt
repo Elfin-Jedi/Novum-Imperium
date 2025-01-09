@@ -839,11 +839,11 @@ upgrade_bells_golden = {
 upgrade_statue_god = {
 	picture = GFX_upgrade_icon_statue
 
-	potential = { religion_group = pagan_group }
+	potential = { novum_imperium_is_pagan = yes }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion_group = pagan_group } }
-			religion_group = pagan_group
+			limit = { NOT = { novum_imperium_is_pagan = yes } }
+			novum_imperium_is_pagan = yes
 		}
 		NOT = { religion = iconoclast }
 		trigger_if = {
@@ -853,7 +853,7 @@ upgrade_statue_god = {
 			NOT = { trait = zealous }
 		}
 	}
-	active = { religion_group = pagan_group }
+	active = { novum_imperium_is_pagan = yes }
 
 	flags = {
 		decorative
@@ -871,14 +871,14 @@ upgrade_statue_god = {
 upgrade_temple_guards = { 
 	picture = GFX_upgrade_icon_guard
 	
-	potential = { religion_group = pagan_group }
+	potential = { novum_imperium_is_pagan = yes }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion_group = pagan_group } }
-			religion_group = pagan_group
+			limit = { NOT = { novum_imperium_is_pagan = yes } }
+			novum_imperium_is_pagan = yes
 		}
 	}
-	active = { religion_group = pagan_group }
+	active = { novum_imperium_is_pagan = yes }
 
 	flags = {
 		defensive
@@ -918,14 +918,14 @@ upgrade_sacrificial_altar = {
 upgrade_sacred_grove = { 
 	picture = GFX_upgrade_icon_roses_white
 
-	potential = { religion_group = pagan_group }
+	potential = { novum_imperium_is_pagan = yes }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion_group = pagan_group } }
-			religion_group = pagan_group
+			limit = { NOT = { novum_imperium_is_pagan = yes } }
+			novum_imperium_is_pagan = yes
 		}
 	}
-	active = { religion_group = pagan_group }
+	active = { novum_imperium_is_pagan = yes }
 
 	flags = {
 		holy
@@ -948,14 +948,14 @@ upgrade_sacred_grove = {
 upgrade_prophecy_rooms = { 
 	picture = GFX_upgrade_icon_crates
 
-	potential = { religion_group = pagan_group }
+	potential = { novum_imperium_is_pagan = yes }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion_group = pagan_group } }
-			religion_group = pagan_group
+			limit = { NOT = { novum_imperium_is_pagan = yes } }
+			novum_imperium_is_pagan = yes
 		}
 	}
-	active = { religion_group = pagan_group }
+	active = { novum_imperium_is_pagan = yes }
 
 	flags = {
 		room
@@ -972,14 +972,14 @@ upgrade_prophecy_rooms = {
 upgrade_temple_precinct = { 
 	picture = GFX_upgrade_icon_crates
 
-	potential = { religion_group = pagan_group }
+	potential = { novum_imperium_is_pagan = yes }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion_group = pagan_group } }
-			religion_group = pagan_group
+			limit = { NOT = { novum_imperium_is_pagan = yes } }
+			novum_imperium_is_pagan = yes
 		}
 	}
-	active = { religion_group = pagan_group }
+	active = { novum_imperium_is_pagan = yes }
 
 	flags = {
 		is_singular
@@ -995,14 +995,14 @@ upgrade_temple_precinct = {
 upgrade_inner_sanctuary = { 
 	picture = GFX_upgrade_icon_crates
 
-	potential = { religion_group = pagan_group }
+	potential = { novum_imperium_is_pagan = yes }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion_group = pagan_group } }
-			religion_group = pagan_group
+			limit = { NOT = { novum_imperium_is_pagan = yes } }
+			novum_imperium_is_pagan = yes
 		}
 	}
-	active = { religion_group = pagan_group }
+	active = { novum_imperium_is_pagan = yes }
 
 	flags = {
 		room
@@ -1024,11 +1024,11 @@ upgrade_custodian_of_temple = {
 	potential = { }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion_group = pagan_group } }
-			religion_group = pagan_group
+			limit = { NOT = { novum_imperium_is_pagan = yes } }
+			novum_imperium_is_pagan = yes
 		}
 	}
-	active = { religion_group = pagan_group }
+	active = { novum_imperium_is_pagan = yes }
 
 	flags = {
 		is_singular
@@ -1412,14 +1412,14 @@ upgrade_school_synagogue = {
 upgrade_chaitya-grihas = {
 	picture = GFX_upgrade_icon_crates
 	
-	potential = { religion = buddhist }
+	potential = { religion_group = bud_group }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion = buddhist } }
-			religion = buddhist
+			limit = { NOT = { religion_group = bud_group } }
+			religion_group = bud_group
 		}
 	}
-	active = { religion = buddhist }
+	active = { religion_group = bud_group }
 
 	flags = {
 		is_plural
@@ -1440,11 +1440,11 @@ upgrade_chaitya-grihas = {
 upgrade_gompa= {
 	picture = GFX_upgrade_icon_crates
 	
-	potential = { religion = buddhist }
+	potential = { religion_group = bud_group }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion = buddhist } }
-			religion = buddhist
+			limit = { NOT = { religion_group = bud_group } }
+			religion_group = bud_group
 		}
 	}
 	active = {  } #active even if owner not of the same religion
@@ -1467,14 +1467,14 @@ upgrade_gompa= {
 upgrade_bodhi_tree = {
 	picture = GFX_upgrade_icon_crates
 	
-	potential = { religion = buddhist }
+	potential = { religion_group = bud_group }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion = buddhist } }
-			religion = buddhist
+			limit = { NOT = { religion_group = bud_group } }
+			religion_group = bud_group
 		}
 	}
-	active = { religion = buddhist }
+	active = { religion_group = bud_group }
 
 	flags = {
 		is_singular
@@ -1494,14 +1494,14 @@ upgrade_bodhi_tree = {
 upgrade_cave_complex = {
 	picture = GFX_upgrade_icon_crates
 	
-	potential = { religion = buddhist }
+	potential = { religion_group = bud_group }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion = buddhist } }
-			religion = buddhist
+			limit = { NOT = { religion_group = bud_group } }
+			religion_group = bud_group
 		}
 	}
-	active = { } # active even if owner is not a Budhist?
+	active = { } # active even if owner is not a Buddhist?
 
 	flags = {
 		is_singular
@@ -1521,14 +1521,14 @@ upgrade_cave_complex = {
 upgrade_vihara = {
 	picture = GFX_upgrade_icon_crates
 	
-	potential = { religion = buddhist }
+	potential = { religion_group = bud_group }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion = buddhist } }
-			religion = buddhist
+			limit = { NOT = { religion_group = bud_group } }
+			religion_group = bud_group
 		}
 	}
-	active = { religion = buddhist }
+	active = { religion_group = bud_group }
 
 	flags = {
 		is_singular
@@ -1546,14 +1546,14 @@ upgrade_vihara = {
 upgrade_school_buddhist = {
 	picture = GFX_upgrade_icon_crates
 	
-	potential = { religion = buddhist }
+	potential = { religion_group = bud_group }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion = buddhist } }
-			religion = buddhist
+			limit = { NOT = { religion_group = bud_group } }
+			religion_group = bud_group
 		}
 	}
-	active = { religion = buddhist }
+	active = { religion_group = bud_group }
 
 	flags = {
 		culture_conversion_faster
@@ -1575,15 +1575,15 @@ upgrade_school_buddhist = {
 upgrade_relic_stupa = {
 	picture = GFX_upgrade_icon_crates
 	
-	potential = { religion = buddhist }
+	potential = { religion_group = bud_group }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion = buddhist } }
-			religion = buddhist
+			limit = { NOT = { religion_group = bud_group } }
+			religion_group = bud_group
 		}
 	}
 	active = { 
-		religion = buddhist
+		religion_group = bud_group
 		hidden_tooltip = {
 			FROMFROM = { is_active = yes }
 		}
@@ -1619,14 +1619,14 @@ upgrade_relic_stupa = {
 upgrade_commerative_stupa = {
 	picture = GFX_upgrade_icon_crates
 	
-	potential = { religion = buddhist }
+	potential = { religion_group = bud_group }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion = buddhist } }
-			religion = buddhist
+			limit = { NOT = { religion_group = bud_group } }
+			religion_group = bud_group
 		}
 	}
-	active = { religion = buddhist }
+	active = { religion_group = bud_group }
 
 	flags = {
 		is_singular
@@ -1646,14 +1646,14 @@ upgrade_commerative_stupa = {
 upgrade_symbolic_stupa = {
 	picture = GFX_upgrade_icon_crates
 	
-	potential = { religion = buddhist }
+	potential = { religion_group = bud_group }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion = buddhist } }
-			religion = buddhist
+			limit = { NOT = { religion_group = bud_group } }
+			religion_group = bud_group
 		}
 	}
-	active = { religion = buddhist }
+	active = { religion_group = bud_group }
 
 	flags = {
 		is_singular
@@ -1665,22 +1665,22 @@ upgrade_symbolic_stupa = {
 		
 	}
 	owner_modifier = {
-		buddhist_opinion = 3
+		bud_group_opinion = 3
 	}
 }
 
 upgrade_votive_stupa = {
 	picture = GFX_upgrade_icon_crates
 	
-	potential = { religion = buddhist }
+	potential = { religion_group = bud_group }
 	allow = {
 		trigger_if = {
-			limit = { NOT = { religion = buddhist } }
-			religion = buddhist
+			limit = { NOT = { religion_group = bud_group } }
+			religion_group = bud_group
 		}
 		FROMFROM = { num_of_wonder_upgrades = 6 }
 	}
-	active = { religion = buddhist }
+	active = { religion_group = bud_group }
 
 	flags = {
 		is_singular

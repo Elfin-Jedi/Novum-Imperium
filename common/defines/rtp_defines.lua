@@ -592,8 +592,8 @@ NDefines.NDiplomacy.SETTLE_FEUD_INTERACTION_PIETY = 0
 NDefines.NDiplomacy.SETTLE_FEUD_INTERACTION_PRESTIGE = 0
 NDefines.NDiplomacy.SETTLE_FEUD_INTERACTION_THRESHOLD_FOR_NO = 25 -- ?
 NDefines.NDiplomacy.SETTLE_FEUD_INTERACTION_THRESHOLD_FOR_YES = 50 -- ?
-NDefines.NDiplomacy.SHORT_REIGN_OPINION_MULT = 1.0 -- ?
-NDefines.NDiplomacy.SHORT_REIGN_YEARS_END = 20
+NDefines.NDiplomacy.SHORT_REIGN_OPINION_MULT = 5 -- v12 (-5 x 8 per year with DivineRight = 0) v14 reduced to 4 / Numahr: increased back to 5 as all SELIN metrics are based on this
+NDefines.NDiplomacy.SHORT_REIGN_YEARS_END = 8 -- notes:x-2 opinion per year v10nincreased from 9 to 15 v11 increased to 20 v12 reduced to 8 (with -5 per year) v12 increased / Numahr: decreased to 8 based on user feedback
 NDefines.NDiplomacy.SPLIT_CLAN_INTERACTION_ENABLED = 1
 NDefines.NDiplomacy.SPLIT_CLAN_INTERACTION_MONEY  = 0
 NDefines.NDiplomacy.SPLIT_CLAN_INTERACTION_MUST_HAVE_COST = 1
@@ -1137,10 +1137,10 @@ NDefines.NDisease.SMALL_TOWN_INCOME = 10.0
 -- NEngine
 
 NDefines.NEngine.COURTIERS_MTTTH_EVENTS = 1
-NDefines.NEngine.COURTIER_EVENT_PROCESS_OFFSET = 60
-NDefines.NEngine.COURT_PRUNE_SIZE = 25
+NDefines.NEngine.COURTIER_EVENT_PROCESS_OFFSET = 255
+NDefines.NEngine.COURT_PRUNE_SIZE = 1
 NDefines.NEngine.HEALTH_IMMUNITY_TO_PRUNING = 7
-NDefines.NEngine.PRUNE_MINIMAL_AGE = 50
+NDefines.NEngine.PRUNE_MINIMAL_AGE = 1
 
 -- NAI
 

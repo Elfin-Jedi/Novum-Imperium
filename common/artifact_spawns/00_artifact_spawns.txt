@@ -215,7 +215,7 @@ blessed_mantle = {
 		additive_modifier = {
 			value = 100
 			religion_group = muslim	
-			is_landed = yes		
+			is_landed = yes
 		}
 	}
 
@@ -322,8 +322,8 @@ fetish_of_souls = {
 		additive_modifier = {
 			value = 5
 			OR = {
-				religion = west_african_pagan
-				religion = west_african_pagan_reformed
+				religion_group = serer_group
+				religion_group = african_pagan_group
 			}
 			is_landed = yes
 		}
@@ -436,15 +436,12 @@ axe_of_perkunas = {
 		value = 0
 		additive_modifier = {
 			value = 5
-			OR = {
-				religion = baltic_pagan
-				religion = baltic_pagan_reformed
-			}
+			religion_group = baltic_group
 			is_landed = yes
 		}
 		additive_modifier = {
 			value = 100
-			religion = baltic_pagan
+			religion_group = baltic_group
 			is_landed = yes
 		}
 	}
@@ -1247,4 +1244,3 @@ generic_artifact = {
 		}
 	}
 }
-

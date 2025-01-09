@@ -379,23 +379,2463 @@ society_decisions = {
 					else_if = {
 						limit = {
 							NOR = {
+								trait = sympathy_abrahamics
+								trait = sympathy_anatolians
+								trait = sympathy_arabpagans
+								trait = sympathy_aztecs
+								trait = sympathy_baltics
+								trait = sympathy_bantus
+								trait = sympathy_berbers
+								trait = sympathy_buddhists
+								trait = sympathy_celtics
+								trait = sympathy_chinese
 								trait = sympathy_christendom
+								trait = sympathy_east_africans
+								trait = sympathy_egyptian
+								trait = sympathy_finnish
+								trait = sympathy_graecoroman
 								trait = sympathy_indian
-								trait = sympathy_islam
+								trait = sympathy_indohellens
+								trait = sympathy_intis
+								trait = sympathy_inuit
 								trait = sympathy_judaism
+								trait = sympathy_luwians
+								trait = sympathy_mande
+								trait = sympathy_manichaeans
+								trait = sympathy_mithraics
+								trait = sympathy_islam
+								trait = sympathy_platonics
+								trait = sympathy_nordic
 								trait = sympathy_pagans
+								trait = sympathy_palmyrans
+								trait = sympathy_sererics
+								trait = sympathy_slavics
+								trait = sympathy_sol
+								trait = sympathy_tengri
+								trait = sympathy_yazd
+								trait = sympathy_zal
 								trait = sympathy_zoroastrianism
+								trait = sympathy_african
 							}
 						}
-
-						trigger_switch = {
-							on_trigger = religion_group
-							christian = 			{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							muslim = 				{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							zoroastrian_group = 	{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } } }
-							jewish_group = 			{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							indian_group = 			{ random_list = { 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							pagan_group = 			{ random_list = { 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_zoroastrianism } } }
+						random_list = {
+							100 = {
+								add_trait = sympathy_abrahamics
+							
+								modifier = {
+									factor = 0
+									religion_group = abrahamic_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = abrahamic_group
+										}
+										any_vassal = {
+											religion_group = abrahamic_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = abrahamic_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = abrahamic_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_abrahamics
+												religion = ROOT
+											}
+											religion_group = abrahamic_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_abrahamics
+													religion = ROOT
+												}
+												religion_group = abrahamic_group
+											}
+										}
+										any_spouse = {
+											religion_group = abrahamic_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = abrahamic_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = abrahamic_group
+										}
+										any_demesne_province = {
+											religion_group = abrahamic_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_anatolians
+							
+								modifier = {
+									factor = 0
+									religion_group = anatolian_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = anatolian_group
+										}
+										any_vassal = {
+											religion_group = anatolian_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = anatolian_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = anatolian_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_anatolians
+												religion = ROOT
+											}
+											religion_group = anatolian_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_anatolians
+													religion = ROOT
+												}
+												religion_group = anatolian_group
+											}
+										}
+										any_spouse = {
+											religion_group = anatolian_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = anatolian_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = anatolian_group
+										}
+										any_demesne_province = {
+											religion_group = anatolian_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_arabpagans
+							
+								modifier = {
+									factor = 0
+									religion_group = arabpagan_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = arabpagan_group
+										}
+										any_vassal = {
+											religion_group = arabpagan_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = arabpagan_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = arabpagan_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_arabpagans
+												religion = ROOT
+											}
+											religion_group = arabpagan_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_arabpagans
+													religion = ROOT
+												}
+												religion_group = arabpagan_group
+											}
+										}
+										any_spouse = {
+											religion_group = arabpagan_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = arabpagan_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = arabpagan_group
+										}
+										any_demesne_province = {
+											religion_group = arabpagan_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_aztecs
+							
+								modifier = {
+									factor = 0
+									religion_group = aztec_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = aztec_group
+										}
+										any_vassal = {
+											religion_group = aztec_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = aztec_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = aztec_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_aztecs
+												religion = ROOT
+											}
+											religion_group = aztec_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_aztecs
+													religion = ROOT
+												}
+												religion_group = aztec_group
+											}
+										}
+										any_spouse = {
+											religion_group = aztec_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = aztec_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = aztec_group
+										}
+										any_demesne_province = {
+											religion_group = aztec_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_baltics
+							
+								modifier = {
+									factor = 0
+									religion_group = baltic_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = baltic_group
+										}
+										any_vassal = {
+											religion_group = baltic_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = baltic_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = baltic_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_baltics
+												religion = ROOT
+											}
+											religion_group = baltic_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_baltics
+													religion = ROOT
+												}
+												religion_group = baltic_group
+											}
+										}
+										any_spouse = {
+											religion_group = baltic_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = baltic_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = baltic_group
+										}
+										any_demesne_province = {
+											religion_group = baltic_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_bantus
+							
+								modifier = {
+									factor = 0
+									religion_group = bantu_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = bantu_group
+										}
+										any_vassal = {
+											religion_group = bantu_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = bantu_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = bantu_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_bantus
+												religion = ROOT
+											}
+											religion_group = bantu_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_bantus
+													religion = ROOT
+												}
+												religion_group = bantu_group
+											}
+										}
+										any_spouse = {
+											religion_group = bantu_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = bantu_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = bantu_group
+										}
+										any_demesne_province = {
+											religion_group = bantu_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_berbers
+							
+								modifier = {
+									factor = 0
+									religion_group = berberpagan_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = berberpagan_group
+										}
+										any_vassal = {
+											religion_group = berberpagan_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = berberpagan_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = berberpagan_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_berbers
+												religion = ROOT
+											}
+											religion_group = berberpagan_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_berbers
+													religion = ROOT
+												}
+												religion_group = berberpagan_group
+											}
+										}
+										any_spouse = {
+											religion_group = berberpagan_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = berberpagan_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = berberpagan_group
+										}
+										any_demesne_province = {
+											religion_group = berberpagan_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_buddhists
+							
+								modifier = {
+									factor = 0
+									religion_group = bud_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = bud_group
+										}
+										any_vassal = {
+											religion_group = bud_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = bud_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = bud_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_buddhists
+												religion = ROOT
+											}
+											religion_group = bud_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_buddhists
+													religion = ROOT
+												}
+												religion_group = bud_group
+											}
+										}
+										any_spouse = {
+											religion_group = bud_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = bud_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = bud_group
+										}
+										any_demesne_province = {
+											religion_group = bud_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_celtics
+							
+								modifier = {
+									factor = 0
+									religion_group = celtic_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = celtic_group
+										}
+										any_vassal = {
+											religion_group = celtic_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = celtic_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = celtic_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_celtics
+												religion = ROOT
+											}
+											religion_group = celtic_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_celtics
+													religion = ROOT
+												}
+												religion_group = celtic_group
+											}
+										}
+										any_spouse = {
+											religion_group = celtic_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = celtic_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = celtic_group
+										}
+										any_demesne_province = {
+											religion_group = celtic_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_chinese
+							
+								modifier = {
+									factor = 0
+									religion_group = chinese_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = chinese_group
+										}
+										any_vassal = {
+											religion_group = chinese_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = chinese_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = chinese_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_chinese
+												religion = ROOT
+											}
+											religion_group = chinese_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_chinese
+													religion = ROOT
+												}
+												religion_group = chinese_group
+											}
+										}
+										any_spouse = {
+											religion_group = chinese_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = chinese_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = chinese_group
+										}
+										any_demesne_province = {
+											religion_group = chinese_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_christendom
+							
+								modifier = {
+									factor = 0
+									OR = {
+										religion_group = christian
+										has_religion_feature = religion_syncretic_christian
+									}
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = christian
+										}
+										any_vassal = {
+											religion_group = christian
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = christian }
+										}
+										any_vassal = {
+											NOT = { religion_group = christian }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_christendom
+												religion = ROOT
+											}
+											religion_group = christian
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_christendom
+													religion = ROOT
+												}
+												religion_group = christian
+											}
+										}
+										any_spouse = {
+											religion_group = christian
+										}
+										any_courtier_or_vassal = {
+											religion_group = christian
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = christian
+										}
+										any_demesne_province = {
+											religion_group = christian
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_east_africans
+							
+								modifier = {
+									factor = 0
+									religion_group = east_african_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = east_african_group
+										}
+										any_vassal = {
+											religion_group = east_african_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = east_african_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = east_african_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_east_africans
+												religion = ROOT
+											}
+											religion_group = east_african_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_east_africans
+													religion = ROOT
+												}
+												religion_group = east_african_group
+											}
+										}
+										any_spouse = {
+											religion_group = east_african_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = east_african_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = east_african_group
+										}
+										any_demesne_province = {
+											religion_group = east_african_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_egyptian
+							
+								modifier = {
+									factor = 0
+									religion_group = egyptian_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = egyptian_group
+										}
+										any_vassal = {
+											religion_group = egyptian_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = egyptian_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = egyptian_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_egyptian
+												religion = ROOT
+											}
+											religion_group = egyptian_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_egyptian
+													religion = ROOT
+												}
+												religion_group = egyptian_group
+											}
+										}
+										any_spouse = {
+											religion_group = egyptian_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = egyptian_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = egyptian_group
+										}
+										any_demesne_province = {
+											religion_group = egyptian_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_finnish
+							
+								modifier = {
+									factor = 0
+									religion_group = finnish_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = finnish_group
+										}
+										any_vassal = {
+											religion_group = finnish_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = finnish_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = finnish_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_finnish
+												religion = ROOT
+											}
+											religion_group = finnish_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_finnish
+													religion = ROOT
+												}
+												religion_group = finnish_group
+											}
+										}
+										any_spouse = {
+											religion_group = finnish_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = finnish_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = finnish_group
+										}
+										any_demesne_province = {
+											religion_group = finnish_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_graecoroman
+							
+								modifier = {
+									factor = 0
+									religion_group = graecoroman_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = graecoroman_group
+										}
+										any_vassal = {
+											religion_group = graecoroman_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = graecoroman_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = graecoroman_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_graecoroman
+												religion = ROOT
+											}
+											religion_group = graecoroman_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_graecoroman
+													religion = ROOT
+												}
+												religion_group = graecoroman_group
+											}
+										}
+										any_spouse = {
+											religion_group = graecoroman_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = graecoroman_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = graecoroman_group
+										}
+										any_demesne_province = {
+											religion_group = graecoroman_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_indian
+							
+								modifier = {
+									factor = 0
+									OR = {
+										religion_group = indian_group
+										has_religion_feature = religion_syncretic_indian
+									}
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = indian_group
+										}
+										any_vassal = {
+											religion_group = indian_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = indian_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = indian_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_indian
+												religion = ROOT
+											}
+											religion_group = indian_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_indian
+													religion = ROOT
+												}
+												religion_group = indian_group
+											}
+										}
+										any_spouse = {
+											religion_group = indian_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = indian_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = indian_group
+										}
+										any_demesne_province = {
+											religion_group = indian_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_indohellens
+							
+								modifier = {
+									factor = 0
+									religion_group = indohelen_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = indohelen_group
+										}
+										any_vassal = {
+											religion_group = indohelen_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = indohelen_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = indohelen_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_indohellens
+												religion = ROOT
+											}
+											religion_group = indohelen_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_indohellens
+													religion = ROOT
+												}
+												religion_group = indohelen_group
+											}
+										}
+										any_spouse = {
+											religion_group = indohelen_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = indohelen_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = indohelen_group
+										}
+										any_demesne_province = {
+											religion_group = indohelen_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_intis
+							
+								modifier = {
+									factor = 0
+									religion_group = inti_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = inti_group
+										}
+										any_vassal = {
+											religion_group = inti_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = inti_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = inti_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_intis
+												religion = ROOT
+											}
+											religion_group = inti_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_intis
+													religion = ROOT
+												}
+												religion_group = inti_group
+											}
+										}
+										any_spouse = {
+											religion_group = inti_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = inti_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = inti_group
+										}
+										any_demesne_province = {
+											religion_group = inti_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_inuit
+							
+								modifier = {
+									factor = 0
+									religion_group = inuit_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = inuit_group
+										}
+										any_vassal = {
+											religion_group = inuit_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = inuit_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = inuit_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_inuit
+												religion = ROOT
+											}
+											religion_group = inuit_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_inuit
+													religion = ROOT
+												}
+												religion_group = inuit_group
+											}
+										}
+										any_spouse = {
+											religion_group = inuit_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = inuit_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = inuit_group
+										}
+										any_demesne_province = {
+											religion_group = inuit_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_judaism
+							
+								modifier = {
+									factor = 0
+									religion_group = jewish_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = jewish_group
+										}
+										any_vassal = {
+											religion_group = jewish_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = jewish_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = jewish_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_judaism
+												religion = ROOT
+											}
+											religion_group = jewish_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_judaism
+													religion = ROOT
+												}
+												religion_group = jewish_group
+											}
+										}
+										any_spouse = {
+											religion_group = jewish_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = jewish_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = jewish_group
+										}
+										any_demesne_province = {
+											religion_group = jewish_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_luwians
+							
+								modifier = {
+									factor = 0
+									religion_group = luwian_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = luwian_group
+										}
+										any_vassal = {
+											religion_group = luwian_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = luwian_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = luwian_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_luwians
+												religion = ROOT
+											}
+											religion_group = luwian_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_luwians
+													religion = ROOT
+												}
+												religion_group = luwian_group
+											}
+										}
+										any_spouse = {
+											religion_group = luwian_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = luwian_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = luwian_group
+										}
+										any_demesne_province = {
+											religion_group = luwian_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_mande
+							
+								modifier = {
+									factor = 0
+									religion_group = mand_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = mand_group
+										}
+										any_vassal = {
+											religion_group = mand_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = mand_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = mand_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_mande
+												religion = ROOT
+											}
+											religion_group = mand_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_mande
+													religion = ROOT
+												}
+												religion_group = mand_group
+											}
+										}
+										any_spouse = {
+											religion_group = mand_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = mand_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = mand_group
+										}
+										any_demesne_province = {
+											religion_group = mand_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_manichaeans
+							
+								modifier = {
+									factor = 0
+									religion_group = mani_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = mani_group
+										}
+										any_vassal = {
+											religion_group = mani_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = mani_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = mani_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_manichaeans
+												religion = ROOT
+											}
+											religion_group = mani_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_manichaeans
+													religion = ROOT
+												}
+												religion_group = mani_group
+											}
+										}
+										any_spouse = {
+											religion_group = mani_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = mani_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = mani_group
+										}
+										any_demesne_province = {
+											religion_group = mani_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_mithraics
+							
+								modifier = {
+									factor = 0
+									religion_group = mithra_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = mithra_group
+										}
+										any_vassal = {
+											religion_group = mithra_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = mithra_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = mithra_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_mithraics
+												religion = ROOT
+											}
+											religion_group = mithra_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_mithraics
+													religion = ROOT
+												}
+												religion_group = mithra_group
+											}
+										}
+										any_spouse = {
+											religion_group = mithra_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = mithra_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = mithra_group
+										}
+										any_demesne_province = {
+											religion_group = mithra_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_islam
+							
+								modifier = {
+									factor = 0
+									OR = {
+										religion_group = muslim
+										has_religion_feature = religion_syncretic_muslim
+									}
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = muslim
+										}
+										any_vassal = {
+											religion_group = muslim
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = muslim }
+										}
+										any_vassal = {
+											NOT = { religion_group = muslim }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_islam
+												religion = ROOT
+											}
+											religion_group = muslim
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_islam
+													religion = ROOT
+												}
+												religion_group = muslim
+											}
+										}
+										any_spouse = {
+											religion_group = muslim
+										}
+										any_courtier_or_vassal = {
+											religion_group = muslim
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = muslim
+										}
+										any_demesne_province = {
+											religion_group = muslim
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_platonics
+							
+								modifier = {
+									factor = 0
+									religion_group = neoplato_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = neoplato_group
+										}
+										any_vassal = {
+											religion_group = neoplato_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = neoplato_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = neoplato_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_platonics
+												religion = ROOT
+											}
+											religion_group = neoplato_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_platonics
+													religion = ROOT
+												}
+												religion_group = neoplato_group
+											}
+										}
+										any_spouse = {
+											religion_group = neoplato_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = neoplato_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = neoplato_group
+										}
+										any_demesne_province = {
+											religion_group = neoplato_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_nordic
+							
+								modifier = {
+									factor = 0
+									religion_group = norsegerman_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = norsegerman_group
+										}
+										any_vassal = {
+											religion_group = norsegerman_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = norsegerman_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = norsegerman_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_nordic
+												religion = ROOT
+											}
+											religion_group = norsegerman_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_nordic
+													religion = ROOT
+												}
+												religion_group = norsegerman_group
+											}
+										}
+										any_spouse = {
+											religion_group = norsegerman_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = norsegerman_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = norsegerman_group
+										}
+										any_demesne_province = {
+											religion_group = norsegerman_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_pagans
+							
+								modifier = {
+									factor = 0
+									religion_group = pagan_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = pagan_group
+										}
+										any_vassal = {
+											religion_group = pagan_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = pagan_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = pagan_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_pagans
+												religion = ROOT
+											}
+											religion_group = pagan_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_pagans
+													religion = ROOT
+												}
+												religion_group = pagan_group
+											}
+										}
+										any_spouse = {
+											religion_group = pagan_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = pagan_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = pagan_group
+										}
+										any_demesne_province = {
+											religion_group = pagan_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_palmyrans
+							
+								modifier = {
+									factor = 0
+									religion_group = palmyranpagan_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = palmyranpagan_group
+										}
+										any_vassal = {
+											religion_group = palmyranpagan_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = palmyranpagan_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = palmyranpagan_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_palmyrans
+												religion = ROOT
+											}
+											religion_group = palmyranpagan_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_palmyrans
+													religion = ROOT
+												}
+												religion_group = palmyranpagan_group
+											}
+										}
+										any_spouse = {
+											religion_group = palmyranpagan_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = palmyranpagan_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = palmyranpagan_group
+										}
+										any_demesne_province = {
+											religion_group = palmyranpagan_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_sererics
+							
+								modifier = {
+									factor = 0
+									religion_group = serer_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = serer_group
+										}
+										any_vassal = {
+											religion_group = serer_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = serer_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = serer_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_sererics
+												religion = ROOT
+											}
+											religion_group = serer_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_sererics
+													religion = ROOT
+												}
+												religion_group = serer_group
+											}
+										}
+										any_spouse = {
+											religion_group = serer_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = serer_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = serer_group
+										}
+										any_demesne_province = {
+											religion_group = serer_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_slavics
+							
+								modifier = {
+									factor = 0
+									religion_group = slavic_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = slavic_group
+										}
+										any_vassal = {
+											religion_group = slavic_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = slavic_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = slavic_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_slavics
+												religion = ROOT
+											}
+											religion_group = slavic_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_slavics
+													religion = ROOT
+												}
+												religion_group = slavic_group
+											}
+										}
+										any_spouse = {
+											religion_group = slavic_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = slavic_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = slavic_group
+										}
+										any_demesne_province = {
+											religion_group = slavic_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_sol
+							
+								modifier = {
+									factor = 0
+									religion_group = sol_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = sol_group
+										}
+										any_vassal = {
+											religion_group = sol_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = sol_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = sol_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_sol
+												religion = ROOT
+											}
+											religion_group = sol_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_sol
+													religion = ROOT
+												}
+												religion_group = sol_group
+											}
+										}
+										any_spouse = {
+											religion_group = sol_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = sol_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = sol_group
+										}
+										any_demesne_province = {
+											religion_group = sol_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_tengri
+							
+								modifier = {
+									factor = 0
+									religion_group = tengri_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = tengri_group
+										}
+										any_vassal = {
+											religion_group = tengri_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = tengri_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = tengri_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_tengri
+												religion = ROOT
+											}
+											religion_group = tengri_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_tengri
+													religion = ROOT
+												}
+												religion_group = tengri_group
+											}
+										}
+										any_spouse = {
+											religion_group = tengri_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = tengri_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = tengri_group
+										}
+										any_demesne_province = {
+											religion_group = tengri_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_yazd
+							
+								modifier = {
+									factor = 0
+									religion_group = yazd_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = yazd_group
+										}
+										any_vassal = {
+											religion_group = yazd_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = yazd_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = yazd_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_yazd
+												religion = ROOT
+											}
+											religion_group = yazd_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_yazd
+													religion = ROOT
+												}
+												religion_group = yazd_group
+											}
+										}
+										any_spouse = {
+											religion_group = yazd_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = yazd_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = yazd_group
+										}
+										any_demesne_province = {
+											religion_group = yazd_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_zal
+							
+								modifier = {
+									factor = 0
+									religion_group = zal_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = zal_group
+										}
+										any_vassal = {
+											religion_group = zal_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = zal_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = zal_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_zal
+												religion = ROOT
+											}
+											religion_group = zal_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_zal
+													religion = ROOT
+												}
+												religion_group = zal_group
+											}
+										}
+										any_spouse = {
+											religion_group = zal_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = zal_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = zal_group
+										}
+										any_demesne_province = {
+											religion_group = zal_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_zoroastrianism
+							
+								modifier = {
+									factor = 0
+									OR = {
+										religion_group = zoroastrian_group
+										has_religion_feature = religion_syncretic_zoroastrian
+									}
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = zoroastrian_group
+										}
+										any_vassal = {
+											religion_group = zoroastrian_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = zoroastrian_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = zoroastrian_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_zoroastrianism
+												religion = ROOT
+											}
+											religion_group = zoroastrian_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_zoroastrianism
+													religion = ROOT
+												}
+												religion_group = zoroastrian_group
+											}
+										}
+										any_spouse = {
+											religion_group = zoroastrian_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = zoroastrian_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = zoroastrian_group
+										}
+										any_demesne_province = {
+											religion_group = zoroastrian_group
+										}
+									}
+								}
+							}
+							100 = {
+								add_trait = sympathy_african
+							
+								modifier = {
+									factor = 0
+									religion_group = african_group
+								}
+								modifier = { # Prioritize getting a sympathy trait that is useful
+									factor = 100
+									OR = {
+										any_demesne_province = {
+											religion_group = african_group
+										}
+										any_vassal = {
+											religion_group = african_group
+										}
+									}
+								}
+								modifier = { # Otherwise try to emulate your liege
+									factor = 5
+									NOR = {
+										any_demesne_province = {
+											NOT = { religion_group = african_group }
+										}
+										any_vassal = {
+											NOT = { religion_group = african_group }
+										}
+									}
+									any_liege = {
+										OR = {
+											AND = {
+												trait = sympathy_african
+												religion = ROOT
+											}
+											religion_group = african_group
+										}
+									}	
+								}
+								modifier = {
+									factor = 0
+									NOR = {
+										any_liege = {
+											OR = {
+												AND = {
+													trait = sympathy_african
+													religion = ROOT
+												}
+												religion_group = african_group
+											}
+										}
+										any_spouse = {
+											religion_group = african_group
+										}
+										any_courtier_or_vassal = {
+											religion_group = african_group
+										}
+										any_neighbor_independent_ruler = {
+											religion_group = african_group
+										}
+										any_demesne_province = {
+											religion_group = african_group
+										}
+									}
+								}
+							}
 						}
 					}
 					else = {
@@ -427,23 +2867,616 @@ society_decisions = {
 					else_if = {
 						limit = {
 							NOR = {
+								trait = sympathy_abrahamics
+								trait = sympathy_anatolians
+								trait = sympathy_arabpagans
+								trait = sympathy_aztecs
+								trait = sympathy_baltics
+								trait = sympathy_bantus
+								trait = sympathy_berbers
+								trait = sympathy_buddhists
+								trait = sympathy_celtics
+								trait = sympathy_chinese
 								trait = sympathy_christendom
+								trait = sympathy_east_africans
+								trait = sympathy_egyptian
+								trait = sympathy_finnish
+								trait = sympathy_graecoroman
 								trait = sympathy_indian
-								trait = sympathy_islam
+								trait = sympathy_indohellens
+								trait = sympathy_intis
+								trait = sympathy_inuit
 								trait = sympathy_judaism
+								trait = sympathy_luwians
+								trait = sympathy_mande
+								trait = sympathy_manichaeans
+								trait = sympathy_mithraics
+								trait = sympathy_islam
+								trait = sympathy_platonics
+								trait = sympathy_nordic
 								trait = sympathy_pagans
+								trait = sympathy_palmyrans
+								trait = sympathy_sererics
+								trait = sympathy_slavics
+								trait = sympathy_sol
+								trait = sympathy_tengri
+								trait = sympathy_yazd
+								trait = sympathy_zal
 								trait = sympathy_zoroastrianism
+								trait = sympathy_african
 							}
 						}
-
-						trigger_switch = {
-							on_trigger = religion_group
-							christian = 			{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							muslim = 				{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							zoroastrian_group = 	{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } } }
-							jewish_group = 			{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							indian_group = 			{ random_list = { 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							pagan_group = 			{ random_list = { 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_zoroastrianism } } }
+						random_list = {
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = abrahamic_group }
+									}
+									add_trait = sympathy_abrahamics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = anatolian_group }
+									}
+									add_trait = sympathy_anatolians
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = arabpagan_group }
+									}
+									add_trait = sympathy_arabpagans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = aztec_group }
+									}
+									add_trait = sympathy_aztecs
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = baltic_group }
+									}
+									add_trait = sympathy_baltics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = bantu_group }
+									}
+									add_trait = sympathy_bantus
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = berberpagan_group }
+									}
+									add_trait = sympathy_berbers
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = bud_group }
+									}
+									add_trait = sympathy_buddhists
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = celtic_group }
+									}
+									add_trait = sympathy_celtics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = chinese_group }
+									}
+									add_trait = sympathy_chinese
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = christian }
+									}
+									add_trait = sympathy_christendom
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = east_african_group }
+									}
+									add_trait = sympathy_east_africans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = egyptian_group }
+									}
+									add_trait = sympathy_egyptian
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = finnish_group }
+									}
+									add_trait = sympathy_finnish
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = graecoroman_group }
+									}
+									add_trait = sympathy_graecoroman
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = indian_group }
+									}
+									add_trait = sympathy_indian
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = indohelen_group }
+									}
+									add_trait = sympathy_indohellens
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = inti_group }
+									}
+									add_trait = sympathy_intis
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = inuit_group }
+									}
+									add_trait = sympathy_inuit
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = jewish_group }
+									}
+									add_trait = sympathy_judaism
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = jewish_group }
+									}
+									add_trait = sympathy_judaism
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = luwian_group }
+									}
+									add_trait = sympathy_luwians
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = mand_group }
+									}
+									add_trait = sympathy_mande
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = mani_group }
+									}
+									add_trait = sympathy_manichaeans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = mithra_group }
+									}
+									add_trait = sympathy_mithraics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = muslim }
+									}
+									add_trait = sympathy_islam
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = neoplato_group }
+									}
+									add_trait = sympathy_platonics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = norsegerman_group }
+									}
+									add_trait = sympathy_nordic
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = pagan_group }
+									}
+									add_trait = sympathy_pagans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = palmyranpagan_group }
+									}
+									add_trait = sympathy_palmyrans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = serer_group }
+									}
+									add_trait = sympathy_sererics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = slavic_group }
+									}
+									add_trait = sympathy_slavics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = sol_group }
+									}
+									add_trait = sympathy_sol
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = tengri_group }
+									}
+									add_trait = sympathy_tengri
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = yazd_group }
+									}
+									add_trait = sympathy_yazd
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = zal_group }
+									}
+									add_trait = sympathy_zal
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = zoroastrian_group }
+									}
+									add_trait = sympathy_zoroastrianism
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = african_group }
+									}
+									add_trait = sympathy_african
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
 						}
 					}
 					else = {
@@ -472,23 +3505,616 @@ society_decisions = {
 					else_if = {
 						limit = {
 							NOR = {
+								trait = sympathy_abrahamics
+								trait = sympathy_anatolians
+								trait = sympathy_arabpagans
+								trait = sympathy_aztecs
+								trait = sympathy_baltics
+								trait = sympathy_bantus
+								trait = sympathy_berbers
+								trait = sympathy_buddhists
+								trait = sympathy_celtics
+								trait = sympathy_chinese
 								trait = sympathy_christendom
+								trait = sympathy_east_africans
+								trait = sympathy_egyptian
+								trait = sympathy_finnish
+								trait = sympathy_graecoroman
 								trait = sympathy_indian
-								trait = sympathy_islam
+								trait = sympathy_indohellens
+								trait = sympathy_intis
+								trait = sympathy_inuit
 								trait = sympathy_judaism
+								trait = sympathy_luwians
+								trait = sympathy_mande
+								trait = sympathy_manichaeans
+								trait = sympathy_mithraics
+								trait = sympathy_islam
+								trait = sympathy_platonics
+								trait = sympathy_nordic
 								trait = sympathy_pagans
+								trait = sympathy_palmyrans
+								trait = sympathy_sererics
+								trait = sympathy_slavics
+								trait = sympathy_sol
+								trait = sympathy_tengri
+								trait = sympathy_yazd
+								trait = sympathy_zal
 								trait = sympathy_zoroastrianism
+								trait = sympathy_african
 							}
 						}
-
-						trigger_switch = {
-							on_trigger = religion_group
-							christian = 			{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							muslim = 				{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							zoroastrian_group = 	{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } } }
-							jewish_group = 			{ random_list = { 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							indian_group = 			{ random_list = { 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_pagans } 20 = { add_trait = sympathy_zoroastrianism } } }
-							pagan_group = 			{ random_list = { 20 = { add_trait = sympathy_judaism } 20 = { add_trait = sympathy_christendom } 20 = { add_trait = sympathy_islam } 20 = { add_trait = sympathy_indian } 20 = { add_trait = sympathy_zoroastrianism } } }
+						random_list = {
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = abrahamic_group }
+									}
+									add_trait = sympathy_abrahamics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = anatolian_group }
+									}
+									add_trait = sympathy_anatolians
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = arabpagan_group }
+									}
+									add_trait = sympathy_arabpagans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = aztec_group }
+									}
+									add_trait = sympathy_aztecs
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = baltic_group }
+									}
+									add_trait = sympathy_baltics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = bantu_group }
+									}
+									add_trait = sympathy_bantus
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = berberpagan_group }
+									}
+									add_trait = sympathy_berbers
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = bud_group }
+									}
+									add_trait = sympathy_buddhists
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = celtic_group }
+									}
+									add_trait = sympathy_celtics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = chinese_group }
+									}
+									add_trait = sympathy_chinese
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = christian }
+									}
+									add_trait = sympathy_christendom
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = east_african_group }
+									}
+									add_trait = sympathy_east_africans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = egyptian_group }
+									}
+									add_trait = sympathy_egyptian
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = finnish_group }
+									}
+									add_trait = sympathy_finnish
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = graecoroman_group }
+									}
+									add_trait = sympathy_graecoroman
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = indian_group }
+									}
+									add_trait = sympathy_indian
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = indohelen_group }
+									}
+									add_trait = sympathy_indohellens
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = inti_group }
+									}
+									add_trait = sympathy_intis
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = inuit_group }
+									}
+									add_trait = sympathy_inuit
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = jewish_group }
+									}
+									add_trait = sympathy_judaism
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = jewish_group }
+									}
+									add_trait = sympathy_judaism
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = luwian_group }
+									}
+									add_trait = sympathy_luwians
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = mand_group }
+									}
+									add_trait = sympathy_mande
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = mani_group }
+									}
+									add_trait = sympathy_manichaeans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = mithra_group }
+									}
+									add_trait = sympathy_mithraics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = muslim }
+									}
+									add_trait = sympathy_islam
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = neoplato_group }
+									}
+									add_trait = sympathy_platonics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = norsegerman_group }
+									}
+									add_trait = sympathy_nordic
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = pagan_group }
+									}
+									add_trait = sympathy_pagans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = palmyranpagan_group }
+									}
+									add_trait = sympathy_palmyrans
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = serer_group }
+									}
+									add_trait = sympathy_sererics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = slavic_group }
+									}
+									add_trait = sympathy_slavics
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = sol_group }
+									}
+									add_trait = sympathy_sol
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = tengri_group }
+									}
+									add_trait = sympathy_tengri
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = yazd_group }
+									}
+									add_trait = sympathy_yazd
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = zal_group }
+									}
+									add_trait = sympathy_zal
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = zoroastrian_group }
+									}
+									add_trait = sympathy_zoroastrianism
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
+							100 = {
+								if = {
+									limit = {
+										NOT = { religion_group = african_group }
+									}
+									add_trait = sympathy_african
+								}
+								else = {
+									add_character_modifier = {
+										modifier = rtp_tolerance_em
+										duration = -1
+										stacking = yes
+									}
+								}
+							}
 						}
 					}
 					else = {

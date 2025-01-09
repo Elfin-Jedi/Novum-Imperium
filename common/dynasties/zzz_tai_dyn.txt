@@ -1,0 +1,164 @@
+35=
+{
+	name="Dragosesti"
+	culture="romanian"
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 51
+			emblem = 0
+            color = 0
+            color = 2
+            color = 2
+        }
+		religion = orthodox
+    }
+}
+
+515=
+{
+	name="Selvo"	#Silvio
+	culture="italian"
+	religion="catholic"
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 224
+			emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+		religion = catholic
+    }
+}
+
+7215=
+{
+	used_for_random=no
+	name="Orsini d'Epiro"
+	culture="italian"
+	religion="catholic"
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 50
+			emblem = 0
+            color = 1
+            color = 2
+            color = 0
+        }
+		religion = catholic
+    }
+}
+
+18014=
+{
+	name="Draculesti"
+	culture="romanian"
+	religion="orthodox"
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 2
+			emblem = 0
+            color = 0
+            color = 7
+            color = 7
+        }
+		religion = orthodox
+    }
+}
+
+101340=
+{
+	name="Syrgiannes" #Komnenodoukas alunperin
+	culture="greek"
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 82
+			emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+		religion = orthodox
+    }
+}
+
+101893=
+{
+	name="Niklotid"
+	culture="german"
+	religion="slavic_pagan"
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 39
+			emblem = 0
+            color = 5
+            color = 0
+            color = 0
+        }
+		religion = catholic
+    }
+	forced_coa_religiongroup="christian"
+}
+
+101904=
+{
+	name="Nasrid"
+	culture="andalusian_arabic"
+	religion="sunni"
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 35
+			emblem = 0
+            color = 1
+            color = 3
+            color = 3
+        }
+		religion = catholic
+    }
+	forced_coa_religiongroup="christian"
+}
+
+
+### POPES
+
+8783=		#Gregorius VII?
+{
+	name="Aldobrandeschi"
+	culture="lombard"
+	religion="catholic"
+}
+
+100333=		#Paschal II?
+{
+	name="Ranieri"
+	culture="italian"
+	religion="catholic"
+}
+
+100330=		#Alexander III?
+{
+	name="Bandinelli"
+	culture="italian"
+	religion="catholic"
+}
+
+8795=		#Ioannes XXI?
+{
+	name="Julião"
+	culture="portuguese"
+	religion="catholic"
+}

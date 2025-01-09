@@ -55,7 +55,7 @@ emf_province_is_gompa_monastery_culture = {
 	OR = {
 		religion = bon
 		religion = bon_reformed
-		religion = buddhist
+		religion_group = bud_group
 	}
 }
 
@@ -336,7 +336,7 @@ emf_province_is_jewish_building_culture = {
 
 emf_province_is_indian_building_culture = {
 	OR = {
-		culture_group = indo_aryan_group
+		culture_group = indoaryan
 		culture_group = dravidian_group
 		culture_group = elephant_group
 	}

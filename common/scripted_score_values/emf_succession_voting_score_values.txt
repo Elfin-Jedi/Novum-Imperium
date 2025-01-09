@@ -2502,28 +2502,152 @@ emf_succession_voting_candidate_religion_score = {
 		}
 		NOR = {
 			trigger_if = {
+				limit = { FROM = { religion_group = abrahamic_group } }
+				trait = sympathy_abrahamics
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = anatolian_group } }
+				trait = sympathy_anatolians
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = arabpagan_group } }
+				trait = sympathy_arabpagans
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = aztec_group } }
+				trait = sympathy_aztecs
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = baltic_group } }
+				trait = sympathy_baltics
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = bantu_group } }
+				trait = sympathy_bantus
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = berberpagan_group } }
+				trait = sympathy_berbers
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = bud_group } }
+				trait = sympathy_buddhists
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = celtic_group } }
+				trait = sympathy_celtics
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = chinese_group } }
+				trait = sympathy_chinese
+			}
+			trigger_if = {
 				limit = { FROM = { religion_group = christian } }
 				trait = sympathy_christendom
 			}
-			trigger_else_if = {
-				limit = { FROM = { religion_group = muslim } }
-				trait = sympathy_islam
+			trigger_if = {
+				limit = { FROM = { religion_group = east_african_group } }
+				trait = sympathy_east_africans
 			}
-			trigger_else_if = {
-				limit = { FROM = { religion_group = pagan_group } }
-				trait = sympathy_pagans
+			trigger_if = {
+				limit = { FROM = { religion_group = egyptian_group } }
+				trait = sympathy_egyptian
 			}
-			trigger_else_if = {
-				limit = { FROM = { religion_group = zoroastrian_group } }
-				trait = sympathy_zoroastrianism
+			trigger_if = {
+				limit = { FROM = { religion_group = finnish_group } }
+				trait = sympathy_finnish
 			}
-			trigger_else_if = {
+			trigger_if = {
+				limit = { FROM = { religion_group = graecoroman_group } }
+				trait = sympathy_graecoroman
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = indian_group } }
+				trait = sympathy_indian
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = indohelen_group } }
+				trait = sympathy_indohellens
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = inti_group } }
+				trait = sympathy_intis
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = inuit_group } }
+				trait = sympathy_inuit
+			}
+			trigger_if = {
 				limit = { FROM = { religion_group = jewish_group } }
 				trait = sympathy_judaism
 			}
-			trigger_else_if = {
-				limit = { FROM = { religion_group = indian_group } }
-				trait = sympathy_indian
+			trigger_if = {
+				limit = { FROM = { religion_group = luwian_group } }
+				trait = sympathy_luwians
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = mand_group } }
+				trait = sympathy_mande
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = mani_group } }
+				trait = sympathy_manichaeans
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = mithra_group } }
+				trait = sympathy_mithraics
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = muslim } }
+				trait = sympathy_islam
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = neoplato_group } }
+				trait = sympathy_platonics
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = norsegerman_group } }
+				trait = sympathy_nordic
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = pagan_group } }
+				trait = sympathy_pagans
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = palmyranpagan_group } }
+				trait = sympathy_palmyrans
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = serer_group } }
+				trait = sympathy_sererics
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = slavic_group } }
+				trait = sympathy_slavics
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = sol_group } }
+				trait = sympathy_sol
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = tengri_group } }
+				trait = sympathy_tengri
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = yazd_group } }
+				trait = sympathy_yazd
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = zal_group } }
+				trait = sympathy_zal
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = zoroastrian_group } }
+				trait = sympathy_zoroastrianism
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = african_group } }
+				trait = sympathy_african
 			}
 			trigger_else = {
 				always = no
@@ -2734,28 +2858,152 @@ emf_succession_voting_candidate_religion_score_unimportant = {
 		}
 		NOR = {
 			trigger_if = {
+				limit = { FROM = { religion_group = abrahamic_group } }
+				trait = sympathy_abrahamics
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = anatolian_group } }
+				trait = sympathy_anatolians
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = arabpagan_group } }
+				trait = sympathy_arabpagans
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = aztec_group } }
+				trait = sympathy_aztecs
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = baltic_group } }
+				trait = sympathy_baltics
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = bantu_group } }
+				trait = sympathy_bantus
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = berberpagan_group } }
+				trait = sympathy_berbers
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = bud_group } }
+				trait = sympathy_buddhists
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = celtic_group } }
+				trait = sympathy_celtics
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = chinese_group } }
+				trait = sympathy_chinese
+			}
+			trigger_if = {
 				limit = { FROM = { religion_group = christian } }
 				trait = sympathy_christendom
 			}
-			trigger_else_if = {
-				limit = { FROM = { religion_group = muslim } }
-				trait = sympathy_islam
+			trigger_if = {
+				limit = { FROM = { religion_group = east_african_group } }
+				trait = sympathy_east_africans
 			}
-			trigger_else_if = {
-				limit = { FROM = { religion_group = pagan_group } }
-				trait = sympathy_pagans
+			trigger_if = {
+				limit = { FROM = { religion_group = egyptian_group } }
+				trait = sympathy_egyptian
 			}
-			trigger_else_if = {
-				limit = { FROM = { religion_group = zoroastrian_group } }
-				trait = sympathy_zoroastrianism
+			trigger_if = {
+				limit = { FROM = { religion_group = finnish_group } }
+				trait = sympathy_finnish
 			}
-			trigger_else_if = {
+			trigger_if = {
+				limit = { FROM = { religion_group = graecoroman_group } }
+				trait = sympathy_graecoroman
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = indian_group } }
+				trait = sympathy_indian
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = indohelen_group } }
+				trait = sympathy_indohellens
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = inti_group } }
+				trait = sympathy_intis
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = inuit_group } }
+				trait = sympathy_inuit
+			}
+			trigger_if = {
 				limit = { FROM = { religion_group = jewish_group } }
 				trait = sympathy_judaism
 			}
-			trigger_else_if = {
-				limit = { FROM = { religion_group = indian_group } }
-				trait = sympathy_indian
+			trigger_if = {
+				limit = { FROM = { religion_group = luwian_group } }
+				trait = sympathy_luwians
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = mand_group } }
+				trait = sympathy_mande
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = mani_group } }
+				trait = sympathy_manichaeans
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = mithra_group } }
+				trait = sympathy_mithraics
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = muslim } }
+				trait = sympathy_islam
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = neoplato_group } }
+				trait = sympathy_platonics
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = norsegerman_group } }
+				trait = sympathy_nordic
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = pagan_group } }
+				trait = sympathy_pagans
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = palmyranpagan_group } }
+				trait = sympathy_palmyrans
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = serer_group } }
+				trait = sympathy_sererics
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = slavic_group } }
+				trait = sympathy_slavics
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = sol_group } }
+				trait = sympathy_sol
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = tengri_group } }
+				trait = sympathy_tengri
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = yazd_group } }
+				trait = sympathy_yazd
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = zal_group } }
+				trait = sympathy_zal
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = zoroastrian_group } }
+				trait = sympathy_zoroastrianism
+			}
+			trigger_if = {
+				limit = { FROM = { religion_group = african_group } }
+				trait = sympathy_african
 			}
 			trigger_else = {
 				always = no
@@ -2966,28 +3214,152 @@ emf_succession_voting_candidate_religion_score_hre_elective = {
 		}
 		NOR = {
 			trigger_if = {
+				limit = { FROM = { religion_group = abrahamic_group } }
+				trait = sympathy_abrahamics
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = anatolian_group } }
+				trait = sympathy_anatolians
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = arabpagan_group } }
+				trait = sympathy_arabpagans
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = aztec_group } }
+				trait = sympathy_aztecs
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = baltic_group } }
+				trait = sympathy_baltics
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = bantu_group } }
+				trait = sympathy_bantus
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = berberpagan_group } }
+				trait = sympathy_berbers
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = bud_group } }
+				trait = sympathy_buddhists
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = celtic_group } }
+				trait = sympathy_celtics
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = chinese_group } }
+				trait = sympathy_chinese
+			}
+			trigger_else_if = {
 				limit = { FROM = { religion_group = christian } }
 				trait = sympathy_christendom
 			}
 			trigger_else_if = {
-				limit = { FROM = { religion_group = muslim } }
-				trait = sympathy_islam
+				limit = { FROM = { religion_group = east_african_group } }
+				trait = sympathy_east_africans
 			}
 			trigger_else_if = {
-				limit = { FROM = { religion_group = pagan_group } }
-				trait = sympathy_pagans
+				limit = { FROM = { religion_group = egyptian_group } }
+				trait = sympathy_egyptian
 			}
 			trigger_else_if = {
-				limit = { FROM = { religion_group = zoroastrian_group } }
-				trait = sympathy_zoroastrianism
+				limit = { FROM = { religion_group = finnish_group } }
+				trait = sympathy_finnish
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = graecoroman_group } }
+				trait = sympathy_graecoroman
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = indian_group } }
+				trait = sympathy_indian
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = indohelen_group } }
+				trait = sympathy_indohellens
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = inti_group } }
+				trait = sympathy_intis
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = inuit_group } }
+				trait = sympathy_inuit
 			}
 			trigger_else_if = {
 				limit = { FROM = { religion_group = jewish_group } }
 				trait = sympathy_judaism
 			}
 			trigger_else_if = {
-				limit = { FROM = { religion_group = indian_group } }
-				trait = sympathy_indian
+				limit = { FROM = { religion_group = luwian_group } }
+				trait = sympathy_luwians
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = mand_group } }
+				trait = sympathy_mande
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = mani_group } }
+				trait = sympathy_manichaeans
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = mithra_group } }
+				trait = sympathy_mithraics
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = muslim } }
+				trait = sympathy_islam
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = neoplato_group } }
+				trait = sympathy_platonics
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = norsegerman_group } }
+				trait = sympathy_nordic
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = pagan_group } }
+				trait = sympathy_pagans
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = palmyranpagan_group } }
+				trait = sympathy_palmyrans
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = serer_group } }
+				trait = sympathy_sererics
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = slavic_group } }
+				trait = sympathy_slavics
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = sol_group } }
+				trait = sympathy_sol
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = tengri_group } }
+				trait = sympathy_tengri
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = yazd_group } }
+				trait = sympathy_yazd
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = zal_group } }
+				trait = sympathy_zal
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = zoroastrian_group } }
+				trait = sympathy_zoroastrianism
+			}
+			trigger_else_if = {
+				limit = { FROM = { religion_group = african_group } }
+				trait = sympathy_african
 			}
 			trigger_else = {
 				always = no
@@ -3252,28 +3624,152 @@ emf_succession_voting_candidate_piety_score = {
 			}
 			emf_syncretized_religion_with_FROM = yes
 			AND = {
+				trait = sympathy_abrahamics
+				FROM = { religion_group = abrahamic_group }
+			}
+			AND = {
+				trait = sympathy_anatolians
+				FROM = { religion_group = anatolian_group }
+			}
+			AND = {
+				trait = sympathy_arabpagans
+				FROM = { religion_group = arabpagan_group }
+			}
+			AND = {
+				trait = sympathy_aztecs
+				FROM = { religion_group = aztec_group }
+			}
+			AND = {
+				trait = sympathy_baltics
+				FROM = { religion_group = baltic_group }
+			}
+			AND = {
+				trait = sympathy_bantus
+				FROM = { religion_group = bantu_group }
+			}
+			AND = {
+				trait = sympathy_berbers
+				FROM = { religion_group = berberpagan_group }
+			}
+			AND = {
+				trait = sympathy_buddhists
+				FROM = { religion_group = bud_group }
+			}
+			AND = {
+				trait = sympathy_celtics
+				FROM = { religion_group = celtic_group }
+			}
+			AND = {
+				trait = sympathy_chinese
+				FROM = { religion_group = chinese_group }
+			}
+			AND = {
 				trait = sympathy_christendom
 				FROM = { religion_group = christian }
 			}
 			AND = {
-				trait = sympathy_islam
-				FROM = { religion_group = muslim }
+				trait = sympathy_east_africans
+				FROM = { religion_group = east_african_group }
 			}
 			AND = {
-				trait = sympathy_pagans
-				FROM = { religion_group = pagan_group }
+				trait = sympathy_egyptian
+				FROM = { religion_group = egyptian_group }
 			}
 			AND = {
-				trait = sympathy_zoroastrianism
-				FROM = { religion_group = zoroastrian_group }
+				trait = sympathy_finnish
+				FROM = { religion_group = finnish_group }
+			}
+			AND = {
+				trait = sympathy_graecoroman
+				FROM = { religion_group = graecoroman_group }
+			}
+			AND = {
+				trait = sympathy_indian
+				FROM = { religion_group = indian_group }
+			}
+			AND = {
+				trait = sympathy_indohellens
+				FROM = { religion_group = indohelen_group }
+			}
+			AND = {
+				trait = sympathy_intis
+				FROM = { religion_group = inti_group }
+			}
+			AND = {
+				trait = sympathy_inuit
+				FROM = { religion_group = inuit_group }
 			}
 			AND = {
 				trait = sympathy_judaism
 				FROM = { religion_group = jewish_group }
 			}
 			AND = {
-				trait = sympathy_indian
-				FROM = { religion_group = indian_group }
+				trait = sympathy_luwians
+				FROM = { religion_group = luwian_group }
+			}
+			AND = {
+				trait = sympathy_mande
+				FROM = { religion_group = mand_group }
+			}
+			AND = {
+				trait = sympathy_manichaeans
+				FROM = { religion_group = mani_group }
+			}
+			AND = {
+				trait = sympathy_mithraics
+				FROM = { religion_group = mithra_group }
+			}
+			AND = {
+				trait = sympathy_islam
+				FROM = { religion_group = muslim }
+			}
+			AND = {
+				trait = sympathy_platonics
+				FROM = { religion_group = neoplato_group }
+			}
+			AND = {
+				trait = sympathy_nordic
+				FROM = { religion_group = norsegerman_group }
+			}
+			AND = {
+				trait = sympathy_pagans
+				FROM = { religion_group = pagan_group }
+			}
+			AND = {
+				trait = sympathy_palmyrans
+				FROM = { religion_group = palmyranpagan_group }
+			}
+			AND = {
+				trait = sympathy_sererics
+				FROM = { religion_group = serer_group }
+			}
+			AND = {
+				trait = sympathy_slavics
+				FROM = { religion_group = slavic_group }
+			}
+			AND = {
+				trait = sympathy_sol
+				FROM = { religion_group = sol_group }
+			}
+			AND = {
+				trait = sympathy_tengri
+				FROM = { religion_group = tengri_group }
+			}
+			AND = {
+				trait = sympathy_yazd
+				FROM = { religion_group = yazd_group }
+			}
+			AND = {
+				trait = sympathy_zal
+				FROM = { religion_group = zal_group }
+			}
+			AND = {
+				trait = sympathy_zoroastrianism
+				FROM = { religion_group = zoroastrian_group }
+			}
+			AND = {
+				trait = sympathy_african
+				FROM = { religion_group = african_group }
 			}
 		}
 		localisation_key = tooltip_feudal_elector_vote_piety
@@ -3301,28 +3797,152 @@ emf_succession_voting_candidate_piety_score = {
 			}
 			emf_syncretized_religion_with_FROM = yes
 			AND = {
+				trait = sympathy_abrahamics
+				FROM = { religion_group = abrahamic_group }
+			}
+			AND = {
+				trait = sympathy_anatolians
+				FROM = { religion_group = anatolian_group }
+			}
+			AND = {
+				trait = sympathy_arabpagans
+				FROM = { religion_group = arabpagan_group }
+			}
+			AND = {
+				trait = sympathy_aztecs
+				FROM = { religion_group = aztec_group }
+			}
+			AND = {
+				trait = sympathy_baltics
+				FROM = { religion_group = baltic_group }
+			}
+			AND = {
+				trait = sympathy_bantus
+				FROM = { religion_group = bantu_group }
+			}
+			AND = {
+				trait = sympathy_berbers
+				FROM = { religion_group = berberpagan_group }
+			}
+			AND = {
+				trait = sympathy_buddhists
+				FROM = { religion_group = bud_group }
+			}
+			AND = {
+				trait = sympathy_celtics
+				FROM = { religion_group = celtic_group }
+			}
+			AND = {
+				trait = sympathy_chinese
+				FROM = { religion_group = chinese_group }
+			}
+			AND = {
 				trait = sympathy_christendom
 				FROM = { religion_group = christian }
 			}
 			AND = {
-				trait = sympathy_islam
-				FROM = { religion_group = muslim }
+				trait = sympathy_east_africans
+				FROM = { religion_group = east_african_group }
 			}
 			AND = {
-				trait = sympathy_pagans
-				FROM = { religion_group = pagan_group }
+				trait = sympathy_egyptian
+				FROM = { religion_group = egyptian_group }
 			}
 			AND = {
-				trait = sympathy_zoroastrianism
-				FROM = { religion_group = zoroastrian_group }
+				trait = sympathy_finnish
+				FROM = { religion_group = finnish_group }
+			}
+			AND = {
+				trait = sympathy_graecoroman
+				FROM = { religion_group = graecoroman_group }
+			}
+			AND = {
+				trait = sympathy_indian
+				FROM = { religion_group = indian_group }
+			}
+			AND = {
+				trait = sympathy_indohellens
+				FROM = { religion_group = indohelen_group }
+			}
+			AND = {
+				trait = sympathy_intis
+				FROM = { religion_group = inti_group }
+			}
+			AND = {
+				trait = sympathy_inuit
+				FROM = { religion_group = inuit_group }
 			}
 			AND = {
 				trait = sympathy_judaism
 				FROM = { religion_group = jewish_group }
 			}
 			AND = {
-				trait = sympathy_indian
-				FROM = { religion_group = indian_group }
+				trait = sympathy_luwians
+				FROM = { religion_group = luwian_group }
+			}
+			AND = {
+				trait = sympathy_mande
+				FROM = { religion_group = mand_group }
+			}
+			AND = {
+				trait = sympathy_manichaeans
+				FROM = { religion_group = mani_group }
+			}
+			AND = {
+				trait = sympathy_mithraics
+				FROM = { religion_group = mithra_group }
+			}
+			AND = {
+				trait = sympathy_islam
+				FROM = { religion_group = muslim }
+			}
+			AND = {
+				trait = sympathy_platonics
+				FROM = { religion_group = neoplato_group }
+			}
+			AND = {
+				trait = sympathy_nordic
+				FROM = { religion_group = norsegerman_group }
+			}
+			AND = {
+				trait = sympathy_pagans
+				FROM = { religion_group = pagan_group }
+			}
+			AND = {
+				trait = sympathy_palmyrans
+				FROM = { religion_group = palmyranpagan_group }
+			}
+			AND = {
+				trait = sympathy_sererics
+				FROM = { religion_group = serer_group }
+			}
+			AND = {
+				trait = sympathy_slavics
+				FROM = { religion_group = slavic_group }
+			}
+			AND = {
+				trait = sympathy_sol
+				FROM = { religion_group = sol_group }
+			}
+			AND = {
+				trait = sympathy_tengri
+				FROM = { religion_group = tengri_group }
+			}
+			AND = {
+				trait = sympathy_yazd
+				FROM = { religion_group = yazd_group }
+			}
+			AND = {
+				trait = sympathy_zal
+				FROM = { religion_group = zal_group }
+			}
+			AND = {
+				trait = sympathy_zoroastrianism
+				FROM = { religion_group = zoroastrian_group }
+			}
+			AND = {
+				trait = sympathy_african
+				FROM = { religion_group = african_group }
 			}
 		}
 		localisation_key = tooltip_feudal_elector_vote_piety
@@ -3351,28 +3971,152 @@ emf_succession_voting_candidate_piety_score = {
 			}
 			emf_syncretized_religion_with_FROM = yes
 			AND = {
+				trait = sympathy_abrahamics
+				FROM = { religion_group = abrahamic_group }
+			}
+			AND = {
+				trait = sympathy_anatolians
+				FROM = { religion_group = anatolian_group }
+			}
+			AND = {
+				trait = sympathy_arabpagans
+				FROM = { religion_group = arabpagan_group }
+			}
+			AND = {
+				trait = sympathy_aztecs
+				FROM = { religion_group = aztec_group }
+			}
+			AND = {
+				trait = sympathy_baltics
+				FROM = { religion_group = baltic_group }
+			}
+			AND = {
+				trait = sympathy_bantus
+				FROM = { religion_group = bantu_group }
+			}
+			AND = {
+				trait = sympathy_berbers
+				FROM = { religion_group = berberpagan_group }
+			}
+			AND = {
+				trait = sympathy_buddhists
+				FROM = { religion_group = bud_group }
+			}
+			AND = {
+				trait = sympathy_celtics
+				FROM = { religion_group = celtic_group }
+			}
+			AND = {
+				trait = sympathy_chinese
+				FROM = { religion_group = chinese_group }
+			}
+			AND = {
 				trait = sympathy_christendom
 				FROM = { religion_group = christian }
 			}
 			AND = {
-				trait = sympathy_islam
-				FROM = { religion_group = muslim }
+				trait = sympathy_east_africans
+				FROM = { religion_group = east_african_group }
 			}
 			AND = {
-				trait = sympathy_pagans
-				FROM = { religion_group = pagan_group }
+				trait = sympathy_egyptian
+				FROM = { religion_group = egyptian_group }
 			}
 			AND = {
-				trait = sympathy_zoroastrianism
-				FROM = { religion_group = zoroastrian_group }
+				trait = sympathy_finnish
+				FROM = { religion_group = finnish_group }
+			}
+			AND = {
+				trait = sympathy_graecoroman
+				FROM = { religion_group = graecoroman_group }
+			}
+			AND = {
+				trait = sympathy_indian
+				FROM = { religion_group = indian_group }
+			}
+			AND = {
+				trait = sympathy_indohellens
+				FROM = { religion_group = indohelen_group }
+			}
+			AND = {
+				trait = sympathy_intis
+				FROM = { religion_group = inti_group }
+			}
+			AND = {
+				trait = sympathy_inuit
+				FROM = { religion_group = inuit_group }
 			}
 			AND = {
 				trait = sympathy_judaism
 				FROM = { religion_group = jewish_group }
 			}
 			AND = {
-				trait = sympathy_indian
-				FROM = { religion_group = indian_group }
+				trait = sympathy_luwians
+				FROM = { religion_group = luwian_group }
+			}
+			AND = {
+				trait = sympathy_mande
+				FROM = { religion_group = mand_group }
+			}
+			AND = {
+				trait = sympathy_manichaeans
+				FROM = { religion_group = mani_group }
+			}
+			AND = {
+				trait = sympathy_mithraics
+				FROM = { religion_group = mithra_group }
+			}
+			AND = {
+				trait = sympathy_islam
+				FROM = { religion_group = muslim }
+			}
+			AND = {
+				trait = sympathy_platonics
+				FROM = { religion_group = neoplato_group }
+			}
+			AND = {
+				trait = sympathy_nordic
+				FROM = { religion_group = norsegerman_group }
+			}
+			AND = {
+				trait = sympathy_pagans
+				FROM = { religion_group = pagan_group }
+			}
+			AND = {
+				trait = sympathy_palmyrans
+				FROM = { religion_group = palmyranpagan_group }
+			}
+			AND = {
+				trait = sympathy_sererics
+				FROM = { religion_group = serer_group }
+			}
+			AND = {
+				trait = sympathy_slavics
+				FROM = { religion_group = slavic_group }
+			}
+			AND = {
+				trait = sympathy_sol
+				FROM = { religion_group = sol_group }
+			}
+			AND = {
+				trait = sympathy_tengri
+				FROM = { religion_group = tengri_group }
+			}
+			AND = {
+				trait = sympathy_yazd
+				FROM = { religion_group = yazd_group }
+			}
+			AND = {
+				trait = sympathy_zal
+				FROM = { religion_group = zal_group }
+			}
+			AND = {
+				trait = sympathy_zoroastrianism
+				FROM = { religion_group = zoroastrian_group }
+			}
+			AND = {
+				trait = sympathy_african
+				FROM = { religion_group = african_group }
 			}
 		}
 		localisation_key = tooltip_feudal_elector_vote_piety
@@ -3400,28 +4144,152 @@ emf_succession_voting_candidate_piety_score = {
 			}
 			emf_syncretized_religion_with_FROM = yes
 			AND = {
+				trait = sympathy_abrahamics
+				FROM = { religion_group = abrahamic_group }
+			}
+			AND = {
+				trait = sympathy_anatolians
+				FROM = { religion_group = anatolian_group }
+			}
+			AND = {
+				trait = sympathy_arabpagans
+				FROM = { religion_group = arabpagan_group }
+			}
+			AND = {
+				trait = sympathy_aztecs
+				FROM = { religion_group = aztec_group }
+			}
+			AND = {
+				trait = sympathy_baltics
+				FROM = { religion_group = baltic_group }
+			}
+			AND = {
+				trait = sympathy_bantus
+				FROM = { religion_group = bantu_group }
+			}
+			AND = {
+				trait = sympathy_berbers
+				FROM = { religion_group = berberpagan_group }
+			}
+			AND = {
+				trait = sympathy_buddhists
+				FROM = { religion_group = bud_group }
+			}
+			AND = {
+				trait = sympathy_celtics
+				FROM = { religion_group = celtic_group }
+			}
+			AND = {
+				trait = sympathy_chinese
+				FROM = { religion_group = chinese_group }
+			}
+			AND = {
 				trait = sympathy_christendom
 				FROM = { religion_group = christian }
 			}
 			AND = {
-				trait = sympathy_islam
-				FROM = { religion_group = muslim }
+				trait = sympathy_east_africans
+				FROM = { religion_group = east_african_group }
 			}
 			AND = {
-				trait = sympathy_pagans
-				FROM = { religion_group = pagan_group }
+				trait = sympathy_egyptian
+				FROM = { religion_group = egyptian_group }
 			}
 			AND = {
-				trait = sympathy_zoroastrianism
-				FROM = { religion_group = zoroastrian_group }
+				trait = sympathy_finnish
+				FROM = { religion_group = finnish_group }
+			}
+			AND = {
+				trait = sympathy_graecoroman
+				FROM = { religion_group = graecoroman_group }
+			}
+			AND = {
+				trait = sympathy_indian
+				FROM = { religion_group = indian_group }
+			}
+			AND = {
+				trait = sympathy_indohellens
+				FROM = { religion_group = indohelen_group }
+			}
+			AND = {
+				trait = sympathy_intis
+				FROM = { religion_group = inti_group }
+			}
+			AND = {
+				trait = sympathy_inuit
+				FROM = { religion_group = inuit_group }
 			}
 			AND = {
 				trait = sympathy_judaism
 				FROM = { religion_group = jewish_group }
 			}
 			AND = {
-				trait = sympathy_indian
-				FROM = { religion_group = indian_group }
+				trait = sympathy_luwians
+				FROM = { religion_group = luwian_group }
+			}
+			AND = {
+				trait = sympathy_mande
+				FROM = { religion_group = mand_group }
+			}
+			AND = {
+				trait = sympathy_manichaeans
+				FROM = { religion_group = mani_group }
+			}
+			AND = {
+				trait = sympathy_mithraics
+				FROM = { religion_group = mithra_group }
+			}
+			AND = {
+				trait = sympathy_islam
+				FROM = { religion_group = muslim }
+			}
+			AND = {
+				trait = sympathy_platonics
+				FROM = { religion_group = neoplato_group }
+			}
+			AND = {
+				trait = sympathy_nordic
+				FROM = { religion_group = norsegerman_group }
+			}
+			AND = {
+				trait = sympathy_pagans
+				FROM = { religion_group = pagan_group }
+			}
+			AND = {
+				trait = sympathy_palmyrans
+				FROM = { religion_group = palmyranpagan_group }
+			}
+			AND = {
+				trait = sympathy_sererics
+				FROM = { religion_group = serer_group }
+			}
+			AND = {
+				trait = sympathy_slavics
+				FROM = { religion_group = slavic_group }
+			}
+			AND = {
+				trait = sympathy_sol
+				FROM = { religion_group = sol_group }
+			}
+			AND = {
+				trait = sympathy_tengri
+				FROM = { religion_group = tengri_group }
+			}
+			AND = {
+				trait = sympathy_yazd
+				FROM = { religion_group = yazd_group }
+			}
+			AND = {
+				trait = sympathy_zal
+				FROM = { religion_group = zal_group }
+			}
+			AND = {
+				trait = sympathy_zoroastrianism
+				FROM = { religion_group = zoroastrian_group }
+			}
+			AND = {
+				trait = sympathy_african
+				FROM = { religion_group = african_group }
 			}
 		}
 		localisation_key = tooltip_feudal_elector_vote_piety
@@ -3453,28 +4321,152 @@ emf_succession_voting_candidate_piety_score_hre_elective = {
 			}
 			emf_syncretized_religion_with_FROM = yes
 			AND = {
+				trait = sympathy_abrahamics
+				FROM = { religion_group = abrahamic_group }
+			}
+			AND = {
+				trait = sympathy_anatolians
+				FROM = { religion_group = anatolian_group }
+			}
+			AND = {
+				trait = sympathy_arabpagans
+				FROM = { religion_group = arabpagan_group }
+			}
+			AND = {
+				trait = sympathy_aztecs
+				FROM = { religion_group = aztec_group }
+			}
+			AND = {
+				trait = sympathy_baltics
+				FROM = { religion_group = baltic_group }
+			}
+			AND = {
+				trait = sympathy_bantus
+				FROM = { religion_group = bantu_group }
+			}
+			AND = {
+				trait = sympathy_berbers
+				FROM = { religion_group = berberpagan_group }
+			}
+			AND = {
+				trait = sympathy_buddhists
+				FROM = { religion_group = bud_group }
+			}
+			AND = {
+				trait = sympathy_celtics
+				FROM = { religion_group = celtic_group }
+			}
+			AND = {
+				trait = sympathy_chinese
+				FROM = { religion_group = chinese_group }
+			}
+			AND = {
 				trait = sympathy_christendom
 				FROM = { religion_group = christian }
 			}
 			AND = {
-				trait = sympathy_islam
-				FROM = { religion_group = muslim }
+				trait = sympathy_east_africans
+				FROM = { religion_group = east_african_group }
 			}
 			AND = {
-				trait = sympathy_pagans
-				FROM = { religion_group = pagan_group }
+				trait = sympathy_egyptian
+				FROM = { religion_group = egyptian_group }
 			}
 			AND = {
-				trait = sympathy_zoroastrianism
-				FROM = { religion_group = zoroastrian_group }
+				trait = sympathy_finnish
+				FROM = { religion_group = finnish_group }
+			}
+			AND = {
+				trait = sympathy_graecoroman
+				FROM = { religion_group = graecoroman_group }
+			}
+			AND = {
+				trait = sympathy_indian
+				FROM = { religion_group = indian_group }
+			}
+			AND = {
+				trait = sympathy_indohellens
+				FROM = { religion_group = indohelen_group }
+			}
+			AND = {
+				trait = sympathy_intis
+				FROM = { religion_group = inti_group }
+			}
+			AND = {
+				trait = sympathy_inuit
+				FROM = { religion_group = inuit_group }
 			}
 			AND = {
 				trait = sympathy_judaism
 				FROM = { religion_group = jewish_group }
 			}
 			AND = {
-				trait = sympathy_indian
-				FROM = { religion_group = indian_group }
+				trait = sympathy_luwians
+				FROM = { religion_group = luwian_group }
+			}
+			AND = {
+				trait = sympathy_mande
+				FROM = { religion_group = mand_group }
+			}
+			AND = {
+				trait = sympathy_manichaeans
+				FROM = { religion_group = mani_group }
+			}
+			AND = {
+				trait = sympathy_mithraics
+				FROM = { religion_group = mithra_group }
+			}
+			AND = {
+				trait = sympathy_islam
+				FROM = { religion_group = muslim }
+			}
+			AND = {
+				trait = sympathy_platonics
+				FROM = { religion_group = neoplato_group }
+			}
+			AND = {
+				trait = sympathy_nordic
+				FROM = { religion_group = norsegerman_group }
+			}
+			AND = {
+				trait = sympathy_pagans
+				FROM = { religion_group = pagan_group }
+			}
+			AND = {
+				trait = sympathy_palmyrans
+				FROM = { religion_group = palmyranpagan_group }
+			}
+			AND = {
+				trait = sympathy_sererics
+				FROM = { religion_group = serer_group }
+			}
+			AND = {
+				trait = sympathy_slavics
+				FROM = { religion_group = slavic_group }
+			}
+			AND = {
+				trait = sympathy_sol
+				FROM = { religion_group = sol_group }
+			}
+			AND = {
+				trait = sympathy_tengri
+				FROM = { religion_group = tengri_group }
+			}
+			AND = {
+				trait = sympathy_yazd
+				FROM = { religion_group = yazd_group }
+			}
+			AND = {
+				trait = sympathy_zal
+				FROM = { religion_group = zal_group }
+			}
+			AND = {
+				trait = sympathy_zoroastrianism
+				FROM = { religion_group = zoroastrian_group }
+			}
+			AND = {
+				trait = sympathy_african
+				FROM = { religion_group = african_group }
 			}
 		}
 		localisation_key = tooltip_feudal_elector_vote_piety_negative
@@ -3502,28 +4494,152 @@ emf_succession_voting_candidate_piety_score_hre_elective = {
 			}
 			emf_syncretized_religion_with_FROM = yes
 			AND = {
+				trait = sympathy_abrahamics
+				FROM = { religion_group = abrahamic_group }
+			}
+			AND = {
+				trait = sympathy_anatolians
+				FROM = { religion_group = anatolian_group }
+			}
+			AND = {
+				trait = sympathy_arabpagans
+				FROM = { religion_group = arabpagan_group }
+			}
+			AND = {
+				trait = sympathy_aztecs
+				FROM = { religion_group = aztec_group }
+			}
+			AND = {
+				trait = sympathy_baltics
+				FROM = { religion_group = baltic_group }
+			}
+			AND = {
+				trait = sympathy_bantus
+				FROM = { religion_group = bantu_group }
+			}
+			AND = {
+				trait = sympathy_berbers
+				FROM = { religion_group = berberpagan_group }
+			}
+			AND = {
+				trait = sympathy_buddhists
+				FROM = { religion_group = bud_group }
+			}
+			AND = {
+				trait = sympathy_celtics
+				FROM = { religion_group = celtic_group }
+			}
+			AND = {
+				trait = sympathy_chinese
+				FROM = { religion_group = chinese_group }
+			}
+			AND = {
 				trait = sympathy_christendom
 				FROM = { religion_group = christian }
 			}
 			AND = {
-				trait = sympathy_islam
-				FROM = { religion_group = muslim }
+				trait = sympathy_east_africans
+				FROM = { religion_group = east_african_group }
 			}
 			AND = {
-				trait = sympathy_pagans
-				FROM = { religion_group = pagan_group }
+				trait = sympathy_egyptian
+				FROM = { religion_group = egyptian_group }
 			}
 			AND = {
-				trait = sympathy_zoroastrianism
-				FROM = { religion_group = zoroastrian_group }
+				trait = sympathy_finnish
+				FROM = { religion_group = finnish_group }
+			}
+			AND = {
+				trait = sympathy_graecoroman
+				FROM = { religion_group = graecoroman_group }
+			}
+			AND = {
+				trait = sympathy_indian
+				FROM = { religion_group = indian_group }
+			}
+			AND = {
+				trait = sympathy_indohellens
+				FROM = { religion_group = indohelen_group }
+			}
+			AND = {
+				trait = sympathy_intis
+				FROM = { religion_group = inti_group }
+			}
+			AND = {
+				trait = sympathy_inuit
+				FROM = { religion_group = inuit_group }
 			}
 			AND = {
 				trait = sympathy_judaism
 				FROM = { religion_group = jewish_group }
 			}
 			AND = {
-				trait = sympathy_indian
-				FROM = { religion_group = indian_group }
+				trait = sympathy_luwians
+				FROM = { religion_group = luwian_group }
+			}
+			AND = {
+				trait = sympathy_mande
+				FROM = { religion_group = mand_group }
+			}
+			AND = {
+				trait = sympathy_manichaeans
+				FROM = { religion_group = mani_group }
+			}
+			AND = {
+				trait = sympathy_mithraics
+				FROM = { religion_group = mithra_group }
+			}
+			AND = {
+				trait = sympathy_islam
+				FROM = { religion_group = muslim }
+			}
+			AND = {
+				trait = sympathy_platonics
+				FROM = { religion_group = neoplato_group }
+			}
+			AND = {
+				trait = sympathy_nordic
+				FROM = { religion_group = norsegerman_group }
+			}
+			AND = {
+				trait = sympathy_pagans
+				FROM = { religion_group = pagan_group }
+			}
+			AND = {
+				trait = sympathy_palmyrans
+				FROM = { religion_group = palmyranpagan_group }
+			}
+			AND = {
+				trait = sympathy_sererics
+				FROM = { religion_group = serer_group }
+			}
+			AND = {
+				trait = sympathy_slavics
+				FROM = { religion_group = slavic_group }
+			}
+			AND = {
+				trait = sympathy_sol
+				FROM = { religion_group = sol_group }
+			}
+			AND = {
+				trait = sympathy_tengri
+				FROM = { religion_group = tengri_group }
+			}
+			AND = {
+				trait = sympathy_yazd
+				FROM = { religion_group = yazd_group }
+			}
+			AND = {
+				trait = sympathy_zal
+				FROM = { religion_group = zal_group }
+			}
+			AND = {
+				trait = sympathy_zoroastrianism
+				FROM = { religion_group = zoroastrian_group }
+			}
+			AND = {
+				trait = sympathy_african
+				FROM = { religion_group = african_group }
 			}
 		}
 		localisation_key = tooltip_feudal_elector_vote_piety_negative
@@ -3552,28 +4668,152 @@ emf_succession_voting_candidate_piety_score_hre_elective = {
 			}
 			emf_syncretized_religion_with_FROM = yes
 			AND = {
+				trait = sympathy_abrahamics
+				FROM = { religion_group = abrahamic_group }
+			}
+			AND = {
+				trait = sympathy_anatolians
+				FROM = { religion_group = anatolian_group }
+			}
+			AND = {
+				trait = sympathy_arabpagans
+				FROM = { religion_group = arabpagan_group }
+			}
+			AND = {
+				trait = sympathy_aztecs
+				FROM = { religion_group = aztec_group }
+			}
+			AND = {
+				trait = sympathy_baltics
+				FROM = { religion_group = baltic_group }
+			}
+			AND = {
+				trait = sympathy_bantus
+				FROM = { religion_group = bantu_group }
+			}
+			AND = {
+				trait = sympathy_berbers
+				FROM = { religion_group = berberpagan_group }
+			}
+			AND = {
+				trait = sympathy_buddhists
+				FROM = { religion_group = bud_group }
+			}
+			AND = {
+				trait = sympathy_celtics
+				FROM = { religion_group = celtic_group }
+			}
+			AND = {
+				trait = sympathy_chinese
+				FROM = { religion_group = chinese_group }
+			}
+			AND = {
 				trait = sympathy_christendom
 				FROM = { religion_group = christian }
 			}
 			AND = {
-				trait = sympathy_islam
-				FROM = { religion_group = muslim }
+				trait = sympathy_east_africans
+				FROM = { religion_group = east_african_group }
 			}
 			AND = {
-				trait = sympathy_pagans
-				FROM = { religion_group = pagan_group }
+				trait = sympathy_egyptian
+				FROM = { religion_group = egyptian_group }
 			}
 			AND = {
-				trait = sympathy_zoroastrianism
-				FROM = { religion_group = zoroastrian_group }
+				trait = sympathy_finnish
+				FROM = { religion_group = finnish_group }
+			}
+			AND = {
+				trait = sympathy_graecoroman
+				FROM = { religion_group = graecoroman_group }
+			}
+			AND = {
+				trait = sympathy_indian
+				FROM = { religion_group = indian_group }
+			}
+			AND = {
+				trait = sympathy_indohellens
+				FROM = { religion_group = indohelen_group }
+			}
+			AND = {
+				trait = sympathy_intis
+				FROM = { religion_group = inti_group }
+			}
+			AND = {
+				trait = sympathy_inuit
+				FROM = { religion_group = inuit_group }
 			}
 			AND = {
 				trait = sympathy_judaism
 				FROM = { religion_group = jewish_group }
 			}
 			AND = {
-				trait = sympathy_indian
-				FROM = { religion_group = indian_group }
+				trait = sympathy_luwians
+				FROM = { religion_group = luwian_group }
+			}
+			AND = {
+				trait = sympathy_mande
+				FROM = { religion_group = mand_group }
+			}
+			AND = {
+				trait = sympathy_manichaeans
+				FROM = { religion_group = mani_group }
+			}
+			AND = {
+				trait = sympathy_mithraics
+				FROM = { religion_group = mithra_group }
+			}
+			AND = {
+				trait = sympathy_islam
+				FROM = { religion_group = muslim }
+			}
+			AND = {
+				trait = sympathy_platonics
+				FROM = { religion_group = neoplato_group }
+			}
+			AND = {
+				trait = sympathy_nordic
+				FROM = { religion_group = norsegerman_group }
+			}
+			AND = {
+				trait = sympathy_pagans
+				FROM = { religion_group = pagan_group }
+			}
+			AND = {
+				trait = sympathy_palmyrans
+				FROM = { religion_group = palmyranpagan_group }
+			}
+			AND = {
+				trait = sympathy_sererics
+				FROM = { religion_group = serer_group }
+			}
+			AND = {
+				trait = sympathy_slavics
+				FROM = { religion_group = slavic_group }
+			}
+			AND = {
+				trait = sympathy_sol
+				FROM = { religion_group = sol_group }
+			}
+			AND = {
+				trait = sympathy_tengri
+				FROM = { religion_group = tengri_group }
+			}
+			AND = {
+				trait = sympathy_yazd
+				FROM = { religion_group = yazd_group }
+			}
+			AND = {
+				trait = sympathy_zal
+				FROM = { religion_group = zal_group }
+			}
+			AND = {
+				trait = sympathy_zoroastrianism
+				FROM = { religion_group = zoroastrian_group }
+			}
+			AND = {
+				trait = sympathy_african
+				FROM = { religion_group = african_group }
 			}
 		}
 		localisation_key = tooltip_feudal_elector_vote_piety_positive
@@ -3601,28 +4841,152 @@ emf_succession_voting_candidate_piety_score_hre_elective = {
 			}
 			emf_syncretized_religion_with_FROM = yes
 			AND = {
+				trait = sympathy_abrahamics
+				FROM = { religion_group = abrahamic_group }
+			}
+			AND = {
+				trait = sympathy_anatolians
+				FROM = { religion_group = anatolian_group }
+			}
+			AND = {
+				trait = sympathy_arabpagans
+				FROM = { religion_group = arabpagan_group }
+			}
+			AND = {
+				trait = sympathy_aztecs
+				FROM = { religion_group = aztec_group }
+			}
+			AND = {
+				trait = sympathy_baltics
+				FROM = { religion_group = baltic_group }
+			}
+			AND = {
+				trait = sympathy_bantus
+				FROM = { religion_group = bantu_group }
+			}
+			AND = {
+				trait = sympathy_berbers
+				FROM = { religion_group = berberpagan_group }
+			}
+			AND = {
+				trait = sympathy_buddhists
+				FROM = { religion_group = bud_group }
+			}
+			AND = {
+				trait = sympathy_celtics
+				FROM = { religion_group = celtic_group }
+			}
+			AND = {
+				trait = sympathy_chinese
+				FROM = { religion_group = chinese_group }
+			}
+			AND = {
 				trait = sympathy_christendom
 				FROM = { religion_group = christian }
 			}
 			AND = {
-				trait = sympathy_islam
-				FROM = { religion_group = muslim }
+				trait = sympathy_east_africans
+				FROM = { religion_group = east_african_group }
 			}
 			AND = {
-				trait = sympathy_pagans
-				FROM = { religion_group = pagan_group }
+				trait = sympathy_egyptian
+				FROM = { religion_group = egyptian_group }
 			}
 			AND = {
-				trait = sympathy_zoroastrianism
-				FROM = { religion_group = zoroastrian_group }
+				trait = sympathy_finnish
+				FROM = { religion_group = finnish_group }
+			}
+			AND = {
+				trait = sympathy_graecoroman
+				FROM = { religion_group = graecoroman_group }
+			}
+			AND = {
+				trait = sympathy_indian
+				FROM = { religion_group = indian_group }
+			}
+			AND = {
+				trait = sympathy_indohellens
+				FROM = { religion_group = indohelen_group }
+			}
+			AND = {
+				trait = sympathy_intis
+				FROM = { religion_group = inti_group }
+			}
+			AND = {
+				trait = sympathy_inuit
+				FROM = { religion_group = inuit_group }
 			}
 			AND = {
 				trait = sympathy_judaism
 				FROM = { religion_group = jewish_group }
 			}
 			AND = {
-				trait = sympathy_indian
-				FROM = { religion_group = indian_group }
+				trait = sympathy_luwians
+				FROM = { religion_group = luwian_group }
+			}
+			AND = {
+				trait = sympathy_mande
+				FROM = { religion_group = mand_group }
+			}
+			AND = {
+				trait = sympathy_manichaeans
+				FROM = { religion_group = mani_group }
+			}
+			AND = {
+				trait = sympathy_mithraics
+				FROM = { religion_group = mithra_group }
+			}
+			AND = {
+				trait = sympathy_islam
+				FROM = { religion_group = muslim }
+			}
+			AND = {
+				trait = sympathy_platonics
+				FROM = { religion_group = neoplato_group }
+			}
+			AND = {
+				trait = sympathy_nordic
+				FROM = { religion_group = norsegerman_group }
+			}
+			AND = {
+				trait = sympathy_pagans
+				FROM = { religion_group = pagan_group }
+			}
+			AND = {
+				trait = sympathy_palmyrans
+				FROM = { religion_group = palmyranpagan_group }
+			}
+			AND = {
+				trait = sympathy_sererics
+				FROM = { religion_group = serer_group }
+			}
+			AND = {
+				trait = sympathy_slavics
+				FROM = { religion_group = slavic_group }
+			}
+			AND = {
+				trait = sympathy_sol
+				FROM = { religion_group = sol_group }
+			}
+			AND = {
+				trait = sympathy_tengri
+				FROM = { religion_group = tengri_group }
+			}
+			AND = {
+				trait = sympathy_yazd
+				FROM = { religion_group = yazd_group }
+			}
+			AND = {
+				trait = sympathy_zal
+				FROM = { religion_group = zal_group }
+			}
+			AND = {
+				trait = sympathy_zoroastrianism
+				FROM = { religion_group = zoroastrian_group }
+			}
+			AND = {
+				trait = sympathy_african
+				FROM = { religion_group = african_group }
 			}
 		}
 		localisation_key = tooltip_feudal_elector_vote_piety_positive
@@ -4599,7 +5963,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		NOT = { character = FROM } #Do not judge yourself.
 		OR = {
 			religion_group = christian
-			religion = buddhist
+			religion_group = bud_group
 		}
 		NOT = { trait = lustful }
 		FROM = { trait = chaste }
@@ -4611,7 +5975,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		OR = {
 			trait = lustful
 			religion_scope = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				trigger_if = {
 					limit = { has_religion_features = yes }
 					OR = {
@@ -4665,7 +6029,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		OR = {
 			trait = gluttonous
 			AND = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				NOR = {
 					religion = bon
 					religion = bon_reformed
@@ -4779,7 +6143,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		NOT = { character = FROM } #Do not judge yourself.
 		OR = {
 			AND = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				NOR = {
 					religion = bon
 					religion = bon_reformed
@@ -4798,7 +6162,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		NOT = { character = FROM } #Do not judge yourself.
 		OR = {
 			AND = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				NAND = {
 					OR = {
 						religion = bon
@@ -4834,7 +6198,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		NOT = { character = FROM } #Do not judge yourself.
 		OR = {
 			religion_group = christian
-			religion = buddhist
+			religion_group = bud_group
 			religion = bon
 			religion = bon_reformed
 			religion = hellenic_pagan
@@ -4865,7 +6229,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		NOT = { character = FROM } #Do not judge yourself.
 		OR = {
 			AND = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				NOR = {
 					religion = bon
 					religion = bon_reformed
@@ -4886,7 +6250,7 @@ emf_succession_voting_candidate_traits_score_common = {
 			religion_group = christian
 			religion_group = muslim
 			religion_group = jewish_group
-			religion = buddhist
+			religion_group = bud_group
 		}
 		OR = {
 			trait = arbitrary #No need for consistency
@@ -4903,7 +6267,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		NOT = { character = FROM } #Do not judge yourself.
 		OR = {
 			AND = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				NAND = {
 					OR = {
 						religion = bon
@@ -4986,7 +6350,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		value = 15
 		localisation_key = tooltip_feudal_elector_vote_proud_positive
 		NOT = { character = FROM } #Do not judge yourself.
-		religion_group = pagan_group
+		novum_imperium_is_pagan = yes
 		NOR = {
 			religion = bon
 			religion = bon_reformed
@@ -5018,7 +6382,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		value = 5
 		localisation_key = tooltip_feudal_elector_vote_ambitious_positive
 		NOT = { character = FROM } #Do not judge yourself.
-		religion_group = pagan_group
+		novum_imperium_is_pagan = yes
 		NOR = {
 			religion = bon
 			religion = bon_reformed
@@ -5092,7 +6456,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		localisation_key = tooltip_feudal_elector_vote_content_positive
 		NOT = { character = FROM } #Do not judge yourself.
 		OR = {
-			religion = buddhist
+			religion_group = bud_group
 			religion = jain
 			religion = bon
 			pacifist = yes
@@ -5103,7 +6467,7 @@ emf_succession_voting_candidate_traits_score_common = {
 		value = -5
 		localisation_key = tooltip_feudal_elector_vote_content_negative
 		NOT = { character = FROM } #Do not judge yourself.
-		religion_group = pagan_group
+		novum_imperium_is_pagan = yes
 		NOR = {
 			trait = content
 			religion = bon

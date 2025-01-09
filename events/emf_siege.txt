@@ -3467,7 +3467,7 @@ character_event = {
 				is_female = yes
 				event_target:emf_looter = {
 					OR = {
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 						religion_group = zoroastrian_group
 					}
 				}

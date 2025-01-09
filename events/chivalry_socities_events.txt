@@ -11799,7 +11799,7 @@ character_event = {
 					is_feudal = yes
 					AND = {
 						is_theocracy = yes
-						NOT = { religion_group = pagan_group }
+						NOT = { novum_imperium_is_pagan = yes }
 					}
 				}
 			}
@@ -11807,7 +11807,7 @@ character_event = {
 				is_feudal = yes
 				AND = {
 					is_theocracy = yes
-					NOT = { religion_group = pagan_group }
+					NOT = { novum_imperium_is_pagan = yes }
 				}
 			}
 			FROM = { NOT = { religion_group = muslim } }
@@ -11859,7 +11859,7 @@ character_event = {
 			FROM = { 
 				is_theocracy = yes
 				OR = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					ROOT = { is_tribal = yes }
 					ROOT = { is_nomadic = yes }
 				}
@@ -11965,7 +11965,7 @@ character_event = {
 					is_feudal = yes
 					AND = {
 						is_theocracy = yes
-						NOT = { religion_group = pagan_group }
+						NOT = { novum_imperium_is_pagan = yes }
 					}
 				}
 			}
@@ -11973,7 +11973,7 @@ character_event = {
 				is_feudal = yes
 				AND = {
 					is_theocracy = yes
-					NOT = { religion_group = pagan_group }
+					NOT = { novum_imperium_is_pagan = yes }
 				}
 			}
 			FROM = { NOT = { religion_group = muslim } }
@@ -12025,7 +12025,7 @@ character_event = {
 			FROM = { 
 				is_theocracy = yes
 				OR = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					ROOT = { is_tribal = yes }
 					ROOT = { is_nomadic = yes }
 				}
@@ -12502,7 +12502,7 @@ character_event = {
 					is_feudal = yes
 					AND = {
 						is_theocracy = yes
-						NOT = { religion_group = pagan_group }
+						NOT = { novum_imperium_is_pagan = yes }
 					}
 				}
 			}
@@ -12510,7 +12510,7 @@ character_event = {
 				is_feudal = yes
 				AND = {
 					is_theocracy = yes
-					NOT = { religion_group = pagan_group }
+					NOT = { novum_imperium_is_pagan = yes }
 				}
 			}
 			FROM = { NOT = { religion_group = muslim } }
@@ -12562,7 +12562,7 @@ character_event = {
 			FROM = { 
 				is_theocracy = yes
 				OR = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					ROOT = { is_tribal = yes }
 					ROOT = { is_nomadic = yes }
 				}
@@ -12668,7 +12668,7 @@ character_event = {
 					is_feudal = yes
 					AND = {
 						is_theocracy = yes
-						NOT = { religion_group = pagan_group }
+						NOT = { novum_imperium_is_pagan = yes }
 					}
 				}
 			}
@@ -12676,7 +12676,7 @@ character_event = {
 				is_feudal = yes
 				AND = {
 					is_theocracy = yes
-					NOT = { religion_group = pagan_group }
+					NOT = { novum_imperium_is_pagan = yes }
 				}
 			}
 			FROM = { NOT = { religion_group = muslim } }
@@ -12728,7 +12728,7 @@ character_event = {
 			FROM = { 
 				is_theocracy = yes
 				OR = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					ROOT = { is_tribal = yes }
 					ROOT = { is_nomadic = yes }
 				}
@@ -19784,7 +19784,7 @@ character_event = {
 					culture_group = tibetan_group
 					OR = {
 						religion = bon
-						religion = buddhist
+						religion_group = bud_group
 					}
 				}
 			}

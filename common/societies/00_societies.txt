@@ -1834,7 +1834,7 @@ monastic_order_buddhist = {
 			}
 		}
 		is_adult = yes
-		religion = buddhist
+		religion_group = bud_group
 		custom_tooltip = {
 			text = did_not_betray_society
 			NOT = { has_character_flag = betrayed_monastic_order_buddhist }
@@ -1851,7 +1851,7 @@ monastic_order_buddhist = {
 
 	show_society = {
 		OR = {
-			religion = buddhist
+			religion_group = bud_group
 			religion = taoist
 			society_member_of = monastic_order_buddhist
 		}
@@ -1859,7 +1859,7 @@ monastic_order_buddhist = {
 
 	potential = {
 		OR = {
-			religion = buddhist
+			religion_group = bud_group
 			religion = taoist
 		}
 	}
@@ -2048,7 +2048,7 @@ monastic_order_buddhist = {
 	    trigger = {
 			ai = yes
 	    	controls_religion = no
-		   	religion = buddhist
+		   	religion_group = bud_group
 			is_adult = yes
 			is_in_society = no
 			NOT = { higher_tier_than = DUKE }
@@ -2382,7 +2382,7 @@ monastic_order_stoics = {
 					religion_group = jewish_group 
 					religion = bon
 					religion = bon_reformed
-					religion = buddhist
+					religion_group = bud_group
 				}
 			}
 		}
@@ -2421,7 +2421,7 @@ monastic_order_stoics = {
 					religion_group = jewish_group 
 					religion = bon
 					religion = bon_reformed
-					religion = buddhist
+					religion_group = bud_group
 				}
 			}
 			society_member_of = monastic_order_stoics
@@ -2443,7 +2443,7 @@ monastic_order_stoics = {
 					religion_group = jewish_group 
 					religion = bon
 					religion = bon_reformed
-					religion = buddhist
+					religion_group = bud_group
 				}
 			}
 		}
@@ -2689,7 +2689,7 @@ monastic_order_stoics = {
 						religion_group = jewish_group 
 						religion = bon
 						religion = bon_reformed
-						religion = buddhist
+						religion_group = bud_group
 					}
 				}
 			}
@@ -9167,73 +9167,53 @@ warrior_lodge_west_african = {
 			limit = { prisoner = yes }
 			prisoner = no
 		}
-		OR = {
-			religion_openly_west_african_or_reformed_trigger = yes
-			religion_group = african_group
-			AND = {
-				custom_tooltip = {
-					text = society_has_at_least_10_members_tt
-					FROM = { num_of_society_members >= 10 }
-				}
-				has_tribal_or_nomadic_government_trigger = yes
-				custom_tooltip = {
-					text = special_join_warrior_lodge_trigger_tt
-					special_join_warrior_lodge_trigger = yes
-				}
-				NOT = { trait = zealous }
+		religion_openly_west_african_or_reformed_trigger = yes
+		AND = {
+			custom_tooltip = {
+				text = society_has_at_least_10_members_tt
+				FROM = { num_of_society_members >= 10 }
 			}
+			has_tribal_or_nomadic_government_trigger = yes
+			custom_tooltip = {
+				text = special_join_warrior_lodge_trigger_tt					special_join_warrior_lodge_trigger = yes
+			}
+			NOT = { trait = zealous }
 		}
 	}
 
 	show_society = {
-		OR = {
-			#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
-			religion_openly_west_african_or_reformed_trigger = yes	
-			religion_group = african_group
-			AND = {
-				#You are of a religion that doesn't match *any* warrior lodge
-				has_religion_matching_available_warrior_lodge_trigger = no
-				
-				OR = {
-					#You have neighbors, etc, of the correct religion...
-					any_vassal = {
-                        OR = {
-                            religion_openly_west_african_or_reformed_trigger = yes
-                            religion_group = african_group
-                        }
-                    }
-					any_liege = {
-                        OR = {
-                            religion_openly_west_african_or_reformed_trigger = yes
-                            religion_group = african_group
-                        }
-                    }
-					any_neighbor_independent_ruler = {
-                        OR = {
-                            religion_openly_west_african_or_reformed_trigger = yes
-                            religion_group = african_group
-                        }
-                    }
-				}
+		#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
+		religion_openly_west_african_or_reformed_trigger = yes
+		AND = {
+			#You are of a religion that doesn't match *any* warrior lodge
+			has_religion_matching_available_warrior_lodge_trigger = no	
+			OR = {
+				#You have neighbors, etc, of the correct religion...
+				any_vassal = {
+					religion_openly_west_african_or_reformed_trigger = yes
+                }
+				any_liege = {
+                    religion_openly_west_african_or_reformed_trigger = yes
+                }
+				any_neighbor_independent_ruler = {
+                    religion_openly_west_african_or_reformed_trigger = yes
+                }
 			}
-			NAND = { #Hide if: you don't have a religion that corresponds to this lodge, but there is another society available to you already
-				religion_openly_west_african_or_reformed_trigger = no
-				NOT = { religion_group = african_group }
-				has_religion_matching_available_warrior_lodge_trigger = yes
-			}
-			#Always show if: You are already a member. Duh.
-			society_member_of = warrior_lodge_west_african
 		}
+		NAND = { #Hide if: you don't have a religion that corresponds to this lodge, but there is another society available to you already
+			religion_openly_west_african_or_reformed_trigger = no
+			has_religion_matching_available_warrior_lodge_trigger = yes
+		}
+		#Always show if: You are already a member. Duh.
+		society_member_of = warrior_lodge_west_african
 	}
 
 
 	potential = { #if you change religion or become zealous while NOT pagan, you are kicked out
 		OR = {
 			religion_openly_west_african_or_reformed_trigger = yes
-			religion_group = african_group
 			AND = {
 				religion_openly_west_african_or_reformed_trigger = no
-				NOT = { religion_group = african_group }
 				NOT = { trait = zealous }
 			}
 		}
@@ -9750,10 +9730,7 @@ warrior_lodge_west_african = {
 	    trigger = {
 			ai = yes
 	    	controls_religion = no
-		   	OR = {
-                religion_openly_west_african_or_reformed_trigger = yes
-                religion_group = african_group
-            }
+		   	religion_openly_west_african_or_reformed_trigger = yes
 			is_adult = yes
 			is_in_society = no
 			OR = {

@@ -25,8 +25,8 @@ rtp_intrigue_norse = {
 		lower_tier_than = KING
 		rtp_is_capable_adult = yes
 		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
+			religion_group = norsegerman_group
+			religion_group = pagan_group
 		}
 		NOR = {
 			AND = {
@@ -45,16 +45,16 @@ rtp_intrigue_norse = {
 
 	show_society = {
 		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
+			religion_group = norsegerman_group
+			religion_group = pagan_group
 		}
 	}
 
 	potential = {
 		lower_tier_than = KING
 		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
+			religion_group = norsegerman_group
+			religion_group = pagan_group
 		}
 	}
 
@@ -199,8 +199,8 @@ rtp_intrigue_norse = {
 			rtp_is_capable_adult = yes
 			is_in_society = no
 			OR = {
-				religion = norse_pagan
-				religion = norse_pagan_reformed
+				religion_group = norsegerman_group
+				religion_group = pagan_group
 			}
 		}
 	}
@@ -226,11 +226,7 @@ rtp_intrigue_tengri = {
 		intrigue = 5
 		lower_tier_than = KING
 		rtp_is_capable_adult = yes
-		OR = {
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
-			religion = britannic_hyperborean_pagan
-		}
+		religion_group = tengri_group
 		NOR = {
 			AND = {
 				ai = yes
@@ -247,20 +243,12 @@ rtp_intrigue_tengri = {
 	}
 
 	show_society = {
-		OR = {
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
-			religion = britannic_hyperborean_pagan
-		}
+		religion_group = tengri_group
 	}
 
 	potential = {
 		lower_tier_than = KING
-		OR = {
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
-			religion = britannic_hyperborean_pagan
-		}
+		religion_group = tengri_group
 	}
 
 	society_rank = {
@@ -403,11 +391,7 @@ rtp_intrigue_tengri = {
 			lower_tier_than = KING
 			rtp_is_capable_adult = yes
 			is_in_society = no
-			OR = {
-				religion = tengri_pagan
-				religion = tengri_pagan_reformed
-				religion = britannic_hyperborean_pagan
-			}
+			religion_group = tengri_group
 		}
 	}
 }
@@ -433,11 +417,8 @@ rtp_intrigue_baltic = {
 		lower_tier_than = KING
 		rtp_is_capable_adult = yes
 		OR = {
-			religion = baltic_pagan
-			religion = baltic_pagan_reformed
-			religion = celtic_pagan_reformed
-			religion = celtic_pagan
-			religion = britannic_pagan
+			religion_group = baltic_group
+			religion_group = celtic_group
 		}
 		NOR = {
 			AND = {
@@ -456,19 +437,16 @@ rtp_intrigue_baltic = {
 
 	show_society = {
 		OR = {
-			religion = baltic_pagan
-			religion = baltic_pagan_reformed
-			religion = celtic_pagan_reformed
-			religion = celtic_pagan
-			religion = britannic_pagan
+			religion_group = baltic_group
+			religion_group = celtic_group
 		}
 	}
 
 	potential = {
 		lower_tier_than = KING
 		OR = {
-			religion = baltic_pagan
-			religion = baltic_pagan_reformed
+			religion_group = baltic_group
+			religion_group = celtic_group
 		}
 	}
 
@@ -613,11 +591,8 @@ rtp_intrigue_baltic = {
 			rtp_is_capable_adult = yes
 			is_in_society = no
 			OR = {
-				religion = baltic_pagan
-				religion = baltic_pagan_reformed
-				religion = celtic_pagan_reformed
-				religion = celtic_pagan
-				religion = britannic_pagan
+				religion_group = baltic_group
+				religion_group = celtic_group
 			}
 		}
 	}
@@ -643,10 +618,7 @@ rtp_intrigue_slavic = {
 		intrigue = 5
 		lower_tier_than = KING
 		rtp_is_capable_adult = yes
-		OR = {
-			religion = slavic_pagan
-			religion = slavic_pagan_reformed
-		}
+		religion_group = slavic_group
 		NOR = {
 			AND = {
 				ai = yes
@@ -663,18 +635,12 @@ rtp_intrigue_slavic = {
 	}
 
 	show_society = {
-		OR = {
-			religion = slavic_pagan
-			religion = slavic_pagan_reformed
-		}
+		religion_group = slavic_group
 	}
 
 	potential = {
 		lower_tier_than = KING
-		OR = {
-			religion = slavic_pagan
-			religion = slavic_pagan_reformed
-		}
+		religion_group = slavic_group
 	}
 
 	society_rank = {
@@ -817,10 +783,7 @@ rtp_intrigue_slavic = {
 			lower_tier_than = KING
 			rtp_is_capable_adult = yes
 			is_in_society = no
-			OR = {
-				religion = slavic_pagan
-				religion = slavic_pagan_reformed
-			}
+			religion_group = slavic_group
 		}
 	}
 }
@@ -845,10 +808,7 @@ rtp_intrigue_finnish = {
 		intrigue = 5
 		lower_tier_than = KING
 		rtp_is_capable_adult = yes
-		OR = {
-			religion = finnish_pagan
-			religion = finnish_pagan_reformed
-		}
+		religion_group = finnish_group
 		NOR = {
 			AND = {
 				ai = yes
@@ -865,18 +825,12 @@ rtp_intrigue_finnish = {
 	}
 
 	show_society = {
-		OR = {
-			religion = finnish_pagan
-			religion = finnish_pagan_reformed
-		}
+		religion_group = finnish_group
 	}
 
 	potential = {
 		lower_tier_than = KING
-		OR = {
-			religion = finnish_pagan
-			religion = finnish_pagan_reformed
-		}
+		religion_group = finnish_group
 	}
 
 	society_rank = {
@@ -1019,10 +973,7 @@ rtp_intrigue_finnish = {
 			lower_tier_than = KING
 			rtp_is_capable_adult = yes
 			is_in_society = no
-			OR = {
-				religion = finnish_pagan
-				religion = finnish_pagan_reformed
-			}
+			religion_group = finnish_group
 		}
 	}
 }
@@ -1048,16 +999,13 @@ rtp_intrigue_west_african = {
 		lower_tier_than = KING
 		rtp_is_capable_adult = yes
 		OR = {
-			religion = west_african_pagan
-			religion = west_african_pagan_reformed
-			religion = bori
-			religion = a_tag_roog
-			religion = a_tag_roog_reformed
-			religion = amazigh
-			religion = amazigh_reformed
-			religion = egyptian_pagan_reformed
-			religion = egyptian_pagan
-			religion = aten_pagan
+			religion_group = african_group
+			religion_group = east_african_group
+			religion_group = bantu_group
+			religion_group = berberpagan_group
+			religion_group = egyptian_group
+			religion_group = serer_group
+			religion_group = african_pagan_group
 		}
 		NOR = {
 			AND = {
@@ -1076,32 +1024,26 @@ rtp_intrigue_west_african = {
 
 	show_society = {
 		OR = {
-			religion = west_african_pagan
-			religion = west_african_pagan_reformed
-			religion = bori
-			religion = a_tag_roog
-			religion = a_tag_roog_reformed
-			religion = amazigh
-			religion = amazigh_reformed
-			religion = egyptian_pagan_reformed
-			religion = egyptian_pagan
-			religion = aten_pagan
+			religion_group = african_group
+			religion_group = east_african_group
+			religion_group = bantu_group
+			religion_group = berberpagan_group
+			religion_group = egyptian_group
+			religion_group = serer_group
+			religion_group = african_pagan_group
 		}
 	}
 
 	potential = {
 		lower_tier_than = KING
 		OR = {
-			religion = west_african_pagan
-			religion = west_african_pagan_reformed
-			religion = bori
-			religion = a_tag_roog
-			religion = a_tag_roog_reformed
-			religion = amazigh
-			religion = amazigh_reformed
-			religion = egyptian_pagan_reformed
-			religion = egyptian_pagan
-			religion = aten_pagan
+			religion_group = african_group
+			religion_group = east_african_group
+			religion_group = bantu_group
+			religion_group = berberpagan_group
+			religion_group = egyptian_group
+			religion_group = serer_group
+			religion_group = african_pagan_group
 		}
 	}
 
@@ -1246,16 +1188,13 @@ rtp_intrigue_west_african = {
 			rtp_is_capable_adult = yes
 			is_in_society = no
 			OR = {
-				religion = west_african_pagan
-				religion = west_african_pagan_reformed
-				religion = bori
-				religion = a_tag_roog
-				religion = a_tag_roog_reformed
-				religion = amazigh
-				religion = amazigh_reformed
-				religion = egyptian_pagan_reformed
-				religion = egyptian_pagan
-				religion = aten_pagan
+				religion_group = african_group
+				religion_group = east_african_group
+				religion_group = bantu_group
+				religion_group = berberpagan_group
+				religion_group = egyptian_group
+				religion_group = serer_group
+				religion_group = african_pagan_group
 			}
 		}
 	}
@@ -1281,10 +1220,7 @@ rtp_intrigue_zun = {
 		intrigue = 5
 		lower_tier_than = KING
 		rtp_is_capable_adult = yes
-		OR = {
-			religion = zun_pagan
-			religion = zun_pagan_reformed
-		}
+		religion_group = sol_group
 		NOR = {
 			AND = {
 				ai = yes
@@ -1301,18 +1237,12 @@ rtp_intrigue_zun = {
 	}
 
 	show_society = {
-		OR = {
-			religion = zun_pagan
-			religion = zun_pagan_reformed
-		}
+		religion_group = sol_group
 	}
 
 	potential = {
 		lower_tier_than = KING
-		OR = {
-			religion = zun_pagan
-			religion = zun_pagan_reformed
-		}
+		religion_group = sol_group
 	}
 
 	society_rank = {
@@ -1455,10 +1385,7 @@ rtp_intrigue_zun = {
 			lower_tier_than = KING
 			rtp_is_capable_adult = yes
 			is_in_society = no
-			OR = {
-				religion = zun_pagan
-				religion = zun_pagan_reformed
-			}
+			religion_group = sol_group
 		}
 	}
 }
@@ -1484,8 +1411,8 @@ rtp_intrigue_bon = {
 		lower_tier_than = KING
 		rtp_is_capable_adult = yes
 		OR = {
-			religion = bon
-			religion = bon_reformed
+			religion_group = chinese_group
+			religion_group = eastern_folk_group
 		}
 		NOR = {
 			AND = {
@@ -1504,16 +1431,16 @@ rtp_intrigue_bon = {
 
 	show_society = {
 		OR = {
-			religion = bon
-			religion = bon_reformed
+			religion_group = chinese_group
+			religion_group = eastern_folk_group
 		}
 	}
 
 	potential = {
 		lower_tier_than = KING
 		OR = {
-			religion = bon
-			religion = bon_reformed
+			religion_group = chinese_group
+			religion_group = eastern_folk_group
 		}
 	}
 
@@ -1658,8 +1585,8 @@ rtp_intrigue_bon = {
 			rtp_is_capable_adult = yes
 			is_in_society = no
 			OR = {
-				religion = bon
-				religion = bon_reformed
+				religion_group = chinese_group
+				religion_group = eastern_folk_group
 			}
 		}
 	}
@@ -1686,13 +1613,12 @@ rtp_intrigue_hellenic = {
 		lower_tier_than = KING
 		rtp_is_capable_adult = yes
 		OR = {
-			religion = hellenic_pagan
-			religion = hellenic_pagan_reformed
-			religion = hereclemasculist_pagan
-			religion = romist_pagan
-			religion = vieti_mithras_pagan
-			religion = titan_pagan
-			religion = promethean_pagan
+			religion_group = anatolian_group
+			religion_group = graecoroman_group
+			religion_group = indohelen_group
+			religion_group = mithra_group
+			religion_group = neoplato_group
+			religion_group = zal_group
 		}
 		NOR = {
 			AND = {
@@ -1711,26 +1637,24 @@ rtp_intrigue_hellenic = {
 
 	show_society = {
 		OR = {
-			religion = hellenic_pagan
-			religion = hellenic_pagan_reformed
-			religion = hereclemasculist_pagan
-			religion = romist_pagan
-			religion = vieti_mithras_pagan
-			religion = titan_pagan
-			religion = promethean_pagan
+			religion_group = anatolian_group
+			religion_group = graecoroman_group
+			religion_group = indohelen_group
+			religion_group = mithra_group
+			religion_group = neoplato_group
+			religion_group = zal_group
 		}
 	}
 
 	potential = {
 		lower_tier_than = KING
 		OR = {
-			religion = hellenic_pagan
-			religion = hellenic_pagan_reformed
-			religion = hereclemasculist_pagan
-			religion = romist_pagan
-			religion = vieti_mithras_pagan
-			religion = titan_pagan
-			religion = promethean_pagan
+			religion_group = anatolian_group
+			religion_group = graecoroman_group
+			religion_group = indohelen_group
+			religion_group = mithra_group
+			religion_group = neoplato_group
+			religion_group = zal_group
 		}
 	}
 
@@ -1875,13 +1799,12 @@ rtp_intrigue_hellenic = {
 			rtp_is_capable_adult = yes
 			is_in_society = no
 			OR = {
-				religion = hellenic_pagan
-				religion = hellenic_pagan_reformed
-				religion = hereclemasculist_pagan
-				religion = romist_pagan
-				religion = vieti_mithras_pagan
-				religion = titan_pagan
-				religion = promethean_pagan
+				religion_group = anatolian_group
+				religion_group = graecoroman_group
+				religion_group = indohelen_group
+				religion_group = mithra_group
+				religion_group = neoplato_group
+				religion_group = zal_group
 			}
 		}
 	}
@@ -1900,7 +1823,7 @@ rtp_intrigue_aztec = {
 	member_score_per_rank = 2
 	
 	active = {
-		has_global_flag = aztec_explorers
+		always = yes
 	}
 
 	can_join_society = {
@@ -1908,8 +1831,10 @@ rtp_intrigue_aztec = {
 		lower_tier_than = KING
 		rtp_is_capable_adult = yes
 		OR = {
-			religion = aztec
-			religion = aztec_reformed
+			religion_group = aztec_group
+			religion_group = inti_group
+			religion_group = inuit_group
+			religion_group = native_american_group
 		}
 		NOR = {
 			AND = {
@@ -1928,16 +1853,20 @@ rtp_intrigue_aztec = {
 
 	show_society = {
 		OR = {
-			religion = aztec
-			religion = aztec_reformed
+			religion_group = aztec_group
+			religion_group = inti_group
+			religion_group = inuit_group
+			religion_group = native_american_group
 		}
 	}
 
 	potential = {
 		lower_tier_than = KING
 		OR = {
-			religion = aztec
-			religion = aztec_reformed
+			religion_group = aztec_group
+			religion_group = inti_group
+			religion_group = inuit_group
+			religion_group = native_american_group
 		}
 	}
 
@@ -2082,8 +2011,10 @@ rtp_intrigue_aztec = {
 			rtp_is_capable_adult = yes
 			is_in_society = no
 			OR = {
-				religion = aztec
-				religion = aztec_reformed
+				religion_group = aztec_group
+				religion_group = inti_group
+				religion_group = inuit_group
+				religion_group = native_american_group
 			}
 		}
 	}
@@ -2299,7 +2230,10 @@ rtp_intrigue_muslim = {
 		intrigue = 5
 		lower_tier_than = KING
 		rtp_is_capable_adult = yes
-		religion_group = muslim
+		OR = {
+			religion_group = muslim
+			religion_group = arabpagan_group
+		}
 		NOR = {
 			AND = {
 				ai = yes
@@ -2316,12 +2250,18 @@ rtp_intrigue_muslim = {
 	}
 
 	show_society = {
-		religion_group = muslim
+		OR = {
+			religion_group = muslim
+			religion_group = arabpagan_group
+		}
 	}
 
 	potential = {
 		lower_tier_than = KING
-		religion_group = muslim
+		OR = {
+			religion_group = muslim
+			religion_group = arabpagan_group
+		}
 	}
 
 	society_rank = {
@@ -2464,7 +2404,10 @@ rtp_intrigue_muslim = {
 			lower_tier_than = KING
 			rtp_is_capable_adult = yes
 			is_in_society = no
-			religion_group = muslim
+			OR = {
+				religion_group = muslim
+				religion_group = arabpagan_group
+			}
 		}
 	}
 }
@@ -2489,7 +2432,12 @@ rtp_intrigue_jewish = {
 		intrigue = 5
 		lower_tier_than = KING
 		rtp_is_capable_adult = yes
-		religion_group = jewish_group
+		OR = {
+			religion_group = jewish_group
+			religion_group = abrahamic_group
+			religion_group = luwian_group
+			religion_group = palmyranpagan_group
+		}
 		NOR = {
 			AND = {
 				ai = yes
@@ -2506,12 +2454,22 @@ rtp_intrigue_jewish = {
 	}
 
 	show_society = {
-		religion_group = jewish_group
+		OR = {
+			religion_group = jewish_group
+			religion_group = abrahamic_group
+			religion_group = luwian_group
+			religion_group = palmyranpagan_group
+		}
 	}
 
 	potential = {
 		lower_tier_than = KING
-		religion_group = jewish_group
+		OR = {
+			religion_group = jewish_group
+			religion_group = abrahamic_group
+			religion_group = luwian_group
+			religion_group = palmyranpagan_group
+		}
 	}
 
 	society_rank = {
@@ -2654,7 +2612,12 @@ rtp_intrigue_jewish = {
 			lower_tier_than = KING
 			rtp_is_capable_adult = yes
 			is_in_society = no
-			religion_group = jewish_group
+			OR = {
+				religion_group = jewish_group
+				religion_group = abrahamic_group
+				religion_group = luwian_group
+				religion_group = palmyranpagan_group
+			}
 		}
 	}
 }
@@ -2679,7 +2642,12 @@ rtp_intrigue_zoroastrian = {
 		intrigue = 5
 		lower_tier_than = KING
 		rtp_is_capable_adult = yes
-		religion_group = zoroastrian_group
+		OR = {
+			religion_group = zoroastrian_group
+			religion_group = mand_group
+			religion_group = mani_group
+			religion_group = yazd_group
+		}
 		NOR = {
 			AND = {
 				ai = yes
@@ -2696,12 +2664,22 @@ rtp_intrigue_zoroastrian = {
 	}
 
 	show_society = {
-		religion_group = zoroastrian_group
+		OR = {
+			religion_group = zoroastrian_group
+			religion_group = mand_group
+			religion_group = mani_group
+			religion_group = yazd_group
+		}
 	}
 
 	potential = {
 		lower_tier_than = KING
-		religion_group = zoroastrian_group
+		OR = {
+			religion_group = zoroastrian_group
+			religion_group = mand_group
+			religion_group = mani_group
+			religion_group = yazd_group
+		}
 	}
 
 	society_rank = {
@@ -2844,7 +2822,12 @@ rtp_intrigue_zoroastrian = {
 			lower_tier_than = KING
 			rtp_is_capable_adult = yes
 			is_in_society = no
-			religion_group = zoroastrian_group
+			OR = {
+				religion_group = zoroastrian_group
+				religion_group = mand_group
+				religion_group = mani_group
+				religion_group = yazd_group
+			}
 		}
 	}
 }
@@ -2869,7 +2852,12 @@ rtp_intrigue_eastern = {
 		intrigue = 5
 		lower_tier_than = KING
 		rtp_is_capable_adult = yes
-		religion_group = indian_group
+		OR = {
+			religion_group = indian_group
+			religion_group = bud_group
+			religion_group = asian_religion_group
+			religion_group = austronesian_group
+		}
 		NOR = {
 			AND = {
 				ai = yes
@@ -2886,12 +2874,22 @@ rtp_intrigue_eastern = {
 	}
 
 	show_society = {
-		religion_group = indian_group
+		OR = {
+			religion_group = indian_group
+			religion_group = bud_group
+			religion_group = asian_religion_group
+			religion_group = austronesian_group
+		}
 	}
 
 	potential = {
 		lower_tier_than = KING
-		religion_group = indian_group
+		OR = {
+			religion_group = indian_group
+			religion_group = bud_group
+			religion_group = asian_religion_group
+			religion_group = austronesian_group
+		}
 	}
 
 	society_rank = {
@@ -3034,7 +3032,12 @@ rtp_intrigue_eastern = {
 			lower_tier_than = KING
 			rtp_is_capable_adult = yes
 			is_in_society = no
-			religion_group = indian_group
+			OR = {
+				religion_group = indian_group
+				religion_group = bud_group
+				religion_group = asian_religion_group
+				religion_group = austronesian_group
+			}
 		}
 	}
 }

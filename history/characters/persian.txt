@@ -1936,9 +1936,9 @@
 1231525 = {
 	name="Kulduz"
 	dynasty=1000102400
-	religion="buddhist"
+	religion="bud_zen"
 	culture="khitan"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	father=1231504 #fictional relation
 	1151.1.1={
 		birth="1151.1.1"
@@ -1957,10 +1957,10 @@
 	martial=7
 	diplomacy=7
 	stewardship=6
-	religion="buddhist"
+	religion="bud_zen"
 	culture="khitan"
 	father=1231525
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	trait="skilled_tactician"
 	1180.1.1={
 		birth="1180.1.1"
@@ -1984,10 +1984,10 @@
 1231526 = {
 	name="Hamitun"
 	dynasty=1000102400
-	religion="buddhist"
+	religion="bud_zen"
 	culture="khitan"
 	father=1231525
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	1183.1.1={
 		birth="1183.1.1"
 		employer=188912
@@ -2013,9 +2013,9 @@
 93259 = {
 	name="Qutb ad-Din Muhammad"
 	dynasty=1000102400
-	religion="buddhist"
+	religion="bud_zen"
 	culture="khitan"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	father=1231526
 	1200.1.1={
 		birth="1200.1.1"
@@ -2043,9 +2043,9 @@
 93260 = {
 	name="Rukn ad-Din Khwaja al-Hakk"
 	dynasty=1000102400
-	religion="buddhist"
+	religion="bud_zen"
 	culture="khitan"
-	trait="mahayana_buddhist"
+	#trait="mahayana_buddhist"
 	father=93258
 	1201.1.1={
 		birth="1201.1.1"
@@ -3324,7 +3324,7 @@
 180603 = {
 	name="Raidashir"
 	dynasty=1029100
-	religion="manichean"
+	religion="mani"
 	culture="pahlavi"
 	father=159600
 	182.1.1={
@@ -3645,7 +3645,7 @@
 	name="Kavadh"
 	# Kavadh I, Emperor of Persia
 	dynasty=1029100
-	religion="mazdaki"
+	religion="mazdakism"
 	culture="pahlavi"
 	father=180624
 	469.1.1={
@@ -4105,7 +4105,7 @@
 188642 = {
 	name="Barmak" 
 	dynasty=1042125 # Barmakid
-	religion="buddhist"
+	religion="bud_zen"
 	culture="persian"
 	670.1.1={
 		birth = yes
@@ -4121,7 +4121,7 @@
 188643 = {
 	name="Khalid" 
 	dynasty=1042125 # Barmakid
-	religion="buddhist"
+	religion="bud_zen"
 	culture="persian"
 	father=188642
 	705.1.1={
@@ -4834,7 +4834,7 @@
 188681 = {
 	name="Hashim"
 	dynasty=1042148
-	religion="mazdaki" # Khurramite
+	religion="mazdakism" # Khurramite
 	culture="persian"
 	731.1.1={
 		birth = yes
@@ -4845,7 +4845,7 @@
 }188666 = {
 	name="Kamran" # fictitious count of Khozistan
 	dynasty=1042141
-	religion="mazdaki"
+	religion="mazdakism"
 	culture="pahlavi"
 	740.1.1={
 		birth = yes
@@ -4964,7 +4964,7 @@
 188729 = {
 	name="Anushirvan" # fictitious holder of Esfahan
 	dynasty=1042162
-	religion="mazdaki"
+	religion="mazdakism"
 	culture="pahlavi"
 	732.1.1={
 		birth = yes
@@ -4993,7 +4993,7 @@
 	diplomacy=6
 	intrigue=6
 	stewardship=6
-	religion="mazdaki"
+	religion="mazdakism"
 	culture="pahlavi"
 	father=180627
 	504.1.1={

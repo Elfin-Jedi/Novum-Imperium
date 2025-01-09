@@ -14,10 +14,8 @@ government_flavor = {
 		emf_laws_has_elective_law_type = yes
 		NOR = {
 			religion_group = muslim
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
+			LI_norse_pagan_trigger = yes
+			religion_group = tengri_group
 		}
 		OR = {
 			NOT = { has_dlc = "Conclave" }
@@ -34,10 +32,7 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = yes
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-		}
+		LI_norse_pagan_trigger = yes
 		OR = {
 			NOT = { has_dlc = "Conclave" }
 			emf_laws_has_high_council_power = yes
@@ -53,10 +48,7 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = yes
-		OR = {
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
-		}
+		religion_group = tengri_group
 		OR = {
 			NOT = { has_dlc = "Conclave" }
 			emf_laws_has_high_council_power = yes
@@ -72,6 +64,7 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = yes
+		mercenary = no
 		religion_group = muslim
 		OR = {
 			NOT = { has_dlc = "Conclave" }
@@ -88,11 +81,10 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = no
+		mercenary = no
 		NOR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
+			LI_norse_pagan_trigger = yes
+			religion_group = tengri_group
 			religion_group = indian_group
 			religion_group = muslim
 		}
@@ -108,10 +100,8 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = no
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-		}
+		mercenary = no
+		LI_norse_pagan_trigger = yes
 		emf_laws_has_high_council_power = yes
 	}
 }
@@ -124,10 +114,8 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = no
-		OR = {
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
-		}
+		mercenary = no
+		religion_group = tengri_group
 		emf_laws_has_high_council_power = yes
 	}
 }
@@ -140,6 +128,7 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = no
+		mercenary = no
 		religion_group = indian_group
 		emf_laws_has_high_council_power = yes
 	}
@@ -153,6 +142,7 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = no
+		mercenary = no
 		religion_group = muslim
 		OR = {
 			NOT = { has_dlc = "Conclave" }
@@ -170,10 +160,8 @@ government_flavor = {
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = yes
 		NOR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
+			LI_norse_pagan_trigger = yes
+			religion_group = tengri_group
 			religion_group = zoroastrian_group
 			religion_group = muslim
 		}
@@ -202,10 +190,7 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = yes
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-		}
+		LI_norse_pagan_trigger = yes
 		emf_laws_has_medium_council_power = yes
 	}
 }
@@ -218,10 +203,7 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = yes
-		OR = {
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
-		}
+		religion_group = tengri_group
 		emf_laws_has_medium_council_power = yes
 	}
 }
@@ -247,11 +229,10 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = no
+		mercenary = no
 		NOR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
+			LI_norse_pagan_trigger = yes
+			religion_group = tengri_group
 			religion_group = zoroastrian_group
 			religion_group = indian_group
 			religion_group = muslim
@@ -271,6 +252,7 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = no
+		mercenary = no
 		religion_group = zoroastrian_group
 		OR = {
 			NOT = { has_dlc = "Conclave" }
@@ -287,10 +269,8 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = no
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-		}
+		mercenary = no
+		LI_norse_pagan_trigger = yes
 		OR = {
 			NOT = { has_dlc = "Conclave" }
 			emf_laws_has_medium_council_power = yes
@@ -306,10 +286,8 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = no
-		OR = {
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
-		}
+		mercenary = no
+		religion_group = tengri_group
 		OR = {
 			NOT = { has_dlc = "Conclave" }
 			emf_laws_has_medium_council_power = yes
@@ -325,6 +303,7 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = no
+		mercenary = no
 		religion_group = indian_group
 		OR = {
 			NOT = { has_dlc = "Conclave" }
@@ -341,6 +320,7 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = no
+		mercenary = no
 		religion_group = muslim
 		OR = {
 			NOT = { has_dlc = "Conclave" }
@@ -358,10 +338,8 @@ government_flavor = {
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = yes
 		NOR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
+			LI_norse_pagan_trigger = yes
+			religion_group = tengri_group
 			religion_group = muslim
 		}
 		emf_laws_has_no_council_power = yes
@@ -376,10 +354,7 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = yes
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-		}
+		LI_norse_pagan_trigger = yes
 		emf_laws_has_no_council_power = yes
 	}
 }
@@ -392,10 +367,7 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = yes
-		OR = {
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
-		}
+		religion_group = tengri_group
 		emf_laws_has_no_council_power = yes
 	}
 }
@@ -408,6 +380,7 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = yes
+		mercenary = no
 		religion_group = muslim
 		emf_laws_has_no_council_power = yes
 	}
@@ -421,11 +394,10 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = no
+		mercenary = no
 		NOR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
+			LI_norse_pagan_trigger = yes
+			religion_group = tengri_group
 			religion_group = indian_group
 			religion_group = muslim
 		}
@@ -441,10 +413,8 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = no
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-		}
+		mercenary = no
+		LI_norse_pagan_trigger = yes
 		emf_laws_has_no_council_power = yes
 	}
 }
@@ -457,10 +427,8 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = no
-		OR = {
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
-		}
+		mercenary = no
+		religion_group = tengri_group
 		emf_laws_has_no_council_power = yes
 	}
 }
@@ -486,6 +454,7 @@ government_flavor = {
 		is_feudal = yes
 		emf_imperial_government = no
 		emf_laws_has_elective_law_type = no
+		mercenary = no
 		religion_group = muslim
 		emf_laws_has_no_council_power = yes
 	}
@@ -499,11 +468,10 @@ government_flavor = {
 		tier = EMPEROR
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = no
+		mercenary = no
 		NOR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
+			LI_norse_pagan_trigger = yes
+			religion_group = tengri_group
 			religion_group = indian_group
 			religion_group = muslim
 		}
@@ -519,10 +487,8 @@ government_flavor = {
 		tier = EMPEROR
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = no
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-		}
+		mercenary = no
+		LI_norse_pagan_trigger = yes
 		emf_laws_has_no_council_power = yes
 	}
 }
@@ -535,10 +501,8 @@ government_flavor = {
 		tier = EMPEROR
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = no
-		OR = {
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
-		}
+		mercenary = no
+		religion_group = tengri_group
 		emf_laws_has_no_council_power = yes
 	}
 }
@@ -551,6 +515,7 @@ government_flavor = {
 		tier = EMPEROR
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = no
+		mercenary = no
 		religion_group = indian_group
 		emf_laws_has_no_council_power = yes
 	}
@@ -564,6 +529,7 @@ government_flavor = {
 		tier = EMPEROR
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = no
+		mercenary = no
 		religion_group = muslim
 		emf_laws_has_no_council_power = yes
 	}
@@ -578,10 +544,8 @@ government_flavor = {
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = yes
 		NOR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
+			LI_norse_pagan_trigger = yes
+			religion_group = tengri_group
 			religion_group = indian_group
 			religion_group = muslim
 		}
@@ -597,10 +561,7 @@ government_flavor = {
 		tier = EMPEROR
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = yes
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-		}
+		LI_norse_pagan_trigger = yes
 		emf_laws_has_no_council_power = yes
 	}
 }
@@ -613,10 +574,7 @@ government_flavor = {
 		tier = EMPEROR
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = yes
-		OR = {
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
-		}
+		religion_group = tengri_group
 		emf_laws_has_no_council_power = yes
 	}
 }
@@ -642,11 +600,10 @@ government_flavor = {
 		tier = EMPEROR
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = no
+		mercenary = no
 		NOR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
+			LI_norse_pagan_trigger = yes
+			religion_group = tengri_group
 			religion_group = indian_group
 			religion_group = muslim
 		}
@@ -665,10 +622,7 @@ government_flavor = {
 		tier = EMPEROR
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = no
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-		}
+		LI_norse_pagan_trigger = yes
 		OR = {
 			NOT = { has_dlc = "Conclave" }
 			emf_laws_has_medium_council_power = yes
@@ -684,10 +638,8 @@ government_flavor = {
 		tier = EMPEROR
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = no
-		OR = {
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
-		}
+		mercenary = no
+		religion_group = tengri_group
 		OR = {
 			NOT = { has_dlc = "Conclave" }
 			emf_laws_has_medium_council_power = yes
@@ -703,6 +655,7 @@ government_flavor = {
 		tier = EMPEROR
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = no
+		mercenary = no
 		religion_group = indian_group
 		OR = {
 			NOT = { has_dlc = "Conclave" }
@@ -719,6 +672,7 @@ government_flavor = {
 		tier = EMPEROR
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = no
+		mercenary = no
 		religion_group = muslim
 		OR = {
 			NOT = { has_dlc = "Conclave" }
@@ -736,10 +690,8 @@ government_flavor = {
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = yes
 		NOR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
+			LI_norse_pagan_trigger = yes
+			religion_group = tengri_group
 			religion_group = indian_group
 			religion_group = muslim
 		}
@@ -755,10 +707,7 @@ government_flavor = {
 		tier = EMPEROR
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = yes
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-		}
+		LI_norse_pagan_trigger = yes
 		emf_laws_has_medium_council_power = yes
 	}
 }
@@ -771,10 +720,7 @@ government_flavor = {
 		tier = EMPEROR
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = yes
-		OR = {
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
-		}
+		religion_group = tengri_group
 		emf_laws_has_medium_council_power = yes
 	}
 }
@@ -800,11 +746,10 @@ government_flavor = {
 		tier = EMPEROR
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = no
+		mercenary = no
 		NOR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
+			LI_norse_pagan_trigger = yes
+			religion_group = tengri_group
 			religion_group = indian_group
 			religion_group = muslim
 		}
@@ -820,10 +765,8 @@ government_flavor = {
 		tier = EMPEROR
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = no
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-		}
+		mercenary = no
+		LI_norse_pagan_trigger = yes
 		emf_laws_has_high_council_power = yes
 	}
 }
@@ -836,10 +779,8 @@ government_flavor = {
 		tier = EMPEROR
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = no
-		OR = {
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
-		}
+		mercenary = no
+		religion_group = tengri_group
 		emf_laws_has_high_council_power = yes
 	}
 }
@@ -852,6 +793,7 @@ government_flavor = {
 		tier = EMPEROR
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = no
+		mercenary = no
 		religion_group = indian_group
 		emf_laws_has_high_council_power = yes
 	}
@@ -865,6 +807,7 @@ government_flavor = {
 		tier = EMPEROR
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = no
+		mercenary = no
 		religion_group = muslim
 		emf_laws_has_high_council_power = yes
 	}
@@ -879,10 +822,8 @@ government_flavor = {
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = yes
 		NOR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
+			LI_norse_pagan_trigger = yes
+			religion_group = tengri_group
 			religion_group = indian_group
 			religion_group = muslim
 		}
@@ -901,10 +842,7 @@ government_flavor = {
 		tier = EMPEROR
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = yes
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-		}
+		LI_norse_pagan_trigger = yes
 		OR = {
 			NOT = { has_dlc = "Conclave" }
 			emf_laws_has_high_council_power = yes
@@ -920,10 +858,7 @@ government_flavor = {
 		tier = EMPEROR
 		emf_imperial_government = yes
 		emf_laws_has_elective_law_type = yes
-		OR = {
-			religion = tengri_pagan
-			religion = tengri_pagan_reformed
-		}
+		religion_group = tengri_group
 		OR = {
 			NOT = { has_dlc = "Conclave" }
 			emf_laws_has_high_council_power = yes
@@ -1063,6 +998,15 @@ government_flavor = {
 	}	
 }
 
+government_flavor = {
+	name = gov_mercenary
+	graphics = GFX_evt_steppe_mercenaries
+	priority = 1
+	trigger = {
+		mercenary = yes
+	}
+}
+
 #####################################
 # Special Flavor Names (priority 2) #
 #####################################
@@ -1156,12 +1100,19 @@ government_flavor = {
 	graphics = GFX_evt_throne_room_mesoamerican
 	priority = 2
 	trigger = {
-		OR = {
-			religion = aztec
-			religion = aztec_reformed
-		}
+		religion_group = aztec_group
 		independent = yes
 		NOT = { has_landed_title = e_mexikha }
+	}
+}
+
+government_flavor = {
+	name = gov_andean
+	graphics = GFX_evt_aztec_court
+	priority = 2
+	trigger = {
+		independent = yes
+		religion_group = inti_group
 	}
 }
 
@@ -1222,6 +1173,7 @@ government_flavor = {
 		liege = { tier = EMPEROR }
 		NOR = {
 			culture_group = byzantine
+			culture_group = chinese_group
 			culture = roman
 		}
 	}
@@ -1236,6 +1188,7 @@ government_flavor = {
 		tier = KING
 		NOR = {
 			culture_group = byzantine
+			culture_group = chinese_group
 			culture = roman
 		}
 	}
@@ -1400,6 +1353,7 @@ government_flavor = {
 			culture_group = altaic
 			culture_group = east_african
 			culture_group = north_african
+			culture_group = nilo_saharan
 		}
 	}
 }
@@ -1436,6 +1390,7 @@ government_flavor = {
 			culture_group = altaic
 			culture_group = east_african
 			culture_group = north_african
+			culture_group = nilo_saharan
 		}
 	}
 }
@@ -1449,7 +1404,6 @@ government_flavor = {
 		is_nomadic = yes
 	}
 }
-
 
 government_flavor = {
 	name = gov_romuva_eldership
@@ -1485,10 +1439,7 @@ government_flavor = {
 	priority = 2
 	trigger = {
 		NOT = { capital_scope = { region = world_africa } }
-		OR = {
-			religion = baltic_pagan
-			religion = baltic_pagan_reformed
-		}
+		religion_group = baltic_group
 		is_tribal = yes
 		emf_laws_has_elective_law_type = yes
 	}
@@ -1500,10 +1451,7 @@ government_flavor = {
 	priority = 2
 	trigger = {
 		NOT = { capital_scope = { region = world_africa } }
-		OR = {
-			religion = baltic_pagan
-			religion = baltic_pagan_reformed
-		}
+		religion_group = baltic_group
 		is_tribal = yes
 		emf_laws_has_elective_law_type = no
 	}
@@ -1517,14 +1465,11 @@ government_flavor = {
 		NOT = { capital_scope = { region = world_africa } }
 		NAND = {
 			capital_scope = { region = world_europe_west_brittania }
-			culture = norse
+			culture_group = north_germanic
 			independent = yes
 			NOT = { tier = EMPEROR }
 		}
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-		}
+		LI_norse_pagan_trigger = yes
 		is_tribal = yes
 		emf_laws_has_elective_law_type = yes
 	}
@@ -1538,14 +1483,11 @@ government_flavor = {
 		NOT = { capital_scope = { region = world_africa } }
 		NAND = {
 			capital_scope = { region = world_europe_west_brittania }
-			culture = norse
+			culture_group = north_germanic
 			independent = yes
 			NOT = { tier = EMPEROR }
 		}
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-		}
+		LI_norse_pagan_trigger = yes
 		is_tribal = yes
 		emf_laws_has_elective_law_type = no
 	}
@@ -1582,8 +1524,7 @@ government_flavor = {
 	trigger = {
 		OR = {
 			capital_scope = { region = world_africa }
-			religion = west_african_pagan
-			religion = west_african_pagan_reformed
+			religion_group = serer_group
 		}
 		is_tribal = yes
 		emf_laws_has_elective_law_type = yes
@@ -1597,8 +1538,7 @@ government_flavor = {
 	trigger = {
 		OR = {
 			capital_scope = { region = world_africa }
-			religion = west_african_pagan
-			religion = west_african_pagan_reformed
+			religion_group = serer_group
 		}
 		is_tribal = yes
 		emf_laws_has_elective_law_type = no
@@ -1611,7 +1551,8 @@ government_flavor = {
 	priority = 2
 	trigger = {
 		capital_scope = { region = world_europe_west_brittania }
-		culture = norse
+		culture_group = north_germanic
+		LI_norse_pagan_trigger = yes
 		independent = yes
 		NOT = { tier = EMPEROR }
 		emf_laws_has_elective_law_type = no
@@ -1624,10 +1565,33 @@ government_flavor = {
 	priority = 2
 	trigger = {
 		capital_scope = { region = world_europe_west_brittania }
-		culture = norse
+		culture_group = north_germanic
+		LI_norse_pagan_trigger = yes
 		independent = yes
 		NOT = { tier = EMPEROR }
 		emf_laws_has_elective_law_type = yes
+	}
+}
+
+government_flavor = {
+	name = gov_order_qarmatian
+	graphics = GFX_evt_assassination
+	priority = 2
+	trigger = {
+		government = order_government
+		religion = qarmatian
+	}
+}
+
+government_flavor = {
+	name = gov_order
+	graphics = GFX_evt_society_joining
+	priority = 2
+	trigger = {
+		government = order_government
+		NOT = {
+			religion = shiite
+		}
 	}
 }
 
@@ -1651,17 +1615,182 @@ government_flavor = {
 }
 
 #####################################
-# Special Flavor Names (priority 3) #
+# Lux Invicta Names (priority 2)	#
 #####################################
 
 government_flavor = {
-	name = gov_mercenary
-	graphics = GFX_evt_steppe_mercenaries
-	priority = 3
+	name = gov_order_bud_mahayana
+	graphics = GFX_evt_assassination
+	priority = 2
 	trigger = {
-		mercenary = yes
+		government = order_government
+		religion = bud_mahayana
 	}
 }
+government_flavor = {
+	name = gov_order_mani_ahriman
+	graphics = GFX_evt_assassination
+	priority = 2
+	trigger = {
+		government = order_government
+		religion = mani_ahriman
+	}
+}
+government_flavor = {
+	name = gov_order_priscillian
+	graphics = GFX_evt_assassination
+	priority = 2
+	trigger = {
+		government = order_government
+		religion = priscillian
+	}
+}
+government_flavor = {
+	name = gov_order_ragnarok
+	graphics = GFX_evt_assassination
+	priority = 2
+	trigger = {
+		government = order_government
+		religion = ragnarok
+	}
+}
+government_flavor = {
+	name = gov_order_set
+	graphics = GFX_evt_assassination
+	priority = 2
+	trigger = {
+		government = order_government
+		religion = set
+	}
+}
+government_flavor = {
+	name = gov_order_tengri_ahriman
+	graphics = GFX_evt_assassination
+	priority = 2
+	trigger = {
+		government = order_government
+		religion = tengri_ahriman
+	}
+}
+government_flavor = {
+	name = gov_order_yahyanism
+	graphics = GFX_evt_assassination
+	priority = 2
+	trigger = {
+		government = order_government
+		religion = yahyanism
+	}
+}
+government_flavor = {
+	name = gov_order_zor_angra
+	graphics = GFX_evt_assassination
+	priority = 2
+	trigger = {
+		government = order_government
+		religion = zor_angra
+	}
+}
+government_flavor = {
+	name = gov_classical
+	graphics = GFX_evt_gov_classical
+	priority = 1
+	trigger = {
+		government = classical_government
+		
+	}
+}
+
+government_flavor = {
+	name = gov_oriental_monarchy
+	graphics = GFX_evt_gov_oriental_monarchy
+	priority = 1
+	trigger = {
+		government = oriental_monarchy_government
+		
+	}
+}
+
+government_flavor = {
+	name = gov_anarchist
+	graphics = GFX_evt_anarchist
+	priority = 1
+	trigger = {
+		government = anarchist_government
+		
+	}
+}
+
+government_flavor = {
+	name = gov_demagogic
+	graphics = GFX_evt_demagogic
+	priority = 1
+	trigger = {
+		government = demagogic_government
+		
+	}
+}
+
+government_flavor = {
+	name = gov_mystic
+	graphics = GFX_evt_gov_mystic
+	priority = 1
+	trigger = {
+		government = mystic_government
+		
+	}
+}
+
+government_flavor = {
+	name = gov_absolutist
+	graphics = GFX_evt_gov_absolutist
+	priority = 1
+	trigger = {
+		government = absolutist_government
+		
+	}
+}
+
+government_flavor = {
+	name = gov_hegemonic
+	graphics = GFX_evt_gov_hegemonic
+	priority = 1
+	trigger = {
+		government = hegemonic_government
+		
+	}
+}
+
+government_flavor = {
+	name = gov_messianic
+	graphics = GFX_evt_gov_messianic
+	priority = 1
+	trigger = {
+		government = messianic_government
+		
+	}
+}
+
+government_flavor = {
+	name = gov_confucian
+	graphics = GFX_evt_chinese_emissary
+	priority = 4
+	trigger = {
+		government = confucian_bureaucracy
+	}
+}
+
+government_flavor = {
+	name = gov_pretender_chinese_empire
+	graphics = GFX_evt_chinese_emissary
+	priority = 4
+	trigger = {
+		government = chinese_imperial_government
+	}
+}
+
+#####################################
+# Special Flavor Names (priority 3) #
+#####################################
 
 government_flavor = {
 	name = gov_order_shia

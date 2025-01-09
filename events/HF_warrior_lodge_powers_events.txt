@@ -962,14 +962,14 @@ character_event = {
 	id = HF.25021
 	desc = {
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 		text = EVTDESCAHF25021
 	}
 	desc = {
 		trigger = {
 			NOR = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				is_member_of_non_pagan_warrior_lodge_trigger = yes
 			}
 		}
@@ -977,7 +977,7 @@ character_event = {
 	}
 	desc = {
 		trigger = { 
-			NOT = { religion_group = pagan_group }
+			NOT = { novum_imperium_is_pagan = yes }
 			is_member_of_non_pagan_warrior_lodge_trigger = yes
 		}
 		text = EVTDESCAHFCWS25021
@@ -1322,7 +1322,7 @@ character_event = {
 		if = {
 			limit = {
 				NOR = {
-                    religion_group = pagan_group
+                    novum_imperium_is_pagan = yes
                     religion_group = african_group
                     emf_ritual_sacrifice_religion = yes
                 }
@@ -1354,7 +1354,7 @@ character_event = {
 			scaled_wealth = { value = -0.75 min = -50 max = -150 } 
 		}
 		if = { 
-			limit = { NOT = { religion_group = pagan_group } }
+			limit = { NOT = { novum_imperium_is_pagan = yes } }
 			tiered_piety_reward_effect = yes 
 		}
 		hidden_tooltip = { character_event = { id = HF.25025 } } 

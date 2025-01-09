@@ -15,6 +15,13 @@ feudal_governments = {
 			NOR = {
 				is_government_potential = rtp_baron_order_g
 				is_government_potential = rtp_landless_order_g
+				is_government_potential = rtp_baron_mercenary_g
+				is_government_potential = rtp_baron_republic_g
+				is_government_potential = rtp_baron_theocracy_g
+				is_government_potential = rtp_baron_g
+				is_government_potential = rtp_baron_iqta_g
+				is_government_potential = rtp_baron_monastic_g
+				is_government_potential = rtp_baron_tribal_g
 			}
 		}
 
@@ -39,9 +46,11 @@ feudal_governments = {
 			rtp_republic_g
 			rtp_privateer_g
 			republic_government
-
+			playable_republic_government
+			
 			rtp_theocracy_g
 			theocracy_government
+			playable_theocracy_government
 
 			tribal_government
 
@@ -76,6 +85,13 @@ feudal_governments = {
 				dynasty = 19930
 				is_government_potential = rtp_baron_order_g
 				is_government_potential = rtp_landless_order_g
+				is_government_potential = rtp_baron_mercenary_g
+				is_government_potential = rtp_baron_republic_g
+				is_government_potential = rtp_baron_theocracy_g
+				is_government_potential = rtp_baron_g
+				is_government_potential = rtp_baron_iqta_g
+				is_government_potential = rtp_baron_monastic_g
+				is_government_potential = rtp_baron_tribal_g
 			}
 		}
 
@@ -100,9 +116,11 @@ feudal_governments = {
 			rtp_republic_g
 			rtp_privateer_g
 			republic_government
+			playable_republic_government
 
 			rtp_theocracy_g
 			theocracy_government
+			playable_theocracy_government
 
 			tribal_government
 
@@ -122,8 +140,9 @@ feudal_governments = {
 		can_create_kingdoms = no
 		can_usurp_kingdoms_and_empires = no
 		can_build_holdings = no
-		can_be_granted_kingdoms_and_empires_by_other_government = no
+		can_be_granted_kingdoms_and_empires_by_other_government = yes
 		can_demand_religious_conversion = no
+		can_inherit = yes
 	}
 
 	#Landless - Mercenary
@@ -158,9 +177,11 @@ feudal_governments = {
 			rtp_republic_g
 			rtp_privateer_g
 			republic_government
+			playable_republic_government
 
 			rtp_theocracy_g
 			theocracy_government
+			playable_theocracy_government
 
 			tribal_government
 
@@ -228,9 +249,11 @@ feudal_governments = {
 			rtp_republic_g
 			rtp_privateer_g
 			republic_government
+			playable_republic_government
 
 			rtp_theocracy_g
 			theocracy_government
+			playable_theocracy_government
 
 			tribal_government
 
@@ -336,9 +359,11 @@ theocracy_governments = {
 			bogomilist_merchant_republic_government
 			rtp_republic_g
 			republic_government
+			playable_republic_government
 
 			rtp_theocracy_g
 			theocracy_government
+			playable_theocracy_government
 
 			tribal_government
 

@@ -18,7 +18,7 @@ blg_shaved = {
 
 # Tonsured hair rules.
 blg_tonsure = {
-	blg_religion_christian = yes
+	religion_group = christian
 	OR = {
 		blg_priest = yes
 		is_ascetic_trigger = yes

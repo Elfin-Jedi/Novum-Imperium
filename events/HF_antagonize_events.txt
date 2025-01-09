@@ -236,7 +236,7 @@ character_event = {
 									religion = hellenic_pagan
 									religion = hellenic_pagan_reformed
 								}
-								ROOT = { religion_group = pagan_group }
+								ROOT = { novum_imperium_is_pagan = yes }
 							}
 							AND = { 
 								trait = cynical 
@@ -2395,7 +2395,7 @@ character_event = {
 				}	
 				modifier = { #Context
 					factor = 0
-					FROM = { NOT = { religion_group = pagan_group } }
+					FROM = { NOT = { novum_imperium_is_pagan = yes } }
 				}
 				modifier = { #Context
 					factor = 0

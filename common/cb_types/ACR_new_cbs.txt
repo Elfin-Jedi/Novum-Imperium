@@ -20,8 +20,8 @@ hellenic_county_liberation = {
 			religion_openly_hellenic_or_reformed_trigger = yes
 			NOT = { same_realm = FROM }
 		}
-		NOT = { FROM = { religion_group = pagan_group } }
-		NOT = { FROM = { any_liege = { religion_group = pagan_group } } }
+		NOT = { FROM = { novum_imperium_is_pagan = yes } }
+		NOT = { FROM = { any_liege = { novum_imperium_is_pagan = yes } } }
 	}
 
 	can_use_title = {
@@ -59,7 +59,7 @@ hellenic_county_liberation = {
 
 	is_valid_title = {
 		ROOT = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOT = { same_realm = FROM }
 		}
 		FROM = {

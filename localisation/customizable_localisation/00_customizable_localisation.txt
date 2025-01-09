@@ -2979,10 +2979,10 @@ defined_text = {
 		trigger = {
 			OR = {
 				is_christian_secret_religious_society_member_trigger = yes
-				society_member_of = secret_religious_society_yazidi
+				society_member_of = secret_religious_society_yazidism
 				society_member_of = secret_religious_society_druze
-				society_member_of = secret_religious_society_mazdaki
-				society_member_of = secret_religious_society_manichean
+				society_member_of = secret_religious_society_mazdakism
+				society_member_of = secret_religious_society_mani
 			}
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -2994,7 +2994,7 @@ defined_text = {
 		trigger = { 
 			is_muslim_secret_religious_society_member_trigger = yes
 			NOR = {
-				society_member_of = secret_religious_society_yazidi
+				society_member_of = secret_religious_society_yazidism
 				society_member_of = secret_religious_society_druze
 			}
 			NOT = {
@@ -3166,10 +3166,10 @@ defined_text = {
 		trigger = { 
 			OR = {
 				is_christian_secret_religious_society_member_trigger = yes 
-				society_member_of = secret_religious_society_yazidi
+				society_member_of = secret_religious_society_yazidism
 				society_member_of = secret_religious_society_druze
-				society_member_of = secret_religious_society_mazdaki
-				society_member_of = secret_religious_society_manichean
+				society_member_of = secret_religious_society_mazdakism
+				society_member_of = secret_religious_society_mani
 			}
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -3181,7 +3181,7 @@ defined_text = {
 		trigger = { 
 			is_muslim_secret_religious_society_member_trigger = yes 
 			NOR = {
-				society_member_of = secret_religious_society_yazidi
+				society_member_of = secret_religious_society_yazidism
 				society_member_of = secret_religious_society_druze
 			}
 			NOT = {
@@ -3564,7 +3564,7 @@ defined_text = {
 	text = {
 		localisation_key = GetHouseOfWorship_Pagan
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOT = {
 				religion_openly_in_celtic_subgroup_trigger = no
 			}
@@ -3584,7 +3584,7 @@ defined_text = {
 	}
 	text = {
 		localisation_key = GetHouseOfWorship_Buddhist
-		trigger = { religion = buddhist }
+		trigger = { religion_group = bud_group }
 	}
 	text = {
 		localisation_key = GetHouseOfWorship_Jain
@@ -3626,7 +3626,7 @@ defined_text = {
 	}
 	text = {
 		localisation_key = string_Temple
-		trigger = { religion_group = pagan_group }
+		trigger = { novum_imperium_is_pagan = yes }
 	}
 	text = {
 		localisation_key = string_Temple
@@ -3642,7 +3642,7 @@ defined_text = {
 	}
 	text = {
 		localisation_key = string_Temple
-		trigger = { religion = buddhist }
+		trigger = { religion_group = bud_group }
 	}
 	text = {
 		localisation_key = string_Temple
@@ -3671,7 +3671,7 @@ defined_text = {
 	}
 	text = {
 		localisation_key = String_worship
-		trigger = { religion_group = pagan_group }
+		trigger = { novum_imperium_is_pagan = yes }
 	}
 	text = {
 		localisation_key = String_worship
@@ -3742,7 +3742,7 @@ defined_text = {
 		localisation_key = String_sainik
 		trigger = {
 			OR = {
-				culture_group = indo_aryan_group
+				culture_group = indoaryan
 				culture_group = dravidian_group
 			}
 		}
@@ -3815,7 +3815,7 @@ defined_text = {
 		localisation_key = String_sainikon
 		trigger = {
 			OR = {
-				culture_group = indo_aryan_group
+				culture_group = indoaryan
 				culture_group = dravidian_group
 			}
 		}
@@ -3890,7 +3890,7 @@ defined_text = {
 	text = {
 		localisation_key = String_Buddhist
 		trigger = {
-			religion = buddhist
+			religion_group = bud_group
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -4098,7 +4098,7 @@ defined_text = {
 	text = {
 		localisation_key = String_great_hero
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOT = { religion = britannic_pagan }
 		}
 	}
@@ -4129,7 +4129,7 @@ defined_text = {
 	text = {
 		localisation_key = String_Great_Hero_cap
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOT = { religion = britannic_pagan }
 		}
 	}
@@ -4360,13 +4360,13 @@ defined_text = {
         localisation_key = String_Koran
         trigger = { 
             true_religion_group_muslim_trigger = yes
-            NOT = { true_religion_yazidi_trigger = yes }
+            NOT = { true_religion_yazidism_trigger = yes }
             NOT = { true_religion_druze_trigger = yes }
         }
     }
     text = { 
         localisation_key = String_Book_of_Illumination
-        trigger = { true_religion_yazidi_trigger = yes }
+        trigger = { true_religion_yazidism_trigger = yes }
     }
     text = { 
         localisation_key = String_Epistles_of_Wisdom
@@ -4380,12 +4380,12 @@ defined_text = {
         localisation_key = String_Gathas
         trigger = { 
             true_religion_group_zoroastrian_group_trigger = yes 
-            NOT = { true_religion_mazdaki_trigger = yes }
+            NOT = { true_religion_mazdakism_trigger = yes }
         }
     }
     text = { 
         localisation_key = String_Great_Secret
-        trigger = { true_religion_mazdaki_trigger = yes }
+        trigger = { true_religion_mazdakism_trigger = yes }
     }
     text = { 
         localisation_key = String_Mahabharata
@@ -17144,13 +17144,13 @@ defined_text = {
 				FROM = {
 					OR = { 
 						religion = hindu
-						religion = buddhist
+						religion_group = bud_group
 					}
 				}
 				ROOT = {
 					OR = { 
 						religion = hindu
-						religion = buddhist
+						religion_group = bud_group
 					}
 				}
 			}
@@ -17229,10 +17229,10 @@ defined_text = {
 		trigger = {
 			OR = {
 				FROM = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				ROOT = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 			}
 		}
@@ -17343,15 +17343,15 @@ defined_text = {
 						religion = apostolic
 						religion = nestorian
 						religion = zoroastrian
-						religion = mazdaki
-						religion = zurvanist
-						religion = manichean
+						religion = mazdakism
+						religion = zurvanism
+						religion = mani
 						religion = khurmazta
 						religion = jewish
 						religion = samaritan
 						religion = karaite
 						religion = hindu
-						religion = buddhist
+						religion = bud_zen
 						religion = jain
 						religion = taoist
 					}
@@ -17374,15 +17374,15 @@ defined_text = {
 						religion = apostolic
 						religion = nestorian
 						religion = zoroastrian
-						religion = mazdaki
-						religion = zurvanist
-						religion = manichean
+						religion = mazdakism
+						religion = zurvanism
+						religion = mani
 						religion = khurmazta
 						religion = jewish
 						religion = samaritan
 						religion = karaite
 						religion = hindu
-						religion = buddhist
+						religion = bud_zen
 						religion = jain
 						religion = taoist
 					}
@@ -17413,9 +17413,9 @@ defined_text = {
 						religion = apostolic
 						religion = nestorian
 						religion = zoroastrian
-						religion = mazdaki
-						religion = zurvanist
-						religion = manichean
+						religion = mazdakism
+						religion = zurvanism
+						religion = mani
 						religion = khurmazta
 						religion = jewish
 						religion = samaritan
@@ -17437,9 +17437,9 @@ defined_text = {
 						religion = apostolic
 						religion = nestorian
 						religion = zoroastrian
-						religion = mazdaki
-						religion = zurvanist
-						religion = manichean
+						religion = mazdakism
+						religion = zurvanism
+						religion = mani
 						religion = khurmazta
 						religion = jewish
 						religion = samaritan
@@ -17549,7 +17549,7 @@ defined_text = {
 				culture_group = arabic
 				culture_group = chinese_group
 				culture_group = dravidian_group
-				culture_group = indo_aryan_group
+				culture_group = indoaryan
 			}
 		}
 		localisation_key = string_beer
@@ -17569,7 +17569,7 @@ defined_text = {
 				culture_group = arabic
 				culture_group = chinese_group
 				culture_group = dravidian_group
-				culture_group = indo_aryan_group
+				culture_group = indoaryan
 			}
 		}
 		localisation_key = string_wine
@@ -17605,7 +17605,7 @@ defined_text = {
 				culture_group = arabic
 				culture_group = chinese_group
 				culture_group = dravidian_group
-				culture_group = indo_aryan_group
+				culture_group = indoaryan
 			}
 		}
 		localisation_key = String_Beer
@@ -17625,7 +17625,7 @@ defined_text = {
 				culture_group = arabic
 				culture_group = chinese_group
 				culture_group = dravidian_group
-				culture_group = indo_aryan_group
+				culture_group = indoaryan
 			}
 		}
 		localisation_key = String_Wine
@@ -18457,7 +18457,7 @@ defined_text =
 		trigger = 
 		{
 			OR = {
-				culture_group = indo_aryan_group
+				culture_group = indoaryan
 				culture_group = dravidian_group
 			}
 		}
@@ -18632,7 +18632,7 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			religion = manichean
+			religion = mani
 		}
 		localisation_key = Holy_Order_Manichean
 	}
@@ -18892,7 +18892,7 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOT = { religion_openly_egyptian_or_reformed_trigger = yes }
 		}
 		localisation_key = string_blessed_ancestor
@@ -18916,7 +18916,7 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			religion_openly_egyptian_or_reformed_trigger = no
 		}
 		localisation_key = string_saint_view_title_pagan

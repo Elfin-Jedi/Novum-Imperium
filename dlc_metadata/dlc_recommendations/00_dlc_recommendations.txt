@@ -963,7 +963,7 @@ dlc024 = {
 			is_nomadic = no
 			NOT = { has_dlc = "Holy Fury" }
 			OR = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				religion_group = zoroastrian_group
 			}
 			NAND = {
@@ -1048,11 +1048,11 @@ dlc032 = {
 				religion = samaritan
 				religion = karaite
 				religion = zoroastrian
-				religion = mazdaki
-				religion = zurvanist
-				religion = manichean
+				religion = mazdakism
+				religion = zurvanism
+				religion_group = mani_group
 				religion = mandaean
-				religion_group = pagan_group # All pagans have their own Holy Orders now
+				novum_imperium_is_pagan = yes # All pagans have their own Holy Orders now
 			}
 		}
 	}	
@@ -1393,7 +1393,7 @@ dlc074 = {
 		weight = 10
 		trigger = {
 			NOT = { has_dlc = "The Old Gods" }
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NAND = {
 				has_dlc = "Jade Dragon"
 				OR = {
@@ -1412,7 +1412,7 @@ dlc074 = {
 			OR = {
 				AND = {
 					has_dlc = "The Old Gods"
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				AND = {
 					has_dlc = "Jade Dragon"

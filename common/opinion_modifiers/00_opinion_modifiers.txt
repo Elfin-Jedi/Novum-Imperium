@@ -835,6 +835,10 @@ opinion_lowered_crown_authority = {
 	months = 12
 }
 
+opinion_loosened_clan_control = {
+	opinion = 5
+	months = 12
+}
 opinion_lowered_tribal_organization = {
 	opinion = 5
 	months = 12
@@ -2803,6 +2807,11 @@ opinion_uzgavenes = {
 	months = 12
 }
 
+opinion_pagan_festival = {
+	opinion = 10
+	months = 12
+}
+
 opinion_refused_blot = {
 	opinion = -10
 	months = 12
@@ -2824,6 +2833,11 @@ opinion_refused_ukon_juhla = {
 }
 
 opinion_refused_uzgavenes = {
+	opinion = -5
+	months = 12
+}
+
+opinion_refused_pagan_festival = {
 	opinion = -5
 	months = 12
 }

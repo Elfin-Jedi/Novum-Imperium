@@ -31,7 +31,7 @@ character_event = {
 			independent = yes
 			higher_tier_than = DUKE
 		}
-		NOT = { religion_group = pagan_group }
+		NOT = { novum_imperium_is_pagan = yes }
 		job_spiritual = {
 			ai = yes
 			trait = zealous
@@ -252,12 +252,43 @@ character_event = {
 			}
 			OR = {
 				trait = cynical
+				trait = sympathy_abrahamics
+				trait = sympathy_anatolians
+				trait = sympathy_arabpagans
+				trait = sympathy_aztecs
+				trait = sympathy_baltics
+				trait = sympathy_bantus
+				trait = sympathy_berbers
+				trait = sympathy_buddhists
+				trait = sympathy_celtics
+				trait = sympathy_chinese
 				trait = sympathy_christendom
-				trait = sympathy_islam
-				trait = sympathy_pagans
-				trait = sympathy_zoroastrianism
-				trait = sympathy_judaism
+				trait = sympathy_east_africans
+				trait = sympathy_egyptian
+				trait = sympathy_finnish
+				trait = sympathy_graecoroman
 				trait = sympathy_indian
+				trait = sympathy_indohellens
+				trait = sympathy_intis
+				trait = sympathy_inuit
+				trait = sympathy_judaism
+				trait = sympathy_luwians
+				trait = sympathy_mande
+				trait = sympathy_manichaeans
+				trait = sympathy_mithraics
+				trait = sympathy_islam
+				trait = sympathy_platonics
+				trait = sympathy_nordic
+				trait = sympathy_pagans
+				trait = sympathy_palmyrans
+				trait = sympathy_sererics
+				trait = sympathy_slavics
+				trait = sympathy_sol
+				trait = sympathy_tengri
+				trait = sympathy_yazd
+				trait = sympathy_zal
+				trait = sympathy_zoroastrianism
+				trait = sympathy_african
 			}
 		}
 	}
@@ -283,12 +314,43 @@ character_event = {
 				save_event_target_as = ze_5020_province
 				trigger_switch = {
 					on_trigger = religion_group
+					abrahamic_group 	= { PREV = { add_trait = sympathy_abrahamics } }
+					anatolian_group 	= { PREV = { add_trait = sympathy_anatolians } }
+					arabpagan_group 	= { PREV = { add_trait = sympathy_arabpagans } }
+					aztec_group 		= { PREV = { add_trait = sympathy_aztecs } }
+					baltic_group 		= { PREV = { add_trait = sympathy_baltics } }
+					bantu_group 		= { PREV = { add_trait = sympathy_bantus } }
+					berberpagan_group 	= { PREV = { add_trait = sympathy_berbers } }
+					bud_group 			= { PREV = { add_trait = sympathy_buddhists } }
+					celtic_group 		= { PREV = { add_trait = sympathy_celtics } }
+					chinese_group 		= { PREV = { add_trait = sympathy_chinese } }
 					christian 			= { PREV = { add_trait = sympathy_christendom } }
-					muslim 				= { PREV = { add_trait = sympathy_islam } }
-					pagan_group 		= { PREV = { add_trait = sympathy_pagans } }
-					zoroastrian_group 	= { PREV = { add_trait = sympathy_zoroastrianism } }
-					jewish_group 		= { PREV = { add_trait = sympathy_judaism } }
+					east_african_group 	= { PREV = { add_trait = sympathy_east_africans } }
+					egyptian_group	 	= { PREV = { add_trait = sympathy_egyptian } }
+					finnish_group	 	= { PREV = { add_trait = sympathy_finnish } }
+					graecoroman_group	= { PREV = { add_trait = sympathy_graecoroman } }
 					indian_group 		= { PREV = { add_trait = sympathy_indian } }
+					indohelen_group 	= { PREV = { add_trait = sympathy_indohellens } }
+					inti_group 			= { PREV = { add_trait = sympathy_intis } }
+					inuit_group 		= { PREV = { add_trait = sympathy_inuit } }
+					jewish_group 		= { PREV = { add_trait = sympathy_judaism } }
+					luwian_group 		= { PREV = { add_trait = sympathy_luwians } }
+					mand_group	 		= { PREV = { add_trait = sympathy_mande } }
+					mani_group	 		= { PREV = { add_trait = sympathy_manichaeans } }
+					mithra_group	 	= { PREV = { add_trait = sympathy_mithraics } }
+					muslim 				= { PREV = { add_trait = sympathy_islam } }
+					neoplato_group 		= { PREV = { add_trait = sympathy_platonics } }
+					norsegerman_group 	= { PREV = { add_trait = sympathy_nordic } }
+					pagan_group 		= { PREV = { add_trait = sympathy_pagans } }
+					palmyranpagan_group = { PREV = { add_trait = sympathy_palmyrans } }
+					serer_group 		= { PREV = { add_trait = sympathy_sererics } }
+					slavic_group 		= { PREV = { add_trait = sympathy_slavics } }
+					sol_group 			= { PREV = { add_trait = sympathy_sol } }
+					tengri_group 		= { PREV = { add_trait = sympathy_tengri } }
+					yazd_group 			= { PREV = { add_trait = sympathy_yazd } }
+					zal_group 			= { PREV = { add_trait = sympathy_zal } }
+					zoroastrian_group 	= { PREV = { add_trait = sympathy_zoroastrianism } }
+					african_group 		= { PREV = { add_trait = sympathy_african } }
 				}
 			}
 		}
@@ -567,10 +629,10 @@ letter_event = {
 
 	trigger = {
 		has_dlc = "Zeus"
-		NOT = { religion_group = pagan_group }
+		NOT = { novum_imperium_is_pagan = yes }
 		job_spiritual = {
 			has_job_action = action_inquisition
-			location = { owner = { religion_group = pagan_group } }
+			location = { owner = { novum_imperium_is_pagan = yes } }
 			OR = {
 				trait = craven
 				trait = cynical

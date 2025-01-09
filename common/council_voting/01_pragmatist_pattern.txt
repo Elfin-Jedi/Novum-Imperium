@@ -658,7 +658,7 @@ pragmatist_pattern_for = {
 					}
 				}
 			}
-			NOT = { religion = mazdaki }
+			NOT = { religion = mazdakism }
 		}
 	}
 	mazdaki_wealth_1 = {
@@ -678,12 +678,12 @@ pragmatist_pattern_for = {
 							}
 						}
 					}
-					NOT = { religion = mazdaki }
+					NOT = { religion = mazdakism }
 				}
 				FROMFROM = { has_law = mazdaki_wealth_2 }
 			}
 			AND = {
-				religion = mazdaki
+				religion = mazdakism
 				OR = {
 					is_theocracy = yes
 					AND = {
@@ -716,12 +716,12 @@ pragmatist_pattern_for = {
 							}
 						}
 					}
-					NOT = { religion = mazdaki }
+					NOT = { religion = mazdakism }
 				}
 				FROMFROM = { has_law = mazdaki_wealth_3 }
 			}
 			AND = {
-				religion = mazdaki
+				religion = mazdakism
 				OR = {
 					is_theocracy = yes
 					AND = {
@@ -754,12 +754,12 @@ pragmatist_pattern_for = {
 							}
 						}
 					}
-					NOT = { religion = mazdaki }
+					NOT = { religion = mazdakism }
 				}
 				FROMFROM = { has_law = mazdaki_wealth_4 }
 			}
 			AND = {
-				religion = mazdaki
+				religion = mazdakism
 				OR = {
 					is_theocracy = yes
 					AND = {
@@ -776,7 +776,7 @@ pragmatist_pattern_for = {
 		}
 	}
 	mazdaki_wealth_4 = {
-		religion = mazdaki
+		religion = mazdakism
 		OR = {
 			is_theocracy = yes
 			AND = {
@@ -1361,7 +1361,7 @@ pragmatist_pattern_against = {
 		is_theocracy = no
 	}
 	mazdaki_wealth_0 = {
-		religion = mazdaki
+		religion = mazdakism
 		OR = {
 			is_theocracy = yes
 			AND = {
@@ -1391,12 +1391,12 @@ pragmatist_pattern_against = {
 							}
 						}
 					}
-					NOT = { religion = mazdaki }
+					NOT = { religion = mazdakism }
 				}
 				FROMFROM = { has_law = mazdaki_wealth_0 }
 			}
 			AND = {
-				religion = mazdaki
+				religion = mazdakism
 				OR = {
 					is_theocracy = yes
 					AND = {
@@ -1429,12 +1429,12 @@ pragmatist_pattern_against = {
 							}
 						}
 					}
-					NOT = { religion = mazdaki }
+					NOT = { religion = mazdakism }
 				}
 				FROMFROM = { has_law = mazdaki_wealth_1 }
 			}
 			AND = {
-				religion = mazdaki
+				religion = mazdakism
 				OR = {
 					is_theocracy = yes
 					AND = {
@@ -1467,12 +1467,12 @@ pragmatist_pattern_against = {
 							}
 						}
 					}
-					NOT = { religion = mazdaki }
+					NOT = { religion = mazdakism }
 				}
 				FROMFROM = { has_law = mazdaki_wealth_2 }
 			}
 			AND = {
-				religion = mazdaki
+				religion = mazdakism
 				OR = {
 					is_theocracy = yes
 					AND = {
@@ -1503,7 +1503,7 @@ pragmatist_pattern_against = {
 					}
 				}
 			}
-			NOT = { religion = mazdaki }
+			NOT = { religion = mazdakism }
 		}
 	}
 }

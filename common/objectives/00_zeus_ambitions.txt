@@ -429,7 +429,7 @@ obj_build_a_war_chest = {
 		}
 		modifier = {
 			factor = 0.5
-			is_theocracy = yes
+			rtp_is_theocracy_government = yes
 		}
 		modifier = {
 			factor = 0.25
@@ -638,7 +638,7 @@ obj_groom_an_heir = {
 		}
 		modifier = {
 			factor = 0
-			is_theocracy = yes
+			rtp_is_theocracy_government = yes
 		}
 		modifier = {
 			factor = 2
@@ -730,6 +730,9 @@ obj_groom_an_heir = {
 						months = 240
 					}
 				}
+			}
+			character_event = {
+				id = VIETmisc.2
 			}
 		}
 	}

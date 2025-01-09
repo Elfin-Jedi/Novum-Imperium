@@ -5351,7 +5351,7 @@ character_event = {
 	
 	trigger = {
 		trait = proud
-		NOT = { religion_group = pagan_group }
+		NOT = { novum_imperium_is_pagan = yes }
 		in_command = no
 		job_spiritual = {
 			NOT = {

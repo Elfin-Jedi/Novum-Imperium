@@ -234,7 +234,7 @@ culture = {
 	apply_before_generation = yes
 	priority = 1000
 	
-	random_default = random
+	random_default = full_random
 	
 	historical = {
 		culture = historical
@@ -305,7 +305,7 @@ religion = {
 	apply_before_generation = yes
 	priority = 1000
 	
-	random_default = random
+	random_default = full_random
 	
 	historical = {
 		religion = historical
@@ -326,7 +326,7 @@ religion_features = {
 	apply_before_generation = yes
 	priority = 998 # Just after religion generation
 	
-	random_default = random
+	random_default = historical
 	
 	historical = {
 		religion_features = historical
@@ -342,7 +342,7 @@ names = {
 	apply_before_generation = yes
 	priority = 998 # Just after religion and culture generation
 	
-	random_default = random
+	random_default = historical
 	
 	historical = {
 		culture_names = historical
@@ -504,6 +504,10 @@ dejure = {
 	}
 	no_empires = {
 		dejure_kingdoms = historical
+		dejure_empires = none
+	}
+	no_kingdoms = {
+		dejure_kingdoms = none
 		dejure_empires = none
 	}
 }

@@ -455,7 +455,7 @@ character_event = {
 				tiered_high_piety_negative_effect = yes
 				tiered_prestige_negative_effect = yes
 				if = {
-					limit = { religion_group = pagan_group }
+					limit = { novum_imperium_is_pagan = yes }
 					add_character_modifier = {
 						name = known_sodomite_pagan
 						years = 20
@@ -2228,7 +2228,7 @@ narrative_event = {
 	
 	trigger = {
 		can_call_crusade = yes
-		ROOT = { religion_group = pagan_group }
+		ROOT = { novum_imperium_is_pagan = yes }
 		new_character = {
 			religion_group = christian
 		}
@@ -2286,7 +2286,7 @@ narrative_event = {
 	
 	trigger = {
 		can_call_crusade = yes
-		ROOT = { religion_group = pagan_group }
+		ROOT = { novum_imperium_is_pagan = yes }
 		new_character = {
 			religion_group = muslim
 		}
@@ -2344,7 +2344,7 @@ narrative_event = {
 	
 	trigger = {
 		can_call_crusade = yes
-		ROOT = { religion_group = pagan_group }
+		ROOT = { novum_imperium_is_pagan = yes }
 		new_character = {
 			NOT = { religion_group = muslim }
 			NOT = { religion_group = christian }

@@ -716,7 +716,7 @@
 125525 = {
 	name="Gaikhatu"
 	dynasty=101916
-	religion="buddhist"
+	religion="bud_zen"
 	culture="mongol"
 	father=478010
 	mother=166947
@@ -1102,7 +1102,7 @@
 478008 = {
 	name="Arghun"
 	dynasty=101916
-	religion="buddhist"
+	religion="bud_zen"
 	culture="mongol"
 	father=478010
 	mother=166947
@@ -3101,7 +3101,7 @@
 93083 = {
 	name="Tarmashirin" 
 	dynasty=7380
-	religion="buddhist"
+	religion="bud_zen"
 	culture="mongol"
 	father=93075
 	1296.1.1={
@@ -3612,7 +3612,7 @@
 		dynasty=1000054550
 	}
 	1247.1.1={
-		religion="buddhist"
+		religion="bud_zen"
 	}#converted to Tibetan Buddhism by Sakya Pandita
 	1251.1.1={
 		death = { death_reason = death_in_china_historic }
@@ -3688,7 +3688,7 @@
 217266 = {
 	name = "Kublai" # Kublai Khan
 	dynasty = 11100
-	religion = buddhist
+	religion = bud_zen
 	culture = mongol
 	father = 125520
 	mother = 172010
@@ -3714,7 +3714,7 @@
 		effect={add_lover=217267}
 	}
 	1253.1.1 = {
-		religion="buddhist"
+		religion="bud_zen"
 		#remove_trait="sympathy_indian"
 		#add_trait="sympathy_pagans"
 	}#Initiated by Drogön Chögyal Phagpa
@@ -3734,7 +3734,7 @@
 217267 = {
 	name = "Chabi"
 	dynasty = 1051124 # Onggirat
-	religion = buddhist
+	religion = bud_zen
 	culture = mongol
 	add_trait="fair"
 	add_trait="charitable"
@@ -3745,7 +3745,7 @@
 		birth = yes
 	}
 	1253.1.1 = {
-     religion="buddhist"
+     religion="bud_zen"
      #remove_trait="sympathy_indian"
      #add_trait="sympathy_pagans"
    }#Initiated by Drogön Chögyal Phagpa
@@ -3756,7 +3756,7 @@
 217268 = {
 	name = "Jingim" # Son of Kublai Khan
 	dynasty = 101916
-	religion = buddhist
+	religion = bud_zen
 	culture = mongol
 	father = 217266
 	mother = 217267
@@ -3773,7 +3773,7 @@
 217269 = {
 	name = "Temür Öljeytü" # Temür Khan
 	dynasty = 1000054558
-	religion = buddhist
+	religion = bud_zen
 	culture = mongol
 	father = 217268
 	mother=166971
@@ -3790,7 +3790,7 @@
 217270 = {
 	name = "Dharmapala" # Grandson of Kublai Khan
 	dynasty = 101916
-	religion = buddhist
+	religion = bud_zen
 	culture = mongol
 	father = 217268
 	mother=166971
@@ -3807,7 +3807,7 @@
 217271 = {
 	name = "Külüg" # Külüg Khan
 	dynasty = 1000054558
-	religion = buddhist
+	religion = bud_zen
 	culture = mongol
 	father = 217270
 	mother=166974
@@ -3821,7 +3821,7 @@
 217272 = {
 	name = "Ayurbarwada" # Buyantu Khan
 	dynasty = 1000054558
-	religion = buddhist
+	religion = bud_zen
 	culture = mongol
 	father = 217270
 	mother=166974
@@ -3838,7 +3838,7 @@
 217273 = {
 	name = "Radnashiri"
 	dynasty = 1051125 # Khunggirad
-	religion = buddhist
+	religion = bud_zen
 	culture = mongol
 	#father = 217278
 	female = yes
@@ -3852,7 +3852,7 @@
 217274 = {
 	name = "Shidibala" # Gegeen Khan
 	dynasty = 1000054558
-	religion = buddhist
+	religion = bud_zen
 	culture = mongol
 	father = 217272
 	mother = 217273
@@ -3866,7 +3866,7 @@
 217275 = {
 	name = "Gammala" # Grandson of Kublai Khan
 	dynasty = 101916
-	religion = buddhist
+	religion = bud_zen
 	culture = mongol
 	father = 217268
 	mother=166971
@@ -3886,7 +3886,7 @@
 217277 = {
    name="Buyan Kelmish"
    dynasty=1051125 # Khunggirad
-   religion="buddhist"
+   religion="bud_zen"
    culture="mongol"
    female=yes
    #father=217276
@@ -3900,7 +3900,7 @@
 #217278 = {
  #  name="Guchu" # fictional
  #  dynasty=1051125 # Khunggirad
- #  religion="buddhist"
+ #  religion="bud_zen"
  #  culture="mongol"
  #  1267.5.5 = {
  #    birth=yes
@@ -3925,7 +3925,7 @@
 217279 = {
 	name = "Yesün Temür" # Yesün Temür Khan
 	dynasty = 1000054558
-	religion = buddhist
+	religion = bud_zen
 	culture = mongol
 	father = 217275
 	mother = 217277
@@ -3942,7 +3942,7 @@
 217280 = {
 	name = "Ragibagh" # Ragibagh Khan
 	dynasty = 1000054558
-	religion = buddhist
+	religion = bud_zen
 	culture = mongol
 	father = 217279
 	mother = 217277
@@ -3956,7 +3956,7 @@
 217281 = {
 	name = "Jayaatu" # Jayaatu Khan
 	dynasty = 1000054558
-	religion = buddhist
+	religion = bud_zen
 	culture = mongol
 	father = 217271
 	1304.2.16 = {
@@ -3969,7 +3969,7 @@
 217282 = {
 	name = "Khutughtu" # Khutughtu Khan Kusala
 	dynasty = 1000054558
-	religion = buddhist
+	religion = bud_zen
 	culture = mongol
 	father = 217271
 	1300.12.22 = {
@@ -3985,7 +3985,7 @@
 217283 = {
 	name = "Rinchinbal" # Rinchinbal Khan
 	dynasty = 1000054558
-	religion = buddhist
+	religion = bud_zen
 	culture = mongol
 	father = 217282
 	mother=166984
@@ -3999,7 +3999,7 @@
 217284 = {
 	name = "Toghon Temür" # Toghon Temür Khan
 	dynasty = 1000054558
-	religion = buddhist
+	religion = bud_zen
 	culture = mongol
 	add_trait="child_of_consort"
 	father = 217282
@@ -5406,7 +5406,7 @@
 166959 = {
 	name="Manggala" # Son of Kublai Khan
 	dynasty=101916
-	religion="buddhist"
+	religion="bud_zen"
 	culture="mongol"
 	father=217266
 	mother=217267
@@ -5441,7 +5441,7 @@
 	name="Khutugh Beki" # Daughter of Kublai Khan, mother of Chungseon of Korea
 	female=yes
 	dynasty=101916
-	religion="buddhist"
+	religion="bud_zen"
 	culture="mongol"
 	father=217266
 	#mother=166957
@@ -5497,7 +5497,7 @@
 166969 = {
 	name="Khulan Temür" # Son of Kublai Khan
 	dynasty=1000054558
-	religion="buddhist"
+	religion="bud_zen"
 	culture="mongol"
 	father=217266
 	mother=166968
@@ -5511,7 +5511,7 @@
 166970 = {
 	name="Tsever" # Son of Kublai Khan
 	dynasty=1000054558
-	religion="buddhist"
+	religion="bud_zen"
 	culture="mongol"
 	father=217266
 	mother=166968
@@ -5526,7 +5526,7 @@
 	name="Kökejin" # wife of Jingim Zhenjin
 	female=yes
 	dynasty=1040080
-	religion="buddhist"
+	religion="bud_zen"
 	culture="mongol"
 	1242.1.1 = {
 		birth=yes
@@ -5565,7 +5565,7 @@
 	name="Babukhan" # wife of Yesün Temür
 	female=yes
 	dynasty=1051125
-	religion="buddhist"
+	religion="bud_zen"
 	culture="mongol"
 	1301.1.1 = {
 		birth=yes
@@ -5578,7 +5578,7 @@
 	name="Budashiri" # wife of Tugh Temur Khan
 	female=yes
 	dynasty=1051125
-	religion="buddhist"
+	religion="bud_zen"
 	culture="mongol"
 	1303.1.1 = {
 		birth=yes
@@ -5603,7 +5603,7 @@
 166985 = {
 	name="Aratnadara" # son of Tugh Temur Khan
 	dynasty=1000054558
-	religion="buddhist"
+	religion="bud_zen"
 	culture="mongol"
 	father=217281
 	mother=166982

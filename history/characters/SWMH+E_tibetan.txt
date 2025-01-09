@@ -13,7 +13,7 @@
 1410001 = { #折逋嘉施 Zhebu Jiashi. 涼州留後 in 951.11.26.
 	dynasty = 1000049001 # Chenpo
 	name = "Kashi" 
-	religion = buddhist
+	religion = bud_zen
 	culture = bodpa
 	#Birth and death date unknown
 	905.1.1 = {
@@ -26,7 +26,7 @@
 1410002 = { #折逋葛支 Zhebu Gezhi
 	dynasty = 1000049001 # Chenpo
 	name = "Gharchi" 
-	religion = buddhist
+	religion = bud_zen
 	culture = bodpa
 	father = 1410001 #real relation unknown
 	#Birth and death date unknown
@@ -40,7 +40,7 @@
 1410003 = { #折逋阿喻丹 Zhebu Ayutan
 	dynasty = 1000049001 # Chenpo
 	name = "Ayiutan" 
-	religion = buddhist
+	religion = bud_zen
 	culture = bodpa
 	father = 1410002 #real relation unknown
 	#Birth date unknown
@@ -54,7 +54,7 @@
 1410004 = { #折逋喻龍波 Yulongbo
 	dynasty = 1000049001 # Chenpo
 	name = "Yiulongpa" 
-	religion = buddhist
+	religion = bud_zen
 	culture = bodpa
 	father = 1410002 #younger brother of Ayutan
 	#Birth date unknown
@@ -68,7 +68,7 @@
 1410005 = { #折逋游龍鉢 Youlongbo
 	dynasty = 1000049001 # Chenpo
 	name = "Yiulongpar"
-	religion = buddhist
+	religion = bud_zen
 	culture = bodpa
 	father = 1410002 #relation unknown
 	#Birth and death date unknown
@@ -82,7 +82,7 @@
 1410006 = { #潘羅支 Panluozhi
 	dynasty = 1000049001 # Chenpo ?
 	name = "Phuanlachi"
-	religion = buddhist
+	religion = bud_zen
 	culture = bodpa
 	father = 1410004 #relation unknown
 	#Birth date unknown
@@ -96,7 +96,7 @@
 1410007 = { #廝鐸督 Siduodu
 	dynasty = 1000049001 # Chenpo ?
 	name = "Sidaktok"
-	religion = buddhist
+	religion = bud_zen
 	culture = bodpa
 	father = 1410004 #younger brother of Panluozhi
 	#Birth and death date unknown
@@ -113,7 +113,7 @@
 	dynasty = 1000049002 #Yarlung
 	name = "Tri Namdewon Tsenpo" #欺南陵溫篯逋
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	#father unknown, but a scion of Yarlung dynasty. Somehow connection has to be invented.
 	997.1.1={
 		birth=yes
@@ -133,7 +133,7 @@
 	dynasty = 1000049002 #yarlung
 	name = "Xiazhan"
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	father = 1410020
 	mother = 1410042
 	1014.1.1={
@@ -147,7 +147,7 @@
 	dynasty = 1000049002 #yarlung
 	name = "Mozhanjiao"
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	father = 1410021
 	mother = 1410042
 	1017.1.1={
@@ -161,7 +161,7 @@
 	dynasty = 1000049002 #yarlung
 	name = "Dongzhan"
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	father = 1410021
 	mother = 1410031
 	1032.1.1={
@@ -176,7 +176,7 @@
 	dynasty = 1000049002 #yarlung
 	name = "Muzheng"
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	father = 1410022
 	#mother = Mother of Qiao family
 	1032.1.1={
@@ -190,7 +190,7 @@
 	dynasty = 1000049002 #yarlung
 	name = "Aligu"
 	culture = saka
-	religion = buddhist
+	religion = bud_zen
 	father = 1410022#adopted
 	#trait = tyrant
 	trait = cruel
@@ -208,7 +208,7 @@
 	dynasty = 1000049002 #yarlung
 	name = "Xiazheng"
 	culture = saka
-	religion = buddhist
+	religion = bud_zen
 	father = 1410025
 	#birth date unknown
 	1062.1.1={
@@ -222,7 +222,7 @@
 	dynasty = 1000049002 #yarlung
 	name = "Xiasaqiding"
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	father = 1410022
 	#Birth and death dates unknowns
 	1034.1.1={
@@ -236,7 +236,7 @@
 	dynasty = 1000049002 #yarlung
 	name = "Xiawuchi"
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	father = 1410021
 	#Birth and death dates unknown
 	1036.1.1={
@@ -250,7 +250,7 @@
 	dynasty = 1000049002 #yarlung
 	name = "Bazhanjiao"
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	father = 1410021
 	#Birth and death dates unknown
 	1038.1.1={
@@ -264,7 +264,7 @@
 	dynasty = 1000049002 #yarlung
 	name = "Longzan"
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	father = 1410024 
 	#Birth and death dates unknown
 	1036.1.1={
@@ -278,7 +278,7 @@
 	dynasty = 1000049005 #Qiao
 	name = "Jashi" #fictional
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	female=yes
 	#Birth and death dates unknown
 	1020.1.1={
@@ -292,7 +292,7 @@
 	dynasty = 1000049002 #yarlung
 	name = "Linbobi"
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	father=1410023
 	trait=ill
 	#Birth and death dates unknown
@@ -310,7 +310,7 @@
 	dynasty = 1000049002 #yarlung
 	name = "Nannazhi"
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	father = 1410022#actually not sure, but if Aligu was given by his mother to Dongzhan, then maybe his brother was too?
 	#Birth and death dates unknown
 	1043.1.1={
@@ -328,7 +328,7 @@
 	dynasty = 1000049003
 	name = "Lewew" #fictional
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	#Birth and death dates unknown
 	950.1.1={
 		birth = yes
@@ -341,7 +341,7 @@
 	dynasty = 1000049003
 	name = "Yingchenglinbuchi"
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	trait = ambitious
 	father = 1410040
 	#Birth and death dates unknown
@@ -356,7 +356,7 @@
 	dynasty = 1000049003
 	name = "Dunkyi" #fictional
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	female=yes
 	father = 1410041
 	#Birth and death dates unknown
@@ -374,7 +374,7 @@
 	dynasty = 1000049003
 	name = "Lhakee" #fictional
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	female=yes
 	father = 1410041
 	#Birth and death dates unknown
@@ -389,7 +389,7 @@
 	dynasty = 1000049003
 	name = "Ewghwi" #fictional
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	father = 1410040
 	#Birth and death dates unknown
 	983.1.1={
@@ -403,7 +403,7 @@
 	dynasty = 1000049003
 	name = "Najisie"
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	father = 1410044
 	#Birth and death dates unknown
 	1001.1.1={
@@ -417,7 +417,7 @@
 	dynasty = 1000049004
 	name = "Poqi"
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	984.1.1={
 		birth=yes
 	}
@@ -429,7 +429,7 @@
 	dynasty = 1000049004
 	name = "Bawen"
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	father = 1410051
 	#Birth and death dates unknown
 	1030.1.1={
@@ -443,7 +443,7 @@
 	dynasty = 1000049004
 	name = "Shaozan"
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	father = 1410047
 	#Birth and death dates unknown
 	1060.1.1={
@@ -457,7 +457,7 @@
 	dynasty = 1000049004
 	name = "Sheluosan"
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	father = 1410047
 	1065.1.1={
 		birth=yes
@@ -470,7 +470,7 @@
 	dynasty = 1000049004
 	name = "Zunyongdan"
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	father = 1410051 #relation unknown, but let's say a sister of Xi Bawen
 	female=yes
 	#Birth and death dates unknown
@@ -485,7 +485,7 @@
 	dynasty = 1000049004
 	name = "Ponu"
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	#Birth and death date unknown
 	1000.1.1={
 		birth=yes
@@ -498,7 +498,7 @@
 	dynasty = 1000049004
 	name = "Xixin"
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	father = 1410046#relation unknown
 	1005.1.1={
 		birth=yes
@@ -511,7 +511,7 @@
 	dynasty = 1000049004
 	name = "Nezhi"
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	father= 1410055
 	1031.1.1={
 		birth=yes
@@ -524,7 +524,7 @@
 	dynasty = 1000049004
 	name = "Alingjing"
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	father = 1410046#relation unknown
 	1011.1.1={
 		birth=yes
@@ -537,7 +537,7 @@
 	dynasty = 1000049004
 	name = "Alingpo"
 	culture = bodpa
-	religion = buddhist
+	religion = bud_zen
 	father = 1410046#relation unknown
 	1001.1.1={
 		birth=yes

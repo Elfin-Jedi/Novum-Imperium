@@ -882,7 +882,7 @@ character_event = { # pagan branch follows mother instead of father, on_childhoo
 		ai = yes 
 		age < 8		# 6 years six months, NOT at 8 years six months and 10 years six months
 		has_religion_feature = religion_no_leader
-		religion_group = pagan_group
+		novum_imperium_is_pagan = yes
 		OR = {
 			has_religion_feature = religion_matriarchal
 			has_game_rule = { 
@@ -1014,7 +1014,7 @@ character_event = {		# valascan blinds a dude, eyeball destroyed.
 			limit = {
 				NOR = {
 					is_tribal = yes
-					religion_group = pagan_group 
+					novum_imperium_is_pagan = yes 
 				}
 			}		
 			add_character_modifier = {
@@ -1026,7 +1026,7 @@ character_event = {		# valascan blinds a dude, eyeball destroyed.
 			limit = {
 				OR = {
 					is_tribal = yes
-					religion_group = pagan_group 
+					novum_imperium_is_pagan = yes 
 				}
 			}		
 			add_character_modifier = {
@@ -1068,7 +1068,7 @@ character_event = {		# valascan blinds a dude, eyeball preserved.
 			limit = {
 				NOR = {
 					is_tribal = yes
-					religion_group = pagan_group 
+					novum_imperium_is_pagan = yes 
 				}
 			}		
 			add_character_modifier = {
@@ -1080,7 +1080,7 @@ character_event = {		# valascan blinds a dude, eyeball preserved.
 			limit = {
 				OR = {
 					is_tribal = yes
-					religion_group = pagan_group 
+					novum_imperium_is_pagan = yes 
 				}
 			}		
 			add_character_modifier = {

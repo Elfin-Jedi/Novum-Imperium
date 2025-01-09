@@ -60,7 +60,7 @@ horde_subjugation = {
 				OR = {
 					religion = FROM
 					AND = {
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 						is_reformed_religion = no
 					}
 				}

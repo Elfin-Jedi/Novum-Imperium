@@ -389,7 +389,7 @@ targetted_decisions = {
 					any_liege = { holy_order = yes }
 					AND = {
 						NOR = {
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 							religion_group = muslim
 						}
 						OR = {
@@ -561,9 +561,9 @@ targetted_decisions = {
 					OR = {	
 						religion_group = christian
 						religion = hindu
-						religion = buddhist
+						religion_group = bud_group
 						religion = jain
-						religion = manichean
+						religion_group = mani_group
 						religion = west_african_pagan
 					}
 				}
@@ -741,7 +741,7 @@ targetted_decisions = {
 				limit = { 
 					has_dlc = "Mystics" 
 					is_in_society = no
-					religion = buddhist 
+					religion_group = bud_group 
 				}
 				custom_tooltip = { text = tooltip_vows_monk_joins_society }
 				hidden_tooltip = { 
@@ -1163,7 +1163,10 @@ targetted_decisions = {
 		ai_check_interval = 12
 
 		from_potential = {
-			is_ruler = yes
+			OR = {
+				is_ruler = yes
+				has_landed_title = c_landless_t
+			}
 			has_regent = no
 			has_children = yes
 		}
@@ -1592,6 +1595,7 @@ targetted_decisions = {
 		potential = {
 			OR = {
 				is_ruler = yes
+				has_landed_title = c_landless_t
 				NOR = {
 					# Spouse can take them out of hiding
 					any_spouse = {
@@ -2093,7 +2097,10 @@ targetted_decisions = {
 		ai_check_interval = 12
 
 		from_potential = {
-			is_ruler = yes
+			OR = {
+				is_ruler = yes
+				has_landed_title = c_landless_t
+			}
 			has_regent = no
 		}
 

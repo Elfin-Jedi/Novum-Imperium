@@ -121,7 +121,7 @@ culture_group_spread = {
 			culture_group = byzantine
 			culture_group = finno_ugric
 			culture_group = iranian
-			culture_group = indo_aryan_group
+			culture_group = indoaryan
 		}
 		NOT = {
 			has_alternate_start_setting = {
@@ -374,7 +374,7 @@ religion_group_spread = {
 	}
 	modifier = {
 		factor = 5
-		religion_group = pagan_group
+		novum_imperium_is_pagan = yes
 		NOT = { year = 1000 }
 		NOT = {
 			has_alternate_start_setting = {
@@ -438,7 +438,7 @@ religion_group_spread = {
 	}
 	modifier = {
 		factor = 25
-		religion_group = pagan_group
+		novum_imperium_is_pagan = yes
 		has_alternate_start_setting = {
 			setting = random_scenario_more_pagans
 			option = checked
@@ -554,7 +554,7 @@ religion_spread = {
 	}
 	modifier = {
 		factor = 0.2
-		religion = manichean
+		religion = mani
 		NOT = {
 			has_alternate_start_setting = {
 				setting = religion
@@ -786,7 +786,7 @@ holy_site_spread = {
 	modifier = {
 		factor = 0.1
 		holy_site_distance = { target = FROM value < 300 }
-		FROM = { NOT = { religion_group = pagan_group } }
+		FROM = { NOT = { novum_imperium_is_pagan = yes } }
 	}
 	modifier = {
 		factor = 20
@@ -796,7 +796,7 @@ holy_site_spread = {
 	modifier = { # Pagan sites tend to be closer
 		factor = 30
 		holy_site_distance = { target = FROM value < 350 }
-		FROM = { religion_group = pagan_group }
+		FROM = { novum_imperium_is_pagan = yes }
 	}
 	modifier = {
 		factor = 0 # We use this as a proxy for religion distance, because religion distance is expensive to calculate

@@ -27,6 +27,7 @@ emf_cb_pagan_subjugation_basic_can_use = {
 		emf_unreformed_pagan = yes
 		NOT = { religion = hellenic_pagan }
 		mercenary = no
+		is_theocracy = no
 		# Prefer other CBs potentially:
 		OR = {
 			AND = {
@@ -63,7 +64,7 @@ emf_cb_pagan_subjugation_basic_can_use = {
 				OR = {
 					owner_under_FROM = yes
 					AND = {
-						ROOT = { religion = norse_pagan }
+						ROOT = { religion_group = norsegerman_group }
 						is_land = no
 						any_neighbor_province = { owner_under_FROM = yes }
 					}
@@ -73,11 +74,13 @@ emf_cb_pagan_subjugation_basic_can_use = {
 	}
 	FROM = {
 		# Only can attack pagan targets (reformed allowed if same base religion as attacker) that are non-nomadic:
-		religion_group = pagan_group
+		novum_imperium_is_pagan = yes
+		in_revolt = no
 		is_nomadic = no
 		OR = {
 			is_organized_religion_trigger = no
 			is_reformed_religion = ROOT
+			religion_group = ROOT
 		}
 		# Defender cannot already be defending against a subjugation CB:
 		NOT = {

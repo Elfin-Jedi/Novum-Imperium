@@ -1,0 +1,79 @@
+decisions = {
+
+	usurp_council_power = {
+		is_high_prio = yes
+		is_playable = yes
+		potential = {
+			NOR = {
+				any_courtier_or_vassal = {
+					has_job_title = job_chancellor
+					liege = {
+						character = ROOT
+					}
+				}
+				any_courtier_or_vassal = {
+					has_job_title = job_marshal
+					liege = {
+						character = ROOT
+					}
+				}
+				any_courtier_or_vassal = {
+					has_job_title = job_treasurer
+					liege = {
+						character = ROOT
+					}
+				}
+				any_courtier_or_vassal = {
+					has_job_title = job_spiritual
+					liege = {
+						character = ROOT
+					}
+				}
+				any_courtier_or_vassal = {
+					has_job_title = job_spymaster
+					liege = {
+						character = ROOT
+					}
+				}
+			}
+			OR = {
+				has_law = law_voting_power_1
+				has_law = banish_voting_power_1
+				has_law = revoke_title_voting_power_1
+				has_law = grant_title_voting_power_1
+				has_law = imprison_voting_power_1
+				has_law = execution_voting_power_1
+				has_law = war_voting_power_1
+			}
+
+			is_playable = yes
+		}
+		
+		allow = {
+			OR = {
+				trait = deceitful
+				trait = schemer
+				intrigue = 15
+			}
+			NOR = {
+				trait = dull
+				trait = inbred
+				trait = incapable
+				trait = slow
+				trait = imbecile
+			}
+		}
+		
+		effect = {
+			character_event = { id = UCP.55333 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.1 #Risk is too high
+			}
+		}
+	}
+}

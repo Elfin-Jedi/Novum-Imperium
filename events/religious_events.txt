@@ -2142,7 +2142,7 @@ character_event = {
 				prisoner = no
 				OR = {
 					religion_group = muslim
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				OR = {
 					has_job_title = job_chancellor
@@ -2176,7 +2176,7 @@ character_event = {
 					prisoner = no
 					OR = {
 						religion_group = muslim
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 					OR = {
 						has_job_title = job_chancellor
@@ -2217,7 +2217,7 @@ character_event = {
 				prisoner = no
 				OR = {
 					religion_group = muslim
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				OR = {
 					has_job_title = job_chancellor
@@ -2347,7 +2347,7 @@ character_event = {
 				prisoner = no
 				OR = {
 					religion_group = muslim
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				OR = {
 					has_job_title = job_chancellor
@@ -2381,7 +2381,7 @@ character_event = {
 					prisoner = no
 					OR = {
 						religion_group = muslim
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 					OR = {
 						has_job_title = job_chancellor
@@ -2422,7 +2422,7 @@ character_event = {
 				prisoner = no
 				OR = {
 					religion_group = muslim
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				OR = {
 					has_job_title = job_chancellor
@@ -3894,7 +3894,7 @@ province_event = {
 				top_liege = {
 					OR = {
 						religion = hindu
-						religion = buddhist
+						religion_group = bud_group
 					}
 				}
 			}
@@ -3902,7 +3902,7 @@ province_event = {
 		# Jains, Taoists and Bön have a hard time converting ALL non-pagans
 		modifier = {
 			factor = 3.0
-			NOT = { religion_group = pagan_group }
+			NOT = { novum_imperium_is_pagan = yes }
 			owner = {
 				top_liege = {
 					OR = {
@@ -4085,6 +4085,156 @@ character_event = {
 			# Always allow them if you already like that religion
 			modifier = {
 				factor = 0
+				FROM = { religion_group = abrahamic_group }
+				trait = sympathy_abrahamics
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = anatolian_group }
+				trait = sympathy_anatolians
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = arabpagan_group }
+				trait = sympathy_arabpagans
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = aztec_group }
+				trait = sympathy_aztecs
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = baltic_group }
+				trait = sympathy_baltics
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = bantu_group }
+				trait = sympathy_bantus
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = berberpagan_group }
+				trait = sympathy_berbers
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = bud_group }
+				trait = sympathy_buddhists
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = celtic_group }
+				trait = sympathy_celtics
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = chinese_group }
+				trait = sympathy_chinese
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
 				FROM = {
 					OR = {
 						religion_group = christian
@@ -4109,17 +4259,8 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				FROM = {
-					OR = {
-						religion_group = muslim
-						has_religion_feature = religion_syncretic_muslim
-					}
-				}
-				OR = {
-					trait = sympathy_islam
-					religion_group = muslim
-					has_religion_feature = religion_syncretic_muslim
-				}
+				FROM = { religion_group = east_african_group }
+				trait = sympathy_east_africans
 				NAND = {
 					top_liege = { has_landed_title = e_mongol_empire }
 					has_global_flag = mongol_empire_arrival
@@ -4133,8 +4274,8 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				FROM = { religion_group = jewish_group }
-				trait = sympathy_judaism
+				FROM = { religion_group = egyptian_group }
+				trait = sympathy_egyptian
 				NAND = {
 					top_liege = { has_landed_title = e_mongol_empire }
 					has_global_flag = mongol_empire_arrival
@@ -4148,17 +4289,23 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				FROM = {
-					OR = {
-						religion_group = zoroastrian_group
-						has_religion_feature = religion_syncretic_zoroastrian
+				FROM = { religion_group = finnish_group }
+				trait = sympathy_finnish
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
 					}
 				}
-				OR = {
-					trait = sympathy_zoroastrianism
-					religion_group = zoroastrian_group
-					has_religion_feature = religion_syncretic_zoroastrian
-				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = graecoroman_group }
+				trait = sympathy_graecoroman
 				NAND = {
 					top_liege = { has_landed_title = e_mongol_empire }
 					has_global_flag = mongol_empire_arrival
@@ -4196,13 +4343,326 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				FROM = { religion_group = indohelen_group }
+				trait = sympathy_indohellens
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = inti_group }
+				trait = sympathy_intis
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = inuit_group }
+				trait = sympathy_inuit
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = jewish_group }
+				trait = sympathy_judaism
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = luwian_group }
+				trait = sympathy_luwians
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = mand_group }
+				trait = sympathy_mande
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = mani_group }
+				trait = sympathy_manichaeans
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = mithra_group }
+				trait = sympathy_mithraics
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
 				FROM = {
-					religion_group = african_group
+					OR = {
+						religion_group = muslim
+						has_religion_feature = religion_syncretic_muslim
+					}
 				}
 				OR = {
-					trait = sympathy_african
-					religion_group = african_group
+					trait = sympathy_islam
+					religion_group = muslim
+					has_religion_feature = religion_syncretic_muslim
 				}
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = neoplato_group }
+				trait = sympathy_platonics
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = norsegerman_group }
+				trait = sympathy_nordic
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = pagan_group }
+				trait = sympathy_pagans
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = palmyranpagan_group }
+				trait = sympathy_palmyrans
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = serer_group }
+				trait = sympathy_sererics
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = slavic_group }
+				trait = sympathy_slavics
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = sol_group }
+				trait = sympathy_sol
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = tengri_group }
+				trait = sympathy_tengri
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = yazd_group }
+				trait = sympathy_yazd
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = zal_group }
+				trait = sympathy_zal
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					OR = {
+						religion_group = zoroastrian_group
+						has_religion_feature = religion_syncretic_zoroastrian
+					}
+				}
+				OR = {
+					trait = sympathy_zoroastrianism
+					religion_group = zoroastrian_group
+					has_religion_feature = religion_syncretic_zoroastrian
+				}
+				NAND = {
+					top_liege = { has_landed_title = e_mongol_empire }
+					has_global_flag = mongol_empire_arrival
+					NOT = {
+						had_global_flag = {
+							flag = mongol_empire_arrival
+							days = 10950 # 30yr
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { religion_group = african_group }
+				trait = sympathy_african
 				NAND = {
 					top_liege = { has_landed_title = e_mongol_empire }
 					has_global_flag = mongol_empire_arrival
@@ -6792,7 +7252,7 @@ narrative_event = {
 
 	only_playable = yes
 	min_age = 16
-	religion_group = pagan_group
+	novum_imperium_is_pagan = yes
 
 	trigger = {
 		controls_religion = yes
@@ -6933,7 +7393,7 @@ narrative_event = {
 	option = {
 		name = EVTOPTB39680
 		trigger = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			NOT = { religion = ROOT }
 		}
 	}
@@ -6941,7 +7401,7 @@ narrative_event = {
 	option = {
 		name = EVTOPTC39680
 		trigger = {
-			NOT = { religion_group = pagan_group }
+			NOT = { novum_imperium_is_pagan = yes }
 		}
 	}
 }
@@ -7016,10 +7476,149 @@ character_event = {
 		}
 		if = {
 			limit = {
+				religion_group = abrahamic_group
+			}
+			add_trait = sympathy_abrahamics
+		}
+		else_if = {
+			limit = {
+				religion_group = anatolian_group
+			}
+			add_trait = sympathy_anatolians
+		}
+		else_if = {
+			limit = {
+				religion_group = arabpagan_group
+			}
+			add_trait = sympathy_arabpagans
+		}
+		else_if = {
+			limit = {
+				religion_group = aztec_group
+			}
+			add_trait = sympathy_aztecs
+		}
+		else_if = {
+			limit = {
+				religion_group = baltic_group
+			}
+			add_trait = sympathy_baltics
+		}
+		else_if = {
+			limit = {
+				religion_group = bantu_group
+			}
+			add_trait = sympathy_bantus
+		}
+		else_if = {
+			limit = {
+				religion_group = berberpagan_group
+			}
+			add_trait = sympathy_berbers
+		}
+		else_if = {
+			limit = {
+				religion_group = bud_group
+			}
+			add_trait = sympathy_buddhists
+		}
+		else_if = {
+			limit = {
+				religion_group = celtic_group
+			}
+			add_trait = sympathy_celtics
+		}
+		else_if = {
+			limit = {
+				religion_group = chinese_group
+			}
+			add_trait = sympathy_chinese
+		}
+		else_if = {
+			limit = {
 				religion_group = christian
 				NOT = { FROMFROM = { has_religion_feature = religion_syncretic_christian } }
 			}
 			add_trait = sympathy_christendom
+		}
+		else_if = {
+			limit = {
+				religion_group = east_african_group
+			}
+			add_trait = sympathy_east_africans
+		}
+		else_if = {
+			limit = {
+				religion_group = egyptian_group
+			}
+			add_trait = sympathy_egyptian
+		}
+		else_if = {
+			limit = {
+				religion_group = finnish_group
+			}
+			add_trait = sympathy_finnish
+		}
+		else_if = {
+			limit = {
+				religion_group = graecoroman_group
+			}
+			add_trait = sympathy_graecoroman
+		}
+		else_if = {
+			limit = {
+				religion_group = indian_group
+				NOT = { FROMFROM = { has_religion_feature = religion_syncretic_indian } }
+			}
+			add_trait = sympathy_indian
+		}
+		else_if = {
+			limit = {
+				religion_group = indohelen_group
+			}
+			add_trait = sympathy_indohellens
+		}
+		else_if = {
+			limit = {
+				religion_group = inti_group
+			}
+			add_trait = sympathy_intis
+		}
+		else_if = {
+			limit = {
+				religion_group = inuit_group
+			}
+			add_trait = sympathy_inuit
+		}
+		else_if = {
+			limit = {
+				religion_group = jewish_group
+			}
+			add_trait = sympathy_judaism
+		}
+		else_if = {
+			limit = {
+				religion_group = luwian_group
+			}
+			add_trait = sympathy_luwians
+		}
+		else_if = {
+			limit = {
+				religion_group = mand_group
+			}
+			add_trait = sympathy_mande
+		}
+		else_if = {
+			limit = {
+				religion_group = mani_group
+			}
+			add_trait = sympathy_manichaeans
+		}
+		else_if = {
+			limit = {
+				religion_group = mithra_group
+			}
+			add_trait = sympathy_mithraics
 		}
 		else_if = {
 			limit = {
@@ -7030,9 +7629,63 @@ character_event = {
 		}
 		else_if = {
 			limit = {
+				religion_group = neoplato_group
+			}
+			add_trait = sympathy_platonics
+		}
+		else_if = {
+			limit = {
+				religion_group = norsegerman_group
+			}
+			add_trait = sympathy_nordic
+		}
+		else_if = {
+			limit = {
 				religion_group = pagan_group
 			}
 			add_trait = sympathy_pagans
+		}
+		else_if = {
+			limit = {
+				religion_group = palmyranpagan_group
+			}
+			add_trait = sympathy_palmyrans
+		}
+		else_if = {
+			limit = {
+				religion_group = serer_group
+			}
+			add_trait = sympathy_sererics
+		}
+		else_if = {
+			limit = {
+				religion_group = slavic_group
+			}
+			add_trait = sympathy_slavics
+		}
+		else_if = {
+			limit = {
+				religion_group = sol_group
+			}
+			add_trait = sympathy_sol
+		}
+		else_if = {
+			limit = {
+				religion_group = tengri_group
+			}
+			add_trait = sympathy_tengri
+		}
+		else_if = {
+			limit = {
+				religion_group = yazd_group
+			}
+			add_trait = sympathy_yazd
+		}
+		else_if = {
+			limit = {
+				religion_group = zal_group
+			}
+			add_trait = sympathy_zal
 		}
 		else_if = {
 			limit = {
@@ -7042,19 +7695,6 @@ character_event = {
 			add_trait = sympathy_zoroastrianism
 		}
 		else_if = {
-			limit = {
-				religion_group = jewish_group
-			}
-			add_trait = sympathy_judaism
-		}
-		else_if = {
-			limit = {
-				religion_group = indian_group
-				NOT = { FROMFROM = { has_religion_feature = religion_syncretic_indian } }
-			}
-			add_trait = sympathy_indian
-		}
-		if = {
             limit = {
                 religion_group = african_group
             }
@@ -8100,7 +8740,7 @@ character_event = {
 		name = EVTOPTA39812
 		any_vassal = {
 			limit = {
-				religion = manichean
+				religion_group = mani_group
 				is_adult = yes
 				prisoner = no
 				war = no
@@ -8303,8 +8943,8 @@ character_event = {
 		trigger = {
 			OR = {
 				religion_group = zoroastrian_group
-				not = { religion = manichean }
-				not = { religion = mazdaki }
+				not = { religion_group = mani_group }
+				not = { religion = mazdakism }
 			}
 		}
 		set_character_flag = attending_sadah
@@ -8324,8 +8964,8 @@ character_event = {
 		name = EVTOPTB39821
 		trigger = {
 			NOT = { religion_group = zoroastrian_group }
-				not = { religion = manichean }
-				not = { religion = mazdaki }
+				not = { religion_group = mani_group }
+				not = { religion = mazdakism }
 		}
 		FROM = {
 			character_event = { id = 39822 days = 5 tooltip = DIPLOWINDOW_REJECT }

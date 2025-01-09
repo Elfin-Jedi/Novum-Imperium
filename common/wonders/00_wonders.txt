@@ -464,12 +464,12 @@ wonder_temple_pagan = {
 	picture = GFX_wonder_strip_temple
 	model = wonder_temple
 	potential = {
-		religion_group = pagan_group
+		novum_imperium_is_pagan = yes
 		is_organized_religion_trigger = yes
 	}
 	active = {
 		ROOT = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			is_organized_religion_trigger = yes
 		}
 	}
@@ -580,11 +580,11 @@ wonder_temple_pagan = {
 wonder_temple_buddhist = {
 	picture = GFX_wonder_strip_buddhist_temple
 	potential = {
-		religion = buddhist
+		religion_group = bud_group
 	}
 	active = {
 		ROOT = {
-			religion = buddhist
+			religion_group = bud_group
 		}
 	}
 	flags = {
@@ -2079,7 +2079,7 @@ wonder_university = {
 		is_nomadic = no
 		trigger_if = {
 			limit = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			is_organized_religion_trigger = yes
 		}
@@ -2087,7 +2087,7 @@ wonder_university = {
 	active = {
 		trigger_if = {
 			limit = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			ROOT = {
 				is_organized_religion_trigger = yes
@@ -2223,7 +2223,7 @@ wonder_library = {
 		is_nomadic = no
 		trigger_if = {
 			limit = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			ROOT = {
 				is_reformed_religion = yes
@@ -2233,7 +2233,7 @@ wonder_library = {
 	active = {
 		trigger_if = {
 			limit = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			ROOT = {
 				is_organized_religion_trigger = yes
@@ -2587,11 +2587,11 @@ wonder_pyramid = {
 wonder_pagan_stones = {
 	picture = GFX_wonder_strip_pagan_stones
 	potential = {
-		religion_group = pagan_group
+		novum_imperium_is_pagan = yes
 	}
 	active = {
 		ROOT = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 	}
 	flags = {
@@ -2937,7 +2937,7 @@ wonder_pagan_stones_stonehenge = {
 	}
 	active = {
 		ROOT = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 	}
 	flags = {
@@ -3479,7 +3479,7 @@ wonder_house_of_wisdom = {
 	active = {
 		trigger_if = {
 			limit = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			ROOT = {
 				is_organized_religion_trigger = yes

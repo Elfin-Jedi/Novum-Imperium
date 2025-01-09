@@ -1054,7 +1054,7 @@ province_event = {
 		name = VIETmisc.8010.b
 		trigger = {
 			owner = {
-				NOT = { religion_group = pagan_group }
+				NOT = { novum_imperium_is_pagan = yes }
 				NOT = { religion_group = indian_group }
 			}
 		}
@@ -1951,7 +1951,7 @@ character_event = {
 			culture_group = iranian
 			culture_group = arabic
 			culture_group = byzantine
-			culture_group = indo_aryan_group
+			culture_group = indoaryan
 			culture_group = dravidian_group
 			any_demesne_province = {
 				OR = {
@@ -2624,7 +2624,7 @@ character_event = {
 	trigger = {
 		#in_command = no
 		NOT = { religion_group = indian_group }
-		NOT = { culture_group = indo_aryan_group }
+		NOT = { culture_group = indoaryan }
 		NOT = { culture_group = dravidian_group }
 		capital_scope = {
 			NOR = {
@@ -4699,7 +4699,7 @@ character_event = {
 	trigger = {
 		in_command = no
 		OR = {
-			culture_group = indo_aryan_group
+			culture_group = indoaryan
 			culture_group = dravidian_group
 			culture_group = iranian
 			culture_group = serindian # exists in WtWSMS
@@ -5040,7 +5040,7 @@ character_event = {
 			has_religion_feature = religion_holy_family 
 			has_religion_feature = religion_feature_zun
 		}
-		NOT = { religion = manichean }
+		NOT = { religion_group = mani_group }
 		NOT = {
 			has_game_rule = {
 				name = VIET_events_rules
@@ -7163,7 +7163,7 @@ character_event = {
 		
 	trigger = {
 		in_command = no
-		religion_group = pagan_group
+		novum_imperium_is_pagan = yes
 		is_reformed_religion = no
 		NOT = { has_character_flag = VIET_pagan_future }
 		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
@@ -7270,12 +7270,12 @@ province_event = {
 		owner = {
 			is_nomadic = no
 			OR = {
-				religion = buddhist
+				religion_group = bud_group
 				religion = taoist
 				is_sinosphere_small_trigger = yes
 			}
 		}
-		religion = buddhist
+		religion_group = bud_group
 	}
 	
 	mean_time_to_happen = {
@@ -8422,7 +8422,7 @@ character_event = {
 	trigger = {
 		in_command = no
 		religion_group = zoroastrian_group
-		NOT = { religion = mazdaki } # Mazdakites don't for whatever reason
+		NOT = { religion = mazdakism } # Mazdakites don't for whatever reason
 		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		#NOT = { has_alternate_start_parameter = { key = culture_names value = random } }
 	}
@@ -11318,7 +11318,7 @@ character_event = {
 		in_command = no
 		NAND = {
 			OR = {
-				religion = buddhist
+				religion_group = bud_group
 				religion = jain
 			}
 			OR = {
@@ -13354,7 +13354,7 @@ character_event = {
 	
 	trigger = {
 		in_command = no
-		#NOT = { religion_group = pagan_group }
+		#NOT = { novum_imperium_is_pagan = yes }
 		capital_scope = {
 			OR = {
 				region = world_europe_west
@@ -13748,11 +13748,11 @@ character_event = {
 		#in_command = no
 		#NOT = { has_character_flag = VIET_what_do_when_grown_up }
 		OR = {
-			culture_group = indo_aryan_group
+			culture_group = indoaryan
 			culture_group = dravidian_group
 			capital_scope = {
 				OR = {
-					culture_group = indo_aryan_group
+					culture_group = indoaryan
 					culture_group = dravidian_group
 					region = world_india
 				}
@@ -16806,7 +16806,7 @@ character_event = {
 	trigger = {
 		in_command = no
 		OR = {
-			culture_group = indo_aryan_group
+			culture_group = indoaryan
 			culture_group = dravidian_group
 			capital_scope = {
 				OR = {
@@ -16921,7 +16921,7 @@ character_event = {
 	trigger = {
 		#in_command = no
 		OR = {
-			culture_group = indo_aryan_group
+			culture_group = indoaryan
 			culture_group = dravidian_group
 			capital_scope = {
 				region = world_india
@@ -17008,7 +17008,7 @@ character_event = {
 			culture_group = serindian # exists in WtWSMS
 			culture_group = arabic
 			culture_group = byzantine
-			culture_group = indo_aryan_group
+			culture_group = indoaryan
 			culture_group = dravidian_group
 			capital_scope = {
 				region = world_steppe_tarim
@@ -17144,7 +17144,7 @@ character_event = {
 			culture_group = serindian # exists in WtWSMS
 			culture_group = arabic
 			culture_group = byzantine
-			culture_group = indo_aryan_group
+			culture_group = indoaryan
 			culture_group = dravidian_group
 			capital_scope = {
 				OR = {
@@ -17424,7 +17424,7 @@ character_event = {
 		in_command = no
 		#Typical used in India and Eastern Iranian regions for food
 		NOR = {
-			culture_group = indo_aryan_group
+			culture_group = indoaryan
 			culture_group = dravidian_group
 			culture_group = iranian
 			capital_scope = {
@@ -18383,7 +18383,7 @@ character_event = {
 			culture_group = north_african
 			culture_group = arabic
 			culture_group = iranian
-			culture_group = indo_aryan_group
+			culture_group = indoaryan
 			culture_group = dravidian_group
 			culture_group = serindian # exists in WtWSMS
 			culture = turkish
@@ -18671,7 +18671,7 @@ character_event = {
 	trigger = {
 		in_command = no
 		OR = {
-			culture_group = indo_aryan_group
+			culture_group = indoaryan
 			culture_group = dravidian_group
 			culture_group = iranian
 			culture_group = serindian # exists in WtWSMS
@@ -19708,7 +19708,7 @@ character_event = {
 	trigger = {
 		in_command = no
 		OR = {
-			culture_group = indo_aryan_group
+			culture_group = indoaryan
 			culture_group = dravidian_group
 			capital_scope = {
 				region = world_india
@@ -20196,7 +20196,7 @@ character_event = {
 				is_sinosphere_large_trigger = yes
 				culture_group = arabic
 				culture_group = iranian
-				culture_group = indo_aryan_group
+				culture_group = indoaryan
 				culture_group = dravidian_group
 				culture_group = byzantine
 				culture_group = north_african
@@ -20378,7 +20378,7 @@ character_event = {
 				is_sinosphere_large_trigger = yes
 				culture_group = arabic
 				culture_group = iranian
-				culture_group = indo_aryan_group
+				culture_group = indoaryan
 				culture_group = dravidian_group
 				culture_group = byzantine
 				culture_group = north_african
@@ -25912,7 +25912,7 @@ character_event = {
 			NOR = {
 				AND = {
 					religion_group = zoroastrian_group
-					NOT = { religion = manichean }	
+					NOT = { religion_group = mani_group }	
 				}
 				religion = messalian
 				has_religion_feature = religion_holy_family 
@@ -25927,7 +25927,7 @@ character_event = {
 			NOR = {
 				AND = {
 					religion_group = zoroastrian_group
-					NOT = { religion = manichean }	
+					NOT = { religion_group = mani_group }	
 				}
 				religion = messalian
 				has_religion_feature = religion_holy_family 
@@ -25951,7 +25951,7 @@ character_event = {
 					has_religion_feature = religion_holy_family 
 					has_religion_feature = religion_feature_zun
 				}
-				NOT = { religion = manichean }
+				NOT = { religion_group = mani_group }
 			}
 			piety = -5
 			prestige = -5
@@ -25993,7 +25993,7 @@ character_event = {
 				has_religion_feature = religion_holy_family 
 				has_religion_feature = religion_feature_zun
 			}
-			NOT = { religion = manichean }
+			NOT = { religion_group = mani_group }
 		}
 		piety = 5
 	}
@@ -39152,7 +39152,7 @@ character_event = {
 		#NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		NOT = { has_alternate_start_parameter = { key = culture_names value = random } }
 		OR = {
-			culture_group = indo_aryan_group
+			culture_group = indoaryan
 			culture_group = dravidian_group
 		}
 	}
@@ -40743,7 +40743,7 @@ character_event = {
 		#NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		NOT = { has_alternate_start_parameter = { key = culture_names value = random } }
 		OR = {
-			culture_group = indo_aryan_group
+			culture_group = indoaryan
 			culture_group = dravidian_group
 			capital_scope = {
 				region = world_india

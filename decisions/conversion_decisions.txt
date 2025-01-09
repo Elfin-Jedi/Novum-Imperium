@@ -232,6 +232,166 @@ targeted_decisions = {
 			piety = 100
 			if = {
 				limit = {
+					religion_group = abrahamic_group
+					NOT = { trait = sympathy_abrahamics }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_abrahamics
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = anatolian_group
+					NOT = { trait = sympathy_anatolians }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_anatolians
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = arabpagan_group
+					NOT = { trait = sympathy_arabpagans }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_arabpagans
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = aztec_group
+					NOT = { trait = sympathy_aztecs }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_aztecs
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = baltic_group
+					NOT = { trait = sympathy_baltics }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_baltics
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = bantu_group
+					NOT = { trait = sympathy_bantus }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_bantus
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = berberpagan_group
+					NOT = { trait = sympathy_berbers }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_berbers
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = bud_group
+					NOT = { trait = sympathy_buddhists }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_buddhists
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = celtic_group
+					NOT = { trait = sympathy_celtics }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_celtics
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = chinese_group
+					NOT = { trait = sympathy_chinese }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_chinese
+				}
+			}
+			else_if = {
+				limit = {
 					religion_group = christian
 					NOT = { trait = sympathy_christendom }
 					capital_scope = {
@@ -244,6 +404,214 @@ targeted_decisions = {
 				random = {
 					chance = 60
 					add_trait = sympathy_christendom
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = east_african_group
+					NOT = { trait = sympathy_east_africans }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_east_africans
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = egyptian_group
+					NOT = { trait = sympathy_egyptian }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_egyptian
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = finnish_group
+					NOT = { trait = sympathy_finnish }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_finnish
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = graecoroman_group
+					NOT = { trait = sympathy_graecoroman }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_graecoroman
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = indian_group
+					NOT = { trait = sympathy_indian }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_indian
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = indohelen_group
+					NOT = { trait = sympathy_indohellens }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_indohellens
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = inti_group
+					NOT = { trait = sympathy_intis }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_intis
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = inuit_group
+					NOT = { trait = sympathy_inuit }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_inuit
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = jewish_group
+					NOT = { trait = sympathy_judaism }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_judaism
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = luwian_group
+					NOT = { trait = sympathy_luwians }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_luwians
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = mand_group
+					NOT = { trait = sympathy_mande }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_mande
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = mani_group
+					NOT = { trait = sympathy_manichaeans }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_manichaeans
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = mithra_group
+					NOT = { trait = sympathy_mithraics }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_mithraics
 				}
 			}
 			else_if = {
@@ -264,6 +632,38 @@ targeted_decisions = {
 			}
 			else_if = {
 				limit = {
+					religion_group = neoplato_group
+					NOT = { trait = sympathy_platonics }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_platonics
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = norsegerman_group
+					NOT = { trait = sympathy_nordic }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_nordic
+				}
+			}
+			else_if = {
+				limit = {
 					religion_group = pagan_group
 					NOT = { trait = sympathy_pagans }
 					capital_scope = {
@@ -280,6 +680,118 @@ targeted_decisions = {
 			}
 			else_if = {
 				limit = {
+					religion_group = palmyranpagan_group
+					NOT = { trait = sympathy_palmyrans }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_palmyrans
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = serer_group
+					NOT = { trait = sympathy_sererics }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_sererics
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = slavic_group
+					NOT = { trait = sympathy_slavics }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_slavics
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = sol_group
+					NOT = { trait = sympathy_sol }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_sol
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = tengri_group
+					NOT = { trait = sympathy_tengri }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_tengri
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = yazd_group
+					NOT = { trait = sympathy_yazd }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_yazd
+				}
+			}
+			else_if = {
+				limit = {
+					religion_group = zal_group
+					NOT = { trait = sympathy_zal }
+					capital_scope = {
+						NOR = {
+							religion_group = { target = ROOT target_type = true }
+							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
+						}
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_zal
+				}
+			}
+			else_if = {
+				limit = {
 					religion_group = zoroastrian_group
 					NOT = { trait = sympathy_zoroastrianism }
 					capital_scope = {
@@ -292,22 +804,6 @@ targeted_decisions = {
 				random = {
 					chance = 60
 					add_trait = sympathy_zoroastrianism
-				}
-			}
-			else_if = {
-				limit = {
-					religion_group = jewish_group
-					NOT = { trait = sympathy_judaism }
-					capital_scope = {
-						NOR = {
-							religion_group = { target = ROOT target_type = true }
-							ROOT = { emf_syncretized_true_religion_with_PREV = yes }
-						}
-					}
-				}
-				random = {
-					chance = 60
-					add_trait = sympathy_judaism
 				}
 			}
 			else_if = {
@@ -1203,7 +1699,7 @@ targeted_decisions = {
 
 	convert_to_buddhism = {
 		only_playable = yes
-		icon_religion = buddhist
+		icon_religion = bud_zen
 
 		filter = self
 		ai_target_filter = self
@@ -1212,7 +1708,7 @@ targeted_decisions = {
 		potential = {
 			is_playable = yes
 			has_dharmic_religion_trigger = yes
-			NOT = { religion = buddhist }
+			NOT = { religion_group = bud_group }
 			is_theocracy = no
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -1225,7 +1721,7 @@ targeted_decisions = {
 			prestige = 500
 			NOT = { trait = zealous }
 			any_realm_province = {
-				religion = buddhist
+				religion_group = bud_group
 			}
 			custom_tooltip = {
 				text = indian_has_not_converted
@@ -1233,7 +1729,7 @@ targeted_decisions = {
 			}
 		}
 		effect = {
-			buddhist = { save_event_target_as = target_religion }
+			bud_zen = { save_event_target_as = target_religion }
 			emf_character_set_religion_to_target_religion = yes
 			prestige = -500
 			piety = 100
@@ -1313,10 +1809,10 @@ targeted_decisions = {
 				limit = { religion = hindu }
 				character_event = { id = RoI.115 } # Choose branch
 			}
-			if = {
-				limit = { religion = buddhist }
-				character_event = { id = RoI.116 } # Choose branch
-			}
+			#if = {
+			#	limit = { religion = buddhist }
+			#	character_event = { id = RoI.116 } # Choose branch
+			#}
 			if = {
 				limit = { religion = jain }
 				character_event = { id = RoI.117 } # Confirm conversion

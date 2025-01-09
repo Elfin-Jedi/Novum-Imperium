@@ -3375,8 +3375,8 @@
 	934.5.24 = { employer = 1412361 }
 	936.1.1 = {
 		remove_trait = impaler
-		religion = buddhist
-		trait = mahayana_buddhist
+		religion = bud_zen
+		#trait = mahayana_buddhist
 	}
 	937.1.11 = { employer = 1412375 }
 	940.7.4 = {
@@ -4948,8 +4948,8 @@
 	dynasty = 1000048127 #Song
 	name = "Yanyun"
 	culture = han
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	father=1400333
 	trait=skilled_tactician
 	879.1.1 = {
@@ -34543,9 +34543,9 @@
 	dynasty = 1000048385 #Liu
 	name = "Gongquan"
 	culture = han
-	religion = buddhist
+	religion = bud_zen
 	father = 1402352
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	778.1.1 = {
 		birth = yes
 	}
@@ -49062,8 +49062,8 @@
 	dynasty = 1000048463 #Cheng
 	name = "Rui"
 	culture = han
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	trait = wroth
 	trait = midas_touched
 	trait = diligent
@@ -71746,7 +71746,7 @@
 1404922 = { #楊行基 Yang Xingqi
 	dynasty = 105837 #Hongnong Yang
 	name = "Xingqi" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 247728 #actually adopted, true parentage unknown
 	#birth and death dates unknown
@@ -71760,7 +71760,7 @@
 1404923 = { #楊柔 Yang Rou (酅國公墓誌銘) or 楊棻 Yang Fen (新唐書), Courtesy name 懷順 Huaishun (酅國公墓誌銘) or 德順 Deshun (新唐書). 
 	dynasty = 105837 #Hongnong Yang
 	name = "Rou" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404922
 	635.1.1 = {
@@ -71773,7 +71773,7 @@
 1404924 = { #楊潤 Yang Run
 	dynasty = 105837 #Hongnong Yang
 	name = "Run" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404923
 	#birth and death dates unknown. Died before taking a post, probably before his father as he is not listed with the title of Duke of Jiong 酅公
@@ -71787,7 +71787,7 @@
 1404925 = { #楊溫 Yang Wen
 	dynasty = 105837 #Hongnong Yang
 	name = "Run" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404923
 	#birth and death dates unknown. Died before taking a post, probably before his father as he is not listed with the title of Duke of Jiong 酅公
@@ -71801,7 +71801,7 @@
 1404926 = { #楊幼言 Yang Youyan
 	dynasty = 105837 #Hongnong Yang
 	name = "Youyan" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404925
 	#birth and death dates unknown
@@ -71815,7 +71815,7 @@
 1404927 = { #Unnamed father of Yang Dun
 	dynasty = 105837 #Hongnong Yang
 	name = "Dun" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404922
 	#birth and death dates unknown
@@ -71829,7 +71829,7 @@
 1404928 = { #楊敦 Yang Dun or 楊敷 Yang Ao. Married 寧親公主 around 750.
 	dynasty = 105837 #Hongnong Yang
 	name = "Dun" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404927
 	#spouse = 247987
@@ -71844,7 +71844,7 @@
 1404929 = { #楊正道 Yang Zhengdao (新唐書 and 隋書) or 楊湣 Yang Hun (北史).
 	dynasty = 105837 #Hongnong Yang
 	name = "Zhengdao" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 247755
 	mother = 1408784
@@ -71859,7 +71859,7 @@
 1404930 = { #楊崇禮 Yang Chongli
 	dynasty = 105837 #Hongnong Yang
 	name = "Chongli" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404929
 	#birth and death dates unknown
@@ -71873,7 +71873,7 @@
 1404931 = { #楊眘餘/楊慎餘 Yang Shenyu
 	dynasty = 105837 #Hongnong Yang
 	name = "Shenyu" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404930
 	#birth date unknown
@@ -71887,7 +71887,7 @@
 1404932 = { #楊眘矜/楊慎矜 Yang Shenjin
 	dynasty = 105837 #Hongnong Yang
 	name = "Shenjin" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404930
 	#birth date unknown
@@ -71901,7 +71901,7 @@
 1404933 = { #楊眘名/楊慎名 Yang Shenming. 洛陽令
 	dynasty = 105837 #Hongnong Yang
 	name = "Shenming" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404930
 	#birth date unknown
@@ -71915,7 +71915,7 @@
 1404934 = { #楊岳 Yang Yue
 	dynasty = 105837 #Hongnong Yang
 	name = "Yue" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404931
 	#birth and death dates unknown
@@ -71929,7 +71929,7 @@
 1404935 = { #楊諫 Yang Jian. 岳州刺史, probably until 747.12.7, when his father was executed and his family was said to be exiled to Lingnan.
 	dynasty = 105837 #Hongnong Yang
 	name = "Jian" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404932
 	#birth and death dates unknown
@@ -71943,7 +71943,7 @@
 1404936 = { #楊惠嘏 Yang Huijia. 太原郡守
 	dynasty = 105837 #Hongnong Yang
 	name = "Huijia" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404949
 	#birth and death dates unknown
@@ -71957,7 +71957,7 @@
 1404937 = { #楊謇 Yang Jian. 汲郡太守
 	dynasty = 105837 #Hongnong Yang
 	name = "Jian" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404936
 	#birth and death dates unknown
@@ -71971,7 +71971,7 @@
 1404938 = { #楊鍾馗 Yang Zhongkui
 	dynasty = 105837 #Hongnong Yang
 	name = "Zhongkui" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404937
 	#birth and death dates unknown
@@ -71985,7 +71985,7 @@
 1404939 = { #楊處綱 Yang Chugang. 秦州總管
 	dynasty = 105837 #Hongnong Yang
 	name = "Chugang" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404938
 	#birth and death dates unknown
@@ -71999,7 +71999,7 @@
 1404940 = { #楊處樂 Yang Chule. 隋洛州刺史
 	dynasty = 105837 #Hongnong Yang
 	name = "Chule" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404938
 	#birth and death dates unknown
@@ -72013,7 +72013,7 @@
 1404941 = { #楊元景 Yang Yuanjing
 	dynasty = 105837 #Hongnong Yang
 	name = "Yuanjing" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404939
 	#birth and death dates unknown
@@ -72027,7 +72027,7 @@
 1404942 = { #楊元珙 Yang Yuangong
 	dynasty = 105837 #Hongnong Yang
 	name = "Yuangong" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404939
 	#birth and death dates unknown
@@ -72041,7 +72041,7 @@
 1404943 = { #楊元約 Yang Yuanyue
 	dynasty = 105837 #Hongnong Yang
 	name = "Yuanyue" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404939
 	#birth and death dates unknown
@@ -72055,7 +72055,7 @@
 1404944 = { #楊君操 Yang Juncao. 陳州刺史
 	dynasty = 105837 #Hongnong Yang
 	name = "Juncao" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404941
 	#birth and death dates unknown
@@ -72069,7 +72069,7 @@
 1404945 = { #楊諲 Yang Yin
 	dynasty = 105837 #Hongnong Yang
 	name = "Yin" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404941
 	#birth and death dates unknown
@@ -72083,7 +72083,7 @@
 1404946 = { #楊孚 Yang Fu
 	dynasty = 105837 #Hongnong Yang
 	name = "Fu" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404945
 	#birth and death dates unknown
@@ -72097,7 +72097,7 @@
 1404947 = { #楊黃裳 Yang Huangchang
 	dynasty = 105837 #Hongnong Yang
 	name = "Huangchang" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404946
 	#birth and death dates unknown
@@ -72111,7 +72111,7 @@
 1404948 = { #楊申 Yang Shen
 	dynasty = 105837 #Hongnong Yang
 	name = "Shen" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404947
 	#birth and death dates unknown
@@ -72125,7 +72125,7 @@
 1404949 = { #楊元壽 Yang Yuanshou
 	dynasty = 105837 #Hongnong Yang
 	name = "Yuanshou" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1405234
 	#birth and death dates unknown
@@ -72139,7 +72139,7 @@
 1404950 = { #劉仁規 Liu Rengui. 懷州刺史 until 867.8.8.
 	dynasty = 1000048822 #Liu
 	name = "Rengui" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	#birth and death dates unknown
 	825.1.1 = {
@@ -72180,7 +72180,7 @@
 1404953 = { #楊忞 Yang Min. 嘉州刺史 until 870.2.3.
 	dynasty = 1000048807 #Yang
 	name = "Min" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	#birth and death dates unknown
 	825.1.1 = {
@@ -76381,7 +76381,7 @@
 1405246 = { #楊懷讓 Yang Huairang
 	dynasty = 105837 #Hongnong Yang
 	name = "Huairang" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404922
 	#birth and death dates unknown
@@ -76395,7 +76395,7 @@
 1405247 = { #unnamed daughter of Yang Xingqi. Married 趙巨源. 唐朝散大夫登州司馬趙巨源墓誌銘
 	dynasty = 105837 #Hongnong Yang
 	name = " " 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1404922
 	female = yes
@@ -76663,7 +76663,7 @@
 1405266 = { #楊長 Yang Zhang
 	dynasty = 105837 #Hongnong Yang
 	name = "Zhang" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 247793
 	#birth and death dates unknown
@@ -76677,7 +76677,7 @@
 1405267 = { #楊珉 Yang Min
 	dynasty = 105837 #Hongnong Yang
 	name = "Min" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1405266
 	#birth and death dates unknown
@@ -76691,7 +76691,7 @@
 1405268 = { #楊舍娘 Yang Sheniang
 	dynasty = 105837 #Hongnong Yang
 	name = "Sheniang" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1405266
 	female = yes
@@ -76786,7 +76786,7 @@
 1405276 = { #楊豫之 Yang Yuzhi
 	dynasty = 105837 #Hongnong Yang
 	name = "Yuzhi" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 247798
 	#birth and death dates unknown
@@ -81727,11 +81727,11 @@
 1405623 = { #楊靜徽 Yang Jinghui. 豐寧公主 Princess Fengning. Married 韋圓照.
 	dynasty = 105837 # Hongnong Yang
 	name = "Jinghui" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 247745
 	#mother = 高良娣
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = child_of_consort
 	female = yes
 	#birth and death dates unknown
@@ -99136,7 +99136,7 @@
 1406783 = { #Unnamed father of Cui Lianshi
 	dynasty = 1000048914 #Jiangling Cui
 	name = "Weijin" #ficitious
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406782
 	#birth and death dates unknown
@@ -99152,13 +99152,13 @@
 1406784 = { #崔練師 Cui Lianshi. In 十國春秋 she is said to be of Boling clan, but a commentary states that she also could be a (缺)女 of Cui Daorong, possibly intending for it to be a granddaughter. (十國春秋/卷94)
 	dynasty = 1000048914 #Jiangling Cui
 	name = "Lianshi"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406783
 	trait = lustful
 	trait = hedonist
 	trait = envious
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	female = yes
 	#birth date unknown
 	894.1.1 = {
@@ -99685,12 +99685,12 @@
 1406821 = { #陳霸先 Chen Baxian. Made 高要太守 around 547. (陳書/卷1) In 550.2.2 made 交州刺史. (陳書/卷1) In 550.6.30 made 南江州刺史. (陳書/卷1) In 551.3.23 made 江州刺史. (陳書/卷1) In 551.12.24 made 會稽, 東陽, 新安, 臨海, 永嘉, 五郡諸軍事, 東揚州刺史 and 會稽太守. (陳書/卷1) In 552.8.6 made 南徐州刺史. (陳書/卷1) In 555.11.4 made 揚南徐二州刺史 (陳書/卷1) 
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Baxian"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406819
 	trait = brilliant_strategist
 	trait = ambitious
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	503.1.1 = {
 		birth = yes
 	}
@@ -99709,10 +99709,10 @@
 1406822 = { #陳休先 Chen Xiuxian
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Xiuxian"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406819
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth date unknown
 	507.1.1 = {
 		birth = yes
@@ -99724,10 +99724,10 @@
 1406823 = { #陳曇朗 Chen Yunlang
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yunlang"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406822
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	529.1.1 = {
 		birth = yes
 	}
@@ -99738,10 +99738,10 @@
 1406824 = { #陳方泰 Chen Fangtai. In 572 made 廣州刺史. In 574 made 豫章內史. During Sui made 掖縣縣令.
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Fangtai"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406823
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	547.1.1 = {
 		birth = yes
@@ -99753,7 +99753,7 @@
 1406825 = { #陳方慶 Chen Fangqing. In 577 made 定州刺史. In 584 made 武州刺史 and soon after 廣州刺史.
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Fangqing"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406823
 	#birth date unknown
@@ -99767,10 +99767,10 @@
 1406826 = { #陳方華 Chen Fanghua or 陳方嘉 Chen Fangjia (唐故中散大夫使持節台州諸軍事守台州刺史上柱國賜紫金魚袋潁川陳公墓誌並序)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Fanghua"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406823
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	552.1.1 = {
 		birth = yes
@@ -99782,10 +99782,10 @@
 1406827 = { #陳方曠 Chen Fangkuang
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Fangkuang"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406823
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	555.1.1 = {
 		birth = yes
@@ -99797,10 +99797,10 @@
 1406828 = { #Unnamed son
 	dynasty = 1000048916 #Yingchuan Chen
 	name = " "
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406826
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	605.1.1 = {
 		birth = yes
@@ -99812,10 +99812,10 @@
 1406829 = { #陳繇 Chen You
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "You"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406828
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	662.1.1 = {
 		birth = yes
@@ -99827,10 +99827,10 @@
 1406830 = { #陳皆 Chen Jie. In 798 made 台州. (唐故中散大夫使持節台州諸軍事守台州刺史上柱國賜紫金魚袋潁川陳公墓誌並序)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Jie"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406829
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	730.1.1 = {
 		birth = yes
 	}
@@ -99841,10 +99841,10 @@
 1406831 = { #陳元造 Chen Yuanzuo
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yuanzuo"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406830
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	757.1.1 = {
 		birth = yes
@@ -99856,10 +99856,10 @@
 1406832 = { #陳孟武 Chen Mengwu
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Mengwu"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406830
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	762.1.1 = {
 		birth = yes
@@ -99871,10 +99871,10 @@
 1406833 = { #陳師曾 Chen Shiceng
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shiceng"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406830
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	767.1.1 = {
 		birth = yes
@@ -99886,10 +99886,10 @@
 1406834 = { #陳宗魯 Chen Zonglu
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Zonglu"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406830
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	772.1.1 = {
 		birth = yes
@@ -99901,8 +99901,8 @@
 1406835 = { #陳昌卿 Chen Changqing. (唐故潁川陳氏季女墓誌銘)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Changqing"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406828
 	#birth and death dates unknown
@@ -99916,8 +99916,8 @@
 1406836 = { #陳從愻 Chen Congxun. (唐故潁川陳氏季女墓誌銘)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Congxun"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406835
 	#birth and death dates unknown
@@ -99931,8 +99931,8 @@
 1406837 = { #陳臯 Chen Gao. (唐故潁川陳氏季女墓誌銘)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Gao"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406835
 	#birth and death dates unknown
@@ -99946,8 +99946,8 @@
 1406838 = { #陳氏 Lady Chen. Married 徐元一. (唐故潁川陳氏季女墓誌銘)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = " "
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406836
 	#birth and death dates unknown
@@ -99962,8 +99962,8 @@
 1406839 = { #陳氏 Lady Chen. (唐故潁川陳氏季女墓誌銘)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = " "
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406836
 	female = yes
@@ -99977,8 +99977,8 @@
 1406840 = { #陳經 Chen Jing. (唐故潁川陳氏季女墓誌銘)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Jing"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406836
 	#birth and death dates unknown
@@ -99992,8 +99992,8 @@
 1406841 = { #Unnamed son
 	dynasty = 1000048916 #Yingchuan Chen
 	name = " "
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406824
 	#birth and death dates unknown
@@ -100007,8 +100007,8 @@
 1406842 = { #Unnamed grandson
 	dynasty = 1000048916 #Yingchuan Chen
 	name = " "
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406841
 	#birth and death dates unknown
@@ -100022,8 +100022,8 @@
 1406843 = { #陳承德 Chen Chengde
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Chengde"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406842
 	#birth and death dates unknown
@@ -100037,8 +100037,8 @@
 1406844 = { #陳齊卿 Chen Qiqing
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Qiqing"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406843
 	#birth and death dates unknown
@@ -100052,8 +100052,8 @@
 1406845 = { #陳位 Chen Yi
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yi"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406844
 	#birth and death dates unknown
@@ -100067,8 +100067,8 @@
 1406846 = { #陳周子 Chen Zhouzi
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Zhouzi"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406844
 	724.1.1 = {
@@ -100081,8 +100081,8 @@
 1406847 = { #陳汭 Chen Rui
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Rui"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406845
 	758.1.1 = {
@@ -100095,8 +100095,8 @@
 1406848 = { #陳昱 Chen Yu
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yu"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406847
 	#birth and death dates unknown
@@ -100110,8 +100110,8 @@
 1406849 = { #陳弇 Chen Yan
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yan"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406847
 	#birth and death dates unknown
@@ -100125,8 +100125,8 @@
 1406850 = { #陳行脩 Chen Xingxiu
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Xingxiu"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406847
 	#birth and death dates unknown
@@ -100140,8 +100140,8 @@
 1406851 = { #陳允叔 Cheng Yunshu
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yunshu"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1407031
 	#birth and death dates unknown
@@ -100155,8 +100155,8 @@
 1406852 = { #陳允眾 Cheng Yunzhong
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yunzhong"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1407031
 	#birth and death dates unknown
@@ -100170,8 +100170,8 @@
 1406853 = { #陳克 Chen Ke
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Ke"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406821
 	#birth and death dates unknown
@@ -100185,8 +100185,8 @@
 1406854 = { #陳立 Chen Li
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Li"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406821
 	#birth and death dates unknown
@@ -100200,8 +100200,8 @@
 1406855 = { #陳權 Chen Quan
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Quan"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406821
 	#birth and death dates unknown
@@ -100215,8 +100215,8 @@
 1406856 = { #陳昌 Chen Chang
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Chang"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406821
 	537.1.1 = {
@@ -100229,8 +100229,8 @@
 1406857 = { #永世公主 Pricness Yongshi. Married 錢蕆 and gave birth to 錢岊.
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yongshi"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406821
 	#birth and death dates unknown
@@ -100244,8 +100244,8 @@
 1406858 = { #會稽穆公主 Pricness Mo of Huiji. Married 沈君理 and gave birth to 沈婺華.
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Mo"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406821
 	#birth and death dates unknown
@@ -100259,10 +100259,10 @@
 1406859 = { #陳蒨/茜 Chen Qian or 陳曇蒨 Chen Yunqian
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Qian"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406820
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = kind
 	trait = humble
 	trait = homosexual
@@ -100277,10 +100277,10 @@
 1406860 = { #陳頊 Chen Xu or 陳曇頊 Chen Yunxiang
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Xu"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406820
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = diligent
 	530.8.14 = {
 		birth = yes
@@ -100293,10 +100293,10 @@
 1406861 = { #信義公主 Princess Xinyi. Married 到郁 and gave birth to 到仲舉.
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Xinyi"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406820
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	532.1.1 = {
 		birth = yes
@@ -100308,10 +100308,10 @@
 1406862 = { #陳伯宗 Chen Bozong
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Bozong"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406859
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	549.1.1 = {
 		birth = yes
 	}
@@ -100322,10 +100322,10 @@
 1406863 = { #陳至澤 Chen Zhize
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Zhize"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406862
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#death date unknown
 	566.5.13 = {
 		birth = yes
@@ -100337,10 +100337,10 @@
 1406864 = { #陳伯茂 Chen Bomao. In 559.9.17 made 彭城郡太守. In 561.2.1 made 揚州刺史. In 562.7.17 made 東揚州刺史.
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Bomao"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406859
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	550.1.1 = {
 		birth = yes
 	}
@@ -100351,10 +100351,10 @@
 1406865 = { #陳伯山 Chen Boshan. In 560.11.4 made 吳郡太守. In 565 moved to 南徐州刺史. In 567 made 東揚州刺史. In 569 returned to court. In 574 made 南徐州刺史, soon after 江州刺史. In 579 returned to court. In 586 made 東揚州刺史. In 587 retired.
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Boshan"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406859
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	550.1.1 = {
 		birth = yes
 	}
@@ -100365,10 +100365,10 @@
 1406866 = { #陳君範 Chen Junfan. 隋溫令 at some point. (新唐書/卷071下)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Junfan"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406865
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	571.1.1 = {
 		birth = yes
@@ -100380,10 +100380,10 @@
 1406867 = { #陳君通 Chen Juntong. 淄州刺史 at some point. (新唐書/卷071下)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Juntong"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406865
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	574.1.1 = {
 		birth = yes
@@ -100395,10 +100395,10 @@
 1406868 = { #陳矩 Chen Ju. 穆州刺史 at some point (no such prefecture during Tang?!). (新唐書/卷071下)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Ju"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406867
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	601.1.1 = {
 		birth = yes
@@ -100410,10 +100410,10 @@
 1406869 = { #陳君賓 Chen Junbin. 襄國太守 until 618.9.15, on that day made 邢州刺史. (資治通鑑/卷186) In 619.2.8 captured by 竇建德 and prefecture taken. (資治通鑑/卷187) In 621.8.10 made 洺州刺史. (資治通鑑/卷189) In 622.2.8 returned to court. (資治通鑑/卷189) In 627 made 鄧州刺史. (舊唐書/卷185上) In 628 moved to court. After 635 made 虔州刺史. (舊唐書/卷185上)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Junbin"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406865
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	576.1.1 = {
 		birth = yes
@@ -100425,10 +100425,10 @@
 1406870 = { #陳伯固 Chen Bogu. After 569 made 吳興郡太守. In 572 returned to court. In 575 made 南徐州刺史. In 578 returned to court. In 581 made 揚州刺史.
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Bogu"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406859
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	555.1.1 = {
 		birth = yes
 	}
@@ -100439,10 +100439,10 @@
 1406871 = { #陳願 Chen Yuan. 萬州刺史 at some point. (新唐書/卷071下)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yuan"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406870
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	579.1.1 = {
 		birth = yes
@@ -100454,10 +100454,10 @@
 1406872 = { #陳伯恭 Chen Bogong. In 565 made 吳郡太守. 吳郡太守 until 569.8.7, on that day returned to court. (陳書/卷5) Soon after made 揚州刺史. In 572 returned to court. In 574.2.7 made 南豫州刺史. (陳書/卷5) In 577 returned to court. In 605 made 成州刺史.
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Bogong"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406859
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	556.1.1 = {
 		birth = yes
@@ -100469,10 +100469,10 @@
 1406873 = { #陳蕃 Chen Fan. 隋資陽令 at some point, (新唐書/卷071下)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Fan"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406877
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	581.1.1 = {
 		birth = yes
@@ -100484,10 +100484,10 @@
 1406874 = { #陳挺 Chen Ting. 綏州刺史 at some point, (新唐書/卷071下)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Ting"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406873
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	601.1.1 = {
 		birth = yes
@@ -100499,10 +100499,10 @@
 1406875 = { #陳岌 Chen Ji
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Ji"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406873
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	604.1.1 = {
 		birth = yes
@@ -100514,10 +100514,10 @@
 1406876 = { #陳伯信 Chen Boxin. In 574 made 揚州刺史. In 579 returned to court. In 587 made 西衡州刺史.
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Boxin"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406859
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth date unknown
 	558.1.1 = {
 		birth = yes
@@ -100529,10 +100529,10 @@
 1406877 = { #陳伯仁 Chen Boren. In 578.1.24 made 南徐州刺史. (陳書/卷5) In 580 back to court. 
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Boren"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406859
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	559.1.1 = {
 		birth = yes
@@ -100544,10 +100544,10 @@
 1406878 = { #陳伯義 Chen Boyi. After 569 made 東揚州刺史, but that's probably an error as Shuying is said to become a cishi in tha year. (陳書/卷28) In 577.8.3 made 合州刺史. (陳書/卷5) In 578.11.13 made 東揚州刺史. (陳書/卷5)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Boyi"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406859
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth date unknown
 	560.1.1 = {
 		birth = yes
@@ -100559,10 +100559,10 @@
 1406879 = { #陳元基 Chen Yuanji. During Daye era （605-618） made 穀熟縣令. (陳書/卷28)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yuanji"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406878
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	582.1.1 = {
 		birth = yes
@@ -100574,10 +100574,10 @@
 1406880 = { #陳察 Chen Cha. Married a daughter of 梁州西縣令柳淮卿 (594-678(. 武都郡曲水縣令 during Sui. In 618 made 陰平郡太守. Later made 文州刺史. （陳察墓誌）
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Cha"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406878
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth date unknown
 	583.1.1 = {
 		birth = yes
@@ -100589,10 +100589,10 @@
 1406881 = { #陳昭烈 Chen Zhaolie. 唐并州文州令 (probably an error for 文水) at some point. (陳頤墓誌)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Zhaolie"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406880
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and deaeth dates unknown
 	608.1.1 = {
 		birth = yes
@@ -100604,10 +100604,10 @@
 1406882 = { #陳頤 Chen Yi. (陳頤墓誌)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yi"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406881
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	656.1.1 = {
 		birth = yes
 	}
@@ -100618,10 +100618,10 @@
 1406883 = { #陳憲 Chen Xian. 忠州刺史 at some point. （新唐書/卷071下）
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Xian"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406878
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	585.1.1 = {
 		birth = yes
@@ -100633,10 +100633,10 @@
 1406884 = { #陳伯禮 Chen Boli. In 569 made 吳興太守. (陳書/卷28) In 577 returned to court. (陳書/卷28) During Daye era （605-618） made 臨洮太守. (陳書/卷28)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Boli"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406859
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	561.1.1 = {
 		birth = yes
@@ -100648,10 +100648,10 @@
 1406885 = { #陳伯智 Chen Bozhi
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Bozhi"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406859
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	563.1.1 = {
 		birth = yes
@@ -100663,10 +100663,10 @@
 1406886 = { #陳伯謀 Chen Bomou. In 578 made 吳興太守. (陳書/卷28) In 579 made 丹楊尹. (陳書/卷28) In 606 made 龍州刺史. (陳琮墓誌)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Bomou"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406859
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	564.1.1 = {
 		birth = yes
@@ -100678,10 +100678,10 @@
 1406887 = { #陳酆/陳豐 Chen Feng. 隋番和令/番禾令 at some point. (新唐書/卷071下)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Feng"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406886
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	597.1.1 = {
 		birth = yes
@@ -100693,10 +100693,10 @@
 1406888 = { #陳璿 Chen Xuan. 渠州刺史 at some point. (新唐書/卷071下)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Xuan"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406887
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	614.1.1 = {
 		birth = yes
@@ -100708,10 +100708,10 @@
 1406889 = { #陳璿 Chen Zan. 黔州刺史 in 691. (新唐書/卷071下 and 陳崇本墓誌)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Zan"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406887
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	621.1.1 = {
 		birth = yes
@@ -100723,10 +100723,10 @@
 1406890 = { #陳崇本 Chen Chongben. (陳崇本墓誌)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Chongben"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406889
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	658.1.1 = {
 		birth = yes
 	}
@@ -100737,10 +100737,10 @@
 1406891 = { #陳琮 Chen Cong
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Cong"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406887
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	623.1.1 = {
 		birth = yes
@@ -100752,10 +100752,10 @@
 1406892 = { #陳法會 Chen Fahui. 梁州刺史 at some point. (新唐書/卷071下)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Fahui"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406876
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	576.1.1 = {
 		birth = yes
@@ -100767,10 +100767,10 @@
 1406893 = { #豐安公主 Princess Feng'an. In 557 married 留貞臣.
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Feng'an"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406859
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	female = yes
 	#birth and death dates unknown
 	541.1.1 = {
@@ -100783,10 +100783,10 @@
 1406894 = { #陳叔寶 Chen Shubao
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shubao"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = hedonist
 	553.12.21 = {
 		birth = yes
@@ -100798,10 +100798,10 @@
 1406895 = { #陳叔陵 Chen Shuling. In 568 made 江州刺史. (陳書/卷36) In 572.2.2 made 湘州刺史. (陳書/卷5) In 577.3.3 made 揚州刺史. (陳書/卷5) In 579 retired. (陳書/卷36)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuling"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	554.1.1 = {
 		birth = yes
 	}
@@ -100812,10 +100812,10 @@
 1406896 = { #陳叔英 Chen Shuying. In 569.2.13 made 東揚州刺史. (陳書/卷5) In 573.2.23 made 南徐州刺史. (陳書/卷5) In 579.7.29 made 江州刺史. (陳書/卷5) In 583.1.31 returned to court. (陳書/卷6) During Daye era （605-618） made 涪陵太守. (陳書/卷28)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuying"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	555.1.1 = {
 		birth = yes
@@ -100827,10 +100827,10 @@
 1406897 = { #陳叔堅 Chen Shujian or 陳叔賢 Chen Shuxian. In 569 made 吳郡太守. (陳書/卷28) In 572.2.2 made 江州刺史. (陳書/卷5) 江州刺史 until 575.11.25, on that day made 郢州刺史. (陳書/卷5) 郢州刺史 until 576.1.22, on that day made 廣州刺史. (陳書/卷5) 廣州刺史 until 576.7.17, on that day made 合州刺史. (陳書/卷5) 合州刺史 until 576.12.16, on that day made 郢州刺史. (陳書/卷5) In 579 made 丹陽尹. (陳書/卷28) 丹陽尹 until 582.2.26, on that day made 揚州刺史. (陳書/卷6) 揚州刺史 until 583.1.31, on that day made 江州刺史. (陳書/卷6) In 585 made 荊州刺史, next year back at court. (陳書/卷28) During Daye era （605-618） made 遂寧郡太守. (陳書/卷28)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shujian"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	558.1.1 = {
 		birth = yes
@@ -100845,10 +100845,10 @@
 1406898 = { #陳叔卿 Chen Shuqing. In 572.3.12 made 東揚州刺史. (陳書/卷5) 東揚州刺史 until 576.1.22, on that day made 郢州刺史. (陳書/卷5) In 576.11.3 made 湘州刺史. (陳書/卷5)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuqing"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	560.1.1 = {
 		birth = yes
@@ -100860,10 +100860,10 @@
 1406899 = { #陳叔明 Chen Shuming. Married a daughter of 到鬱. In 576.1.22 made 東揚州刺史. (陳書/卷5) In 581.1.29 made 南徐州刺史. (陳書/卷5) 
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuming"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	562.1.1 = {
 		birth = yes
 	}
@@ -100874,10 +100874,10 @@
 1406900 = { #陳叔獻 Chen Shuxian. In 580.5.9 made 南徐州刺史. (陳書/卷5)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuxian"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	564.1.1 = {
 		birth = yes
 	}
@@ -100888,10 +100888,10 @@
 1406901 = { #陳叔齊 Chen Shuqi. After 575 made 東揚州刺史. (陳書/卷28)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuqi"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	569.1.1 = {
 		birth = yes
 	}
@@ -100902,10 +100902,10 @@
 1406902 = { #陳叔文 Chen Shuwen. In 582.3.1 made 丹陽尹. (陳書/卷6) 丹陽尹 until 583.1.31, on that day made 揚州刺史. (陳書/卷6) 揚州刺史 until 583.5.18, on that day made 江州刺史. (陳書/卷6) 江州刺史 until 584.7.10, on that day made 湘州刺史. (陳書/卷6) In 589.3.22 made 宜州刺史. (陳書/卷28)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuwen"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	570.1.1 = {
 		birth = yes
@@ -100917,10 +100917,10 @@
 1406903 = { #陳叔彪 Chen Shubiao
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shubiao"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	571.1.1 = {
 		birth = yes
@@ -100932,10 +100932,10 @@
 1406904 = { #陳叔重 Chen Shuchong. In 583.3.7 made 揚州刺史. (陳書/卷6) 揚州刺史 until 584.7.10, on that day made 江州刺史. (陳書/卷6)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuchong"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	572.1.1 = {
 		birth = yes
@@ -100947,10 +100947,10 @@
 1406905 = { #陳叔儼 Chen Shuyan
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuyan"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#death date unknown
 	572.1.1 = {
 		birth = yes
@@ -100962,10 +100962,10 @@
 1406906 = { #陳叔慎 Chen Shushen. In 586.11.7 made 丹陽尹. (陳書/卷6) 丹陽尹 until 587.2.13, on that day made 湘州刺史. (陳書/卷6)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shushen"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	572.1.1 = {
 		birth = yes
 	}
@@ -100976,10 +100976,10 @@
 1406907 = { #陳叔達 Chen Shuda. Married 王女節. In 587.2.13 made 丹陽尹. (陳書/卷6)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuda"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	572.1.1 = {
 		birth = yes
 	}
@@ -100990,10 +100990,10 @@
 1406908 = { #陳叔雄 Chen Shuxiong. In 587.2.13 made 丹陽尹. (陳書/卷6)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuxiong"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	572.1.1 = {
 		birth = yes
 	}
@@ -101004,10 +101004,10 @@
 1406909 = { #陳叔虞 Chen Shuyu. During Daye era （605-618） made 高苑令. (陳書/卷28)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuyu"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#death date unknown
 	572.1.1 = {
 		birth = yes
@@ -101019,10 +101019,10 @@
 1406910 = { #陳叔平 Chen Shuping. During Daye era （605-618） made 胡蘇令. (陳書/卷28)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuping"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#death date unknown
 	572.1.1 = {
 		birth = yes
@@ -101034,10 +101034,10 @@
 1406911 = { #陳叔敖 Chen Shu'ao
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shu'ao"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#death date unknown
 	572.1.1 = {
 		birth = yes
@@ -101049,10 +101049,10 @@
 1406912 = { #陳叔宣 Chen Shuxuan. During Daye era （605-618） made 涇城令. (陳書/卷28)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuxuan"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	573.1.1 = {
 		birth = yes
@@ -101064,10 +101064,10 @@
 1406913 = { #陳叔穆 Chen Shumu
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shumu"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	573.1.1 = {
 		birth = yes
@@ -101079,10 +101079,10 @@
 1406914 = { #陳叔儉 Chen Shujian
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shujian"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	573.1.1 = {
 		birth = yes
@@ -101094,10 +101094,10 @@
 1406915 = { #陳叔澄 Chen Shucheng. During Daye era （605-618） made 靈武令. (陳書/卷28)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shucheng"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	573.1.1 = {
 		birth = yes
@@ -101109,10 +101109,10 @@
 1406916 = { #陳叔興 Chen Shuxing
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuxing"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	573.1.1 = {
 		birth = yes
 	}
@@ -101123,10 +101123,10 @@
 1406917 = { #陳叔韶 Chen Shushao
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shushao"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	574.1.1 = {
 		birth = yes
@@ -101138,10 +101138,10 @@
 1406918 = { #陳叔純 Chen Shuchun. During Daye era （605-618） made 河北令. (陳書/卷28)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuchun"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	575.1.1 = {
 		birth = yes
@@ -101153,10 +101153,10 @@
 1406919 = { #陳叔謨 Chen Shumo. During Daye era （605-618） made 岍陽令. (陳書/卷28)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shumo"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	576.1.1 = {
 		birth = yes
@@ -101168,10 +101168,10 @@
 1406920 = { #陳叔顯 Chen Shuxian. During Daye era （605-618） made 鶉觚令. (陳書/卷28)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuxian"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	577.1.1 = {
 		birth = yes
@@ -101183,10 +101183,10 @@
 1406921 = { #陳叔坦 Chen Shutan. During Daye era （605-618） made 涉令. (陳書/卷28)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shutan"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	577.1.1 = {
 		birth = yes
@@ -101198,10 +101198,10 @@
 1406922 = { #陳叔隆 Chen Shulong
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shulong"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	577.1.1 = {
 		birth = yes
@@ -101213,10 +101213,10 @@
 1406923 = { #陳叔榮 Chen Shurong. In 606 made 內黃令. (陳叔榮墓誌)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shurong"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	577.1.1 = {
 		birth = yes
 	}
@@ -101227,10 +101227,10 @@
 1406924 = { #陳叔匡 Chen Shukuang. During Daye era （605-618） made 壽光令. (陳書/卷28)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shukuang"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	578.1.1 = {
 		birth = yes
@@ -101242,10 +101242,10 @@
 1406925 = { #陳叔叡 Chen Shurui
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shurui"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	579.1.1 = {
 		birth = yes
@@ -101257,10 +101257,10 @@
 1406926 = { #陳叔忠 Chen Shuzhong
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuzhong"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	579.1.1 = {
 		birth = yes
@@ -101272,10 +101272,10 @@
 1406927 = { #陳叔弘 Chen Shuhong
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuhong"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	580.1.1 = {
 		birth = yes
@@ -101287,10 +101287,10 @@
 1406928 = { #陳叔毅 Chen Shuyi
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuyi"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	580.1.1 = {
 		birth = yes
@@ -101302,10 +101302,10 @@
 1406929 = { #陳叔訓 Chen Shuxun
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuxun"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	581.1.1 = {
 		birth = yes
@@ -101317,10 +101317,10 @@
 1406930 = { #陳叔武 Chen Shuwu. 沂州刺史 at some point. (大唐故鄂州永興縣令陳府君(玄度)蔣夫人墓志銘)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuwu"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	581.1.1 = {
 		birth = yes
@@ -101332,10 +101332,10 @@
 1406931 = { #陳叔處 Chen Shuchu
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shuchu"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	582.1.1 = {
 		birth = yes
@@ -101347,10 +101347,10 @@
 1406932 = { #陳叔封 Chen Shufeng
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shufeng"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	583.1.1 = {
 		birth = yes
@@ -101362,10 +101362,10 @@
 1406933 = { #陳淨玲 Chen Jingling, 齊熙公主 Princess Qixi. Married 沈叔安.
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Jingling"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	female = yes
 	574.1.1 = {
 		birth = yes
@@ -101377,10 +101377,10 @@
 1406934 = { #寧遠公主 Princess Ningyuan
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Ningyuan"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = fair
 	female = yes
 	577.1.1 = {
@@ -101393,10 +101393,10 @@
 1406935 = { #臨川長公主 Princess Linchuan
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Linchuan"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	female = yes
 	#birth and death dates unknown
 	580.1.1 = {
@@ -101409,10 +101409,10 @@
 1406936 = { #武成公主 Princess Wucheng
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Wucheng"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	female = yes
 	#birth and death dates unknown
 	588.1.1 = {
@@ -101425,10 +101425,10 @@
 1406937 = { #陳氏 Lady Chen. After fall of Chen made a consort of 賀若弼.
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Wucheng"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	female = yes
 	#birth and death dates unknown
 	581.1.1 = {
@@ -101441,10 +101441,10 @@
 1406938 = { #樂昌公主 Lady Lechang. Married 徐德言.
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Lechang"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	female = yes
 	#birth and death dates unknown
 	571.1.1 = {
@@ -101457,10 +101457,10 @@
 1406939 = { #陳弘 Chen Hong
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Hong"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406896
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	581.1.1 = {
 		birth = yes
@@ -101472,10 +101472,10 @@
 1406940 = { #unnamed son
 	dynasty = 1000048916 #Yingchuan Chen
 	name = " "
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406939
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	611.1.1 = {
 		birth = yes
@@ -101487,10 +101487,10 @@
 1406941 = { #unnamed grandson
 	dynasty = 1000048916 #Yingchuan Chen
 	name = " "
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406940
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	647.1.1 = {
 		birth = yes
@@ -101502,10 +101502,10 @@
 1406942 = { #陳履華 Chen Fuhua. 夏州刺史 at stome point after 721. (新唐書/卷071下)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Fuhua"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406941
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	670.1.1 = {
 		birth = yes
@@ -101517,10 +101517,10 @@
 1406943 = { #陳徽 Chen Hui
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Hui"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406896
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	584.1.1 = {
 		birth = yes
@@ -101532,10 +101532,10 @@
 1406944 = { #陳元凱 Chen Yuankai. 申州刺史 at stome point between 666 and 685. (新唐書/卷071下)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yuankai"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406943
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	623.1.1 = {
 		birth = yes
@@ -101547,10 +101547,10 @@
 1406945 = { #陳志本 Chen Zhiben. (陳敬玄墓誌)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Zhiben"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406860
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	594.1.1 = {
 		birth = yes
@@ -101562,10 +101562,10 @@
 1406946 = { #陳敬玄 Chen Jingxuan. 康嘉縣令 at some point. (陳敬玄墓誌)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Jingxuan"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406945
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	669.1.1 = {
 		birth = yes
 	}
@@ -101576,10 +101576,10 @@
 1406947 = { #陳遺玉 Chen Yiyu
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yiyu"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406945 #unknown but possible
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	641.1.1 = {
 		birth = yes
@@ -101591,10 +101591,10 @@
 1406948 = { #Unnamed son
 	dynasty = 1000048916 #Yingchuan Chen
 	name = " "
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406899
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	597.1.1 = {
 		birth = yes
@@ -101606,10 +101606,10 @@
 1406949 = { #陳繹 Chen Yi
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yi"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406948
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	631.1.1 = {
 		birth = yes
@@ -101621,10 +101621,10 @@
 1406950 = { #陳宏 Chen Hong. 邢州刺史 at some point. (新唐書/卷071下)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Hong"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406948
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	647.1.1 = {
 		birth = yes
@@ -101636,10 +101636,10 @@
 1406951 = { #Unnamed son
 	dynasty = 1000048916 #Yingchuan Chen
 	name = " "
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406899
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	602.1.1 = {
 		birth = yes
@@ -101651,10 +101651,10 @@
 1406952 = { #Unnamed grandson
 	dynasty = 1000048916 #Yingchuan Chen
 	name = " "
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406951
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	632.1.1 = {
 		birth = yes
@@ -101666,10 +101666,10 @@
 1406953 = { #陳兼 Chen Jian
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Jian"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406952
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	664.1.1 = {
 		birth = yes
@@ -101681,10 +101681,10 @@
 1406954 = { #陳當 Chen Dang
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Dang"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406953
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	687.1.1 = {
 		birth = yes
@@ -101696,10 +101696,10 @@
 1406955 = { #陳萇 Chen Chang
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Chang"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406953
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	691.1.1 = {
 		birth = yes
@@ -101711,10 +101711,10 @@
 1406956 = { #陳京 Chen Jing
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Jing"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406953
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	694.1.1 = {
 		birth = yes
@@ -101726,10 +101726,10 @@
 1406957 = { #陳歸 Chen Gui
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Gui"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406953
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	697.1.1 = {
 		birth = yes
@@ -101741,10 +101741,10 @@
 1406958 = { #陳襃 Chen Bao. 鹽官令 at some point. (新唐書/卷071下)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Bao"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406956
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	725.1.1 = {
 		birth = yes
@@ -101756,10 +101756,10 @@
 1406959 = { #陳灌 Chen Guan
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Guan"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406958
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	741.1.1 = {
 		birth = yes
@@ -101771,10 +101771,10 @@
 1406960 = { #陳伯宣 Chen Boxuan
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Boxuan"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406959
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	772.1.1 = {
 		birth = yes
@@ -101786,10 +101786,10 @@
 1406961 = { #陳旺 Chen Wang
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Wang"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406960
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	801.1.1 = {
 		birth = yes
@@ -101801,10 +101801,10 @@
 1406962 = { #陳機 Chen Ji
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Ji"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406961
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	822.1.1 = {
 		birth = yes
@@ -101816,10 +101816,10 @@
 1406963 = { #陳伯黨 Chen Bodang
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Bodang"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406959
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	776.1.1 = {
 		birth = yes
@@ -101831,10 +101831,10 @@
 1406964 = { #陳元史 Chen Yuanshi
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yuanshi"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406963
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	804.1.1 = {
 		birth = yes
@@ -101846,10 +101846,10 @@
 1406965 = { #陳徽 Chen Hui
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Hui"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406964
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	831.1.1 = {
 		birth = yes
@@ -101861,10 +101861,10 @@
 1406966 = { #陳翱 Chen Ao
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Ao"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406957
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	720.1.1 = {
 		birth = yes
@@ -101876,10 +101876,10 @@
 1406967 = { #陳孝寬 Chen Xiaokuan. During Daye era （605-618） made 汶城令. (陳書/卷28)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Xiaokuan"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406900
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	581.1.1 = {
 		birth = yes
@@ -101891,10 +101891,10 @@
 1406968 = { #陳瓊 Chen Qiong
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Qiong"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406903
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	602.1.1 = {
 		birth = yes
@@ -101906,10 +101906,10 @@
 1406969 = { #陳彝 Chen Yi
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yi"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406968
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	631.1.1 = {
 		birth = yes
@@ -101921,10 +101921,10 @@
 1406970 = { #陳商 Chen Shang
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shang"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406969
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	662.1.1 = {
 		birth = yes
@@ -101936,10 +101936,10 @@
 1406971 = { #陳峻 Chen Jun
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Jun"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406970
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	687.1.1 = {
 		birth = yes
@@ -101951,10 +101951,10 @@
 1406972 = { #陳政德 Chen Zhengde
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Zhengde"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406907
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	598.1.1 = {
 		birth = yes
@@ -101966,10 +101966,10 @@
 1406973 = { #unnamed son
 	dynasty = 1000048916 #Yingchuan Chen
 	name = " "
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406972
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	621.1.1 = {
 		birth = yes
@@ -101981,10 +101981,10 @@
 1406974 = { #unnamed grandson
 	dynasty = 1000048916 #Yingchuan Chen
 	name = " "
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406973
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	645.1.1 = {
 		birth = yes
@@ -101996,10 +101996,10 @@
 1406975 = { #陳義 Chen Yi
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yi"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406974
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	668.1.1 = {
 		birth = yes
@@ -102011,10 +102011,10 @@
 1406976 = { #陳玄德 Chen Xuande
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Xuande"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406907
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	603.1.1 = {
 		birth = yes
@@ -102026,10 +102026,10 @@
 1406977 = { #陳仲方 Chen Zhongfang. 順州刺史 at some point. (新唐書/卷071下)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Zhongfang"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406976
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	626.1.1 = {
 		birth = yes
@@ -102041,10 +102041,10 @@
 1406978 = { #陳賢德 Chen Xiande. 汾州刺史 at some point. （唐故祕書監崔公墓誌銘）
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Xiande"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406907
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	610.1.1 = {
 		birth = yes
@@ -102056,10 +102056,10 @@
 1406979 = { #陳令同 Chen Lingtong. 汾州刺史 at some point. （唐故祕書監崔公墓誌銘）
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Lingtong"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406978
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	635.1.1 = {
 		birth = yes
@@ -102071,10 +102071,10 @@
 1406980 = { #陳氏 Lady Chen. Married 崔大鈞. （唐故祕書監崔公墓誌銘）
 	dynasty = 1000048916 #Yingchuan Chen
 	name = " "
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406978
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	female = yes
 	#birth and death dates unknown
 	638.1.1 = {
@@ -102087,10 +102087,10 @@
 1406981 = { #陳氏 Lady Chen. Married 崔望之. （唐故祕書監崔公墓誌銘）
 	dynasty = 1000048916 #Yingchuan Chen
 	name = " "
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406978
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	female = yes
 	#birth and death dates unknown
 	643.1.1 = {
@@ -102103,10 +102103,10 @@
 1406982 = { #陳紹德 Chen Shaode
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Shaode"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406907
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	612.1.1 = {
 		birth = yes
@@ -102118,10 +102118,10 @@
 1406983 = { #Unnamed son
 	dynasty = 1000048916 #Yingchuan Chen
 	name = " "
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406982
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	641.1.1 = {
 		birth = yes
@@ -102133,10 +102133,10 @@
 1406984 = { #陳復 Chen Fu
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Fu"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406983
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	672.1.1 = {
 		birth = yes
@@ -102148,10 +102148,10 @@
 1406985 = { #陳遼 Chen Liao
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Liao"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406984
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	697.1.1 = {
 		birth = yes
@@ -102163,10 +102163,10 @@
 1406986 = { #陳弼 Chen Bi
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Bi"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406907
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	614.1.1 = {
 		birth = yes
@@ -102178,10 +102178,10 @@
 1406987 = { #陳懿 Chen Yi
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yi"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406986
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	641.1.1 = {
 		birth = yes
@@ -102193,10 +102193,10 @@
 1406988 = { #陳乾盛 Chen Quancheng
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Quancheng"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406987
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	673.1.1 = {
 		birth = yes
@@ -102208,10 +102208,10 @@
 1406989 = { #陳希望 Chen Xiwang
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Xiwang"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406988
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	701.1.1 = {
 		birth = yes
@@ -102223,10 +102223,10 @@
 1406990 = { #陳貞 Chen Zhen
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Zhen"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406907
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	617.1.1 = {
 		birth = yes
@@ -102238,10 +102238,10 @@
 1406991 = { #陳秀江 Chen Xiujiang. 吳令 at some point.
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Xiujiang"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406990
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	640.1.1 = {
 		birth = yes
@@ -102253,10 +102253,10 @@
 1406992 = { #陳義 Chen Yi
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yi"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406991
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	671.1.1 = {
 		birth = yes
@@ -102268,10 +102268,10 @@
 1406993 = { #陳氏 Lady Chen. Married 張敬輿.
 	dynasty = 1000048916 #Yingchuan Chen
 	name = " "
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406991
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	female = yes
 	#birth and death dates unknown
 	676.1.1 = {
@@ -102284,10 +102284,10 @@
 1406994 = { #陳發 Chen Fa
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Fa"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406916
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	601.1.1 = {
 		birth = yes
@@ -102299,10 +102299,10 @@
 1406995 = { #陳察 Chen Cha
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Cha"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406916
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	604.1.1 = {
 		birth = yes
@@ -102314,10 +102314,10 @@
 1406996 = { #陳胤 Chen Yin
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yin"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#death date unknown
 	573.4.16 = {
 		birth = yes
@@ -102329,10 +102329,10 @@
 1406997 = { #陳嶷 Chen Yi. 南琅邪彭城二郡太守 until 584.7.10, on that day made 揚州刺史. (陳書/卷6) 江州刺史 in 588.7.2. (陳書/卷6) 江州刺史 until 588.11.30, on that day made 郢州刺史. (陳書/卷6)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yi"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	574.1.1 = {
 		birth = yes
@@ -102344,10 +102344,10 @@
 1406998 = { #陳彥 Chen Yan. 南徐州刺史 in 588.7.2. (陳書/卷6) 南徐州刺史 until 588.11.30, on that day made 江州刺史. (陳書/卷6) During Daye era （605-618） made 襄武令. (陳書/卷28)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yan"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	575.1.1 = {
 		birth = yes
@@ -102359,10 +102359,10 @@
 1406999 = { #陳淵 Chen Yuan or 陳深 Chen Shen. 揚州刺史 until 588.7.1, on that day made heir apparent. (陳書/卷6) During Daye era （605-618） made 枹罕太守. (陳書/卷28)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yuan"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	575.3.1 = {
 		birth = yes
@@ -102374,10 +102374,10 @@
 1407000 = { #陳虔 Chen Qian. In 588.11.30 made 南徐州刺史. (陳書/卷6) During Daye era （605-618） made 涿令. (陳書/卷28)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Qian"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	576.1.1 = {
 		birth = yes
@@ -102389,10 +102389,10 @@
 1407001 = { #陳祗 Chen Zhi
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Zhi"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	577.1.1 = {
 		birth = yes
@@ -102404,10 +102404,10 @@
 1407002 = { #陳兢 Chen Jing
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Jing"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	577.1.1 = {
 		birth = yes
@@ -102419,10 +102419,10 @@
 1407003 = { #陳莊 Chen Zhuang. In 588.7.2 made 揚州刺史. (陳書/卷6) During Daye era （605-618） made 昌隆令. (陳書/卷28)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Zhuang"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	578.1.1 = {
 		birth = yes
@@ -102434,10 +102434,10 @@
 1407004 = { #陳蕃 Chen Fan. During Daye era （605-618） made 涪城令. (陳書/卷28) 忠州刺史 at some point. (新唐書/卷071下)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Fan"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	580.1.1 = {
 		birth = yes
@@ -102449,10 +102449,10 @@
 1407005 = { #陳元順 Chen Yuanshun. 考城令 at some point. (大唐潁川郡夫人三原縣令盧全壽故夫人陳氏墓誌銘并序)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yuanshun"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406999
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	603.1.1 = {
 		birth = yes
@@ -102464,10 +102464,10 @@
 1407006 = { #陳希寂 Chen Xishu. (大唐潁川郡夫人三原縣令盧全壽故夫人陳氏墓誌銘并序)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Xishu"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1407005
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown.
 	631.1.1 = {
 		birth = yes
@@ -102479,10 +102479,10 @@
 1407007 = { #陳希沖 Chen Xichong. Married a daughter of 崔敬嗣, a son of 崔儀表. (大唐潁川郡夫人三原縣令盧全壽故夫人陳氏墓誌銘并序)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Xichong"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1407005
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown. Died young.
 	642.1.1 = {
 		birth = yes
@@ -102494,10 +102494,10 @@
 1407008 = { #陳希固 Chen Xigu. 衡州刺史 at some point between 716 and 732. (大唐潁川郡夫人三原縣令盧全壽故夫人陳氏墓誌銘并序)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Xigu"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1407005
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	651.1.1 = {
 		birth = yes
@@ -102509,10 +102509,10 @@
 1407009 = { #陳之望 Chen Zhiwang. (大唐潁川郡夫人三原縣令盧全壽故夫人陳氏墓誌銘并序)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Zhiwang"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1407007
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	671.1.1 = {
 		birth = yes
@@ -102524,10 +102524,10 @@
 1407010 = { #陳照 Chen Zhao. Married 徐堅 and gave birth to 徐琨. In 929 he died and in 931 she married 盧全善 who was 江陽縣令 when she died and later was made 三原縣令.. (大唐潁川郡夫人三原縣令盧全壽故夫人陳氏墓誌銘并序). Read 唐代士族女兒與家族光榮──從天寶四年〈陳照墓誌〉談起
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Zhao"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1407007
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	female = yes
 	697.1.1 = {
 		birth = yes
@@ -102539,10 +102539,10 @@
 1407011 = { #Unnamed father. (大唐故鄂州永興縣令陳府君(玄度)蔣夫人墓志銘)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = " "
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406930
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	604.1.1 = {
 		birth = yes
@@ -102554,10 +102554,10 @@
 1407012 = { #陳玄度 Chen Xuandu. 鄂州永興縣令 at some point. (大唐故鄂州永興縣令陳府君(玄度)蔣夫人墓志銘)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Xuandu"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1407011
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	635.1.1 = {
 		birth = yes
 	}
@@ -102568,10 +102568,10 @@
 1407013 = { #陳莊 Chen Quan
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Quan"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	579.1.1 = {
 		birth = yes
@@ -102583,10 +102583,10 @@
 1407014 = { #陳恬 Chen Tian
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Quan"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	581.1.1 = {
 		birth = yes
@@ -102598,10 +102598,10 @@
 1407015 = { #陳總 Chen Zong
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Zong"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	582.1.1 = {
 		birth = yes
@@ -102613,10 +102613,10 @@
 1407016 = { #陳觀 Chen Guan
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Guan"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	583.1.1 = {
 		birth = yes
@@ -102628,10 +102628,10 @@
 1407017 = { #陳明 Chen Ming
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Ming"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	584.1.1 = {
 		birth = yes
@@ -102643,10 +102643,10 @@
 1407018 = { #陳綱 Chen Gang
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Gang"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	585.1.1 = {
 		birth = yes
@@ -102658,10 +102658,10 @@
 1407019 = { #陳統 Chen Tong
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Tong"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	586.1.1 = {
 		birth = yes
@@ -102673,10 +102673,10 @@
 1407020 = { #陳沖 Chen Chong
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Chong"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	587.1.1 = {
 		birth = yes
@@ -102688,10 +102688,10 @@
 1407021 = { #陳洽 Chen Xia
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Xia"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	588.1.1 = {
 		birth = yes
@@ -102703,10 +102703,10 @@
 1407022 = { #陳縚 Chen Tao
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Tao"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	589.1.1 = {
 		birth = yes
@@ -102718,10 +102718,10 @@
 1407023 = { #陳綽 Chen Chuo
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Chuo"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	590.1.1 = {
 		birth = yes
@@ -102733,10 +102733,10 @@
 1407024 = { #陳威 Chen Wei
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Wei"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	591.1.1 = {
 		birth = yes
@@ -102748,10 +102748,10 @@
 1407025 = { #陳辯 Chen Bian
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Bian"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	592.1.1 = {
 		birth = yes
@@ -102763,10 +102763,10 @@
 1407026 = { #廣德公主 Princess Guangde
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Guangde"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	female = yes
 	#birth and death dates unknown
 	574.1.1 = {
@@ -102779,10 +102779,10 @@
 1407027 = { #臨成公主 Princess Lincheng
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Lincheng"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	female = yes
 	#birth and death dates unknown
 	575.1.1 = {
@@ -102795,10 +102795,10 @@
 1407028 = { #陳婤 Chen Chou
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Chou"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406894
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	female = yes
 	#birth and death dates unknown
 	576.1.1 = {
@@ -102811,8 +102811,8 @@
 1407029 = { #陳湘 Chen Xiang
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Xiang"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406845
 	#birth and death dates unknown
@@ -102826,8 +102826,8 @@
 1407030 = { #unnamed brother
 	dynasty = 1000048916 #Yingchuan Chen
 	name = " "
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1406842
 	#birth and death dates unknown
@@ -102841,8 +102841,8 @@
 1407031 = { #陳景津 Cheng Jingjin
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Jingjin"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1407030
 	#birth and death dates unknown
@@ -102856,8 +102856,8 @@
 1407032 = { #陳允初 Cheng Yunchi
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Yunchi"
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	culture = han
 	father = 1407031
 	#birth and death dates unknown
@@ -102871,10 +102871,10 @@
 1407033 = { #富陽公主 Princess Fuyang. Married 侯淨藏 (d. 571), a son of 侯瑱. Later she married 柳盼.
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Fuyang"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406859
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	female = yes
 	#birth and death dates unknown
 	542.1.1 = {
@@ -102887,10 +102887,10 @@
 1407034 = { #陳翹 Chen Qiao. (陳敬玄墓誌)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Qiao"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406946
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	692.1.1 = {
 		birth = yes
@@ -102902,10 +102902,10 @@
 1407035 = { #陳翱 Chen Ao. (陳敬玄墓誌)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Ao"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406946
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	696.1.1 = {
 		birth = yes
@@ -102917,10 +102917,10 @@
 1407036 = { #陳宏 Chen Hong。 (唐故福建觀察使检校司徒兼御史大夫潁川郡陳府君巖墓誌銘)
 	dynasty = 1000048916 #Yingchuan Chen
 	name = "Hong"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 1406966 #unknown, but possible
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	747.1.1 = {
 		birth = yes
@@ -127686,11 +127686,11 @@
 1408674 = { #楊儼 Yang Yan
 	dynasty = 105837 # Hongnong Yang
 	name = "Yan" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 247745 
 	#mother = 雲昭訓
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = child_of_consort
 	# spouse = 1408673
 	#birth date unknown
@@ -127704,11 +127704,11 @@
 1408675 = { #楊裕 Yang Yu
 	dynasty = 105837 # Hongnong Yang
 	name = "Yu" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 247745
 	#mother = 雲昭訓
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = child_of_consort
 	#birth date unknown
 	584.1.1 = {
@@ -127721,11 +127721,11 @@
 1408676 = { #楊筠 Yang Jun
 	dynasty = 105837 # Hongnong Yang
 	name = "Jun" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 247745
 	#mother = 雲昭訓
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = child_of_consort
 	#birth date unknown
 	586.1.1 = {
@@ -127738,11 +127738,11 @@
 1408677 = { #楊嶷 Yang Yi
 	dynasty = 105837 # Hongnong Yang
 	name = "Yi" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 247745
 	#mother = 高良娣
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = child_of_consort
 	#birth date unknown
 	588.1.1 = {
@@ -127755,11 +127755,11 @@
 1408678 = { #楊恪 Yang Ke. Married 襄城王妃柳氏, a daughter of 循州刺史柳旦.
 	dynasty = 105837 # Hongnong Yang
 	name = "Ke" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 247745
 	#mother = 高良娣
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = child_of_consort
 	#birth date unknown
 	590.1.1 = {
@@ -127772,11 +127772,11 @@
 1408679 = { #楊該 Yang Gai
 	dynasty = 105837 # Hongnong Yang
 	name = "Gai" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 247745
 	#mother = 王良媛
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = child_of_consort
 	#birth date unknown
 	592.1.1 = {
@@ -127789,11 +127789,11 @@
 1408680 = { #楊韶 Yang Shao
 	dynasty = 105837 # Hongnong Yang
 	name = "Shao" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 247745
 	#mother = 王良媛
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = child_of_consort
 	#birth date unknown
 	594.1.1 = {
@@ -127806,11 +127806,11 @@
 1408681 = { #楊煚 Yang Jiong
 	dynasty = 105837 # Hongnong Yang
 	name = "Jiong" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 247745
 	#mother = 成姬
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = child_of_consort
 	#birth date unknown
 	596.1.1 = {
@@ -127823,10 +127823,10 @@
 1408682 = { #楊孝實 Yang Xiaokuan
 	dynasty = 105837 # Hongnong Yang
 	name = "Xiaokuan" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 247745
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = child_of_consort
 	#birth date unknown
 	598.1.1 = {
@@ -127839,10 +127839,10 @@
 1408683 = { #楊孝範 Yang Xiaofan
 	dynasty = 105837 # Hongnong Yang
 	name = "Xiaofan" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 247745
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = child_of_consort
 	#birth date unknown
 	601.1.1 = {
@@ -127855,10 +127855,10 @@
 1408684 = { #大寧公主 Princess Daning. Married 高表仁
 	dynasty = 105837 # Hongnong Yang
 	name = "Daning" 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 247745
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = child_of_consort
 	female = yes
 	##birth and death dates unknown
@@ -129308,13 +129308,13 @@
 1408785 = { #楊氏 Lady Yang
 	dynasty = 105837 #Hongnong Yang
 	name = " " 
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 247755
 	mother = 1408783
 	female = yes
 	trait = bastard
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	#birth and death dates unknown
 	614.1.1 = {
 		birth = yes
@@ -137334,10 +137334,10 @@
 1409346 = { #宿國公主 Princess of Su. Married 豆盧湛.
 	dynasty = 1051150 #Longxi Li
 	name = "Suguo"
-	religion = buddhist
+	religion = bud_zen
 	culture = han
 	father = 217707 #Emperor Suzong
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	female = yes
 	#birth and death dates unknown
 	724.1.1 = {
@@ -139001,9 +139001,9 @@
 	dynasty = 1000048506 #Hedong Pei 
 	name = "Wende"
 	culture = han
-	religion = buddhist
+	religion = bud_zen
 	father = 1409452
-	trait = mahayana_buddhist
+	#trait = mahayana_buddhist
 	trait = zhuangyuan
 	trait = monk
 	#birth and death dates unknown
@@ -139647,8 +139647,8 @@
 	dynasty = 1000050209 #Yuyao Gu
 	name = "Quanwu"
 	culture = han
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	trait = brilliant_strategist
 	trait = brave
 	trait = monk
@@ -149209,8 +149209,8 @@
 	dynasty = 1000048107 #Zhao
 	name = "Cishiliu"
 	culture = khitan
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	father = 1800133 #unknown but possible
 	#birth and death dates unknown
 	938.1.1 = {
@@ -149224,8 +149224,8 @@
 	dynasty = 1000048107 #Zhao
 	name = "Fusunge"
 	culture = khitan
-	religion = buddhist
-	trait = mahayana_buddhist
+	religion = bud_zen
+	#trait = mahayana_buddhist
 	father = 1800137 #unknown but possible
 	#birth and death dates unknown
 	960.1.1 = {

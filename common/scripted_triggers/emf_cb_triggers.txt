@@ -234,7 +234,7 @@ emf_cb_can_use_magyar_title = {
 						trigger_else = {
 							NAND = {
 								culture = hungarian
-								religion_group = pagan_group
+								novum_imperium_is_pagan = yes
 							}
 						}
 						top_liege = {
@@ -245,7 +245,7 @@ emf_cb_can_use_magyar_title = {
 							trigger_else = {
 								NAND = {
 									culture = hungarian
-									religion_group = pagan_group
+									novum_imperium_is_pagan = yes
 								}
 							}
 						}
@@ -268,7 +268,7 @@ emf_cb_can_use_magyar_title = {
 							}
 							trigger_else = {
 								culture = hungarian
-								religion_group = pagan_group
+								novum_imperium_is_pagan = yes
 							}
 							top_liege = {
 								trigger_if = {
@@ -277,7 +277,7 @@ emf_cb_can_use_magyar_title = {
 								}
 								trigger_else = {
 									culture = hungarian
-									religion_group = pagan_group
+									novum_imperium_is_pagan = yes
 								}
 							}
 						}
@@ -307,7 +307,7 @@ emf_cb_can_use_thirdparty_magyar_title = {
 						trigger_else = {
 							NAND = {
 								culture = hungarian
-								religion_group = pagan_group
+								novum_imperium_is_pagan = yes
 							}
 						}
 						top_liege = {
@@ -318,7 +318,7 @@ emf_cb_can_use_thirdparty_magyar_title = {
 							trigger_else = {
 								NAND = {
 									culture = hungarian
-									religion_group = pagan_group
+									novum_imperium_is_pagan = yes
 								}
 							}
 						}
@@ -341,7 +341,7 @@ emf_cb_can_use_thirdparty_magyar_title = {
 							}
 							trigger_else = {
 								culture = hungarian
-								religion_group = pagan_group
+								novum_imperium_is_pagan = yes
 							}
 							top_liege = {
 								trigger_if = {
@@ -350,7 +350,7 @@ emf_cb_can_use_thirdparty_magyar_title = {
 								}
 								trigger_else = {
 									culture = hungarian
-									religion_group = pagan_group
+									novum_imperium_is_pagan = yes
 								}
 							}
 						}
@@ -653,7 +653,7 @@ emf_cb_can_use_religious = {
 				}
 			}
 			OR = {
-				NOT = { religion_group = pagan_group }
+				NOT = { novum_imperium_is_pagan = yes }
 				religion = ROOT
 			}
 		}
@@ -687,7 +687,7 @@ emf_cb_religious_basic_can_use_title = {
 				FROM = { religion_group = muslim }
 				ROOT = { religion_group = muslim }
 				AND = {
-					ROOT = { religion_group = pagan_group }
+					ROOT = { novum_imperium_is_pagan = yes }
 					has_global_flag = pagan_ghws_unlocked
 				}
 				AND = {
@@ -784,7 +784,7 @@ emf_cb_special_religious_basic_can_use_title = {
 			}
 		}
 		AND = {
-			FROM = { religion_group = pagan_group }
+			FROM = { novum_imperium_is_pagan = yes }
 			OR = {
 				de_jure_liege = k_pomerania
 				de_jure_liege = k_saxony
@@ -853,7 +853,7 @@ emf_cb_religious_reconquest_basic_can_use_title = {
 	}
 	ROOT = {
 		NAND = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			FROM = { is_reformed_religion = ROOT }
 		}
 	}

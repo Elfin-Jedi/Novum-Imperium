@@ -454,7 +454,7 @@ d_ashokas_chosen = { # Chosen of Ashoka
 	holy_order = yes
 	culture = marathi
 	# Parent Religion
-	religion = buddhist
+	religion = bud_zen
 	# Cannot be held as a secondary title
 	primary = yes
 	# Extra income due to donations, etc
@@ -1144,7 +1144,7 @@ d_rus_company = { # Rus Company
 			trigger = { is_alternate_start = no }
 			year = 950
 			OR = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				religion_group = christian
 			}
 		}
@@ -1383,7 +1383,7 @@ d_rus_band = { # Rus Band
 			year = 950
 			OR = {
 				religion_group = christian
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -1412,7 +1412,7 @@ d_finnish_band = { # Finnish Band
 			trigger = { is_alternate_start = no }
 			OR = {
 				religion_group = christian
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -1441,7 +1441,7 @@ d_lappish_band = { # Sami Band
 			trigger = { is_alternate_start = no }
 			OR = {
 				religion_group = christian
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -1470,7 +1470,7 @@ d_lithuanian_band = { # Lithuanian Band
 			trigger = { is_alternate_start = no }
 			OR = {
 				religion_group = christian
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -2086,7 +2086,7 @@ d_tangut_low = { # Small Merc
 	capital = 1968 # Niya
 	#hire_range = 800
 	# Parent Religion
-	religion = buddhist
+	religion = bud_zen
 	# Parent Culture
 	culture = tangut
 	mercenary = yes
@@ -2342,7 +2342,7 @@ d_silk_road_sentinels = {
 	color = { 167 125 135 }
 	color2 = { 255 255 255 }
 	capital = 1624 # Udabhanda
-	religion = buddhist
+	religion = bud_zen
 	culture = panjabi
 	mercenary = yes
 	title = CAPTAIN
@@ -17164,7 +17164,7 @@ e_scandinavia = { # Nordmannia
 	allow = {
 		OR = {
 			religion_group = christian
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			FROM = { is_de_jure_title = yes }
 		}
 		has_landed_title = k_denmark
@@ -18268,7 +18268,7 @@ e_russia = { # Rus
 	allow = {
 		OR = {
 			religion_group = christian
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 			FROM = { is_de_jure_title = yes }
 		}
 		title_emperor_basic_allow = yes

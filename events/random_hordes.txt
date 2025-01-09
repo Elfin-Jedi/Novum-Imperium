@@ -255,7 +255,7 @@ character_event = {
 			factor = 1.25
 			OR = {
 				AND = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					is_reformed_religion = no
 				}
 				is_tribal = yes

@@ -641,7 +641,7 @@ decisions = {
 									any_realm_title = { title = b_etchmiadzin }
 								}
 								AND = {
-									religion = yazidi
+									religion = yazidism
 									any_realm_title = { title = b_karamlish }
 								}
 								AND = {
@@ -662,7 +662,7 @@ decisions = {
 								AND = {
 									OR = {
 										religion = nestorian
-										religion = manichean
+										religion = mani
 									}
 									any_realm_title = { title = b_bagdad }
 								}
@@ -698,7 +698,7 @@ decisions = {
 						limit = {
 							OR = {
 								religion = nestorian
-								religion = manichean
+								religion = mani
 							}
 							any_realm_title = { title = b_bagdad }
 						}
@@ -720,7 +720,7 @@ decisions = {
 					}
 					if = {
 						limit = {
-							religion = yazidi
+							religion = yazidism
 							any_realm_title = { title = b_karamlish }
 						}
 						b_karamlish = { grant_title = PREVPREV }
@@ -3542,7 +3542,7 @@ decisions = {
 		only_playable = yes
 		potential = {
 			rtp_is_lower_baron = no
-			religion = manichean
+			religion_group = mani_group
 			NOR = {
 				is_inaccessible_trigger = yes
 				any_demesne_title = {
@@ -3567,7 +3567,7 @@ decisions = {
 				text = HAS_THREE_MANICHEAN_VASSALS_AVAILABLE
 				hidden_tooltip = {
 					any_vassal = {
-						religion = manichean
+						religion_group = mani_group
 						has_regent = no
 						war = no
 						count = 3
@@ -3619,10 +3619,10 @@ decisions = {
 	}
 
 	manichean_choose_patron_deity = {
-		icon_religion = manichean
+		icon_religion = mani
 
 		potential = {
-			religion = manichean
+			religion = mani
 			OR = {
 				is_playable = yes
 				capital_holding = { holding_type = temple }
@@ -3669,11 +3669,11 @@ decisions = {
 	manichean_create_leader = {
 		only_playable = yes
 		is_high_prio = yes
-		icon_religion = manichean
+		icon_religion = mani
 
 		potential = {
 			is_playable = yes
-			religion = manichean
+			religion = mani
 			NOR = {
 				any_demesne_title = { temporary = yes }
 				is_title_active = d_manichean
@@ -3704,7 +3704,7 @@ decisions = {
 			is_playable = yes
 			is_tribal = no
 			OR = {
-				religion = manichean
+				religion_group = mani_group
 				religion = mandaean
 			}
 			OR = {
@@ -3748,7 +3748,7 @@ decisions = {
 		
 		potential = {
 			higher_tier_than = COUNT
-			religion = manichean
+			religion = mani
 			NOT = { is_title_active = d_army_light }
 			emf_hiprio_decision_basic_potential = yes
 			has_random_religion_names = no
@@ -3800,7 +3800,7 @@ decisions = {
 		potential = {
 			has_dlc = "Sons of Abraham"
 			OR = {
-				religion = manichean
+				religion_group = mani_group
 				religion = mandaean
 			}
 			is_heretic = no
@@ -3855,7 +3855,7 @@ decisions = {
 		potential = {
 			has_dlc = "Sons of Abraham"
 			OR = {
-				religion = manichean
+				religion_group = mani_group
 				religion = mandaean
 			}
 			is_heretic = no
@@ -3922,10 +3922,10 @@ decisions = {
 	vassalize_manichean_leader = {
 		only_playable = yes
 		is_high_prio = yes
-		icon_religion = manichean
+		icon_religion = mani
 
 		potential = {
-			religion = manichean
+			religion = mani
 			controls_religion = no
 			d_manichean = {
 				has_holder = yes
@@ -3971,11 +3971,11 @@ decisions = {
 	mazdaki_restore_priesthood = {
 		only_playable = yes
 		is_high_prio = yes
-		icon_religion = mazdaki
+		icon_religion = mazdakism
 
 		potential = {
 			has_dlc = "The Old Gods"
-			religion = mazdaki
+			religion = mazdakism
 			emf_hiprio_decision_basic_potential = yes
 			NOT = { has_global_flag = mazdaki_priesthood_founded }
 		}
@@ -4000,10 +4000,10 @@ decisions = {
 	}
 
 	mazdaki_choose_patron_deity = {
-		icon_religion = mazdaki
+		icon_religion = mazdakism
 
 		potential = {
-			religion = mazdaki
+			religion = mazdakism
 			OR = {
 				is_playable = yes
 				capital_holding = { holding_type = temple }
@@ -4050,7 +4050,7 @@ decisions = {
 	yazidi_peacock_feast = {
 		only_playable = yes
 		potential = {
-			religion = yazidi
+			religion = yazidism
 			num_of_vassals = 1
 			OR = {
 				is_feudal = yes
@@ -4083,7 +4083,7 @@ decisions = {
 				text = HAS_THREE_YAZIDI_VASSALS_AVAILABLE
 				hidden_tooltip = {
 					any_vassal = {
-						religion = yazidi
+						religion = yazidism
 						prisoner = no
 						is_incapable = no
 						emf_can_disturb = yes
@@ -4147,7 +4147,7 @@ decisions = {
 	yazidi_pilgrimage = {
 		only_playable = yes
 		potential = {
-			religion = yazidi
+			religion = yazidism
 			is_female = no
 			NOR = {
 				is_inaccessible_trigger = yes

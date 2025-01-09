@@ -20,11 +20,15 @@ theocracy_governments = {
 			feudal_government
 			bogomilist_government
 			muslim_government
+			playable_republic_government
+			playable_theocracy_government
 			theocratic_feudal_government
 			rtp_republic_g
 			merchant_republic_government
 			muslim_merchant_republic_government
 			bogomilist_merchant_republic_government
+			oriental_monarchy_government
+			classical_government
 			order_government
 			rtp_theocracy_g
 			imperial_government
@@ -35,10 +39,22 @@ theocracy_governments = {
 			tribal_government
 			nomadic_government
 		}
+		accepts_liege_governments_religion = { # only radical governments from the correct religion are accepted
+			anarchist_government
+			demagogic_government
+			mystic_government
+			absolutist_government
+			hegemonic_government
+			messianic_government
+					 
+		}
 		frame_suffix = "_theocracy"
 		title_prefix = "temple_"
 		potential = {
 			emf_theocracy_softcoded_potential = yes
+			NOT = {
+				is_government_potential = rtp_baron_theocracy_g
+			}
 		}
 		
 		vassal_call_to_arms = {

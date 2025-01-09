@@ -787,21 +787,21 @@ narrative_event = {
 	option = {
 		name = VIETmisc.5026.c
 		trigger = {
-			religion = buddhist
+			religion_group = bud_group
 		}
 		piety = 4
 	}
 	option = {
 		name = VIETmisc.5026.d
 		trigger = {
-			NOT = { religion = buddhist }
+			NOT = { religion_group = bud_group }
 		}
 		prestige = 4
 	}
 	option = {
 		name = VIETmisc.5026.e
 		trigger = {
-			NOT = { religion = buddhist }
+			NOT = { religion_group = bud_group }
 		}
 		prestige = 2
 		piety = 2
@@ -889,7 +889,7 @@ character_event = {
 			has_religion_feature = religion_holy_family 
 			has_religion_feature = religion_feature_zun
 		}
-		NOT = { religion = manichean }
+		NOT = { religion_group = mani_group }
 		OR = {
 			trait = gregarious
 			trait = lustful

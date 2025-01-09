@@ -42,10 +42,11 @@ decisions = {
 			scaled_wealth = 0.75
 			prestige = 1500
 			OR = {
-				religion = zoroastrian
-				religion = mazdaki
-				religion = zurvanist
-				religion = khurmazta
+				religion_group = zoroastrian_group
+				religion_group = mand_group
+				religion_group = mani_group
+				religion_group = yazd_group
+				religion_group = arabpagan_group
 			}
 			is_heretic = no
 			OR = {
@@ -125,7 +126,12 @@ decisions = {
 			}
 			has_dlc = "Holy Fury"
 			NOT = { has_religion_feature = religion_peaceful }
-			religion_group = indian_group
+			OR = {
+				religion_group = indian_group
+				religion_group = bud_group
+				religion_group = asian_religion_group
+				religion_group = austronesian_group
+			}
 			NOT = { 
 				warrior_lodge_ws_eastern = {
 					society_has_members = yes								
@@ -450,7 +456,12 @@ decisions = {
 			}
 			has_dlc = "Holy Fury"
 			NOT = { has_religion_feature = religion_peaceful }
-			religion_group = jewish_group
+			OR = {
+				religion_group = jewish_group
+				religion_group = abrahamic_group
+				religion_group = luwian_group
+				religion_group = palmyranpagan_group
+			}
 			NOT = { 
 				warrior_lodge_ws_jewish = {
 					society_has_members = yes								

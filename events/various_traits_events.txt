@@ -332,7 +332,7 @@ character_event = {
 	
 	trigger = {
 		NOT = {	religion_group = muslim	}
-		NOT = {	religion = buddhist	}
+		NOT = {	religion_group = bud_group }
 		NOT = {	religion = jain	}
 		trait = stressed
 		learning = 2
@@ -1901,7 +1901,7 @@ character_event = {
 	option = {
 		name = EVTOPTC65049	#God cures me!
 		trigger = {
-			NOT = { religion = buddhist }
+			NOT = { religion_group = bud_group }
 			NOT = { religion = jain }
 		}
 		piety = 5
@@ -1950,7 +1950,7 @@ character_event = {
 		name = EVTOPTB65050	#ask priests for advice.
 		trigger = {
 			NOT = {	religion_group = muslim	}
-			NOT = {	religion = buddhist }
+			NOT = {	religion_group = bud_group }
 			NOT = {	religion = jain }
 		}
 		piety = 5

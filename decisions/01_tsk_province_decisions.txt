@@ -1,0 +1,263 @@
+settlement_decisions = {
+	# Upgrades fertility
+	tsk_upgrade_fertility = {
+		ai_check_interval = 120
+		filter = sub_realm_owned
+		ai_target_filter = sub_realm_owned
+		is_high_prio = yes
+
+		from_potential = {
+			is_playable = yes
+			higher_tier_than = BARON
+		}
+		potential = {
+			is_capital = yes
+			location = { NOT = { has_province_modifier = tsk_fruitful } }
+			OWNER = {
+				same_realm = FROM
+			}
+		}
+		allow = {
+			FROM = {
+				wealth = 1000
+				location = {
+							NOR = {
+								tsk_arctic
+								tsk_volcanic
+							}
+				}
+				capital_scope = {
+									TECH_CONSTRUCTION >= 5
+				}
+			}
+		}	
+		effect = {
+			FROM = {
+				show_scope_change = no
+				wealth = -1000
+			}
+			if = {
+				limit = {
+					location = {
+						OR = {
+							has_province_modifier = tsk_desolate
+						}
+					}
+				}
+				location = {
+					remove_province_modifier = tsk_desolate
+					add_province_modifier = { name = tsk_bleak duration = -1 }
+				}
+			}
+			else_if = {
+				limit = {
+					location = {
+						OR = {
+							has_province_modifier = tsk_bleak
+						}
+					}
+				}
+				location = {
+					remove_province_modifier = tsk_bleak
+					add_province_modifier = { name = tsk_arid duration = -1 }
+				}
+			}
+			else_if = {
+				limit = {
+					location = {
+						OR = {
+							has_province_modifier = tsk_arid
+						}
+					}
+				}
+				location = {
+					remove_province_modifier = tsk_arid
+				}
+			}
+			else_if = {
+				limit = {
+					location = {
+						has_province_modifier = tsk_lush
+					}
+				}
+				location = {
+					remove_province_modifier = tsk_lush
+					add_province_modifier = { name = tsk_fruitful duration = -1 }
+				}
+			}
+			else_if = {
+				limit = {
+					NOR = {
+						location = {
+							has_province_modifier = tsk_lush
+							has_province_modifier = tsk_fruitful
+						}
+					}
+				}
+				location = {
+					add_province_modifier = { name = tsk_lush duration = -1 }
+				}
+			}
+		}
+	}
+
+	# Upgrades population center from minor center of trade -> major population center -> major center of trade
+	tsk_upgrade_population_center = {
+		ai_check_interval = 240
+		filter = sub_realm_owned
+		ai_target_filter = sub_realm_owned
+		is_high_prio = yes
+
+		from_potential = {
+			is_playable = yes
+			higher_tier_than = BARON
+		}
+		potential = {
+			is_capital = yes
+			OWNER = {
+				same_realm = FROM
+			}
+			NOR = {
+					location = {
+								has_province_modifier = tsk_centre_of_trade
+					}
+			}		
+		}
+		allow = {
+			FROM = {
+				wealth = 500
+				location = {
+					AND = {						
+							OR = {
+										has_province_modifier = tsk_road_2
+										has_province_modifier = tsk_road_3
+										has_province_modifier = tsk_road_4
+										has_province_modifier = tsk_road_5
+							}
+							OR = {
+										has_province_modifier = tsk_infra_2
+										has_province_modifier = tsk_infra_3
+										has_province_modifier = tsk_infra_4
+										has_province_modifier = tsk_infra_5
+							}
+					}
+				}
+			}
+		}
+		effect = {
+			FROM = {
+				show_scope_change = no
+				wealth = -500
+			}
+			if = {
+				limit = {
+					location = {
+						NOR = {
+							has_province_modifier = tsk_minor_centre_of_trade
+							has_province_modifier = tsk_major_population_centre
+							has_province_modifier = tsk_centre_of_trade
+						}
+					}
+				}
+				location = {
+					add_province_modifier = { name = tsk_minor_centre_of_trade duration = -1 }
+				}
+			}
+			else_if = {
+				limit = {
+					location = {
+						AND = { 
+								has_province_modifier = tsk_major_population_centre
+								has_province_modifier = tsk_minor_centre_of_trade
+								OR = {
+									has_province_modifier = tsk_infra_4
+									has_province_modifier = tsk_infra_5
+								}
+								OR = {
+									has_province_modifier = tsk_road_4
+									has_province_modifier = tsk_road_5
+								}
+						}
+					}
+				}
+				location = {
+					remove_province_modifier = tsk_minor_centre_of_trade
+					add_province_modifier = { name = tsk_centre_of_trade duration = -1 }
+				}
+			}
+			else_if = {
+				limit = {
+					location = {
+								has_province_modifier = tsk_minor_centre_of_trade
+					}
+				}
+				location = {
+					add_province_modifier = { name = tsk_major_population_centre duration = -1 }
+				}
+			}
+		}
+	}
+	# Upgrades population center from minor center of trade -> major population center -> major center of trade
+	tsk_upgrade_harbor = {
+		ai = no
+		filter = sub_realm_owned
+		ai_target_filter = sub_realm_owned
+		is_high_prio = yes
+
+		from_potential = {
+			is_playable = yes
+			higher_tier_than = BARON
+		}
+		potential = {
+			is_capital = yes
+			OWNER = {
+				same_realm = FROM
+			}
+			NOT = {
+				location = {
+							has_province_modifier = tsk_major_natural_harbour
+				}
+			}
+		}
+		allow = {
+			location = {
+				port = yes
+			}
+			FROM = {
+				wealth = 0
+				ai = no
+			}
+		}
+		effect = {
+			FROM = {
+				show_scope_change = no
+				wealth = -1
+			}
+			if = {
+				limit = {
+					location = {
+								has_province_modifier = tsk_natural_harbour
+					}
+				}
+				location = {
+					remove_province_modifier = tsk_natural_harbour
+					add_province_modifier = { name = tsk_major_natural_harbour duration = -1 }
+				}
+			}
+			else_if = {
+				limit = {
+					NOR = {
+						location = {
+							has_province_modifier = tsk_natural_harbour
+							has_province_modifier = tsk_major_natural_harbour
+						}
+					}
+				}
+				location = {
+					add_province_modifier = { name = tsk_natural_harbour duration = -1 }
+				}
+			}
+		}
+	}
+}
+

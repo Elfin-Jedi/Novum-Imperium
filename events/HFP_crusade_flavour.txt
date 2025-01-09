@@ -1196,10 +1196,282 @@ character_event = {
         			OR = {
 	        			AND = {
 	        				event_target:current_location = {
+	        					religion_group = abrahamic_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_abrahamics
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = anatolian_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_anatolians
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = arabpagan_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_arabpagans
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = aztec_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_aztecs
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = baltic_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_baltics
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = bantu_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_bantus
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = berberpagan_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_berbers
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = bud_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_buddhists
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = celtic_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_celtics
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = chinese_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_chinese
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = east_african_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_east_africans
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = egyptian_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_egyptian
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = finnish_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_finnish
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = graecoroman_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_graecoroman
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = indian_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_indian
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = indohelen_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_indohellens
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = inti_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_intis
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = inuit_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_inuit
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = jewish_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_judaism
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = luwian_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_luwians
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = mand_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_mande
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = mand_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_mande
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = mani_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_manichaeans
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = mithra_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_mithraics
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
 	        					religion_group = muslim
 	        				}
 	        				NOT = {
 	        					trait = sympathy_islam
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = neoplato_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_platonics
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = norsegerman_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_nordic
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = pagan_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_pagans
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = palmyranpagan_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_palmyrans
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = serer_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_sererics
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = slavic_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_slavics
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = sol_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_sol
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = tengri_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_tengri
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = yazd_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_yazd
+	        				}
+	        			}
+						AND = {
+	        				event_target:current_location = {
+	        					religion_group = zal_group
+	        				}
+	        				NOT = {
+	        					trait = sympathy_zal
 	        				}
 	        			}
 	        			AND = {
@@ -1208,30 +1480,6 @@ character_event = {
 	        				}
 	        				NOT = {
 	        					trait = sympathy_zoroastrianism
-	        				}
-	        			}
-	        			AND = {
-	        				event_target:current_location = {
-	        					religion_group = pagan_group
-	        				}
-	        				NOT = {
-	        					trait = sympathy_pagans
-	        				}
-	        			}
-	        			AND = {
-	        				event_target:current_location = {
-	        					religion_group = jewish_group
-	        				}
-	        				NOT = {
-	        					trait = sympathy_judaism
-	        				}
-	        			}
-	        			AND = {
-	        				event_target:current_location = {
-	        					religion_group = indian_group
-	        				}
-	        				NOT = {
-	        					trait = sympathy_indian
 	        				}
 	        			}
 						AND = {
@@ -1288,56 +1536,557 @@ character_event = {
 	        				trait = zealous
 	        			}
 	        			OR = {
-		        			AND = {
-		        				event_target:current_location = {
-		        					religion_group = muslim
-		        				}
-		        				NOT = {
-		        					trait = sympathy_islam
-		        				}
-		        			}
-		        			AND = {
-		        				event_target:current_location = {
-		        					religion_group = zoroastrian_group
-		        				}
-		        				NOT = {
-		        					trait = sympathy_zoroastrianism
-		        				}
-		        			}
-		        			AND = {
-		        				event_target:current_location = {
-		        					religion_group = pagan_group
-		        				}
-		        				NOT = {
-		        					trait = sympathy_pagans
-		        				}
-		        			}
-		        			AND = {
-		        				event_target:current_location = {
-		        					religion_group = jewish_group
-		        				}
-		        				NOT = {
-		        					trait = sympathy_judaism
-		        				}
-		        			}
-		        			AND = {
-		        				event_target:current_location = {
-		        					religion_group = indian_group
-		        				}
-		        				NOT = {
-		        					trait = sympathy_indian
-		        				}
-		        			}
 							AND = {
-		        				event_target:current_location = {
-		        					religion_group = african_group
-		        				}
-		        				NOT = {
-		        					trait = sympathy_african
-		        				}
-		        			}
+								event_target:current_location = {
+									religion_group = abrahamic_group
+								}
+								NOT = {
+									trait = sympathy_abrahamics
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = anatolian_group
+								}
+								NOT = {
+									trait = sympathy_anatolians
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = arabpagan_group
+								}
+								NOT = {
+									trait = sympathy_arabpagans
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = aztec_group
+								}
+								NOT = {
+									trait = sympathy_aztecs
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = baltic_group
+								}
+								NOT = {
+									trait = sympathy_baltics
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = bantu_group
+								}
+								NOT = {
+									trait = sympathy_bantus
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = berberpagan_group
+								}
+								NOT = {
+									trait = sympathy_berbers
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = bud_group
+								}
+								NOT = {
+									trait = sympathy_buddhists
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = celtic_group
+								}
+								NOT = {
+									trait = sympathy_celtics
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = chinese_group
+								}
+								NOT = {
+									trait = sympathy_chinese
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = east_african_group
+								}
+								NOT = {
+									trait = sympathy_east_africans
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = egyptian_group
+								}
+								NOT = {
+									trait = sympathy_egyptian
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = finnish_group
+								}
+								NOT = {
+									trait = sympathy_finnish
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = graecoroman_group
+								}
+								NOT = {
+									trait = sympathy_graecoroman
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = indian_group
+								}
+								NOT = {
+									trait = sympathy_indian
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = indohelen_group
+								}
+								NOT = {
+									trait = sympathy_indohellens
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = inti_group
+								}
+								NOT = {
+									trait = sympathy_intis
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = inuit_group
+								}
+								NOT = {
+									trait = sympathy_inuit
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = jewish_group
+								}
+								NOT = {
+									trait = sympathy_judaism
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = luwian_group
+								}
+								NOT = {
+									trait = sympathy_luwians
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = mand_group
+								}
+								NOT = {
+									trait = sympathy_mande
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = mand_group
+								}
+								NOT = {
+									trait = sympathy_mande
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = mani_group
+								}
+								NOT = {
+									trait = sympathy_manichaeans
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = mithra_group
+								}
+								NOT = {
+									trait = sympathy_mithraics
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = muslim
+								}
+								NOT = {
+									trait = sympathy_islam
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = neoplato_group
+								}
+								NOT = {
+									trait = sympathy_platonics
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = norsegerman_group
+								}
+								NOT = {
+									trait = sympathy_nordic
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = pagan_group
+								}
+								NOT = {
+									trait = sympathy_pagans
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = palmyranpagan_group
+								}
+								NOT = {
+									trait = sympathy_palmyrans
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = serer_group
+								}
+								NOT = {
+									trait = sympathy_sererics
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = slavic_group
+								}
+								NOT = {
+									trait = sympathy_slavics
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = sol_group
+								}
+								NOT = {
+									trait = sympathy_sol
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = tengri_group
+								}
+								NOT = {
+									trait = sympathy_tengri
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = yazd_group
+								}
+								NOT = {
+									trait = sympathy_yazd
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = zal_group
+								}
+								NOT = {
+									trait = sympathy_zal
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = zoroastrian_group
+								}
+								NOT = {
+									trait = sympathy_zoroastrianism
+								}
+							}
+							AND = {
+								event_target:current_location = {
+									religion_group = african_group
+								}
+								NOT = {
+									trait = sympathy_african
+								}
+							}
 		        		}
 	        		}
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = abrahamic_group
+        				}
+        				NOT = {
+        					trait = sympathy_abrahamics
+        				}
+        			}
+        			add_trait = sympathy_abrahamics
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = anatolian_group
+        				}
+        				NOT = {
+        					trait = sympathy_anatolians
+        				}
+        			}
+        			add_trait = sympathy_anatolians
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = arabpagan_group
+        				}
+        				NOT = {
+        					trait = sympathy_arabpagans
+        				}
+        			}
+        			add_trait = sympathy_arabpagans
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = aztec_group
+        				}
+        				NOT = {
+        					trait = sympathy_aztecs
+        				}
+        			}
+        			add_trait = sympathy_aztecs
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = baltic_group
+        				}
+        				NOT = {
+        					trait = sympathy_baltics
+        				}
+        			}
+        			add_trait = sympathy_baltics
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = bantu_group
+        				}
+        				NOT = {
+        					trait = sympathy_bantus
+        				}
+        			}
+        			add_trait = sympathy_bantus
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = berberpagan_group
+        				}
+        				NOT = {
+        					trait = sympathy_berbers
+        				}
+        			}
+        			add_trait = sympathy_berbers
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = bud_group
+        				}
+        				NOT = {
+        					trait = sympathy_buddhists
+        				}
+        			}
+        			add_trait = sympathy_buddhists
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = celtic_group
+        				}
+        				NOT = {
+        					trait = sympathy_celtics
+        				}
+        			}
+        			add_trait = sympathy_celtics
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = chinese_group
+        				}
+        				NOT = {
+        					trait = sympathy_chinese
+        				}
+        			}
+        			add_trait = sympathy_chinese
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = east_african_group
+        				}
+        				NOT = {
+        					trait = sympathy_east_africans
+        				}
+        			}
+        			add_trait = sympathy_east_africans
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = egyptian_group
+        				}
+        				NOT = {
+        					trait = sympathy_egyptian
+        				}
+        			}
+        			add_trait = sympathy_egyptian
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = finnish_group
+        				}
+        				NOT = {
+        					trait = sympathy_finnish
+        				}
+        			}
+        			add_trait = sympathy_finnish
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = graecoroman_group
+        				}
+        				NOT = {
+        					trait = sympathy_graecoroman
+        				}
+        			}
+        			add_trait = sympathy_graecoroman
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = indian_group
+        				}
+        				NOT = {
+        					trait = sympathy_indian
+        				}
+        			}
+        			add_trait = sympathy_indian
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = indohelen_group
+        				}
+        				NOT = {
+        					trait = sympathy_indohellens
+        				}
+        			}
+        			add_trait = sympathy_indohellens
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = inti_group
+        				}
+        				NOT = {
+        					trait = sympathy_intis
+        				}
+        			}
+        			add_trait = sympathy_intis
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = inuit_group
+        				}
+        				NOT = {
+        					trait = sympathy_inuit
+        				}
+        			}
+        			add_trait = sympathy_inuit
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = jewish_group
+        				}
+        				NOT = {
+        					trait = sympathy_judaism
+        				}
+        			}
+        			add_trait = sympathy_judaism
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = luwian_group
+        				}
+        				NOT = {
+        					trait = sympathy_luwians
+        				}
+        			}
+        			add_trait = sympathy_luwians
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = mand_group
+        				}
+        				NOT = {
+        					trait = sympathy_mande
+        				}
+        			}
+        			add_trait = sympathy_mande
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = mani_group
+        				}
+        				NOT = {
+        					trait = sympathy_manichaeans
+        				}
+        			}
+        			add_trait = sympathy_manichaeans
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = mithra_group
+        				}
+        				NOT = {
+        					trait = sympathy_mithraics
+        				}
+        			}
+        			add_trait = sympathy_mithraics
         		}
         		if = {
         			limit = {
@@ -1350,18 +2099,29 @@ character_event = {
         			}
         			add_trait = sympathy_islam
         		}
-        		if = {
+				if = {
         			limit = {
         				event_target:current_location = {
-        					religion_group = zoroastrian_group
+        					religion_group = neoplato_group
         				}
         				NOT = {
-        					trait = sympathy_zoroastrianism
+        					trait = sympathy_platonics
         				}
         			}
-        			add_trait = sympathy_zoroastrianism
+        			add_trait = sympathy_platonics
         		}
-        		if = {
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = norsegerman_group
+        				}
+        				NOT = {
+        					trait = sympathy_nordic
+        				}
+        			}
+        			add_trait = sympathy_nordic
+        		}
+				if = {
         			limit = {
         				event_target:current_location = {
         					religion_group = pagan_group
@@ -1372,27 +2132,93 @@ character_event = {
         			}
         			add_trait = sympathy_pagans
         		}
-        		if = {
+				if = {
         			limit = {
         				event_target:current_location = {
-        					religion_group = jewish_group
+        					religion_group = palmyranpagan_group
         				}
         				NOT = {
-        					trait = sympathy_judaism
+        					trait = sympathy_palmyrans
         				}
         			}
-        			add_trait = sympathy_judaism
+        			add_trait = sympathy_palmyrans
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = serer_group
+        				}
+        				NOT = {
+        					trait = sympathy_sererics
+        				}
+        			}
+        			add_trait = sympathy_sererics
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = slavic_group
+        				}
+        				NOT = {
+        					trait = sympathy_slavics
+        				}
+        			}
+        			add_trait = sympathy_slavics
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = sol_group
+        				}
+        				NOT = {
+        					trait = sympathy_sol
+        				}
+        			}
+        			add_trait = sympathy_sol
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = tengri_group
+        				}
+        				NOT = {
+        					trait = sympathy_tengri
+        				}
+        			}
+        			add_trait = sympathy_tengri
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = yazd_group
+        				}
+        				NOT = {
+        					trait = sympathy_yazd
+        				}
+        			}
+        			add_trait = sympathy_yazd
+        		}
+				if = {
+        			limit = {
+        				event_target:current_location = {
+        					religion_group = zal_group
+        				}
+        				NOT = {
+        					trait = sympathy_zal
+        				}
+        			}
+        			add_trait = sympathy_zal
         		}
         		if = {
         			limit = {
         				event_target:current_location = {
-        					religion_group = indian_group
+        					religion_group = zoroastrian_group
         				}
         				NOT = {
-        					trait = sympathy_indian
+        					trait = sympathy_zoroastrianism
         				}
         			}
-        			add_trait = sympathy_indian
+        			add_trait = sympathy_zoroastrianism
         		}
 				if = {
         			limit = {
@@ -2301,71 +3127,401 @@ character_event = {
         		trait = kind
         	}
     		if = {
-    			limit = {
-    				event_target:current_location = {
-    					religion_group = muslim
-    				}
-    				NOT = {
-    					trait = sympathy_islam
-    				}
-    			}
-    			add_trait = sympathy_islam
-    		}
-    		if = {
-    			limit = {
-    				event_target:current_location = {
-    					religion_group = zoroastrian_group
-    				}
-    				NOT = {
-    					trait = sympathy_zoroastrianism
-    				}
-    			}
-    			add_trait = sympathy_zoroastrianism
-    		}
-    		if = {
-    			limit = {
-    				event_target:current_location = {
-    					religion_group = pagan_group
-    				}
-    				NOT = {
-    					trait = sympathy_pagans
-    				}
-    			}
-    			add_trait = sympathy_pagans
-    		}
-    		if = {
-    			limit = {
-    				event_target:current_location = {
-    					religion_group = jewish_group
-    				}
-    				NOT = {
-    					trait = sympathy_judaism
-    				}
-    			}
-    			add_trait = sympathy_judaism
-    		}
-    		if = {
-    			limit = {
-    				event_target:current_location = {
-    					religion_group = indian_group
-    				}
-    				NOT = {
-    					trait = sympathy_indian
-    				}
-    			}
-    			add_trait = sympathy_indian
-    		}
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = abrahamic_group
+        			}
+        			NOT = {
+        				trait = sympathy_abrahamics
+        			}
+        		}
+        		add_trait = sympathy_abrahamics
+        	}
 			if = {
-    			limit = {
-    				event_target:current_location = {
-    					religion_group = african_group
-    				}
-    				NOT = {
-    					trait = sympathy_african
-    				}
-    			}
-    			add_trait = sympathy_african
-    		}
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = anatolian_group
+        			}
+        			NOT = {
+        				trait = sympathy_anatolians
+        			}
+        		}
+        		add_trait = sympathy_anatolians
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = arabpagan_group
+        			}
+        			NOT = {
+        				trait = sympathy_arabpagans
+        			}
+        		}
+        		add_trait = sympathy_arabpagans
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = aztec_group
+        			}
+        			NOT = {
+        				trait = sympathy_aztecs
+        			}
+        		}
+        		add_trait = sympathy_aztecs
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = baltic_group
+        			}
+        			NOT = {
+        				trait = sympathy_baltics
+        			}
+        		}
+        		add_trait = sympathy_baltics
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = bantu_group
+        			}
+        			NOT = {
+        				trait = sympathy_bantus
+        			}
+        		}
+        		add_trait = sympathy_bantus
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = berberpagan_group
+        			}
+        			NOT = {
+        				trait = sympathy_berbers
+        			}
+        		}
+        		add_trait = sympathy_berbers
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = bud_group
+        			}
+        			NOT = {
+        				trait = sympathy_buddhists
+        			}
+        		}
+        		add_trait = sympathy_buddhists
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = celtic_group
+        			}
+        			NOT = {
+        				trait = sympathy_celtics
+        			}
+        		}
+        		add_trait = sympathy_celtics
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = chinese_group
+        			}
+        			NOT = {
+        				trait = sympathy_chinese
+        			}
+        		}
+        		add_trait = sympathy_chinese
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = east_african_group
+        			}
+        			NOT = {
+        				trait = sympathy_east_africans
+        			}
+        		}
+        		add_trait = sympathy_east_africans
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = egyptian_group
+        			}
+        			NOT = {
+        				trait = sympathy_egyptian
+        			}
+        		}
+        		add_trait = sympathy_egyptian
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = finnish_group
+        			}
+        			NOT = {
+        				trait = sympathy_finnish
+        			}
+        		}
+        		add_trait = sympathy_finnish
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = graecoroman_group
+        			}
+        			NOT = {
+        				trait = sympathy_graecoroman
+        			}
+        		}
+        		add_trait = sympathy_graecoroman
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = indian_group
+        			}
+        			NOT = {
+        				trait = sympathy_indian
+        			}
+        		}
+        		add_trait = sympathy_indian
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = indohelen_group
+        			}
+        			NOT = {
+        				trait = sympathy_indohellens
+        			}
+        		}
+        		add_trait = sympathy_indohellens
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = inti_group
+        			}
+        			NOT = {
+        				trait = sympathy_intis
+        			}
+        		}
+        		add_trait = sympathy_intis
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = inuit_group
+        			}
+        			NOT = {
+        				trait = sympathy_inuit
+        			}
+        		}
+        		add_trait = sympathy_inuit
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = jewish_group
+        			}
+        			NOT = {
+        				trait = sympathy_judaism
+        			}
+        		}
+        		add_trait = sympathy_judaism
+        	}
+			if = {
+        		limit = {
+					event_target:current_location = {
+        				religion_group = luwian_group
+        			}
+        			NOT = {
+        				trait = sympathy_luwians
+        			}
+        		}
+        		add_trait = sympathy_luwians
+        	}
+			if = {
+				limit = {
+					event_target:current_location = {
+						religion_group = mand_group
+        			}
+        			NOT = {
+        				trait = sympathy_mande
+        			}
+        		}
+        		add_trait = sympathy_mande
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = mani_group
+        			}
+        			NOT = {
+        				trait = sympathy_manichaeans
+        			}
+        		}
+        		add_trait = sympathy_manichaeans
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = mithra_group
+        			}
+        			NOT = {
+        				trait = sympathy_mithraics
+        			}
+        		}
+        		add_trait = sympathy_mithraics
+        	}
+        	if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = muslim
+        			}
+        			NOT = {
+        				trait = sympathy_islam
+        			}
+        		}
+        		add_trait = sympathy_islam
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = neoplato_group
+        			}
+        			NOT = {
+        				trait = sympathy_platonics
+        			}
+        		}
+        		add_trait = sympathy_platonics
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = norsegerman_group
+        			}
+        			NOT = {
+        				trait = sympathy_nordic
+        			}
+        		}
+        		add_trait = sympathy_nordic
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = pagan_group
+        			}
+        			NOT = {
+        				trait = sympathy_pagans
+        			}
+        		}
+        		add_trait = sympathy_pagans
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = palmyranpagan_group
+        			}
+        			NOT = {
+        				trait = sympathy_palmyrans
+        			}
+        		}
+        		add_trait = sympathy_palmyrans
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = serer_group
+        			}
+        			NOT = {
+        				trait = sympathy_sererics
+        			}
+        		}
+        		add_trait = sympathy_sererics
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = slavic_group
+        			}
+        			NOT = {
+        				trait = sympathy_slavics
+        			}
+        		}
+        		add_trait = sympathy_slavics
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = sol_group
+        			}
+        			NOT = {
+        				trait = sympathy_sol
+        			}
+        		}
+        		add_trait = sympathy_sol
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = tengri_group
+        			}
+        			NOT = {
+        				trait = sympathy_tengri
+        			}
+        		}
+        		add_trait = sympathy_tengri
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = yazd_group
+        			}
+        			NOT = {
+        				trait = sympathy_yazd
+        			}
+        		}
+        		add_trait = sympathy_yazd
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = zal_group
+        			}
+        			NOT = {
+        				trait = sympathy_zal
+        			}
+        		}
+        		add_trait = sympathy_zal
+        	}
+        	if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = zoroastrian_group
+        			}
+        			NOT = {
+        				trait = sympathy_zoroastrianism
+        			}
+        		}
+        		add_trait = sympathy_zoroastrianism
+        	}
+			if = {
+        		limit = {
+        			event_target:current_location = {
+        				religion_group = african_group
+        			}
+        			NOT = {
+        				trait = sympathy_african
+        			}
+        		}
+        		add_trait = sympathy_african
+        	}
         }
     }
     option = {

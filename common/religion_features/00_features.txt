@@ -74,7 +74,7 @@ religion_nature = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0.25		#Pacifists should be rarer in general in Random World.
@@ -482,7 +482,7 @@ religion_nature = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -579,7 +579,7 @@ religion_nature = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0.5		#Should be rarer than regular ones.
@@ -689,7 +689,7 @@ religion_nature = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0.5		#Should be rarer than regular ones.
@@ -754,7 +754,7 @@ religion_doctrine = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -807,7 +807,7 @@ religion_doctrine = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -834,7 +834,7 @@ religion_doctrine = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -864,7 +864,7 @@ religion_doctrine = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -1024,7 +1024,7 @@ religion_doctrine = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -1484,7 +1484,7 @@ religion_doctrine = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			modifier = {
                 factor = 1.5
@@ -1576,7 +1576,7 @@ religion_doctrine = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -1681,7 +1681,7 @@ religion_doctrine = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -1772,7 +1772,7 @@ religion_doctrine = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -1814,11 +1814,11 @@ religion_doctrine = {
 							OR = {
 								is_holy_site = khurmazta
 								is_holy_site = mandaean
-								is_holy_site = manichean
-								is_holy_site = mazdaki
-								is_holy_site = yazidi
+								is_holy_site = mani
+								is_holy_site = mazdakism
+								is_holy_site = yazidism
 								is_holy_site = zoroastrian
-								is_holy_site = zurvanist
+								is_holy_site = zurvanism
 							}
 						}
 					}
@@ -1860,7 +1860,7 @@ religion_doctrine = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -1900,7 +1900,7 @@ religion_doctrine = {
 						any_realm_title = {
 							OR = {
 								is_holy_site = hindu
-								is_holy_site = buddhist
+								is_holy_site = bud_zen
 								is_holy_site = jain
 								is_holy_site = taoist
 							}
@@ -1936,7 +1936,7 @@ religion_doctrine = {
 			modifier = { #Handles feature randomization in AltStart to make unreformed pagans still have "paganish" features.
 				factor = 0
 				has_game_started = no
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -4240,6 +4240,34 @@ religion_leadership = {
 							religion = nestorian
 							religion = syriac
 							religion = britannic_pagan
+							religion = vieti_orthodox
+							religion = melkite
+							religion = sabellianist
+							religion = arian
+							religion = adoptionist
+							religion = docetist
+							religion = apollinarist
+							religion = audianist
+							religion = pelagian
+							religion = semipelagian
+							religion = graeco_roman
+							religion = jupiter
+							religion = alexandros
+							religion = roman_imperial
+							religion = cybele
+							religion = mithra
+							religion = mithra_christ
+							religion = mithra_sol
+							religion = sol
+							religion = sol_christ
+							religion = sol_mani
+							religion = sol_apollo
+							religion = sol_boreas
+							religion = sol_islam
+							religion = sol_norse
+							religion = sol_slav
+							religion = sol_tsahay
+							religion = zal
 						}
 					}
 					set_can_excommunicate = yes
@@ -4258,6 +4286,8 @@ religion_leadership = {
 							religion = apostolic
 							religion = paulician
 							religion = messalian
+							religion = chalcedonian
+							religion = vieti_orthodox
 						}
 					}
 					set_autocephaly = yes
@@ -4282,18 +4312,74 @@ religion_leadership = {
 							religion = apostolic
 							religion = nestorian
 							religion = zoroastrian
-							religion = mazdaki
-							religion = zurvanist
-							religion = manichean
+							religion = mazdakism
+							religion = zurvanism
 							religion = khurmazta
 							religion = jewish
 							religion = samaritan
 							religion = karaite
 							religion = hindu
-							religion = buddhist
 							religion = jain
 							religion = taoist
-							religion_openly_in_celtic_subgroup_trigger = yes
+							religion = britannic_pagan
+							religion = bori
+							religion = vieti_orthodox
+							religion = chalcedonian
+							religion = almaqah
+							religion = bud_sthaviravada
+							religion = confucian
+							religion = shenjiao
+							religion = melkite
+							religion = sabellianist
+							religion = arian
+							religion = adoptionist
+							religion = docetist
+							religion = apollinarist
+							religion = solomonic_christ
+							religion = audianist
+							religion = pelagian
+							religion = semipelagian
+							religion = amun_reformed
+							religion = isis_reformed
+							religion = amun
+							religion = isis
+							religion = jupiter
+							religion = roman_imperial
+							religion = indohelen
+							religion = indoh_bud
+							religion = indoh_hindu
+							religion = indoh_zor
+							religion = mandaean
+							religion = mithra
+							religion = mithra_christ
+							religion = mithra_sol
+							religion = neoplato
+							religion = yoruba
+							religion = sol
+							religion = sol_christ
+							religion = sol_mani
+							religion = sol_apollo
+							religion = sol_boreas
+							religion = sol_islam
+							religion = sol_norse
+							religion = sol_slav
+							religion = sol_tsahay
+							religion = yazdanism
+							religion = zal
+							religion = zor_hindu
+							religion = ainu_pantheism_reformed
+							religion = ainu_pantheism
+							religion = nat
+							religion = sastsana_phi
+							religion = rmagao
+							religion = benzhujiao
+							religion = bimojiao
+							religion = ua_dab
+							religion = nugyauq
+							religion = thangiao
+							religion = shingyo
+							religion = nihon_shinto
+							religion = ryukyu_shinto
 						}
 					}
 					set_can_grant_divorce = yes
@@ -4315,14 +4401,37 @@ religion_leadership = {
 							religion = apostolic
 							religion = nestorian
 							religion = zoroastrian
-							religion = mazdaki
-							religion = zurvanist
-							religion = manichean
+							religion = mazdakism
+							religion = zurvanism
+							religion = mani
 							religion = khurmazta
 							religion = jewish
 							religion = samaritan
 							religion = karaite
 							religion = britannic_pagan
+							religion = vieti_orthodox
+							religion = confucian
+							religion = melkite
+							religion = sabellianist
+							religion = arian
+							religion = adoptionist
+							religion = docetist
+							religion = apollinarist
+							religion = audianist
+							religion = pelagian
+							religion = semipelagian
+							religion = mithra
+							religion = mithra_christ
+							religion = mithra_sol
+							religion = sol
+							religion = sol_christ
+							religion = sol_mani
+							religion = sol_apollo
+							religion = sol_boreas
+							religion = sol_islam
+							religion = sol_norse
+							religion = sol_slav
+							religion = sol_tsahay
 						}
 					}
 					set_can_grant_invasion_cb = yes
@@ -4335,6 +4444,49 @@ religion_leadership = {
 							religion = fraticelli
 							religion = lollard
 							religion = britannic_pagan
+							religion = bori
+							religion = almaqah
+							religion = orthodox
+							religion = melkite
+							religion = sabellianist
+							religion = arian
+							religion = adoptionist
+							religion = nestorian
+							religion = docetist
+							religion = monophysite
+							religion = monothelite
+							religion = apollinarist
+							religion = solomonic_christ
+							religion = audianist
+							religion = pelagian
+							religion = semipelagian
+							religion = amun_reformed
+							religion = isis_reformed
+							religion = amun
+							religion = isis
+							religion = jupiter
+							religion = roman_imperial
+							religion = indoh_bud
+							religion = indoh_hindu
+							religion = indoh_zor
+							religion = mithra
+							religion = mithra_christ
+							religion = mithra_sol
+							religion = sunni
+							religion = shiite
+							religion = ilm_islam
+							religion = yoruba
+							religion = sol
+							religion = sol_christ
+							religion = sol_mani
+							religion = sol_apollo
+							religion = sol_boreas
+							religion = sol_islam
+							religion = sol_norse
+							religion = sol_slav
+							religion = sol_tsahay
+							religion = zal
+							religion = zor_hindu
 						}
 					}
 					set_can_grant_claim = yes
@@ -4353,7 +4505,7 @@ religion_leadership = {
 				}
 				if = {
 					limit = { 
-						religion = buddhist
+						religion = bud_zen
 						NOT = {
 							has_alternate_start_parameter = { key = religion_names value = random }
 						}
@@ -4419,7 +4571,7 @@ religion_leadership = {
 				}
 				if = {
 					limit = {
-						religion = buddhist
+						religion = bud_zen
 						has_alternate_start_parameter = { key = religion_names value = random }
 					}
 					random_list = {

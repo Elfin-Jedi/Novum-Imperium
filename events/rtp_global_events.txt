@@ -1177,33 +1177,70 @@ character_event = {
 			}
 			save_event_target_as = rtp_province1 #The random province
 		}
+		if = {
+			limit = {
+				is_alternate_start = yes
+			}
+			random_character = {
+				save_event_target_as = random_guy
+			}
 
-		create_character = {
-			age = 25
-			random_traits = yes
-			culture = ashkenazi
-			religion = jewish
-			dynasty = random
-			female = yes
-		}
-		new_character = {
-			save_event_target_as = rtp_workshop_owner_spouse #The workshop owner spouse
-		}
-		create_character = {
-			age = 25
-			random_traits = yes
-			culture = ashkenazi
-			religion = jewish
-			dynasty = random
-			female = no
-		}
-		new_character = {
-			piety = 30
-			save_event_target_as = rtp_workshop_owner #The workshop owner
-		}
+			create_character = {
+				age = 25
+				random_traits = yes
+				culture = event_target:random_guy
+				religion = event_target:random_guy
+				dynasty = random
+				female = yes
+			}
+			new_character = {
+				save_event_target_as = rtp_workshop_owner_spouse #The workshop owner spouse
+			}
+			create_character = {
+				age = 25
+				random_traits = yes
+				culture = event_target:random_guy
+				religion = event_target:random_guy
+				dynasty = random
+				female = no
+			}
+			new_character = {
+				piety = 30
+				save_event_target_as = rtp_workshop_owner #The workshop owner
+			}
 
-		event_target:rtp_workshop_owner = {
-			add_spouse = event_target:rtp_workshop_owner_spouse #The workshop owner spouse
+			event_target:rtp_workshop_owner = {
+				add_spouse = event_target:rtp_workshop_owner_spouse #The workshop owner spouse
+			}
+		}
+		else = {
+			create_character = {
+				age = 25
+				random_traits = yes
+				culture = ashkenazi
+				religion = jewish
+				dynasty = random
+				female = yes
+			}
+			new_character = {
+				save_event_target_as = rtp_workshop_owner_spouse #The workshop owner spouse
+			}
+			create_character = {
+				age = 25
+				random_traits = yes
+				culture = ashkenazi
+				religion = jewish
+				dynasty = random
+				female = no
+			}
+			new_character = {
+				piety = 30
+				save_event_target_as = rtp_workshop_owner #The workshop owner
+			}
+
+			event_target:rtp_workshop_owner = {
+				add_spouse = event_target:rtp_workshop_owner_spouse #The workshop owner spouse
+			}
 		}
 	}
 
@@ -1219,7 +1256,7 @@ character_event = {
 			random = {
 				chance = 1
 
-				unsafe_religion = jewish
+				unsafe_religion = event_target:rtp_workshop_owner
 			}
 		}
 
@@ -1228,7 +1265,7 @@ character_event = {
 				random = {
 					chance = 5
 
-					religion = jewish
+					religion = event_target:rtp_workshop_owner
 				}
 			}
 		}

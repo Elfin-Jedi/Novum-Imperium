@@ -37,6 +37,8 @@ feudal_governments = {
 			bogomilist_merchant_republic_government
 			rtp_republic_g
 			rtp_privateer_g
+			playable_republic_government
+			playable_theocracy_government
 
 			rtp_theocracy_g
 
@@ -98,6 +100,8 @@ feudal_governments = {
 			bogomilist_merchant_republic_government
 			rtp_republic_g
 			rtp_privateer_g
+			playable_republic_government
+			playable_theocracy_government
 
 			rtp_theocracy_g
 
@@ -163,6 +167,8 @@ feudal_governments = {
 			bogomilist_merchant_republic_government
 			rtp_republic_g
 			rtp_privateer_g
+			playable_republic_government
+			playable_theocracy_government
 
 			rtp_theocracy_g
 
@@ -234,6 +240,8 @@ feudal_governments = {
 			bogomilist_merchant_republic_government
 			rtp_republic_g
 			rtp_privateer_g
+			playable_republic_government
+			playable_theocracy_government
 
 			rtp_theocracy_g
 
@@ -289,7 +297,7 @@ feudal_governments = {
 				OR = {
 					religion = bon
 					religion = bon_reformed
-					religion = buddhist
+					religion_group = bud_group
 				}
 				higher_tier_than = BARON
 			}
@@ -328,6 +336,8 @@ feudal_governments = {
 			bogomilist_merchant_republic_government
 			rtp_republic_g
 			rtp_privateer_g
+			playable_republic_government
+			playable_theocracy_government
 
 			rtp_theocracy_g
 
@@ -411,6 +421,8 @@ feudal_governments = {
 			bogomilist_merchant_republic_government
 			rtp_republic_g
 			rtp_privateer_g
+			playable_republic_government
+			playable_theocracy_government
 
 			rtp_theocracy_g
 
@@ -462,7 +474,7 @@ feudal_governments = {
 			OR = {
 				religion = bon
 				religion = bon_reformed
-				religion = buddhist
+				religion_group = bud_group
 			}
 			higher_tier_than = BARON
 			NAND = {
@@ -501,6 +513,8 @@ feudal_governments = {
 			bogomilist_merchant_republic_government
 			rtp_republic_g
 			rtp_privateer_g
+			playable_republic_government
+			playable_theocracy_government
 
 			rtp_theocracy_g
 
@@ -557,7 +571,7 @@ tribal_government = {
 				OR = {
 					religion = bon
 					religion = bon_reformed
-					religion = buddhist
+					religion_group = bud_group
 				}
 				higher_tier_than = BARON
 			}
@@ -595,6 +609,8 @@ tribal_government = {
 			bogomilist_merchant_republic_government
 			rtp_republic_g
 			rtp_privateer_g
+			playable_republic_government
+			playable_theocracy_government
 
 			rtp_theocracy_g
 

@@ -1204,7 +1204,7 @@ character_event = {
                     }
                     higher_tier_than = COUNT
                     owner = {
-                        religion_group = pagan_group
+                        novum_imperium_is_pagan = yes
                         independent = yes
                     }
                 }
@@ -1263,7 +1263,7 @@ narrative_event = {
                     }
                 }
                 any_neighbor_independent_ruler = {
-                    religion_group = pagan_group
+                    novum_imperium_is_pagan = yes
                 }
             }
             custom_tooltip = { text = EVTOPTA_HF_49101_TT }
@@ -1368,7 +1368,7 @@ character_event = {
                             region = custom_russia
                         }
                     }
-                    religion_group = pagan_group
+                    novum_imperium_is_pagan = yes
                     NOT = {
                         holy_order = yes
                         mercenary = yes
@@ -1682,7 +1682,7 @@ letter_event = {
         }
         else_if = {
             limit = {
-                event_target:northern_crusade_duchy_title = { holder_scope = { religion_group = pagan_group } }
+                event_target:northern_crusade_duchy_title = { holder_scope = { novum_imperium_is_pagan = yes } }
             }
             event_target:northern_crusade_duchy_title = {
                 holder_scope = { save_event_target_as = northern_crusade_target_character }
@@ -1691,12 +1691,12 @@ letter_event = {
         else_if = {
             limit = {
                 event_target:northern_crusade_duchy_title = {
-                    any_direct_de_jure_vassal_title = { holder_scope = { religion_group = pagan_group } }
+                    any_direct_de_jure_vassal_title = { holder_scope = { novum_imperium_is_pagan = yes } }
                 }
             }
             event_target:northern_crusade_duchy_title = {
                 random_direct_de_jure_vassal_title = {
-                    limit = { holder_scope = { religion_group = pagan_group } }
+                    limit = { holder_scope = { novum_imperium_is_pagan = yes } }
                     holder_scope = { save_event_target_as = northern_crusade_target_character }
                 }
             }
@@ -1931,7 +1931,7 @@ letter_event = {
         }
         else_if = {
             limit = {
-                event_target:northern_crusade_duchy_title = { holder_scope = { religion_group = pagan_group } }
+                event_target:northern_crusade_duchy_title = { holder_scope = { novum_imperium_is_pagan = yes } }
             }
             event_target:northern_crusade_duchy_title = {
                 holder_scope = { save_event_target_as = northern_crusade_target_character }
@@ -1940,12 +1940,12 @@ letter_event = {
         else_if = {
             limit = {
                 event_target:northern_crusade_duchy_title = {
-                    any_direct_de_jure_vassal_title = { holder_scope = { religion_group = pagan_group } }
+                    any_direct_de_jure_vassal_title = { holder_scope = { novum_imperium_is_pagan = yes } }
                 }
             }
             event_target:northern_crusade_duchy_title = {
                 random_direct_de_jure_vassal_title = {
-                    limit = { holder_scope = { religion_group = pagan_group } }
+                    limit = { holder_scope = { novum_imperium_is_pagan = yes } }
                     holder_scope = { save_event_target_as = northern_crusade_target_character }
                 }
             }
@@ -2046,7 +2046,7 @@ letter_event = {
         }
         else_if = {
             limit = {
-                event_target:northern_crusade_duchy_title = { holder_scope = { religion_group = pagan_group } }
+                event_target:northern_crusade_duchy_title = { holder_scope = { novum_imperium_is_pagan = yes } }
             }
             event_target:northern_crusade_duchy_title = {
                 holder_scope = { save_event_target_as = northern_crusade_target_character }
@@ -2056,13 +2056,13 @@ letter_event = {
             limit = {
                 event_target:northern_crusade_duchy_title = {
                     any_direct_de_jure_vassal_title = {
-                        holder_scope = { religion_group = pagan_group }
+                        holder_scope = { novum_imperium_is_pagan = yes }
                     }
                 }
             }
             event_target:northern_crusade_duchy_title = {
                 random_direct_de_jure_vassal_title = {
-                    limit = { holder_scope = { religion_group = pagan_group } }
+                    limit = { holder_scope = { novum_imperium_is_pagan = yes } }
                     holder_scope = { save_event_target_as = northern_crusade_target_character }
                 }
             }
@@ -2379,13 +2379,13 @@ narrative_event = {
             NOR = {
 				religion_group = FROM
 				emf_syncretized_religion_with_FROM = yes
-                religion_group = pagan_group
+                novum_imperium_is_pagan = yes
             }
         }
     }
     option = {
         name = EVTOPTD_HF_49113
-        trigger = { religion_group = pagan_group }
+        trigger = { novum_imperium_is_pagan = yes }
     }
 }
 

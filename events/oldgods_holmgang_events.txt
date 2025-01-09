@@ -19,7 +19,7 @@ character_event = {
 	min_age = 16
 	capable_only = yes
 	prisoner = no
-	religion_group = pagan_group
+	novum_imperium_is_pagan = yes
 
 	trigger = {
 		NOT = { practical_age = 50 }
@@ -146,7 +146,7 @@ character_event = {
 	min_age = 16
 	capable_only = yes
 	prisoner = no
-	religion_group = pagan_group
+	novum_imperium_is_pagan = yes
 
 	trigger = {
 		NOT = { practical_age = 50 }
@@ -306,7 +306,7 @@ character_event = {
 	only_playable = yes
 	capable_only = yes
 	prisoner = no
-	religion_group = pagan_group
+	novum_imperium_is_pagan = yes
 
 	trigger = {
 		NOT = { practical_age = 50 }

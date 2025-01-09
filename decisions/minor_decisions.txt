@@ -22,8 +22,8 @@ decisions = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 			NOR = {
-				religion = manichean
-				religion = yazidi
+				religion_group = mani_group
+				religion = yazidism
 				has_character_modifier = holding_large_feast
 				has_character_modifier = large_feast_timer
 				has_character_modifier = fabulous_feast
@@ -140,8 +140,8 @@ decisions = {
 			is_playable = yes
 			OR = {
 				religion_group = christian
-				religion = mazdaki
-				religion = manichean
+				religion = mazdakism
+				religion_group = mani_group
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 			prisoner = no
@@ -273,7 +273,7 @@ decisions = {
 			prisoner = no
 			OR = {
 				religion_group = christian
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				religion_group = zoroastrian_group
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -2466,7 +2466,7 @@ decisions = {
 			}
 			prisoner = no
 			AND = {
-				religion = buddhist
+				religion_group = bud_group
 				NOT = { capital_scope = { region = world_china } }
 			}
 			is_incapable = no
@@ -3078,7 +3078,7 @@ decisions = {
 			NOT = { is_inaccessible_trigger = yes }
 			is_adult = yes
 			prisoner = no
-			religion = manichean
+			religion_group = mani_group
 			NOT = { has_character_modifier = held_bema_timer }
 			NOT = {	has_character_flag = holding_bema }
 			NOT = {

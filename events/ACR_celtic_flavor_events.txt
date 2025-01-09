@@ -333,7 +333,7 @@ character_event = {
 	trigger = {
 		is_ill = yes
 		completely_controls = c_innse_gall
-		NOT = { religion_group = pagan_group }
+		NOT = { religion_group = celtic_group }
 		NOT = { has_global_flag = celtic_reformation }
 		OR = {
 			has_game_rule = {
@@ -439,24 +439,148 @@ character_event = {
 		name = celtic.210.a
 		
 		if = {
+			limit = { religion_group = abrahamic_group }
+			add_trait = sympathy_abrahamics
+		}
+		if = {
+			limit = { religion_group = anatolian_group }
+			add_trait = sympathy_anatolians
+		}
+		if = {
+			limit = { religion_group = arabpagan_group }
+			add_trait = sympathy_arabpagans
+		}
+		if = {
+			limit = { religion_group = aztec_group }
+			add_trait = sympathy_aztecs
+		}
+		if = {
+			limit = { religion_group = baltic_group }
+			add_trait = sympathy_baltics
+		}
+		if = {
+			limit = { religion_group = bantu_group }
+			add_trait = sympathy_bantus
+		}
+		if = {
+			limit = { religion_group = berberpagan_group }
+			add_trait = sympathy_berbers
+		}
+		if = {
+			limit = { religion_group = bud_group }
+			add_trait = sympathy_buddhists
+		}
+		if = {
+			limit = { religion_group = chinese_group }
+			add_trait = sympathy_chinese
+		}
+		if = {
 			limit = { religion_group = christian }
 			add_trait = sympathy_christendom
 		}
 		if = {
-			limit = { religion_group = muslim }
-			add_trait = sympathy_islam
+			limit = { religion_group = east_african_group }
+			add_trait = sympathy_east_africans
 		}
 		if = {
-			limit = { religion_group = zoroastrian_group }
-			add_trait = sympathy_zoroastrianism
+			limit = { religion_group = egyptian_group }
+			add_trait = sympathy_egyptian
+		}
+		if = {
+			limit = { religion_group = finnish_group }
+			add_trait = sympathy_finnish
+		}
+		if = {
+			limit = { religion_group = graecoroman_group }
+			add_trait = sympathy_graecoroman
 		}
 		if = {
 			limit = { religion_group = indian_group }
 			add_trait = sympathy_indian
 		}
 		if = {
+			limit = { religion_group = indohelen_group }
+			add_trait = sympathy_indohellens
+		}
+		if = {
+			limit = { religion_group = inti_group }
+			add_trait = sympathy_intis
+		}
+		if = {
+			limit = { religion_group = inuit_group }
+			add_trait = sympathy_inuit
+		}
+		if = {
 			limit = { religion_group = jewish_group }
 			add_trait = sympathy_judaism
+		}
+		if = {
+			limit = { religion_group = luwian_group }
+			add_trait = sympathy_luwians
+		}
+		if = {
+			limit = { religion_group = mand_group }
+			add_trait = sympathy_mande
+		}
+		if = {
+			limit = { religion_group = mani_group }
+			add_trait = sympathy_manichaeans
+		}
+		if = {
+			limit = { religion_group = mithra_group }
+			add_trait = sympathy_mithraics
+		}
+		if = {
+			limit = { religion_group = muslim }
+			add_trait = sympathy_islam
+		}
+		if = {
+			limit = { religion_group = neoplato_group }
+			add_trait = sympathy_platonics
+		}
+		if = {
+			limit = { religion_group = norsegerman_group }
+			add_trait = sympathy_nordic
+		}
+		if = {
+			limit = { religion_group = pagan_group }
+			add_trait = sympathy_pagans
+		}
+		if = {
+			limit = { religion_group = palmyranpagan_group }
+			add_trait = sympathy_palmyrans
+		}
+		if = {
+			limit = { religion_group = serer_group }
+			add_trait = sympathy_sererics
+		}
+		if = {
+			limit = { religion_group = slavic_group }
+			add_trait = sympathy_slavics
+		}
+		if = {
+			limit = { religion_group = sol_group }
+			add_trait = sympathy_sol
+		}
+		if = {
+			limit = { religion_group = tengri_group }
+			add_trait = sympathy_tengri
+		}
+		if = {
+			limit = { religion_group = yazd_group }
+			add_trait = sympathy_yazd
+		}
+		if = {
+			limit = { religion_group = zal_group }
+			add_trait = sympathy_zal
+		}
+		if = {
+			limit = { religion_group = zoroastrian_group }
+			add_trait = sympathy_zoroastrianism
+		}
+		if = {
+			limit = { religion_group = african_group }
+			add_trait = sympathy_african
 		}
 		
 		religion = celtic_pagan
@@ -549,10 +673,7 @@ narrative_event = {
 				religion_group = christian
 				religion_group = muslim
 				religion_group = zoroastrian_group
-				AND = {
-					religion_group = pagan_group
-					religion_openly_in_celtic_subgroup_trigger = no
-				}
+				religion_group = celtic_group
 			}
 		}
 	}

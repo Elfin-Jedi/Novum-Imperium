@@ -250,7 +250,7 @@ character_event = {
 						NOR = {
 							religion = zun_pagan
 							religion = zun_pagan_reformed
-							religion = buddhist
+							religion_group = bud_group
 							religion_group = muslim
 						}
 						OR = {
@@ -277,7 +277,7 @@ character_event = {
 				NOR = {
 					religion = zun_pagan
 					religion = zun_pagan_reformed
-					religion = buddhist
+					religion_group = bud_group
 					religion_group = muslim
 				}
 				OR = {
@@ -476,7 +476,7 @@ character_event = {
 				NOR = {
 					religion = zun_pagan
 					religion = zun_pagan_reformed
-					religion = buddhist
+					religion_group = bud_group
 					religion_group = muslim
 				}
 			}
@@ -617,7 +617,7 @@ character_event = {
 						OR = {
 							religion = zun_pagan
 							religion = zun_pagan_reformed
-							religion = buddhist
+							religion_group = bud_group
 							religion_group = muslim
 						}
 					}
@@ -629,7 +629,7 @@ character_event = {
 			limit = {
 				NOT = { religion = zun_pagan }
 				NOT = { religion = zun_pagan_reformed }
-				NOT = { religion = buddhist }
+				NOT = { religion_group = bud_group }
 				NOT = { religion_group = muslim }
 			}
 			add_character_modifier = {
@@ -648,7 +648,7 @@ character_event = {
 						}
 						NOT = { religion = zun_pagan }
 						NOT = { religion = zun_pagan_reformed }
-						NOT = { religion = buddhist }
+						NOT = { religion_group = bud_group }
 						NOT = { religion_group = muslim }
 					}
 					opinion = {
@@ -678,7 +678,7 @@ character_event = {
 		trigger = {
 			NOT = { religion = zun_pagan }
 			NOT = { religion = zun_pagan_reformed }
-			NOT = { religion = buddhist }
+			NOT = { religion_group = bud_group }
 			NOT = { religion_group = muslim }
 		}
 		remove_character_modifier = studying_the_stars

@@ -22,7 +22,7 @@ blg_headgear_alternate_leper = {
 		blg_culture_african = yes
 		blg_culture_roman = yes
 		culture_group = finno_ugric
-		likes_tibetans = yes
+		culture = bodpa
 	}
 }
 
@@ -37,19 +37,13 @@ blg_blocked_duke = {
 # Wears Chinese clothing.
 blg_clothes_chinese = {
 	has_dlc = "Jade Dragon"
-	OR = {
-		culture = han
-		culture = tangut
-	}
+	blg_culture_chinese = yes
 }
 
 # Wears Chinese headgear.
 blg_headgear_chinese = {
 	has_dlc = "Jade Dragon"
-	OR = {
-		culture = han
-		culture = tangut
-	}
+	blg_culture_chinese = yes
 }
 
 # Use the Chinese face jewelry.
@@ -67,6 +61,7 @@ blg_headgear_persian_crown = {
 		culture = tajik
 		culture = daylamite
 		culture = khorasani
+		culture = parthian
 	}
 }
 
@@ -86,6 +81,9 @@ blg_common_ducal_headgear = {
 		blg_culture_middleeast = yes
 		culture_group = west_african
 		culture_group = central_african
+		culture_group = bantu
+		culture_group = congo_nigerian
+		culture_group = north_african
 		culture_group = altaic
 		blg_culture_indian = yes
 		likes_mesoamericans = yes
@@ -185,7 +183,8 @@ blg_petty_king = {
 		culture = nepali
 		culture_group = arabic
 		culture_group = north_african
-		likes_tibetans = yes
+		culture = scottish
+		culture = irish
 	}
 }
 
@@ -204,11 +203,13 @@ blg_veiled_crown = {
 
 ### Culture groupings:
 
+# Uses afghan portraits.
 blg_culture_afghan = {
 	OR = {
 		culture = afghan
 		culture = baloch
 		culture = qufs
+		culture = saka
 	}
 }
 
@@ -217,6 +218,10 @@ blg_culture_african = {
 		culture_group = west_african
 		culture_group = central_african
 		culture_group = east_african
+		culture_group = bantu
+		culture_group = nilo_saharan
+		culture_group = congo_nigerian
+		culture_group = ethiopic
 	}
 }
 
@@ -225,6 +230,7 @@ blg_culture_byzantine = {
 		culture_group = byzantine
 		culture_group = israelite
 		culture_group = aramaic
+		culture_group = caucasian
 	}
 }
 
@@ -232,6 +238,7 @@ blg_culture_celtic = {
 	culture_group = celtic
 }
 
+# Uses Cuman hairstyles.
 blg_culture_central_asian = {
 	OR = {
 		culture = oghuz
@@ -241,19 +248,29 @@ blg_culture_central_asian = {
 		culture = karluk
 		culture = kirghiz
 		culture = uyghur
+		culture = hunnic
+		culture = xiongnu
 	}
 }
 
+# Uses German and Dutch portraits.
 blg_culture_central_germanic = {
-	culture_group = central_germanic
+	OR = {
+		culture = dutch
+		culture_group = central_germanic
+	}
 }
 
+
+# Chinese adjacent cultures.
 blg_culture_chinese = {
 	OR = {
 		culture_group = chinese_group
 		culture = khitan
 		culture = jurchen
 		culture = tangut
+		culture = zhao
+		culture = viethellenic
 	}
 }
 
@@ -291,6 +308,7 @@ blg_culture_france = {
 		culture = norman
 		culture = dutch
 		culture = low_frankish
+		culture = galloroman
 	}
 }
 
@@ -309,18 +327,28 @@ blg_culture_greek = {
 }
 
 blg_culture_iberian = {
-	culture_group = iberian
+	OR = {
+		culture_group = iberian
+		culture = catalan
+	}
 }
 
 blg_culture_indian = {
 	OR = {
-		culture_group = indo_aryan_group
+		culture_group = indoaryan
 		culture_group = dravidian_group
+		culture_group = austronesian
 	}
 }
 
 blg_culture_israelite = {
-	culture_group = israelite
+	OR = {
+		culture_group = israelite
+		culture = syroaramean
+		culture = nabatean
+		culture = phoenician
+		culture = saqaliba
+	}
 }
 
 blg_culture_italian = {
@@ -344,6 +372,7 @@ blg_culture_middleeast = {
 	}
 }
 
+# Uses Norse-like portraits.
 blg_culture_northern = {
 	OR = {
 		culture_group = north_germanic
@@ -352,9 +381,16 @@ blg_culture_northern = {
 }
 
 blg_culture_roman = {
-	culture = roman
+	OR = {
+		culture = roman
+		culture = dacian
+		culture = romanobrython
+		culture = galloroman
+		culture = romanogothic
+	}
 }
 
+# Uses Saxon portraits.
 blg_culture_saxon = {
 	OR = {
 		culture = saxon
@@ -372,6 +408,7 @@ blg_culture_scottish = {
 	}
 }
 
+# Uses Sogdian portraits.
 blg_culture_sogdian = {
 	OR = {
 		culture = sogdian
@@ -382,12 +419,16 @@ blg_culture_sogdian = {
 	}
 }
 
+# Uses Somali portraits.
 blg_culture_somali = {
 	OR = {
 		culture = somali
 		culture = afar
 		culture = daju
 		culture = beja
+		culture = macrobian
+		culture = fur
+		culture = swahili
 	}
 }
 
@@ -421,6 +462,10 @@ blg_portrait_african = {
 		portrait_culture_group = central_african
 		portrait_culture_group = east_african
 		portrait_culture_group = north_african
+		portrait_culture_group = bantu
+		portrait_culture_group = nilo_saharan
+		portrait_culture_group = congo_nigerian
+		portrait_culture_group = ethiopic
 		portrait_culture_group = mesoamerican
 	}
 }
@@ -432,11 +477,16 @@ blg_portrait_arabic = {
 		portrait_culture_group = central_african
 		portrait_culture_group = east_african
 		portrait_culture_group = north_african
+		portrait_culture_group = nilo_saharan
+		portrait_culture_group = ethiopic
 	}
 }
 
 blg_portrait_byzantine = {
-	portrait_culture_group = byzantine
+	OR = {
+		portrait_culture_group = byzantine
+		portrait_culture_group = caucasian
+	}
 }
 
 blg_portrait_chinese = {
@@ -456,14 +506,16 @@ blg_portrait_european = {
 		portrait_culture_group = west_slavic
 		portrait_culture_group = south_slavic
 		portrait_culture_group = magyar
+		portrait_culture = saqaliba
 	}
 }
 
 blg_portrait_indian = {
 	OR = {
-		portrait_culture_group = indo_aryan_group
+		portrait_culture_group = indoaryan
 		portrait_culture_group = dravidian_group
 		portrait_culture_group = tibetan_group
+		portrait_culture_group = austronesian
 	}
 }
 
@@ -474,6 +526,8 @@ blg_portrait_middleeast = {
 		portrait_culture_group = east_african
 		portrait_culture_group = israelite
 		portrait_culture_group = aramaic
+		portrait_culture_group = ethiopic
+		portrait_culture_group = north_african
 	}
 }
 
@@ -505,6 +559,7 @@ blg_portrait_slavic = {
 		portrait_culture_group = south_slavic
 		portrait_culture_group = baltic
 		portrait_culture_group = magyar
+		portrait_culture = saqaliba
 	}
 }
 
@@ -513,5 +568,6 @@ blg_portrait_steppes = {
 		portrait_culture_group = altaic
 		portrait_culture_group = magyar
 		portrait_culture_group = chinese_group
+		portrait_culture_group = inuit
 	}
 }

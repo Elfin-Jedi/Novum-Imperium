@@ -33,14 +33,31 @@ ungracz_effect = {
 	clr_character_flag = gracz32
 }
 create_heir_title_effect = {
-	create_title = {
-  		tier = DUKE
- 		name = "Landless"
- 		holder = THIS
-		landless = yes
+	grant_title_no_opinion = c_landless_t
+	if = {
+		limit = {
+			dynasty = none
+		}
+		dynasty = 19930
+		set_government_type = rtp_lowborn_g
+		primary_title = {
+			gender_succ = true_cognatic
+			add_law = {
+				law = rtp_lowborn_succ
+				cooldown = no
+				opinion_effect = no
+			}
+		}
 	}
-	new_title = {
-		set_title_flag = title_for_landless
-		set_coa = k_nastepcadummy
+	else = {
+		set_government_type = rtp_noble_g
+		primary_title = {
+			gender_succ = true_cognatic
+			add_law = {
+				law = rtp_family_election_succ
+				cooldown = no
+				opinion_effect = no
+			}
+		}
 	}
 }

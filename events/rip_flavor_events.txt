@@ -3047,7 +3047,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { religion_group = pagan_group }
+				NOT = { novum_imperium_is_pagan = yes }
 			}
 		}
 
@@ -8143,7 +8143,7 @@ character_event = {
 			mother = { ai = no }
 		}
 		OR = {
-			religion = manichean
+			religion_group = mani_group
 			religion = west_african_pagan_reformed
 			religion = west_african_pagan
 		}

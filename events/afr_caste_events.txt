@@ -12,7 +12,6 @@ character_event = {
         tier = BARON
         OR = {
             religion = hindu
-            religion = buddhist
             religion = jain
             religion = a_tag_roog
             religion = a_tag_roog_reformed
@@ -23,7 +22,6 @@ character_event = {
             AND = {
                 OR = {
                     religion = hindu
-                    religion = buddhist
                     religion = jain
                 }
                 is_republic = yes
@@ -32,7 +30,6 @@ character_event = {
             AND = {
                 OR = {
                     religion = hindu
-                    religion = buddhist
                     religion = jain
                 }
                 is_theocracy = yes
@@ -41,7 +38,6 @@ character_event = {
             AND = {
                 OR = {
                     religion = hindu
-                    religion = buddhist
                     religion = jain
                 }
                 is_republic = no
@@ -87,7 +83,6 @@ character_event = {
             limit = {
                 OR = {
                     religion = hindu
-                    religion = buddhist
                     religion = jain
                 }
             }
@@ -157,7 +152,6 @@ character_event = {
                 OR = {
                     religion = jain
                     religion = hindu
-                    religion = buddhist
                 }
                 OR = {
                     trait = wangara
@@ -218,7 +212,6 @@ character_event = {
                 OR = {
                     religion = jain
                     religion = hindu
-                    religion = buddhist
                 }
             }
             if = {

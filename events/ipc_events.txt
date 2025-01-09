@@ -1237,7 +1237,7 @@ character_event = {
 					20 = {
 						trigger = { 
 							OR = { 
-								culture_group = indo_aryan_group 
+								culture_group = indoaryan
 								culture_group = dravidian_group
 							}
 						}
@@ -3355,7 +3355,7 @@ character_event = {
 					OR = {
 						religion_group = christian
 						religion_group = jewish_group
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 						has_dharmic_religion_trigger = yes
 					}
 					NOT = { has_assigned_minor_title = title_court_jester }
@@ -3691,7 +3691,7 @@ character_event = {
 				}
 				modifier = {
 					factor = 1.5
-					FROM = { religion_group = pagan_group }
+					FROM = { novum_imperium_is_pagan = yes }
 				}
 				prestige = -100
 			}
@@ -3700,7 +3700,7 @@ character_event = {
 			factor = 20
 			modifier = {
 				factor = 0.5
-				FROM = { religion_group = pagan_group }
+				FROM = { novum_imperium_is_pagan = yes }
 			}
 			modifier = {
 				factor = 2

@@ -549,25 +549,48 @@ letter_event = { #SUCCESS: Welcome to the society!
             add_society_currency_medium_effect = yes
         }
 
-        if = { # Give Sympathy trait if appropriate...
+		if = { # Give Sympathy trait if appropriate...
             limit = {
-				NOR = { 
-					religion_group = pagan_group
-					event_target:warrior_lodge_to_join = {
-						is_society = warrior_lodge_west_african
-					}
-					event_target:warrior_lodge_to_join = { 
-						leader = { 
-							is_member_of_non_pagan_warrior_lodge_trigger = yes
-						} 
-					}
-					event_target:hero_character = {
-						is_member_of_non_pagan_warrior_lodge_trigger = yes
-					}
-				}
+                event_target:warrior_lodge_to_join = { is_society = warrior_lodge_norse }
+                NOT = { religion_group = norsegerman_group }
             }
-            #Give Sympathy trait
-            add_trait = sympathy_pagans
+			#Give Sympathy trait
+            add_trait = sympathy_nordic
+        }
+		if = {
+            limit = {
+                event_target:warrior_lodge_to_join = { is_society = warrior_lodge_tengri }
+                NOT = { religion_group = tengri_group }
+            }
+            add_trait = sympathy_tengri
+        }
+		if = {
+            limit = {
+                event_target:warrior_lodge_to_join = { is_society = warrior_lodge_baltic }
+                NOT = { religion_group = baltic_group }
+            }
+            add_trait = sympathy_baltics
+        }
+		if = {
+            limit = {
+                event_target:warrior_lodge_to_join = { is_society = warrior_lodge_finnish }
+                NOT = { religion_group = finnish_group }
+            }
+            add_trait = sympathy_finnish
+        }
+		if = {
+            limit = {
+                event_target:warrior_lodge_to_join = { is_society = warrior_lodge_slavic }
+                NOT = { religion_group = slavic_group }
+            }
+            add_trait = sympathy_slavics
+        }
+		if = {
+            limit = {
+                event_target:warrior_lodge_to_join = { is_society = warrior_lodge_west_african }
+                NOT = { religion_group = serer_group }
+            }
+            add_trait = sympathy_sererics
         }
 		if = {
             limit = {
@@ -575,6 +598,104 @@ letter_event = { #SUCCESS: Welcome to the society!
                 NOT = { religion_group = african_group }
             }
             add_trait = sympathy_african
+        }
+		if = {
+            limit = {
+                event_target:warrior_lodge_to_join = { is_society = warrior_lodge_zun }
+                NOT = { religion_group = sol_group }
+            }
+            add_trait = sympathy_sol
+        }
+		if = {
+            limit = {
+                event_target:warrior_lodge_to_join = { is_society = warrior_lodge_bon }
+                NOT = { religion_group = chinese_group }
+            }
+            add_trait = sympathy_chinese
+        }
+		if = {
+            limit = {
+                event_target:warrior_lodge_to_join = { is_society = warrior_lodge_hellenic }
+                NOT = { religion_group = graecoroman_group }
+            }
+            add_trait = sympathy_graecoroman
+        }
+		if = {
+            limit = {
+                event_target:warrior_lodge_to_join = { is_society = warrior_lodge_aztec }
+                NOT = { religion_group = aztec_group }
+            }
+            add_trait = sympathy_aztecs
+        }
+		if = {
+            limit = {
+                event_target:warrior_lodge_to_join = { is_society = warrior_lodge_cws_christian }
+                NOT = { religion_group = christian }
+            }
+            add_trait = sympathy_christendom
+        }
+		if = {
+            limit = {
+                event_target:warrior_lodge_to_join = { is_society = warrior_lodge_ws_mazdan }
+                NOT = { religion_group = zoroastrian_group }
+            }
+            add_trait = sympathy_zoroastrianism
+        }
+		if = {
+            limit = {
+                event_target:warrior_lodge_to_join = { is_society = warrior_lodge_ws_eastern }
+                NOT = { religion_group = indian_group }
+            }
+            add_trait = sympathy_indian
+        }
+		if = {
+            limit = {
+                event_target:warrior_lodge_to_join = { is_society = warrior_lodge_ws_eastern }
+                NOT = { religion_group = bud_group }
+            }
+            add_trait = sympathy_buddhists
+        }
+		if = {
+            limit = {
+                event_target:warrior_lodge_to_join = { is_society = warrior_lodge_ws_muslim }
+                NOT = { religion_group = muslim }
+            }
+            add_trait = sympathy_islam
+        }
+		if = {
+            limit = {
+                event_target:warrior_lodge_to_join = { is_society = warrior_lodge_ws_jewish }
+                NOT = { religion_group = jewish_group }
+            }
+            add_trait = sympathy_judaism
+        }
+		if = {
+            limit = {
+                event_target:warrior_lodge_to_join = { is_society = warrior_lodge_celtic }
+                NOT = { religion_group = celtic_group }
+            }
+            add_trait = sympathy_celtics
+        }
+		if = {
+            limit = {
+                event_target:warrior_lodge_to_join = { is_society = warrior_lodge_britannic }
+                NOT = { religion_group = celtic_group }
+            }
+            add_trait = sympathy_celtics
+        }
+		if = {
+            limit = {
+                event_target:warrior_lodge_to_join = { is_society = warrior_lodge_titan }
+                NOT = { religion_group = graecoroman_group }
+            }
+            add_trait = sympathy_graecoroman
+        }
+		if = {
+            limit = {
+                event_target:warrior_lodge_to_join = { is_society = warrior_lodge_egyptian }
+                NOT = { religion_group = egyptian_group }
+            }
+            add_trait = sympathy_egyptian
         }
 
         hidden_effect = {

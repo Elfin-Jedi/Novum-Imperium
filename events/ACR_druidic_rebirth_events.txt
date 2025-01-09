@@ -108,9 +108,9 @@ character_event = {
 			piety = -50
 			if = {
 				limit = {
-					NOT = { religion_group = pagan_group }
+					NOT = { religion_group = celtic_group }
 				}
-				add_trait = sympathy_pagans
+				add_trait = sympathy_celtics
 			}
 			add_character_modifier = {
 				name = celtic_ways
@@ -198,7 +198,7 @@ character_event = {
 	option = {
 		name = celtic.2.b
 		piety = 50
-		remove_trait = sympathy_pagans
+		remove_trait = sympathy_celtics
 		ai_chance = { factor = 50 }
 		remove_character_modifier = celtic_ways
 		religion_head = {
@@ -260,9 +260,9 @@ character_event = {
 			piety = -50
 			if = {
 				limit = {
-					NOT = { religion_group = pagan_group }
+					NOT = { religion_group = celtic_group }
 				}
-				add_trait = sympathy_pagans
+				add_trait = sympathy_celtics
 			}
 			add_character_modifier = {
 				name = celtic_ways

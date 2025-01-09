@@ -251,7 +251,7 @@ narrative_event = {
 				higher_real_tier_than = DUKE
 				event_target:sponsoring_king = {
 					religion_group = indian_group
-					NOT = { religion = buddhist }
+					NOT = { religion_group = bud_group }
 				}
 			}
 			ROOT = { give_nickname = nick_the_purified }
@@ -260,7 +260,7 @@ narrative_event = {
 			limit = {
 				NOT = { has_nickname = yes }
 				higher_real_tier_than = DUKE
-				event_target:sponsoring_king = { OR = { religion = buddhist religion = bon_reformed } }
+				event_target:sponsoring_king = { OR = { religion_group = bud_group religion = bon_reformed } }
 			}
 			ROOT = { give_nickname = nick_the_illuminated }
 		}
@@ -269,7 +269,7 @@ narrative_event = {
 				NOT = { has_nickname = yes }
 				higher_real_tier_than = DUKE
 				event_target:sponsoring_king = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOT = { religion = west_african_pagan_reformed }
 					NOT = { religion = tengri_pagan_reformed }
 					NOT = { religion = zun_pagan_reformed }
@@ -845,7 +845,7 @@ narrative_event = {
 		if = {
 			limit = {
 				NOT = { has_nickname = yes }
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				NOT = { religion = west_african_pagan_reformed }
 				NOT = { religion = tengri_pagan_reformed }
 				NOT = { religion = zun_pagan_reformed }
@@ -1263,7 +1263,7 @@ letter_event = {
 			modifier = {
 				factor = 1.5
 				NOT =  { religion = event_target:sponsoring_king }
-				NOT =  { religion_group = pagan_group }
+				NOT =  { novum_imperium_is_pagan = yes }
 			}
 			modifier = {
 				factor = 0.3
@@ -1453,7 +1453,7 @@ letter_event = {
 					OR = {
 						religion_group = christian
 						religion_group = muslim
-						religion = buddhist
+						religion_group = bud_group
 						religion = jain
 					}
 				}
@@ -1466,34 +1466,154 @@ letter_event = {
 					trait = shy
 					trait = kind
 				}
-				event_target:sponsoring_king = { religion_group = pagan_group }
+				event_target:sponsoring_king = { novum_imperium_is_pagan = yes }
 			}
 			modifier = {
 				factor = 0.4
 				OR = {
 					AND = {
+						trait = sympathy_abrahamics
+						event_target:sponsoring_king = { religion_group = abrahamic_group }
+					}
+					AND = {
+						trait = sympathy_anatolians
+						event_target:sponsoring_king = { religion_group = anatolian_group }
+					}
+					AND = {
+						trait = sympathy_arabpagans
+						event_target:sponsoring_king = { religion_group = arabpagan_group }
+					}
+					AND = {
+						trait = sympathy_aztecs
+						event_target:sponsoring_king = { religion_group = aztec_group }
+					}
+					AND = {
+						trait = sympathy_baltics
+						event_target:sponsoring_king = { religion_group = baltic_group }
+					}
+					AND = {
+						trait = sympathy_bantus
+						event_target:sponsoring_king = { religion_group = bantu_group }
+					}
+					AND = {
+						trait = sympathy_berbers
+						event_target:sponsoring_king = { religion_group = berberpagan_group }
+					}
+					AND = {
+						trait = sympathy_buddhists
+						event_target:sponsoring_king = { religion_group = bud_group }
+					}
+					AND = {
+						trait = sympathy_celtics
+						event_target:sponsoring_king = { religion_group = celtic_group }
+					}
+					AND = {
+						trait = sympathy_chinese
+						event_target:sponsoring_king = { religion_group = chinese_group }
+					}
+					AND = {
 						trait = sympathy_christendom
 						event_target:sponsoring_king = { religion_group = christian }
 					}
 					AND = {
-						trait = sympathy_islam
-						event_target:sponsoring_king = { religion_group = muslim }
+						trait = sympathy_east_africans
+						event_target:sponsoring_king = { religion_group = east_african_group }
 					}
 					AND = {
-						trait = sympathy_pagans
-						event_target:sponsoring_king = { religion_group = pagan_group }
+						trait = sympathy_egyptian
+						event_target:sponsoring_king = { religion_group = egyptian_group }
 					}
 					AND = {
-						trait = sympathy_zoroastrianism
-						event_target:sponsoring_king = { religion_group = zoroastrian_group }
+						trait = sympathy_finnish
+						event_target:sponsoring_king = { religion_group = finnish_group }
+					}
+					AND = {
+						trait = sympathy_graecoroman
+						event_target:sponsoring_king = { religion_group = graecoroman_group }
+					}
+					AND = {
+						trait = sympathy_indian
+						event_target:sponsoring_king = { religion_group = indian_group }
+					}
+					AND = {
+						trait = sympathy_indohellens
+						event_target:sponsoring_king = { religion_group = indohelen_group }
+					}
+					AND = {
+						trait = sympathy_intis
+						event_target:sponsoring_king = { religion_group = inti_group }
+					}
+					AND = {
+						trait = sympathy_inuit
+						event_target:sponsoring_king = { religion_group = inuit_group }
 					}
 					AND = {
 						trait = sympathy_judaism
 						event_target:sponsoring_king = { religion_group = jewish_group }
 					}
 					AND = {
-						trait = sympathy_indian
-						event_target:sponsoring_king = { religion_group = indian_group }
+						trait = sympathy_luwians
+						event_target:sponsoring_king = { religion_group = luwian_group }
+					}
+					AND = {
+						trait = sympathy_mande
+						event_target:sponsoring_king = { religion_group = mand_group }
+					}
+					AND = {
+						trait = sympathy_manichaeans
+						event_target:sponsoring_king = { religion_group = mani_group }
+					}
+					AND = {
+						trait = sympathy_mithraics
+						event_target:sponsoring_king = { religion_group = mithra_group }
+					}
+					AND = {
+						trait = sympathy_islam
+						event_target:sponsoring_king = { religion_group = muslim }
+					}
+					AND = {
+						trait = sympathy_platonics
+						event_target:sponsoring_king = { religion_group = neoplato_group }
+					}
+					AND = {
+						trait = sympathy_nordic
+						event_target:sponsoring_king = { religion_group = norsegerman_group }
+					}
+					AND = {
+						trait = sympathy_pagans
+						event_target:sponsoring_king = { religion_group = pagan_group }
+					}
+					AND = {
+						trait = sympathy_palmyrans
+						event_target:sponsoring_king = { religion_group = palmyranpagan_group }
+					}
+					AND = {
+						trait = sympathy_sererics
+						event_target:sponsoring_king = { religion_group = serer_group }
+					}
+					AND = {
+						trait = sympathy_slavics
+						event_target:sponsoring_king = { religion_group = slavic_group }
+					}
+					AND = {
+						trait = sympathy_sol
+						event_target:sponsoring_king = { religion_group = sol_group }
+					}
+					AND = {
+						trait = sympathy_tengri
+						event_target:sponsoring_king = { religion_group = tengri_group }
+					}
+					AND = {
+						trait = sympathy_yazd
+						event_target:sponsoring_king = { religion_group = yazd_group }
+					}
+					AND = {
+						trait = sympathy_zal
+						event_target:sponsoring_king = { religion_group = zal_group }
+					}
+					AND = {
+						trait = sympathy_zoroastrianism
+						event_target:sponsoring_king = { religion_group = zoroastrian_group }
 					}
 					AND = {
 						trait = sympathy_african
@@ -1861,6 +1981,116 @@ narrative_event = {
 			limit = {
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
+				religion_group = abrahamic_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_abrahamics
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = anatolian_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_anatolians
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = arabpagan_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_arabpagans
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = aztec_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_aztecs
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = baltic_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_baltics
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = bantu_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_bantus
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = berberpagan_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_berbers
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = bud_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_buddhists
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = celtic_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_celtics
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = chinese_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_chinese
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
 				religion_group = christian
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
@@ -1872,33 +2102,88 @@ narrative_event = {
 			limit = {
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
-				religion_group = muslim
+				religion_group = east_african_group
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
 			random = { chance = 60
-				add_trait = sympathy_islam
+				add_trait = sympathy_east_africans
 			}
 		}
 		if = {
 			limit = {
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
-				religion_group = pagan_group
+				religion_group = egyptian_group
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
 			random = { chance = 60
-				add_trait = sympathy_pagans
+				add_trait = sympathy_egyptian
 			}
 		}
 		if = {
 			limit = {
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
-				religion_group = zoroastrian_group
+				religion_group = finnish_group
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
 			random = { chance = 60
-				add_trait = sympathy_zoroastrianism
+				add_trait = sympathy_finnish
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = graecoroman_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_graecoroman
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = indian_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_indian
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = indohelen_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_indohellens
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = inti_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_intis
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = inuit_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_inuit
 			}
 		}
 		if = {
@@ -1916,11 +2201,176 @@ narrative_event = {
 			limit = {
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
-				religion_group = indian_group
+				religion_group = luwian_group
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
 			random = { chance = 60
-				add_trait = sympathy_indian
+				add_trait = sympathy_luwians
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = mand_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_mande
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = mani_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_manichaeans
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = mithra_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_mithraics
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = muslim
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_islam
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = neoplato_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_platonics
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = norsegerman_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_nordic
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = pagan_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_pagans
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = palmyranpagan_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_palmyrans
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = serer_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_sererics
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = slavic_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_slavics
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = sol_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_sol
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = tengri_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_tengri
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = yazd_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_yazd
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = zal_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_zal
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = zoroastrian_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_zoroastrianism
 			}
 		}
 		if = { 
@@ -1937,6 +2387,116 @@ narrative_event = {
 		if = {
 			limit = {
 				trait = zealous
+				religion_group = abrahamic_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_abrahamics
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = anatolian_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_anatolians
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = arabpagan_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_arabpagans
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = aztec_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_aztecs
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = baltic_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_baltics
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = bantu_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_bantus
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = berberpagan_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_berbers
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = bud_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_buddhists
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = celtic_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_celtics
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = chinese_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_chinese
+		}
+		if = {
+			limit = {
+				trait = zealous
 				religion_group = christian
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
@@ -1948,35 +2508,90 @@ narrative_event = {
 		if = {
 			limit = {
 				trait = zealous
-				religion_group = muslim
+				religion_group = east_african_group
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
 			remove_trait = zealous
 			hidden_tooltip = { character_event = { id = 38310 } } #Notification
 			piety = -20
-			add_trait = sympathy_islam
+			add_trait = sympathy_east_africans
 		}
 		if = {
 			limit = {
 				trait = zealous
-				religion_group = pagan_group
+				religion_group = egyptian_group
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
 			remove_trait = zealous
 			hidden_tooltip = { character_event = { id = 38310 } } #Notification
 			piety = -20
-			add_trait = sympathy_pagans
+			add_trait = sympathy_egyptian
 		}
 		if = {
 			limit = {
 				trait = zealous
-				religion_group = zoroastrian_group
+				religion_group = finnish_group
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
 			remove_trait = zealous
 			hidden_tooltip = { character_event = { id = 38310 } } #Notification
 			piety = -20
-			add_trait = sympathy_zoroastrianism
+			add_trait = sympathy_finnish
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = graecoroman_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_graecoroman
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = indian_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_indian
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = indohelen_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_indohellens
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = inti_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_intis
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = inuit_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_inuit
 		}
 		if = {
 			limit = {
@@ -1992,13 +2607,178 @@ narrative_event = {
 		if = {
 			limit = {
 				trait = zealous
-				religion_group = indian_group
+				religion_group = luwian_group
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
 			remove_trait = zealous
 			hidden_tooltip = { character_event = { id = 38310 } } #Notification
 			piety = -20
-			add_trait = sympathy_indian
+			add_trait = sympathy_luwians
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = mand_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_mande
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = mani_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_manichaeans
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = mithra_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_mithraics
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = muslim
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_islam
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = neoplato_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_platonics
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = norsegerman_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_nordic
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = pagan_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_pagans
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = palmyranpagan_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_palmyrans
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = serer_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_sererics
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = slavic_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_slavics
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = sol_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_sol
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = tengri_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_tengri
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = yazd_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_yazd
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = zal_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_zal
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = zoroastrian_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_zoroastrianism
 		}
 		if = { 
 			limit = { 
@@ -2226,6 +3006,116 @@ narrative_event = {
 			limit = {
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
+				religion_group = abrahamic_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_abrahamics
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = anatolian_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_anatolians
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = arabpagan_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_arabpagans
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = aztec_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_aztecs
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = baltic_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_baltics
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = bantu_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_bantus
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = berberpagan_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_berbers
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = bud_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_buddhists
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = celtic_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_celtics
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = chinese_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_chinese
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
 				religion_group = christian
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
@@ -2237,33 +3127,88 @@ narrative_event = {
 			limit = {
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
-				religion_group = muslim
+				religion_group = east_african_group
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
 			random = { chance = 60
-				add_trait = sympathy_islam
+				add_trait = sympathy_east_africans
 			}
 		}
 		if = {
 			limit = {
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
-				religion_group = pagan_group
+				religion_group = egyptian_group
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
 			random = { chance = 60
-				add_trait = sympathy_pagans
+				add_trait = sympathy_egyptian
 			}
 		}
 		if = {
 			limit = {
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
-				religion_group = zoroastrian_group
+				religion_group = finnish_group
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
 			random = { chance = 60
-				add_trait = sympathy_zoroastrianism
+				add_trait = sympathy_finnish
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = graecoroman_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_graecoroman
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = indian_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_indian
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = indohelen_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_indohellens
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = inti_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_intis
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = inuit_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_inuit
 			}
 		}
 		if = {
@@ -2281,11 +3226,176 @@ narrative_event = {
 			limit = {
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
-				religion_group = indian_group
+				religion_group = luwian_group
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
 			random = { chance = 60
-				add_trait = sympathy_indian
+				add_trait = sympathy_luwians
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = mand_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_mande
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = mani_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_manichaeans
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = mithra_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_mithraics
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = muslim
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_islam
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = neoplato_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_platonics
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = norsegerman_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_nordic
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = pagan_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_pagans
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = palmyranpagan_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_palmyrans
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = serer_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_sererics
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = slavic_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_slavics
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = sol_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_sol
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = tengri_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_tengri
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = yazd_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_yazd
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = zal_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_zal
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+				NOT = { trait = cynical }
+				religion_group = zoroastrian_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			random = { chance = 60
+				add_trait = sympathy_zoroastrianism
 			}
 		}
 		if = { 
@@ -2302,6 +3412,116 @@ narrative_event = {
 		if = {
 			limit = {
 				trait = zealous
+				religion_group = abrahamic_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_abrahamics
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = anatolian_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_anatolians
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = arabpagan_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_arabpagans
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = aztec_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_aztecs
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = baltic_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_baltics
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = bantu_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_bantus
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = berberpagan_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_berbers
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = bud_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_buddhists
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = celtic_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_celtics
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = chinese_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_chinese
+		}
+		if = {
+			limit = {
+				trait = zealous
 				religion_group = christian
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
@@ -2313,35 +3533,90 @@ narrative_event = {
 		if = {
 			limit = {
 				trait = zealous
-				religion_group = muslim
+				religion_group = east_african_group
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
 			remove_trait = zealous
 			hidden_tooltip = { character_event = { id = 38310 } } #Notification
 			piety = -20
-			add_trait = sympathy_islam
+			add_trait = sympathy_east_africans
 		}
 		if = {
 			limit = {
 				trait = zealous
-				religion_group = pagan_group
+				religion_group = egyptian_group
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
 			remove_trait = zealous
 			hidden_tooltip = { character_event = { id = 38310 } } #Notification
 			piety = -20
-			add_trait = sympathy_pagans
+			add_trait = sympathy_egyptian
 		}
 		if = {
 			limit = {
 				trait = zealous
-				religion_group = zoroastrian_group
+				religion_group = finnish_group
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
 			remove_trait = zealous
 			hidden_tooltip = { character_event = { id = 38310 } } #Notification
 			piety = -20
-			add_trait = sympathy_zoroastrianism
+			add_trait = sympathy_finnish
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = graecoroman_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_graecoroman
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = indian_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_indian
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = indohelen_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_indohellens
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = inti_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_intis
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = inuit_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_inuit
 		}
 		if = {
 			limit = {
@@ -2357,13 +3632,167 @@ narrative_event = {
 		if = {
 			limit = {
 				trait = zealous
-				religion_group = indian_group
+				religion_group = mand_group
 				NOT = { religion_group = event_target:sponsoring_king }
 			}
 			remove_trait = zealous
 			hidden_tooltip = { character_event = { id = 38310 } } #Notification
 			piety = -20
-			add_trait = sympathy_indian
+			add_trait = sympathy_mande
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = mani_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_manichaeans
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = mithra_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_mithraics
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = muslim
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_islam
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = neoplato_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_platonics
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = norsegerman_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_nordic
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = pagan_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_pagans
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = palmyranpagan_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_palmyrans
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = serer_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_sererics
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = slavic_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_slavics
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = sol_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_sol
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = tengri_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_tengri
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = yazd_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_yazd
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = zal_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_zal
+		}
+		if = {
+			limit = {
+				trait = zealous
+				religion_group = zoroastrian_group
+				NOT = { religion_group = event_target:sponsoring_king }
+			}
+			remove_trait = zealous
+			hidden_tooltip = { character_event = { id = 38310 } } #Notification
+			piety = -20
+			add_trait = sympathy_zoroastrianism
 		}
 		if = { 
 			limit = { 
@@ -3646,7 +5075,7 @@ character_event = {
 				}
 				 modifier = {
 				 	factor = 0.5
-				 	event_target:converting_king = { religion_group = pagan_group }
+				 	event_target:converting_king = { novum_imperium_is_pagan = yes }
 				}
 				 modifier = {
 				 	factor = 1.25
@@ -3669,7 +5098,7 @@ character_event = {
 				}
 				 modifier = {
 				 	factor = 1.5
-				 	event_target:converting_king = { religion_group = pagan_group }
+				 	event_target:converting_king = { novum_imperium_is_pagan = yes }
 				}
 				 modifier = {
 				 	factor = 0.5
@@ -3692,7 +5121,7 @@ character_event = {
 				}
 				 modifier = {
 				 	factor = 0.5
-				 	event_target:converting_king = { religion_group = pagan_group }
+				 	event_target:converting_king = { novum_imperium_is_pagan = yes }
 				}
 				 modifier = {
 				 	factor = 1.25
@@ -3711,7 +5140,7 @@ character_event = {
 				}
 				 modifier = {
 				 	factor = 0.5
-				 	event_target:converting_king = { religion_group = pagan_group }
+				 	event_target:converting_king = { novum_imperium_is_pagan = yes }
 				}
 				 modifier = {
 				 	factor = 1.25
@@ -3997,7 +5426,7 @@ character_event = {
 			}
 		 	modifier = {
 		 		factor = 1.25
-		 		religion_group = pagan_group
+		 		novum_imperium_is_pagan = yes
 			}
 		}
 	}
@@ -4070,7 +5499,7 @@ character_event = {
 			}
 		 	modifier = {
 		 		factor = 1.25
-		 		religion_group = pagan_group
+		 		novum_imperium_is_pagan = yes
 			}
 
 		}
@@ -4217,7 +5646,7 @@ character_event = {
 			}
 		 	modifier = {
 		 		factor = 1.25
-		 		religion_group = pagan_group
+		 		novum_imperium_is_pagan = yes
 			}
 
 		}
@@ -4288,7 +5717,7 @@ character_event = {
 			}
 		 	modifier = {
 		 		factor = 1.5
-		 		religion_group = pagan_group
+		 		novum_imperium_is_pagan = yes
 			}
 
 		}
@@ -5586,7 +7015,7 @@ character_event = {
 			}
 		 	modifier = {
 		 		factor = 1.2
-		 		religion_group = pagan_group
+		 		novum_imperium_is_pagan = yes
 			}
 		 	modifier = {
 		 		factor = 0.75
@@ -5629,7 +7058,7 @@ character_event = {
 			}
 		 	modifier = {
 		 		factor = 1.2
-		 		religion_group = pagan_group
+		 		novum_imperium_is_pagan = yes
 			}
 		 	modifier = {
 		 		factor = 0.75
@@ -5659,7 +7088,7 @@ character_event = {
 			}
 		 	modifier = {
 		 		factor = 1.2
-		 		religion_group = pagan_group
+		 		novum_imperium_is_pagan = yes
 			}
 		 	modifier = {
 		 		factor = 0.75

@@ -3,17 +3,21 @@ character_event = {
 	id = novum_imperium.1
 	desc = desc_novum_imperium.1
 	picture = GFX_evt_da_ancient_book
+	hide_window = yes
 	
-	is_triggered_only = yes
+	ai = no
 	
 	min_age = 16
 
 	trigger = {
 		NOT = { personality_traits = 6 }
 	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
 
 	option = {
-		name = optanovum_imperium.1 # Nothing to do.
 		ROOT = {
 			random_list = {
 				100 = {
@@ -280,8 +284,322 @@ character_event = {
 				100 = {
 					add_trait = vegetarien
 				}
+				100 = {
+					add_trait = disciplined
+				}
+				100 = {
+					add_trait = reserved
+				}
+				100 = {
+					add_trait = rigid
+				}
+				100 = {
+					add_trait = unfriendly
+				}
+				100 = {
+					add_trait = calm
+				}
+				100 = {
+					add_trait = plain
+				}
+				100 = {
+					add_trait = carefulplanner
+				}
+				100 = {
+					add_trait = books
+				}
+				100 = {
+					add_trait = aloof
+				}
+				100 = {
+					add_trait = stoic
+				}
+				100 = {
+					add_trait = eccentric
+				}
+				100 = {
+					add_trait = loyal
+				}
+				100 = {
+					add_trait = unpredictable
+				}
+				100 = {
+					add_trait = clever
+				}
+				100 = {
+					add_trait = bible
+				}
+				100 = {
+					add_trait = idealistic
+				}
+				100 = {
+					add_trait = secretive
+				}
+				100 = {
+					add_trait = moody
+				}
+				100 = {
+					add_trait = spiritual
+				}
+				100 = {
+					add_trait = procrastinator
+				}
+				100 = {
+					add_trait = energetic
+				}
+				100 = {
+					add_trait = confident
+				}
+				100 = {
+					add_trait = impulsive
+				}
+				100 = {
+					add_trait = efficient
+				}
+				100 = {
+					add_trait = arrogant
+				}
+				100 = {
+					add_trait = loud
+				}
+				100 = {
+					add_trait = restless
+				}
+				100 = {
+					add_trait = constant
+				}
+				100 = {
+					add_trait = predictable
+				}
+				100 = {
+					add_trait = dullff
+				}
+				100 = {
+					add_trait = practical
+				}
+				100 = {
+					add_trait = resentful
+				}
+				100 = {
+					add_trait = money
+				}
+				100 = {
+					add_trait = oldfashioned
+				}
+				100 = {
+					add_trait = lively
+				}
+				100 = {
+					add_trait = eloquent
+				}
+				100 = {
+					add_trait = nervous
+				}
+				100 = {
+					add_trait = shallow
+				}
+				100 = {
+					add_trait = impatient
+				}
+				100 = {
+					add_trait = fickle
+				}
+				100 = {
+					add_trait = friendly
+				}
+				100 = {
+					add_trait = tattler
+				}
+				100 = {
+					add_trait = cautious
+				}
+				100 = {
+					add_trait = irrational
+				}
+				100 = {
+					add_trait = selfpitying
+				}
+				100 = {
+					add_trait = goodintuition
+				}
+				100 = {
+					add_trait = overimaginative
+				}
+				100 = {
+					add_trait = obstinate
+				}
+				100 = {
+					add_trait = manipulative
+				}
+				100 = {
+					add_trait = frivolous
+				}
+				100 = {
+					add_trait = dogmatic
+				}
+				100 = {
+					add_trait = pompous
+				}
+				100 = {
+					add_trait = hardworking
+				}
+				100 = {
+					add_trait = callous
+				}
+				100 = {
+					add_trait = noblespirit
+				}
+				100 = {
+					add_trait = naturalleader
+				}
+				100 = {
+					add_trait = gullible
+				}
+				100 = {
+					add_trait = firstinline
+				}
+				100 = {
+					add_trait = analytical
+				}
+				100 = {
+					add_trait = meticulous
+				}
+				100 = {
+					add_trait = haggler
+				}
+				100 = {
+					add_trait = demanding
+				}
+				100 = {
+					add_trait = reliable
+				}
+				100 = {
+					add_trait = harsh
+				}
+				100 = {
+					add_trait = worrier
+				}
+				100 = {
+					add_trait = frugal
+				}
+				100 = {
+					add_trait = graceful
+				}
+				100 = {
+					add_trait = quipster
+				}
+				100 = {
+					add_trait = fanciful
+				}
+				100 = {
+					add_trait = unreliable
+				}
+				100 = {
+					add_trait = weakwilled
+				}
+				100 = {
+					add_trait = submissive
+				}
+				100 = {
+					add_trait = cunning
+				}
+				100 = {
+					add_trait = romanticff
+				}
+				100 = {
+					add_trait = magnetic
+				}
+				100 = {
+					add_trait = sensual
+				}
+				100 = {
+					add_trait = tolerantff
+				}
+				100 = {
+					add_trait = suspicious
+				}
+				100 = {
+					add_trait = pessimistic
+				}
+				100 = {
+					add_trait = judgemental
+				}
+				100 = {
+					add_trait = bloodthirsty
+				}
+				100 = {
+					add_trait = vain
+				}
+				100 = {
+					add_trait = philosophical
+				}
+				100 = {
+					add_trait = optimistic
+				}
+				100 = {
+					add_trait = careless
+				}
+				100 = {
+					add_trait = tactless
+				}
+				100 = {
+					add_trait = risktaker
+				}
+				100 = {
+					add_trait = funnyff
+				}
+				100 = {
+					add_trait = rebellious
+				}
+				100 = {
+					add_trait = curiousff
+				}
+				100 = {
+					add_trait = sociable
+				}
+				100 = {
+					add_trait = sociopathLI
+				}
+				100 = {
+					add_trait = judgmental
+				}
+				100 = {
+					add_trait = immature
+				}
+				100 = {
+					add_trait = observant
+				}
+				100 = {
+					add_trait = gull
+				}
+				100 = {
+					add_trait = narc
+				}
+				100 = {
+					add_trait = cheap
+				}
+				100 = {
+					add_trait = authoritative
+				}
+				100 = {
+					add_trait = indecisive
+				}
+				100 = {
+					add_trait = rude
+				}
+				100 = {
+					add_trait = familyperson
+				}
+				100 = {
+					add_trait = selfish
+				}
+				100 = {
+					add_trait = ruthless
+				}
+				100 = {
+					add_trait = honorable
+				}
 			}
 		}
-		tooltip = "EVTOOLTIP2490"
 	}
 }

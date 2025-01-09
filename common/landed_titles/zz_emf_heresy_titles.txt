@@ -17,7 +17,7 @@ d_army_light = {
 	holy_order = yes
 
 	# Parent Religion
-	religion = manichean
+	religion = mani
 
 	culture = persian
 
@@ -30,7 +30,7 @@ d_army_light = {
 	mercenary_type = saint_addai_composition
 	coat_of_arms = {
 		data = { 2 0 3 4 7 11 11 }
-		religion = manichean
+		religion = mani
 	}
 }
 
@@ -430,7 +430,7 @@ d_manichean = {
 
 	allow = {
 		is_title_active = FROM
-		religion = manichean
+		religion = mani
 		is_adult = yes
 		has_regent = no
 		war = no
@@ -444,9 +444,9 @@ d_manichean = {
 	landless = yes
 
 	# Controls a religion
-	controls_religion = manichean
+	controls_religion = mani
 
-	religion = manichean
+	religion = mani
 	is_theocracy = yes
 
 	# Cannot be held as a secondary title
@@ -525,9 +525,9 @@ d_mazdaki = {
 	landless = yes
 
 	# Controls a religion
-	controls_religion = mazdaki
+	controls_religion = mazdakism
 
-	religion = mazdaki
+	religion = mazdakism
 	is_theocracy = yes
 
 	# Cannot be held as a secondary title

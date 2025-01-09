@@ -742,7 +742,7 @@ de_jure_laws = {
 						emf_is_crowned = yes
 					}
 					trigger_if = {
-						limit = { religion_group = pagan_group }
+						limit = { novum_imperium_is_pagan = yes }
 						emf_not_unreformed_pagan = yes
 					}
 				}
@@ -1115,7 +1115,7 @@ de_jure_laws = {
 						emf_is_crowned = yes
 					}
 					trigger_if = {
-						limit = { religion_group = pagan_group }
+						limit = { novum_imperium_is_pagan = yes }
 						emf_not_unreformed_pagan = yes
 					}
 				}
@@ -1487,7 +1487,7 @@ de_jure_laws = {
 					emf_is_crowned = yes
 				}
 				trigger_if = {
-					limit = { religion_group = pagan_group }
+					limit = { novum_imperium_is_pagan = yes }
 					emf_not_unreformed_pagan = yes
 				}
 			}
@@ -2606,7 +2606,7 @@ de_jure_laws = {
 						religion = fraticelli
 						religion = cathar
 						religion = bogomilist
-						religion = manichean
+						religion = mani
 						religion = britannic_pagan
 					}
 				}
@@ -2734,7 +2734,7 @@ de_jure_laws = {
 						religion = fraticelli
 						religion = cathar
 						religion = bogomilist
-						religion = manichean
+						religion = mani
 					}
 				}
 				NOT = { rightful_religious_head_scope = { character = ROOT } }

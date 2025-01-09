@@ -937,7 +937,7 @@ has_holyorder_societies_religion_aztec = {
 
 has_holyorder_societies_religion_buddhist = {
 	hidden_tooltip = {
-		religion = buddhist
+		religion_group = bud_group
 	}
 }
 
@@ -1295,7 +1295,7 @@ has_fighter_societies_northern_culture = {
 has_fighter_societies_eastern_culture = {
 	hidden_tooltip = {
 		OR = {
-			culture_group = indo_aryan_group
+			culture_group = indoaryan
 			culture_group = dravidian_group
 			culture_group = tibetan_group
 			culture_group = chinese_group

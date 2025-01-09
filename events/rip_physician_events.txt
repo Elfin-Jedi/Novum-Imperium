@@ -2714,7 +2714,7 @@ character_event = {
 				}
 				modifier = {
 					factor = 0
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 				modifier = {
 					factor = 0
@@ -4759,7 +4759,7 @@ character_event = {
 				}
 				create_character = {
 					culture = khitan
-					religion = manichean
+					religion = mani
 					dynasty = none
 					age = 38
 					random_traits = yes

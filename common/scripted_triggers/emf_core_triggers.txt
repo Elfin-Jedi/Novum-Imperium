@@ -20,7 +20,7 @@ emf_not_unreformed_pagan = {
 emf_true_unreformed_pagan = {
 	custom_tooltip = {
 		text = TRUE_RELIGION_IS_UNREFORMED_PAGAN
-		true_religion_group = pagan_group
+		true_religion_is_pagan = yes
 		trigger_if = {
 			limit = {
 				OR = {
@@ -51,18 +51,15 @@ emf_polytheist_religion = {
 		text = RELIGION_IS_POLYTHEISTIC
 		OR = {
 			AND = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				NOR = {
 					has_religion_feature = religion_dogmatic
 					religion = zun_pagan_reformed
 					religion = zun_pagan
 				}
 			}
-			AND = {
-				religion_group = indian_group
-				NOT = { religion = buddhist }
-			}
-			religion = zurvanist
+			religion_group = indian_group
+			religion = zurvanism
 		}
 	}
 }
@@ -1014,7 +1011,7 @@ emf_religion_unsafe_for_player_if_not_nomad = {
 			NOT = { has_dlc = "The Old Gods" }
 		}
 		trigger_else_if = {
-			limit = { secret_religion_group = pagan_group }
+			limit = { secret_religion_is_pagan = yes }
 			NOR = {
 				has_dlc = "The Old Gods"
 				has_dlc = "Holy Fury"
@@ -1080,6 +1077,7 @@ emf_feudal_can_hold_temples_potential = {
 emf_can_hold_temples_potential = {
 	OR = {
 		is_government_potential = theocracy_government
+		is_government_potential = playable_theocracy_government
 		is_government_potential = muslim_merchant_republic_government
 		is_government_potential = bogomilist_merchant_republic_government
 		emf_feudal_can_hold_temples_potential = yes
@@ -1616,6 +1614,13 @@ emf_is_chinese_imperial_culture = {
 		culture = bohai
 		culture = korean
 		culture = vietnamese
+	}
+	OR = {
+		AND = {
+			has_acceptable_chinese_culture_trigger = yes
+			has_acceptable_chinese_religion_trigger = yes
+		}
+		culture = sinohellenic
 	}
 }
 

@@ -472,12 +472,42 @@ character_event = {
 		has_focus = focus_theology
 		is_priest = no
 		NOT = { trait = zealous }
+		NOT = { trait = sympathy_abrahamics }
+		NOT = { trait = sympathy_anatolians }
+		NOT = { trait = sympathy_arabpagans }
+		NOT = { trait = sympathy_aztecs }
+		NOT = { trait = sympathy_baltics }
+		NOT = { trait = sympathy_bantus }
+		NOT = { trait = sympathy_berbers }
+		NOT = { trait = sympathy_buddhists }
+		NOT = { trait = sympathy_celtics }
+		NOT = { trait = sympathy_chinese }
 		NOT = { trait = sympathy_christendom }
-		NOT = { trait = sympathy_islam }
-		NOT = { trait = sympathy_pagans }
-		NOT = { trait = sympathy_zoroastrianism }
-		NOT = { trait = sympathy_judaism }
+		NOT = { trait = sympathy_east_africans }
+		NOT = { trait = sympathy_egyptian }
+		NOT = { trait = sympathy_finnish }
+		NOT = { trait = sympathy_graecoroman }
 		NOT = { trait = sympathy_indian }
+		NOT = { trait = sympathy_indohellens }
+		NOT = { trait = sympathy_intis }
+		NOT = { trait = sympathy_inuit }
+		NOT = { trait = sympathy_judaism }
+		NOT = { trait = sympathy_luwians }
+		NOT = { trait = sympathy_mande }
+		NOT = { trait = sympathy_manichaeans }
+		NOT = { trait = sympathy_mithraics }
+		NOT = { trait = sympathy_islam }
+		NOT = { trait = sympathy_platonics }
+		NOT = { trait = sympathy_nordic }
+		NOT = { trait = sympathy_pagans }
+		NOT = { trait = sympathy_palmyrans }
+		NOT = { trait = sympathy_sererics }
+		NOT = { trait = sympathy_slavics }
+		NOT = { trait = sympathy_sol }
+		NOT = { trait = sympathy_tengri }
+		NOT = { trait = sympathy_yazd }
+		NOT = { trait = sympathy_zal }
+		NOT = { trait = sympathy_zoroastrianism }
 		NOT = { trait = sympathy_african }
 		NOT = { has_character_flag = wol_theology_view_other_religions }
 		any_realm_character = {
@@ -539,12 +569,43 @@ character_event = {
 			show_scope_change = no
 			trigger_switch = {
 				on_trigger = religion_group
+				abrahamic_group = { ROOT = { add_trait = sympathy_abrahamics } }
+				anatolian_group = { ROOT = { add_trait = sympathy_anatolians } }
+				arabpagan_group = { ROOT = { add_trait = sympathy_arabpagans } }
+				aztec_group = { ROOT = { add_trait = sympathy_aztecs } }
+				baltic_group = { ROOT = { add_trait = sympathy_baltics } }
+				bantu_group = { ROOT = { add_trait = sympathy_bantus } }
+				berberpagan_group = { ROOT = { add_trait = sympathy_berbers } }
+				bud_group = { ROOT = { add_trait = sympathy_buddhists } }
+				celtic_group = { ROOT = { add_trait = sympathy_celtics } }
+				chinese_group = { ROOT = { add_trait = sympathy_chinese } }
 				christian = { ROOT = { add_trait = sympathy_christendom } }
-				muslim = { ROOT = { add_trait = sympathy_islam } }
-				pagan_group = { ROOT = { add_trait = sympathy_pagans } }
-				zoroastrian_group = { ROOT = { add_trait = sympathy_zoroastrianism } }
-				jewish_group = { ROOT = { add_trait = sympathy_judaism } }
+				east_african_group = { ROOT = { add_trait = sympathy_east_africans } }
+				egyptian_group = { ROOT = { add_trait = sympathy_egyptian } }
+				finnish_group = { ROOT = { add_trait = sympathy_finnish } }
+				graecoroman_group = { ROOT = { add_trait = sympathy_graecoroman } }
 				indian_group = { ROOT = { add_trait = sympathy_indian } }
+				indohelen_group = { ROOT = { add_trait = sympathy_indohellens } }
+				inti_group = { ROOT = { add_trait = sympathy_intis } }
+				inuit_group = { ROOT = { add_trait = sympathy_inuit } }
+				jewish_group = { ROOT = { add_trait = sympathy_judaism } }
+				luwian_group = { ROOT = { add_trait = sympathy_luwians } }
+				mand_group = { ROOT = { add_trait = sympathy_mande } }
+				mani_group = { ROOT = { add_trait = sympathy_manichaeans } }
+				mithra_group = { ROOT = { add_trait = sympathy_mithraics } }
+				muslim = { ROOT = { add_trait = sympathy_islam } }
+				neoplato_group = { ROOT = { add_trait = sympathy_platonics } }
+				norsegerman_group = { ROOT = { add_trait = sympathy_nordic } }
+				pagan_group = { ROOT = { add_trait = sympathy_pagans } }
+				palmyranpagan_group = { ROOT = { add_trait = sympathy_palmyrans } }
+				serer_group = { ROOT = { add_trait = sympathy_sererics } }
+				slavic_group = { ROOT = { add_trait = sympathy_slavics } }
+				sol_group = { ROOT = { add_trait = sympathy_sol } }
+				tengri_group = { ROOT = { add_trait = sympathy_tengri } }
+				yazd_group = { ROOT = { add_trait = sympathy_yazd } }
+				zal_group = { ROOT = { add_trait = sympathy_zal } }
+				zoroastrian_group = { ROOT = { add_trait = sympathy_zoroastrianism } }
+				african_group = { ROOT = { add_trait = sympathy_african } }
 			}
 		}
 	}
@@ -873,7 +934,7 @@ character_event = {
 		text = EVTDESC_WoL_7080
 		trigger = {
 			NOR = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				religion_group = muslim
 				has_dharmic_religion_trigger = yes
 			}
@@ -881,7 +942,7 @@ character_event = {
 	}
 	desc = {
 		text = EVTDESC_WoL_7080_PAGAN
-		trigger = { religion_group = pagan_group }
+		trigger = { novum_imperium_is_pagan = yes }
 	}
 	desc = {
 		text = EVTDESC_WoL_7080_MUSLIM
@@ -1005,7 +1066,7 @@ character_event = {
 		trigger = {
 			NOR = {
 				trait = lunatic
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				has_dharmic_religion_trigger = yes
 			}
 		}
@@ -1016,7 +1077,7 @@ character_event = {
 			NOT = {
 				trait = lunatic
 			}
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 	}
 	desc = {

@@ -58,7 +58,7 @@ character_event = {
 				any_neighbor_province = {
 					has_owner = yes
 					owner = {
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 					}
 				}
 				kingdom = {
@@ -106,7 +106,7 @@ character_event = {
 					any_neighbor_province = {
 						has_owner = yes
 						owner = {
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 						}
 					}
 					kingdom = {
@@ -128,7 +128,7 @@ character_event = {
 					any_neighbor_province = {
 						has_owner = yes
 						owner = {
-							religion_group = pagan_group
+							novum_imperium_is_pagan = yes
 						}
 					}
 					kingdom = {
@@ -362,14 +362,14 @@ province_event = {
 
 		modifier = {
 			factor = 0.75
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 		modifier = {
 			factor = 0.75
 			any_neighbor_province = {
 				has_owner = yes
 				owner = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 				}
 			}
 		}

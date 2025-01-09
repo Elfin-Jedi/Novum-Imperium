@@ -37,9 +37,9 @@ targeted_decisions = {
 					is_female = yes
 					OR = {
 						trait = brave
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 						is_nomadic = yes
-						religion = buddhist
+						religion_group = bud_group
 						religion = bogomilist
 						gender_equality_trigger = yes
 					}
@@ -314,10 +314,10 @@ targeted_decisions = {
 					is_female = yes
 					OR = {
 						trait = brave
-						religion_group = pagan_group
+						novum_imperium_is_pagan = yes
 						religion_group = african_group
 						is_nomadic = yes
-						religion = buddhist
+						religion_group = bud_group
 						religion = bogomilist
 						gender_equality_trigger = yes
 					}
@@ -1836,7 +1836,7 @@ society_decisions = {
 			modifier = {
 				factor = 2
 				trait = zealous
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 			}
 			modifier = {
 				factor = 0

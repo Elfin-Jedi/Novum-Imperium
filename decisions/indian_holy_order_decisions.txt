@@ -214,9 +214,9 @@ decisions = {
 				independent = yes
 				tier = king
 			}
-			religion = buddhist
+			religion = bud_zen
 			OR = { 
-				culture_group = indo_aryan_group
+				culture_group = indoaryan
 				culture_group = dravidian_group
 			}
 			NOT = {
@@ -388,7 +388,7 @@ decisions = {
 				any_player = {
 					limit = {
 						OR = {
-							religion = buddhist
+							religion = bud_zen
 							capital_scope = { region = world_india }
 							capital_scope = { region = world_himalayas }
 							capital_scope = { region = world_steppe }

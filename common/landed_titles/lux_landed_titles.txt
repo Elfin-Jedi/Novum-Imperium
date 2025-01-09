@@ -1,0 +1,1584 @@
+d_enemies_of_avidya = {
+
+	color={ 100 100 0 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = buddhistgfx
+	
+	capital = 1288 # Ujjayini
+	
+	title = "GRANDHEADMASTER"
+	foa = "GRANDHEADMASTER_FOA"
+	
+	holy_order = yes
+
+	# Always exists
+	landless = yes
+	
+	culture = maghada
+	
+	# Parent Religion 
+	religion = bud_mahayana
+	
+	# Cannot be held as a secondary title
+	primary = yes
+		
+	# Cannot be vassalized
+	independent = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 6 # (Must be an integer between 1 and 512)
+
+	mercenary_type = hashshashin_composition
+}
+
+d_ahrimans_divs = {
+
+	color={ 100 100 0 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = turkishgfx
+	
+	capital = 453 # Aquincum
+	
+	title = "GRANDHEADMASTER"
+	foa = "GRANDHEADMASTER_FOA"
+	
+	holy_order = yes
+
+	# Always exists
+	landless = yes
+	
+	culture = avar
+	
+	# Parent Religion 
+	religion = mani_ahriman
+	
+	# Cannot be held as a secondary title
+	primary = yes
+		
+	# Cannot be vassalized
+	independent = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 6 # (Must be an integer between 1 and 512)
+
+	mercenary_type = hashshashin_composition
+}
+
+d_holy_doctors = {
+
+	color={ 100 100 0 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 198 # Vallisoletum
+	
+	title = "GRANDHEADMASTER"
+	foa = "GRANDHEADMASTER_FOA"
+	
+	holy_order = yes
+
+	# Always exists
+	landless = yes
+	
+	culture = basque
+	
+	# Parent Religion 
+	religion = priscillian
+	
+	# Cannot be held as a secondary title
+	primary = yes
+		
+	# Cannot be vassalized
+	independent = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 6 # (Must be an integer between 1 and 512)
+
+	mercenary_type = hashshashin_composition
+}
+
+d_council_of_aesir = {
+
+	color={ 100 100 0 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = norsegfx
+	
+	capital = 275 # Trondelag
+	
+	title = "GRANDHEADMASTER"
+	foa = "GRANDHEADMASTER_FOA"
+	
+	holy_order = yes
+
+	# Always exists
+	landless = yes
+	
+	culture = norwegian
+	
+	# Parent Religion 
+	religion = ragnarok
+	
+	# Cannot be held as a secondary title
+	primary = yes
+		
+	# Cannot be vassalized
+	independent = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 6 # (Must be an integer between 1 and 512)
+
+	mercenary_type = hashshashin_composition
+}
+
+d_warriors_of_oasis = {
+
+	color={ 100 100 0 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = africangfx
+	
+	capital = 3357 # Nuba
+	
+	title = "GRANDHEADMASTER"
+	foa = "GRANDHEADMASTER_FOA"
+	
+	holy_order = yes
+
+	# Always exists
+	landless = yes
+	
+	culture = fur
+	
+	# Parent Religion 
+	religion = set
+	
+	# Cannot be held as a secondary title
+	primary = yes
+		
+	# Cannot be vassalized
+	independent = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 6 # (Must be an integer between 1 and 512)
+
+	mercenary_type = hashshashin_composition
+}
+
+d_blue_wolves = {
+
+	color={ 100 100 0 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = turkishgfx
+	
+	capital = 594 # Sharkil
+	
+	title = "GRANDHEADMASTER"
+	foa = "GRANDHEADMASTER_FOA"
+	
+	holy_order = yes
+
+	# Always exists
+	landless = yes
+	
+	culture = hunnic
+	
+	# Parent Religion 
+	religion = tengri_ahriman
+	
+	# Cannot be held as a secondary title
+	primary = yes
+		
+	# Cannot be vassalized
+	independent = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 6 # (Must be an integer between 1 and 512)
+
+	mercenary_type = hashshashin_composition
+}
+
+d_order_of_righteous = {
+
+	color={ 100 100 0 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = byzantinegfx
+	
+	capital = 682 # Mardistan
+	
+	title = "GRANDHEADMASTER"
+	foa = "GRANDHEADMASTER_FOA"
+	
+	holy_order = yes
+
+	# Always exists
+	landless = yes
+	
+	culture = armenian
+	
+	# Parent Religion 
+	religion = yahyanism
+	
+	# Cannot be held as a secondary title
+	primary = yes
+		
+	# Cannot be vassalized
+	independent = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 6 # (Must be an integer between 1 and 512)
+
+	mercenary_type = hashshashin_composition
+}
+
+d_avengers_of_holy_pyre = {
+
+	color={ 100 100 0 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = persiangfx
+	
+	capital = 624 # Kuwp-e Spyd
+	
+	title = "GRANDHEADMASTER"
+	foa = "GRANDHEADMASTER_FOA"
+	
+	holy_order = yes
+
+	# Always exists
+	landless = yes
+	
+	culture = parthian
+	
+	# Parent Religion 
+	religion = zor_angra
+	
+	# Cannot be held as a secondary title
+	primary = yes
+		
+	# Cannot be vassalized
+	independent = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 6 # (Must be an integer between 1 and 512)
+
+	mercenary_type = hashshashin_composition
+}
+
+d_huitzilopochtli = {
+
+	color={ 255 200 0 }
+	
+	graphical_culture = aztecholygfx
+	
+	capital = 843
+
+	title = "HIGHPRIEST"
+	foa = "GRANDMASTER_FOA"
+	
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	# Parent Religion 
+	religion = quetzal_reformed
+	
+	culture = nahua
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 2 # (Must be an integer between 1 and 512)
+
+	mercenary_type = d_huitzilopochtli_composition
+}
+
+# Chinese Mercenaries
+d_han_massive = { # Massive Merc
+	color={ 60 165 80 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = chinesegfx
+
+	capital = 1408 # Anxi
+	hire_range = 1300
+	
+	# Parent Religion 
+	religion = tao
+	
+	# Parent Culture
+	culture = han
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = han_massive_composition
+}
+
+d_han_large = { # Large Merc
+	color={ 235 235 235 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = chinesegfx
+
+	capital = 1408 # Anxi
+	hire_range = 1300
+	
+	# Parent Religion 
+	religion = tao
+	
+	# Parent Culture
+	culture = han
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+		
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = han_large_composition
+}
+
+d_han_mid = { # Mid Merc
+	color = { 150 80 40 }
+	color2 = { 255 255 255 }
+
+	graphical_culture = chinesegfx
+
+	capital = 1408 # Anxi
+	hire_range = 1300
+	
+	# Parent Religion 
+	religion = tao
+	
+	# Parent Culture
+	culture = han
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = han_mid_composition
+}
+
+d_han_mid_low = { # Mid-Low Merc
+	color = { 30 150 50 }
+	color2 = { 255 255 255 }
+
+	graphical_culture = chinesegfx
+
+	capital = 1408 # Anxi
+	hire_range = 1300
+	
+	# Parent Religion 
+	religion = tao
+	
+	# Parent Culture
+	culture = han
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = han_mid_low_composition
+}
+
+d_outlaws_of_the_marsh = { # Big merc
+	color = { 66 66 66 }
+	color2 = { 255 255 255 }
+
+	graphical_culture = chinesegfx
+
+	capital = 1408 # Anxi
+	hire_range = 1300
+	
+	# Parent Religion 
+	religion = tao
+	
+	# Parent Culture
+	culture = han
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = outlaws_of_the_marsh
+}
+
+d_han_low = { # Small Merc
+	color = { 30 170 50 }
+	color2 = { 255 255 255 }
+
+	graphical_culture = chinesegfx
+
+	capital = 1408 # Anxi
+	hire_range = 1300
+	
+	# Parent Religion 
+	religion = tao
+	
+	# Parent Culture
+	culture = han
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = han_low_composition
+}
+
+d_han_tiny_1 = { # Tiny Merc
+	color = { 38 120 51 }
+	color2 = { 255 255 255 }
+
+	graphical_culture = chinesegfx
+
+	capital = 1408 # Anxi
+	hire_range = 1300
+	
+	# Parent Religion 
+	religion = tao
+	
+	# Parent Culture
+	culture = han
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = han_tiny_composition_1
+}
+
+d_han_tiny_2 = { # Tiny Merc
+	color = { 32 175 57 }
+	color2 = { 255 255 255 }
+
+	graphical_culture = chinesegfx
+
+	capital = 1408 # Anxi
+	hire_range = 1300
+	
+	# Parent Religion 
+	religion = tao
+	
+	# Parent Culture
+	culture = han
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = han_tiny_composition_2
+}
+
+d_jurchen_band = { # Mid-Low Merc
+	color = { 32 120 50 }
+	color2 = { 255 255 255 }
+
+	graphical_culture = chinesegfx
+
+	capital = 1408 # Anxi
+	hire_range = 1300
+	
+	# Parent Religion 
+	religion = tao
+	
+	# Parent Culture
+	culture = jurchen
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = jurchen_band_composition
+}
+
+d_bodpa_low = { # Small Merc
+	color = { 30 170 50 }
+	color2 = { 255 255 255 }
+
+	capital = 1491 # Purang
+	hire_range = 800
+	
+	# Parent Religion 
+	religion = bon
+	
+	# Parent Culture
+	culture = bodpa
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = bodpa_low_composition
+}
+
+d_treasure_fleet = {
+	color={ 222 80 20 }
+	color2={ 255 255 255 }
+
+	capital = 1318 # Samatata
+	hire_range = 1200
+	
+	# Parent Religion 
+	religion = tao
+	
+	# Parent Culture
+	culture = han
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+		
+	# Cannot be vassalized
+	independent = yes
+
+	mercenary_type = treasure_fleet_composition
+}
+
+d_han_junks = {
+	color={ 222 80 20 }
+	color2={ 255 255 255 }
+	
+	short_name = yes
+
+	capital = 1318 # Samatata
+	hire_range = 1000
+	
+	# Parent Religion 
+	religion = tao
+	
+	# Parent Culture
+	culture = han
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+		
+	# Cannot be vassalized
+	independent = yes
+
+	mercenary_type = treasure_fleet_composition
+}
+
+d_jurchen_corsairs = {
+	color={ 222 180 20 }
+	color2={ 255 255 255 }
+	
+	short_name = yes
+
+	capital = 1318 # Samatata
+	hire_range = 1000
+	
+	# Parent Religion 
+	religion = tao
+	
+	# Parent Culture
+	culture = jurchen
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+		
+	# Cannot be vassalized
+	independent = yes
+
+	mercenary_type = treasure_fleet_composition
+}
+
+# Silk Road Mercs
+d_persian_caravan_guards = {
+	color = { 67 155 135 }
+	color2 = { 255 255 255 }
+
+	capital = 630 # Merv
+	
+	religion = shiite
+	culture = persian
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = persian_caravan_guards_composition
+}
+
+k_sakya_trizin = {
+	color = { 95 190 50 }
+}
+	
+d_army_light = {
+	color={ 181 204 20 } 
+	
+	graphical_culture = bektashigfx # needs altered
+	
+	capital = 903 # Samarkand
+
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA" # needs graphics
+	
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	# Parent Religion 
+	religion = mani
+	
+	culture = persian
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 2 # (Must be an integer between 1 and 512)
+	
+	strength_growth_per_century = 0.10
+
+	mercenary_type = bektashi_composition
+}
+
+# African Mercenaries
+d_african_massive = { # Massive Merc
+	color={ 60 165 80 }
+	color2={ 255 255 255 }
+
+	graphical_culture = westafricanholygfx
+	
+	capital = 925 # Mali
+	hire_range = 900
+	
+	# Parent Religion 
+	religion = yoruba
+	
+	# Parent Culture
+	culture = manden
+	
+	mercenary = yes
+
+	title = "WARCHIEF"
+	foa = "WARCHIEF_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = african_massive_composition
+}
+
+d_african_large = { # Large Merc
+	color={ 235 235 235 }
+	color2={ 255 255 255 }
+	
+	capital = 1739 # Djimi
+	hire_range = 900
+	
+	# Parent Religion 
+	religion = yoruba
+	
+	# Parent Culture
+	culture = serer
+	
+	mercenary = yes
+
+	title = "WARCHIEF"
+	foa = "WARCHIEF_FOA"
+
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+		
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = african_large_composition
+}
+
+d_african_mid = { # Mid Merc
+	color = { 150 80 40 }
+	color2 = { 255 255 255 }
+
+	graphical_culture = africangfx
+
+	capital = 1335 # Kosti
+	hire_range = 900
+	
+	# Parent Religion 
+	religion = yoruba
+	
+	# Parent Culture
+	culture = nubian
+	
+	mercenary = yes
+
+	title = "WARCHIEF"
+	foa = "WARCHIEF_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = african_mid_composition
+}
+
+d_african_mid_low_1 = { # Mid-Low Merc
+	color = { 30 150 50 }
+	color2 = { 255 255 255 }
+
+	capital = 913 # Ghana
+	hire_range = 900
+	
+	# Parent Religion 
+	religion = yoruba
+	
+	# Parent Culture
+	culture = serer
+	
+	mercenary = yes
+
+	title = "WARCHIEF"
+	foa = "WARCHIEF_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = african_mid_low_1_composition
+}
+
+d_african_mid_low_2 = { # Big merc
+	color = { 66 66 66 }
+	color2 = { 255 255 255 }
+
+	capital = 925 # Mali
+	hire_range = 900
+	
+	# Parent Religion 
+	religion = yoruba
+	
+	# Parent Culture
+	culture = hausa
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = african_mid_low_2_composition
+}
+
+d_african_low = { # Small Merc
+	color = { 30 170 50 }
+	color2 = { 255 255 255 }
+
+	capital = 914 # Gao
+	hire_range = 900
+	
+	# Parent Religion 
+	religion = yoruba
+	
+	# Parent Culture
+	culture = songhay
+	
+	mercenary = yes
+
+	title = "WARCHIEF"
+	foa = "WARCHIEF_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = african_low_composition
+}
+
+d_african_tiny = { # Tiny Merc
+	color = { 38 120 51 }
+	color2 = { 255 255 255 }
+
+	capital = 1738 # Air
+	hire_range = 900
+	
+	# Parent Religion 
+	religion = yoruba
+	
+	# Parent Culture
+	culture = maghreb_arabic
+	
+	mercenary = yes
+
+	title = "WARCHIEF"
+	foa = "WARCHIEF_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = african_tiny_composition_1
+}
+
+k_liao = {
+	color = { 33 202 156 }
+	color2= { 255 255 255 }
+
+	culture = khitan
+}
+
+###################################
+
+d_algic_pagan_reformed = {
+	color={ 131 89 33 }
+	color2={ 220 220 0 }
+	
+	capital = 3529 #Waskaganish
+	
+	title = "HEAD_PRIEST"
+	title_female = "HEAD_PRIESTESS"
+	foa = "HEAD_PRIEST_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = algic_pagan_reformed
+	
+	religion = algic_pagan_reformed
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_animism_reformed = {
+	color={ 171 69 23 }
+	color2={ 220 220 0 }
+	
+	 #capital = 3379 # Oshakati 
+	capital = 3377 # Windhoek
+	
+	title = "HEAD_PRIEST"
+	title_female = "HEAD_PRIESTESS"
+	foa = "HEAD_PRIEST_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = animism_reformed
+	
+	religion = animism_reformed
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_dreamtime_religion_reformed = {
+	color={ 151 59 83 }
+	color2={ 220 220 0 }
+	
+	capital = 3411 #Canberra
+	
+	title = "HEAD_PRIEST"
+	title_female = "HEAD_PRIESTESS"
+	foa = "HEAD_PRIEST_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = dreamtime_religion_reformed
+	
+	religion = dreamtime_religion_reformed
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_melanesian_religion_reformed = {
+	color={ 221 79 133 }
+	color2={ 220 220 0 }
+	
+	capital = 2259 #Huangmachu
+	
+	title = "HEAD_PRIEST"
+	title_female = "HEAD_PRIESTESS"
+	foa = "HEAD_PRIEST_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = melanesian_religion_reformed
+	
+	religion = melanesian_religion_reformed
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_bornean_religion_reformed = {
+	color={ 191 39 73 }
+	color2={ 220 220 0 }
+	
+	capital = 2243 #Tanjungpura
+	
+	title = "HEAD_PRIEST"
+	title_female = "HEAD_PRIESTESS"
+	foa = "HEAD_PRIEST_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = bornean_religion_reformed
+	
+	religion = bornean_religion_reformed
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_south_bantu_mythology_reformed = {
+	color={ 151 49 63 }
+	color2={ 220 220 0 }
+	
+	capital = 2381 #Nkhata
+	
+	title = "HEAD_PRIEST"
+	title_female = "HEAD_PRIESTESS"
+	foa = "HEAD_PRIEST_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = south_bantu_mythology_reformed
+	
+	religion = south_bantu_mythology_reformed
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_east_bantu_mythology_reformed = {
+	color={ 141 19 93 }
+	color2={ 220 220 0 }
+	
+	capital = 2352 #Kilwa
+	
+	title = "HEAD_PRIEST"
+	title_female = "HEAD_PRIESTESS"
+	foa = "HEAD_PRIEST_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = east_bantu_mythology_reformed
+	
+	religion = east_bantu_mythology_reformed
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_malagasy_religion_reformed = {
+	color={ 161 69 146 }
+	color2={ 220 220 0 }
+	
+	capital = 2829 #Antananarivo
+	
+	title = "HEAD_PRIEST"
+	title_female = "HEAD_PRIESTESS"
+	foa = "HEAD_PRIEST_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = malagasy_religion_reformed
+	
+	religion = malagasy_religion_reformed
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_java_religion_reformed = {
+	color={ 13 48 198 }
+	color2={ 220 220 0 }
+	
+	capital = 2234 #Daha
+	
+	title = "HEAD_PRIEST"
+	title_female = "HEAD_PRIESTESS"
+	foa = "HEAD_PRIEST_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = java_religion_reformed
+	
+	religion = java_religion_reformed
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_sulawesi_religion_reformed = {
+	color={ 77 45 75 }
+	color2={ 220 220 0 }
+	
+	capital = 2262 #Makassar
+	
+	title = "HEAD_PRIEST"
+	title_female = "HEAD_PRIESTESS"
+	foa = "HEAD_PRIEST_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = sulawesi_religion_reformed
+	
+	religion = sulawesi_religion_reformed
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_flores_religion_reformed = {
+	color={ 141 39 126 }
+	color2={ 220 220 0 }
+	
+	capital = 2258 #Tiwu
+	
+	title = "HEAD_PRIEST"
+	title_female = "HEAD_PRIESTESS"
+	foa = "HEAD_PRIEST_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = flores_religion_reformed
+	
+	religion = flores_religion_reformed
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_sumatran_religion_reformed = {
+	color={ 211 19 196 }
+	color2={ 220 220 0 }
+	
+	capital = 2270 #Pagarruyung
+	
+	title = "HEAD_PRIEST"
+	title_female = "HEAD_PRIESTESS"
+	foa = "HEAD_PRIEST_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = sumatran_religion_reformed
+	
+	religion = sumatran_religion_reformed
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_philippine_religion_reformed = {
+	color={ 191 79 186 }
+	color2={ 220 220 0 }
+	
+	capital = 2300 #Aklan
+	
+	title = "HEAD_PRIEST"
+	title_female = "HEAD_PRIESTESS"
+	foa = "HEAD_PRIEST_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = philippine_religion_reformed
+	
+	religion = philippine_religion_reformed
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_taiwanese_religion_reformed = {
+	color={ 51 89 136 }
+	color2={ 220 220 0 }
+	
+	capital = 2709 #Paiwan
+	
+	title = "HEAD_PRIEST"
+	title_female = "HEAD_PRIESTESS"
+	foa = "HEAD_PRIEST_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = taiwanese_religion_reformed
+	
+	religion = taiwanese_religion_reformed
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_jurchen_pagan_reformed = {
+	color={ 141 99 186 }
+	color2={ 220 220 0 }
+	
+	capital = 2055 #Ghuad-neng
+	
+	title = "HEAD_PRIEST"
+	title_female = "HEAD_PRIESTESS"
+	foa = "HEAD_PRIEST_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = jurchen_pagan_reformed
+	
+	religion = jurchen_pagan_reformed
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_omotic_pagan_reformed = {
+	color={ 111 69 186 }
+	color2={ 220 220 0 }
+	
+	capital = 2372 #Zimbabwe
+	
+	title = "HEAD_PRIEST"
+	title_female = "HEAD_PRIESTESS"
+	foa = "HEAD_PRIEST_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = omotic_pagan_reformed
+	
+	religion = omotic_pagan_reformed
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_cushitic_pagan_reformed = {
+	color={ 181 39 146 }
+	color2={ 220 220 0 }
+	
+	capital = 2372 #Zimbabwe
+	
+	title = "HEAD_PRIEST"
+	title_female = "HEAD_PRIESTESS"
+	foa = "HEAD_PRIEST_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = cushitic_pagan_reformed
+	
+	religion = cushitic_pagan_reformed
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_mayan_reformed = {
+	color={ 135 38 165 }
+	color2={ 220 220 0 }
+	
+	capital = 3759 #Tikal
+	
+	title = "TLATOANI"
+	title_female = "CIHUATLATOANI"
+	foa = "HEAD_PRIEST_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = mayan_reformed
+	
+	religion = mayan_reformed
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_maori_religion_reformed = {
+	color={ 181 229 31 }
+	color2={ 220 220 0 }
+	
+	capital = 3416 #Wellington
+	
+	title = "HEAD_PRIEST"
+	title_female = "HEAD_PRIESTESS"
+	foa = "HEAD_PRIEST_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = maori_religion_reformed
+	
+	religion = maori_religion_reformed
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_inti_reformed = {
+	color={ 181 39 85 }
+	color2={ 220 220 0 }
+	
+	capital = 3936 # Qusqu
+	
+	title = "HEAD_PRIEST"
+	title_female = "HEAD_PRIESTESS"
+	foa = "HEAD_PRIEST_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = inti_reformed
+	
+	religion = inti_reformed
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_south_american_reformed = {
+	color={ 41 69 57 }
+	color2={ 220 220 0 }
+	
+	capital = 4013 # Bahia
+	
+	title = "HEAD_PRIEST"
+	title_female = "HEAD_PRIESTESS"
+	foa = "HEAD_PRIEST_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = south_american_reformed
+	
+	religion = south_american_reformed
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}

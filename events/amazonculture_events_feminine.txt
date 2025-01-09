@@ -1777,7 +1777,7 @@
 						religion = cathar 
 						religion = bogomilist
 						religion = messalian
-						religion = mazdaki
+						religion = mazdakism
 					}
 				}
 				scaled_piety = -15.0
@@ -1805,7 +1805,7 @@
 			}
 			if = {
 				limit = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					NOR = {					# permitted if feminist or misandrist
 						has_religion_feature = religion_equal
 						has_religion_feature = religion_matriarchal 
@@ -2072,7 +2072,7 @@
 						religion = cathar 
 						religion = bogomilist
 						religion = messalian
-						religion = mazdaki
+						religion = mazdakism
 						has_religion_feature = religion_equal
 						has_religion_feature = religion_matriarchal 
 					}
@@ -2122,7 +2122,7 @@
 						religion = cathar 
 						religion = bogomilist
 						religion = messalian
-						religion = mazdaki
+						religion = mazdakism
 					}
 					trait = zealous
 				}

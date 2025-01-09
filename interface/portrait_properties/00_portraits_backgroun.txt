@@ -185,7 +185,7 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion_group = pagan_group }
+			NOT = { novum_imperium_is_pagan = yes }
 		}
 		modifier = {
 			factor = 0
@@ -516,7 +516,7 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion_group = pagan_group }
+			NOT = { novum_imperium_is_pagan = yes }
 			NOT = { death_sacrificed_trigger = yes }
 		}
 		modifier = {

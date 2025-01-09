@@ -172,7 +172,7 @@ emf_adventurer_can_approach = {
 				emf_syncretized_religion_with_ROOT = yes
 			}
 			NOT = { religion_group = muslim }
-			NOT = { religion_group = pagan_group }
+			NOT = { novum_imperium_is_pagan = yes }
 		}
 	}
 	# Cannot approach vassals unless their liege has permitted it
@@ -205,7 +205,7 @@ emf_adventurer_can_approach = {
 						emf_syncretized_religion_with_ROOT = yes
 					}
 					NOT = { religion_group = muslim }
-					NOT = { religion_group = pagan_group }
+					NOT = { novum_imperium_is_pagan = yes }
 				}
 			}
 			NOR = {

@@ -8,9 +8,9 @@ decisions = {
 
 		potential = {
 			independent = yes
-			higher_tier_than = DUKE
 			is_playable = yes
-			is_feudal = yes
+			higher_real_tier_than = COUNT
+			is_nomadic = no
 			OR = {
 				religion_group = christian
 				religion_group = jewish_group
@@ -112,7 +112,10 @@ decisions = {
 			is_playable = yes
 			is_landed = yes
 			OR = {
-				higher_tier_than = BARON #Low nobility requires somebody else to ask the Papacy to Lift the Excommunication on their behalf.
+				AND = {
+					is_landed = yes
+					higher_tier_than = BARON #Low nobility requires somebody else to ask the Papacy to Lift the Excommunication on their behalf.
+				}
 				is_patrician = yes
 			}
 			#religion = catholic #Fraticelli, Reformed Pagans, etc.
@@ -700,8 +703,8 @@ decisions = {
 			independent = yes
 			OR = {
 				religion = zoroastrian
-				religion = mazdaki
-				religion = zurvanist
+				religion = mazdakism
+				religion = zurvanism
 			}
 			NOT = { has_global_flag = saoshyant_appears }
 			is_random_world = no
@@ -775,7 +778,7 @@ decisions = {
 			has_dlc = "The Old Gods"
 			OR = {
 				religion = zoroastrian
-				religion = zurvanist
+				religion = zurvanism
 				religion = khurmazta						
 			}
 			is_heretic = no
@@ -1864,7 +1867,7 @@ decisions = {
 				OR = {
 					AND = {
 						holding_type = tribal
-						has_building = tb_hillfort_4
+						has_building = tb_r_settlement_5
 					}
 					holding_type = castle
 				}
@@ -1893,7 +1896,7 @@ decisions = {
 						culture_group = tibetan_group
 						OR = {
 							religion = bon
-							religion = buddhist
+							religion_group = bud_group
 						}
 						higher_tier_than = BARON
 					}
@@ -2037,7 +2040,7 @@ decisions = {
 					limit = {
 						tier = BARON
 						holding_type = tribal
-						has_building = tb_hillfort_4
+						has_building = tb_r_settlement_7
 					}
 					convert_to = castle
 					refill_holding_levy = yes
@@ -2134,7 +2137,7 @@ decisions = {
 					OR = {
 						AND = {
 							holding_type = tribal
-							has_building = tb_hillfort_4
+							has_building = tb_r_settlement_5
 						}
 						holding_type = castle
 					}
@@ -2179,7 +2182,7 @@ decisions = {
 						culture_group = tibetan_group
 						OR = {
 							religion = bon
-							religion = buddhist
+							religion_group = bud_group
 						}
 						higher_tier_than = BARON
 					}
@@ -2365,7 +2368,7 @@ decisions = {
 					limit = {
 						tier = BARON
 						holding_type = tribal
-						has_building = tb_hillfort_4
+						has_building = tb_r_settlement_7
 					}
 					convert_to = castle
 					refill_holding_levy = yes
@@ -2474,7 +2477,7 @@ decisions = {
 				OR = {
 					AND = {
 						holding_type = tribal
-						has_building = tb_market_town_4
+						has_building = tb_r_market_4
 					}
 					holding_type = city
 				}
@@ -2545,7 +2548,7 @@ decisions = {
 					limit = {
 						tier = BARON
 						holding_type = tribal
-						has_building = tb_market_town_4
+						has_building = tb_r_market_4
 					}
 					convert_to = city
 					refill_holding_levy = yes

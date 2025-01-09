@@ -1189,7 +1189,7 @@ narrative_event = {
 			is_attacker = no
 		}
 		enemy = {
-			religion_group = pagan_group
+			novum_imperium_is_pagan = yes
 		}
 		has_game_rule = {
 			name = siege_events
@@ -1822,7 +1822,7 @@ character_event = {
 			is_female = yes
 			new_character = {
 				OR = {
-					religion_group = pagan_group
+					novum_imperium_is_pagan = yes
 					religion_group = zoroastrian_group
 				}
 			}

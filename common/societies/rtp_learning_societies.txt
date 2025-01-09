@@ -28,6 +28,23 @@ rtp_learning_reformed_pagan = {
 		learning = 5
 		lower_tier_than = KING
 		rtp_is_capable_adult = yes
+		OR = {
+			AND = {
+				novum_imperium_is_pagan = yes
+				is_organized_religion_trigger = yes
+			}
+			AND = {
+				true_religion_group_christian_trigger = no
+				true_religion_group_muslim_trigger = no
+				true_religion_group_jewish_group_trigger = no
+				true_religion_group_zoroastrian_group_trigger = no
+				true_religion_group_bud_group_trigger = no
+				true_religion_group_indian_group_trigger = no
+				true_religion_group_yazd_group_trigger = no
+				true_religion_group_mand_group_trigger = no
+				true_religion_group_mani_group_trigger = no
+			}
+		}
 		NOR = {
 			AND = {
 				ai = yes
@@ -45,26 +62,38 @@ rtp_learning_reformed_pagan = {
 
 	show_society = {
 		OR = {
-			religion = hellenic_pagan_reformed
-			religion = hellenic_pagan
-			religion = hereclemasculist_pagan
-			religion = romist_pagan
-			religion = vieti_mithras_pagan
-			religion = titan_pagan
-			religion = promethean_pagan
+			AND = {
+				novum_imperium_is_pagan = yes
+				is_organized_religion_trigger = yes
+			}
+			AND = {
+				is_organized_religion_trigger = yes
+				true_religion_group_christian_trigger = no
+				true_religion_group_muslim_trigger = no
+				true_religion_group_jewish_group_trigger = no
+				true_religion_group_zoroastrian_group_trigger = no
+				true_religion_group_bud_group_trigger = no
+				true_religion_group_indian_group_trigger = no
+			}
 		}
 	}
 
 	potential = {
 		lower_tier_than = KING
 		OR = {
-			religion = hellenic_pagan_reformed
-			religion = hellenic_pagan
-			religion = hereclemasculist_pagan
-			religion = romist_pagan
-			religion = vieti_mithras_pagan
-			religion = titan_pagan
-			religion = promethean_pagan
+			AND = {
+				novum_imperium_is_pagan = yes
+				is_organized_religion_trigger = yes
+			}
+			AND = {
+				is_organized_religion_trigger = yes
+				true_religion_group_christian_trigger = no
+				true_religion_group_muslim_trigger = no
+				true_religion_group_jewish_group_trigger = no
+				true_religion_group_zoroastrian_group_trigger = no
+				true_religion_group_bud_group_trigger = no
+				true_religion_group_indian_group_trigger = no
+			}
 		}
 	}
 	
@@ -208,28 +237,19 @@ rtp_learning_reformed_pagan = {
 			rtp_is_capable_adult = yes
 			is_in_society = no
 			OR = {
-				religion = norse_pagan_reformed
-				religion = aztec_reformed
-				religion = zun_pagan_reformed
-				religion = finnish_pagan_reformed
-				religion = west_african_pagan_reformed
-				religion = slavic_pagan_reformed
-				religion = baltic_pagan_reformed
-				religion = hellenic_pagan_reformed
-				religion = tengri_pagan_reformed
-				religion = bon_reformed
-				religion = bori
-				religion = a_tag_roog_reformed
-				religion = amazigh_reformed
-				religion = hereclemasculist_pagan
-				religion = romist_pagan
-				religion = vieti_mithras_pagan
-				religion = titan_pagan
-				religion = promethean_pagan
-				religion = celtic_pagan_reformed
-				religion = britannic_pagan
-				religion = egyptian_pagan_reformed
-				religion = aten_pagan
+				AND = {
+					novum_imperium_is_pagan = yes
+					is_organized_religion_trigger = yes
+				}
+				AND = {
+					is_organized_religion_trigger = yes
+					true_religion_group_christian_trigger = no
+					true_religion_group_muslim_trigger = no
+					true_religion_group_jewish_group_trigger = no
+					true_religion_group_zoroastrian_group_trigger = no
+					true_religion_group_bud_group_trigger = no
+					true_religion_group_indian_group_trigger = no
+				}
 			}
 		}
 	}
@@ -255,6 +275,8 @@ rtp_learning_pagan = {
 		learning = 5
 		lower_tier_than = KING
 		rtp_is_capable_adult = yes
+		novum_imperium_is_pagan = yes
+		is_organized_religion_trigger = no
 		NOR = {
 			AND = {
 				ai = yes
@@ -271,74 +293,14 @@ rtp_learning_pagan = {
 	}
 
 	show_society = {
-		OR = {
-			religion = norse_pagan
-			religion = aztec
-			religion = zun_pagan
-			religion = finnish_pagan
-			religion = west_african_pagan
-			religion = slavic_pagan
-			religion = baltic_pagan
-			religion = tengri_pagan
-			religion = bon
-			religion = a_tag_roog
-			religion = amazigh
-			religion = norse_pagan_reformed
-			religion = aztec_reformed
-			religion = zun_pagan_reformed
-			religion = finnish_pagan_reformed
-			religion = west_african_pagan_reformed
-			religion = slavic_pagan_reformed
-			religion = baltic_pagan_reformed
-			religion = tengri_pagan_reformed
-			religion = bon_reformed
-			religion = bori
-			religion = a_tag_roog_reformed
-			religion = amazigh_reformed
-			religion = britannic_hyperborean_pagan
-			religion = celtic_pagan_reformed
-			religion = celtic_pagan
-			religion = britannic_pagan
-			religion = egyptian_pagan_reformed
-			religion = egyptian_pagan
-			religion = aten_pagan
-		}
+		novum_imperium_is_pagan = yes
+		is_organized_religion_trigger = no
 	}
 
 	potential = {
 		lower_tier_than = KING
-		OR = {
-			religion = norse_pagan
-			religion = aztec
-			religion = zun_pagan
-			religion = finnish_pagan
-			religion = west_african_pagan
-			religion = slavic_pagan
-			religion = baltic_pagan
-			religion = tengri_pagan
-			religion = bon
-			religion = a_tag_roog
-			religion = amazigh
-			religion = norse_pagan_reformed
-			religion = aztec_reformed
-			religion = zun_pagan_reformed
-			religion = finnish_pagan_reformed
-			religion = west_african_pagan_reformed
-			religion = slavic_pagan_reformed
-			religion = baltic_pagan_reformed
-			religion = tengri_pagan_reformed
-			religion = bon_reformed
-			religion = bori
-			religion = a_tag_roog_reformed
-			religion = amazigh_reformed
-			religion = britannic_hyperborean_pagan
-			religion = celtic_pagan_reformed
-			religion = celtic_pagan
-			religion = britannic_pagan
-			religion = egyptian_pagan_reformed
-			religion = egyptian_pagan
-			religion = aten_pagan
-		}
+		novum_imperium_is_pagan = yes
+		is_organized_religion_trigger = no
 	}
 	
 	society_rank = {
@@ -480,28 +442,8 @@ rtp_learning_pagan = {
 			lower_tier_than = KING
 			rtp_is_capable_adult = yes
 			is_in_society = no
-			OR = {
-				religion = norse_pagan
-				religion = aztec
-				religion = zun_pagan
-				religion = finnish_pagan
-				religion = west_african_pagan
-				religion = slavic_pagan
-				religion = baltic_pagan
-				religion = hellenic_pagan
-				religion = tengri_pagan
-				religion = bon
-				religion = bori
-				religion = a_tag_roog
-				religion = amazigh
-				religion = britannic_hyperborean_pagan
-				religion = celtic_pagan_reformed
-				religion = celtic_pagan
-				religion = britannic_pagan
-				religion = egyptian_pagan_reformed
-				religion = egyptian_pagan
-				religion = aten_pagan
-			}
+			novum_imperium_is_pagan = yes
+			is_organized_religion_trigger = no
 		}
 	}
 }
@@ -746,6 +688,17 @@ rtp_learning_catholic = {
 			religion = lollard
 			religion = adoptionist
 			religion = arian
+			religion = cathar_reformed
+			religion = christian_populist_reformed
+			religion = mari_christ_reformed
+			religion = priscillian_reformed
+			religion = antinomian
+			religion = donatist
+			religion = mari_christ
+			religion = priscillian
+			religion = celtic_christ
+			religion = norse_christ
+			religion = unctionist
 		}
 		NOR = {
 			AND = {
@@ -771,6 +724,17 @@ rtp_learning_catholic = {
 			religion = lollard
 			religion = adoptionist
 			religion = arian
+			religion = cathar_reformed
+			religion = christian_populist_reformed
+			religion = mari_christ_reformed
+			religion = priscillian_reformed
+			religion = antinomian
+			religion = donatist
+			religion = mari_christ
+			religion = priscillian
+			religion = celtic_christ
+			religion = norse_christ
+			religion = unctionist
 		}
 	}
 
@@ -784,6 +748,17 @@ rtp_learning_catholic = {
 			religion = lollard
 			religion = adoptionist
 			religion = arian
+			religion = cathar_reformed
+			religion = christian_populist_reformed
+			religion = mari_christ_reformed
+			religion = priscillian_reformed
+			religion = antinomian
+			religion = donatist
+			religion = mari_christ
+			religion = priscillian
+			religion = celtic_christ
+			religion = norse_christ
+			religion = unctionist
 		}
 	}
 	
@@ -934,6 +909,17 @@ rtp_learning_catholic = {
 				religion = lollard
 				religion = adoptionist
 				religion = arian
+				religion = cathar_reformed
+				religion = christian_populist_reformed
+				religion = mari_christ_reformed
+				religion = priscillian_reformed
+				religion = antinomian
+				religion = donatist
+				religion = mari_christ
+				religion = priscillian
+				religion = celtic_christ
+				religion = norse_christ
+				religion = unctionist
 			}
 		}
 	}
@@ -971,11 +957,15 @@ rtp_learning_orthodox = {
 			religion = orthodox
 			religion = bogomilist
 			religion = monothelite
-			religion = iconoclast
 			religion = apostolic
 			religion = paulician
 			religion = tondrakian
 			religion = vieti_orthodox
+			religion = melkite
+			religion = montanist_reformed
+			religion = montanist
+			religion = sabellianist
+			religion = valentinian
 		}
 		NOR = {
 			AND = {
@@ -997,11 +987,15 @@ rtp_learning_orthodox = {
 			religion = orthodox
 			religion = bogomilist
 			religion = monothelite
-			religion = iconoclast
 			religion = apostolic
 			religion = paulician
 			religion = tondrakian
 			religion = vieti_orthodox
+			religion = melkite
+			religion = montanist_reformed
+			religion = montanist
+			religion = sabellianist
+			religion = valentinian
 		}
 	}
 
@@ -1011,11 +1005,15 @@ rtp_learning_orthodox = {
 			religion = orthodox
 			religion = bogomilist
 			religion = monothelite
-			religion = iconoclast
 			religion = apostolic
 			religion = paulician
 			religion = tondrakian
 			religion = vieti_orthodox
+			religion = melkite
+			religion = montanist_reformed
+			religion = montanist
+			religion = sabellianist
+			religion = valentinian
 		}
 	}
 	
@@ -1162,11 +1160,15 @@ rtp_learning_orthodox = {
 				religion = orthodox
 				religion = bogomilist
 				religion = monothelite
-				religion = iconoclast
 				religion = apostolic
 				religion = paulician
 				religion = tondrakian
 				religion = vieti_orthodox
+				religion = melkite
+				religion = montanist_reformed
+				religion = montanist
+				religion = sabellianist
+				religion = valentinian
 			}
 		}
 	}
@@ -1195,6 +1197,7 @@ rtp_learning_nestorian = {
 		OR = {
 			religion = nestorian
 			religion = messalian
+			religion = docetist
 		}
 		NOR = {
 			AND = {
@@ -1215,6 +1218,7 @@ rtp_learning_nestorian = {
 		OR = {
 			religion = nestorian
 			religion = messalian
+			religion = docetist
 		}
 	}
 
@@ -1223,6 +1227,7 @@ rtp_learning_nestorian = {
 		OR = {
 			religion = nestorian
 			religion = messalian
+			religion = docetist
 		}
 	}
 	
@@ -1368,6 +1373,7 @@ rtp_learning_nestorian = {
 			OR = {
 				religion = nestorian
 				religion = messalian
+				religion = docetist
 			}
 		}
 	}
@@ -1398,6 +1404,17 @@ rtp_learning_monophysite = {
 			religion = monophysite
 			religion = syriac
 			religion = maronite
+			religion = apollinarist
+			religion = solomonic_christ
+			religion = audianist
+			religion = marcionist
+			religion = nasrani_reformed
+			religion = nasrani
+			religion = pelagian
+			religion = semipelagian
+			religion = sethian
+			religion = slavic_christian_reformed
+			religion = slavic_christian
 		}
 		NOR = {
 			AND = {
@@ -1420,6 +1437,17 @@ rtp_learning_monophysite = {
 			religion = monophysite
 			religion = syriac
 			religion = maronite
+			religion = apollinarist
+			religion = solomonic_christ
+			religion = audianist
+			religion = marcionist
+			religion = nasrani_reformed
+			religion = nasrani
+			religion = pelagian
+			religion = semipelagian
+			religion = sethian
+			religion = slavic_christian_reformed
+			religion = slavic_christian
 		}
 	}
 
@@ -1430,6 +1458,17 @@ rtp_learning_monophysite = {
 			religion = monophysite
 			religion = syriac
 			religion = maronite
+			religion = apollinarist
+			religion = solomonic_christ
+			religion = audianist
+			religion = marcionist
+			religion = nasrani_reformed
+			religion = nasrani
+			religion = pelagian
+			religion = semipelagian
+			religion = sethian
+			religion = slavic_christian_reformed
+			religion = slavic_christian
 		}
 	}
 	
@@ -1577,6 +1616,17 @@ rtp_learning_monophysite = {
 				religion = monophysite
 				religion = syriac
 				religion = maronite
+				religion = apollinarist
+				religion = solomonic_christ
+				religion = audianist
+				religion = marcionist
+				religion = nasrani_reformed
+				religion = nasrani
+				religion = pelagian
+				religion = semipelagian
+				religion = sethian
+				religion = slavic_christian_reformed
+				religion = slavic_christian
 			}
 		}
 	}
@@ -1611,6 +1661,11 @@ rtp_learning_sunni = {
 			religion = zikri
 			religion = mahdiyya
 			religion = nabawiyya
+			religion = ashari
+			religion = athari
+			religion = maturidi
+			religion = murjiah
+			religion = zahiri
 		}
 		NOR = {
 			AND = {
@@ -1633,6 +1688,11 @@ rtp_learning_sunni = {
 			religion = zikri
 			religion = mahdiyya
 			religion = nabawiyya
+			religion = ashari
+			religion = athari
+			religion = maturidi
+			religion = murjiah
+			religion = zahiri
 		}
 	}
 
@@ -1643,6 +1703,11 @@ rtp_learning_sunni = {
 			religion = zikri
 			religion = mahdiyya
 			religion = nabawiyya
+			religion = ashari
+			religion = athari
+			religion = maturidi
+			religion = murjiah
+			religion = zahiri
 		}
 	}
 	
@@ -1790,6 +1855,11 @@ rtp_learning_sunni = {
 				religion = zikri
 				religion = mahdiyya
 				religion = nabawiyya
+				religion = ashari
+				religion = athari
+				religion = maturidi
+				religion = murjiah
+				religion = zahiri
 			}
 		}
 	}
@@ -1823,6 +1893,10 @@ rtp_learning_shiite = {
 			religion = waqifi
 			religion = ismaili
 			religion = zaydi
+			religion = muslim_domination_reformed
+			religion = muslim_sufi_reformed
+			religion = sufi
+			religion = marabout
 		}
 		NOR = {
 			AND = {
@@ -1848,6 +1922,10 @@ rtp_learning_shiite = {
 			religion = waqifi
 			religion = ismaili
 			religion = zaydi
+			religion = muslim_domination_reformed
+			religion = muslim_sufi_reformed
+			religion = sufi
+			religion = marabout
 		}
 	}
 
@@ -1861,6 +1939,10 @@ rtp_learning_shiite = {
 			religion = waqifi
 			religion = ismaili
 			religion = zaydi
+			religion = muslim_domination_reformed
+			religion = muslim_sufi_reformed
+			religion = sufi
+			religion = marabout
 		}
 	}
 	
@@ -2011,6 +2093,10 @@ rtp_learning_shiite = {
 				religion = waqifi
 				religion = ismaili
 				religion = zaydi
+				religion = muslim_domination_reformed
+				religion = muslim_sufi_reformed
+				religion = sufi
+				religion = marabout
 			}
 		}
 	}
@@ -2040,6 +2126,10 @@ rtp_learning_ibadi = {
 			religion = ibadi
 			religion = kharijite
 			religion = haruri
+			religion = muslim_aliite_reformed
+			religion = ilm_islam
+			religion = ghazi_islam
+			religion = mutazil
 		}
 		NOR = {
 			AND = {
@@ -2061,6 +2151,10 @@ rtp_learning_ibadi = {
 			religion = ibadi
 			religion = kharijite
 			religion = haruri
+			religion = muslim_aliite_reformed
+			religion = ilm_islam
+			religion = ghazi_islam
+			religion = mutazil
 		}
 	}
 
@@ -2070,6 +2164,10 @@ rtp_learning_ibadi = {
 			religion = ibadi
 			religion = kharijite
 			religion = haruri
+			religion = muslim_aliite_reformed
+			religion = ilm_islam
+			religion = ghazi_islam
+			religion = mutazil
 		}
 	}
 	
@@ -2216,6 +2314,10 @@ rtp_learning_ibadi = {
 				religion = ibadi
 				religion = kharijite
 				religion = haruri
+				religion = muslim_aliite_reformed
+				religion = ilm_islam
+				religion = ghazi_islam
+				religion = mutazil
 			}
 		}
 	}
@@ -2438,7 +2540,12 @@ rtp_learning_zoroastrian = {
 		learning = 5
 		lower_tier_than = KING
 		rtp_is_capable_adult = yes
-		religion_group = zoroastrian_group
+		OR = {
+			religion_group = zoroastrian_group
+			religion_group = mand_group
+			religion_group = mani_group
+			religion_group = yazd_group
+		}
 		NOR = {
 			AND = {
 				ai = yes
@@ -2455,12 +2562,22 @@ rtp_learning_zoroastrian = {
 	}
 
 	show_society = {
-		religion_group = zoroastrian_group
+		OR = {
+			religion_group = zoroastrian_group
+			religion_group = mand_group
+			religion_group = mani_group
+			religion_group = yazd_group
+		}
 	}
 
 	potential = {
 		lower_tier_than = KING
-		religion_group = zoroastrian_group
+		OR = {
+			religion_group = zoroastrian_group
+			religion_group = mand_group
+			religion_group = mani_group
+			religion_group = yazd_group
+		}
 	}
 	
 	society_rank = {
@@ -2602,7 +2719,12 @@ rtp_learning_zoroastrian = {
 			lower_tier_than = KING
 			rtp_is_capable_adult = yes
 			is_in_society = no
-			religion_group = zoroastrian_group
+			OR = {
+				religion_group = zoroastrian_group
+				religion_group = mand_group
+				religion_group = mani_group
+				religion_group = yazd_group
+			}
 		}
 	}
 }
@@ -2631,7 +2753,17 @@ rtp_learning_hindu = {
 		learning = 5
 		lower_tier_than = KING
 		rtp_is_capable_adult = yes
-		religion = hindu
+		OR = {
+			religion = hindu
+			religion = kubera_reformed
+			religion = murugan_reformed
+			religion = saura_reformed
+			religion = vidharma_reformed
+			religion = vidharma
+			religion = saura
+			religion = kubera
+			religion = murugan
+		}
 		NOR = {
 			AND = {
 				ai = yes
@@ -2648,12 +2780,32 @@ rtp_learning_hindu = {
 	}
 
 	show_society = {
-		religion = hindu
+		OR = {
+			religion = hindu
+			religion = kubera_reformed
+			religion = murugan_reformed
+			religion = saura_reformed
+			religion = vidharma_reformed
+			religion = vidharma
+			religion = saura
+			religion = kubera
+			religion = murugan
+		}
 	}
 
 	potential = {
 		lower_tier_than = KING
-		religion = hindu
+		OR = {
+			religion = hindu
+			religion = kubera_reformed
+			religion = murugan_reformed
+			religion = saura_reformed
+			religion = vidharma_reformed
+			religion = vidharma
+			religion = saura
+			religion = kubera
+			religion = murugan
+		}
 	}
 	
 	society_rank = {
@@ -2795,7 +2947,17 @@ rtp_learning_hindu = {
 			lower_tier_than = KING
 			rtp_is_capable_adult = yes
 			is_in_society = no
-			religion = hindu
+			OR = {
+				religion = hindu
+				religion = kubera_reformed
+				religion = murugan_reformed
+				religion = saura_reformed
+				religion = vidharma_reformed
+				religion = vidharma
+				religion = saura
+				religion = kubera
+				religion = murugan
+			}
 		}
 	}
 }
@@ -2820,7 +2982,7 @@ rtp_learning_buddhist = {
 		learning = 5
 		lower_tier_than = KING
 		rtp_is_capable_adult = yes
-		religion = buddhist
+		religion_group = bud_group
 		NOR = {
 			AND = {
 				ai = yes
@@ -2837,12 +2999,12 @@ rtp_learning_buddhist = {
 	}
 
 	show_society = {
-		religion = buddhist
+		religion_group = bud_group
 	}
 
 	potential = {
 		lower_tier_than = KING
-		religion = buddhist
+		religion_group = bud_group
 	}
 	
 	society_rank = {
@@ -2984,7 +3146,7 @@ rtp_learning_buddhist = {
 			lower_tier_than = KING
 			rtp_is_capable_adult = yes
 			is_in_society = no
-			religion = buddhist
+			religion_group = bud_group
 		}
 	}
 }
@@ -3198,7 +3360,10 @@ rtp_learning_taoist = {
 		learning = 5
 		lower_tier_than = KING
 		rtp_is_capable_adult = yes
-		religion = taoist
+		OR = {
+			religion = taoist
+			religion_group = chinese_group
+		}
 		NOR = {
 			AND = {
 				ai = yes
@@ -3362,7 +3527,10 @@ rtp_learning_taoist = {
 			lower_tier_than = KING
 			rtp_is_capable_adult = yes
 			is_in_society = no
-			religion = taoist
+			OR = {
+				religion = taoist
+				religion_group = chinese_group
+			}
 		}
 	}
 }

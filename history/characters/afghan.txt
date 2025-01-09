@@ -86,11 +86,11 @@
 188565 = {
 	name="Bo-Fuzun"
 	dynasty=1042104 # Nandin
-	religion="buddhist"
+	religion="bud_zen"
 	culture="khalaj"
 	father=188718
-	trait=kshatriya
-	trait=mahayana_buddhist
+	#trait=kshatriya
+	#trait=mahayana_buddhist
 	711.7.11={
 		birth = yes
 	}
@@ -105,10 +105,10 @@
 	name="Samidevi" # probably from 7th rather than 8th century
 	female=yes
 	dynasty=1042105 # Trailokyadevi
-	religion="buddhist"
+	religion="bud_zen"
 	culture="afghan"
-	trait=kshatriya
-	trait=mahayana_buddhist
+	#trait=kshatriya
+	#trait=mahayana_buddhist
 	720.1.28={
 		birth = yes
 	}
@@ -119,12 +119,12 @@
 188567 = {
 	name="Naz'aktar" # from early rather than mid 700s
 	dynasty=1042104 # Nandin
-	religion="buddhist"
+	religion="bud_zen"
 	culture="khalaj"
 	father=188565
 	mother=188566
-	trait=kshatriya
-	trait=mahayana_buddhist
+	#trait=kshatriya
+	#trait=mahayana_buddhist
 	742.9.25={
 		birth = yes
 	}
@@ -135,10 +135,10 @@
 188570 = {
 	name="Šarvin" # fictitious Bamiyan ruler
 	dynasty=1042109 # Bamiyan
-	religion="buddhist"
+	religion="bud_zen"
 	culture="afghan"
-	trait=kshatriya
-	trait=mahayana_buddhist
+	#trait=kshatriya
+	#trait=mahayana_buddhist
 	709.5.22={
 		birth = yes
 	}
@@ -149,10 +149,10 @@
 188571 = {
 	name="Eskander" # fictitious holder of Kunduz
 	dynasty=1042108 # of Kunduz
-	religion="buddhist"
+	religion="bud_zen"
 	culture="afghan"
-	trait=kshatriya
-	trait=mahayana_buddhist
+	#trait=kshatriya
+	#trait=mahayana_buddhist
 	738.11.12={
 		birth = yes
 	}
@@ -163,11 +163,11 @@
 188572 = {
 	name="Merzuban" # fictitious Bamiyan prince
 	dynasty=1042109 # Bamiyan
-	religion="buddhist"
+	religion="bud_zen"
 	culture="afghan"
 	father=188570
-	trait=kshatriya
-	trait=mahayana_buddhist
+	#trait=kshatriya
+	#trait=mahayana_buddhist
 	736.5.22={
 		birth = yes
 	}
@@ -178,10 +178,10 @@
 188573 = {
 	name="Nihaal" # fictional
 	dynasty=1042111 # Kaikanite
-	religion="buddhist"
+	religion="bud_zen"
 	culture="afghan"
 #	trait=kshatriya # Jats, so no caste
-	trait=mahayana_buddhist
+	#trait=mahayana_buddhist
 	741.3.7={
 		birth = yes
 	}
@@ -449,7 +449,7 @@
 	name="Tegin-Shah" # more of a title than name
 	# founder of Kabul Shahi line
 	dynasty=1042104 # Nandin
-	religion="buddhist"
+	religion="bud_zen"
 	culture="oghuz"
 	father=188700
 	655.1.1={
@@ -463,7 +463,7 @@
 188718 = {
 	name="Phrom-Kesar"
 	dynasty=1042104 # Nandin
-	religion="buddhist"
+	religion="bud_zen"
 	culture="oghuz"
 	father=188717
 	685.1.1={
@@ -477,7 +477,7 @@
 188719 = {
 	name="Danûš" # fictitious
 	dynasty=1042156
-	religion="buddhist"
+	religion="bud_zen"
 	culture="afghan"
 	720.1.1={
 		birth = yes
@@ -490,7 +490,7 @@
 	name="Arêz" # fictitious
 	female=yes
 	dynasty=1042156
-	religion="buddhist"
+	religion="bud_zen"
 	culture="afghan"
 	father=188719
 	748.1.1={
@@ -504,7 +504,7 @@
 	name="Perwane" # fictitious
 	female=yes
 	dynasty=1042156
-	religion="buddhist"
+	religion="bud_zen"
 	culture="afghan"
 	father=188719
 	752.1.1={
@@ -517,7 +517,7 @@
 188722 = {
 	name="Ruhollah" # fictitious
 	dynasty=1042157
-	religion="buddhist"
+	religion="bud_zen"
 	culture="afghan"
 	739.1.1={
 		birth = yes
@@ -529,7 +529,7 @@
 188723 = {
 	name="Ruhollah" # fictitious
 	dynasty=1042157
-	religion="buddhist"
+	religion="bud_zen"
 	culture="afghan"
 	father=188722
 	764.1.1={
@@ -543,7 +543,7 @@
 	name="Rondik" # fictitious
 	female=yes
 	dynasty=1042157
-	religion="buddhist"
+	religion="bud_zen"
 	culture="afghan"
 	father=188722
 	766.1.1={
@@ -556,7 +556,7 @@
 261102 = {
 	name = "Akhtar"
 	dynasty = 1062538
-	religion = buddhist
+	religion = bud_zen
 	culture = afghan
 	904.1.1 = {
 		birth = yes

@@ -108,7 +108,7 @@ emf_character_become_heretic = {
 		trigger_switch = { # Choose branch
 			on_trigger = religion
 			hindu = { character_event = { id = RoI.110 } }
-			buddhist = { character_event = { id = RoI.111 } }
+			bud_zen = { character_event = { id = RoI.111 } }
 			jain = { character_event = { id = RoI.112 } }
 		}
 	}
@@ -205,7 +205,7 @@ emf_become_heretic = {
 	else_if = {
 		limit = {
 			OR = {
-				religion_group = pagan_group
+				novum_imperium_is_pagan = yes
 				religion_group = muslim
 			}
 			event_target:heretic_province = {
@@ -615,7 +615,7 @@ emf_catholic_conversion = {
 				factor = 0.5
 				year = 1200
 			}
-			religion = manichean
+			religion = mani
 		}
 		10 = {
 			modifier = {
@@ -1081,7 +1081,7 @@ emf_eastern_conversion = {
 				factor = 0.5
 				year = 1200
 			}
-			religion = manichean
+			religion = mani
 		}
 		10 = {
 			modifier = {
@@ -1233,7 +1233,7 @@ emf_muslim_conversion = {
 		75 = {
 			modifier = {
 				factor = 0
-				religion = yazidi
+				religion = yazidism
 			}
 			modifier = {
 				factor = 0
@@ -1261,7 +1261,7 @@ emf_muslim_conversion = {
 				factor = 0.25
 				NOT = { culture = kurdish }
 			}
-			religion = yazidi
+			religion = yazidism
 		}
 		75 = {
 			modifier = {
@@ -1742,7 +1742,7 @@ emf_muslim_conversion = {
 				factor = 0.5
 				year = 1200
 			}
-			religion = manichean
+			religion = mani
 		}
 		10 = {
 			modifier = {
@@ -1778,9 +1778,9 @@ emf_zoroastrian_conversion = {
 			modifier = {
 				factor = 0.25
 				OR = {
-					religion = manichean
+					religion = mani
 					religion = mandaean
-					religion = yazidi
+					religion = yazidism
 				}
 			}
 			religion = zoroastrian
@@ -1788,45 +1788,45 @@ emf_zoroastrian_conversion = {
 		75 = {
 			modifier = {
 				factor = 0
-				religion = mazdaki
+				religion = mazdakism
 			}
 			modifier = {
 				factor = 0
 				OR = {
-					religion = manichean
+					religion = mani
 					religion = mandaean
-					religion = yazidi
+					religion = yazidism
 				}
 			}
-			religion = mazdaki
+			religion = mazdakism
 		}
 		50 = {
 			modifier = {
 				factor = 0
-				religion = zurvanist
+				religion = zurvanism
 			}
 			modifier = {
 				factor = 0
 				OR = {
-					religion = manichean
+					religion = mani
 					religion = mandaean
-					religion = yazidi
+					religion = yazidism
 				}
 			}
-			religion = zurvanist
+			religion = zurvanism
 		}
 		75 = {
 			modifier = {
 				factor = 0
-				religion = manichean
+				religion = mani
 			}
 			modifier = {
 				factor = 0.25
 				OR = {
 					religion = zoroastrian
-					religion = mazdaki
-					religion = zurvanist
-					religion = yazidi
+					religion = mazdakism
+					religion = zurvanism
+					religion = yazidism
 				}
 			}
 			modifier = {
@@ -1847,7 +1847,7 @@ emf_zoroastrian_conversion = {
 				factor = 0.5
 				year = 1200
 			}
-			religion = manichean
+			religion = mani
 		}
 		75 = {
 			modifier = {
@@ -1858,9 +1858,9 @@ emf_zoroastrian_conversion = {
 				factor = 0
 				OR = {
 					religion = zoroastrian
-					religion = mazdaki
-					religion = zurvanist
-					religion = yazidi
+					religion = mazdakism
+					religion = zurvanism
+					religion = yazidism
 				}
 			}
 			religion = mandaean
@@ -1868,7 +1868,7 @@ emf_zoroastrian_conversion = {
 		75 = {
 			modifier = {
 				factor = 0
-				religion = yazidi
+				religion = yazidism
 			}
 			modifier = {
 				factor = 0
@@ -1881,7 +1881,7 @@ emf_zoroastrian_conversion = {
 				factor = 0.25
 				NOT = { culture = kurdish }
 			}
-			religion = yazidi
+			religion = yazidism
 		}
 		10 = {
 			modifier = {
@@ -2321,7 +2321,7 @@ emf_jewish_conversion = {
 				factor = 0.5
 				year = 1200
 			}
-			religion = manichean
+			religion = mani
 		}
 		10 = {
 			modifier = {

@@ -65,7 +65,7 @@ NDefines.NCharacter.AGE_OF_MARRIAGE_FEMALE = 14
 NDefines.NCharacter.AGE_VERY_OLD = 60
 NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_60 = 600
 NDefines.NCharacter.NATURAL_DEATH_CHANCE_AGE_70 = 2100
-NDefines.NCharacter.SECONDARY_SPOUSE_FERTILITY_MULT = 0.33
+NDefines.NCharacter.SECONDARY_SPOUSE_FERTILITY_MULT = 0.25
 -- OUT-COMMENT: Nonzero INFANT_DEATH_CHANCE causes nondeterministic crashes on patch 3.3.0 (64-bit):
 -- NDefines.NCharacter.INFANT_DEATH_CHANCE = 0.07
 NDefines.NCharacter.TRIBAL_EMPTY_HOLDING_LEVY_MULTIPLIER = 0.25       -- vanilla: 0.5, < v10.6: 0.5
@@ -246,7 +246,7 @@ NDefines.NTechnology.TRADEPOST_SPREAD_BONUS = 0.04         -- prior to EMF v9.06
 NDefines.NGraphics.CITY_SPRAWL_AMOUNT = 0.5
 
 -- Engine
-NDefines.NEngine.EVENT_PROCESS_OFFSET = 30
+NDefines.NEngine.EVENT_PROCESS_OFFSET = 100
 
 -- AI
 NDefines.NAI.MARRIAGE_AI_PRESTIGE_VALUE = 0.25      -- EMF v10.5: 0.1; vanilla: 0.33 [worst-case, they marry a lowborn, which EMF will raise to the nobility. prestige effects of marriage tend to greatly get in the way of the AI making good matches that further its dynasty.]

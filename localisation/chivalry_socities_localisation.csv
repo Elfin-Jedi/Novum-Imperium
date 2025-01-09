@@ -1171,7 +1171,7 @@ chivalry_jungle_terrain_leader_desc;This character is a master at leading troops
 chivalry_warrior_pilgrim;On a Warrior Pilgrimage;;;;;;;;;;;;;x
 chivalry_warrior_pilgrim_desc;This character is on a dangerous journey to improve as a warrior.;;;;;;;;;;;;;x
 chivalry_commander;Live for the sword;;;;;;;;;;;;;x
-chivalry_commander_desc;This character has no interest in politic or love, [From.GetSheHe] lives only to fight and improve [From.GetHerHis] skills.;;;;;;;;;;;;;x
+chivalry_commander_desc;This character has no interest in politics or love, [From.GetSheHe] lives only to fight and improve [From.GetHerHis] skills.;;;;;;;;;;;;;x
 #artifact
 chivalry_item_skull;[From.OriginalOwner.GetFirstName]'s Head;;;;;;;;;;;;;x
 chivalry_item_skull_desc;This is the head of [From.OriginalOwner.GetTitledName], slain and beheaded in battle. This skull is now but a trophy that only the most barbaric warriors would carry.;;;;;;;;;;;;;x
@@ -1641,12 +1641,12 @@ EVTOPTI_CHI_329;And you better not come back!;;;;;;;;;;;;;;x
 EVTDESC_CHI_3291;[From.GetFirstName] has refused your challenge! By the rules of [From.Society.GetName], [From.GetSheHe] forfeits [From.GetHerHis] standing and rank to you.;;;;;;;;;;;;;;x
 EVTOPTA_CHI_3291;Coward!;;;;;;;;;;;;;;x
 #
-EVTDESC_CHI_330;You've interviewed severals fighters of [Root.Society.GetName] in order to recruit someone to command your armies. Your search has lead you to [chivalry_event_commander.GetFirstName], who look skilled and has agreed to fight under your banner.;;;;;;;;;;;;;;x
+EVTDESC_CHI_330;You've interviewed severals fighters of [Root.Society.GetName] in order to recruit someone to command your armies. Your search has lead you to [chivalry_event_commander.GetFirstName], who looks skilled and has agreed to fight under your banner.;;;;;;;;;;;;;;x
 EVTOPTA_CHI_330;I shall make good use of [chivalry_event_commander.GetHerHis] skills.;;;;;;;;;;;;;;x
 EVTOPTB_CHI_330;[chivalry_event_commander.GetSheHeCap] will replace a previous commander..;;;;;;;;;;;;;;x
 IS_CHIVALRY_LEADER;;;;;;;;;;;;;;;x
-EVTDESC_CHI_331;You've interviewed severals knights of [Root.Society.GetName] in order to recruit someone to command your armies against the infidels. Your search has lead you to [chivalry_event_commander.GetFirstName], who look skilled and has agreed to fight under your banner.;;;;;;;;;;;;;;x
-EVTDESC_CHI_331_custom;You've interviewed severals knights of the [chivalry_holy_society_one_name.GetName] in order to recruit someone to command your armies against the infidels. Your search has lead you to [chivalry_event_commander.GetFirstName], who look skilled and has agreed to fight under your banner.;;;;;;;;;;;;;;x
+EVTDESC_CHI_331;You've interviewed severals knights of [Root.Society.GetName] in order to recruit someone to command your armies against the infidels. Your search has lead you to [chivalry_event_commander.GetFirstName], who looks skilled and has agreed to fight under your banner.;;;;;;;;;;;;;;x
+EVTDESC_CHI_331_custom;You've interviewed severals knights of the [chivalry_holy_society_one_name.GetName] in order to recruit someone to command your armies against the infidels. Your search has lead you to [chivalry_event_commander.GetFirstName], who looks skilled and has agreed to fight under your banner.;;;;;;;;;;;;;;x
 EVTOPTA_CHI_331;I shall make good use of his skills.;;;;;;;;;;;;;;x
 EVTOPTB_CHI_331;[From.GetSheHeCap] will replace a previous commander.;;;;;;;;;;;;;;x
 EVTDESC_CHI_332;You leave your realm in the hand of your capable regent and left on a grand warrior pilgrimage in order to refine your skills as a warrior. It will be a dangerous journey and you may not finish it unscathed, but you will return a [From.GetManWoman] changed, stronger or maimed.;;;;;;;;;;;;;;x
