@@ -2362,19 +2362,11 @@ else_if = {
 }
 character_event = {
 	id = nastepca.12
-	desc = EVTDESC_NASTEPCA_12
-	picture = GFX_evt_bad_news
-	border = GFX_event_normal_frame_economy
+	hide_window = yes
 
 	is_triggered_only = yes
 
 	immediate = {
-		if = {
-			ai = yes
-			any_demesne_title = {
-				has_title_flag = title_for_landless
-			}
-		}
 		any_demesne_title = {
 			if = {
 				limit = {

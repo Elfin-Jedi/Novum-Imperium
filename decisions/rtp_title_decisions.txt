@@ -200,6 +200,9 @@ title_decisions = {
 						if = {
 							limit = {
 								ai = yes
+								any_demesne_title = {
+									has_title_flag = title_for_landless
+								}
 							}
 						}
 						save_event_target_as = destroy_title
