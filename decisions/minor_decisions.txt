@@ -16,17 +16,19 @@ decisions = {
 			}
 			prisoner = no
 			OR = {
-				holds_large_feast_trigger = yes
+				religion_group = christian
+				religion_group = zoroastrian_group
+				religion_group = jewish_group
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 			NOR = {
+				religion_group = mani_group
+				religion = yazidism
 				has_character_modifier = holding_large_feast
 				has_character_modifier = large_feast_timer
 				has_character_modifier = fabulous_feast
 				has_character_flag = guest_feast_started
-				liege = {
-					has_character_modifier = holding_large_feast
-				}
+				liege = { has_character_modifier = holding_large_feast }
 			}
 			num_of_vassals = 1
 		}
@@ -52,9 +54,6 @@ decisions = {
 			custom_tooltip = {
 				text = is_not_busy_trigger_tooltip
 				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
-			}
-			NOT = {
-				trait = treasure_fleet_preparation
 			}
 		}
 		effect = {
@@ -141,6 +140,7 @@ decisions = {
 			is_playable = yes
 			OR = {
 				religion_group = christian
+				religion = mazdakism
 				religion_group = mani_group
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -184,9 +184,6 @@ decisions = {
 			custom_tooltip = {
 				text = is_not_busy_trigger_tooltip
 				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
-			}
-			NOT = {
-				trait = treasure_fleet_preparation
 			}
 		}
 		effect = {
@@ -275,7 +272,9 @@ decisions = {
 			}
 			prisoner = no
 			OR = {
-				non_hunting_trigger = no
+				religion_group = christian
+				novum_imperium_is_pagan = yes
+				religion_group = zoroastrian_group
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 			NOT = {
@@ -314,9 +313,6 @@ decisions = {
 			custom_tooltip = {
 				text = is_not_busy_trigger_tooltip
 				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
-			}
-			NOT = {
-				trait = treasure_fleet_preparation
 			}
 		}
 		effect = {
@@ -436,9 +432,6 @@ decisions = {
 					NOT = { has_character_modifier = hunt_timer }
 				}
 			}
-			NOT = {
-				trait = treasure_fleet_preparation
-			}
 		}
 		effect = {
 			scaled_wealth = -0.2 # EMF
@@ -520,7 +513,7 @@ decisions = {
 			is_adult = yes
 			is_incapable = no
 			religion = hindu
-			NOR = {
+			NOR= {
 				has_character_modifier = patron_shiva
 				has_character_modifier = patron_vishnu
 				has_character_modifier = patron_brahma
@@ -570,7 +563,7 @@ decisions = {
 				has_quest = quest_indian_monastic_order_pilgrimage
 			}
 			is_playable = yes
-			religion_group = indian_group
+			has_dharmic_religion_trigger = yes
 			NOT = { trait = indian_pilgrim }
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -651,7 +644,8 @@ decisions = {
 				has_quest = quest_monastic_order_pilgrimage_christian
 			}
 			is_playable = yes
-			goes_on_pilgrimage_trigger = yes
+			religion_group = christian
+			NOT = { religion = waldensian }
 			NOT = { trait = pilgrim }
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -704,9 +698,6 @@ decisions = {
 					id = SoA.5000
 				}
 			}
-		}
-		NOT = {
-			trait = treasure_fleet_preparation
 		}
 		ai_will_do = {
 			factor = 1
@@ -774,9 +765,6 @@ decisions = {
 			custom_tooltip = {
 				text = is_not_busy_trigger_tooltip
 				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
-			}
-			NOT = {
-				trait = treasure_fleet_preparation
 			}
 		}
 		effect = {
@@ -1048,7 +1036,7 @@ decisions = {
 			is_playable = yes
 			is_adult = yes
 			prisoner = no
-			LI_norse_pagan_trigger = yes
+			culture_group = north_germanic
 			NOT = {	has_character_flag = commissioned_runestone }
 			NOT = { year = 1150 }
 			NOT = {
@@ -1094,7 +1082,8 @@ decisions = {
 			independent = yes # EMF: Allow non-mongol altaics to also hold nerges
 			culture_group = altaic
 			OR = {
-				religion_group = tengri_group
+				religion = tengri_pagan
+				religion = tengri_pagan_reformed
 				has_landed_title = e_il-khanate
 				has_landed_title = e_golden_horde
 				has_landed_title = e_mongol_empire
@@ -1129,9 +1118,6 @@ decisions = {
 			custom_tooltip = {
 				text = is_not_busy_trigger_tooltip
 				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
-			}
-			NOT = {
-				trait = treasure_fleet_preparation
 			}
 		}
 		effect = {
@@ -1213,8 +1199,10 @@ decisions = {
 			is_playable = yes
 			is_adult = yes
 			prisoner = no
-			LI_norse_pagan_trigger = yes
-			holds_christ_blot_trigger = no
+			OR = {
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
 			NOT = { has_character_modifier = held_blot_timer }
 			NOT = {	has_character_flag = holding_blot }
 			emf_hiprio_decision_basic_potential = yes
@@ -1245,9 +1233,6 @@ decisions = {
 			custom_tooltip = {
 				text = is_not_busy_trigger_tooltip
 				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
-			}
-			NOT = {
-				trait = treasure_fleet_preparation
 			}
 		}
 		effect = {
@@ -1340,7 +1325,25 @@ decisions = {
 			}
 			is_adult = yes
 			prisoner = no
-			worships_ancestors_trigger = yes
+			OR = {
+				religion = finnish_pagan
+				religion = finnish_pagan_reformed
+				religion = west_african_pagan
+				religion = west_african_pagan_reformed
+				religion = baltic_pagan
+				religion = baltic_pagan_reformed
+				religion = slavic_pagan
+				religion = slavic_pagan_reformed
+				religion = tengri_pagan
+				religion = tengri_pagan_reformed
+				religion = taoist
+				has_religion_feature = religion_beatification
+				has_religion_feature = religion_feature_baltic
+				has_religion_feature = religion_feature_slavic
+				has_religion_feature = religion_syncretic_christian
+				religion_group = african_group
+				has_religion_feature = religion_feature_egyptian
+			}
 			emf_hiprio_decision_basic_potential = yes
 		}
 		allow = {
@@ -1381,9 +1384,6 @@ decisions = {
 				}
 			}
 		}
-		NOT = {
-				trait = treasure_fleet_preparation
-		}
 		ai_will_do = {
 			factor = 0.1
 
@@ -1417,7 +1417,10 @@ decisions = {
 			is_playable = yes
 			is_adult = yes
 			prisoner = no
-			religion_group = finnish_group
+			OR = {
+				religion = finnish_pagan
+				religion = finnish_pagan_reformed
+			}
 			NOT = { has_character_modifier = held_ukon_juhla_timer }
 			NOT = {	has_character_flag = holding_ukon_juhla }
 			NOT = {
@@ -1446,9 +1449,6 @@ decisions = {
 			custom_tooltip = {
 				text = is_not_busy_trigger_tooltip
 				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
-			}
-			NOT = {
-				trait = treasure_fleet_preparation
 			}
 		}
 		effect = {
@@ -1532,10 +1532,14 @@ decisions = {
 			is_adult = yes
 			prisoner = no
 			OR = {
-				religion_group = slavic_group
-				religion_group = serer_group
-				religion_group = baltic_group
-				religion_group = finnish_group
+				religion = slavic_pagan
+				religion = slavic_pagan_reformed
+				religion = west_african_pagan
+				religion = west_african_pagan_reformed
+				religion = baltic_pagan
+				religion = baltic_pagan_reformed
+				religion = finnish_pagan
+				religion = finnish_pagan_reformed
 				religion = bori
 				religion = amazigh
                 religion = amazigh_reformed
@@ -1594,22 +1598,6 @@ decisions = {
 			if = {
 				limit = { has_character_modifier = follower_of_dongo }
 				remove_character_modifier = follower_of_dongo
-			}
-			if = {
-				limit = { has_character_modifier = follower_of_yemoja }
-				remove_character_modifier = follower_of_yemoja
-			}
-			if = {
-				limit = { has_character_modifier = follower_of_ekwensu }
-				remove_character_modifier = follower_of_ekwensu
-			}
-			if = {
-				limit = { has_character_modifier = follower_of_orunmila }
-				remove_character_modifier = follower_of_orunmila
-			}
-			if = {
-				limit = { has_character_modifier = follower_of_shango }
-				remove_character_modifier = follower_of_shango
 			}
 			if = {
 				limit = { has_character_modifier = follower_of_ukko }
@@ -1700,26 +1688,21 @@ decisions = {
 						character_event = { id = TOG.7100 days = 10 }
 					}
 				}
-				if = {
-					limit = {
-						NOT = religion_group = african_group
-					}
-				
-					#Event for picking main deity
-					trigger_switch = {
-						on_trigger = religion_group
-						slavic_group                = { character_event = { id = TOG.7110 } }
-						serer_group          		= { character_event = { id = TOG.7200 } }
-						finnish_group      			= { character_event = { id = TOG.7300 } }
-						baltic_group                = { character_event = { id = TOG.7400 } }
-					}
-				else = {
-					trigger_switch = {
-						on trigger = religion
-						bori						= { character_event = { id = AFRREL.050 } }
-						amazigh 					= { character_event = { id = AFRREL.060 } }
-						amazigh_reformed			= { character_event = { id = AFRREL.060 } }
-					}
+
+				#Event for picking main deity
+				trigger_switch = {
+					on_trigger = religion
+					slavic_pagan                = { character_event = { id = TOG.7110 } }
+					slavic_pagan_reformed       = { character_event = { id = TOG.7110 } }
+					west_african_pagan          = { character_event = { id = TOG.7200 } }
+					west_african_pagan_reformed = { character_event = { id = TOG.7200 } }
+					finnish_pagan               = { character_event = { id = TOG.7300 } }
+					finnish_pagan_reformed      = { character_event = { id = TOG.7300 } }
+					baltic_pagan                = { character_event = { id = TOG.7400 } }
+					baltic_pagan_reformed       = { character_event = { id = TOG.7400 } }
+					bori						= { character_event = { id = AFRREL.050 } }
+					amazigh 					= { character_event = { id = AFRREL.060 } }
+					amazigh_reformed			= { character_event = { id = AFRREL.060 } }
 				}
 
 				add_character_modifier = {
@@ -1747,7 +1730,10 @@ decisions = {
 			is_playable = yes
 			is_adult = yes
 			prisoner = no
-			religion_group = baltic_group
+			OR = {
+				religion = baltic_pagan
+				religion = baltic_pagan_reformed
+			}
 			NOT = { has_character_modifier = held_uzgavenes_timer }
 			NOT = {	has_character_flag = holding_uzgavenes }
 			NOT = {
@@ -1776,9 +1762,6 @@ decisions = {
 			custom_tooltip = {
 				text = is_not_busy_trigger_tooltip
 				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
-			}
-			NOT = {
-				trait = treasure_fleet_preparation
 			}
 		}
 		effect = {
@@ -1860,7 +1843,10 @@ decisions = {
 			is_playable = yes
 			is_adult = yes
 			prisoner = no
-			religion_group = slavic_group
+			OR = {
+				religion = slavic_pagan
+				religion = slavic_pagan_reformed
+			}
 			NOT = { has_character_modifier = held_jarilo_timer }
 			NOT = {	has_character_flag = holding_jarilo }
 			NOT = {
@@ -1889,9 +1875,6 @@ decisions = {
 			custom_tooltip = {
 				text = is_not_busy_trigger_tooltip
 				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
-			}
-			NOT = {
-				trait = treasure_fleet_preparation
 			}
 		}
 		effect = {
@@ -1974,10 +1957,7 @@ decisions = {
 			is_playable = yes
 			is_adult = yes
 			prisoner = no
-			OR = {
-				religion_group = jewish_group
-				religion = judaism_reformed
-			}
+			religion_group = jewish_group
 			NOT = { has_character_modifier = held_passover_timer }
 			NOT = {	has_character_flag = holding_passover }
 			emf_hiprio_decision_basic_potential = yes
@@ -2007,9 +1987,6 @@ decisions = {
 			custom_tooltip = {
 				text = is_not_busy_trigger_tooltip
 				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
-			}
-			NOT = {
-				trait = treasure_fleet_preparation
 			}
 		}
 		effect = {
@@ -2091,7 +2068,7 @@ decisions = {
 		potential = {
 			is_playable = yes
 			is_adult = yes
-			caste_religions_trigger = yes
+			emf_religion_has_caste_opinions = yes
 			OR = {
 				is_feudal = yes
 				is_tribal = yes
@@ -2179,7 +2156,7 @@ decisions = {
 				top_liege = {
 					any_realm_character = {
 						limit = {
-							caste_religions_trigger = yes
+							emf_religion_has_caste_opinions = yes
 							is_adult = yes
 							NOT = { character = ROOT }
 							NOT = { trait = cynical }
@@ -2218,7 +2195,7 @@ decisions = {
 		potential = {
 			is_playable = yes
 			is_adult = yes
-			caste_religions_trigger = yes
+			emf_religion_has_caste_opinions = yes
 			OR = {
 				is_republic = yes
 				is_merchant_republic = yes
@@ -2304,7 +2281,7 @@ decisions = {
 				top_liege = {
 					any_realm_character = {
 						limit = {
-							caste_religions_trigger = yes
+							emf_religion_has_caste_opinions = yes
 							is_adult = yes
 							NOT = { character = ROOT }
 							NOT = { trait = cynical }
@@ -2351,7 +2328,7 @@ decisions = {
 				is_republic = yes
 			}
 			prisoner = no
-			caste_religions_trigger = yes
+			religion = hindu
 			is_incapable = no
 			NOT = { has_character_modifier = patron_kali }
 			NOT = {
@@ -2402,9 +2379,6 @@ decisions = {
 			custom_tooltip = {
 				text = is_not_busy_trigger_tooltip
 				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
-			}
-			NOT = {
-				trait = treasure_fleet_preparation
 			}
 		}
 		effect = {
@@ -2491,12 +2465,10 @@ decisions = {
 				is_republic = yes
 			}
 			prisoner = no
-			religion_group = bud_group
-			OR = {
-				culture_group = indoaryan
-				culture_group = dravidian
+			AND = {
+				religion_group = bud_group
+				NOT = { capital_scope = { region = world_china } }
 			}
-			NOT = { capital_scope = { region = world_china } }
 			is_incapable = no
 			NOT = {
 				has_character_modifier = holding_diwali_feast
@@ -2546,9 +2518,6 @@ decisions = {
 			custom_tooltip = {
 				text = is_not_busy_trigger_tooltip
 				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
-			}
-			NOT = {
-				trait = treasure_fleet_preparation
 			}
 		}
 		effect = {
@@ -2687,9 +2656,6 @@ decisions = {
 			custom_tooltip = {
 				text = is_not_busy_trigger_tooltip
 				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
-			}
-			NOT = {
-				trait = treasure_fleet_preparation
 			}
 		}
 		effect = {
@@ -2841,9 +2807,6 @@ decisions = {
 				text = is_not_busy_trigger_tooltip
 				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
 			}
-			NOT = {
-				trait = treasure_fleet_preparation
-			}
 		}
 		effect = {
 			scaled_wealth = -0.2
@@ -2921,6 +2884,11 @@ decisions = {
 		potential = {
 			independent = yes
 			higher_tier_than = DUKE
+			OR = {
+				has_dharmic_religion_trigger = yes
+				religion = bon
+				religion = bon_reformed
+			}
 			is_playable = yes
 			is_adult = yes
 			OR = {
@@ -2929,7 +2897,6 @@ decisions = {
 				is_nomadic = yes
 			}
 			prisoner = no
-			guru_religions_trigger = yes
 			NOT = { has_character_flag = looking_for_guru }
 			NOT = { has_character_flag = found_guru }
 			NOT = {
@@ -3289,10 +3256,20 @@ decisions = {
 			has_character_flag = sky_burial
 			NOT = { has_character_flag = performed_sky_burial }
 			OR = {
-				sky_burial_trigger = yes
+				religion_group = zoroastrian_group
+				religion = bon
+				religion = bon_reformed
 				any_owned_bloodline = {
 					has_bloodline_flag = bloodline_sky_burial
 					bloodline_is_active_for = PREV
+				}
+				AND = {
+					is_nomadic = yes
+					OR = {
+						religion = tengri_pagan
+						religion = tengri_pagan_reformed
+						has_dharmic_religion_trigger = yes
+					}
 				}
 			}
 		}
@@ -3305,9 +3282,6 @@ decisions = {
 			NOT = { trait = infirm }
 			NOT = { is_inaccessible_trigger = yes }
 			NOT = { has_character_flag = do_not_disturb }
-			NOT = {
-				trait = treasure_fleet_preparation
-			}
 		}
 		effect = {
 			custom_tooltip = { text = sky_burial_custom_tooltip }
@@ -3346,9 +3320,6 @@ decisions = {
 			rtp_is_capable_adult = yes
 			rtp_no_loans_st = yes
 			war = no
-			NOT = {
-				trait = treasure_fleet_preparation
-			}
 		}
 		effect = {
 			wealth = -20
@@ -3379,7 +3350,7 @@ decisions = {
 			FROM = {
 				show_scope_change = no
 				is_indestructible = no
-				custom_tooltip = { text = tooltip_considering_artifact_donation NOT = { has_artifact_flag = flag_considering_donation } }
+				custom_tooltip = { text = tooltip_considering_artifact_donation NOT = { has_artifact_flag = flag_considering_donation } }				
 			}
 		}
 		effect = {
