@@ -1614,8 +1614,6 @@ emf_is_chinese_imperial_culture = {
 		culture = bohai
 		culture = korean
 		culture = vietnamese
-	}
-	OR = {
 		AND = {
 			has_acceptable_chinese_culture_trigger = yes
 			has_acceptable_chinese_religion_trigger = yes
