@@ -1329,10 +1329,6 @@ society_decisions = {
 		# is_in_society = yes
 		ai = no
 		potential = {
-			OR = {
-				is_landed = yes
-				is_patrician = yes
-			}
 			society_member_of = the_guilds
 			society_rank >= 1
 			has_character_flag = guilds_show_decision

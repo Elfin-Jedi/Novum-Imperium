@@ -3409,6 +3409,7 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
+		rtp_is_landless = no
 		has_focus = focus_business
 		NOT = { has_character_modifier = wol_debase_timer }
 	}

@@ -2107,9 +2107,9 @@ trade_post_decisions = {
 							trade_route = trans_saharan_trade_route
 							trans_saharan_trade_post_market_trigger = yes
 						}
-						add_to_extra_holding = { type = trade_post_building = tr_sahara_1 }
-						add_to_extra_holding = { type = trade_post_building = tr_sahara_2 }
-						add_to_extra_holding = { type = trade_post_building = tr_sahara_3 }
+						add_to_extra_holding = { type = trade_post building = tr_sahara_1 }
+						add_to_extra_holding = { type = trade_post building = tr_sahara_2 }
+						add_to_extra_holding = { type = trade_post building = tr_sahara_3 }
 					}
 
 					if = {
@@ -2117,9 +2117,9 @@ trade_post_decisions = {
 							trade_route = trans_saharan_trade_route
 							trans_saharan_trade_post_gold_mine_trigger = yes
 						}
-						add_to_extra_holding = { type = trade_post_building = tr_gold_mine_1 }
-						add_to_extra_holding = { type = trade_post_building = tr_gold_mine_2 }
-						add_to_extra_holding = { type = trade_post_building = tr_gold_mine_3 }
+						add_to_extra_holding = { type = trade_post building = tr_gold_mine_1 }
+						add_to_extra_holding = { type = trade_post building = tr_gold_mine_2 }
+						add_to_extra_holding = { type = trade_post building = tr_gold_mine_3 }
 					}
 
 					if = {
@@ -2130,7 +2130,7 @@ trade_post_decisions = {
 								province_id = 916
 							}
 						}
-						add_to_extra_holding = { type = trade_post_building = tr_salt_mine_1 }
+						add_to_extra_holding = { type = trade_post building = tr_salt_mine_1 }
 					}
 
 					if = {
@@ -2138,7 +2138,7 @@ trade_post_decisions = {
 							trade_route = trans_saharan_trade_route
 							province_id = 911
 						}
-						add_to_extra_holding = { type = trade_post_building = tr_cloth_production_1 }
+						add_to_extra_holding = { type = trade_post building = tr_cloth_production_1 }
 					}
 
 					if = {
