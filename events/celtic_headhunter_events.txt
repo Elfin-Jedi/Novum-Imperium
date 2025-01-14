@@ -3,18 +3,18 @@
 # ANCIENT RELIGIONS
 # - Druidic Headhunters
 #
-# Event ID celtic.10 - celtic.19 reserved
+# Event ID ancrel.10 - ancrel.19 reserved
 #
 #######################################
 
 # Written by Patrick Marchand
 
-namespace = celtic
+namespace = ancrel
 
-#[on_combat_pulse] Druidic character becomes renowned headhunter
+#[on_combat_pulse] Druidic character becomes reknowned headhunter
 character_event = {
-	id = celtic.10
-	desc = celtic.10.desc
+	id = ancrel.10
+	desc = EVTDESCancrel.0010
 	picture = GFX_evt_headhunter
 	border = GFX_event_normal_frame_war
 
@@ -25,142 +25,150 @@ character_event = {
 	min_age = 16
 	capable_only = yes
 	prisoner = no
+	religion_group = celtic_group
 
 	trigger = {
 		is_alive = yes
-		religion_openly_celtic_or_reformed_trigger = yes
+		NOT = { trait = head1 }
+		OR = {
+			religion = celtic_pagan
+			religion = celtic_pagan_reformed
+			religion = lugh
+		}
 		OR = {
 			trait = brave
-			trait = fian
-			trait = celtic_knight
 			trait = wroth
-		}
-		NOR = {
-			has_religion_feature = religion_peaceful
-			trait = head1
-			trait = head2
 		}
 	}
 	
 	weight_multiplier = {
 		days = 1
 		modifier = {
-			factor = 2
+			factor = 0.5
 			trait = brave
 		}		
 		modifier = {
-			factor = 2
+			factor = 0.5
 			martial = 10
 		}
 		modifier = {
-			factor = 2
 			is_strong_trigger = yes
+			factor = 0.5
 		}
 		modifier = {
-			factor = 2
 			trait = genius
+			factor = 0.2
 		}
 		modifier = {
-			factor = 5
-			is_smart_trigger = yes
+			OR = {
+				trait = quick
+				trait = shrewd
+			}
+			factor = 0.1
 		}
 		modifier = {
 			factor = 0.1
 			trait = wounded
 		}
 		modifier = {
-			factor = 0.2
-			is_dumb_trigger = yes
+			OR = {
+				trait = slow
+				trait = dull
+			}
+			factor = 1.1
 		}
 		modifier = {
-			factor = 0.1
+			trait = imbecile
+			factor = 1.8
+		}
+		modifier = {
 			trait = inbred
+			factor = 1.8
 		}
 		modifier = {
-			factor = 0.5
 			is_weak_trigger = yes
+			factor = 1.2
 		}	
 		modifier = {
+			factor = 1.2
 			trait = stressed
-			factor = 0.9
 		}
 		modifier = {
-			factor = 0.8
+			factor = 1.2
 			trait = depressed
 		}
 		modifier = {
-			factor = 0.9
-			trait = ill
+			factor = 1.1
+			is_ill = yes
 		}
 		modifier = {
-			factor = 0.8
+			factor = 1.2
 			trait = pneumonic
 		}
 		modifier = {
-			factor = 0.8
+			factor = 1.2
 			trait = syphilitic
 		}
 		modifier = {
-			factor = 0.7
+			factor = 1.5
 			trait = leper
 		}
 		modifier = {
-			factor = 0.8
-			trait = maimed
+			factor = 1.2
+			is_maimed_trigger = yes
 		}
 		modifier = {
-			factor = 0.7
+			factor = 1.5
 			trait = infirm
 		}
 		modifier = {
-			factor = 0.6
+			factor = 1.6
 			trait = incapable
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.5
 			trait = drunkard
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.5
 			trait = has_tuberculosis
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.5
 			trait = has_typhoid_fever
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.5
 			trait = has_typhus
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.5
 			trait = has_bubonic_plague
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.5
 			trait = has_measles
 		}		
 		modifier = {
-			factor = 0.75
+			factor = 1.5
 			trait = has_small_pox
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.5
 			trait = craven
 		}
 	}
 	
 	option = {
-		name = celtic.10.a
+		name = EVTOPTAancrel.0010
 		add_trait = head1
-		set_character_flag = ancrel_headhunter
 	}
 }
 
-#[on_combat_pulse] Druidic character becomes living legend
+#[on_combat_pulse] Druidic character becomes legend
 character_event = {
-	id = celtic.11
-	desc = celtic.11.desc
+	id = ancrel.11
+	desc = EVTDESCancrel.0011
 	picture = GFX_evt_headhunter
 	border = GFX_event_normal_frame_war
 
@@ -171,6 +179,7 @@ character_event = {
 	min_age = 16
 	capable_only = yes
 	prisoner = no
+	religion_group = celtic_group
 	
 	trigger = {
 		is_alive = yes
@@ -183,65 +192,75 @@ character_event = {
 			trait = duelist
 		}
 		NOT = { trait = head2 }
-		religion_openly_celtic_or_reformed_trigger = yes
-		NOT = {
-			has_religion_feature = religion_peaceful
+		OR = {
+			religion = celtic_pagan
+			religion = celtic_pagan_reformed
+			religion = lugh
 		}
-		had_character_flag = { flag = ancrel_headhunter days = 780 }
 	}
 	
 	weight_multiplier = {
-		days = 100
+		days = 1
 		modifier = {
-			factor = 2
+			factor = 0.5
 			trait = brave
 		}		
 		modifier = {
-			factor = 2
+			factor = 0.5
 			martial = 13
 		}
 		modifier = {
-			factor = 2
 			is_strong_trigger = yes
+			factor = 0.5
 		}
 		modifier = {
-			factor = 2
 			trait = genius
-		} # \/ These two /\ stack, so genius gets x10
+			factor = 0.2
+		}
 		modifier = {
-			factor = 5
-			is_smart_trigger = yes
+			OR = {
+				trait = quick
+				trait = shrewd
+			}
+			factor = 0.1
 		}
 		modifier = {
 			factor = 0.1
 			trait = wounded
 		}
 		modifier = {
-			factor = 0.9
-			is_dumb_trigger = yes
+			OR = {
+				trait = slow
+				trait = dull
+			}
+			factor = 1.1
 		}
 		modifier = {
-			factor = 0.1
+			trait = imbecile
+			factor = 1.8
+		}
+		modifier = {
 			trait = inbred
+			factor = 1.8
 		}
 		modifier = {
-			factor = 0.6
 			is_weak_trigger = yes
+			factor = 1.8
 		}	
 		modifier = {
-			factor = 0.9
+			factor = 1.2
 			trait = stressed
 		}
 		modifier = {
-			factor = 0.8
+			factor = 1.2
 			trait = depressed
 		}
 		modifier = {
-			factor = 0.9
-			trait = ill
+			factor = 1.1
+			is_ill = yes
 		}
 		modifier = {
-			factor = 0.2
+			factor = 1.2
 			trait = pneumonic
 		}
 		modifier = {
@@ -249,98 +268,57 @@ character_event = {
 			trait = syphilitic
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.5
 			trait = leper
 		}
 		modifier = {
-			factor = 0.8
-			trait = maimed
+			factor = 1.2
+			is_maimed_trigger = yes
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.5
 			trait = infirm
 		}
 		modifier = {
-			factor = 0.6
+			factor = 1.6
 			trait = incapable
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.5
 			trait = drunkard
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.5
 			trait = has_tuberculosis
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.5
 			trait = has_typhoid_fever
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.5
 			trait = has_typhus
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.5
 			trait = has_bubonic_plague
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.5
 			trait = has_measles
 		}		
 		modifier = {
-			factor = 0.75
+			factor = 1.5
 			trait = has_small_pox
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.5
 			trait = craven
 		}
 	}
 	
 	option = {
-		name = celtic.11.a
-		trigger = {
-			NOT = {
-				any_owned_bloodline = {
-					has_bloodline_flag = bloodline_legendary
-				}
-			}
-		}
-
+		name = EVTOPTAancrel.0011
 		add_trait = head2
-		
-		custom_tooltip = {
-			text = found_living_legend_bloodine_tt
-			hidden_tooltip = {
-				if = {
-					limit = {
-						is_female = yes
-					}
-					create_bloodline = {
-						type = living_legend_female
-					}
-				} else = {
-					create_bloodline = {
-						type = living_legend_male
-					}
-				}
-			}
-		}
-	}
-
-	option = {
-		name = celtic.11.a
-		add_trait = head2
-
-		trigger = {
-			any_owned_bloodline = {
-				has_bloodline_flag = bloodline_legendary
-			}
-		}
-	}
-
-	after = {
-		clr_character_flag = ancrel_headhunter
 	}
 }

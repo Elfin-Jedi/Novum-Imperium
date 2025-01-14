@@ -328,7 +328,7 @@ decisions = {
 	}
 }
 
-targetted_decisions = {  
+targetted_decisions = { 
     alcohol_gift_decision = { #Given Alcohol gift
         only_playable = yes
         ai = no
@@ -370,7 +370,7 @@ targetted_decisions = {
 					OR = {
 						trait = zealous
 						has_job_title = job_spiritual 
-					}	
+					}
         		}
         		opinion = {
 					who = FROM
@@ -396,7 +396,7 @@ targetted_decisions = {
 				add_character_modifier = {
 					name = recently_recieved_alcohol_gift
 					duration = 365
-					hidden = yes	
+					hidden = yes
 				}
 			}
             

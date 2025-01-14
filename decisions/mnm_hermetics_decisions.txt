@@ -405,6 +405,9 @@ targeted_decisions = {
 			is_adult = yes
 			prisoner = no
 			society_member_of = hermetics
+			NOT = {
+				trait = treasure_fleet_preparation
+			}
 		}
 
 		potential = {
@@ -424,6 +427,9 @@ targeted_decisions = {
 				custom_tooltip = {
 					text = tooltip_not_busy
 					NOT = { has_character_flag = do_not_disturb }
+				}
+				NOT = {
+					trait = treasure_fleet_preparation
 				}
 			}
 			FROM = {
@@ -621,6 +627,9 @@ society_decisions = {
 			custom_tooltip = {
 				text = is_not_busy_trigger_tooltip
 				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
+			}
+			NOT = {
+				trait = treasure_fleet_preparation
 			}
 			custom_tooltip = {
 				text = GRAND_DEBATE_HOLDING_TOOLTIP

@@ -3743,9 +3743,9 @@ character_event = {
 	min_age = 16
 	prisoner = no
 	only_playable = yes
-	novum_imperium_is_pagan = yes
 
 	trigger = {
+		novum_imperium_is_pagan = yes
 		OR = {
 			ai = no
 			has_game_rule = {
@@ -3758,16 +3758,6 @@ character_event = {
 				name = supernatural_events
 				value = off
 			}
-		}
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-			religion = slavic_pagan
-			religion = slavic_pagan_reformed
-			religion = baltic_pagan
-			religion = baltic_pagan_reformed
-			religion = finnish_pagan
-			religion = finnish_pagan_reformed
 		}
 		NOT = { has_character_flag = the_old_ones_are_waking }
 		NOT = { is_inaccessible_trigger = yes }
@@ -3811,7 +3801,6 @@ character_event = {
 	min_age = 16
 	prisoner = no
 	only_playable = yes
-	novum_imperium_is_pagan = yes
 
 	trigger = {
 		OR = {
@@ -3827,16 +3816,7 @@ character_event = {
 				value = off
 			}
 		}
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-			religion = slavic_pagan
-			religion = slavic_pagan_reformed
-			religion = baltic_pagan
-			religion = baltic_pagan_reformed
-			religion = finnish_pagan
-			religion = finnish_pagan_reformed
-		}
+		novum_imperium_is_pagan = yes
 		NOT = { has_character_flag = the_old_ones_are_waking }
 		NOT = { is_inaccessible_trigger = yes }
 	}
@@ -3879,7 +3859,6 @@ character_event = {
 	min_age = 16
 	prisoner = no
 	only_playable = yes
-	novum_imperium_is_pagan = yes
 
 	trigger = {
 		OR = {
@@ -3895,16 +3874,7 @@ character_event = {
 				value = off
 			}
 		}
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-			religion = slavic_pagan
-			religion = slavic_pagan_reformed
-			religion = baltic_pagan
-			religion = baltic_pagan_reformed
-			religion = finnish_pagan
-			religion = finnish_pagan_reformed
-		}
+		novum_imperium_is_pagan = yes
 		NOT = { has_character_flag = the_old_ones_are_waking }
 		NOT = { is_inaccessible_trigger = yes }
 	}
@@ -3963,16 +3933,7 @@ character_event = {
 				value = off
 			}
 		}
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-			religion = slavic_pagan
-			religion = slavic_pagan_reformed
-			religion = baltic_pagan
-			religion = baltic_pagan_reformed
-			religion = finnish_pagan
-			religion = finnish_pagan_reformed
-		}
+		novum_imperium_is_pagan = yes
 		NOT = { has_character_flag = the_old_ones_are_waking }
 		NOT = { is_inaccessible_trigger = yes }
 	}

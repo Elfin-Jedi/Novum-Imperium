@@ -446,6 +446,12 @@ title_decisions = {
 					}
 				}
 			}
+			location = {
+				add_province_modifier = {
+					modifier = nomads_exploited_land
+					years = 8
+				}
+			}
 		}
 		
 		ai_will_do = {

@@ -26,9 +26,12 @@ targetted_decisions = {
 		from_potential = {
 			is_playable = yes
 			OR = {
-				religion = aztec
+				religion_group = aztec_group
 				AND = {
-					religion = aztec_reformed
+					OR = {
+						religion = aztec_reformed
+						religion = quetzal_reformed
+					}
 					has_religion_features = no
 				}
 				has_religion_feature = religion_feature_aztec
@@ -64,6 +67,8 @@ targetted_decisions = {
 						NOR = {
 							religion = aztec
 							religion = aztec_reformed
+							religion = quetzal
+							religion = quetzal_reformed
 						}
 						FROM = { ai = no }
 					}
@@ -100,5 +105,4 @@ targetted_decisions = {
 			}
 		}
 	}
-
 }

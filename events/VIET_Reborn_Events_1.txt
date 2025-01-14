@@ -15703,6 +15703,7 @@ character_event = {
 	
 	trigger = {
 		in_command = no
+		rtp_is_landless = no
 		#has_game_rule = {
 		#	name = VIET_events_rules
 		#	value = silly

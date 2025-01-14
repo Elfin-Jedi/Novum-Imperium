@@ -241,24 +241,17 @@ character_event = {
 }
 
 # From on action on_birth - check who was born and create appropriate chronicle entries
-character_event = {
-	id = CM.10011
+# character_event = {
+	# id = CM.10011 #MERGED WITH BIRTH.990
+	
+	# hide_window = yes
 
-	hide_window = yes
+	# is_triggered_only = yes
 
-	is_triggered_only = yes
-
-	trigger = {
-		OR = {
-			father = { ai = no }
-			mother = { ai = no }
-		}
-	}
-
-	immediate = {
-		character_event = { id = CM.19011 days = 2 } # Delay to allow for naming of child.
-	}
-}
+	# option = {
+		# name = OK
+	# }
+# }
 
 character_event = {
 	id = CM.19011
@@ -1993,5 +1986,3 @@ character_event = {
 		}
 	}
 }
-
-

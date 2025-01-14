@@ -28,6 +28,14 @@ society_decisions = { # Society decisions are only evaluated by members of socie
 					society_rank < 3
 					NOR = {
 						society_member_of = the_assassins
+						society_member_of = the_assassins_bud_mahayana
+						society_member_of = the_assassins_mani_ahriman
+						society_member_of = the_assassins_priscillian
+						society_member_of = the_assassins_ragnarok
+						society_member_of = the_assassins_set
+						society_member_of = the_assassins_tengri_ahriman
+						society_member_of = the_assassins_yahyanism
+						society_member_of = the_assassins_zor_angra
 						is_devil_worshiper_trigger = yes
 					}
 				}
@@ -210,6 +218,14 @@ society_decisions = { # Society decisions are only evaluated by members of socie
 					society_rank == 3
 					OR = {
 						society_member_of = the_assassins
+						society_member_of = the_assassins_bud_mahayana
+						society_member_of = the_assassins_mani_ahriman
+						society_member_of = the_assassins_priscillian
+						society_member_of = the_assassins_ragnarok
+						society_member_of = the_assassins_set
+						society_member_of = the_assassins_tengri_ahriman
+						society_member_of = the_assassins_yahyanism
+						society_member_of = the_assassins_zor_angra
 						is_devil_worshiper_trigger = yes
 					}
 				}
@@ -491,10 +507,52 @@ society_decisions = {
 		ai_check_interval = 80
 		potential = {
 			has_dlc = "Mystics"
-			society_member_of = the_assassins
-			NOT = {
+			OR = {
+				society_member_of = the_assassins
+				society_member_of = the_assassins_bud_mahayana
+				society_member_of = the_assassins_mani_ahriman
+				society_member_of = the_assassins_priscillian
+				society_member_of = the_assassins_ragnarok
+				society_member_of = the_assassins_set
+				society_member_of = the_assassins_tengri_ahriman
+				society_member_of = the_assassins_yahyanism
+				society_member_of = the_assassins_zor_angra
+			}
+			NOR = {
 				society_rank = {
 					society = the_assassins
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_bud_mahayana	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_mani_ahriman	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_priscillian	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_ragnarok	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_set	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_tengri_ahriman	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_yahyanism	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_zor_angra
 					rank == 4
 				}
 			}
@@ -508,12 +566,62 @@ society_decisions = {
 
 				any_society_member = {
 					is_society_grandmaster = yes
-					society_member_of = the_assassins
+					OR = {
+						 society_member_of = the_assassins
+						 society_member_of = the_assassins_bud_mahayana
+						 society_member_of = the_assassins_mani_ahriman
+						 society_member_of = the_assassins_priscillian
+						 society_member_of = the_assassins_ragnarok
+						 society_member_of = the_assassins_set
+						 society_member_of = the_assassins_tengri_ahriman
+						 society_member_of = the_assassins_yahyanism
+						 society_member_of = the_assassins_zor_angra
+					 }
 					OR = {
 						ai = no
 						NOT = { primary_title = { title = d_hashshashin } }
+						NOT = { primary_title = { title = d_enemies_of_avidya } }
+						NOT = { primary_title = { title = d_ahrimans_divs } }
+						NOT = { primary_title = { title = d_holy_doctors } }
+						NOT = { primary_title = { title = d_council_of_aesir } }
+						NOT = { primary_title = { title = d_warriors_of_oasis } }
+						NOT = { primary_title = { title = d_blue_wolves } }
+						NOT = { primary_title = { title = d_order_of_righteous } }
+						NOT = { primary_title = { title = d_avengers_of_holy_pyre } }
 						AND = {
 							primary_title = { title = d_hashshashin }
+							wealth = 50
+						}
+						AND = {
+							primary_title = { title = d_enemies_of_avidya } 							
+							wealth = 50
+						}
+						AND = {
+							primary_title = { title = d_ahrimans_divs } 							
+							wealth = 50
+						}
+						AND = {
+							primary_title = { title = d_holy_doctors } 							
+							wealth = 50
+						}
+						AND = {
+							primary_title = { title = d_council_of_aesir } 							
+							wealth = 50
+						}
+						AND = {
+							primary_title = { title = d_warriors_of_oasis } 							
+							wealth = 50
+						}
+						AND = {
+							primary_title = { title = d_blue_wolves } 							
+							wealth = 50
+						}
+						AND = {
+							primary_title = { title = d_order_of_righteous } 							
+							wealth = 50
+						}
+						AND = {
+							primary_title = { title = d_avengers_of_holy_pyre } 							
 							wealth = 50
 						}
 					}
@@ -527,7 +635,17 @@ society_decisions = {
 				random_society_member = {
 					limit = {
 						is_society_grandmaster = yes
-						society_member_of = the_assassins
+						OR = {
+							 society_member_of = the_assassins
+							 society_member_of = the_assassins_bud_mahayana
+							 society_member_of = the_assassins_mani_ahriman
+							 society_member_of = the_assassins_priscillian
+							 society_member_of = the_assassins_ragnarok
+							 society_member_of = the_assassins_set
+							 society_member_of = the_assassins_tengri_ahriman
+							 society_member_of = the_assassins_yahyanism
+							 society_member_of = the_assassins_zor_angra
+						 }
 					}
 					character_event = { id = MNM.6000 }
 				}
@@ -561,7 +679,17 @@ society_decisions = {
 			NOT = { has_character_flag = block_payback }
 			any_society_member = {
 				is_society_grandmaster = yes
-				society_member_of = the_assassins
+				OR = {
+					 society_member_of = the_assassins
+					 society_member_of = the_assassins_bud_mahayana
+					 society_member_of = the_assassins_mani_ahriman
+					 society_member_of = the_assassins_priscillian
+					 society_member_of = the_assassins_ragnarok
+					 society_member_of = the_assassins_set
+					 society_member_of = the_assassins_tengri_ahriman
+					 society_member_of = the_assassins_yahyanism
+					 society_member_of = the_assassins_zor_angra
+				 }
 			}
 		}
 
@@ -654,7 +782,17 @@ society_decisions = {
 
 		potential = {
 			has_dlc = "Mystics"
-			society_member_of = the_assassins
+			OR = {
+				society_member_of = the_assassins
+				society_member_of = the_assassins_bud_mahayana
+				society_member_of = the_assassins_mani_ahriman
+				society_member_of = the_assassins_priscillian
+				society_member_of = the_assassins_ragnarok
+				society_member_of = the_assassins_set
+				society_member_of = the_assassins_tengri_ahriman
+				society_member_of = the_assassins_yahyanism
+				society_member_of = the_assassins_zor_angra
+			}
 			society_rank < 4
 		}
 
@@ -663,16 +801,50 @@ society_decisions = {
 		}
 
 		effect = {
-			tooltip = {
-				wealth = -200
-				add_society_currency_minor_effect = yes
-			}
-			hidden_effect = {
-				random_society_member = {
-					limit = {
-						society_rank = {
-							rank == 4
-							society = the_assassins
+			 tooltip = {
+				 wealth = -200
+				 add_society_currency_minor_effect = yes
+			 }
+			 hidden_effect = {
+				 random_society_member = {
+					 limit = {
+						 OR = {
+							society_rank = {
+								society = the_assassins
+								rank == 4
+							}
+							society_rank = {
+								society = the_assassins_bud_mahayana	
+								rank == 4
+							}
+							society_rank = {
+								society = the_assassins_mani_ahriman	
+								rank == 4
+							}
+							society_rank = {
+								society = the_assassins_priscillian	
+								rank == 4
+							}
+							society_rank = {
+								society = the_assassins_ragnarok	
+								rank == 4
+							}
+							society_rank = {
+								society = the_assassins_set	
+								rank == 4
+							}
+							society_rank = {
+								society = the_assassins_tengri_ahriman	
+								rank == 4
+							}
+							society_rank = {
+								society = the_assassins_yahyanism	
+								rank == 4
+							}
+							society_rank = {
+								society = the_assassins_zor_angra
+								rank == 4
+							}
 						}
 					}
 					character_event = { id = MNM.6004 }
@@ -710,9 +882,43 @@ society_decisions = {
 
 		potential = {
 			has_dlc = "Mystics"
-			society_rank = {
-				society = the_assassins
-				rank == 4
+			OR = {
+				society_rank = {
+					society = the_assassins
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_bud_mahayana	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_mani_ahriman	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_priscillian	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_ragnarok	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_set	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_tengri_ahriman	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_yahyanism	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_zor_angra
+					rank == 4
+				}
 			}
 		}
 
@@ -777,9 +983,43 @@ society_decisions = {
 
 		potential = {
 			has_dlc = "Mystics"
-			society_rank = {
-				society = the_assassins
-				rank >= 3
+			OR = {
+				society_rank = {
+					society = the_assassins
+					rank >= 3
+				}
+				society_rank = {
+					society = the_assassins_bud_mahayana	
+					rank >= 3
+				}
+				society_rank = {
+					society = the_assassins_mani_ahriman	
+					rank >= 3
+				}
+				society_rank = {
+					society = the_assassins_priscillian	
+					rank >= 3
+				}
+				society_rank = {
+					society = the_assassins_ragnarok	
+					rank >= 3
+				}
+				society_rank = {
+					society = the_assassins_set	
+					rank >= 3
+				}
+				society_rank = {
+					society = the_assassins_tengri_ahriman	
+					rank >= 3
+				}
+				society_rank = {
+					society = the_assassins_yahyanism	
+					rank >= 3
+				}
+				society_rank = {
+					society = the_assassins_zor_angra
+					rank >= 3
+				}
 			}
 		}
 
@@ -813,7 +1053,17 @@ society_decisions = {
 
 		potential = {
 			has_dlc = "Mystics"
-			society_member_of = the_assassins
+			OR = {
+				society_member_of = the_assassins
+				society_member_of = the_assassins_bud_mahayana
+				society_member_of = the_assassins_mani_ahriman
+				society_member_of = the_assassins_priscillian
+				society_member_of = the_assassins_ragnarok
+				society_member_of = the_assassins_set
+				society_member_of = the_assassins_tengri_ahriman
+				society_member_of = the_assassins_yahyanism
+				society_member_of = the_assassins_zor_angra
+			}
 			NOT = {	has_character_flag = assassins_taking_drugs	}
 		}
 
@@ -849,7 +1099,17 @@ targeted_decisions = {
 			prisoner = no
 			is_incapable = no
 			NOT = { has_character_modifier = recruitment_timer }
-			society_member_of = the_assassins
+			OR = {
+				society_member_of = the_assassins
+				society_member_of = the_assassins_bud_mahayana
+				society_member_of = the_assassins_mani_ahriman
+				society_member_of = the_assassins_priscillian
+				society_member_of = the_assassins_ragnarok
+				society_member_of = the_assassins_set
+				society_member_of = the_assassins_tengri_ahriman
+				society_member_of = the_assassins_yahyanism
+				society_member_of = the_assassins_zor_angra
+			}
 
 			#Only level 2 and 3 AIs recruit
 			OR = {
@@ -883,7 +1143,16 @@ targeted_decisions = {
 			NAND = {
 				ai = yes
 				FROM = { ai = yes }
-				NOT = { can_join_society = the_assassins }
+				NOR = { 
+					can_join_society = the_assassins 
+					can_join_society = the_assassins_mani_ahriman
+					can_join_society = the_assassins_priscillian
+					can_join_society = the_assassins_ragnarok
+					can_join_society = the_assassins_set
+					can_join_society = the_assassins_tengri_ahriman
+					can_join_society = the_assassins_yahyanism
+					can_join_society = the_assassins_zor_angra
+				}
 			}
 
 			#Stopping the ai from making stupid choices
@@ -893,6 +1162,14 @@ targeted_decisions = {
 				is_lover = FROM
 				is_close_relative = FROM
 				interested_in_society = the_assassins
+				interested_in_society = the_assassins_bud_mahayana
+				interested_in_society = the_assassins_mani_ahriman
+				interested_in_society = the_assassins_priscillian
+				interested_in_society = the_assassins_ragnarok
+				interested_in_society = the_assassins_set
+				interested_in_society = the_assassins_tengri_ahriman
+				interested_in_society = the_assassins_yahyanism
+				interested_in_society = the_assassins_zor_angra
 			}
 
 			NAND = {
@@ -921,6 +1198,14 @@ targeted_decisions = {
 					OR = {
 						NOT = { has_character_flag = assassins_attempted_recruitment }
 						interested_in_society = the_assassins
+						interested_in_society = the_assassins_bud_mahayana
+						interested_in_society = the_assassins_mani_ahriman
+						interested_in_society = the_assassins_priscillian
+						interested_in_society = the_assassins_ragnarok
+						interested_in_society = the_assassins_set
+						interested_in_society = the_assassins_tengri_ahriman
+						interested_in_society = the_assassins_yahyanism
+						interested_in_society = the_assassins_zor_angra
 					}
 					NOT = { has_character_flag = ongoing_recruitment }
 				}
@@ -931,11 +1216,11 @@ targeted_decisions = {
 			set_character_flag = ongoing_recruitment
 			hidden_effect = {
 				if = {
-					limit = { NOT = { religion = ismaili } }
+					limit = { NOT = { OR = { religion = ismaili religion = shiite } } }
 					character_event = { id = MNM.6020 days = 3 }
 				}
 				if = {
-					limit = { religion = ismaili }
+					limit = { OR = { religion = ismaili religion = shiite } }
 					character_event = { id = MNM.6022 days = 3 }
 				}
 				character_event = { id = MNM.7030 days = 365 }
@@ -963,11 +1248,31 @@ targeted_decisions = {
 			}
 			modifier = {
 				factor = 10 # recruit interested parties
-				interested_in_society = the_assassins
+				OR = {
+					interested_in_society = the_assassins
+					interested_in_society = the_assassins_bud_mahayana
+					interested_in_society = the_assassins_mani_ahriman
+					interested_in_society = the_assassins_priscillian
+					interested_in_society = the_assassins_ragnarok
+					interested_in_society = the_assassins_set
+					interested_in_society = the_assassins_tengri_ahriman
+					interested_in_society = the_assassins_yahyanism
+					interested_in_society = the_assassins_zor_angra
+				}
 			}
 			modifier = {
 				factor = 0 # don't recruit characters interested in something else
-				NOT = { interested_in_society = the_assassins }
+				NOT = { 
+					interested_in_society = the_assassins 
+					interested_in_society = the_assassins_bud_mahayana
+					interested_in_society = the_assassins_mani_ahriman
+					interested_in_society = the_assassins_priscillian
+					interested_in_society = the_assassins_ragnarok
+					interested_in_society = the_assassins_set
+					interested_in_society = the_assassins_tengri_ahriman
+					interested_in_society = the_assassins_yahyanism
+					interested_in_society = the_assassins_zor_angra
+				}
 				is_interested_in_any_society = yes
 			}
 			modifier = {
@@ -989,9 +1294,43 @@ targeted_decisions = {
 			is_playable = yes
 			is_adult = yes
 			is_incapable = no
-			society_rank = {
-				society = the_assassins
-				rank >= 2
+			OR = {
+				society_rank = {
+					society = the_assassins
+					rank >= 2
+				}
+				society_rank = {
+					society = the_assassins_bud_mahayana	
+					rank >= 2
+				}
+				society_rank = {
+					society = the_assassins_mani_ahriman	
+					rank >= 2
+				}
+				society_rank = {
+					society = the_assassins_priscillian	
+					rank >= 2
+				}
+				society_rank = {
+					society = the_assassins_ragnarok	
+					rank >= 2
+				}
+				society_rank = {
+					society = the_assassins_set	
+					rank >= 2
+				}
+				society_rank = {
+					society = the_assassins_tengri_ahriman	
+					rank >= 2
+				}
+				society_rank = {
+					society = the_assassins_yahyanism	
+					rank >= 2
+				}
+				society_rank = {
+					society = the_assassins_zor_angra
+					rank >= 2
+				}
 			}
 			prisoner = no
 		}
@@ -1009,7 +1348,17 @@ targeted_decisions = {
 
 		allow = {
 			ROOT = {
-				NOT = { society_member_of = the_assassins }
+				NOR = { 
+					society_member_of = the_assassins
+					society_member_of = the_assassins_bud_mahayana
+					society_member_of = the_assassins_mani_ahriman
+					society_member_of = the_assassins_priscillian
+					society_member_of = the_assassins_ragnarok
+					society_member_of = the_assassins_set
+					society_member_of = the_assassins_tengri_ahriman
+					society_member_of = the_assassins_yahyanism
+					society_member_of = the_assassins_zor_angra
+				}
 				prisoner = no
 				is_inaccessible_trigger = no
 				NOT = { owes_favor_to = FROM }
@@ -1110,9 +1459,43 @@ targeted_decisions = {
 			is_adult = yes
 			prisoner = no
 			is_incapable = no
-			society_rank = {
-				society = the_assassins
-				rank == 4
+			OR = {
+				society_rank = {
+					society = the_assassins
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_bud_mahayana	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_mani_ahriman	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_priscillian	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_ragnarok	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_set	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_tengri_ahriman	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_yahyanism	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_zor_angra
+					rank == 4
+				}
 			}
 		}
 
@@ -1217,9 +1600,43 @@ targeted_decisions = {
 			is_playable = yes
 			is_adult = yes
 			prisoner = no
-			society_rank = {
-				society = the_assassins
-				rank == 4
+			OR = {
+				society_rank = {
+					society = the_assassins
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_bud_mahayana	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_mani_ahriman	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_priscillian	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_ragnarok	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_set	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_tengri_ahriman	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_yahyanism	
+					rank == 4
+				}
+				society_rank = {
+					society = the_assassins_zor_angra
+					rank == 4
+				}
 			}
 		}
 
@@ -1261,7 +1678,17 @@ targeted_decisions = {
 	        is_playable = yes
 	        is_adult = yes
 	        prisoner = no
-			society_member_of = the_assassins
+			OR = {
+				society_member_of = the_assassins
+				society_member_of = the_assassins_bud_mahayana
+				society_member_of = the_assassins_mani_ahriman
+				society_member_of = the_assassins_priscillian
+				society_member_of = the_assassins_ragnarok
+				society_member_of = the_assassins_set
+				society_member_of = the_assassins_tengri_ahriman
+				society_member_of = the_assassins_yahyanism
+				society_member_of = the_assassins_zor_angra
+			}
 	        has_regent = no
 	        is_inaccessible_trigger = no
 	        has_quest = quest_the_assassins_protege
@@ -1765,6 +2192,10 @@ targeted_decisions = {
 			}
 		}
 		allow = {
+			OR = {
+				religion_group = christian
+				religion_group = jewish_group
+			}
 			is_inaccessible_trigger = no
 			custom_tooltip = {
 				text = satanists_recruit_block_tooltip
@@ -1895,10 +2326,7 @@ targeted_decisions = {
 			}
 		}
 		allow = {
-			OR = {
-				religion = norse_pagan
-				religion = norse_pagan_reformed
-			}
+			religion_group = norsegerman_group
 			is_inaccessible_trigger = no
 			custom_tooltip = {
 				text = trollcrafters_recruit_block_tooltip
@@ -2031,8 +2459,9 @@ targeted_decisions = {
 		allow = {
 			OR = {
 				religion_group = indian_group
-				religion = bon
-				religion = bon_reformed
+				religion = zor_hindu
+				religion = nasrani_reformed
+				religion = zz01_vedanta
 			}
 			is_inaccessible_trigger = no
 			custom_tooltip = {
@@ -2165,12 +2594,9 @@ targeted_decisions = {
 		}
 		allow = {
 			OR = {
-				religion = baltic_pagan
-				religion = baltic_pagan_reformed
-				religion = slavic_pagan
-				religion = slavic_pagan_reformed
-				religion = finnish_pagan
-				religion = finnish_pagan_reformed
+				religion_group = baltic_group
+				religion_group = slavic_group
+				religion_group = finnish_group
 			}
 			is_inaccessible_trigger = no
 			custom_tooltip = {
@@ -2302,10 +2728,7 @@ targeted_decisions = {
 			}
 		}
 		allow = {
-			OR = {
-				religion = tengri_pagan
-				religion = tengri_pagan_reformed
-			}
+			religion_group = tengri_group
 			is_inaccessible_trigger = no
 			custom_tooltip = {
 				text = plaguebringers_recruit_block_tooltip
@@ -2435,10 +2858,7 @@ targeted_decisions = {
 			}
 		}
 		allow = {
-			OR = {
-				religion = west_african_pagan
-				religion = west_african_pagan_reformed
-			}
+			religion_group = berberpagan_group
 			is_inaccessible_trigger = no
 			custom_tooltip = {
 				text = vodouns_recruit_block_tooltip
@@ -2569,6 +2989,7 @@ targeted_decisions = {
 			}
 		}
 		allow = {
+			graecoroman_civilization_trigger = yes
 			is_inaccessible_trigger = no
 			custom_tooltip = {
 				text = bacchants_recruit_block_tooltip
@@ -2763,6 +3184,616 @@ targeted_decisions = {
 			modifier = {
 				factor = 0 # don't recruit characters interested in something else
 				NOT = { interested_in_society = followers_of_ahuiateteo }
+				is_interested_in_any_society = yes
+			}
+		}
+	}
+	
+	#Action: jinn recruit
+	jinn_recruit = {
+		is_in_society = yes
+		ai_check_interval = 12
+		filter = all
+		ai_target_filter = realm
+
+		from_potential = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			NOT = { has_character_modifier = recruitment_timer }
+			society_member_of = arab_jinn_sorcerers
+			OR = {
+				ai = no
+				NOT = {
+					society_rank = {
+						society = arab_jinn_sorcerers
+						rank == 1
+					}
+				}
+			}
+		}
+		potential = {
+			OR = {
+				FROM = { ai = no }
+				ai = no
+			}
+			OR = {
+				FROM = { ai = yes } # Only checks realm, so by definition in range
+				is_within_diplo_range = FROM
+			}
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			is_in_society = no
+
+
+			#AI cannot invite other AIs when society is full
+			NAND = {
+				ai = yes
+				FROM = { ai = yes }
+				NOT = { can_join_society = arab_jinn_sorcerers }
+			}
+
+			#Blocks so AI recruits sensible people (who might say no)
+			OR = {
+				FROM = { ai = no }
+				is_friend = FROM
+				is_lover = FROM
+				is_close_relative = FROM
+				trait = trusting
+				has_impious_trait_trigger = yes
+				trait = drunkard
+				trait = possessed
+				trait = lunatic
+				interested_in_society = arab_jinn_sorcerers
+			}
+		}
+		allow = {
+			is_inaccessible_trigger = no
+			custom_tooltip = {
+				text = jinn_recruit_block_tooltip
+				OR = {
+					NOT = { has_character_flag = jinn_attempted_recruitment }
+					interested_in_society = arab_jinn_sorcerers
+				}
+				NOT = { has_character_flag = being_recruited_by_the_jinn }
+			}
+			has_jinn_sorceror_prerequisites = yes
+			FROM = {
+				is_inaccessible_trigger = no
+				custom_tooltip = {
+					text = recruit_delay_timer_tooltip
+					NOT = { has_character_modifier = recruitment_delay_timer }
+				}
+			}
+		}
+		effect = {
+			set_character_flag = jinn_attempted_recruitment
+			set_character_flag = being_recruited_by_the_jinn
+			FROM = {
+				save_event_target_as = satanists_recruiter
+			}
+			hidden_effect = {
+				character_event = { id = MNM.7001 days = 3 } # recruitment chain
+				character_event = { id = MNM.7030 days = 365 } # sends delayed back up, in case recruitment fails somehow
+				FROM = {
+					if = {
+						limit = { ai = yes }
+						add_character_modifier = {
+							name = recruitment_timer
+							days = 730
+							hidden = yes
+						}
+					}
+					add_character_modifier = {
+						name = recruitment_delay_timer
+						days = 90
+						hidden = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1 # slow down
+			}
+			modifier = {
+				factor = 10 # recruit interested parties
+				interested_in_society = arab_jinn_sorcerers
+			}
+			modifier = {
+				factor = 0 # don't recruit characters interested in something else
+				NOT = { interested_in_society = arab_jinn_sorcerers }
+				is_interested_in_any_society = yes
+			}
+		}
+	}
+
+	#Action: apepcult recruit
+	apepcult_recruit = {
+		is_in_society = yes
+		
+		filter = all
+		ai_target_filter = realm
+		ai_check_interval = 12
+
+		from_potential = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			NOT = { has_character_modifier = recruitment_timer }
+			society_member_of = cult_of_apep
+			OR = {
+				ai = no
+				NOT = {
+					society_rank = {
+						society = cult_of_apep
+						rank == 1
+					}
+				}
+			}
+		}
+		potential = {
+			OR = {
+				FROM = { ai = no }
+				ai = no
+			}
+			OR = {
+				FROM = { ai = yes } # Only checks realm, so by definition in range
+				is_within_diplo_range = FROM
+			}
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			is_in_society = no
+
+
+			#AI cannot invite other AIs when society is full
+			NAND = {
+				ai = yes
+				FROM = { ai = yes }
+				NOT = { can_join_society = cult_of_apep }
+			}
+
+			#Blocks so AI recruits sensible people (who might say no)
+			OR = {
+				FROM = { ai = no }
+				is_friend = FROM
+				is_lover = FROM
+				is_close_relative = FROM
+				trait = trusting
+				has_impious_trait_trigger = yes
+				trait = drunkard
+				trait = possessed
+				trait = lunatic
+				interested_in_society = cult_of_apep
+			}
+		}
+		allow = {
+			is_inaccessible_trigger = no
+			custom_tooltip = {
+				text = apepcult_recruit_block_tooltip
+				OR = {
+					NOT = { has_character_flag = apepcult_attempted_recruitment }
+					interested_in_society = cult_of_apep
+				}
+				NOT = { has_character_flag = being_recruited_by_the_apepcult }
+			}
+			has_cult_of_apep_prerequisites = yes
+			FROM = {
+				is_inaccessible_trigger = no
+				custom_tooltip = {
+					text = recruit_delay_timer_tooltip
+					NOT = { has_character_modifier = recruitment_delay_timer }
+				}
+			}
+		}
+		effect = {
+			set_character_flag = apepcult_attempted_recruitment
+			set_character_flag = being_recruited_by_the_apepcult
+			FROM = {
+				save_event_target_as = satanists_recruiter
+			}
+			hidden_effect = {
+				character_event = { id = MNM.7001 days = 3 } # recruitment chain
+				character_event = { id = MNM.7030 days = 365 } # sends delayed back up, in case recruitment fails somehow
+				FROM = {
+					if = {
+						limit = { ai = yes }
+						add_character_modifier = {
+							name = recruitment_timer
+							days = 730
+							hidden = yes
+						}
+					}
+					add_character_modifier = {
+						name = recruitment_delay_timer
+						days = 90
+						hidden = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1 # slow down
+			}
+			modifier = {
+				factor = 10 # recruit interested parties
+				interested_in_society = cult_of_apep
+			}
+			modifier = {
+				factor = 0 # don't recruit characters interested in something else
+				NOT = { interested_in_society = cult_of_apep }
+				is_interested_in_any_society = yes
+			}
+		}
+	}
+
+	#Action: cult of balor recruit
+	cult_of_balor_recruit = {
+		is_in_society = yes
+		
+		ai_check_interval = 12
+		ai_target_filter = realm
+
+		from_potential = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			NOT = { has_character_modifier = recruitment_timer }
+			society_member_of = the_cult_of_balor
+			OR = {
+				ai = no
+				NOT = {
+					society_rank = {
+						society = the_cult_of_balor
+						rank == 1
+					}
+				}
+			}
+		}
+		potential = {
+			OR = {
+				FROM = { ai = no }
+				ai = no
+			}
+			is_within_diplo_range = FROM
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			is_in_society = no
+
+			#AI cannot invite other AIs when society is full
+			NAND = {
+				ai = yes
+				FROM = { ai = yes }
+				NOT = { can_join_society = the_cult_of_balor }
+			}
+
+			#Blocks so AI recruits sensible people (who might say no)
+			OR = {
+				FROM = { ai = no }
+				is_friend = FROM
+				is_lover = FROM
+				is_close_relative = FROM
+				trait = trusting
+				has_impious_trait_trigger = yes
+				trait = drunkard
+				trait = possessed
+				trait = lunatic
+				interested_in_society = the_cult_of_balor
+			}
+
+			NAND = {
+				FROM = { ai = yes }
+				trait = zealous
+			}
+		}
+		allow = {
+			religion_group = celtic_group
+			is_inaccessible_trigger = no
+			custom_tooltip = {
+				text = cult_of_balor_recruit_block_tooltip
+				OR = {
+					NOT = { has_character_flag = cult_of_balor_attempted_recruitment }
+					interested_in_society = the_cult_of_balor
+				}
+				NOT = { has_character_flag = being_recruited_by_the_cult_of_balor }
+			}
+			has_cult_of_balor_prerequisites = yes
+			FROM = {
+				is_inaccessible_trigger = no
+			}
+		}
+		effect = {
+			set_character_flag = cult_of_balor_attempted_recruitment
+			set_character_flag = being_recruited_by_the_cult_of_balor
+			FROM = {
+				save_event_target_as = satanists_recruiter
+			}
+			hidden_effect = { 
+				character_event = { id = MNM.7001 days = 3 } # recruitment chain
+				character_event = { id = MNM.7030 days = 365 } # sends delayed back up, in case recruitment fails somehow
+				FROM = {
+					if = {
+						limit = { ai = yes }
+						add_character_modifier = {
+							name = recruitment_timer
+							days = 730
+							hidden = yes
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1 # slow down
+			}
+			modifier = {
+				factor = 10 # recruit interested parties
+				interested_in_society = the_cult_of_balor
+			}
+			modifier = {
+				factor = 0 # don't recruit characters interested in something else
+				NOT = { interested_in_society = the_cult_of_balor }
+				is_interested_in_any_society = yes
+			}
+		}
+	}
+	
+	#Action: Angra Mainyu recruit
+	cult_of_angra_mainyu_recruit = {
+		is_in_society = yes
+
+		ai_check_interval = 12
+		ai_target_filter = realm
+
+		from_potential = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			NOT = { has_character_modifier = recruitment_timer }
+			society_member_of = cult_of_angra_mainyu
+			OR = {
+				ai = no
+				NOT = {
+					society_rank = {
+						society = cult_of_angra_mainyu
+						rank == 1
+					}
+				}
+			}
+		}
+		potential = {
+			OR = {
+				FROM = { ai = no }
+				ai = no
+			}
+			is_within_diplo_range = FROM
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			is_in_society = no
+
+			#AI cannot invite other AIs when society is full
+			NAND = {
+				ai = yes
+				FROM = { ai = yes }
+				NOT = { can_join_society = cult_of_angra_mainyu }
+			}
+
+			#Blocks so AI recruits sensible people (who might say no)
+			OR = {
+				FROM = { ai = no }
+				is_friend = FROM
+				is_lover = FROM
+				is_close_relative = FROM
+				trait = trusting
+				has_impious_trait_trigger = yes
+				trait = drunkard
+				trait = possessed
+				trait = lunatic
+				interested_in_society = cult_of_angra_mainyu
+			}
+
+			NAND = {
+				FROM = { ai = yes }
+				trait = zealous
+			}
+		}
+		allow = {
+			AND = {
+				true_religion_group_zoroastrian_group_trigger = yes
+				NOT = {
+					religion = zor_angra
+				}
+			}
+			is_inaccessible_trigger = no
+			custom_tooltip = {
+				text = cult_of_angra_mainyu_recruit_block_tooltip
+				OR = {
+					NOT = { has_character_flag = cult_of_angra_mainyu_attempted_recruitment }
+					interested_in_society = cult_of_angra_mainyu
+				}
+				NOT = { has_character_flag = being_recruited_by_cult_of_angra_mainyu }
+			}
+			has_cult_of_angra_mainyu_prerequisites = yes
+			FROM = {
+				is_inaccessible_trigger = no
+			}
+		}
+		effect = {
+			set_character_flag = cult_of_angra_mainyu_attempted_recruitment
+			set_character_flag = being_recruited_by_cult_of_angra_mainyu
+			FROM = {
+				save_event_target_as = satanists_recruiter
+			}
+			hidden_effect = { 
+				character_event = { id = MNM.7001 days = 3 } # recruitment chain
+				character_event = { id = MNM.7030 days = 365 } # sends delayed back up, in case recruitment fails somehow
+				FROM = {
+					if = {
+						limit = { ai = yes }
+						add_character_modifier = {
+							name = recruitment_timer
+							days = 730
+							hidden = yes
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1 # slow down
+			}
+			modifier = {
+				factor = 10 # recruit interested parties
+				interested_in_society = cult_of_angra_mainyu
+			}
+			modifier = {
+				factor = 0 # don't recruit characters interested in something else
+				NOT = { interested_in_society = cult_of_angra_mainyu }
+				is_interested_in_any_society = yes
+			}
+		}
+	}
+
+	#Action: neo-sarkites recruit
+	neo_sarkites_recruit = {
+		is_in_society = yes
+
+		ai_target_filter = realm
+		ai_check_interval = 24
+
+		from_potential = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			NOT = { has_character_modifier = recruitment_timer }
+			society_member_of = the_neo_sarkites
+			OR = {
+				ai = no
+				society_rank = {
+					society = the_neo_sarkites
+					rank == 2
+				}
+				society_rank = {
+					society = the_neo_sarkites
+					rank == 3
+				}
+			}
+		}
+		potential = {
+			OR = {
+				FROM = { ai = no }
+				ai = no
+			}
+			OR = {
+				FROM = { ai = yes } # Only checks realm, so by definition in range
+				is_within_diplo_range = FROM
+			}
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			is_in_society = no
+
+			#AI cannot invite other AIs when society is full
+			NAND = {
+				ai = yes
+				FROM = { ai = yes }
+				NOT = { can_join_society = the_neo_sarkites }
+			}
+
+			#Blocks so AI recruits sensible people (who might say no)
+			OR = {
+				FROM = { ai = no }
+				is_friend = FROM
+				is_lover = FROM
+				is_close_relative = FROM
+				trait = trusting
+				has_impious_trait_trigger = yes
+				trait = drunkard
+				trait = possessed
+				trait = lunatic
+				interested_in_society = the_neo_sarkites
+			}
+
+			NAND = {
+				FROM = { ai = yes }
+				trait = zealous
+			}
+		}
+		allow = {
+			gnostic_civilization_trigger = yes
+			is_inaccessible_trigger = no
+			custom_tooltip = {
+				text = neo_sarkites_recruit_block_tooltip
+				OR = {
+					NOT = { has_character_flag = neo_sarkites_attempted_recruitment }
+					interested_in_society = the_neo_sarkites
+				}
+				NOT = { has_character_flag = being_recruited_by_the_neo_sarkites }
+			}
+			has_neo_sarkites_prerequisites = yes
+			FROM = {
+				is_inaccessible_trigger = no
+				custom_tooltip = {
+					text = recruit_delay_timer_tooltip
+					NOT = { has_character_modifier = recruitment_delay_timer }
+				}
+			}
+		}
+		effect = {
+			set_character_flag = neo_sarkites_attempted_recruitment
+			set_character_flag = being_recruited_by_the_neo_sarkites
+			FROM = {
+				save_event_target_as = satanists_recruiter
+			}
+			hidden_effect = { 
+				character_event = { id = MNM.7001 days = 3 } # recruitment chain
+				character_event = { id = MNM.7030 days = 365 } # sends delayed back up, in case recruitment fails somehow
+				FROM = {
+					if = {
+						limit = { ai = yes }
+						add_character_modifier = {
+							name = recruitment_timer
+							days = 730
+							hidden = yes
+						}
+					}
+					add_character_modifier = {
+						name = recruitment_delay_timer
+						days = 90
+						hidden = yes
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.2 # slow down
+				FROM = { 
+					society = { num_of_society_members > 20 } 
+				}
+			}
+			modifier = {
+				factor = 10 # recruit interested parties
+				interested_in_society = the_neo_sarkites
+			}
+			modifier = {
+				factor = 0 # don't recruit characters interested in something else
+				NOT = { interested_in_society = the_neo_sarkites }
 				is_interested_in_any_society = yes
 			}
 		}
@@ -3735,6 +4766,34 @@ targeted_decisions = {
 							rank = 1
 						}
 					}
+					AND = {
+						society_member_of = the_cult_of_balor
+						is_society_rank_full = {
+							society = the_cult_of_balor
+							rank = 1
+						}
+					}
+					AND = {
+						society_member_of = cult_of_angra_mainyu
+						is_society_rank_full = {
+							society = cult_of_angra_mainyu
+							rank = 1
+						}
+					}
+					AND = {
+						society_member_of = arab_jinn_sorcerers
+						is_society_rank_full = {
+							society = arab_jinn_sorcerers
+							rank = 1
+						}
+					}
+					AND = {
+						society_member_of = cult_of_apep
+						is_society_rank_full = {
+							society = cult_of_apep
+							rank = 1
+						}
+					}
 				}
 			}
 		}
@@ -3750,17 +4809,9 @@ targeted_decisions = {
 					}
 					OR = {
 						religion_group = christian
-						religion_group = muslim
-						religion_group = zoroastrian_group
 						religion_group = jewish_group
-						religion = zun_pagan
-						religion = zun_pagan_reformed
 						secret_religion_group = christian
-						secret_religion_group = muslim
-						secret_religion_group = zoroastrian_group
 						secret_religion_group = jewish_group
-						secret_religion = zun_pagan
-						secret_religion = zun_pagan_reformed
 					}
 				}
 				AND = {
@@ -3768,29 +4819,24 @@ targeted_decisions = {
 						society_member_of = the_cold_ones
 					}
 					OR = {
-						religion = baltic_pagan
-						religion = baltic_pagan_reformed
-						secret_religion = baltic_pagan
-						secret_religion = baltic_pagan_reformed
-						religion = slavic_pagan
-						religion = slavic_pagan_reformed
-						secret_religion = slavic_pagan
-						secret_religion = slavic_pagan_reformed
-						religion = finnish_pagan
-						religion = finnish_pagan_reformed
-						secret_religion = finnish_pagan
-						secret_religion = finnish_pagan_reformed
+						religion_group = baltic_group
+						religion_group = slavic_group
+						religion_group = finnish_group
+						secret_religion_group = baltic_group
+						secret_religion_group = slavic_group
+						secret_religion_group = finnish_group
 					}
 				}
 				AND = {
 					FROM = {
 						society_member_of = the_plaguebringers
 					}
-					OR = {
-						religion = tengri_pagan
-						religion = tengri_pagan_reformed
-						secret_religion = tengri_pagan
-						secret_religion = tengri_pagan_reformed
+					OR = {	
+						religion_openly_tengri_or_reformed_trigger = yes
+						secret_religion_group = tengri_group
+					}
+					NOT = {
+						religion = erlik
 					}
 				}
 				AND = {
@@ -3799,11 +4845,13 @@ targeted_decisions = {
 					}
 					OR = {
 						religion_group = indian_group
-						religion = bon
-						religion = bon_reformed
+						religion = zor_hindu
+						religion = nasrani_reformed
+						religion = zz01_vedanta
 						secret_religion_group = indian_group
-						secret_religion = bon
-						secret_religion = bon_reformed
+						secret_religion = zor_hindu
+						secret_religion = nasrani_reformed
+						secret_religion = zz01_vedanta
 					}
 				}
 				AND = {
@@ -3811,10 +4859,8 @@ targeted_decisions = {
 						society_member_of = the_trollcrafters
 					}
 					OR = {
-						religion = norse_pagan
-						religion = norse_pagan_reformed
-						secret_religion = norse_pagan
-						secret_religion = norse_pagan_reformed
+						religion_group = norsegerman_group
+						secret_religion_group = norsegerman_group
 					}
 				}
 				AND = {
@@ -3822,10 +4868,8 @@ targeted_decisions = {
 						society_member_of = the_vodouns
 					}
 					OR = {
-						religion = west_african_pagan
-						religion = west_african_pagan_reformed
-						secret_religion = west_african_pagan
-						secret_religion = west_african_pagan_reformed
+						religion_group = berberpagan_group
+						secret_religion_group = berberpagan_group
 					}
 				}
 				AND = {
@@ -3833,10 +4877,35 @@ targeted_decisions = {
 						society_member_of = the_bacchants
 					}
 					OR = {
-						religion = hellenic_pagan
-						religion = hellenic_pagan_reformed
-						secret_religion = hellenic_pagan
-						secret_religion = hellenic_pagan_reformed
+						graecoroman_civilization_trigger = yes
+						secret_religion = alexandros
+						secret_religion = cybele
+						secret_religion = dionysos
+						secret_religion = graeco_roman
+						secret_religion = indoh_bud
+						secret_religion = indoh_confucian
+						secret_religion = indoh_hindu
+						secret_religion = indoh_zor
+						secret_religion = indohelen
+						secret_religion = jupiter
+						secret_religion = mithra_sol
+						secret_religion = porphyryan
+						secret_religion = roman_imperial
+						secret_religion = sol
+						secret_religion = sol_apollo
+						secret_religion = sol_boreas
+						secret_religion = sol_christ
+						secret_religion = solomonic_alexandros
+						secret_religion = zal
+						secret_religion = zal_christ
+						secret_religion = zal_mani
+						secret_religion = cybele_reformed
+						secret_religion = graeco_roman_reformed
+						secret_religion = indohelen_reformed
+						secret_religion = isis_reformed
+						secret_religion = sol_boreas_reformed
+						secret_religion = sol_sahara_reformed
+						society_member_of = the_bacchants
 					}
 				}
 				AND = {
@@ -3844,10 +4913,50 @@ targeted_decisions = {
 						society_member_of = followers_of_ahuiateteo
 					}
 					OR = {
-						religion = aztec
-						religion = aztec_reformed
-						secret_religion = aztec
-						secret_religion = aztec_reformed
+						religion_group = aztec_group
+						secret_religion_group = aztec_group
+					}
+				}
+				AND = {
+					FROM = {
+						society_member_of = arab_jinn_sorcerers
+					}
+					OR = {
+						religion_group = muslim
+						secret_religion_group = muslim
+					}
+				}
+				AND = {
+					FROM = {
+						society_member_of = cult_of_apep
+					}
+					archaic_civilization_trigger = yes
+				}
+				AND = {
+					FROM = {
+						society_member_of = the_neo_sarkites
+					}
+					gnostic_civilization_trigger = yes
+				}
+				AND = {
+					FROM = {
+						society_member_of = the_cult_of_balor
+					}
+					OR = {
+						religion_group = celtic_group
+						secret_religion_group = celtic_group
+					}
+				}
+				AND = {
+					FROM = {
+						society_member_of = cult_of_angra_mainyu
+					}
+					OR = {
+						AND = {
+							religion_group = zoroastrian_group
+							NOT = { religion = zor_angra }
+						}
+						secret_religion_group = zoroastrian_group
 					}
 				}
 			}
@@ -4065,6 +5174,14 @@ targeted_decisions = {
 			OR = {
 				is_devil_worshiper_trigger = yes
 				society_member_of = the_assassins
+				society_member_of = the_assassins_bud_mahayana
+				society_member_of = the_assassins_mani_ahriman
+				society_member_of = the_assassins_priscillian
+				society_member_of = the_assassins_ragnarok
+				society_member_of = the_assassins_set
+				society_member_of = the_assassins_tengri_ahriman
+				society_member_of = the_assassins_yahyanism
+				society_member_of = the_assassins_zor_angra
 			}
 			is_incapable = no
 			prisoner = no
@@ -4222,6 +5339,14 @@ targeted_decisions = {
 			OR = {
 				is_devil_worshiper_trigger = yes
 				society_member_of = the_assassins
+				society_member_of = the_assassins_bud_mahayana
+				society_member_of = the_assassins_mani_ahriman
+				society_member_of = the_assassins_priscillian
+				society_member_of = the_assassins_ragnarok
+				society_member_of = the_assassins_set
+				society_member_of = the_assassins_tengri_ahriman
+				society_member_of = the_assassins_yahyanism
+				society_member_of = the_assassins_zor_angra
 			}
 			has_any_opinion_modifier = opinion_abducting
 		}
@@ -4255,6 +5380,14 @@ targeted_decisions = {
 			OR = {
 				is_devil_worshiper_trigger = yes
 				society_member_of = the_assassins
+				society_member_of = the_assassins_bud_mahayana
+				society_member_of = the_assassins_mani_ahriman
+				society_member_of = the_assassins_priscillian
+				society_member_of = the_assassins_ragnarok
+				society_member_of = the_assassins_set
+				society_member_of = the_assassins_tengri_ahriman
+				society_member_of = the_assassins_yahyanism
+				society_member_of = the_assassins_zor_angra
 			}
 			has_any_opinion_modifier = opinion_abducting
 		}
@@ -4278,8 +5411,7 @@ targeted_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
-	}
-	
+	}	
 }
 
 decisions = {

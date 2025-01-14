@@ -8,6 +8,8 @@
 # by Henrik Fåhraeus
 #############################################
 
+namespace = birth
+
 #############################################
 # EVENTS LEADING UP TO BASTARD PREGNANCY
 #############################################
@@ -4276,5 +4278,922 @@ character_event = {
 				character_event = { id = SoA.3001 years = 2 }
 			}
 		}
+	}
+}
+
+# on_birth: Universal on birth event
+character_event = {
+	id = birth.990
+	picture = GFX_evt_birth
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = { #Determine status (bastard, slave etc)
+		mother_even_if_dead = { 
+			remove_trait = pregnancy_finishing
+			remove_trait = hard_pregnancy
+			remove_trait = in_hiding
+			remove_trait = travelling
+			remove_character_modifier = mother_praying_health
+			remove_character_modifier = mother_resting_health
+			remove_character_modifier = mother_partying_health
+			clr_character_flag = mother_asked_retirement 
+			clr_character_flag = flag_mother_dark_rest
+			clr_character_flag = mother_gossip_listening #Safety check, they should already have been removed
+			clr_character_flag = mother_gossip_talking
+			clr_character_flag = mother_gossip_trusting
+			clr_character_flag = mother_gossip_plotting
+			clr_character_flag = mother_gossip_envious
+			clr_character_flag = mother_gossip_shy
+			clr_character_flag = mother_gossip_learning
+			clr_character_flag = mother_gossip_content
+			clr_character_flag = mother_gossip_gluttonous
+
+			character_event = { id = HFP.20597 days = 35 } #Clears persistent Physician targets. They are still on on_birth since post-partum complications may require their services.
+		} 
+		#Child born to slave mother_even_if_dead
+		if = {
+			limit = { 
+				mother_even_if_dead = { 
+					trait = slave 
+					liege = { 
+						has_opinion_modifier = { who = PREV modifier = opinion_my_slave } 
+						NOT = { crownlaw_title = { has_law = slavery_3 } } #NOT Thralldom
+					}
+				} 
+				#NOT = { has_game_rule = { name = slavery value = off } }
+			}
+			#Owner is the father
+			if = { 
+				limit = {
+					mother_even_if_dead = { 
+						liege = { 							
+							ROOT = { father = { character = PREVPREV } }						
+						} 
+					}
+				}
+				father = { character_event = { id = slavery.403 days = 1 } }
+				break = yes
+			}
+			# Under chattel slavery, slavery is inherited from the mother_even_if_dead
+			if = { 
+				limit = {
+					mother_even_if_dead = { 
+						liege = { 
+							has_law = slavery_2
+						} 
+					}
+				}
+				if = {
+					limit = { father = { NOT = { any_spouse = { is_parent_of = ROOT } } } }
+					add_trait = bastard
+					if = {
+						limit = { NOT = { dynasty = 0 } }
+						dynasty = none
+					}	
+				}
+				mother_even_if_dead = {
+					liege = { 
+						character_event = { id = slavery.401 days = 1 }
+					}		
+				}						
+				break = yes
+			}
+		}
+		#Child born out of wedlock
+		if = {
+			limit = { 
+				OR = {
+					was_conceived_a_bastard = yes
+					has_character_flag = was_conceived_a_bastard					
+				}	
+			}
+			if = { #Check for bug, where father is set incorrectly
+				limit = { 
+					real_father_even_if_dead = { always = yes }
+					NOT = { father_even_if_dead = { always = yes } }
+				}
+				real_father_even_if_dead = { ROOT = { set_father = PREV } }
+			}
+			if = {
+				limit = {  				
+					OR = {
+						AND = { # There is no 'real_father' set, i.e. this is not a hidden, cuckoo bastard	
+							NOT = { real_father_even_if_dead = { always = yes } }
+							mother_even_if_dead = { NOT = { has_character_flag = bastard_father_unknown } }
+						}
+						mother_even_if_dead = { has_character_flag = flag_no_cuckoo } # The mother_even_if_dead has decided to tell her husband about the affair
+					}
+				}
+				character_event = { id = 300 }			
+				break = yes
+			}
+		}	
+		#Vanilla dead father dynasty fix
+		if = {
+			limit = {
+				father_even_if_dead = { 
+					is_alive = no 
+					is_married_matrilineally = no
+					any_spouse_even_if_dead = { is_mother = ROOT }
+				}
+			}
+			father_even_if_dead = { ROOT = { dynasty = PREV } }
+		}
+		#A bastard child is born, but is not recognized as such by the spouse of the mother_even_if_dead
+		if = {
+			limit = {
+				OR = {
+					real_father = {
+						is_alive = yes
+						ROOT = {
+							father_even_if_dead = {
+								NOT = { character = PREVPREV }
+							}
+						}
+					}
+					mother_even_if_dead = { has_character_flag = bastard_father_unknown }
+				}	
+				mother_even_if_dead = { NOT = { has_character_flag = flag_no_cuckoo } }
+			}
+			set_character_flag = flag_secret_bastard	
+			#character_event = { id = pil.250 days = 3 } #Check for obvious bastards because of looks
+			mother_even_if_dead = {
+				character_event = { id = 317 days = 1 } # The real father is notified
+			}
+		}
+		#Consort
+		if = {
+			limit = { 
+				mother_even_if_dead = { 
+					OR = {
+						is_consort = yes 
+						is_senior_consort_party = yes
+						has_character_flag = unborn_child_is_consorts
+					}	
+				} 
+			}
+			character_event = { id = 312 }
+			break = yes
+		}
+		#Child of forbidden marriage is born
+		if = {
+			limit = {
+				was_conceived_a_bastard = no
+				NOT = { has_character_flag = was_conceived_a_bastard }
+				mother_even_if_dead = { has_character_flag = forbidden_marriage_spouse }
+				father_even_if_dead = { trait = disinherited }
+			}
+			set_character_flag = forbidden_marriage_child
+			add_trait = disinherited
+			break = yes
+		}
+	}
+	
+	option = { #Other genetics/events etc
+		name = OK
+		
+		#Mother took part in fertility feast, chance of blessed girl.
+		if = { 
+			limit = { 
+				mother = { 
+					has_character_modifier = mother_fertility_festival_2
+				}
+				is_female = yes
+			}
+			random_list = { 
+				40 = { 
+					modifier = {  
+						factor = 1.75
+						mother_even_if_dead = { trait = ugly }
+					}
+					modifier = {  
+						factor = 1.75
+						father_even_if_dead = { trait = ugly }
+					}
+					modifier = {  
+						factor = 0.5
+						mother_even_if_dead = { trait = fair }
+					}
+					modifier = {  
+						factor = 0.5
+						father_even_if_dead = { trait = fair }
+					}
+					modifier = {  
+						factor = 1.75
+						mother_even_if_dead = { any_child = { trait = fair } } #Avoid entire litters of them.
+					}
+					modifier = {  
+						factor = 1.75
+						father_even_if_dead = { any_child = { trait = fair } } #Avoid entire litters of them.
+					}
+				}
+				60 = { 
+					remove_trait = hunchback
+					remove_trait = dwarf
+					remove_trait = ugly
+					remove_trait = inbred
+					remove_trait = sickly
+					remove_trait = harelip
+					remove_trait = lisp
+					mother = { character_event = { id = HFP.20055 days = 3600 random = 200 } } 
+					father = { character_event = { id = HFP.20055 days = 3600 random = 200 } } 
+				}
+			}
+		} 
+
+		#Catholic/Orthodox Kings/Emperors: chance for special baptism.
+		father = { save_event_target_as = scoped_father }
+		mother = { save_event_target_as = scoped_mother }
+		ROOT = { save_event_target_as = scoped_baby }
+		if = { 
+			limit = { 
+				OR = { 
+					event_target:scoped_father = { higher_tier_than = event_target:scoped_mother }
+					event_target:scoped_father = { 
+						real_tier = event_target:scoped_mother 
+						is_married_matrilineally = no
+					}
+				}
+			}
+			#event_target:scoped_father = { character_event = { id = HF.20100 days = 12 } }
+		}
+		if = { 
+			limit = { 
+				OR = { 
+					event_target:scoped_mother = { higher_tier_than = event_target:scoped_father }
+					event_target:scoped_mother = { 
+						real_tier = event_target:scoped_father 
+						is_married_matrilineally = yes
+					}
+				}
+			}
+			#event_target:scoped_mother = { character_event = { id = HF.20100 days = 12 } }
+		} 
+		father = { clear_event_target = scoped_father }
+		mother = { clear_event_target = scoped_mother }
+		ROOT = { clear_event_target = scoped_baby }
+
+		#Catholic/Orthodox rulers: chance of Churching after the first pregnancy is over.
+		if = { 
+			limit = { 
+				mother = { 
+					OR = { 
+						religion = catholic
+						religion = orthodox
+					}
+					is_married = yes
+					NOT = { num_of_children = 2 }
+					#NOT = { society_member_of = the_satanists }
+					OR = { 
+						is_ruler = yes
+						spouse = { is_ruler = yes }
+					}
+					NOR = { 
+						has_character_modifier = adulteress
+						has_character_modifier = incestuous_adulteress 
+					}
+				}
+			}
+			mother = { character_event = { id = HFP.20018 days = 24 } }
+		}
+		if = {
+			limit = { 
+				mother = { 
+					has_character_modifier = hashish_addict
+				} 
+			}
+			random = { 
+				chance = 30
+				set_character_flag = flag_drugged_birth
+				if = { 
+					limit = { trait = slow }
+					remove_trait = slow
+					add_trait = imbecile
+					mother = { character_event = { id = HFP.20001 days = 551 } }
+					father = { character_event = { id = HFP.20002 days = 550 } }
+				}
+				if = { 
+					limit = { 
+						NOR = { 
+							trait = genius 
+							trait = quick 
+							trait = slow 
+							trait = imbecile 
+						} 
+					}
+					add_trait = slow
+					mother = { character_event = { id = HFP.20001 days = 551 } }
+					father = { character_event = { id = HFP.20002 days = 550 } }
+				}
+				if = { 
+					limit = { trait = quick }
+					remove_trait = quick
+				}
+				if = { 
+					limit = { trait = genius }
+					remove_trait = genius
+					add_trait = quick 
+				}
+			}
+		}
+		random_list = { #Chance of imprinting (mother)
+			50 = { 
+				modifier = {  
+					factor = 0.5
+					mother = { num_of_children = 2 }
+				}
+				modifier = {  
+					factor = 0.35
+					mother = { num_of_children = 3 }
+				}
+				modifier = {  
+					factor = 0.25
+					mother = { num_of_children = 4 }
+				}
+				modifier = {  
+					factor = 0.1
+					mother = { num_of_children = 5 }
+				}
+				modifier = {  
+					factor = 0.5
+					mother = { age = 30 }
+				}
+				modifier = {  
+					factor = 1.5
+					mother = { trait = kind }
+				}
+				modifier = {  
+					factor = 1.5
+					mother = { trait = charitable }
+				}
+				modifier = {  
+					factor = 0.5
+					mother = { trait = envious }
+				}
+				modifier = {  
+					factor = 0.5
+					mother = { trait = cruel }
+				}
+				mother = { character_event = { id = HFP.20599 days = 70 } } 
+			} 
+			50 = {  } 
+		}
+		random_list = { #Chance of imprinting (father)
+			50 = { 
+				modifier = {  
+					factor = 0.5
+					father = { num_of_children = 2 }
+				}
+				modifier = {  
+					factor = 0.35
+					father = { num_of_children = 3 }
+				}
+				modifier = {  
+					factor = 0.25
+					father = { num_of_children = 4 }
+				}
+				modifier = {  
+					factor = 0.1
+					father = { num_of_children = 5 }
+				}
+				modifier = {  
+					factor = 0.5
+					father = { age = 30 }
+				}
+				modifier = {  
+					factor = 1.5
+					father = { trait = kind }
+				}
+				modifier = {  
+					factor = 1.5
+					father = { trait = charitable }
+				}
+				modifier = {  
+					factor = 0.5
+					father = { trait = envious }
+				}
+				modifier = {  
+					factor = 0.5
+					father = { trait = cruel }
+				}
+				father = { character_event = { id = HFP.20000 days = 700 random = 500 } } 
+			} 
+			50 = {  } 
+		}
+
+		if = { 
+			limit = { #The Papal orgy bears fruits.
+				mother = { has_character_flag = flag_vatican_prince } 
+			} 
+			mother = { 
+				clr_character_flag = flag_vatican_prince 
+				character_event = { id = HFP.20598 days = 7 random = 7 } #Notify mother.
+			} 
+		}
+		if = { 
+			limit = { 
+				mother = { trait = troubled_pregnancy } 
+			} 
+			random_list = {
+				80 = { set_character_flag = flag_troubled_pregnancy_child
+				}
+				20 = { } #Nothing happens
+			} 
+		}
+		if = { 
+			limit = { 
+				mother = { trait = stressed } 
+			} 
+			random_list = {
+				30 = { 
+					mother = { 
+						character_event = { id = HFP.20581 days = 30 random = 50 } #chance to recover from stressed.
+					}
+				}
+				70 = { } #Nothing happens
+			} 
+		}
+		if = { 
+			limit = { 
+				mother = { has_character_flag = mom_hopes_child_warrior } 
+			} 
+			#Small chance of child actually gaining positive trait.
+			random_list = {
+				20 = { 
+					modifier = { 
+						factor = 0.5
+						mother_even_if_dead = { trait = weak } 
+					} 
+					modifier = { 
+						factor = 0.5
+						mother_even_if_dead = { trait = feeble } 
+					} 
+					modifier = { 
+						factor = 0.5
+						mother_even_if_dead = { trait = inbred } 
+					} 
+					modifier = { 
+						factor = 0.5
+						mother_even_if_dead = { trait = hunchback } 
+					} 
+					modifier = { 
+						factor = 0.5
+						mother_even_if_dead = { trait = dwarf } 
+					} 
+					modifier = { 
+						factor = 0.5
+						father_even_if_dead = { trait = weak } 
+					} 
+					modifier = { 
+						factor = 0.5
+						father_even_if_dead = { trait = feeble } 
+					} 
+					modifier = { 
+						factor = 0.5
+						father_even_if_dead = { trait = inbred } 
+					} 
+					modifier = { 
+						factor = 0.5
+						father_even_if_dead = { trait = hunchback } 
+					} 
+					modifier = { 
+						factor = 0.5
+						father_even_if_dead = { trait = dwarf } 
+					} 
+					if = { 
+						limit = { trait = weak } 
+						remove_trait = weak
+					} 
+					if = { 
+						limit = { trait = feeble } 
+						remove_trait = feeble
+					} 
+					if = { 
+						limit = { trait = inbred } 
+						remove_trait = inbred
+					} 
+					if = { 
+						limit = { trait = hunchback } 
+						remove_trait = hunchback
+					} 
+					if = { 
+						limit = { trait = dwarf } 
+						remove_trait = dwarf
+					} 
+					if = { 
+						limit = { trait = sickly } 
+						remove_trait = sickly
+					} 
+
+				} 
+				80 = { #No luck.
+
+				} 
+			}
+			#Notify mother. 
+			if = { 
+				limit = { 
+					NOR = { 
+						trait = weak
+						trait = feeble
+						trait = inbred
+						trait = hunchback
+						trait = dwarf
+						trait = sickly
+					}
+				}
+				mother = { 
+					character_event = { id = HFP.20585 days = 250 random = 250 } #Notify mother child gains 2 martial.
+					clr_character_flag = mom_hopes_child_warrior
+				} 
+			} 
+		} #Close what if warrior child
+
+		#Mother offered sacrifice for strong child
+		if = { 
+			limit = { 
+				mother = { has_character_flag = mom_hopes_child_strong } 
+			} 
+			#Small chance of child actually gaining positive trait.
+			random_list = {
+				20 = { 
+					modifier = { 
+						factor = 0.5
+						mother_even_if_dead = { trait = weak } 
+					} 
+					modifier = { 
+						factor = 0.5
+						mother_even_if_dead = { trait = feeble } 
+					} 
+					modifier = { 
+						factor = 0.5
+						mother_even_if_dead = { trait = inbred } 
+					} 
+					modifier = { 
+						factor = 0.5
+						mother_even_if_dead = { trait = hunchback } 
+					} 
+					modifier = { 
+						factor = 0.5
+						mother_even_if_dead = { trait = dwarf } 
+					} 
+					modifier = { 
+						factor = 0.5
+						father_even_if_dead = { trait = weak } 
+					} 
+					modifier = { 
+						factor = 0.5
+						father_even_if_dead = { trait = feeble } 
+					} 
+					modifier = { 
+						factor = 0.5
+						father_even_if_dead = { trait = inbred } 
+					}   
+					remove_trait = weak
+					remove_trait = sickly
+					add_trait = strong
+
+				} 
+				80 = { #No luck.
+					modifier = { 
+						factor = 0.5
+						father_even_if_dead = { trait = strong } 
+					}   
+					modifier = { 
+						factor = 0.5
+						mother_even_if_dead = { trait = strong } 
+					}   
+
+				} 
+			}
+			#Notify mother. 
+			if = { 
+				limit = { trait = strong
+				}
+				mother = { 
+					character_event = { id = HFP.20586 days = 250 random = 250 } #Notify mother child is growing strong.
+					clr_character_flag = mom_hopes_child_strong
+				} 
+			} 
+			mother = { clr_character_flag = mom_hopes_child_strong }
+		} 
+		#Mother offered sacrifice for pretty child
+		if = { 
+			limit = { 
+				mother = { has_character_flag = mom_hopes_child_pretty } 
+			} 
+			#Small chance of child actually gaining positive trait.
+			random_list = {
+				20 = { 
+					modifier = { 
+						factor = 0.5
+						mother_even_if_dead = { trait = ugly } 
+					} 
+					modifier = { 
+						factor = 2
+						mother_even_if_dead = { trait = fair } 
+					} 
+					modifier = { 
+						factor = 0.5
+						father_even_if_dead = { trait = ugly } 
+					} 
+					modifier = { 
+						factor = 2
+						father_even_if_dead = { trait = fair } 
+					}   
+					remove_trait = harelip
+					remove_trait = ugly
+					add_trait = fair
+
+				} 
+				80 = { #No luck.
+
+				} 
+			}
+			#Notify mother. 
+			if = { 
+				limit = { trait = fair }
+				mother = { 
+					character_event = { id = HFP.20587 days = 250 random = 250 } #Notify mother child is growing strong.
+					clr_character_flag = mom_hopes_child_pretty
+				} 
+			} 
+			mother = { clr_character_flag = mom_hopes_child_pretty }
+		}
+		#Mother offered sacrifice for smart child
+		if = { 
+			limit = { 
+				mother = { has_character_flag = mom_hopes_child_smart } 
+			} 
+			#Small chance of child actually gaining positive trait.
+			random_list = {
+				20 = { 
+					modifier = { 
+						factor = 0.5
+						mother_even_if_dead = { trait = slow } 
+					} 
+					modifier = { 
+						factor = 0.25
+						mother_even_if_dead = { trait = imbecile } 
+					} 
+					modifier = { 
+						factor = 1.5
+						mother_even_if_dead = { trait = quick } 
+					} 
+					modifier = { 
+						factor = 2
+						mother_even_if_dead = { trait = genius } 
+					} 
+					modifier = { 
+						factor = 0.5
+						father_even_if_dead = { trait = slow } 
+					} 
+					modifier = { 
+						factor = 0.25
+						father_even_if_dead = { trait = imbecile } 
+					} 
+					modifier = { 
+						factor = 0.5
+						father_even_if_dead = { trait = ugly } 
+					} 
+					modifier = { 
+						factor = 1.5
+						father_even_if_dead = { trait = quick } 
+					} 
+					modifier = { 
+						factor = 2
+						father_even_if_dead = { trait = genius } 
+					} 
+					remove_trait = slow
+					remove_trait = imbecile
+					if = { 
+						limit = { trait = quick } 
+						remove_trait = quick
+						add_trait = genius
+					} 
+					if = { 
+						limit = { NOT = { trait = quick } } 
+						add_trait = quick
+					} 
+				} 
+				80 = { #No luck.
+
+				} 
+			}
+			#Notify mother. 
+			if = { 
+				limit = { 
+					OR = { 
+						trait = quick 
+						trait = genius
+					} 
+				}
+				mother = { 
+					character_event = { id = HFP.20588 days = 450 random = 450 } #Notify mother child is growing smart.
+					clr_character_flag = mom_hopes_child_smart
+				} 
+			} 
+			mother = { clr_character_flag = mom_hopes_child_smart }
+		}
+		#Mother wanted a boy/girl 
+		if = { 
+			limit = { 
+				mother = { 
+					OR = { 
+						has_character_flag = mom_hopes_child_boy
+						has_character_flag = mom_hopes_child_girl
+					}
+				} 
+			}
+			mother = { 
+				character_event = { id = HFP.20589 days = 15 random = 15 } #Did the bet pay out?
+			} 
+		}
+		#Mother made a vow to the Holy Virgin
+		if = { 
+			limit = { 
+				mother = { 
+					OR = { 
+						has_character_modifier = mother_vow_chastity
+						has_character_modifier = mother_vow_humility
+						has_character_modifier = mother_vow_charity
+						has_character_modifier = mother_vow_temperance
+					}
+				} 
+			}
+			#Possible divine intervention
+			random_list = { 
+				70 = { #Nothing happens
+				}
+				30 = { 
+					#Broke the vow, decreased chance.
+					modifier = { 
+						factor = 0.5
+						mother = { 
+							has_character_modifier = mother_vow_temperance 
+							OR = { 
+								trait = gluttonous
+								trait = hedonist
+							} 
+						} 
+					}
+					modifier = { 
+						factor = 0.5
+						mother = { 
+							has_character_modifier = mother_vow_charity 
+							trait = greedy
+						} 
+					}
+					modifier = { 
+						factor = 0.5
+						mother = { 
+							has_character_modifier = mother_vow_humility 
+							trait = proud
+						} 
+					}
+					modifier = { 
+						factor = 0.5
+						mother = { 
+							has_character_modifier = mother_vow_chastity 
+							trait = lustful
+						} 
+					}
+
+
+					#Remained true to the vow, increased chance.
+					modifier = { 
+						factor = 1.75
+						mother = { 
+							has_character_modifier = mother_vow_temperance 
+							trait = temperate
+						} 
+					}
+					modifier = { 
+						factor = 1.75
+						mother = { 
+							has_character_modifier = mother_vow_charity 
+							trait = charitable
+						} 
+					}
+					modifier = { 
+						factor = 1.75
+						mother = { 
+							has_character_modifier = mother_vow_humility 
+							trait = humble
+						} 
+					}
+					modifier = { 
+						factor = 1.75
+						mother = { 
+							has_character_modifier = mother_vow_chastity 
+							OR = { 
+								trait = chaste
+								trait = celibate
+							} 
+						} 
+					} 
+					remove_trait = sickly
+					remove_trait = inbred
+					remove_trait = harelip
+					remove_trait = clubfooted
+					remove_trait = hunchback
+					remove_trait = lisp
+					remove_trait = stutter
+					remove_trait = ugly
+					remove_trait = dwarf
+					remove_trait = slow
+					remove_trait = imbecile
+					remove_trait = weak
+				}
+			}
+			mother = { 
+				character_event = { id = HFP.20590 days = 25 random = 25 } #Did it work? If so, does she keep her word?
+			} 
+		}
+		#mother_even_if_dead drunk/had drugs during pregnancy, chance of dumb child.
+		if = {
+			limit = { 
+				mother_even_if_dead = { 
+					trait = drunkard 
+				} 
+			}
+			random = { 
+				chance = 30
+				set_character_flag = flag_drunk_birth
+				if = { 
+					limit = { trait = slow }
+					remove_trait = slow
+					add_trait = imbecile
+					mother_even_if_dead = { character_event = { id = HFP.20001 days = 451 } }
+					father = { character_event = { id = HFP.20002 days = 450 } }
+				}
+				if = { 
+					limit = { 
+						NOR = { 
+							trait = genius 
+							trait = quick 
+							trait = slow 
+							trait = imbecile 
+						} 
+					}
+					add_trait = slow
+					mother_even_if_dead = { character_event = { id = HFP.20001 days = 451 } }
+					father = { character_event = { id = HFP.20002 days = 450 } }
+				}
+				if = { 
+					limit = { trait = quick }
+					remove_trait = quick
+				}
+				if = { 
+					limit = { trait = genius }
+					remove_trait = genius
+					add_trait = quick 
+				}
+			}
+		}
+		# Child Perceived to be Demon Born
+		if = {
+			limit = {
+				has_dlc = "The Old Gods"
+				mother_even_if_dead = { has_character_flag = pregnant_with_demon }
+			}
+			#add_trait = lefthanded
+			random_list = {
+				50 = { set_character_flag = demon_child }
+				50 = { set_character_flag = demon_child_fake }
+			}
+			mother_even_if_dead = { clr_character_flag = pregnant_with_demon }
+		}
+		# Chronicle entry
+		if = {
+			limit = {
+				OR = {
+					real_father = { e_rebels = { persistent_event_target:chronicle_player = { character = PREVPREV } } }
+					e_rebels = {
+						persistent_event_target:chronicle_player = {
+							is_parent_of = ROOT
+						}
+					}	
+				}
+			}
+			character_event = { id = CM.19011 days = 2 } # Delay to allow for naming of child.
+		}
+		#babies born in seclusion gain seclusion
+		if = {
+			limit = {
+				host = {
+					has_character_modifier = in_seclusion
+				}
+			}
+			add_character_modifier = {
+				name = in_seclusion
+				duration = -1
+			}
+		}	
+	}
+	after = {
+		clr_character_flag = was_conceived_a_bastard
 	}
 }

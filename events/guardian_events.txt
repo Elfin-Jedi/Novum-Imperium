@@ -292,9 +292,11 @@ character_event = {
 	option = {
 		name = EVTOPTC2010 # Thank God for X's virtues!
 		trigger = {
-			NOT = { trait = cynical }
-			NOT = { religion_group = bud_group }
-			NOT = { religion = jain }
+			NOR = {
+				trait = cynical
+				religion_group = bud_group
+				religion = jain
+			}
 		}
 		ai_chance = {
 			factor = 2
@@ -635,9 +637,11 @@ character_event = {
 	option = {
 		name = EVTOPTC2030 # Thank God for X's virtues!
 		trigger = {
-			NOT = { trait = cynical }
-			NOT = { religion_group = bud_group }
-			NOT = { religion = jain }
+			NOR = {
+				trait = cynical
+				religion_group = bud_group
+				religion = jain
+			}
 		}
 		ai_chance = {
 			factor = 2
@@ -1000,9 +1004,11 @@ character_event = {
 	option = {
 		name = EVTOPTC2050 # Thank God for X's virtues!
 		trigger = {
-			NOT = { trait = cynical }
-			NOT = { religion_group = bud_group }
-			NOT = { religion = jain }
+			NOR = {
+				trait = cynical
+				religion_group = bud_group
+				religion = jain
+			}
 		}
 		ai_chance = {
 			factor = 2
@@ -1347,9 +1353,11 @@ character_event = {
 	option = {
 		name = EVTOPTC2070 # Thank God for X's virtues!
 		trigger = {
-			NOT = { trait = cynical }
-			NOT = { religion_group = bud_group }
-			NOT = { religion = jain }
+			NOR = {
+				trait = cynical
+				religion_group = bud_group
+				religion = jain
+			}
 		}
 		ai_chance = {
 			factor = 2
@@ -1693,9 +1701,11 @@ character_event = {
 	option = {
 		name = EVTOPTC2090 # Thank God for X's virtues!
 		trigger = {
-			NOT = { trait = cynical }
-			NOT = { religion_group = bud_group }
-			NOT = { religion = jain }
+			NOR = {
+				trait = cynical
+				religion_group = bud_group
+				religion = jain
+			}
 		}
 		ai_chance = {
 			factor = 2
@@ -1979,9 +1989,11 @@ character_event = {
 	option = {
 		name = EVTOPTB2110 # Thank God for X's virtues!
 		trigger = {
-			NOT = { trait = cynical }
-			NOT = { religion_group = bud_group }
-			NOT = { religion = jain }
+			NOR = {
+				trait = cynical
+				religion_group = bud_group
+				religion = jain
+			}
 		}
 		ai_chance = {
 			factor = 2
@@ -2994,9 +3006,11 @@ character_event = {
 	option = {
 		name = EVTOPTD2170 # Pray God will give her strength.
 		trigger = {
-			NOT = { trait = cynical }
-			NOT = { religion_group = bud_group }
-			NOT = { religion = jain }
+			NOR = {
+				trait = cynical
+				religion_group = bud_group
+				religion = jain
+			}
 		}
 		ai_chance = {
 			factor = 2
@@ -3127,9 +3141,11 @@ character_event = {
 	option = {
 		name = EVTOPTC2180 # Thank God for X's virtues!
 		trigger = {
-			NOT = { trait = cynical }
-			NOT = { religion_group = bud_group }
-			NOT = { religion = jain }
+			NOR = {
+				trait = cynical
+				religion_group = bud_group
+				religion = jain
+			}
 		}
 		ai_chance = {
 			factor = 2

@@ -568,9 +568,11 @@ character_event = {
 
 	trigger = {
 		trait = in_hiding
-		NOT = { religion_group = bud_group }
-		NOT = { trait = zealous }
-		NOT = { trait = brave }
+		NOR = {
+			religion_group = bud_group
+			trait = zealous
+			trait = brave
+		}
 		OR = {
 			NOT = { trait = cynical }
 			trait = stressed

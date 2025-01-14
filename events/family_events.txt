@@ -102,6 +102,42 @@ character_event = {
 			factor = 0.5
 			trait = diligent
 		}
+		modifier = {	## added by Ash
+			factor = 0.7
+			trait = impatient
+		}
+		modifier = {	## added by Ash
+			factor = 0.7
+			trait = hardworking
+		}
+		modifier = {	## added by Ash
+			factor = 0.7
+			trait = obstinate
+		}
+		modifier = {	## added by Ash
+			factor = 0.7
+			trait = confident
+		}
+		modifier = {	## added by Ash
+			factor = 0.5
+			trait = arrogant
+		}
+		modifier = {	## added by Ash
+			factor = 0.5
+			trait = rebellious
+		}	
+		modifier = {	## added by Ash
+			factor = 0.5
+			trait = selfish
+		}	
+		modifier = {	## added by Ash
+			factor = 0.5
+			trait = pompous
+			}	
+		modifier = {	## added by Ash
+			factor = 1.5
+			trait = arrogant
+		}
 		modifier = {
 			factor = 5.0
 			trait = slothful
@@ -1186,6 +1222,34 @@ character_event = {
 			factor = 5.0
 			trait = content
 		}
+		modifier = {	## added by Ash
+			factor = 0.7
+			trait = impatient
+		}
+		modifier = {	## added by Ash
+			factor = 0.7
+			trait = restless
+		}
+		modifier = {	## added by Ash
+			factor = 0.7
+			trait = stubborn
+		}
+		modifier = {	## added by Ash
+			factor = 0.7
+			trait = romantic
+		}
+		modifier = {	## added by Ash
+			factor = 0.7
+			trait = vain
+		}
+		modifier = {	## added by Ash
+			factor = 5.0
+			trait = procrastinator
+		}
+		modifier = {	## added by Ash
+			factor = 5.0
+			trait = stoic
+		}
 	}
 
 	option = {
@@ -1353,6 +1417,30 @@ character_event = {
 			factor = 5.0
 			trait = content
 		}
+		modifier = {	## added by Ash
+			factor = 0.5
+			trait = romantic
+		}
+		modifier = {	## added by Ash
+			factor = 0.5
+			trait = vain
+		}
+		modifier = {	## added by Ash
+			factor = 0.7
+			trait = lively
+		}
+		modifier = {	## added by Ash
+			factor = 0.7
+			trait = rebellious
+		}
+		modifier = {	## added by Ash
+			factor = 5.0
+			trait = procrastinator
+		}
+		modifier = {	## added by Ash
+			factor = 5.0
+			trait = stoic
+		}
 	}
 	
 	immediate = {
@@ -1454,6 +1542,8 @@ character_event = {
 			OR = {
 				trait = wroth
 				trait = envious
+				trait = callous
+				trait = harsh
 			}
 		}
 		FROM = { imprison = ROOT }

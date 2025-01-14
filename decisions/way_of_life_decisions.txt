@@ -841,6 +841,15 @@ targetted_decisions = {
 					}
 					is_close_relative = FROM
 				}
+				AND = {
+					trait = slave
+					is_close_relative = FROM
+					liege = {
+						NOT = {
+							character = FROM
+						}
+					}
+				}
 			}
 		}
 
@@ -864,6 +873,16 @@ targetted_decisions = {
 					if = {
 						limit = { ROOT = { prisoner = no } }
 						character_event = { id = WoL.2201 days = 1 }
+					}
+					if = {
+						limit = {
+							ROOT = {
+								trait = slave
+							}
+						}
+						character_event = {
+							id = slavery.610 days = 1
+						}
 					}
 				}
 			}
@@ -925,6 +944,9 @@ targetted_decisions = {
 			NOT = { is_inaccessible_trigger = yes }
 			NOT = { had_character_flag = { flag = inviting_guests_to_party_timer days = 90 } }
 			NOT = { has_character_flag = party_host }
+			NOT = {
+				trait = treasure_fleet_preparation
+			}
 		}
 		potential = {
 			is_adult = yes
@@ -951,6 +973,9 @@ targetted_decisions = {
 				custom_tooltip = {
 					text = tooltip_not_busy
 					NOT = { has_character_flag = do_not_disturb }
+					NOT = {
+						trait = treasure_fleet_preparation
+					}
 				}
 			}
 			FROM = {
@@ -1375,6 +1400,9 @@ decisions = {
 			custom_tooltip = {
 				text = is_not_busy_trigger_tooltip
 				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
+				NOT = {
+					trait = treasure_fleet_preparation
+				}
 			}
 		}
 		effect = {
@@ -1407,4 +1435,3 @@ decisions = {
 		}
 	}
 }
-

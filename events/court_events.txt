@@ -33,6 +33,38 @@ character_event = {
 			factor = 2.0
 			trait = ambitious
 		}
+		modifier = {	## added by Ash
+			factor = 1.25
+			trait = confident
+		}
+		modifier = {	## added by Ash
+			factor = 1.25
+			trait = arrogant
+		}
+		modifier = {	## added by Ash
+			factor = 1.25
+			trait = vain
+		}
+		modifier = {	## added by Ash
+			factor = 1.5
+			trait = lively
+		}
+		modifier = {	## added by Ash
+			factor = 1.25
+			trait = friendly
+		}
+		modifier = {	## added by Ash
+			factor = 1.25
+			trait = quipster
+		}
+		modifier = {	## added by Ash
+			factor = 1.25
+			trait = magnetic
+		}
+		modifier = {	## added by Ash
+			factor = 1.25
+			trait = gullible
+		}
 		modifier = {
 			factor = 0.1
 			trait = shy
@@ -541,6 +573,9 @@ character_event = {
 		OR = {
 			trait = fair
 			trait = ugly
+			trait = frivolous
+			trait = fanciful
+			trait = pompous
 		}
 		NOT = {	trait = humble }
 		NOT = {	trait = uncouth }
@@ -552,6 +587,9 @@ character_event = {
 			factor = 2.0
 			trait = proud
 			trait = fair
+			trait = frivolous
+			trait = fanciful
+			trait = pompous
 		}
 		modifier = {
 			factor = 2.0
@@ -651,6 +689,16 @@ character_event = {
 				hidden_tooltip = { character_event = { id = 38261 } }
 			}
 		}
+		if = {
+			limit = {
+			NOT = { num_traits = 7 } 
+			}
+			random = {		### added by Ash
+				chance = 30
+				add_trait = vain #### Risk of adding "vain"
+				hidden_tooltip = { character_event = { id = ffnotific.81 }  }
+			}
+		}
 		scaled_wealth = -0.2
 		prestige = 5
 		piety = -5
@@ -675,9 +723,31 @@ character_event = {
 			add_trait = humble
 			hidden_tooltip = { character_event = { id = 38260 }  }
 		}
-
-	}
+		if = {	### added by Ash
+			limit = {
+				NOT = { num_traits = 7 } 
+			}
+			random = {
+				chance = 30
+				add_trait = frugal #### Risk of adding "frugal"
+				remove_trait = charitable
+				hidden_tooltip = { character_event = { id = ffnotific.58 }  }
+			}
+		}
+		if = {	### added by Ash
+			limit = { 
+				trait = phlegmybile
+				NOT = { num_traits = 7 } 
+			}
+			random = {
+				chance = 30  #### Risk of adding "good with money"
+				add_trait = money 
+				hidden_tooltip = { character_event = { id = ffnotific.32 }  }
+			}
+		}
+	}	
 }
+  
 
 #Your son has got a servant maid pregnant
 character_event = {
@@ -788,6 +858,12 @@ character_event = {
 	}
 	option = {
 		name = EVTOPTC73006 #Give him a beating for messing with inferiors
+		trigger = {
+			NOR = {
+				trait = noblespirit
+				trait = submissive
+			}
+		}
 		pacifists_lose_piety_effect = yes
 		event_target:knocked_up_maid = {
 			opinion = {
@@ -810,7 +886,7 @@ character_event = {
 		event_target:knocked_up_maid = {
 			if = {
 				limit = {
-					NOT = { religion_group = muslim }
+					religion_group = christian
 				}
 				add_trait = chaste
 			}
@@ -1121,6 +1197,27 @@ character_event = {
 			limit = { NOT = { trait = greedy } }
 			add_trait = greedy
 		}
+		if = {	### added by Ash
+			limit = {
+				NOT = { num_traits = 7 } 
+			}
+			random = {
+				chance = 20
+				add_trait = frugal #### Risk of adding "frugal"
+				remove_trait = charitable
+				hidden_tooltip = { character_event = { id = ffnotific.58 }  }
+			}
+		}
+			if = {	### added by Ash
+			limit = {
+				NOT = { num_traits = 7 } 
+			}
+			random = {
+				chance = 30  #### Risk of adding "good with money"
+				add_trait = money 
+				hidden_tooltip = { character_event = { id = ffnotific.32 }  }
+			}
+		}
 		event_target:target_spouse = {
 			opinion = {
 				who = ROOT
@@ -1157,6 +1254,14 @@ character_event = {
 		modifier = {
 			factor = 1.25
 			trait = gregarious
+		}
+		modifier = {	## added by Ash
+			factor = 1.5
+			trait = magnetic
+		}
+		modifier = {	## added by Ash
+			factor = 0.2
+			trait = unfriendly
 		}
 	}
 	option = {
@@ -1412,8 +1517,23 @@ character_event = {
 			factor = 5.0
 			trait = zealous
 		}
-
-
+		modifier = {		### added by Ash
+			factor = 5.0
+			trait = pessimistic
+		}
+		modifier = {		### added by Ash
+			factor = 2.0
+			trait = tolerant
+		}
+		
+		modifier = {		### added by Ash
+			factor = 2.0
+			trait = philosophical
+		}
+		modifier = {		### added by Ash
+			factor = 2.0
+			trait = stoic
+		}
 		modifier = {
 			factor = 1.25
 			trait = stressed
@@ -3218,4 +3338,3 @@ letter_event = {
 		prestige = -5
 	}
 }
-

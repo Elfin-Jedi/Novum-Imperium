@@ -10,8 +10,7 @@ targetted_decisions = {
 		from_potential = {
 			is_playable = yes
 			OR = {
-				religion = norse_pagan
-				religion = norse_pagan_reformed
+				LI_norse_pagan_trigger = yes
 				is_member_of_any_warrior_lodge_trigger = yes
 			}
 		}
@@ -21,8 +20,7 @@ targetted_decisions = {
 			FROM = { is_liege_of = ROOT	}
 			NOT = {	character = FROM }
 			OR = {
-				religion = norse_pagan
-				religion = norse_pagan_reformed
+				LI_norse_pagan_trigger = yes
 				AND = {
 					FROM = { is_member_of_any_warrior_lodge_trigger = yes }
 					is_child_or_sibling_of_from_trigger = yes
@@ -157,8 +155,7 @@ targetted_decisions = {
 		from_potential = {
 			is_playable = yes
 			OR = {
-				religion = norse_pagan
-				religion = norse_pagan_reformed
+				LI_norse_pagan_trigger = yes
 				AND = {
 					FROM = { is_member_of_any_warrior_lodge_trigger = yes }
 					is_child_or_sibling_of_from_trigger = yes
@@ -172,8 +169,7 @@ targetted_decisions = {
 			FROM = { is_liege_of = ROOT	}
 			is_female = yes
 			OR = {
-				religion = norse_pagan
-				religion = norse_pagan_reformed
+				LI_norse_pagan_trigger = yes
 				AND = {
 					FROM = { is_member_of_any_warrior_lodge_trigger = yes }
 					is_child_or_sibling_of_from_trigger = yes

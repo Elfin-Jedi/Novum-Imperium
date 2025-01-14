@@ -120,6 +120,22 @@ province_event = {
 				}
 			}
 		}
+		modifier = {	## added by Ash
+			factor = 1.1
+			owner = { trait = tolerant }
+		}
+		modifier = {	## added by Ash
+			factor = 1.1
+			owner = { trait = eccentric }
+		}
+		modifier = {	## added by Ash
+			factor = 1.1
+			owner = { trait = unpredictable }
+		}
+		modifier = {	## added by Ash
+			factor = 0.7
+			owner = { trait = oldfashioned }
+		}
 		modifier = {
 			factor = 0.75
 			owner = {
@@ -182,6 +198,13 @@ province_event = {
 					name = culture_conversion
 					value = faster_melting_pots_and_slower_normal
 				}
+			}
+		}
+		modifier = {
+			factor = 0.333 #libert3v12a reduced from .66 to .333
+			OR = {
+				owner = { has_ambition = obj_civilize_province }
+				owner = { any_liege= { culture=PREV has_ambition = obj_civilize_province } }
 			}
 		}
 		modifier = {
@@ -255,6 +278,21 @@ province_event = {
 						has_province_modifier = nomad_agitation
 					}
 					remove_province_modifier = nomad_agitation
+				}
+			}
+			if = {
+				limit = {
+					has_ambition = obj_civilize_province
+				}
+				character_event = { id = ao_cleanup.1 days = 3 }
+			}
+			any_liege = {
+				if = {
+					limit = {
+						culture = PREV
+						has_ambition = obj_civilize_province
+					}
+					character_event = { id = ao_cleanup.1 days = 3 }
 				}
 			}
 		}
@@ -864,7 +902,109 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 1200
+		months = 400
+		
+		# LIBERT3 v12 - a high diplomacy ruler is less likely to be assimilated
+		modifier = { 
+			factor = 0.001
+			has_character_flag = rejects_culture
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { diplomacy = 1 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { diplomacy = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { diplomacy = 3 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { diplomacy = 4 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { diplomacy = 5 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { diplomacy = 6 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { diplomacy = 7 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { diplomacy = 8 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { diplomacy = 9 }
+		}
+		modifier = {
+			factor = 1.11
+			diplomacy = 11
+		}
+		modifier = {
+			factor = 1.11
+			diplomacy = 12
+		}
+		modifier = {
+			factor = 1.11
+			diplomacy = 13
+		}
+		modifier = {
+			factor = 1.11
+			diplomacy = 14
+		}
+		modifier = {
+			factor = 1.11
+			diplomacy = 15
+		}
+		modifier = {
+			factor = 1.11
+			diplomacy = 16
+		}
+		modifier = {
+			factor = 1.11
+			diplomacy = 17
+		}
+		modifier = {
+			factor = 1.11
+			diplomacy = 18
+		}
+		modifier = {
+			factor = 1.11
+			diplomacy = 19
+		}
+		modifier = {
+			factor = 1.11
+			diplomacy = 20
+		}
+		modifier = {
+			factor = 1.11
+			diplomacy = 21
+		}
+		modifier = {
+			factor = 1.11
+			diplomacy = 22
+		}
+		modifier = {
+			factor = 1.11
+			diplomacy = 23
+		}
+		modifier = {
+			factor = 1.11
+			diplomacy = 24
+		}
+		modifier = {
+			factor = 1.11
+			diplomacy = 25
+		}
 		modifier = {
 			factor = 0.5
 			top_liege = {
