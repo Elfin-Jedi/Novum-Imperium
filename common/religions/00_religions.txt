@@ -655,101 +655,6 @@ muslim = {
 		intermarry = zikri
 	}
 
-
-	ibadi = {
-		graphical_culture = muslimgfx
-
-		icon = 51
-		heresy_icon = 52
-
-		crusade_name = JIHAD
-		scripture_name = THE_KORAN
-		priest_title = IMAM_PRIEST
-
-		high_god_name = GOD_GOD
-
-		god_names = {
-			GOD_GOD GOD_ALLAH GOD_THE_GREATEST
-		}
-
-		evil_god_names = {
-			IBLIS SHAYTAN
-		}
-
-		color = { 0.3 0.6 0.3 }
-		can_call_crusade = yes
-		priests_can_marry = yes
-		psc_marriage = no # Disallow uncle-nice and aunt-nephew marriages
-		max_wives = 4
-		matrilineal_marriages = no
-
-		unit_modifier = {
-			retinuesize_perc = 1.0
-		}
-
-		landed_kin_prestige_bonus = yes
-		attacking_same_religion_piety_loss = yes
-		uses_jizya_tax = yes
-		castes = yes
-
-		intermarry = druze
-		intermarry = haruri
-		intermarry = hurufi
-		#intermarry = ibadi
-		intermarry = ismaili
-		intermarry = kharijite
-		intermarry = mahdiyya
-		intermarry = nabawiyya
-		intermarry = qarmatian
-		intermarry = shiite
-		intermarry = sunni
-		intermarry = waqifi
-		intermarry = zaydi
-		intermarry = zikri
-	}
-
-	haruri = {
-		graphical_culture = muslimgfx
-		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
-
-		icon = 51
-		heresy_icon = 52
-
-		crusade_name = JIHAD
-
-		color = { 0.5 0.8 0.6 }
-		parent = ibadi
-		can_call_crusade = yes
-		priests_can_marry = yes
-		psc_marriage = no # Disallow uncle-nice and aunt-nephew marriages
-		max_wives = 4
-		matrilineal_marriages = no
-
-		unit_modifier = {
-			retinuesize_perc = 1.0
-		}
-
-		landed_kin_prestige_bonus = yes
-		attacking_same_religion_piety_loss = yes
-		uses_jizya_tax = yes
-		castes = yes
-
-		intermarry = druze
-		#intermarry = haruri
-		intermarry = hurufi
-		intermarry = ibadi
-		intermarry = ismaili
-		intermarry = kharijite
-		intermarry = mahdiyya
-		intermarry = nabawiyya
-		intermarry = qarmatian
-		intermarry = shiite
-		intermarry = sunni
-		intermarry = waqifi
-		intermarry = zaydi
-		intermarry = zikri
-	}
-
 	waqifi = {
 		graphical_culture = muslimgfx
 		alternate_start = { has_alternate_start_parameter = { key = religion value = full_random } }
@@ -923,14 +828,49 @@ muslim = {
 			SHAYTAN
 		}
 
-		unit_modifier = {
-			land_morale = 0.2
-			retinuesize_perc = 1.0
-			key = "OFF_RELIGION"
-		}
-
 		character_modifier = {
+			general_opinion = -30
+			same_religion_opinion = 60
+			church_opinion = 5
+#			dynasty_opinion = -10
+			castle_vassal_tax_modifier = 0.20
+			city_vassal_tax_modifier = -0.10
+			temple_vassal_tax_modifier = 0.20
+			build_cost_modifier = 0.10
+			land_organisation = -0.20
+			castle_vassal_min_levy = 0.30
+			castle_vassal_max_levy = 0.30
+			city_vassal_min_levy = -0.10
+			city_vassal_max_levy = -0.25
+#			monthly_character_prestige = -0.20
+#			monthly_character_piety = 0.50
+			assassinate_chance_modifier = 0.10
+			arrest_chance_modifier = 0.10
+			diplomacy = -2
+			martial = 5
+			stewardship = -3
 			intrigue = 2
+			learning = 1
+#			ai_ambition = 30
+#			ai_zeal = 70
+#			ai_rationality = -40
+		}
+		unit_modifier = {
+			key = "DEF_RELIGION_HOME_TERRITORY"
+			
+			levy_size = 0.05
+			light_cavalry_offensive = 0.35
+			light_infantry_offensive = 0.35
+			archers_offensive = 0.35
+			land_morale = 0.20
+		}
+		unit_home_modifier = {
+			key = "DEF_RELIGION_HOME_TERRITORY"
+			
+			light_cavalry_defensive = 0.50
+			light_infantry_defensive = 0.50
+			archers_defensive = 0.50
+			land_morale = 0.50
 		}
 
 		color = { 0.0 0.9 0.4 }

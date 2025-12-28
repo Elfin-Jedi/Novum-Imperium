@@ -272,6 +272,13 @@ altaic = {
 	}
 }
 
+berberic = {
+	guanchinet = {
+		graphical_cultures = { berbergfx }
+		secondary_event_pictures = bedouin_arabic
+	}
+}
+
 bantu = {
 	graphical_cultures = { muslimgfx }
 
@@ -318,20 +325,23 @@ nilo_saharan = {
 	}
 }
 
+atlantic_kongo = {
+	serer = {
+		graphical_cultures = { westafricangfx africangfx }
+	}
+	fula = {
+		graphical_cultures = { centralafricangfx westafricangfx africangfx }
+	}
+}
+
 congo_nigerian = {
 	graphical_cultures = { muslimgfx }
 
 	akan = {
 		graphical_cultures = { westafricangfx africangfx }
 	}
-	serer = {
-		graphical_cultures = { westafricangfx africangfx }
-	}
 	mandinka = {
 		graphical_cultures = { westafricangfx africangfx }
-	}
-	fula = {
-		graphical_cultures = { centralafricangfx westafricangfx africangfx }
 	}
 	zande = {
 		graphical_cultures = { westafricangfx africangfx }
@@ -499,10 +509,13 @@ east_african = {
 	}
 }
 
-central_african = {
+kanuri_group = {
 	kanuri = {
 		graphical_cultures = { centralafricangfx westafricangfx africangfx }
 	}
+}
+
+central_african = {
 	hausa = {
 		graphical_cultures = { centralafricangfx westafricangfx africangfx }
 	}
@@ -537,10 +550,6 @@ north_african = {
 		secondary_event_pictures = bedouin_arabic
 	}
 	canarian = {
-		graphical_cultures = { berbergfx }
-		secondary_event_pictures = bedouin_arabic
-	}
-	guanchinet = {
 		graphical_cultures = { berbergfx }
 		secondary_event_pictures = bedouin_arabic
 	}
@@ -701,7 +710,7 @@ tibetan_group = {
 	}
 }
 
-sivullirmiut = {
+tuniq_group = {
 	graphical_cultures = { ugricgfx easterngfx }
 
 	tuniq = {
