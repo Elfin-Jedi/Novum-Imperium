@@ -214,7 +214,6 @@ character_event = {
 				ROOT = { 
 					any_owned_bloodline = { 
 						has_bloodline_flag = bloodline_prestige_sacrifice
-						bloodline_is_active_for = PREV
 					}
 				} 
 			}
@@ -228,7 +227,6 @@ character_event = {
 				ROOT = { 
 					any_owned_bloodline = { 
 						has_bloodline_flag = bloodline_prestige_sacrifice
-						bloodline_is_active_for = PREV
 					}
 				}
 			}
@@ -242,7 +240,6 @@ character_event = {
 				ROOT = { 
 					any_owned_bloodline = { 
 						has_bloodline_flag = bloodline_prestige_sacrifice
-						bloodline_is_active_for = PREV
 					}
 				}
 			}
@@ -256,7 +253,6 @@ character_event = {
 				ROOT = { 
 					any_owned_bloodline = { 
 						has_bloodline_flag = bloodline_prestige_sacrifice
-						bloodline_is_active_for = PREV
 					}
 				}
 			}
@@ -270,7 +266,6 @@ character_event = {
 				ROOT = { 
 					any_owned_bloodline = { 
 						has_bloodline_flag = bloodline_prestige_sacrifice
-						bloodline_is_active_for = PREV
 					}
 				}
 			}
@@ -284,7 +279,6 @@ character_event = {
 				ROOT = { 
 					any_owned_bloodline = { 
 						has_bloodline_flag = bloodline_prestige_sacrifice
-						bloodline_is_active_for = PREV
 					}
 				}
 			}
@@ -412,46 +406,44 @@ character_event = {
 			}
 			modifier = { 
 				factor = 0.25
-				NOT = {
-					any_spouse = {
-						NOR = {
-							trait = sympathy_abrahamics
-							trait = sympathy_anatolians
-							trait = sympathy_arabpagans
-							trait = sympathy_aztecs
-							trait = sympathy_baltics
-							trait = sympathy_bantus
-							trait = sympathy_berbers
-							trait = sympathy_buddhists
-							trait = sympathy_celtics
-							trait = sympathy_chinese
-							trait = sympathy_east_africans
-							trait = sympathy_egyptian
-							trait = sympathy_finnish
-							trait = sympathy_graecoroman
-							trait = sympathy_indian
-							trait = sympathy_indohellens
-							trait = sympathy_intis
-							trait = sympathy_inuit
-							trait = sympathy_judaism
-							trait = sympathy_luwians
-							trait = sympathy_mande
-							trait = sympathy_manichaeans
-							trait = sympathy_mithraics
-							trait = sympathy_islam
-							trait = sympathy_platonics
-							trait = sympathy_nordic
-							trait = sympathy_pagans
-							trait = sympathy_palmyrans
-							trait = sympathy_sererics
-							trait = sympathy_slavics
-							trait = sympathy_sol
-							trait = sympathy_tengri
-							trait = sympathy_yazd
-							trait = sympathy_zal
-							trait = sympathy_zoroastrianism
-							trait = sympathy_african
-						}
+				any_spouse = {
+					OR = {
+						trait = sympathy_abrahamics
+						trait = sympathy_anatolians
+						trait = sympathy_arabpagans
+						trait = sympathy_aztecs
+						trait = sympathy_baltics
+						trait = sympathy_bantus
+						trait = sympathy_berbers
+						trait = sympathy_buddhists
+						trait = sympathy_celtics
+						trait = sympathy_chinese
+						trait = sympathy_east_africans
+						trait = sympathy_egyptian
+						trait = sympathy_finnish
+						trait = sympathy_graecoroman
+						trait = sympathy_indian
+						trait = sympathy_indohellens
+						trait = sympathy_intis
+						trait = sympathy_inuit
+						trait = sympathy_judaism
+						trait = sympathy_luwians
+						trait = sympathy_mande
+						trait = sympathy_manichaeans
+						trait = sympathy_mithraics
+						trait = sympathy_islam
+						trait = sympathy_platonics
+						trait = sympathy_nordic
+						trait = sympathy_pagans
+						trait = sympathy_palmyrans
+						trait = sympathy_sererics
+						trait = sympathy_slavics
+						trait = sympathy_sol
+						trait = sympathy_tengri
+						trait = sympathy_yazd
+						trait = sympathy_zal
+						trait = sympathy_zoroastrianism
+						trait = sympathy_african
 					}
 				}
 			}
@@ -574,46 +566,44 @@ character_event = {
 			}
 			modifier = { 
 				factor = 0.25
-				NOT = {
-					any_spouse = {
-						NOR = {
-							trait = sympathy_abrahamics
-							trait = sympathy_anatolians
-							trait = sympathy_arabpagans
-							trait = sympathy_aztecs
-							trait = sympathy_baltics
-							trait = sympathy_bantus
-							trait = sympathy_berbers
-							trait = sympathy_buddhists
-							trait = sympathy_celtics
-							trait = sympathy_chinese
-							trait = sympathy_christendom
-							trait = sympathy_east_africans
-							trait = sympathy_egyptian
-							trait = sympathy_finnish
-							trait = sympathy_graecoroman
-							trait = sympathy_indian
-							trait = sympathy_indohellens
-							trait = sympathy_intis
-							trait = sympathy_inuit
-							trait = sympathy_judaism
-							trait = sympathy_luwians
-							trait = sympathy_mande
-							trait = sympathy_manichaeans
-							trait = sympathy_mithraics
-							trait = sympathy_platonics
-							trait = sympathy_nordic
-							trait = sympathy_pagans
-							trait = sympathy_palmyrans
-							trait = sympathy_sererics
-							trait = sympathy_slavics
-							trait = sympathy_sol
-							trait = sympathy_tengri
-							trait = sympathy_yazd
-							trait = sympathy_zal
-							trait = sympathy_zoroastrianism
-							trait = sympathy_african
-						}
+				any_spouse = {
+					OR = {
+						trait = sympathy_abrahamics
+						trait = sympathy_anatolians
+						trait = sympathy_arabpagans
+						trait = sympathy_aztecs
+						trait = sympathy_baltics
+						trait = sympathy_bantus
+						trait = sympathy_berbers
+						trait = sympathy_buddhists
+						trait = sympathy_celtics
+						trait = sympathy_chinese
+						trait = sympathy_christendom
+						trait = sympathy_east_africans
+						trait = sympathy_egyptian
+						trait = sympathy_finnish
+						trait = sympathy_graecoroman
+						trait = sympathy_indian
+						trait = sympathy_indohellens
+						trait = sympathy_intis
+						trait = sympathy_inuit
+						trait = sympathy_judaism
+						trait = sympathy_luwians
+						trait = sympathy_mande
+						trait = sympathy_manichaeans
+						trait = sympathy_mithraics
+						trait = sympathy_platonics
+						trait = sympathy_nordic
+						trait = sympathy_pagans
+						trait = sympathy_palmyrans
+						trait = sympathy_sererics
+						trait = sympathy_slavics
+						trait = sympathy_sol
+						trait = sympathy_tengri
+						trait = sympathy_yazd
+						trait = sympathy_zal
+						trait = sympathy_zoroastrianism
+						trait = sympathy_african
 					}
 				}
 			}
@@ -735,46 +725,44 @@ character_event = {
 			}
 			modifier = { 
 				factor = 0.25
-				NOT = {
-					any_spouse = {
-						NOR = {
-							trait = sympathy_abrahamics
-							trait = sympathy_anatolians
-							trait = sympathy_arabpagans
-							trait = sympathy_aztecs
-							trait = sympathy_baltics
-							trait = sympathy_bantus
-							trait = sympathy_berbers
-							trait = sympathy_buddhists
-							trait = sympathy_celtics
-							trait = sympathy_chinese
-							trait = sympathy_christendom
-							trait = sympathy_east_africans
-							trait = sympathy_egyptian
-							trait = sympathy_finnish
-							trait = sympathy_graecoroman
-							trait = sympathy_indian
-							trait = sympathy_indohellens
-							trait = sympathy_intis
-							trait = sympathy_inuit
-							trait = sympathy_luwians
-							trait = sympathy_mande
-							trait = sympathy_manichaeans
-							trait = sympathy_mithraics
-							trait = sympathy_islam
-							trait = sympathy_platonics
-							trait = sympathy_nordic
-							trait = sympathy_pagans
-							trait = sympathy_palmyrans
-							trait = sympathy_sererics
-							trait = sympathy_slavics
-							trait = sympathy_sol
-							trait = sympathy_tengri
-							trait = sympathy_yazd
-							trait = sympathy_zal
-							trait = sympathy_zoroastrianism
-							trait = sympathy_african
-						}
+				any_spouse = {
+					OR = {
+						trait = sympathy_abrahamics
+						trait = sympathy_anatolians
+						trait = sympathy_arabpagans
+						trait = sympathy_aztecs
+						trait = sympathy_baltics
+						trait = sympathy_bantus
+						trait = sympathy_berbers
+						trait = sympathy_buddhists
+						trait = sympathy_celtics
+						trait = sympathy_chinese
+						trait = sympathy_christendom
+						trait = sympathy_east_africans
+						trait = sympathy_egyptian
+						trait = sympathy_finnish
+						trait = sympathy_graecoroman
+						trait = sympathy_indian
+						trait = sympathy_indohellens
+						trait = sympathy_intis
+						trait = sympathy_inuit
+						trait = sympathy_luwians
+						trait = sympathy_mande
+						trait = sympathy_manichaeans
+						trait = sympathy_mithraics
+						trait = sympathy_islam
+						trait = sympathy_platonics
+						trait = sympathy_nordic
+						trait = sympathy_pagans
+						trait = sympathy_palmyrans
+						trait = sympathy_sererics
+						trait = sympathy_slavics
+						trait = sympathy_sol
+						trait = sympathy_tengri
+						trait = sympathy_yazd
+						trait = sympathy_zal
+						trait = sympathy_zoroastrianism
+						trait = sympathy_african
 					}
 				}
 			}
@@ -801,149 +789,422 @@ character_event = {
 				is_alternate_start = yes
 			}
 		}
-		hidden_tooltip = { character_event = { id = HF.23004 } }
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 0
-				liege = {
-					OR = {
-						trait = sympathy_abrahamics
-						trait = sympathy_anatolians
-						trait = sympathy_arabpagans
-						trait = sympathy_aztecs
-						trait = sympathy_baltics
-						trait = sympathy_bantus
-						trait = sympathy_berbers
-						trait = sympathy_buddhists
-						trait = sympathy_celtics
-						trait = sympathy_chinese
-						trait = sympathy_christendom
-						trait = sympathy_east_africans
-						trait = sympathy_egyptian
-						trait = sympathy_finnish
-						trait = sympathy_graecoroman
-						trait = sympathy_indohellens
-						trait = sympathy_intis
-						trait = sympathy_inuit
-						trait = sympathy_judaism
-						trait = sympathy_luwians
-						trait = sympathy_mande
-						trait = sympathy_manichaeans
-						trait = sympathy_mithraics
+		#hidden_tooltip = { character_event = { id = HF.23004 } }
+		ai_chance = { 
+			factor = 25 
+			modifier = { 
+				factor = 0 
+				liege = { 
+					OR = { 
 						trait = sympathy_islam
-						trait = sympathy_platonics
-						trait = sympathy_nordic
-						trait = sympathy_palmyrans
-						trait = sympathy_sererics
-						trait = sympathy_slavics
-						trait = sympathy_sol
-						trait = sympathy_tengri
-						trait = sympathy_yazd
-						trait = sympathy_zal
-						trait = sympathy_african
+						trait = sympathy_judaism
+						trait = sympathy_christendom
 					}
 				}
 			}
-			modifier = {
-				factor = 0
-				top_liege = {
-					OR = {
-						trait = sympathy_abrahamics
-						trait = sympathy_anatolians
-						trait = sympathy_arabpagans
-						trait = sympathy_aztecs
-						trait = sympathy_baltics
-						trait = sympathy_bantus
-						trait = sympathy_berbers
-						trait = sympathy_buddhists
-						trait = sympathy_celtics
-						trait = sympathy_chinese
-						trait = sympathy_christendom
-						trait = sympathy_east_africans
-						trait = sympathy_egyptian
-						trait = sympathy_finnish
-						trait = sympathy_graecoroman
-						trait = sympathy_indohellens
-						trait = sympathy_intis
-						trait = sympathy_inuit
-						trait = sympathy_judaism
-						trait = sympathy_luwians
-						trait = sympathy_mande
-						trait = sympathy_manichaeans
-						trait = sympathy_mithraics
+			modifier = { 
+				factor = 0 
+				top_liege = { 
+					OR = { 
 						trait = sympathy_islam
-						trait = sympathy_platonics
-						trait = sympathy_nordic
-						trait = sympathy_palmyrans
-						trait = sympathy_sererics
-						trait = sympathy_slavics
-						trait = sympathy_sol
-						trait = sympathy_tengri
-						trait = sympathy_yazd
-						trait = sympathy_zal
-						trait = sympathy_african
+						trait = sympathy_judaism
+						trait = sympathy_christendom
 					}
 				}
 			}
-			modifier = {
+			modifier = { 
 				factor = 0.25
-				NOT = {
-					any_spouse = {
-						NOR = {
-							trait = sympathy_abrahamics
-							trait = sympathy_anatolians
-							trait = sympathy_arabpagans
-							trait = sympathy_aztecs
-							trait = sympathy_baltics
-							trait = sympathy_bantus
-							trait = sympathy_berbers
-							trait = sympathy_buddhists
-							trait = sympathy_celtics
-							trait = sympathy_chinese
-							trait = sympathy_christendom
-							trait = sympathy_east_africans
-							trait = sympathy_egyptian
-							trait = sympathy_finnish
-							trait = sympathy_graecoroman
-							trait = sympathy_indohellens
-							trait = sympathy_intis
-							trait = sympathy_inuit
-							trait = sympathy_judaism
-							trait = sympathy_luwians
-							trait = sympathy_mande
-							trait = sympathy_manichaeans
-							trait = sympathy_mithraics
-							trait = sympathy_islam
-							trait = sympathy_platonics
-							trait = sympathy_nordic
-							trait = sympathy_palmyrans
-							trait = sympathy_sererics
-							trait = sympathy_slavics
-							trait = sympathy_sol
-							trait = sympathy_tengri
-							trait = sympathy_yazd
-							trait = sympathy_zal
-							trait = sympathy_african
-						}
+				spouse = { 
+					OR = { 
+						trait = sympathy_islam
+						trait = sympathy_judaism
+						trait = sympathy_christendom
 					}
 				}
 			}
-			modifier = {
+			modifier = { 
 				factor = 1.5
-				any_demesne_province = { religion_group = indian_group }
+				any_demesne_province = { 
+					religion_group = abrahamic_group
+				}
 			}
-			modifier = {
+			modifier = { 
 				factor = 1.5
-				any_courtier_or_vassal = { religion_group = indian_group }
+				any_demesne_province = { 
+					religion_group = anatolian_group
+				}
 			}
-			modifier = {
+			modifier = { 
 				factor = 1.5
-				any_demesne_province = { religion_group = zoroastrian_group }
+				any_demesne_province = { 
+					religion_group = arabpagan_group
+				}
 			}
-			modifier = {
+			modifier = { 
 				factor = 1.5
-				any_courtier_or_vassal = { religion_group = zoroastrian_group }
+				any_demesne_province = { 
+					religion_group = aztec_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = baltic_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = bantu_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = berberpagan_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = bud_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = celtic_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = chinese_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = east_african_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = egyptian_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = finnish_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = graecoroman_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = indian_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = indohelen_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = inuit_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = luwian_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = mand_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = mani_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = mithra_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = neoplato_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = norsegerman_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = pagan_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = palmyranpagan_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = serer_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = slavic_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = sol_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = tengri_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = yazd_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = zal_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_demesne_province = { 
+					religion_group = zoroastrian_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = abrahamic_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = anatolian_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = arabpagan_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = aztec_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = baltic_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = bantu_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = berberpagan_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = bud_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = celtic_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = chinese_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = east_african_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = egyptian_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = finnish_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = graecoroman_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = indian_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = indohelen_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = inuit_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = luwian_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = mand_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = mani_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = mithra_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = neoplato_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = norsegerman_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = pagan_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = palmyranpagan_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = serer_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = slavic_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = sol_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = tengri_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = yazd_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = zal_group
+				}
+			}
+			modifier = { 
+				factor = 1.5
+				any_courtier_or_vassal = {
+					religion_group = zoroastrian_group
+				}
 			}
 		}
 	}
@@ -4148,7 +4409,7 @@ character_event = {
 				secret_religion = hellenic_pagan
 				secret_religion = hellenic_pagan_reformed
 				religion = hellenic_pagan
-				religion = hellenic_pagan_reformed 
+				religion = hellenic_pagan_reformed
 			}
 		}
 		text = EVTDESCCHF23101
@@ -4190,7 +4451,7 @@ character_event = {
 					secret_religion = hellenic_pagan
 					secret_religion = hellenic_pagan_reformed
 					religion = hellenic_pagan
-					religion = hellenic_pagan_reformed 
+					religion = hellenic_pagan_reformed
 				}
 			}
 		}
@@ -4216,7 +4477,7 @@ character_event = {
 					secret_religion = hellenic_pagan
 					secret_religion = hellenic_pagan_reformed
 					religion = hellenic_pagan
-					religion = hellenic_pagan_reformed 
+					religion = hellenic_pagan_reformed
 					religion_group = christian
 				}
 			}
@@ -4228,7 +4489,7 @@ character_event = {
 					secret_religion = hellenic_pagan
 					secret_religion = hellenic_pagan_reformed
 					religion = hellenic_pagan
-					religion = hellenic_pagan_reformed 
+					religion = hellenic_pagan_reformed
 				}
 			}
 		}
@@ -4243,7 +4504,7 @@ character_event = {
 					secret_religion = hellenic_pagan
 					secret_religion = hellenic_pagan_reformed
 					religion = hellenic_pagan
-					religion = hellenic_pagan_reformed 
+					religion = hellenic_pagan_reformed
 				}
 			}
 			modifier = {
@@ -4272,7 +4533,7 @@ narrative_event = {
 				secret_religion = hellenic_pagan
 				secret_religion = hellenic_pagan_reformed
 				religion = hellenic_pagan
-				religion = hellenic_pagan_reformed 
+				religion = hellenic_pagan_reformed
 				religion_group = christian
 			}
 		}
@@ -4309,7 +4570,7 @@ narrative_event = {
 					secret_religion = hellenic_pagan
 					secret_religion = hellenic_pagan_reformed
 					religion = hellenic_pagan
-					religion = hellenic_pagan_reformed 
+					religion = hellenic_pagan_reformed
 					religion_group = christian
 				}
 			}
@@ -4321,7 +4582,7 @@ narrative_event = {
 					secret_religion = hellenic_pagan
 					secret_religion = hellenic_pagan_reformed
 					religion = hellenic_pagan
-					religion = hellenic_pagan_reformed 
+					religion = hellenic_pagan_reformed
 				}
 			}
 		}
@@ -4398,7 +4659,7 @@ narrative_event = {
 				secret_religion = hellenic_pagan
 				secret_religion = hellenic_pagan_reformed
 				religion = hellenic_pagan
-				religion = hellenic_pagan_reformed 
+				religion = hellenic_pagan_reformed
 				religion_group = christian
 			}
 		}
@@ -4410,7 +4671,7 @@ narrative_event = {
 				secret_religion = hellenic_pagan
 				secret_religion = hellenic_pagan_reformed
 				religion = hellenic_pagan
-				religion = hellenic_pagan_reformed 
+				religion = hellenic_pagan_reformed
 			}
 		}
 		text = EVTDESCCHF23102
@@ -4613,10 +4874,10 @@ character_event = {
 		if = { 
 			limit = { 
 				NOR = {
-					religion = hellenic_pagan
-					religion = hellenic_pagan_reformed
 					secret_religion = hellenic_pagan
 					secret_religion = hellenic_pagan_reformed
+					religion = hellenic_pagan
+				religion = hellenic_pagan_reformed
 					has_global_flag = hellenic_reformation #Religion has not been reformed yet. 
 				} 
 			} 
@@ -12532,6 +12793,8 @@ character_event = {
 				OR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -12543,6 +12806,8 @@ character_event = {
 				NOR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -12954,6 +13219,8 @@ character_event = {
 				OR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -12965,6 +13232,8 @@ character_event = {
 				NOR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -12992,6 +13261,8 @@ character_event = {
 				OR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -13003,6 +13274,8 @@ character_event = {
 				NOR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -13030,6 +13303,8 @@ character_event = {
 				OR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -13041,6 +13316,8 @@ character_event = {
 				NOR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -13068,6 +13345,8 @@ character_event = {
 				OR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -13079,6 +13358,8 @@ character_event = {
 				NOR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -13106,6 +13387,8 @@ character_event = {
 				OR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -13117,6 +13400,8 @@ character_event = {
 				NOR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -13140,6 +13425,8 @@ character_event = {
 				OR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -13151,6 +13438,8 @@ character_event = {
 				NOR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -13178,6 +13467,8 @@ character_event = {
 				OR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -13189,6 +13480,8 @@ character_event = {
 				NOR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -13293,6 +13586,8 @@ character_event = {
 				OR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -13304,6 +13599,8 @@ character_event = {
 				NOR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -13358,6 +13655,8 @@ character_event = {
 				OR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -13369,6 +13668,8 @@ character_event = {
 				NOR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -13433,6 +13734,8 @@ character_event = {
 				OR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -13444,6 +13747,8 @@ character_event = {
 				NOR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -13504,6 +13809,8 @@ narrative_event = {
 				OR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -13515,6 +13822,8 @@ narrative_event = {
 				NOR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -13660,6 +13969,8 @@ narrative_event = {
 				OR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -13671,6 +13982,8 @@ narrative_event = {
 				NOR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -15321,6 +15634,8 @@ character_event = {
 				OR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -15332,6 +15647,8 @@ character_event = {
 				NOR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -15379,6 +15696,8 @@ character_event = {
 				OR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -15390,6 +15709,8 @@ character_event = {
 				NOR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -15473,6 +15794,8 @@ character_event = {
 				OR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -15484,6 +15807,8 @@ character_event = {
 				NOR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -15545,6 +15870,8 @@ character_event = {
 				OR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -15556,6 +15883,8 @@ character_event = {
 				NOR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -15602,6 +15931,8 @@ character_event = {
 				OR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -15613,6 +15944,8 @@ character_event = {
 				NOR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -15710,6 +16043,8 @@ character_event = {
 				OR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -15721,6 +16056,8 @@ character_event = {
 				NOR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -15966,6 +16303,8 @@ character_event = {
 				OR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -15977,6 +16316,8 @@ character_event = {
 				NOR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -16005,6 +16346,8 @@ character_event = {
 				OR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -16016,6 +16359,8 @@ character_event = {
 				NOR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -16044,6 +16389,8 @@ character_event = {
 				OR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -16055,6 +16402,8 @@ character_event = {
 				NOR = {  
 					religion = aztec
 					religion = aztec_reformed
+					religion = quetzal
+					religion = quetzal_reformed
 				}
 			} 
 		} 
@@ -16111,31 +16460,34 @@ character_event = {
 	}
 	desc = { 
 		trigger = { 
-			religion = slavic_pagan
+			religion_group = slavic_group
 		} 
 		text = EVTDESCCHF23470
 	}
 	desc = { 
 		trigger = { 
-			religion = baltic_pagan
+			religion_group = baltic_group
 		} 
 		text = EVTDESCDHF23470
 	}
 	desc = { 
 		trigger = { 
-			religion = finnish_pagan
+			religion_group = finnish_group
 		} 
 		text = EVTDESCEHF23470
 	}
 	desc = { 
 		trigger = { 
-			religion = west_african_pagan
+			religion_group = serer_group
 		} 
 		text = EVTDESCFHF23470
 	}
 	desc = { 
 		trigger = { 
-			religion = aztec
+			OR = {
+				religion = aztec
+				religion = quetzal
+			}
 		} 
 		text = EVTDESCGHF23470
 	}
@@ -16146,14 +16498,17 @@ character_event = {
 		text = EVTDESCHHF23470
 	}
 	desc = { 
-		trigger = { 
-			religion = zun_pagan
-		} 
+		trigger = {
+			OR = {
+				religion = zun_pagan
+				religion = indoh_zor
+			}
+		}
 		text = EVTDESCIHF23470
 	}
 	desc = { 
 		trigger = { 
-			religion = hellenic_pagan
+			religion_group = graecoroman_group
 		} 
 		text = EVTDESCLHF23470
 	}
@@ -16389,7 +16744,7 @@ character_event = {
 					owner = {
 						any_realm_character = {
 							limit = {  
-								religion = slavic_pagan
+								religion_group = slavic_group
 							}
 							character_event = { id = HF.23474 }
 						}
@@ -16413,7 +16768,7 @@ character_event = {
 					owner = {
 						any_realm_character = {
 							limit = {  
-								religion = baltic_pagan
+								religion_group = baltic_group
 							}
 							character_event = { id = HF.23474 }
 						}
@@ -16437,7 +16792,7 @@ character_event = {
 					owner = {
 						any_realm_character = {
 							limit = {  
-								religion = finnish_pagan
+								religion_group = finnish_group
 							}
 							character_event = { id = HF.23474 }
 						}
@@ -16461,7 +16816,7 @@ character_event = {
 					owner = {
 						any_realm_character = {
 							limit = {  
-								religion = west_african_pagan
+								religion_group = serer_group
 							}
 							character_event = { id = HF.23474 }
 						}
@@ -16485,7 +16840,10 @@ character_event = {
 					owner = {
 						any_realm_character = {
 							limit = {  
-								religion = aztec
+								OR = {
+									religion = aztec
+									religion = quetzal
+								}
 							}
 							character_event = { id = HF.23474 }
 						}
@@ -16509,7 +16867,10 @@ character_event = {
 					owner = {
 						any_realm_character = {
 							limit = {  
-								religion = zun_pagan
+								OR = {
+									religion = zun_pagan
+									religion = indoh_zor
+								}
 							}
 							character_event = { id = HF.23474 }
 						}
@@ -16557,7 +16918,7 @@ character_event = {
 					owner = {
 						any_realm_character = {
 							limit = {  
-								religion = hellenic_pagan
+								religion_group = graecoroman_group
 							}
 							character_event = { id = HF.23474 }
 						}
@@ -19520,8 +19881,8 @@ character_event = {
 	picture = { 
 		trigger = { 
 			OR = { 
-				religion = west_african_pagan
-				religion = west_african_pagan_reformed
+				religion_group = serer_group
+				religion_group = african_pagan_group
 			}
 		} 
 		picture = GFX_evt_west_african_ruler
@@ -19530,8 +19891,8 @@ character_event = {
 		trigger = { 
 			has_dlc = "Mystics"
 			NOR = { 
-				religion = west_african_pagan
-				religion = west_african_pagan_reformed
+				religion_group = serer_group
+				religion_group = african_pagan_group
 			}
 		} 
 		picture = GFX_evt_magic_ritual
@@ -19539,9 +19900,9 @@ character_event = {
 	picture = { 
 		trigger = { 
 			NOT = { has_dlc = "Mystics" } 
-			NOR = { 
-				religion = west_african_pagan
-				religion = west_african_pagan_reformed
+			NOR = {
+				religion_group = serer_group
+				religion_group = african_pagan_group
 			}
 		} 
 		picture = GFX_evt_tribal_shrine
@@ -19703,8 +20064,8 @@ character_event = {
 	picture = { 
 		trigger = { 
 			OR = { 
-				religion = west_african_pagan
-				religion = west_african_pagan_reformed
+				religion_group = serer_group
+				religion_group = african_pagan_group
 			} 
 		} 
 		picture = GFX_evt_west_african_ruler
@@ -19713,8 +20074,8 @@ character_event = {
 		trigger = { 
 			has_dlc = "Mystics"
 			NOR = { 
-				religion = west_african_pagan
-				religion = west_african_pagan_reformed
+				religion_group = serer_group
+				religion_group = african_pagan_group
 			}
 		} 
 		picture = GFX_evt_magic_ritual
@@ -19722,9 +20083,9 @@ character_event = {
 	picture = { 
 		trigger = { 
 			NOT = { has_dlc = "Mystics" }
-			NOR = { 
-				religion = west_african_pagan
-				religion = west_african_pagan_reformed
+			NOR = {
+				religion_group = serer_group
+				religion_group = african_pagan_group
 			}
 		} 
 		picture = GFX_evt_tribal_shrine
@@ -19767,8 +20128,8 @@ character_event = {
 			if = {
 				limit = {
 					OR = {
-						religion = west_african_pagan
-						religion = west_african_pagan_reformed
+						religion_group = serer_group
+						religion_group = african_pagan_group
 					}
 				}
 				random_list = { 
@@ -19838,8 +20199,8 @@ character_event = {
 			if = {
 				limit = {
 					OR = {
-						religion = west_african_pagan
-						religion = west_african_pagan_reformed
+						religion_group = serer_group
+						religion_group = african_pagan_group
 					}
 				}
 				random_list = {
@@ -19909,8 +20270,8 @@ character_event = {
 			if = {
 				limit = {
 					OR = {
-						religion = west_african_pagan
-						religion = west_african_pagan_reformed
+						religion_group = serer_group
+						religion_group = african_pagan_group
 					}
 				}
 				random_list = { 
@@ -19980,8 +20341,8 @@ character_event = {
 			if = {
 				limit = {
 					OR = {
-						religion = west_african_pagan
-						religion = west_african_pagan_reformed
+						religion_group = serer_group
+						religion_group = african_pagan_group
 					}
 				}
 				random_list = { 
@@ -20065,7 +20426,8 @@ character_event = {
 		if = { # Assign African face paint
 			limit = {
 				OR = {
-					religion = west_african_pagan
+					religion_group = serer_group
+					religion_group = african_pagan_group
 					AND = {
 						religion = west_african_pagan_reformed
 						emf_animistic_religion = yes
