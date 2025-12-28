@@ -3297,7 +3297,7 @@ character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
 			    							trait = seducer
 			    							trait = seductress
 			    						}
-			    						culture_group = indoaryan
+			    						culture_group = indo_aryan_group
 			    						NOT = {
 											any_artifact = {
 												artifact_type = kama_sutra
@@ -3906,7 +3906,7 @@ character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
 			    				10 = {
 			    					add_artifact = cookbook_3_chinese_group
 			    					trigger = {
-			    						culture_group = chinese_group
+			    						culture_group = chinese
 			    						NOT = {
 				    						any_artifact = {
 												artifact_type = cookbook_3_chinese_group

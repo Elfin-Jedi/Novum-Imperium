@@ -1219,25 +1219,25 @@ character_event = {
 					20 = { add_trait = experimenter }
 					20 = { add_trait = flanker }
 					20 = {
-						trigger = { culture_group = chinese_group }
+						trigger = { culture_group = chinese }
 						add_trait = logistics_expert
 					}
 					20 = {
-						trigger = { culture_group = chinese_group }
+						trigger = { culture_group = chinese }
 						add_trait = master_of_flame
 					}
 					20 = {
-						trigger = { culture_group = chinese_group }
+						trigger = { culture_group = chinese }
 						add_trait = sapper
 					}
 					20 = {
-						trigger = { culture_group = chinese_group }
+						trigger = { culture_group = chinese }
 						add_trait = levy_coordinator
 					}
 					20 = {
 						trigger = { 
 							OR = { 
-								culture_group = indoaryan
+								culture_group = indo_aryan_group
 								culture_group = dravidian_group
 							}
 						}

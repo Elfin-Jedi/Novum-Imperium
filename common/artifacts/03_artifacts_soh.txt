@@ -265,7 +265,7 @@ ganjiang = {
 			religion = tao
 			religion = shenjiao
 			religion = sol_taoist
-			culture_group = chinese_group
+			culture_group = chinese
 		}
 	}
 	allowed_gift = {
@@ -274,7 +274,7 @@ ganjiang = {
 			religion = tao
 			religion = shenjiao
 			religion = sol_taoist
-			culture_group = chinese_group
+			culture_group = chinese
 		}
 	}
 	flags = { chinese combat_weapon sword unique }
@@ -296,7 +296,7 @@ moye = {
 			religion = tao
 			religion = shenjiao
 			religion = sol_taoist
-			culture_group = chinese_group
+			culture_group = chinese
 		}
 	}
 	allowed_gift = {
@@ -305,7 +305,7 @@ moye = {
 			religion = tao
 			religion = shenjiao
 			religion = sol_taoist
-			culture_group = chinese_group
+			culture_group = chinese
 		}
 	}
 	flags = { chinese combat_weapon sword unique }
@@ -782,7 +782,7 @@ heirloom_seal_of_the_realm = {
 			#is_chinese_emperor_trigger = yes
 			has_landed_title = e_china # NOT the same as the above # Ensures that a non-CI EoC can use the artifact
 			has_acceptable_chinese_religion_trigger = yes # Covers pretender empires automatically
-			culture_group = chinese_group
+			culture_group = chinese
 		}
 		OR = { # Is the EoC, a pretender emperor, or not in the realm of either
 			is_chinese_emperor_trigger = yes

@@ -96,7 +96,7 @@ character_event = {
                         trigger = {
 							job_chancellor = {
 								OR = {
-									culture_group = chinese_group
+									culture_group = chinese
 									culture_group = altaic
 								}
                                 NOT = { character = ROOT }
@@ -114,7 +114,7 @@ character_event = {
                         trigger = {
 							job_marshal = {
 								OR = {
-									culture_group = chinese_group
+									culture_group = chinese
 									culture_group = altaic
 								}
                                 NOT = { character = ROOT }
@@ -140,7 +140,7 @@ character_event = {
                         trigger = {
 							job_treasurer = {
 								OR = {
-									culture_group = chinese_group
+									culture_group = chinese
 									culture_group = altaic
 								}
                                 NOT = { character = ROOT }
@@ -166,7 +166,7 @@ character_event = {
                         trigger = {
 							job_spiritual = {
 								OR = {
-									culture_group = chinese_group
+									culture_group = chinese
 									culture_group = altaic
 								}
                                 NOT = { character = ROOT }
@@ -941,7 +941,7 @@ character_event = {
         any_courtier = {
             count = 2
             ai = yes
-            NOT = { culture_group = chinese_group }
+            NOT = { culture_group = chinese }
             is_ruler = no
             is_heir = no
             block_general_event_trigger = no
@@ -974,7 +974,7 @@ character_event = {
                 any_courtier = {
                     is_liked_by_China_trigger = yes
                     ai = yes
-                    NOT = { culture_group = chinese_group }
+                    NOT = { culture_group = chinese }
                     is_ruler = no
                     is_heir = no
                     block_general_event_trigger = no
@@ -991,7 +991,7 @@ character_event = {
                 limit = {
                     is_liked_by_China_trigger = yes
                     ai = yes
-                    NOT = { culture_group = chinese_group }
+                    NOT = { culture_group = chinese }
                     is_ruler = no
                     block_general_event_trigger = no
                     NOR = {
@@ -1014,7 +1014,7 @@ character_event = {
             any_courtier = {
                 limit = {
                     ai = yes
-                    NOT = { culture_group = chinese_group }
+                    NOT = { culture_group = chinese }
                     is_ruler = no
                     is_heir = no
                     block_general_event_trigger = no
@@ -1075,7 +1075,7 @@ character_event = {
                 is_married = yes
                 any_spouse = {
                     ai = yes
-                    NOT = { culture_group = chinese_group }
+                    NOT = { culture_group = chinese }
                     is_ruler = no
                     block_general_event_trigger = no
                     NOR = {
@@ -1090,7 +1090,7 @@ character_event = {
             any_spouse = {
                 limit = {
                     ai = yes
-                    NOT = { culture_group = chinese_group }
+                    NOT = { culture_group = chinese }
                     is_ruler = no
                     block_general_event_trigger = no
                     NOR = {
@@ -1114,7 +1114,7 @@ character_event = {
                 has_lover = yes
                 any_lover = {
                     ai = yes
-                    NOT = { culture_group = chinese_group }
+                    NOT = { culture_group = chinese }
                     is_ruler = no
                     block_general_event_trigger = no
                     NOR = {
@@ -1129,7 +1129,7 @@ character_event = {
             any_lover = {
                 limit = {
                     ai = yes
-                    NOT = { culture_group = chinese_group }
+                    NOT = { culture_group = chinese }
                     is_ruler = no
                     block_general_event_trigger = no
                     NOR = {
@@ -1153,7 +1153,7 @@ character_event = {
                 num_of_friends > 0
                 any_friend = {
                     ai = yes
-                    NOT = { culture_group = chinese_group }
+                    NOT = { culture_group = chinese }
                     is_ruler = no
                     block_general_event_trigger = no
                     NOR = {
@@ -1168,7 +1168,7 @@ character_event = {
             any_friend = {
                 limit = {
                     ai = yes
-                    NOT = { culture_group = chinese_group }
+                    NOT = { culture_group = chinese }
                     is_ruler = no
                     block_general_event_trigger = no
                     NOR = {
@@ -1191,7 +1191,7 @@ character_event = {
             any_courtier = {
                 limit = {
                     ai = yes
-                    NOT = { culture_group = chinese_group }
+                    NOT = { culture_group = chinese }
                     is_ruler = no
                     block_general_event_trigger = no
                     NOR = {
@@ -1217,7 +1217,7 @@ character_event = {
                 has_children = yes
                 any_child = {
                     ai = yes
-                    NOT = { culture_group = chinese_group }
+                    NOT = { culture_group = chinese }
                     is_ruler = no
                     NOT = { is_heir = ROOT }
                     block_general_event_trigger = no
@@ -1233,7 +1233,7 @@ character_event = {
             any_child = {
                 limit = {
                     ai = yes
-                    NOT = { culture_group = chinese_group }
+                    NOT = { culture_group = chinese }
                     is_ruler = no
                     NOT = { is_heir = ROOT }
                     block_general_event_trigger = no
@@ -1258,7 +1258,7 @@ character_event = {
                 has_children = yes
                 any_child = {
                     ai = yes
-                    NOT = { culture_group = chinese_group }
+                    NOT = { culture_group = chinese }
                     is_ruler = no
                     block_general_event_trigger = no
                     NOR = {
@@ -1273,7 +1273,7 @@ character_event = {
             any_child = {
                 limit = {
                     ai = yes
-                    NOT = { culture_group = chinese_group }
+                    NOT = { culture_group = chinese }
                     is_ruler = no
                     block_general_event_trigger = no
                     NOR = {
@@ -1296,7 +1296,7 @@ character_event = {
             any_courtier = {
                 limit = {
                     ai = yes
-                    NOT = { culture_group = chinese_group }
+                    NOT = { culture_group = chinese }
                     is_ruler = no
                     block_general_event_trigger = no
                     NOR = {

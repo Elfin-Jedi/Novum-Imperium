@@ -336,7 +336,7 @@ emf_province_is_jewish_building_culture = {
 
 emf_province_is_indian_building_culture = {
 	OR = {
-		culture_group = indoaryan
+		culture_group = indo_aryan_group
 		culture_group = dravidian_group
 		culture_group = elephant_group
 	}
@@ -355,7 +355,7 @@ emf_province_is_suebi_building_culture = {
 }
 
 emf_province_is_chinese_han_building_culture = {
-	culture_group = chinese_group
+	culture_group = chinese
 }
 
 emf_province_is_altaic_jurchen_building_culture = {

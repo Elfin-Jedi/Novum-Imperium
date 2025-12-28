@@ -23,7 +23,7 @@ chinese_unification = {
 				}
 			}
 			OR = {
-				culture_group = chinese_group
+				culture_group = chinese
 				primary_title = { has_title_flag = pretender_chinese_empire }
 			}
 		}
@@ -35,7 +35,7 @@ chinese_unification = {
 			independent = yes
 			NOT = { same_realm = FROM }
 			OR = {
-				culture_group = chinese_group
+				culture_group = chinese
 				primary_title = { has_title_flag = pretender_chinese_empire }
 			}
 			mercenary = no
@@ -69,7 +69,7 @@ chinese_unification = {
 			NOT = { same_realm = FROM }
 			OR = {
 				primary_title = { has_title_flag = pretender_chinese_empire }
-				culture_group = chinese_group
+				culture_group = chinese
 			}
 			mercenary = no
 		}

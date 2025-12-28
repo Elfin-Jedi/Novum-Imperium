@@ -42126,7 +42126,7 @@ add_random_commander_trait_effect = {
 				NOT = {
 					trait = logistics_expert
 				}
-				culture_group = chinese_group
+				culture_group = chinese
 			}
 			add_trait = logistics_expert
 		}
@@ -42135,7 +42135,7 @@ add_random_commander_trait_effect = {
 				NOT = {
 					trait = master_of_flame
 				}
-				culture_group = chinese_group
+				culture_group = chinese
 			}
 			add_trait = master_of_flame
 		}
@@ -42144,7 +42144,7 @@ add_random_commander_trait_effect = {
 				NOT = {
 					trait = sapper
 				}
-				culture_group = chinese_group
+				culture_group = chinese
 			}
 			add_trait = sapper
 		}
@@ -42153,7 +42153,7 @@ add_random_commander_trait_effect = {
 				NOT = {
 					trait = levy_coordinator
 				}
-				culture_group = chinese_group
+				culture_group = chinese
 			}
 			add_trait = levy_coordinator
 		}
@@ -42359,7 +42359,7 @@ add_same_commander_trait_as_FROM = {
 				NOT = {
 					trait = logistics_expert
 				}
-				culture_group = chinese_group
+				culture_group = chinese
 				FROM = { trait = logistics_expert }
 			}
 			add_trait = logistics_expert
@@ -42369,7 +42369,7 @@ add_same_commander_trait_as_FROM = {
 				NOT = {
 					trait = master_of_flame
 				}
-				culture_group = chinese_group
+				culture_group = chinese
 				FROM = { trait = master_of_flame }
 			}
 			add_trait = master_of_flame
@@ -42379,7 +42379,7 @@ add_same_commander_trait_as_FROM = {
 				NOT = {
 					trait = sapper
 				}
-				culture_group = chinese_group
+				culture_group = chinese
 				FROM = { trait = sapper }
 			}
 			add_trait = sapper
@@ -42389,7 +42389,7 @@ add_same_commander_trait_as_FROM = {
 				NOT = {
 					trait = levy_coordinator
 				}
-				culture_group = chinese_group
+				culture_group = chinese
 				FROM = { trait = levy_coordinator }
 			}
 			add_trait = levy_coordinator

@@ -3137,12 +3137,12 @@ character_event = {
 
 	trigger = {
 		in_command = no
-		NOT = { culture_group = indoaryan }
+		NOT = { culture_group = indo_aryan_group }
 		NOT = { culture_group = dravidian_group }
 		NOT = {
 			capital_scope = {
 				OR = {
-					culture_group = indoaryan
+					culture_group = indo_aryan_group
 					culture_group = dravidian_group
 					region = world_india
 				}

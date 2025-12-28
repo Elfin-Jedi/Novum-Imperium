@@ -17167,8 +17167,8 @@ indohelen_group = {
 		# Persian open-minded (sectarian 0), can be married from the same group or civilization or related ones
 		intermarry = zor_hindu
 		intermarry = zoroastrian
-		intermarry = zurvanism
-		intermarry = zurvanism_reformed
+		intermarry = zurvanist
+		intermarry = zurvanist_reformed
 
 		# Chinese open-minded (sectarian 0), can be married from the same group or civilization or related ones
 		intermarry = bon
@@ -17293,8 +17293,8 @@ indohelen_group = {
 		# Persian open-minded (sectarian 0), can be married from the same group or civilization or related ones
 		intermarry = zor_hindu
 		intermarry = zoroastrian
-		intermarry = zurvanism
-		intermarry = zurvanism_reformed
+		intermarry = zurvanist
+		intermarry = zurvanist_reformed
 
 		# Chinese open-minded (sectarian 0), can be married from the same group or civilization or related ones
 		intermarry = bon
@@ -17761,8 +17761,8 @@ indohelen_group = {
 		# Persian open-minded (sectarian 0), can be married from the same group or civilization or related ones
 		intermarry = zor_hindu
 		intermarry = zoroastrian
-		intermarry = zurvanism
-		intermarry = zurvanism_reformed
+		intermarry = zurvanist
+		intermarry = zurvanist_reformed
 		
 		religious_clothing_head = 11
 		religious_clothing_priest = 11
@@ -18939,7 +18939,7 @@ mand_group = {
 
 		# Kurdish/Mandean restrictive (sectarian 1), can be married only from the same group or civilization
 		intermarry = yazdanism
-		intermarry = yazidism
+		intermarry = yazidi
 		intermarry = yazdanism_reformed
 
 		# Abrahamic civilization (Christian, Jewish and Islamic) with Gnostic Ascendant restrictive (sectarian 1), can be married from the same group or civilization or related ones
@@ -27179,7 +27179,7 @@ yazd_group = {
 		# Kurdish/Mandean restrictive (sectarian 1), can be married only from the same group or civilization
 		intermarry = mandaean
 		intermarry = yazdanism
-		intermarry = yazidism
+		intermarry = yazidi
 		
 		religious_clothing_head = 5
 		religious_clothing_priest = 5
@@ -27260,14 +27260,14 @@ yazd_group = {
 
 		# Kurdish/Mandean restrictive (sectarian 1), can be married only from the same group or civilization
 		intermarry = mandaean
-		intermarry = yazidism
+		intermarry = yazidi
 		intermarry = yazdanism_reformed
 		
 		religious_clothing_head = 5
 		religious_clothing_priest = 5
 	}
 	
-	yazidism = {
+	yazidi = {
 		graphical_culture = desertgfx
 		color = { 255 255 107 }
 		icon = 396
@@ -27610,7 +27610,7 @@ zoroastrian_group = {
 	}
 	
 	# Reformed
-	mazdakism_reformed = {
+	mazdaki_reformed = {
 		crusade_name = CRUSADE
 		allow_in_ruler_designer = no
 		graphical_culture = persiangfx
@@ -27761,7 +27761,7 @@ zoroastrian_group = {
 		religious_clothing_head = 11
 		religious_clothing_priest = 11
 	}
-	zurvanism_reformed = {
+	zurvanist_reformed = {
 		allow_in_ruler_designer = no
 		crusade_name = CRUSADE
 		graphical_culture = persiangfx
@@ -27830,10 +27830,10 @@ zoroastrian_group = {
 		# Persian open-minded (sectarian 0), can be married from the same group or civilization or related ones
 		intermarry = zor_hindu
 		intermarry = zoroastrian
-		intermarry = zurvanism
+		intermarry = zurvanist
 
 		# Persian restrictive (sectarian 1), can be married only from the same group or civilization
-		intermarry = mazdakism_reformed
+		intermarry = mazdaki_reformed
 		intermarry = zor_angra_reformed
 		
 		religious_clothing_head = 5
@@ -27912,17 +27912,17 @@ zoroastrian_group = {
 
 		# Persian open-minded (sectarian 0), can be married from the same group or civilization or related ones
 		intermarry = zor_hindu
-		intermarry = zurvanism
-		intermarry = zurvanism_reformed
+		intermarry = zurvanist
+		intermarry = zurvanist_reformed
 
 		# Persian restrictive (sectarian 1), can be married only from the same group or civilization
-		intermarry = mazdakism_reformed
+		intermarry = mazdaki_reformed
 		intermarry = zor_angra_reformed
 		
 		religious_clothing_head = 5
 		religious_clothing_priest = 5
 	}
-	zurvanism = {
+	zurvanist = {
 		graphical_culture = persiangfx
 		color = { 222 227 145 }
 		icon = 421
@@ -27931,7 +27931,7 @@ zoroastrian_group = {
 		high_god_name = GOD_ZURVAN
 		
 		parent = zoroastrian
-		reformed = zurvanism_reformed
+		reformed = zurvanist_reformed
 		#reformer_head_of_religion = no #Reformer is NOT a ruler head
 		
 		piety_name = PIETY
@@ -27993,16 +27993,16 @@ zoroastrian_group = {
 		# Persian open-minded (sectarian 0), can be married from the same group or civilization or related ones
 		intermarry = zor_hindu
 		intermarry = zoroastrian
-		intermarry = zurvanism_reformed
+		intermarry = zurvanist_reformed
 
 		# Persian restrictive (sectarian 1), can be married only from the same group or civilization
-		intermarry = mazdakism_reformed
+		intermarry = mazdaki_reformed
 		intermarry = zor_angra_reformed
 		
 		religious_clothing_head = 5
 		religious_clothing_priest = 5
 	}
-	mazdakism = {
+	mazdaki = {
 		graphical_culture = persiangfx
 		color = { 200 50 115 }
 		icon = 418
@@ -28011,8 +28011,8 @@ zoroastrian_group = {
 		high_god_name = GOD_AHURA_MAZDA
 		
 		parent = zoroastrian
-		reformed = mazdakism_reformed
-		#mazdakism_reformed has NO religious head, WAD
+		reformed = mazdaki_reformed
+		#mazdaki_reformed has NO religious head, WAD
 		
 		piety_name = PIETY
 		priest_title = HERBAD
@@ -28248,11 +28248,11 @@ zoroastrian_group = {
 
 		# Persian open-minded (sectarian 0), can be married from the same group or civilization or related ones
 		intermarry = zoroastrian
-		intermarry = zurvanism
-		intermarry = zurvanism_reformed
+		intermarry = zurvanist
+		intermarry = zurvanist_reformed
 
 		# Persian restrictive (sectarian 1), can be married only from the same group or civilization
-		intermarry = mazdakism_reformed
+		intermarry = mazdaki_reformed
 		intermarry = zor_angra_reformed
 		
 		religious_clothing_head = 7

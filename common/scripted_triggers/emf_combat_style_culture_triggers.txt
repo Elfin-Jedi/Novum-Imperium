@@ -44,7 +44,7 @@ emf_cavalry_culture = {
 # Prefers Crossbows over Bows
 emf_crossbow_culture = {
 	OR = {
-		culture_group = chinese_group
+		culture_group = chinese
 		AND = {
 			trigger_if = {
 				limit = { is_ruler = yes }
@@ -114,7 +114,7 @@ emf_scimitar_culture = {
 		culture_group = aramaic
 		culture = andalusian_arabic # Necessary for SWMH only
 		culture_group = dravidian_group
-		culture_group = indoaryan
+		culture_group = indo_aryan_group
 		culture_group = arabic
 		culture_group = north_african
 	}
@@ -131,7 +131,7 @@ emf_prefers_axe_over_mace = {
 		trigger_else = {
 			culture_group = magyar
 		}
-		culture_group = chinese_group
+		culture_group = chinese
 		AND = {
 			culture_group = west_germanic
 			NOT = { culture = english }

@@ -116,7 +116,7 @@ blg_merchant_clothes = {
 		blg_culture_african = yes
 		blg_culture_steppes = yes
 		likes_mesoamericans = yes
-		culture_group = chinese_group
+		culture_group = chinese
 	}
 }
 
@@ -265,7 +265,7 @@ blg_culture_central_germanic = {
 # Chinese adjacent cultures.
 blg_culture_chinese = {
 	OR = {
-		culture_group = chinese_group
+		culture_group = chinese
 		culture = khitan
 		culture = jurchen
 		culture = tangut
@@ -335,7 +335,7 @@ blg_culture_iberian = {
 
 blg_culture_indian = {
 	OR = {
-		culture_group = indoaryan
+		culture_group = indo_aryan_group
 		culture_group = dravidian_group
 		culture_group = austronesian
 	}
@@ -490,7 +490,7 @@ blg_portrait_byzantine = {
 }
 
 blg_portrait_chinese = {
-	portrait_culture_group = chinese_group
+	portrait_culture_group = chinese
 }
 
 blg_portrait_east_slavic = {
@@ -512,7 +512,7 @@ blg_portrait_european = {
 
 blg_portrait_indian = {
 	OR = {
-		portrait_culture_group = indoaryan
+		portrait_culture_group = indo_aryan_group
 		portrait_culture_group = dravidian_group
 		portrait_culture_group = tibetan_group
 		portrait_culture_group = austronesian
@@ -567,7 +567,7 @@ blg_portrait_steppes = {
 	OR = {
 		portrait_culture_group = altaic
 		portrait_culture_group = magyar
-		portrait_culture_group = chinese_group
+		portrait_culture_group = chinese
 		portrait_culture_group = inuit
 	}
 }

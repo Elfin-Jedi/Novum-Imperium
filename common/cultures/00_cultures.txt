@@ -68,7 +68,7 @@ north_germanic = {
 		pat_grm_name_chance = 10
 		mat_grm_name_chance = 50
 		mother_name_chance = 0
-		modifier = norse_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 		seafarer = yes
 	}
@@ -121,7 +121,7 @@ north_germanic = {
 		pat_grm_name_chance = 10
 		mat_grm_name_chance = 50
 		mother_name_chance = 0
-		modifier = swedish_culture_modifier
+		modifier = default_culture_modifier
 		seafarer = yes
 	}
 
@@ -160,7 +160,7 @@ north_germanic = {
 		male_patronym = "sson"
 		female_patronym = "sdatter"
 		prefix = no
-		modifier = norwegian_culture_modifier
+		modifier = default_culture_modifier
 		seafarer = yes
 	}
 
@@ -202,7 +202,7 @@ north_germanic = {
 		male_patronym = "sen"
 		female_patronym = "sdatter"
 		prefix = no
-		modifier = danish_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 80
 		mat_grf_name_chance = 0
@@ -250,7 +250,7 @@ north_germanic = {
 		male_patronym = "sson"
 		female_patronym = "sdatter"
 		prefix = no
-		modifier = norwegian_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 		seafarer = yes
 	}
@@ -316,7 +316,7 @@ north_germanic = {
 		male_patronym = "ssoan"
 		female_patronym = "sdochter"
 		prefix = no
-		modifier = frisian_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 30
 		mat_grf_name_chance = 10
@@ -378,7 +378,7 @@ north_germanic = {
 		pat_grm_name_chance = 10
 		mat_grm_name_chance = 50
 		mother_name_chance = 0
-		modifier = gothic_culture_modifier
+		modifier = default_culture_modifier
 		seafarer = yes
 	}
 	
@@ -543,7 +543,7 @@ central_germanic = {
 		pat_grm_name_chance = 10
 		mat_grm_name_chance = 50
 		mother_name_chance = 5
-		modifier = german_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	low_german = {
@@ -599,7 +599,7 @@ central_germanic = {
 		pat_grm_name_chance = 10
 		mat_grm_name_chance = 50
 		mother_name_chance = 5
-		modifier = german_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	dutch = {
@@ -653,7 +653,7 @@ central_germanic = {
 		pat_grm_name_chance = 20
 		mat_grm_name_chance = 40
 		mother_name_chance = 5
-		modifier = dutch_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	lombard = {
@@ -899,7 +899,7 @@ central_germanic = {
 		pat_grm_name_chance = 20
 		mat_grm_name_chance = 40
 		mother_name_chance = 5
-		modifier = german_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	thuringian = {
@@ -969,7 +969,7 @@ central_germanic = {
 		pat_grm_name_chance = 10
 		mat_grm_name_chance = 50
 		mother_name_chance = 5
-		modifier = german_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	franconian = {
@@ -1039,7 +1039,7 @@ central_germanic = {
 		pat_grm_name_chance = 10
 		mat_grm_name_chance = 50
 		mother_name_chance = 5
-		modifier = german_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	swabian = {
@@ -1109,7 +1109,7 @@ central_germanic = {
 		pat_grm_name_chance = 10
 		mat_grm_name_chance = 50
 		mother_name_chance = 5
-		modifier = german_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	bavarian = {
@@ -1180,7 +1180,7 @@ central_germanic = {
 		pat_grm_name_chance = 10
 		mat_grm_name_chance = 50
 		mother_name_chance = 5
-		modifier = german_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	low_frankish = {
@@ -1266,7 +1266,7 @@ central_germanic = {
 		pat_grm_name_chance = 20
 		mat_grm_name_chance = 40
 		mother_name_chance = 5
-		modifier = dutch_culture_modifier
+		modifier = default_culture_modifier
 	}
 	
 	teutonic = {
@@ -1453,7 +1453,7 @@ west_germanic = {
 		}
 		from_dynasty_prefix = "of "
 		bastard_dynasty_prefix = "Fitz"
-		modifier = english_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 30
 		mat_grf_name_chance = 10
@@ -1541,7 +1541,7 @@ west_germanic = {
 		from_dynasty_suffix = "isc"
 		male_patronym = "ing"
 		prefix = no # The patronym is added as a suffix
-		modifier = saxon_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 30
 		mat_grf_name_chance = 20
@@ -1678,7 +1678,7 @@ west_germanic = {
 		male_patronym = "essunu"
 		female_patronym = "esdohter"
 		prefix = no # The patronym is added as a suffix
-		modifier = anglonorse_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 30
 		mat_grf_name_chance = 20
@@ -1736,7 +1736,7 @@ latin = {
 		}
 		from_dynasty_prefix = "de "
 		grammar_transform = french
-		modifier = frankish_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 40
 		mat_grf_name_chance = 40
@@ -1785,7 +1785,7 @@ latin = {
 			Tiborg_Tiburge Verounica_Veronica Violent_Yolanda
 		}
 		from_dynasty_prefix = "di "
-		modifier = arpitan_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 30
 		mat_grf_name_chance = 10
@@ -1846,7 +1846,7 @@ latin = {
 		pat_grm_name_chance = 20
 		mat_grm_name_chance = 40
 		mother_name_chance = 5
-		modifier = norman_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	outremer = {
@@ -1882,7 +1882,7 @@ latin = {
 		}
 		from_dynasty_prefix = "de "
 		grammar_transform = french
-		modifier = frankish_culture_modifier
+		modifier = default_culture_modifier
 	}
 	
 	dacian = {
@@ -2077,7 +2077,7 @@ iberian = {
 		pat_grm_name_chance = 55
 		mat_grm_name_chance = 15
 		mother_name_chance = 20
-		modifier = basque_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	andalusian_arabic = {
@@ -2115,7 +2115,7 @@ iberian = {
 		prefix = yes
 		dynasty_title_names = yes
 		founder_named_dynasties = yes
-		modifier = andalusian_arabic_culture_modifier
+		modifier = default_culture_modifier
 		pat_grf_name_chance = 60
 		mat_grf_name_chance = 20
 		father_name_chance = 10
@@ -2163,7 +2163,7 @@ iberian = {
 		}
 		from_dynasty_prefix = "de "
 		grammar_transform = french
-		modifier = occitan_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 30
 		mat_grf_name_chance = 10
@@ -2213,7 +2213,7 @@ iberian = {
 		pat_grm_name_chance = 40
 		mat_grm_name_chance = 10
 		mother_name_chance = 40
-		modifier = spanish_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	aragonese = {
@@ -2257,7 +2257,7 @@ iberian = {
 		pat_grm_name_chance = 40
 		mat_grm_name_chance = 10
 		mother_name_chance = 40
-		modifier = spanish_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	catalan = {
@@ -2297,7 +2297,7 @@ iberian = {
 		pat_grm_name_chance = 40
 		mat_grm_name_chance = 25
 		mother_name_chance = 25
-		modifier = catalan_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	galician = {
@@ -2333,7 +2333,7 @@ iberian = {
 		male_patronym = "es"
 		female_patronym = "es"
 		grammar_transform = spanish
-		modifier = galician_culture_modifier
+		modifier = default_culture_modifier
 		pat_grf_name_chance = 55
 		mat_grf_name_chance = 5
 		father_name_chance = 30
@@ -2381,7 +2381,7 @@ iberian = {
 		pat_grm_name_chance = 40
 		mat_grm_name_chance = 10
 		mother_name_chance = 40
-		modifier = spanish_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	portuguese = {
@@ -2417,7 +2417,7 @@ iberian = {
 		male_patronym = "es"
 		female_patronym = "es"
 		grammar_transform = spanish
-		modifier = spanish_culture_modifier
+		modifier = default_culture_modifier
 		pat_grf_name_chance = 55
 		mat_grf_name_chance = 5
 		father_name_chance = 30
@@ -2486,7 +2486,7 @@ byzantine = {
 		mat_grm_name_chance = 50
 		mother_name_chance = 0
 		disinherit_from_blinding = yes
-		modifier = greek_culture_modifier
+		modifier = default_culture_modifier
 	}
 	
 	hellenistic = {
@@ -2861,7 +2861,7 @@ caucasian = {
 		}
 		from_dynasty_prefix = "ve "
 		disinherit_from_blinding = yes
-		modifier = armenian_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	crimean_gothic = {
@@ -2892,7 +2892,7 @@ caucasian = {
 		mat_grm_name_chance = 50
 		mother_name_chance = 0
 		disinherit_from_blinding = yes
-		modifier = greek_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	romanian = {
@@ -2932,7 +2932,109 @@ caucasian = {
 		pat_grm_name_chance = 10
 		mat_grm_name_chance = 40
 		mother_name_chance = 5
-		modifier = romanian_culture_modifier
+		modifier = default_culture_modifier
+	}
+	
+	circassian = {
+		graphical_cultures = { byzantinegfx }
+		color = { 0.0 0.4 0.3 }
+
+		used_for_random = yes
+		allow_in_ruler_designer = yes
+		
+		allow_looting = yes
+		
+		disinherit_from_blinding = yes
+
+		male_names = {
+			Abatiy Aghwrbiy Albekh Albek Albot Alhx'es Alhx'o Alijiqwe Amish Andeimir Andeimirqan Anzawir Anzoriqwe Areqshu Ariqshu Ashemez Axwemghwet Bagh Bale Bat'e Bate Batirbiy Batiy Bedin Bediniqwe Beiqan Beird Beizriqwe Belatse Beletoqwe Beresbiy Beroqwe Beterez Betey Betoqwe Betrez Bile Bilu Biybeird Biybolet Biylhosten Blaneshu Bobe Bolet Bore Bot Bube Bubeird kh'ishiqwe khawis khetsu Dariqwe Dat Dawe Debaghwe Degwzkhey Disheshu Diyde Dizkhin Dox'wshiqwe Dzedzu Dzeghashte Dzepsh Dzeshu Dzidzu Dzu Dzudze Dzune Foqwe Gankate Gatawe Ghwaze Ghwkh'e Ghwkh'el' Ghwkh'eshawe Ghwk'e Ghwk'el' Ghwk'eshawe Ghwsh'ine Ghwsh'ipse Gilax'sten Girandiqwe Hebale Hebashe Hebexw Hebiy Hebizh Hekh'ashe Hegwtsire Hek'ashe Hemash Hemashe Hemat' Hemat'e Hemats Hemit'e Hemt'ut' Henash'e Henashx'we Henax'we Hep'at' Hep'ot' Hepash'e Herebiy Hesane Hesansh Hesc'emaxwe Hescawe Heshir Heshore Het'ox'wshiqwe Het'ut'e Hetal Hetaliy Hetaw Hetezkhiqwe Hetiqe Hetiqwe Hetize Hetshiqwe Hetsile Hetsiqe Hetsiqwe Hetsu Hetu Hewtiy Hezeishe Jankhate Jatawe Jilax'sten Jirandiqwe K'ishiqwe Kawis Ketsu Kitsu Kwrghwoqwe Kwsh Kwshbiy Kwshikw Kwshmez L'if' L'imaxwe Lashe Lawirsen Lemashe Lhepsh Lhosten Lhostenash Lhostenbiy Mamish Mamishe Mamsir Mamsriqwe Mariqwe Mash Mashe Mat'e Mat'u Maxwe Med Men Menshaq Meshiqwe Mile Miqe Misost Mize Mut'e Nal Nalbiy Nali Napts'e Narikh Narik Nart Nartbiy Nartshawe Nartshu Nash Nashx'we Natbiy Natrib Nawirbiy Nawriz Nax'we Nedighe Neghwey Nep'it' Nerzan Nesren Nex'wat'e Nex'wpsh P'at' P'it'u Pagwe Paq Paqe Pariyqe Pashe Psebide Pshibiy Pshimaxwe Pshimide Pshiqan Pshizebiy Qaniqwe Qanshawe Qanshobiy Qashx'we Qeit Qeitiqwe Qex'wn Qideghaze Qilishbiy Qwbatiy Qwlhshiqwe Qwsh Sengeley Senjeley Serebiy Sha Shabiyix'w Shad Shaghir Shaghirbiy Shaps Shaqmen Shat' Shebet Shebetiqwe Sherel'oqwe Shewey Shihbolet Shihim Shiyherbiy Shiys Sholex'w Shoqal Shore Shu Shumaf'e Shumaxwe Shume Shupagwe Shupashe Shuqe Shuwey Sirixw Sosriqwe T'emashe T'igwe T'ut' Takwu Tawqan Teimbolet Teimbore Teimbot Teipsiriqwe Teirkhiqwe Teirkiqwe Teiwvezh Tighwen Tighwenbiy Tiqe Tiqire Tolbiy Tolhesten Toqwe Tsane Tsats Tsatsu Tsiqire Tsu Tsumash Tsut'e Werdeshawe Werdeshiqwe Wezermes Wezirmeg Wezirmej Wezirmes Wezreg Wezrej Wezroqwe Wighwrli Wivzhiqwe X'imish X'wat'e X'wet Xwemghwet Yamdezh Yapenes Yedig Yedij Yelbizdiqwe Yelgiriqwe Yelhix'w Yelhqan Yeljiriqwe Yemish Yeristam Yerzhib Yetekh Yetek Yex'wl'e Yinaliqwe Yinarmes Zawirbiy Zeik'we Zeik'weshu Zeramikw Zhaniqwe Zhanqeit Zhansex'w Zhansiyt Zhanteimir Zhantighwen Zhantiy Zhanx'wet Zhebaghi Zhembolet Zhembore Zhembot Zheriqwe Zhilebiy Zhileghwet Zhiqwe Zhore Ziramikw
+		}
+		female_names = {
+			'Ediyixw Abexw Adiyixw Babine Babire Babishe Babitse Babixw Babliyne Bariyne Bedexw Bitse Bixwe Biybe Bzho Dadiy Daduqan Dadusha Dane Daniyzet Daxe Daxeliyne Daxenaghwe Daxewes Dishe Diyne Dumesare Dune Gwashe Gwasheghagh Gwasheliyne Gwashemash'e Gwashenise Gwashepagwe Gwashexwzh Gweshene Gweshenexw Gwlez Gwne Gwnes Hetsatsa K'wak'we K'wat'e K'watse K'wk'we K'wlat'e K'wlatse K'wle K'wne K'wratse K'wt'e Kwez Kwl'edem Kwle Kwliyzhan Kwne Kwral Lalixw Laliyne Laliytse Lane Lawitse Lixwe Liyne Naghwe Nashx'we Nedaxe Negwresh Nex'daxe Niyne Pagwe Pizhine Qan'ef' Qandishe Qanexw Qants'ik'w Qeral Qerelzhan Qwdas Sase Sat'e Sawise Sete Seteney Susane Tewzhan Tsatse Tsatsune Wes Wile Witse Wizhe X'imsad Xwemey Xwniyne Xwriyret Xwske Xwzh Xwzhpagwe Zaliyne Zhan Zhangwashe Zhanpagwe Zhanqwdas Zhanshir Zhanwes Zhanwise Zhanxwzh Zhanziyle Zheine Zuliy Zuliyzhan
+		}
+
+		from_dynasty_prefix = "of "
+		dynasty_title_names = no
+		founder_named_dynasties = yes
+
+		prefix = no
+	}
+	
+	abasgi = {
+		graphical_cultures = { byzantinegfx }
+		color = { 0.3 0.1 0.5 }
+
+		used_for_random = yes
+		allow_in_ruler_designer = yes
+		
+		disinherit_from_blinding = yes
+
+		modifier = default_culture_modifier 
+
+		male_names = {
+			Abrag Abrskil Abzagu Adamur Adgur Ajyr Alkhas Arutan Astamur Badza Bashnukh Batal Bzhayua Bzou Constantine Dadasch Dadu Dadyn Dago Dala Enver Ezygu Gach Guad Guagu Guatey Gyd Gymzal Hajarat Iatkar Jansukh Kaimet Kamasch Khyrzaman Kuj Lasha Mard Mishw Mkan Mshwagu Pasarbi Rostom Shabat Shabaz Shrin Shwanygua Shwarakh Tatasch Teimur Tsadal Zaabi Zaur Zhabal Zhazhv Zukhur
+		}
+		female_names = {
+			Aala Adu Akhra Amza Amra Antica Antitsa Arikhanda Asida Asha Aza Bashnukh Branyp Characha Dzykut Esma Erysh Feldysh Giza Guakya Guaschkhan Gumala Gunaala Gunda Jabran Jaja Kachich Kana Khatuna Khfaf Khibla Khifa Khimtsa Kuarasa Kuitsa Lamara Maktina Maschiko Mramza Mrana Naala Nutsa Rabigat Sabi Sariya Saunau Schascha Schazina Shakhsuna Sita Tizada Zamana Zamira Zhwabran Zimana
+		}
+
+		from_dynasty_prefix = "of "
+		dynasty_title_names = no
+		founder_named_dynasties = yes
+
+		male_patronym = "apa "
+		female_patronym = "apxa "
+		prefix = no
+	}
+	
+	dagestani= {
+        graphical_cultures = { byzantinegfx }
+        color = { 0.3 0.2 0.1 }
+
+		used_for_random = yes
+		allow_in_ruler_designer = yes
+		
+		allow_looting = yes
+		
+		modifier = default_culture_modifier
+
+        male_names = {
+            Abakh Abki Abuchi Abukhisro Akandi Akhsar Akhsuvar Akilav Aldav Alikhan Alkhas Alkhulav Alup Amir Andiy Apanni Araskhan Aravil Archal Arkhanay Atalav Aulkhan Avadzi Avaz Aydilav Babat Bachanalav Badavi Badr Bakhri Bakur Balasi Bartsu Batalav Batil Batyraz Bayar Baynar Bubakhan Bubakhwa Buday Bukht-Yiisho Bulach Burakhay Burunchi Buzay Chakalav Chakhi Chakhuchi Chalavi Chanakhan Charanav Chartalav Chufan Chupalav Daazi Dakhar Dandur Darkhu Datte Deka Dibirav Esim Fatakh Filan Firuja Gaday Galbets Gamadar Gamzat Ganaz Gaysun Gereykhan Gilav Gili Gubay Gutu Ibaru Ibata Idach Idamar Idavsi Idzi Igalav Imachi Imanav Imrat Isatsay Itulav Izav Jaray Javat Kabaz Kabku Kabtar Kadaran Kadirav Kafar Kalkes Kambal Kamran Kantulav Kartsan Kasu Kasum Katalav Kav Kaysar Khaitam Khangug Khasay Khidir Khiyir Khochbar Khunchar Khuvavili Khuzhan Kikav Kubalav Kunbuta Kurar Kurugli Kurukh Labazan Laku Latsak Latsak Lekvi Lokalav Lukhu Lukman Maaz Makhach Makhanti Malachi Masan Masum Meles Mirdan Mudun Muhammad Murad Mutuk Muzar Nakhvar Nukh Nutsal Padarav Pakan Pakhru Pirvili Ramiz Razak Razakhan Rizvan Sagid Sagitav Sakhrat Sali Samad Samur Saratan Sefer Shahbal Shakvi Shamil Shamsun Sharvili Shergir Shikhamir Shikhbuba Shirinbek Shuayb Shungar Sirkhav Sirtan Sivli Sukhan Surakat Surkhay Tokku Tsakhay Tsarukhwa Tsavar Tsayvili Tuchalav Tunav Turarav Umal Urnayr Ustarkhan Uwais Vachagan Vakhiz Valezi Vanat Vanati Varachan Varis Vaysul Velikhan Vesagen Vikama Visav Yagadin Yahya Yaraghi Zagashtuk Zaidilav Zaikhav Zakilav Zaku Zalkipri Zamay Zantu Zarba Zavzan Zaydarkhan Zazav Zhidizhalav Zinur Zugum
+        }
+        female_names = {
+           Abazi Abecho Abidat Absirat Adabi Aday Adishirin Ajay Ajaybika Akhsarat Akush Alvana Amanat Aminat Anbiya Anisat Aniyat Antiya Aram Arats Arzi Asawat Ashera Aybika Ayshazay Ayzanat Azarat Azay Bachat Bade Badrizhat Bagchat Bakay Bakhtay Bakhtina Bakis Balakyz Balkis Banavar Besen Bicha Biche Bika Bikey Chakar Chasada Chava Chiger Chiragh Dadish Daray Dati Daygan Didekiz Dirvan Ekver Elesa Ellera Elmira Esbat Gachi Ganzay Gavkhar Gavkharat Ghazu Giray Gitinay Gukhar Gulisat Gulnara Gumay Gunzari Guriyat Gurzi Gusunuy Guzunkhay Hava Iaynat Idayat Iera Ilitay Inji Inni Isbagi Ishiba Izaget Izdeg Izra Jaina Jariyat Javaghi Javaghir Javzat Jiger Kachar Kakhay Kalamshat Kami Kanicha Kaniyat Kavkaba Kavsarat Kelimat Khaidat Khalisat Khanicha Khantay Khanzada Kharu Khatumi Kholaba Khumay Kisran Kurak Kurzhan Kusum Lacha Lavganiyat Lekiyat Luizat Madina Maira Maisa Manay Mani Maral Mariyat Marta Mesedu Micha Miki Mili Mina Minaver Misay Misey Miyasat Munira Nabat Naghiyat Nani Nasifat Nasiyat Neki Ninu Niti Niyar Nugetey Nuraniyat Nuray Nuraynat Nurkhatun Nursanat Nutsay Onko Pakhay Parikhalun Parizat Pavkhan Pazu Perizada Pirdada Pirdavs Puray Rabiyat Raisat Ravzat Rusaydat Ruzi Saadat Sabdat Sada Sadiyat Saikha Saki Sakinat Salingur Sana Sanifat Sarat Sato Savadat Savdiyat Sayakhanum Selimat Sevda Shagun Shamay Shirin Sien Sivli Suykum Taam Tamal Tamari Tavar Tavat Tavus Tsayri Tsivadz Tsukver Tukhay Tuti Unukh Uzdi Vakhash Vati Vatu Vava Vazipat Vertsi Yarbi Yariya Yarmina Yatar Yaver Zabida Zabirat Zageba Zaguzhat Zalkhay Zanti Zarifa Zarifat Zariyat Zatu Zavjat Zavparat Zazabika Zhavgar Zhaynimat Zhuydukh Zulkhu Zuri
+        }
+
+		from_dynasty_prefix = "of "
+		dynasty_title_names = no
+		founder_named_dynasties = yes
+
+		prefix = no
+    }
+
+	nakh = {
+		graphical_cultures = { byzantinegfx }
+		color = { 0.8 0.4 0.8 }
+
+		used_for_random = yes
+		allow_in_ruler_designer = yes
+		
+		allow_looting = yes
+		
+		modifier = default_culture_modifier
+
+		male_names = {
+			Adam Adlan Akbolat Alik Alkhazur Alu Alvi Anzor Ansar Apti Arbi  Arzu Asmart Asu Aydamir Ayndi Badruddin Baysangur Beslan Bibulat Bislan Bisolta Bolat Borz Boysaghar Bula Bulat Buvaysar Chaborz Dalkhan Daud Deni Dokka Doku Dugurkhan Duqvakha Durgali Edil Elberd Eldar Elimbi Elimkhan Elmurza Emi Eriskhan Fayzul Gada Gayr Idris Ilman Ilyas Imran Isa Kagir Kakhir Kameri Kazbek Keram Kerimsolta Khadzhimurat Khamzat Kharon Khasbulat Khasurt Khatu Khavazh Khaydarbi Khizir Khoza Khumid Kunta Kuyra Lecha Lechi Loma Makharbi Makkal Maskhud Mayra Mayrsolt Mirza Movladi Movlid Movsar Mukharbek Mumadi Murad Murvan Nasuh Naurbi Nazhmuddin Nazyr Nezh Nurali Nurdi Olkhazar Omar Ortsa Osman Payzulla Rakhim Rizvan Rustam Saipudi Salavdi Salikh Shamhan Shamsuddi Shapa Sharani Sherip Sirazhdi Soib Solsa Soltamurad Soltamurd Supyan Surkho Sutarbi Tapa Tasho Tovsolta Turpal Umalt Usam Ushurma Usman Vakha Vakhita Valid Vezirkhan Visa Visangiri Visiyta Yakhya Yandar Yandarbi Yunadi Yunus Zaur Zayndi Ziyardi Ziyauddi Zovra Zubair Zurab
+			}
+		female_names = {
+			Albina Alpatu Amina Aminat Asma Asya Asyat Aybika Aymani Ayna Aysha Ayshat Ayzan Ayza Aza Azni Batta Belita Bikatu Bilqiz Birlant Bitsi Busana Cheqag Chovka Dara Dagman Dagmara Deshi Deti Duqyaha Elbika Elina Elisa Eliza Elmira Eset Esila Ezinet Indira Izaket Kameta Kamisa Kaypa Kesira Kesirat Khazani Khazbika Kheda Khiazni Kusama Lala Lalita Lamara Larisa Layla Lida Liza Luiza  Makka Malkan Malkh Malkhazni Maret Marina Marisa Markha Maryam Marzet Marzhan Marziyet Milana Nura Nurbika Nurishat Nurset Nurzhan Petimat Polla Qoqa Raisa Rovzan Roza Rubati Ruket Rukiyat Ruman Rumisa Ruvayda Sakinat Satsita Seda   Sepi Sepiyat Shahidat Shahsuvar Shovda Sieda Sovbika Taisa Tamara Tamila Taus Toita Tumisha Valida Yahita Yakha Yeza Yisa Yisiyta Zakiya Zakiyat Zalina Zama Zamira Zara Zarema Zargan Zarina Zarita Zaynap Zeliha Zezag Zezig Zulay Zulikha
+			}		
+		
+		from_dynasty_prefix = "of "
+		dynasty_title_names = no
+		founder_named_dynasties = yes
+
+		prefix = no
 	}
 
 	alan = {
@@ -2958,7 +3060,7 @@ caucasian = {
 		female_patronym = "y chyzg"
 		prefix = no
 		disinherit_from_blinding = yes
-		modifier = alan_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 	}
 
@@ -2982,7 +3084,7 @@ caucasian = {
    		male_patronym = "gar "
     		female_patronym = "xiner "
 		disinherit_from_blinding = yes
-		modifier = armenian_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	caucasian_avar = {
@@ -3008,7 +3110,7 @@ caucasian = {
 		female_patronym = "y chyzg"
 		prefix = no
 		disinherit_from_blinding = yes
-		modifier = alan_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	arberian = {
@@ -3028,7 +3130,7 @@ caucasian = {
 		}
 		from_dynasty_prefix = "e "
 		disinherit_from_blinding = yes
-		modifier = albanian_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	georgian = {
@@ -3055,7 +3157,7 @@ caucasian = {
 		female_patronym = "shvili"
 		prefix = no
 		disinherit_from_blinding = yes
-		modifier = georgian_culture_modifier
+		modifier = default_culture_modifier
 	}
 	
 	aghbanian = {
@@ -3122,7 +3224,7 @@ celtic = {
 		male_patronym = "mac "
 		female_patronym = "nic "
 		prefix = yes
-		modifier = irish_culture_modifier
+		modifier = default_culture_modifier
 		pat_grf_name_chance = 30
 		mat_grf_name_chance = 15
 		father_name_chance = 5
@@ -3166,7 +3268,7 @@ celtic = {
 		pat_grf_name_chance = 30
 		mat_grf_name_chance = 15
 		father_name_chance = 5
-		modifier = scotish_culture_modifier
+		modifier = default_culture_modifier
 		pat_grm_name_chance = 30
 		mat_grm_name_chance = 15
 		mother_name_chance = 10
@@ -3238,7 +3340,7 @@ celtic = {
 		mat_grm_name_chance = 30
 		mother_name_chance = 0
 		dukes_called_kings = yes
-		modifier = welsh_culture_modifier
+		modifier = default_culture_modifier
 		tribal_name = TRIBAL_NAME_PROV_CLAN
 	}
 
@@ -3274,7 +3376,7 @@ celtic = {
 		from_dynasty_prefix = "de "
 		male_patronym = "ap "
 		prefix = yes
-		modifier = breton_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 80
 		mat_grf_name_chance = 0
@@ -3319,7 +3421,7 @@ celtic = {
 		female_patronym = "ferch "
 		prefix = yes
 		dukes_called_kings = yes
-		modifier = welsh_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 80
 		mat_grf_name_chance = 0
@@ -3363,7 +3465,7 @@ celtic = {
 		male_patronym = "mab "
 		female_patronym = "verch "
 		prefix = yes
-		modifier = breton_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 80
 		mat_grf_name_chance = 0
@@ -3408,7 +3510,7 @@ celtic = {
 		male_patronym = "Mac"
 		female_patronym = "Nic "
 		prefix = yes
-		modifier = anglonorse_culture_modifier
+		modifier = default_culture_modifier
 		pat_grf_name_chance = 30
 		mat_grf_name_chance = 15
 		father_name_chance = 5
@@ -3419,7 +3521,7 @@ celtic = {
 		seafarer = yes
 	}
 
-		brython = {
+	brython = {
 		graphical_cultures = { gaelicgfx celticgfx }
 		
 		color = { 0.1 0.65 0.05 }
@@ -3581,7 +3683,7 @@ finno_ugric = {
 		male_patronym = "npoika"
 		female_patronym = "ntytär"
 		prefix = no # The patronym is added as a suffix
-		modifier = finish_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	karelian = {
@@ -3600,7 +3702,7 @@ finno_ugric = {
 		male_patronym = "npoigu"
 		female_patronym = "ntytär"
 		prefix = no # The patronym is added as a suffix
-		modifier = finish_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	vepsian = {
@@ -3627,7 +3729,7 @@ finno_ugric = {
 		male_patronym = "enpoig "
 		female_patronym = "entütär"
 		prefix = no # The patronym is added as a suffix
-		modifier = finish_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	mari = {
@@ -3646,7 +3748,7 @@ finno_ugric = {
 			Märki Sayviy Okutiy
 		}
 		from_dynasty_prefix = "of "
-		modifier = finish_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	lappish = {
@@ -3696,7 +3798,7 @@ finno_ugric = {
 		male_patronym = "poika"
 		female_patronym = "tytär"
 		prefix = no # The patronym is added as a suffix
-		modifier = finish_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 		seafarer = yes
 	}
@@ -3721,7 +3823,7 @@ finno_ugric = {
 			Viire Vilja Virge Virve Värvu Oie Onne Ülane
 		}
 		from_dynasty_prefix = "of "
-		modifier = baltic_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 		seafarer = yes
 	}
@@ -3738,7 +3840,7 @@ finno_ugric = {
 			Raili Vanema Julgi Ki
 		}
 		from_dynasty_prefix = "of "
-		modifier = baltic_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 	}
 
@@ -3758,7 +3860,7 @@ finno_ugric = {
 		male_patronym = "lön"
 		female_patronym = "lön"
 		prefix = no
-		modifier = finish_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	khanty = {
@@ -3834,7 +3936,7 @@ finno_ugric = {
 		male_patronym = "poika"
 		female_patronym = "tytär"
 		founder_named_dynasties = yes
-		modifier = finish_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	mordvin = {
@@ -3859,7 +3961,7 @@ finno_ugric = {
 		}
 		from_dynasty_prefix = "of "
 		founder_named_dynasties = yes
-		modifier = finish_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 	}
 	
@@ -3927,7 +4029,7 @@ baltic = {
 			Meldra Modra Selga Teiksma Vizbule Zaiga
 		}
 		from_dynasty_prefix = "no "
-		modifier = baltic_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 	}
 
@@ -3958,7 +4060,7 @@ baltic = {
 			Žvoruna
 		}
 		from_dynasty_prefix = "iš "
-		modifier = lithuanian_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 	}
 
@@ -4011,9 +4113,146 @@ baltic = {
 			Vikele
 		}
 		from_dynasty_prefix = "is "
-		modifier = baltic_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 	}
+}
+
+yukaghir_group  = {
+	alternate_start = { NOT = { has_alternate_start_parameter = { key = special_culture value = animal_world } } }
+	graphical_cultures = { mongolgfx muslimgfx }
+	
+	yukaghir = {
+		graphical_cultures = { northeastasiangfx mongolgfx muslimgfx }
+
+		color = { 0.2 0.9 0.6 }
+		
+		male_names = {
+			Abagha Achigh Aguchu Ajai Ajinai Akhutai Alagh Alchi Alchidai Altan Ambaghai Arkhai Arasen Babur Badai Bagaridai Bala Barghujin Bartan Batu Bedugun Begter Belgutei
+			Belgunutei Bilge Berke Bodonchar Bogen Bogorchu Bolkhadar Borjigidai Boroghul Bughu Bugidai Bugunutei Bujeg Bukha Bulughan Buri Burkhan Burundai Chagatai Chaghagan Chanai Chigu
+			Chidukhul Chilagun Chiledu Chormakhan Chulgetei Dagun Daritai Dayir Dodai Duua Eljigedei Ghazan Ghunan Guchu Gughlug Guyug Harghasun Horkhudagh Hulegu Husun Inalchi Inancha Iturgen 
+			Jajiradai Jamugha Jebe Jochi Jurchedei Khabichi Khachi Khachigun Khadagh Khagatai Khaidu Khal Khorchi Khorilartai Khubilai Khudu Khutula Khuyildar Kogsegu Kokochu Megetu Megujin
+			Menggei Mongke Morokha Munglig Nakhu Narin Nayaga Nogai Odchigin Ogodei Okhotur Oljaitu Oronartai Shiraghul Shirgugetu Subetei Suyiketu Taghai Tamachi Targhutai Temuge Temujin Temur
+			Todogen Toghoril Toghtoga Tokhtamis Tolui Torolchi Tumen Uighurtai Ukhuna Usun Yedi Yegu Yeke Yesugei Yesunge Yokhunan Kadan Godan
+		}
+		female_names = {
+			Al-Alta Alan Altani Borte Botokhui Bulughan Chabi Chagur Chakha Checheyigen Chotan Doregene Doquz Ebegei Gurbesu Hogelun Holuikhan Ibakha Khadagan Khogaghchin Khojin Khorijin Khugurchin Khulan Khutulun Mandukhai Mongoljin Nomolun Oghul Orbei Sokhatai Sorkhaghatani Tekine Temulun Töregene Yesugun Yesui Hoelun
+		}
+
+		prefix = no
+		modifier = default_culture_modifier
+	}
+}
+
+far_north_east = {
+	alternate_start = { NOT = { has_alternate_start_parameter = { key = special_culture value = animal_world } } }
+	graphical_cultures = { mongolgfx muslimgfx }
+	
+	itelmen = {
+		graphical_cultures = { northeastasiangfx mongolgfx muslimgfx }
+
+		color = { 0.8 0.0 0.3 }
+		
+		male_names = {
+		Omryn Aleleke Alyapenryn Atch-ytagyn Bakat-gyrgyn Cheyv-ynkev Giv-ynkeev Gyrgol-gyrgyn Keli Kmol Korave Korav'ye Lelekay Leletke Memyl Nute-nli
+		Omr-ytagyn Ropt-yn Ropt-yna Rultk-ynkev Rytgev Rytkheu Tenevil Tygrynkeev Tyne-nkey Tyna-gyrgyn Umky Vykvan Vyrgyrgylele Igiklav Kamak Kaynyn
+		}
+		female_names = {
+		Anka-ny	Bakat-vaal Cheyv-yne Chonya-na Galgan-nga Gitingev Gitinnevyt Gyronav Iv-nevyt Kymytval Okko-n Tekki
+		Omr-yna Penr-yna Pychik Rultk-ynevyt Rul-tyne Tinyl Tyna-tval Tyne-nny Vinevyt Vykv-yna Cheyvyne Ekav Lektyne
+		}
+
+		prefix = no
+		modifier = default_culture_modifier
+	}
+	
+	chukchi = {
+		graphical_cultures = { northeastasiangfx mongolgfx muslimgfx }
+
+		color = { 0.3 0.0 0.6 }
+		
+		male_names = {
+		Omryn Aleleke Alyapenryn Atch-ytagyn Bakat-gyrgyn Cheyv-ynkev Giv-ynkeev Gyrgol-gyrgyn Keli Kmol Korave Korav'ye Lelekay Leletke Memyl Nute-nli
+		Omr-ytagyn Ropt-yn Ropt-yna Rultk-ynkev Rytgev Rytkheu Tenevil Tygrynkeev Tyne-nkey Tyna-gyrgyn Umky Vykvan Vyrgyrgylele Igiklav Kamak Kaynyn
+		}
+		female_names = {
+		Anka-ny	Bakat-vaal Cheyv-yne Chonya-na Galgan-nga Gitingev Gitinnevyt Gyronav Iv-nevyt Kymytval Okko-n Tekki
+		Omr-yna Penr-yna Pychik Rultk-ynevyt Rul-tyne Tinyl Tyna-tval Tyne-nny Vinevyt Vykv-yna Cheyvyne Ekav Lektyne
+		}
+
+		prefix = no
+		modifier = default_culture_modifier
+	}
+	
+	koryak = {
+		graphical_cultures = { northeastasiangfx mongolgfx muslimgfx }
+
+		color = { 0.6 0.2 0.8 }
+		
+		male_names = {
+		Omryn Aleleke Alyapenryn Atch-ytagyn Bakat-gyrgyn Cheyv-ynkev Giv-ynkeev Gyrgol-gyrgyn Keli Kmol Korave Korav'ye Lelekay Leletke Memyl Nute-nli
+		Omr-ytagyn Ropt-yn Ropt-yna Rultk-ynkev Rytgev Rytkheu Tenevil Tygrynkeev Tyne-nkey Tyna-gyrgyn Umky Vykvan Vyrgyrgylele Igiklav Kamak Kaynyn
+		}
+		female_names = {
+		Anka-ny	Bakat-vaal Cheyv-yne Chonya-na Galgan-nga Gitingev Gitinnevyt Gyronav Iv-nevyt Kymytval Okko-n Tekki
+		Omr-yna Penr-yna Pychik Rultk-ynevyt Rul-tyne Tinyl Tyna-tval Tyne-nny Vinevyt Vykv-yna Cheyvyne Ekav Lektyne
+		}
+		
+		prefix = no
+		modifier = default_culture_modifier
+	}
+	
+	ainu = {
+		graphical_cultures = { northeastasiangfx ainugfx }
+		dynasty_name_first = yes
+
+		color = { 0.3 0.2 0.6 }
+		
+		male_names = {
+			Ainiji Ainurakkur Airipunke Aukash Autoyo Aetomo Aehirica Akaraka Akishipe Aku Akosh Akorukamu Ashiriaino Atsukuru Assake Atoi Abakaainu Abeshiyoshi Amohoro Ayashi Arakemaushi Arimakina
+		Antaino Anteponi Annen Ieikeu Ikatobefu Ikasmatuk Ikasesu Ikinunba Ikutomo Ikuhe Ikeskoaino Ikoefu Ikonroshike Isonashi Ishonnoashi Itakire Itakunippu Itakereku Itarise Icayankemu Inaworan
+		Ipetaako Ihokai Imakuma Irusaaino Irochimain Usamudare Utarian Utereki Unata Uparette Ufukiri Unmashi Ekashike Ekashitomu Ekonumuke Etamairu Etenna Enotoku Ehiteki Ehechikari Eraraguru Otaushi Obefuki
+		Kaikauku Kashicari Katsukura Kanahe Kanihi Kanekirauroko Kanemono Kabu Kaputain Kamuikocha Kamuima Kamokutain Garugaru Kantaku Kannariki Kannuku Kiihon Kiuchi Kikikoro Kikeninba Kishishika
+		Kinekurain Kimurakai Kimesan Kiriho Kirorikata Kuikoro Kushiyunte Kuchigori Kutekira Kubuni Kumakain Kuwakaaino Kunne Getou Kemurutoi Kereba Koarofuni Kokashi Koshipa Koshamain Kotaka Kotanchire
+		Kotanramu Koteka Koton Kobui Kohechiyahe Komonta Korappu Koreshipi Gonpa Saabuni Sakai Saketata Sakechin Sakeroku Satoruki Sanukuno Sahapo Saruko Zareama Sankitsu Sangea Sankeshiainu Santokuno
+		Sanbe Sanroka Shianu Shiipirasa Shiukeri Shiurumi Shiecaca Shikahotsute Shikishima Shikuru Shikotsuaino Shikorebun Shishiya Shitane Shitente Shitokinra Shitona Shitomushi Shinureki Shinomi Shihirasa
+		Shihori Shiyatanoi Shiyareshiko Shanri Shuttegan Shimano Shiyokima Shoya Shirakeshi Shirapeno Shiranbe Shiriu Shirikin Shirunka Shirekuainu Shirosan Shiwoi Shinta Shinmekuru Seuri Sekaya Senekkuru
+		Senrumashi Sentoki Sourai Sokutori Soyaka Sorakaaino
+		Taeama Takarumoshi Takeani Tataru Tarikona Chiusaku Chikafure Chikurake Chibie Cukomoire Couri Tsukitaaino Tsufuri Tenu Tekorupa Tetatori Tenpute Toafuke Toiyare Touinkara Toubi Tokateankuru
+		Tokutoru Tosaranku Toshiyakui Toshiroku Tonokushain Topato Tobirasu Topenmonuku Tomikano Tomimaka Tomoramu Toriwa Torurian Toretsui Tonbi Naifutaashi Niihete Nishikomatsuke Nishirakeain
+		Nita Nibiri Nipuse Nukanoto Nukuri Nukeran Nushiyue Nubohoainu Netokahe Noita Nochikusa Nohorika Hausanakuru Haunte Hakere Hajika Hasoran Happira Hamon Haruka Barufure Harou Hankuru Hanrokute
+		Hiseriko Bitaka Buefufu Bufushi Fuyare Heishuku Bekenishi Hecaranke Henauke Pepenreku Houfui Honomain Poroka Hontanuki Hontomo Maukaaino Makashimo Makiri Mashima Mataechi Matuwo Mitonma Musakain
+		Munetoku Mungege Moima Moshiranke Monokute Montereke Monshu Yaisaki Yaitotori Yaeshitoma Yakushu Yase Yamaru Yayashi Yankeaino Yuware Yokarumo Raase Ratafuku Ramui Ramukakushi Ranketoku Rikisan
+		Rikushitaku Riken Rurishibi Reatai Rekisani Rokusun Roko Wajima Woikama Woshiyoma Wotashi Wotobe Wohande Wohiruka Wohon Womoaino Wontaraku
+		}
+		female_names = {
+			Aikarishima Asamu Ashiri Ashirirera Atano Anikatan Ane Afaka Apeyanke Arikosan Arikore Awanunke Antaman Antoreku Ianpanu Iunte Ietsumachi Ikashire Ikarikinra
+			Ikuramu Igokunu Ishiropa Itankisanke Inauesanmatsu Inishihare Ipihhine Ipuinematsu Ipokash Imarika Imekanu Iyamaka Irirui Irukamatsu Uinteki Ukaitekan Ukaechiu
+			Usaatsu Usamatte Ushikima Ushimonka Ushintaroku Utekare Unarupeku Unukaru Uhohomatsu Urakunte Uratokka Ureshipa Ueashi Unkatoe Earisange Esan Esannoa Etamuketomu
+			Etenoa Enenuaku Ehetoren Epewonu Ehoro Emuntomu Eyamatsu Otamachi Oroatsu Kaate Kaurankematto Kazukuchi Kakkematsu Kafuninha Kariha Kareappu Kannari Kinachiyari 
+			Kiri Gutemanma Kura Kuwaesan Kekere Koetoka Kotannu Kotomandeku Kopoanu Korafunima Konbekkino Saishiu Sakuan Satamo Sanure Sarean Sankuma Shiarumina Shishiraima
+			Shinuton Shimitsu Shimoi Shutesan Siyuyan Shottokitae Shirunke Shintamachi Suru Seinunushi Setakore Sokonte Soreuku Taeki Taneama Taneranke Tapuki Tamanushite
+			Tare Cekamu Chikamaha Chishinue Chinita Canrura Chiruso Tekatte Tekianno Tekeayo Teshike Tekkanno Toushuma Toetamatsu Tokure Toshise Tomematsu Natoku Nishitankote
+			Nihekoshima Nuehokema Numate Nunnui Notomatsu Pasante Haru Harutoki Biiranke Piraraki Fuchisse Fucchi Furame Perasanke Horikure Ponposhita Ponopere Ponma Matsuneshita
+			Mimitara Mukkoran Menokoshirima Mouru Monusappu Monoanno Morewashi Yaetoshiyu Yaenunke Yaeto Yoki Yokesan Ramutokka Reanu Rekotan Retonu Reheisamu Wokonutsu Woshiroma
+			
+		}
+
+		dynasty_title_names = yes		
+		
+		prefix = no
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 0
+		mat_grf_name_chance = 0
+		father_name_chance = 0
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 0
+		mat_grm_name_chance = 0
+		mother_name_chance = 0
+
+		modifier = default_culture_modifier
+	}	
 }
 
 altaic = {
@@ -4054,7 +4293,7 @@ altaic = {
 		prefix = no
 		dynasty_title_names = yes
 		founder_named_dynasties = yes
-		modifier = turkish_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 	}
 
@@ -4092,7 +4331,7 @@ altaic = {
 		prefix = no
 		dynasty_title_names = yes
 		founder_named_dynasties = yes
-		modifier = turkish_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 	}
 
@@ -4129,7 +4368,7 @@ altaic = {
 		male_patronym = "oglu"
 		prefix = no
 		founder_named_dynasties = yes
-		modifier = turkish_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 	}
 	
@@ -4170,7 +4409,7 @@ altaic = {
 		male_patronym = "zade"
 		female_patronym = "dokht"
 		prefix = no
-		modifier = persian_culture_modifier
+		modifier = default_culture_modifier
 	}
 	
 	mongol = {
@@ -4224,7 +4463,7 @@ altaic = {
 			Yangaya Yelmish Yesui Yesulun Yesunjin Yürek
 		}
 		founder_named_dynasties = yes
-		modifier = mongol_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 	}
 
@@ -4246,7 +4485,7 @@ altaic = {
 		male_patronym = "oglu"
 		prefix = no
 		founder_named_dynasties = yes
-		modifier = turkish_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 	}
 
@@ -4267,7 +4506,7 @@ altaic = {
 		}
 		from_dynasty_prefix = "of "
 		founder_named_dynasties = yes
-		modifier = tatar_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 	}
 
@@ -4291,7 +4530,7 @@ altaic = {
 			Yildiz Yartilek Xatun
 		}
 		founder_named_dynasties = yes
-		modifier = tatar_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 	}
 	
@@ -4322,7 +4561,7 @@ altaic = {
 		}
 		parent = khazar
 		founder_named_dynasties = yes
-		modifier = tatar_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 	}
 
@@ -4349,7 +4588,7 @@ altaic = {
 			Sarantay Sarä Sarica Sarikel Sati Savaçka Savkëlti Savtilek Savilay_Sevilay Savintik_Sevindik Shurkka
 			Sibel Sirin Sirma Songul Tähtani Tekçe Tura Umay Usunbike Yasar Yeldem Yildiz Yartilek
 		}
-		modifier = bolghar_culture_modifier
+		modifier = default_culture_modifier
 		founder_named_dynasties = yes
 		allow_looting = yes
 		male_patronym = "avly "
@@ -4392,7 +4631,7 @@ altaic = {
 		}
 		from_dynasty_prefix = "of "
 		founder_named_dynasties = yes
-		modifier = turkish_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 	}
 
@@ -4415,7 +4654,7 @@ altaic = {
 		prefix = no
 		dynasty_title_names = yes
 		founder_named_dynasties = yes
-		modifier = turkish_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 	}
 
@@ -4443,8 +4682,37 @@ altaic = {
 		female_patronym = "y chyzg"
 		prefix = no
 		disinherit_from_blinding = yes
-		modifier = alan_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
+	}
+	
+	yeniseian = {
+		graphical_cultures = { cumangfx turkishgfx }
+		secondary_event_pictures = bedouin_arabic
+		
+		color = { 0.50 1 0.1 }
+
+		male_names = {
+			Çilbu Aepak Asalup Asep Atrak Bönek Bachman Begluk Blush Bonyak Borç Eldeçyuk Etrek Girgen Gzi Itlar Ituk Könçek Kobyak Kopti Kotyan Koza
+			Kozel Kubasar Kuntuvdi Kutan Pulad Saru Sevenç Sirçan Sokal Sotan Sugr Törtogul Togli Tolun Tugor Uzluk Uzur
+			Manas Semetei Seitek Barsbeg Kokotoy Jaglaqar Tardush
+		}
+		female_names = {
+			Begayim Jibek
+			Çiçek Çilen Çiltanesi Özgul Özlem Akgul Asli Ayasun Ayten Bozçin Dilek Esin Gulçiçek Gulay Gunduz Gundes Gunes Ilkay Ipek Ipekel Irge
+			Karacik Mala Mutlu Peksen Samur Sarica Sati Sevilay Sevindik Sibel Sirin Sirma Songul Tekçe Tura Umay Usunbike Yasar Yeldem Yildiz
+		}
+		
+		from_dynasty_prefix = "of "
+		founder_named_dynasties = yes
+		
+		male_patronym = " uulu"
+		female_patronym = " kyzy"
+		prefix = no # The patronym is added as a suffix
+
+		allow_looting = yes
+
+		modifier = default_culture_modifier
 	}
 
 	kirghiz = {
@@ -4467,7 +4735,7 @@ altaic = {
 		prefix = no
 		#dynasty_title_names = yes
 		#founder_named_dynasties = yes
-		modifier = turkish_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 	}
 
@@ -4491,7 +4759,7 @@ altaic = {
 		prefix = no
 		#dynasty_title_names = yes
 		#founder_named_dynasties = yes
-		modifier = turkish_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 	}
 
@@ -4522,7 +4790,7 @@ altaic = {
 		male_patronym = "avly "
 		female_patronym = "khiry"
 		prefix = no # The patronym is added as a suffix
-		modifier = bolghar_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 	}
 	
@@ -4815,877 +5083,60 @@ altaic = {
 
 		modifier = default_culture_modifier
 	}
-}
-
-bantu = {
-	graphical_cultures = { africangfx muslimgfx }
 	
-	amaravi = {
-		graphical_cultures = { westafricangfx }
+	evenk = {
+		graphical_cultures = { mongolgfx muslimgfx }
+		secondary_event_pictures = bedouin_arabic
 		
-		color = { 0.3 0.45 0.05 }
+		horde = yes
 		
-		male_names = {
-			Alinafe
-			Chikondi Chimwemwe Chinsinsi
-			Fatsani
-			Kondwani Kumbukani
-			Mabvuto Madalisto Mayamiko Mphatso
-			Phunziro Pilirani
-			Takondwa Talandira Thokozani Tiyamike
-			Yamikani
-		}
-		female_names = {
-			Alinafe
-			Chikondi Chimwemwe Chinsinsi
-			Fatsani
-			Kondwani Kumbukani
-			Mabvuto Madalisto Mayamiko Mphatso
-			Phunziro Pilirani
-			Takondwa Talandira Thokozani Tiyamike
-			Yamikani
-		}
-
-		modifier = default_culture_modifier
-	}
-	
-	ambundu = {
-		graphical_cultures = { westafricangfx }
-		
-		color = { 0.77 0.21 0.04 }
-		
-		male_names = {
-			#venda
-			Mafhudu Muzalo Nkhangweleni Rolivhuwa Thikhathali Thilivhali Tshifhiwa Zwanga
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Ksayhu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Ntokoto			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		female_names = {
-			#venda
-			Elelwani Mufunwa Washu
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Khathu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Dyondzeka Khensani Lelani Xongi			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		
-		modifier = default_culture_modifier
-	}
-	
-	bemba = {
-		graphical_cultures = { westafricangfx }
-		
-		color = { 0.23 0.55 0.12 }
-		
-		male_names = {
-			#venda
-			Mafhudu Muzalo Nkhangweleni Rolivhuwa Thikhathali Thilivhali Tshifhiwa Zwanga
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Ksayhu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Ntokoto			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		female_names = {
-			#venda
-			Elelwani Mufunwa Washu
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Khathu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Dyondzeka Khensani Lelani Xongi			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		
-		modifier = default_culture_modifier
-	}
-	
-	chokwe = {
-		graphical_cultures = { westafricangfx }
-		
-		color = { 0.25 0.25 0.5 }
-		
-		male_names = {
-			#venda
-			Mafhudu Muzalo Nkhangweleni Rolivhuwa Thikhathali Thilivhali Tshifhiwa Zwanga
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Ksayhu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Ntokoto			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		female_names = {
-			#venda
-			Elelwani Mufunwa Washu
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Khathu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Dyondzeka Khensani Lelani Xongi			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		
-		modifier = default_culture_modifier
-	}
-	
-	hutu = {
-		graphical_cultures = { westafricangfx }
-		
-		color = { 0.5 0.3 0.4 }
-		
-		male_names = {
-			Abubakari Akoi Alayaman Ali Ali-Fay
-			Badä Bamari Bannu Bassi Birama Bisi Biyu Bonga 
-			Cisse 
-			Dankaran Demba Daoud_David Diara Düru
-			Fädazu Faga-Laye Fatta Fuluku
-			Gane Gao
-			Kabayo Kalabi Kanafa Kambine Kassa Kaya Kayna Kinkin Kukuray Kusoy
-			Ishaq_Isaac 
-			Lahiltoul 
-			M'Bali Manding-Bory Maghan Majan Mamadi Mamoudou Mari-Djata Musa 
-			Nintasanay
-			Ouali Ouati
-			Reidja 
-			Sakoura Salman_Solomon Sandaki Soumaba Soumaoro Soundiata Sulayman_Solomon 
-			Takoi Tib Tunka 
-			Yama Yasiboy
-			Zakoi Zenku
-		}
-		female_names = {
-			Adja Alima Amita Aoua Aminata Aichata Aissata
-			Barakissa Bintou Deye Djeneba Djenly Djire
-			Fadima Fatim Fatoumata
-			Halima Hawa
-			Ina
-			Kadi Kilia Kolonkan 
-			Lorane 
-			Mariam_Maria Namandjé 
-			Nafissa Namiss Nana
-			Safiatou Salimata Sassouma Sidibé Siya Sogolon 
-			Tekhaye
-			Youma
-			Zeïnab
-		}
-		
-		modifier = default_culture_modifier
-	}
-	
-	herero = {
-		graphical_cultures = { westafricangfx }
-		
-		color = { 0.5 0.1 0.1 }
-		
-		male_names = {
-			#venda
-			Mafhudu Muzalo Nkhangweleni Rolivhuwa Thikhathali Thilivhali Tshifhiwa Zwanga
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Ksayhu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Ntokoto			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		female_names = {
-			#venda
-			Elelwani Mufunwa Washu
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Khathu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Dyondzeka Khensani Lelani Xongi			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		
-		modifier = default_culture_modifier
-	}
-	
-	fang = {
-		graphical_cultures = { westafricangfx }
-		
-		color = { 0.15 0.21 0.67 }
-		
-		male_names = {
-			#venda
-			Mafhudu Muzalo Nkhangweleni Rolivhuwa Thikhathali Thilivhali Tshifhiwa Zwanga
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Ksayhu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Ntokoto			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		female_names = {
-			#venda
-			Elelwani Mufunwa Washu
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Khathu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Dyondzeka Khensani Lelani Xongi			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		
-		modifier = default_culture_modifier
-	}
-	
-	fipa = {
-		graphical_cultures = { westafricangfx }
-		
-		color = { 0.55 0.75 0.95 }
-		
-		male_names = {
-			Abubakari Akoi Alayaman Ali Ali-Fay
-			Badä Bamari Bannu Bassi Birama Bisi Biyu Bonga 
-			Cisse 
-			Dankaran Demba Daoud_David Diara Düru
-			Fädazu Faga-Laye Fatta Fuluku
-			Gane Gao
-			Kabayo Kalabi Kanafa Kambine Kassa Kaya Kayna Kinkin Kukuray Kusoy
-			Ishaq_Isaac 
-			Lahiltoul 
-			M'Bali Manding-Bory Maghan Majan Mamadi Mamoudou Mari-Djata Musa 
-			Nintasanay
-			Ouali Ouati
-			Reidja 
-			Sakoura Salman_Solomon Sandaki Soumaba Soumaoro Soundiata Sulayman_Solomon 
-			Takoi Tib Tunka 
-			Yama Yasiboy
-			Zakoi Zenku
-		}
-		female_names = {
-			Adja Alima Amita Aoua Aminata Aichata Aissata
-			Barakissa Bintou Deye Djeneba Djenly Djire
-			Fadima Fatim Fatoumata
-			Halima Hawa
-			Ina
-			Kadi Kilia Kolonkan 
-			Lorane 
-			Mariam_Maria Namandjé 
-			Nafissa Namiss Nana
-			Safiatou Salimata Sassouma Sidibé Siya Sogolon 
-			Tekhaye
-			Youma
-			Zeïnab
-		}
-		
-		modifier = default_culture_modifier
-	}
-	
-	gbaya = {
-		graphical_cultures = { westafricangfx }
-		
-		color = { 0.65 0.61 0.62 }
-		
-		male_names = {
-			#venda
-			Mafhudu Muzalo Nkhangweleni Rolivhuwa Thikhathali Thilivhali Tshifhiwa Zwanga
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Ksayhu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Ntokoto			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		female_names = {
-			#venda
-			Elelwani Mufunwa Washu
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Khathu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Dyondzeka Khensani Lelani Xongi			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		
-		modifier = default_culture_modifier
-	}
-	
-	ila_tonga = { 
-		graphical_cultures = { westafricangfx africangfx muslimgfx }
-		
-		color = { 0.15 0.3 0.43 }
+		color = { 0.8 0.2 0.5 }
 
 		male_names = {
-			#tonga
-			Banji Beenzu Busiku Chabota Cheelo Chimuka Chipo Choolwe Hachikoko Hakainde Hichilema Junza Kuchiswa Kulenga Linda Lingubona Luse Lushomo Luyando Luumuno Lweendo Mabotu
-			Mainza Makani Malambo Malindi Mapenzi Mayaba Mazuba Mbonyazo Michelo Milimo Milumbe Miyoba Moono Mpimpa Muchaala Muchimba Muchindu Muleya Mulonga Munkombwe Muntanga Mutinta
-			Mutwe Muyuni Mwaka Mweene Mwiinga Nchimunya Nguzu Sondo
+			Abagha Achigh Aguchu Ajai Ajinai Akhutai Alagh Alchi Alchidai Altan Ambaghai Arkhai Arasen Babur Badai Bagaridai Bala Barghujin Bartan Batu Bedugun Begter Belgutei
+			Belgunutei Bilge Berke Bodonchar Bogen Bogorchu Bolkhadar Borjigidai Boroghul Bughu Bugidai Bugunutei Bujeg Bukha Bulughan Buri Burkhan Burundai Chagatai Chaghagan Chanai Chigu
+			Chidukhul Chilagun Chiledu Chormakhan Chulgetei Dagun Daritai Dayir Dodai Duua Eljigedei Ghazan Ghunan Guchu Gughlug Guyug Harghasun Horkhudagh Hulegu Husun Inalchi Inancha Iturgen 
+			Jajiradai Jamugha Jebe Jochi Jurchedei Khabichi Khachi Khachigun Khadagh Khagatai Khaidu Khal Khorchi Khorilartai Khubilai Khudu Khutula Khuyildar Kogsegu Kokochu Megetu Megujin
+			Menggei Mongke Morokha Munglig Nakhu Narin Nayaga Nogai Odchigin Ogodei Okhotur Oljaitu Oronartai Shiraghul Shirgugetu Subetei Suyiketu Taghai Tamachi Targhutai Temuge Temujin Temur
+			Todogen Toghoril Toghtoga Tokhtamis Tolui Torolchi Tumen Uighurtai Ukhuna Usun Yedi Yegu Yeke Yesugei Yesunge Yokhunan Kadan Godan
 		}
 		female_names = {
-			#tonga
-			Banji Beenzu Busiku Chabota Cheelo Chimuka Chipo Choolwe Hachikoko Hakainde Hichilema Junza Kuchiswa Kulenga Linda Lingubona Luse Lushomo Luyando Luumuno Lweendo Mabotu
-			Mainza Makani Malambo Malindi Mapenzi Mayaba Mazuba Mbonyazo Michelo Milimo Milumbe Miyoba Moono Mpimpa Muchaala Muchimba Muchindu Muleya Mulonga Munkombwe Muntanga Mutinta
-			Mutwe Muyuni Mwaka Mweene Mwiinga Nchimunya Nguzu Sondo
+			Al-Alta Alan Altani Borte Botokhui Bulughan Chabi Chagur Chakha Checheyigen Chotan Doregene Doquz Ebegei Gurbesu Hogelun Holuikhan Ibakha Khadagan Khogaghchin Khojin Khorijin Khugurchin Khulan Khutulun Mandukhai Mongoljin Nomolun Oghul Orbei Sokhatai Sorkhaghatani Tekine Temulun Töregene Yesugun Yesui Hoelun
 		}
-
+		
+		from_dynasty_prefix = "of "
 		founder_named_dynasties = yes
-		dukes_called_kings = no
-		modifier = default_culture_modifier
-	}
-	
-	kongolese = {
-		graphical_cultures = { westafricangfx }
-		
-		color = { 0.13 0.03 0.13 }
-		
-		male_names = { Cakasekene Cibind Cikombe Ilunga Kalong Kasongo Kateng Kaumbo Kekenya Kitamba Kumwimba Maloba Mbala Miketo Mpemba Mukaz Munying Mutand Mwine Nawej Nday Nkuwa Nkuwu Ntinu Nzinga Sanza }
-		female_names = {
-			#venda
-			Elelwani Mufunwa Washu
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Khathu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
 
-			#tshona
-			Dyondzeka Khensani Lelani Xongi			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
+		allow_looting = yes
 		
 		modifier = default_culture_modifier
 	}
 	
-	kuba = {
-		graphical_cultures = { westafricangfx }
+	even = {
+		graphical_cultures = { mongolgfx muslimgfx }
+		secondary_event_pictures = bedouin_arabic
 		
-		color = { 0.37 0.03 0.24 }
+		horde = yes
 		
-		male_names = {
-			#venda
-			Mafhudu Muzalo Nkhangweleni Rolivhuwa Thikhathali Thilivhali Tshifhiwa Zwanga
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Ksayhu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Ntokoto			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		female_names = {
-			#venda
-			Elelwani Mufunwa Washu
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Khathu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Dyondzeka Khensani Lelani Xongi			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		
-		modifier = default_culture_modifier
-	}
-	
-	luba = {
-		graphical_cultures = { westafricangfx }
-		
-		color = { 0.17 0.26 0.14 }
-		
-		male_names = {
-			#venda
-			Mafhudu Muzalo Nkhangweleni Rolivhuwa Thikhathali Thilivhali Tshifhiwa Zwanga
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Ksayhu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Ntokoto			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		female_names = {
-			#venda
-			Elelwani Mufunwa Washu
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Khathu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Dyondzeka Khensani Lelani Xongi			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		
-		modifier = default_culture_modifier
-	}
-	
-	lunda = {
-		graphical_cultures = { westafricangfx }
-		
-		color = { 0.11 0.68 0.25 }
-		
-		male_names = {
-			#venda
-			Mafhudu Muzalo Nkhangweleni Rolivhuwa Thikhathali Thilivhali Tshifhiwa Zwanga
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Ksayhu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Ntokoto			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		female_names = {
-			#venda
-			Elelwani Mufunwa Washu
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Khathu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Dyondzeka Khensani Lelani Xongi			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		
-		modifier = default_culture_modifier
-	}
-	
-	makonde = {
-		graphical_cultures = { westafricangfx }
-		
-		color = { 1.0 0.3 0.75 }
-		
-		male_names = {
-			Abubakari Akoi Alayaman Ali Ali-Fay
-			Badä Bamari Bannu Bassi Birama Bisi Biyu Bonga 
-			Cisse 
-			Dankaran Demba Daoud_David Diara Düru
-			Fädazu Faga-Laye Fatta Fuluku
-			Gane Gao
-			Kabayo Kalabi Kanafa Kambine Kassa Kaya Kayna Kinkin Kukuray Kusoy
-			Ishaq_Isaac 
-			Lahiltoul 
-			M'Bali Manding-Bory Maghan Majan Mamadi Mamoudou Mari-Djata Musa 
-			Nintasanay
-			Ouali Ouati
-			Reidja 
-			Sakoura Salman_Solomon Sandaki Soumaba Soumaoro Soundiata Sulayman_Solomon 
-			Takoi Tib Tunka 
-			Yama Yasiboy
-			Zakoi Zenku
-		}
-		female_names = {
-			Adja Alima Amita Aoua Aminata Aichata Aissata
-			Barakissa Bintou Deye Djeneba Djenly Djire
-			Fadima Fatim Fatoumata
-			Halima Hawa
-			Ina
-			Kadi Kilia Kolonkan 
-			Lorane 
-			Mariam_Maria Namandjé 
-			Nafissa Namiss Nana
-			Safiatou Salimata Sassouma Sidibé Siya Sogolon 
-			Tekhaye
-			Youma
-			Zeïnab
-		}
-
-		modifier = default_culture_modifier
-	}
-	
-	mongo = {
-		graphical_cultures = { westafricangfx }
-		
-		color = { 0.41 0.41 0.21 }
-		
-		male_names = {
-			#venda
-			Mafhudu Muzalo Nkhangweleni Rolivhuwa Thikhathali Thilivhali Tshifhiwa Zwanga
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Ksayhu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Ntokoto			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		female_names = {
-			#venda
-			Elelwani Mufunwa Washu
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Khathu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Dyondzeka Khensani Lelani Xongi			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		
-		modifier = default_culture_modifier
-	}
-	
-	muganda = {
-		graphical_cultures = { westafricangfx }
-		
-		color = { 0.2 0.45 0.7 }
-		
-		male_names = {
-			Adroa Akiiki Alikuraira Allopu Anjait
-			Bagamba Bahemuka Balinda Balondemu Bategeka Batte Bbale Beesigye Begumisa Bikutwala Birungi Bitalo Bwire Byaitaka Byangireeka Byanruhanga Byarugaba Byembandwa
-			Damba Dembe
-			Ejau Enani Engemu
-			Galabba Gonza Gwandoya
-			Hiryangana
-			Jimiyu
-			Kabilito Kabonero Kabonesa Kadokechi Kaikara Kakyomya Kamirakwo Kamoga Kamukama Karwana Kasozi Kasumba Katungi Katuramu Kayonga Kibuuka Kiho Kintu Kugonza Kusemererwa
-			Lutalo 
-			Madongo Mayanga Mbabazi Mirembe Mori Mpagi Mpoza Mubiru Mugaba Mugamba Mugisa Muhairwe Muhangi Muhenda Muhoozi Muhumuza Mukasa Mukisa Mulindwa Mulogo Mulumba Munanire Munyiga Musaazi Musabingo Musembwa Musisi Musoke Mutebi Mutongole Muwanga Mwanje Mwesige
-			Nakisisa Nangila Natukundo Ndahura Nkalati Nkalubbo Nkunda Nsubuga Ntege Nuwamanya Nyatui
-			Ogwambi Oidu Ojore Okware Okwayi Okwonga Omoit Onyait Onyango Onzi Owole
-			Ruhakana Rwakaikara
-			Sanyu Semanda Sempala Senyange Setimba
-			Taamiti Tayebwa Tibyangye Tukesiga Tumushabe Tumusiime Tusuubira Twesigye Twinamaani
-			Waarwe Waloga Wanzala Wemusa
-			Zilaba
-		}
-		female_names = {
-			Abothi Acanit Ajaruva
-			Bacia Bagamba Baingama Balikuraira Bategeka Beesigye Birungi Byaitaka
-			Dembe
-			Emojung
-			Gonza
-			Jendyose
-			Kabiite Kabonesa Kajuga Kenyangi Kibibi Kiho Kisembo Komuntale Komushana Kugonza Kulabako Kusemererwa Kwehangana Kyagaza Kyaligonza
-			Lwango
-			Mangeni Masiko Mirembe Mugaba Mugisa Muhairwe Muhenda Muhumuza
-			Nabaasa Nabossa Nabukenya Nabulungi Nafula Nafuna Nagesa Nakakande Nakimera Nalunga Nalwanga Namakula Namata Namataka Namazzi Nambogo Namirembe Namukasa Namusisi Nangoma Nanjala Nankunda Nantale Nantumbwe Nanziri Nasikye Nassuna Natukunda
-			Onzia
-			Sanyu
-			Tibyangye Tukesiga Tumushabe Tumusiime Turyahumura Tusuubira Twesigye
-			Wesesa
-		}
-
-		modifier = default_culture_modifier
-	}
-	
-	sawabantu = {
-		graphical_cultures = { westafricangfx }
-		
-		color = { 0.21 0.18 0.55 }
-		
-		male_names = {
-			#venda
-			Mafhudu Muzalo Nkhangweleni Rolivhuwa Thikhathali Thilivhali Tshifhiwa Zwanga
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Ksayhu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Ntokoto			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		female_names = {
-			#venda
-			Elelwani Mufunwa Washu
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Khathu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Dyondzeka Khensani Lelani Xongi			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		
-		modifier = default_culture_modifier
-	}
-	
-	shona = {
-		graphical_cultures = { africangfx muslimgfx }
-		
-		color = { 0.3 0.6 0.1 }
-		
-		male_names = {
-			Abubakari Akoi Alayaman Ali Ali-Fay
-			Badä Bamari Bannu Bassi Birama Bisi Biyu Bonga 
-			Cisse 
-			Dankaran Demba Daoud_David Diara Düru
-			Fädazu Faga-Laye Fatta Fuluku
-			Gane Gao
-			Kabayo Kalabi Kanafa Kambine Kassa Kaya Kayna Kinkin Kukuray Kusoy
-			Ishaq_Isaac 
-			Lahiltoul 
-			M'Bali Manding-Bory Maghan Majan Mamadi Mamoudou Mari-Djata Musa 
-			Nintasanay
-			Ouali Ouati
-			Reidja 
-			Sakoura Salman_Solomon Sandaki Soumaba Soumaoro Soundiata Sulayman_Solomon 
-			Takoi Tib Tunka 
-			Yama Yasiboy
-			Zakoi Zenku
-		}
-		female_names = {
-			Adja Alima Amita Aoua Aminata Aichata Aissata
-			Barakissa Bintou Deye Djeneba Djenly Djire
-			Fadima Fatim Fatoumata
-			Halima Hawa
-			Ina
-			Kadi Kilia Kolonkan 
-			Lorane 
-			Mariam_Maria Namandjé 
-			Nafissa Namiss Nana
-			Safiatou Salimata Sassouma Sidibé Siya Sogolon 
-			Tekhaye
-			Youma
-			Zeïnab
-		}
-
-		modifier = default_culture_modifier
-	}
-	
-	swahili = {
-		graphical_cultures = { africangfx persiangfx }
-		
-		color = { 0.95 0.8 0.6 }
-		
-		male_names = {
-			Abubakari Akoi Alayaman Ali Ali-Fay
-			Badä Bamari Bannu Bassi Birama Bisi Biyu Bonga 
-			Cisse 
-			Dankaran Demba Daoud_David Diara Düru
-			Fädazu Faga-Laye Fatta Fuluku
-			Gane Gao
-			Kabayo Kalabi Kanafa Kambine Kassa Kaya Kayna Kinkin Kukuray Kusoy
-			Ishaq_Isaac 
-			Lahiltoul 
-			M'Bali Manding-Bory Maghan Majan Mamadi Mamoudou Mari-Djata Musa 
-			Nintasanay
-			Ouali Ouati
-			Reidja 
-			Sakoura Salman_Solomon Sandaki Soumaba Soumaoro Soundiata Sulayman_Solomon 
-			Takoi Tib Tunka 
-			Yama Yasiboy
-			Zakoi Zenku
-		}
-		female_names = {
-			Adja Alima Amita Aoua Aminata Aichata Aissata
-			Barakissa Bintou Deye Djeneba Djenly Djire
-			Fadima Fatim Fatoumata
-			Halima Hawa
-			Ina
-			Kadi Kilia Kolonkan 
-			Lorane 
-			Mariam_Maria Namandjé 
-			Nafissa Namiss Nana
-			Safiatou Salimata Sassouma Sidibé Siya Sogolon 
-			Tekhaye
-			Youma
-			Zeïnab
-		}
-
-		modifier = default_culture_modifier
-	}
-	
-	tswana = {
-		graphical_cultures = { westafricangfx }
-		
-		color = { 0.05 0.33 0.48 }
-		
-		male_names = {
-			Kobina Vabena Kofi Kojo Vadwo Kondwani Kumbukani Kwabena Kwadwo Kwaku Kwame Kwasi Kweku Kwesi Lanre Lekan Limbani 
-			Limbikani Madalitso Makena Mamadou Masamba Masozi Mavuto Mayamiko Mayeso Melisizwe Mosi Mphatso Mtendere Mudiwa 
-			Munashe Mwenye Ndidi Neo Ngozi Nkemdilim Nkosana Nkruma Nnamdi Nsia Nsonowa Nthanda Obi Ochieng Odhiambo Oghenekaro 
-			Oghenekevwe Oghenero Okoro Olabode Olamilekan Olanrewaju Oluchi Olufemi Olufunke Olufunmilayo Olufunmilola Olujimi 
-			Olukayode Olumide Oluwafemi Oluwafunmilayo Oluwakanyinsola Oluwasegun Oluwaseun Oluwaseyi Oluwatoyin Oluwayemisi 
-			Omobolanle Onyekachi Onyekachukwu Opeyemi i Otieno Oyibo Paki Pemphero Pilirani Refilwe Rudo Rutendo Sefu Simba 
-			Sipho Sithembile Sizwe Tadala Tafadzwa Tafari Takondwa Tamandani Tamrat Taonga Tatenda Tau Temitope Tendai Tendaji 
-			Tewodros Thabo Themba Thoko Thokozani Thulani Tichaona Tinashe Tiyamike Tumelo Udo Uduak Ufuoma Umukoro Unathi 
-			Uzochi Uzoma Wasswa Wekesa Xolani Yamikani Yared Yaw Zephania Zuberi 
-		}
-		female_names = {
-			Abena Abeni Aberash Abimbola Abiodun Achieng Adaeze Adanna Adannaya Ade Adebola Adebowale Adedayo Adetokunbo 
-			Adhiambo Adjoa Adwoa Afia Afua Akachi Akinyi Akosua Akpofure Akua Akuchi Alaba Alemayehu Alinafe Ama Amaka Amara 
-			Amarachi Anan Añuli Asha Aisha Atieno Awiti Awotwi Ayo Ayodele Ayomide Ayotunde Baako Babirye Boipelo Boitumelo 
-			Bolanle Bosede  Chausiku Chi Chiamaka Chibueze Chibuike Chibuzo Chichi Chidi Chidiebere Chidiebube Chidiegwu 
-			Chidimma Chifundo Chifuniro Chijindum Chika Chike Chikelu Chikere Chikondi Chikumbutso Chimwemwe Chinasa Chinedu 
-			Chinonso Chinwe Chinweike Chinwendu Chinweuba Chinyelu Chinyere Chioma Chipo Chisomo Chiyembekezo Chizoba Dada 
-			Dalitso Dayo Desta Dikeledi Dubaku Dumisani Ebele Efe Efemena Efua Ejiro Ejiroghene Ekene Ekenedilichukwu Ekua 
-			Ekundayo Emem Eniola Enitan Enu Eseoghene Eshe Esi Farai Fatsani Folami Fumnanya Funanya Fungai Furaha Ganizani 
-			Gbemisola Hiwot Hlengiwe Idowu Ife Ige Imani Ime Itumeleng Kagiso Kahina Kamaria Katlego Kayin Kefilwe Kirabo 
-			Kondwani Kumbukani Kunto Lerato Lesedi Limbani Limbikani Lindiwe Lumusi Lungile Madalitso Makena Manyara Marjani 
-			Masego Masozi 
-		}
-
-		modifier = default_culture_modifier
-	}
-	
-	xhosa = {
-		graphical_cultures = { westafricangfx }
-		
-		color = { 0.59 0.25 0.3 }
-		
-		male_names = {
-			Amahle Andile Ayanda Ayize
-			Bandile Bheka Bhekizizwe Bhekithemba Bongani Buyisiwe
-			Dingane Dumisani Dumisile
-			Jabulani
-			Kwanele
-			Lwazi Lindelani Londisizwe
-			Mandla Mandlenkosi Manelesi Mlungisi Mondli Msizi Mthandeni Muzikayise
-			Nhlakanipho Njabulo Nkosinathi
-			Phila Phumlani
-			Sakhile Sandile Sanele Sibongiseni Siboniso Sibusiso Sifiso Sihle Simphiwe Siphelele Sipho Siphosethu Sithembiso Siyabonga Siyanda Sizwe Siphamandla
-			Thabo Thalente Thamsanqa Thando Themba Thulani
-			Unathi
-			Vusumuzi
-			Wandile
-			Xolani
-			Zithembe Zonke Zonkizizwe Ziphozonke
-		}
-		female_names = {
-			Amahle Andile Ayanda Ayize
-			Busisiwe
-			Duduzile Dumisile
-			Gugu
-			Hlengiwe
-			Jabulile
-			Khanyisile Khethiwe
-			Lindiwe
-			Mbali Minehle Msizi Mthandeni
-			Nandi Nkosiphendule Nobuhle Nobesuthu Nolwazi Nomathemba Nomusa Nomvula Nomzamo Nonhlanhla Nonkululeko Nothembi Nozipho Ntokozo Ntombi
-			Samukelisiwe Sandile Sibongile Simangele Simosihle Simphiwe Sindisiwe Sinethemba Sinenhlanhla Siphephelo Siphokazi Sizani Slindile
-			Thabisa Thandeka Thandiwe Thando Thembisile Thenjiwe Tholakele Thulisile
-			Unathi
-			Xolisile
-			Zama Zamokuhle Zodwa Zonke Zonkizizwe Ziphozonke
-		}
-
-		modifier = default_culture_modifier
-	}
-	
-	yaka = {
-		graphical_cultures = { westafricangfx }
-		
-		color = { 0.27 0.21 0.29 }
-		
-		male_names = {
-			#venda
-			Mafhudu Muzalo Nkhangweleni Rolivhuwa Thikhathali Thilivhali Tshifhiwa Zwanga
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Ksayhu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Ntokoto			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		female_names = {
-			#venda
-			Elelwani Mufunwa Washu
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Khathu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Dyondzeka Khensani Lelani Xongi			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		
-		modifier = default_culture_modifier
-	}
-	
-	wangozi = { 
-		graphical_cultures = { westafricangfx africangfx muslimgfx }
-		
-		color = { 0.2 0.7 0.3 }
+		color = { 0.3 0.2 0.8 }
 
 		male_names = {
-			Abasi Adhama Anasa Ashon Atieno Ayo Baraka Busar Busara Duma Elea Farijika Hali Hamadi Hodari Ikeno Issa Jafari Jamba Jata Juma Jumaane
-			Keambiroiro Kereenyaga Kiama Kifeda Kito Kitwana Kuende Kwanzaa Maulidi Mbita Mhina Mkubwa Mosi Moyo Msia Musa Njowga Nyo Salene Simba Taji Tian Zahur Zawadi
+			Abagha Achigh Aguchu Ajai Ajinai Akhutai Alagh Alchi Alchidai Altan Ambaghai Arkhai Arasen Babur Badai Bagaridai Bala Barghujin Bartan Batu Bedugun Begter Belgutei
+			Belgunutei Bilge Berke Bodonchar Bogen Bogorchu Bolkhadar Borjigidai Boroghul Bughu Bugidai Bugunutei Bujeg Bukha Bulughan Buri Burkhan Burundai Chagatai Chaghagan Chanai Chigu
+			Chidukhul Chilagun Chiledu Chormakhan Chulgetei Dagun Daritai Dayir Dodai Duua Eljigedei Ghazan Ghunan Guchu Gughlug Guyug Harghasun Horkhudagh Hulegu Husun Inalchi Inancha Iturgen 
+			Jajiradai Jamugha Jebe Jochi Jurchedei Khabichi Khachi Khachigun Khadagh Khagatai Khaidu Khal Khorchi Khorilartai Khubilai Khudu Khutula Khuyildar Kogsegu Kokochu Megetu Megujin
+			Menggei Mongke Morokha Munglig Nakhu Narin Nayaga Nogai Odchigin Ogodei Okhotur Oljaitu Oronartai Shiraghul Shirgugetu Subetei Suyiketu Taghai Tamachi Targhutai Temuge Temujin Temur
+			Todogen Toghoril Toghtoga Tokhtamis Tolui Torolchi Tumen Uighurtai Ukhuna Usun Yedi Yegu Yeke Yesugei Yesunge Yokhunan Kadan Godan
 		}
 		female_names = {
-			Adia Aleela Busara Chanua Dhamiria Elea Fanaka Gethera Hawa Hodari Inira Kenithia Kiira Koffi Mahiri Majda Maji Maliza Mkiwa Milima Muraty
-			Mwasaa Nadira Nbushe Onyesha Penda Rasheda Risala Safiri Sanura Shauri Tabara Therania Tisa Waseme Zahra Zakia
+			Al-Alta Alan Altani Borte Botokhui Bulughan Chabi Chagur Chakha Checheyigen Chotan Doregene Doquz Ebegei Gurbesu Hogelun Holuikhan Ibakha Khadagan Khogaghchin Khojin Khorijin Khugurchin Khulan Khutulun Mandukhai Mongoljin Nomolun Oghul Orbei Sokhatai Sorkhaghatani Tekine Temulun Töregene Yesugun Yesui Hoelun
 		}
-
+		
+		from_dynasty_prefix = "of "
 		founder_named_dynasties = yes
-		dukes_called_kings = no
-		modifier = default_culture_modifier
-	}
-	
-	zulu = {
-		graphical_cultures = { westafricangfx }
-		
-		color = { 0.1 0.05 0.3 }
-		
-		male_names = {
-			Amahle Andile Ayanda Ayize
-			Bandile Bheka Bhekizizwe Bhekithemba Bongani Buyisiwe
-			Dingane Dumisani Dumisile
-			Jabulani
-			Kwanele
-			Lwazi Lindelani Londisizwe
-			Mandla Mandlenkosi Manelesi Mlungisi Mondli Msizi Mthandeni Muzikayise
-			Nhlakanipho Njabulo Nkosinathi
-			Phila Phumlani
-			Sakhile Sandile Sanele Sibongiseni Siboniso Sibusiso Sifiso Sihle Simphiwe Siphelele Sipho Siphosethu Sithembiso Siyabonga Siyanda Sizwe Siphamandla
-			Thabo Thalente Thamsanqa Thando Themba Thulani
-			Unathi
-			Vusumuzi
-			Wandile
-			Xolani
-			Zithembe Zonke Zonkizizwe Ziphozonke
-		}
-		female_names = {
-			Amahle Andile Ayanda Ayize
-			Busisiwe
-			Duduzile Dumisile
-			Gugu
-			Hlengiwe
-			Jabulile
-			Khanyisile Khethiwe
-			Lindiwe
-			Mbali Minehle Msizi Mthandeni
-			Nandi Nkosiphendule Nobuhle Nobesuthu Nolwazi Nomathemba Nomusa Nomvula Nomzamo Nonhlanhla Nonkululeko Nothembi Nozipho Ntokozo Ntombi
-			Samukelisiwe Sandile Sibongile Simangele Simosihle Simphiwe Sindisiwe Sinethemba Sinenhlanhla Siphephelo Siphokazi Sizani Slindile
-			Thabisa Thandeka Thandiwe Thando Thembisile Thenjiwe Tholakele Thulisile
-			Unathi
-			Xolisile
-			Zama Zamokuhle Zodwa Zonke Zonkizizwe Ziphozonke
-		}
 
+		allow_looting = yes
+		
 		modifier = default_culture_modifier
 	}
 }
@@ -5888,84 +5339,6 @@ nilo_saharan = {
 
 		modifier = default_culture_modifier
 	}
-	
-	tangan = { 
-		graphical_cultures = { westafricangfx africangfx muslimgfx }
-		
-		color = { 0.38 0.79 0.19 }
-
-		male_names = {
-			#venda
-			Mafhudu Muzalo Nkhangweleni Rolivhuwa Thikhathali Thilivhali Tshifhiwa Zwanga
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Ksayhu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Ntokoto			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-		female_names = {
-			#venda
-			Elelwani Mufunwa Washu
-			Alu Aluwanip Arehone Athiambiwied Avhadali Avhapfani Azwihangwisi Azwimmbahvi Azwinaki Azwinndini Dali Dowe Dowelani Fhulufhuwani Funi Hangwani Hulisani Humbe Humbelani
-			Khathu Khathutshelo Khuliso Khumbu Lindelani Livhu Lutendo Luvhengo Mpfareleli Mphedziseni Muwambiwa Mutsutshudzi Ndiyafhi Nduvho Nkhumbudzeni Nkhumbuleni Nnyadzeni
-			Nnyawedzeni Nnyaweleni Ntungufhadzeni Ntshengedzeni Pfunzo Phathutshedzo Phathu Rabe Rendi Rotshidzwa Rudzani Rudzi Sei Shandu Shandukani Taki Tanga Tendani
-			Thabelo Thanyani  Thina Thinawanga Tondani Tshanduko Tshiananeo Tshidino Tshinyalani Tungu
-
-			#tshona
-			Dyondzeka Khensani Lelani Xongi			
-			Akani Amukelani Elela Eletsa Masana Masingita Minkateko Nsuku Ntsako Ntosvelo Ntsumi Ntwanano Nyeleti Rhandzu Rhulani Shiluva Thirani Unwana Vuthlari
-		}
-
-		founder_named_dynasties = yes
-		dukes_called_kings = no
-		modifier = default_culture_modifier
-	}
-	
-	turkana = {
-		graphical_cultures = { westafricangfx }
-		
-		color = { 0.28 0.51 0.23 }
-		
-		male_names = {
-			Abubakari Akoi Alayaman Ali Ali-Fay
-			Badä Bamari Bannu Bassi Birama Bisi Biyu Bonga
-			Cisse
-			Dankaran Demba Daoud_David Diara Düru
-			Fädazu Faga-Laye Fatta Fuluku
-			Gane Gao
-			Kabayo Kalabi Kanafa Kambine Kassa Kaya Kayna Kinkin Kukuray Kusoy
-			Ishaq_Isaac
-			Lahiltoul
-			M'Bali Manding-Bory Maghan Majan Mamadi Mamoudou Mari-Djata Musa 
-			Nintasanay
-			Ouali Ouati
-			Reidja
-			Sakoura Salman_Solomon Sandaki Soumaba Soumaoro Soundiata Sulayman_Solomon 
-			Takoi Tib Tunka
-			Yama Yasiboy
-			Zakoi Zenku
-		}
-		female_names = {
-			Adja Alima Amita Aoua Aminata Aichata Aissata
-			Barakissa Bintou Deye Djeneba Djenly Djire
-			Fadima Fatim Fatoumata
-			Halima Hawa
-			Ina
-			Kadi Kilia Kolonkan 
-			Lorane 
-			Mariam_Maria Namandjé 
-			Nafissa Namiss Nana
-			Safiatou Salimata Sassouma Sidibé Siya Sogolon 
-			Tekhaye
-			Youma
-			Zeïnab
-		}
-
-		modifier = default_culture_modifier
-	}
 }
 
 congo_nigerian = {
@@ -5975,49 +5348,6 @@ congo_nigerian = {
 		graphical_cultures = { westafricangfx }
 		
 		color = { 0.25 0.45 0.7 }
-
-		male_names = {
-			Abubakari Akoi Alayaman Ali Ali-Fay
-			Badä Bamari Bannu Bassi Birama Bisi Biyu Bonga 
-			Cisse 
-			Dankaran Demba Daoud_David Diara Düru
-			Fädazu Faga-Laye Fatta Fuluku
-			Gane Gao
-			Kabayo Kalabi Kanafa Kambine Kassa Kaya Kayna Kinkin Kukuray Kusoy
-			Ishaq_Isaac 
-			Lahiltoul 
-			M'Bali Manding-Bory Maghan Majan Mamadi Mamoudou Mari-Djata Musa 
-			Nintasanay
-			Ouali Ouati
-			Reidja 
-			Sakoura Salman_Solomon Sandaki Soumaba Soumaoro Soundiata Sulayman_Solomon 
-			Takoi Tib Tunka 
-			Yama Yasiboy
-			Zakoi Zenku
-		}
-		female_names = {
-			Adja Alima Amita Aoua Aminata Aichata Aissata
-			Barakissa Bintou Deye Djeneba Djenly Djire
-			Fadima Fatim Fatoumata
-			Halima Hawa
-			Ina
-			Kadi Kilia Kolonkan 
-			Lorane 
-			Mariam_Maria Namandjé 
-			Nafissa Namiss Nana
-			Safiatou Salimata Sassouma Sidibé Siya Sogolon 
-			Tekhaye
-			Youma
-			Zeïnab
-		}
-
-		modifier = default_culture_modifier
-	}
-	
-	serer = {
-		graphical_cultures = { westafricangfx }
-		
-		color = { 0.45 0.6 0.45 }
 
 		male_names = {
 			Abubakari Akoi Alayaman Ali Ali-Fay
@@ -6100,48 +5430,6 @@ congo_nigerian = {
 		modifier = default_culture_modifier
 	}
 	
-	fula = {
-		graphical_cultures = { westafricangfx }
-		
-		color = { 0.75 0.1 0.5 }
-
-		male_names = {
-			Abubakari Akoi Alayaman Ali Ali-Fay
-			Badä Bamari Bannu Bassi Birama Bisi Biyu Bonga 
-			Cisse 
-			Dankaran Demba Daoud_David Diara Düru
-			Fädazu Faga-Laye Fatta Fuluku
-			Gane Gao
-			Kabayo Kalabi Kanafa Kambine Kassa Kaya Kayna Kinkin Kukuray Kusoy
-			Ishaq_Isaac 
-			Lahiltoul 
-			M'Bali Manding-Bory Maghan Majan Mamadi Mamoudou Mari-Djata Musa 
-			Nintasanay
-			Ouali Ouati
-			Reidja 
-			Sakoura Salman_Solomon Sandaki Soumaba Soumaoro Soundiata Sulayman_Solomon 
-			Takoi Tib Tunka 
-			Yama Yasiboy
-			Zakoi Zenku
-		}
-		female_names = {
-			Adja Alima Amita Aoua Aminata Aichata Aissata
-			Barakissa Bintou Deye Djeneba Djenly Djire
-			Fadima Fatim Fatoumata
-			Halima Hawa
-			Ina
-			Kadi Kilia Kolonkan 
-			Lorane 
-			Mariam_Maria Namandjé 
-			Nafissa Namiss Nana
-			Safiatou Salimata Sassouma Sidibé Siya Sogolon 
-			Tekhaye
-			Youma
-			Zeïnab
-		}
-		modifier = default_culture_modifier
-	}
-	
 	zande = {
 		graphical_cultures = { westafricangfx }
 		
@@ -6208,7 +5496,7 @@ ethiopic = {
 			Mandera Melesse Mellesse Misrak Negasi Nishan Nyala Qwara Retta Seble Sela Selamawit Selassie Semhar
 			Senalat Sheba Shinasha Sisay Tavavich Teru Totit Tsage Wagaye Yehudit Zala Zauditu Zeina Zena Zenia
 		}
-		modifier = east_african_culture_modifier
+		modifier = default_culture_modifier
 	}
 	
 	macrobian = {
@@ -6274,25 +5562,6 @@ khoi_san_group = {
 
 		founder_named_dynasties = yes
 		dukes_called_kings = yes
-		modifier = default_culture_modifier
-	}
-	
-	san = { 
-		graphical_cultures = { westafricangfx africangfx muslimgfx }
-		
-		color = { 0.26 0.72 0.12 }
-
-		male_names = {
-			#San
-			Cgose Coexae Gamnqoa Kase Kgakgam Kukama Mangana Ncgabe Ncokgo Ntcoxo Nxaedom Qaetcao Qgam Qgoma Qhomatca Setshogo Sobe Taase Tcuixgao Thama Thamae Xaga Xare Xgaiga Xgaoco Xgoa
-		}
-		female_names = {
-			#San
-			Cgose Coexae Gamnqoa Kase Kgakgam Kukama Mangana Ncgabe Ncokgo Ntcoxo Nxaedom Qaetcao Qgam Qgoma Qhomatca Setshogo Sobe Taase Tcuixgao Thama Thamae Xaga Xare Xgaiga Xgaoco Xgoa
-		}
-
-		founder_named_dynasties = yes
-		dukes_called_kings = no
 		modifier = default_culture_modifier
 	}
 }
@@ -6497,7 +5766,7 @@ arabic = {
 		prefix = yes
 		dynasty_title_names = yes
 		founder_named_dynasties = yes
-		modifier = beduin_arabic_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	yemeni = {
@@ -6533,7 +5802,7 @@ arabic = {
 		prefix = yes
 		dynasty_title_names = yes
 		founder_named_dynasties = yes
-		modifier = beduin_arabic_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	hijazi = {
@@ -6569,7 +5838,7 @@ arabic = {
 		prefix = yes
 		dynasty_title_names = yes
 		founder_named_dynasties = yes
-		modifier = beduin_arabic_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	maghreb_arabic = {
@@ -6605,10 +5874,126 @@ arabic = {
 		prefix = yes
 		dynasty_title_names = yes
 		founder_named_dynasties = yes
-		modifier = arab_culture_modifier
+		modifier = default_culture_modifier
 		pat_grf_name_chance = 60
 		mat_grf_name_chance = 20
 		father_name_chance = 10
+		pat_grm_name_chance = 40
+		mat_grm_name_chance = 20
+		mother_name_chance = 30
+	}
+	
+	madeiran = { # Berber
+		graphical_cultures = { berbergfx arabicgfx muslimgfx }
+		
+		color = { 0.37 0.82 0.51 }
+
+		male_names = {
+			Abakada Abazza Abbas_Abbas Abdul_Abdul Abdul-Azeem Abdul-Haleem Abdul-Kareem Abdul-Rahman Abdullah_Abdullah Abidin Adal Adam_Adam Aderbal Adergazuz
+			Adherbal Admer Adrir Adum Afaghis Afalawas Afalku Afer Afulay Agafay Agama Agdada Agdun Agellid Aggur Aghali Aghecher Aghilas Agwillul
+			Ahamatu Aheyyad Ahmad_Ahmad Ajdir Ajeddig Akaday Akateiaji Akli Akorakor Aksel_Caecilius Aksil_Caecilius Akutla Akzer Al'a'addin Ali_Ali Alyamas Amawal
+			Amayas Amaz'uz' Ambay Amdegh Amellal Amennay Ameska Amessan Amin Amma Ammuc Amray Amri Amud Anaba Annaber Antalas Anwa Aras
+			Asad Asaru Asirem Aszellay Atissi Awdia Awgustin_August Awinagh Awlagh Awzal Aylal Ayt'ere Az'ar Az'regh Azenkwed Azim Azrur Badda Badis
+			Bagay Barakat Beddis Berkan Bezz'i Br'ir'uc Bukkus Buwayh Buxtuc Capussa Cucung Dali Fahd Fath Fella Firhun Firmus Frawsen Gaia Galussa Gauda
+			Gaya Ghani Ghanim Ghaysan Ghumer Gildun Gulusa H'emmu Haidar Hamad Hashim Hiba Hiempsal Himmi Hotha Hussamaddin Ibiza Ibrahim_Abraham Iccaam
+			Ifni Ifser Ighlaf Igider Igmi Iher Iken Ilyas_Ilyas Immeghar Immel Irgen Is'mail_Ismail Isalcas Ishaq_Isaac Isli Issam It'ij Itber Itri Ixfensen Ixzi Izri Jaffar Jamal Kadidu
+			Kamal Karidenna Kawsen Kenan Keraja Khalid Khanchla Khenchela Khidr Kussil Lacumaces Laweye Lewnis Luki_Lucius Madidu Magsen Mahtar Malik
+			Marwan Masgaba Masgava Masinissa Masmud Masnsen Massinissa Massiva Massnsen Mastan Mastanabal Matiya_Matthew Maysar Maziba Mazigh
+			Medjan Mellal Mennad Menzu Meq'wran Mez'yan Mezwar Micipsa Misagenes Misibsen Mu'izz Muh'end Muhammad_Muhammad Mukhtar Mula Murad Musa_Moses Mustafa
+			Muzaffaraddin N'Guna Nasr Nazar Niptasan Nizamaddin Ptolemee_Ptolemy Qutaiba Rashid Sa'id Salah Salla Salomon_Solomon Sammer
+			Sayyid Seghada Sekla Shamsaddin Sifaks Sifal Sinbad Sisso Stembanos Suggut Sultan T'ar'iq Tabat Tacfin Taffounnout Tahir Takfarinas Tanan Tariq
+			Tegama Thabitah Tifan_Theophanus Tiljad Ugdada Ugwistan Umar_Umar Uqess'un Uregh Urtilian Urz'ig Uzmir Uzza Wahab Watt'as Xamida Yabdas Yaghmurasen
+			Yahya_Yahya Yattuy Yeften Yeh'lem Yiliyen Yuba Yugerten Yugurthen Youkhanna_John Yunes_Jonah Yusuf_Joseph Yuva Z'effun Zafir Zalelsan Zayar Zer'wal Zigza Ziri Zubeyr
+		}
+		female_names = {
+			Aaliyah Aamina Aamira Aaqila Aarifa Aazzi Adelah_Adela Adiba Adilah Adilia Adiva Adjan Aeesha Aesha Aisha Amira Badeea Badia Badra Bahac
+			Bahiyya Bajila Bakka Baraah Barakah Baria Bashira Basilie Basima Basimah Bghnat Bibya Bilqis Cala Canh'a Cantara D'r'ifa Daisha Dalal Dasin
+			Dema Dimah Dinara Dua Durra Durriyya Edza Eleonorka_Eleanor Faghissa Fahriya Fariza Fedada Fer'r'udja Gedduda Ghida Ghnima Guraya Gwejda H'edda
+			Hadiya Hawwa Hemu Herru Iija Iiju Ittû Izza Jaida Jdira Jeddjiga Kahina Kamila Kanimana Kella Kenwa Kisa Kulla Kwella Lalla Laysa Lem'an Lemta
+			Lumsi Lunja Lwiza Lyaqut Mamma Massa Meghighda Melek Menna Menza Mernissa Monica_Monica Myassa Najiba R'uza Ra'isa Rahima Randja Rula Sadiqa
+			Salaama Sekkura Siddiqa Silya Siman T'awes T'item Tadefi Tadla Tadmut Tafrara Tafsut Tagwillult Taheyyatt Takama Taklit Talalit Taljat Tament
+			Tamimunt Tamrust Tanaszart Tanebdatt Tanefzawit Tanest Taninna Tarifa Tariwelt Tasa Tasa'fut Taszellayt Tatbirt Tati Taweckint Tawenza Tawnat
+			Tawzalt Tayri Tayyurt Tazdayt Tazenkwedt Tazirit Tazrurt Tella Temzi Tfit Tigmi Tikinas Tilelli Timmi Tinhinan Tintadefi Tintifawin Tinzert Tisent
+			Tislit Titbirt Titrit Tizemt Tiziri Triya Tudert Tuh'r'ict Tureght Ultafa Wenza Wnissa Wrina Z'diant Z'ergha Zaghwa Zahida Zamba Zibba Zilgum Zubayda
+			Zunagha Zwina Zwira
+		}
+		
+		from_dynasty_prefix = "mn "
+		
+		male_patronym = "ibn "
+		female_patronym = "bint "
+		prefix = yes
+		
+		dynasty_title_names = yes
+		founder_named_dynasties = yes
+		
+		allow_looting = yes
+		seafarer = yes
+
+		modifier = default_culture_modifier
+
+		pat_grf_name_chance = 60
+		mat_grf_name_chance = 20
+		father_name_chance = 10
+		
+		pat_grm_name_chance = 40
+		mat_grm_name_chance = 20
+		mother_name_chance = 30
+	}
+	
+	azoren = { # Berber
+		graphical_cultures = { berbergfx arabicgfx muslimgfx }
+		
+		color = { 0.85 0.24 0.16 }
+
+		male_names = {
+			Abakada Abazza Abbas_Abbas Abdul_Abdul Abdul-Azeem Abdul-Haleem Abdul-Kareem Abdul-Rahman Abdullah_Abdullah Abidin Adal Adam_Adam Aderbal Adergazuz
+			Adherbal Admer Adrir Adum Afaghis Afalawas Afalku Afer Afulay Agafay Agama Agdada Agdun Agellid Aggur Aghali Aghecher Aghilas Agwillul
+			Ahamatu Aheyyad Ahmad_Ahmad Ajdir Ajeddig Akaday Akateiaji Akli Akorakor Aksel_Caecilius Aksil_Caecilius Akutla Akzer Al'a'addin Ali_Ali Alyamas Amawal
+			Amayas Amaz'uz' Ambay Amdegh Amellal Amennay Ameska Amessan Amin Amma Ammuc Amray Amri Amud Anaba Annaber Antalas Anwa Aras
+			Asad Asaru Asirem Aszellay Atissi Awdia Awgustin_August Awinagh Awlagh Awzal Aylal Ayt'ere Az'ar Az'regh Azenkwed Azim Azrur Badda Badis
+			Bagay Barakat Beddis Berkan Bezz'i Br'ir'uc Bukkus Buwayh Buxtuc Capussa Cucung Dali Fahd Fath Fella Firhun Firmus Frawsen Gaia Galussa Gauda
+			Gaya Ghani Ghanim Ghaysan Ghumer Gildun Gulusa H'emmu Haidar Hamad Hashim Hiba Hiempsal Himmi Hotha Hussamaddin Ibiza Ibrahim_Abraham Iccaam
+			Ifni Ifser Ighlaf Igider Igmi Iher Iken Ilyas_Ilyas Immeghar Immel Irgen Is'mail_Ismail Isalcas Ishaq_Isaac Isli Issam It'ij Itber Itri Ixfensen Ixzi Izri Jaffar Jamal Kadidu
+			Kamal Karidenna Kawsen Kenan Keraja Khalid Khanchla Khenchela Khidr Kussil Lacumaces Laweye Lewnis Luki_Lucius Madidu Magsen Mahtar Malik
+			Marwan Masgaba Masgava Masinissa Masmud Masnsen Massinissa Massiva Massnsen Mastan Mastanabal Matiya_Matthew Maysar Maziba Mazigh
+			Medjan Mellal Mennad Menzu Meq'wran Mez'yan Mezwar Micipsa Misagenes Misibsen Mu'izz Muh'end Muhammad_Muhammad Mukhtar Mula Murad Musa_Moses Mustafa
+			Muzaffaraddin N'Guna Nasr Nazar Niptasan Nizamaddin Ptolemee_Ptolemy Qutaiba Rashid Sa'id Salah Salla Salomon_Solomon Sammer
+			Sayyid Seghada Sekla Shamsaddin Sifaks Sifal Sinbad Sisso Stembanos Suggut Sultan T'ar'iq Tabat Tacfin Taffounnout Tahir Takfarinas Tanan Tariq
+			Tegama Thabitah Tifan_Theophanus Tiljad Ugdada Ugwistan Umar_Umar Uqess'un Uregh Urtilian Urz'ig Uzmir Uzza Wahab Watt'as Xamida Yabdas Yaghmurasen
+			Yahya_Yahya Yattuy Yeften Yeh'lem Yiliyen Yuba Yugerten Yugurthen Youkhanna_John Yunes_Jonah Yusuf_Joseph Yuva Z'effun Zafir Zalelsan Zayar Zer'wal Zigza Ziri Zubeyr
+		}
+		female_names = {
+			Aaliyah Aamina Aamira Aaqila Aarifa Aazzi Adelah_Adela Adiba Adilah Adilia Adiva Adjan Aeesha Aesha Aisha Amira Badeea Badia Badra Bahac
+			Bahiyya Bajila Bakka Baraah Barakah Baria Bashira Basilie Basima Basimah Bghnat Bibya Bilqis Cala Canh'a Cantara D'r'ifa Daisha Dalal Dasin
+			Dema Dimah Dinara Dua Durra Durriyya Edza Eleonorka_Eleanor Faghissa Fahriya Fariza Fedada Fer'r'udja Gedduda Ghida Ghnima Guraya Gwejda H'edda
+			Hadiya Hawwa Hemu Herru Iija Iiju Ittû Izza Jaida Jdira Jeddjiga Kahina Kamila Kanimana Kella Kenwa Kisa Kulla Kwella Lalla Laysa Lem'an Lemta
+			Lumsi Lunja Lwiza Lyaqut Mamma Massa Meghighda Melek Menna Menza Mernissa Monica_Monica Myassa Najiba R'uza Ra'isa Rahima Randja Rula Sadiqa
+			Salaama Sekkura Siddiqa Silya Siman T'awes T'item Tadefi Tadla Tadmut Tafrara Tafsut Tagwillult Taheyyatt Takama Taklit Talalit Taljat Tament
+			Tamimunt Tamrust Tanaszart Tanebdatt Tanefzawit Tanest Taninna Tarifa Tariwelt Tasa Tasa'fut Taszellayt Tatbirt Tati Taweckint Tawenza Tawnat
+			Tawzalt Tayri Tayyurt Tazdayt Tazenkwedt Tazirit Tazrurt Tella Temzi Tfit Tigmi Tikinas Tilelli Timmi Tinhinan Tintadefi Tintifawin Tinzert Tisent
+			Tislit Titbirt Titrit Tizemt Tiziri Triya Tudert Tuh'r'ict Tureght Ultafa Wenza Wnissa Wrina Z'diant Z'ergha Zaghwa Zahida Zamba Zibba Zilgum Zubayda
+			Zunagha Zwina Zwira
+		}
+		
+		from_dynasty_prefix = "mn "
+		
+		male_patronym = "ibn "
+		female_patronym = "bint "
+		prefix = yes
+		
+		dynasty_title_names = yes
+		founder_named_dynasties = yes
+		
+		allow_looting = yes
+		seafarer = yes
+
+		modifier = default_culture_modifier
+
+		pat_grf_name_chance = 60
+		mat_grf_name_chance = 20
+		father_name_chance = 10
+		
 		pat_grm_name_chance = 40
 		mat_grm_name_chance = 20
 		mother_name_chance = 30
@@ -6647,7 +6032,7 @@ arabic = {
 		prefix = yes
 		dynasty_title_names = yes
 		founder_named_dynasties = yes
-		modifier = arab_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	egyptian_arabic = {
@@ -6683,7 +6068,7 @@ arabic = {
 		prefix = yes
 		dynasty_title_names = yes
 		founder_named_dynasties = yes
-		modifier = arab_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	sicilian_arabic = {
@@ -6719,7 +6104,7 @@ arabic = {
 		prefix = yes
 		dynasty_title_names = yes
 		founder_named_dynasties = yes
-		modifier = arab_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 		seafarer = yes
 		pat_grf_name_chance = 60
@@ -6881,7 +6266,7 @@ east_slavic = {
 		pat_grm_name_chance = 30
 		mat_grm_name_chance = 30
 		mother_name_chance = 0
-		modifier = russian_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	ilmenian = { ## VANILLA COMPATIBILITY ONLY (REQ'D)
@@ -7029,7 +6414,7 @@ west_slavic = {
 			Urszula Václava Vladislava Wera Wojslawa Zdenka Zofia_Sophia Zwinislawa
 		}
 		from_dynasty_prefix = "z "
-		modifier = pommeranian_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 		seafarer = yes
 	}
@@ -7066,7 +6451,7 @@ west_slavic = {
 		#male_patronym = "owski"
 		#female_patronym = "owska"
 		#prefix = no
-		modifier = polish_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 40
 		mat_grf_name_chance = 10
@@ -7103,7 +6488,7 @@ west_slavic = {
             Swatawa Wilemina_Wilhelmina Wiola_Yolanda Wladislawa Woyslawa Zdislawa Zdenka Zofie_Sophia
 		}
 		from_dynasty_prefix = "z "
-		modifier = bohemian_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	slovieni = {
@@ -7137,7 +6522,7 @@ west_slavic = {
 			Vojslava Zdislava Zdenka Zofie_Sophia
 		}
 		from_dynasty_prefix = "z "
-		modifier = bohemian_culture_modifier
+		modifier = default_culture_modifier
 	}
 	
 	slovakian = {
@@ -7239,6 +6624,89 @@ west_slavic = {
 	}
 }
 
+romani_group = {
+	alternate_start = { NOT = { has_alternate_start_parameter = { key = special_culture value = animal_world } } }
+	graphical_cultures = { easterngfx }
+
+	romani = {
+		graphical_cultures = { romanigfx vlachgfx serbsouthslavicgfx }
+
+		color = { 119 7 55 }
+
+		male_names = {
+			Adnan Afrim Agim Agon Alban Alek Aleksander_Alexander Andrea_Andrew Ardian Ardit Arianit Armend Bajram Bashkim Behar Besian Besnik Blerim Bua Burim Dardan Depa Dhimitër Dimitri Dritan Dëfrim Edon Endrit Engjëll Fatmir Fisnik Flamur Gjergj Gjin Gjon Gojko Grigor_Gregory Gulam Jakub_Jacob Jetmir Jeton Koja Kostandin_Constantine Kreshnik Kushtrim Leka Lekë Leotrim Leutrim Liridon Lulëzim Moisi Muriq Muzaka Pal Perparim Pjetër_Peter Progon Pëllumb Skender Tanush Teodor Valon Veli Visar Vladan Ylli Zameer Zamyr
+			Adrian_Adrian Alexandru_Alexander Anghel_Angel Aron Bajan Balc Barbat Basarab Bogdan_Bogdan Carol_Charles Ciprian_Cyprianus Ciubar Claudiu_Claudius
+			Corneliu_Cornelius Costin Damjan_Damian Dan Dragos Dumitru_Demetrius Emerik_Aymetric Florin Franjo_Francis Gavril_Gabriel Gheorghe_George Grigore_Gregory Iacob_Jacob
+			Iancu_John Ieremia_Jeremiah Ilie_Elijah Ioan_John Iorghu_George Iosif_Joseph Iuga Janos_John Ladislau_Vladislav Latcu Laurentiu_Laurence Litovoi Lucian_Lucius Marin_Marius
+			Mihai_Michael Milos_Milosz Mircea Moise_Moses Nicolaie_Nicholas Petre_Peter Pirvu Radovan Radu Roman_Roman Sas Seneslav Sergiu_Sergius Simion_Simon
+			Stefan_Stephen Stelian Teodor_Theodore Tepes Tibor Tihomir Timotei_Timothy Tudor_Theodore Valentin_Valentin Valeriu_Valerius Vasile_Basil Veaceslav_Vaclav
+			Victor_Victor Vilhelm_William Vintila Vlad
+			Adam_Adam Andrija Bartol_Bartolomeus Besar Bojan Boris Branimir Castimir_Casimir Danail_Daniel Dmitar_Demetrius Dobromir Dragan Dragomir Drzislav Dujam Duym Filip_Philip Gaspar_Caspar Gheorghe_George Grigorii_Gregory
+			Hranislav Hrvoje Igor_Ingvar Ioan_John Ivan_John Ivanis Jitej Karlo_Charles Koloman_Koloman Kresimir Ladislav_Vladislav Ljudevit Ljutomisl Lovro Matej_Matthew Mihajlo_Michael Milman Mislav Mutimir
+			Nikolitza_Nicholas Ognjen Petar_Peter Prohor Radomir Ratimir Sebeslav Seslav Slavich Stanislav_Stanislav Stjepan_Stephen Sulvan Teodor_Theodore Tomislav Tvrdoslav Tvrtko Ulfo_Ulf Vid Vitomir Vlaicu
+			Vukan Zvonimir
+			Aldimir Asen Berbat Blaz_Blaise Boleslav Borna Branimir Budimir Kosmin Danilo_Daniel Djordje_George Dmitar_Demetrius Dobroslav Dragija Dragos Dragutin Gavrilo_Gabriel Godimir Goran
+			Grgur_Gregory Ilija_Elijah Ivan_John Josif_Joseph Josip_Joseph Jovan_John Kasjan Konstantin_Constantine Krsto Lazar_Lazarus Ljudevit Luka_Luke Marko_Marcus Martin_Martin Matija_Matthew Mihailo_Michael Mihovil Milorad Milutin Mircea Miroslav_Miroslav Mislav Nenad Nikodim_Nicodemus Nikola_Nicholas
+			Ninoslav Petar_Peter Porin Prvoslav Radoslav Rastko Ratomir Roman_Roman Serapion_Seraphin Simeon_Simon Sinisa Slavko Slobodan Stefan_Stephen Teodosije_Theodosius Trajan_Trajan Uros Visarion Vladimir_Vladimir Vladislav_Vladislav Vlastimir
+			Vuk_Lupo Vukan Vukasin Vukoman Zoran Zvonimir
+			Aleksii_Alexis Balin Bernardin_Bernard Bertalan_Bartolomeus Bogoris_Boris Boril Bozidar_Theodat Braslav Dan Dionisii_Dionysus Dominik_Dominic Dragoman Dragshan Drzislav Evtimii Frujin German_Germanus Grgur_Gregory Hranimir
+			Ioakim_Joakim Ivan_John Jerolim Kalojan Kocelj Kozma_Cosmas Kresimir Kulin Ljubomir Ljutomisl Marko_Marcus Mihail_Michael Mikica Miroslav_Miroslav Momchil Nikola_Nicholas Ognen Petar_Peter 
+			Prijezda Radislav Radu Sava Sermon Slavac Soimir Stracimir Svetislav Tomislav Trpimir Vasilii_Basil Viseslav Vladislav_Vladislav Vojnomir Zdeslav
+			Boric Kulin Matej_Matthew Ninoslav "Matej Ninoslav" Prijezda Stjepan Tvrtko Vuk Vladislav Dabisa Sanko Vlatko Hrana Hran Sandalj Mihajlo_Michael Juraj_George Ostoja Hrvoje
+			Pavle Petar_Peter Radislav Ivanis Nikola_Nicholas Tomas Vukac Radivoj Vukmir Vukasin Grgur Bogisa Sibislav Bogut Batalo Miroslav Brailo Hval Brajko Radic Priboje Batic
+			Radogost Milovan Dragonja Andrija_Andrew Danis Krsmir Tisemir
+			Bedoslav Beli Benebod Benko Bislav Blagosod Boleslav Bodigoj Bogomir Bogumil_Bogomil Bojnoslav Borigoj Borižit Borut Branimir Braslav Budigoj Budin Cestilo Cestimir Crné Crnel Crni Crnig Dalimir Danimir Debeligoj Dober Dobrislav Dobrej Dobren Dobrodej Dorogoj Dobromisl Dobroneg Dobrost Dobrovlast Dobrožit Domagoj Domažil Domomir Domomisl Dragomir Dragoslav Dragovit Glavac Glušo Gnevaš Godemir Godemisl Gojen Gojimir Gojislav Golodrag Golomir Golotek Gorazd Gostibil Gostidrag Grd Hoten Hotimir Hrast Inko Izbor Jaroslav Jelen Junik Lastigoj Lastimir Lastnik Ljuban Ljubiš Ljubodrag Ljuboneg Ljubotin Ljubšin Ljutic Ljutomir Manidrag Maraš Medved Mil Milaš Milej Milo Misl Minigoj Mirigoj Miromisl Miroslav Mistibor Mistislav Nacek Naciživ Nadovid Namdrag Našemisl Nebomir Negoj Negomir Nenadej Nepokor Neško Nežir Nico Omisl Petanko Pitalo Pomik Predoslav Premil Premisl Pribibor Pribigoj Pribislav Prisnec Prisnoslav Prodan Radek Radogej Radenko Radigoj Radin Radoh Radoš Radul Radušic Sebeteh Sebibor Sebidrag Sebigoj Sebimir Semiko Skrben Slav Slavko Slavuš Sojdrag Sprejmir Stagoj Stamer Stane Stanislav Stano Stansgoj Stanon Stislav Stojan Stojce Stojdrag Stojgoj Stojmir Stradoslav Stranimir Stregomil Sujce Svegoj Sveljub Svemir Svetec Svetin Svetodrag Svetogoj Svetomir Svetoslav Scenedrag Tihodrag Tihomir Tihožit Trdac Trdogoj Trdomir Trdoslav Trebec Trebegoj Trebeš Trebibor Trebibrat Trebil Trebin Trebimir Trebišin Trebivit Trebnik Trebušnež Uncat Unislav Val Valnik Vecegoj Vecevoj Veligoj Velikne Vencegoj Venko Vilan Vitin Vitomir Vitomisl Vitogoj Vitošlav Višegoj Višemir Vladimir Vlado Voinomir Volkoj Volkun Zababerad Zadrag Zdebor Zdedrag Zdegoj Zdemir Zdeslav Zdestan Zememišl Zemeteh Zemiboned Zemidrug Zemignev Zemin Zloslav Zverce Zvergoj Zverko Železen Židislav Žilec Žitigoj Žitomir Žitomisl Žitovit Žizemir
+			Blaško Bogdan Bogoslav Božidar Božo Bojan Boril Boris Boroj Boško Branko Budislav Cvetni Cvetašin Cvetin Cvetoš Dejan Doberko Dobrilo Dobrovoj Dobroslav Dragaš Dragobrat Dražilo Dušan Godomir Gojko Gradimir Hraber Ivko Izeslav Jezerko Kazimir_Casimir Karan Kocelj Krilan Ljuben Ljubenko Liubivoj Ljubinko Ljubomir Ljuboslav Maleš Miladin Milan Milanko Milen Milenko Milevoj Milin Milinko Milislav Milovan Milorad Miloš Milun Miluš Milutin Miljen Miljko Milobrat Milodrag Mirko Mirodar Mišljen Mladen Negoš Nedeljko Ninko Nino Novko Obren Prerad Pribic Radan Radivoj Radinko Radislav Radic Radmil Radovan Radoj Radojko Radomir Radosim Radoslav Rajko Ratko Rebom Savo Slavoljub Sokol Srecan Srecko Stanko Stojadin Stojko Svetopolk_Svatopluk Šišman Šumijak Tašo Tihomil Uroš Valhun Vasoj Veselin Vecerin Vetko Vid Vidojko Vitko Vitor Vladoslav Vlatko Vojdrag Vojtek Volkašin Vratislav Zlatko Zlatoslav Zlatoust
+			Ábel_Abel Ádárn Ágoston_Augustine Álmos Árpád Õdön_Otto Alajos Ambrus_Ambrosius András_Andrew Antal Attila Bálint Béla_Albert Balázs Benedek_Benedict Bernát_Bernard Bertók Bertalan_Bartolomeus Boldizsár_Baltasar Bonuslo
+			Borisz_Boris Csák Csaba Csongor Dénes_Denis Dömötör_Demetrius Dezsõ_Desiderius Domoszló Donát_Donatus Elek Elemér Endre_Andrew Ernõ_Ernest Fulöp_Philip Ferenc_Francis Frigyes_Frederick Gábor_Gabriel Gábriel_Gabriel Gáspár_Caspar Géza Gazsi
+			Gellért_Gerard Gergely_Gregory György_George Gyula Imre István_Stephen Izsák_Isaac Jákob_Jacob János_John József_Joseph Jenõ Kálmán Károly_Charles Konrád_Konrad Kornél_Cornelius Kristóf_Christopher László_Vladislav Lázár_Lazarus Lõrinc_Lorence Lajos_Louis
+			Lampert_Lambert Levente Lukács_Luke Márk_Marcus Márton_Martin Máté_Matthew Mátyás_Matthew Móric_Maurice Mózes_Moses Mihály_Michael Miklós_Nichola Nándor_Ferdinand Orbán_Urban Oszkár_Oscar Pál_Paul Péter_Peter Sámuel_Samuel Sándor_Alexander Salamon_Solomon Saul Soma
+			Szilveszter_Silvester Tádor_Theodore Tacsony Tamás_Thomas Tibor Tivadar Vazul Vencel_Vaclav Vilmos_William Zoltán Zsigmond_Sigmund Zsolt 
+		}
+		female_names = {
+			Afërdita Arjeta Blerina Blerta Blerte Bolja Bora Bosa Boxia Boša Boža Dardana Diellza Edona Era Fatmire Flutura Jehona Lindita Liridona Lule Luljeta Mirjeta Pranvera Shpresa Shqipe Teuta Tirana Vera Yllka
+			Adelina_Adeline Adriana_Adriana Afina Alexandra_Alexandra Alexia Ana_Anna Anastasia_Anastasia Angela_Angela Arina_Irene Christina_Christina Clara_Clara Dana Ecatarina_Catherine
+			Elena_Helen Elisabeta_Elizabeth Emilia_Emily Eufroysina_Euphrosyne Felicia Floarea_Flora Iacoba_Jacoba Ioana_Joan Ionela Irina_Irene Iulia_Julia Maria_Maria Monica
+			Natalia_Natalia Olimpia Paraschiva Petra Roxana Ruxandra Smaranda Sophia_Sophia Stana Stefana_Stephania Stefania_Stephania Teodora_Theodora
+			Tereza_Teresa Vasilica_Basilica Violeta_Yolanda Voica Zina
+			Adriana_Adriana Anna_Anna Borislava Cededa Doroteja_Dorothy Ekaterina_Catherine Helena_Helen Jadviga Jovana Kera Ladika Maria_Maria Mihaela_Michaela Nada Petra Viola_Yolanda Jadranka Mare
+			Antonija Capeka Dragana Dubravka Emilija_Emily Gordana Jagoda Jelena Jelka Lucija_Lucia Katalin_Catherine Marija_Maria Marijana_Mariana Mirjana Mirna Mojca Natalija_Natalia NataŠa
+			Rijeka Silvija Snjezana Sofija_Sophia Suzana_Susan Svjetlana Suronja Tatjana Tihana Valerija_Valeria Vedrana Visnja Vjekoslava Zlata Zvonimira
+			Agata_Agatha Barbara_Barbara Branimira Desislava Dubravka Elena_Helen Hicela Jelena Karolina_Caroline Keratza Lovorka Marija_Maria Milka Neda Radica Zdenka Andjela Antonija
+			Bastina Biljana Bistrina Bojana Casna Chasna Dejana Dragana Dragoslava Duga Dusica Gordana Grana Grubana Jagoda Jovana Jovanka Karika
+			Ljubica Luka_Lucia Majka Malina Medeni Meki Milinka Miljana Miriti Mirjana Mudary Mudra Nada Nadanje Namena
+			Aleksandra_Alexandra Aleksandrina Bilyana Bisera Bogdana Bogna Borislava Boyana Dana Desislava Donka Elisaveta_Elizabeth Emiliya_Emily Evdokiya_Eudocia Filipa_Philippa Gergana
+			Hristina_Christina Iskra Iva_Joan Ivana_Joan Ivanka_Joan Ivet Lala Lidiya Lilyana_Lillian Lyudmila_Liudmila Maya Nadejda Nevena Nikolina Penka Rada Radka Raina_Raina Raya Rayna_Raina Rosa_Rosa
+			Rositsa Silva Silviya_Silvia Snezhana Stoyanka Tereza_Teresa Todorka Tsveta_Tsvetanka Tsvetanka_Tsvetanka Vasilka_Basilica Violeta_Yolanda Yana_Joan Yoanan_Joan Yordanka Zhivka
+			Katarina_Catherine Elizabeta_Elisabeth Jelena_Helena Gruba Stana Kujava Doroteja Vitaca Milisa Marija_Mary Resa Mara_Maria Vojaca Gojslava Teodora_Theodora Vojislava
+			Andrijana_Andrea Mateja Miroslava Radislava Petra Nikolena_Nicola Nika Pavica
+			Bega Bela Belica Beliša Bitinja Blagica Bogumila Boželisa Branka Bratina Bratrica Budislava Crna Dobrava Dobrica Dobrilka Dobrinja Dobrota Dobrožica Dobrožižna Dobruška Dolgodelka Domnega Dražica Godeslava Gojica Gosta Gostinja Gostiša Govica Jaronega Jaroslava Jelena Ladana Laduta Lastuša Lazica Lepa Ljuba Ljubiha Ljubonega Ljubonja Ljubota Ljuta Ljutica Mala Manidraga Miljena Mislena Mirica Mirna Miroslava Nedeljka Negota Odola Pacemira Predobra Pribila Pribina Pribislava Prisnoba Prisnota Radonja Semika Slava Slavka Slovenka Sobemisla Stanila Stanislava Stislava Stojana Stojina Straha Stranka Svetoslava Tešina Težkona Tihica Tihomira Tihonja Tonislava Topa Trebenja Trebica Trebina Ubislava Vevera Vidina Vilana Volcina Volkinja Volkonja Volkota Vranica Zemidraga Zenislava Zla Zlativenca Zleslava Zverica Zverinja Zverka Židana Živina
+			Bistra Bogdana Boža Bojana Bosiljka Brajna Cveta Cvetana Cudna Danica Daša Deva Dejana Divna Dobrana Dobrija Draga Dragica Golobica Gorislava Gradislava Granislava Grozda Grozdana Grobiša Ivka Jagoda Janja Jasna Jela Jelenka Kazimira Kalina Kosana Košuta Krilana Lilijana Ljubica Ljubomira Ljuboslava Maleša Malina Malinka Mila Milena Milislava Milica Milojka Milunka Miluša Milja Miljana Miljka Mira Mirca Mirjana Mica Mišljena Morava Neda Nišava Novica Ogrinja Pavica Prodana Rada Radana Radojka Rajka Sava Slavica Smiljana Stana Stanimir Stanka Stojna Tankosa Tankosava Tonka Vesela Vida Vidojka Vidoslava Volkoslava Volcica Zlatkoka Zorana Zorka Zvezdana Živkoka
+			Ágnes_Agnes Éva_Eva Adelaida_Adelaide Agáta_Agatha Amália_Amelia Angyalka_Angela Anikó_Anna Aranka_Aurelia Berta_Bertha Borbála_Barbara Csilla_Csilla Csillag_Csilla Czenzi Dorottya_Dorothy Edit_Edith Emõke Emese Erika Erzsébet_Elizabeth Eszter_Esther
+			Etel Euphemia_Euphemia Gizella_Gisela Györgyi_Georgia Hajnal Hedwig_Hedwig Ibolya_Yolanda Ildikó_Hildegard Illona Irén_Irene Jácinta_Hyacintha Józsa Júlia_Julia Jolán Judith_Judith Kamilla_Camilla Katalin_Catherine Kinga_Kunigunde Klára_Clara
+			Konstancia_Constance Krisztina_Christina Kunigunda_Kunigunde Luca_Lucia Mária_Maria Márta_Martha Magdolna_Magdalena Margaréta_Margaret Margit_Margaret Matild_Matilda Natália_Natalia Odola Orsolya_Ursula Panni_Anna Piroska_Priscilla Rózsa_Rosa Sára_Sarah Sarolt
+			Skolasztika_Scholastica Sophia_Sophia Tundér Terezia_Teresa Viola_Yolanda Virág Zoltána Zsófia_Sophia Zsanett_Joan Zsuzsa_Susan
+		}
+		
+		from_dynasty_prefix = "de "
+		
+		male_patronym = "escu"
+		prefix = no
+
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 40
+		mat_grf_name_chance = 10
+		father_name_chance = 10
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 10
+		mat_grm_name_chance = 40
+		mother_name_chance = 5
+
+		modifier = default_culture_modifier
+	}
+}
+
 south_slavic = {
 	graphical_cultures = { easterngfx }
 	alternate_start = { NOT = { has_alternate_start_parameter = { key = special_culture value = animal_world } } }
@@ -7275,7 +6743,7 @@ south_slavic = {
 			Vojka Zala Zalka Zedenka
 		}
 		from_dynasty_prefix = "iz "
-		modifier = carantanian_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	croatian = {
@@ -7300,7 +6768,7 @@ south_slavic = {
 			Visnja Vjekoslava Zlata Zvonimira
 		}
 		from_dynasty_prefix = "iz "
-		modifier = croatian_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 40
 		mat_grf_name_chance = 10
@@ -7333,7 +6801,7 @@ south_slavic = {
 		from_dynasty_prefix = "iz "
 		male_patronym = "ic"
 		prefix = no
-		modifier = serbian_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	bosnian = {
@@ -7353,7 +6821,7 @@ south_slavic = {
 		from_dynasty_prefix = "iz "
 		male_patronym = "ic"
 		prefix = no
-		modifier = serbian_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	bulgarian = {
@@ -7378,7 +6846,7 @@ south_slavic = {
 		male_patronym = "ov"
 		female_patronym = "ova"
 		prefix = no
-		modifier = bulgarian_culture_modifier
+		modifier = default_culture_modifier
 	}
 	
 	slovene = {
@@ -7470,7 +6938,7 @@ magyar = {
 		from_dynasty_suffix = "i"
 		male_patronym = "fy"
 		prefix = no
-		modifier = hungarian_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 	}
 
@@ -7509,7 +6977,7 @@ magyar = {
 		from_dynasty_suffix = "i"
 		male_patronym = "fi"
 		prefix = no
-		modifier = hungarian_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	szekely = {
@@ -7546,7 +7014,7 @@ magyar = {
 		from_dynasty_prefix = "a "
 		male_patronym = "fi"
 		prefix = no
-		modifier = hungarian_culture_modifier
+		modifier = default_culture_modifier
 	}
 }
 
@@ -7593,7 +7061,7 @@ iranian = {
 		male_patronym = "zade"
 		female_patronym = "dokht"
 		prefix = no
-		modifier = persian_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	persian = {
@@ -7633,7 +7101,7 @@ iranian = {
 		male_patronym = "zade"
 		female_patronym = "dokht"
 		prefix = no
-		modifier = persian_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	sogdian = {
@@ -7781,7 +7249,7 @@ iranian = {
 		male_patronym = "zade"
 		female_patronym = "dokht"
 		prefix = no
-		modifier = persian_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 	}
 
@@ -7806,7 +7274,7 @@ iranian = {
 		from_dynasty_prefix = "nava "
 		male_patronym = "puri "
 		female_patronym = "duda "
-		modifier = persian_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	daylamite = {
@@ -7847,7 +7315,7 @@ iranian = {
 		male_patronym = "zade"
 		female_patronym = "dokht"
 		prefix = no
-		modifier = persian_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	adhari = {
@@ -7886,7 +7354,7 @@ iranian = {
 		male_patronym = "zade"
 		female_patronym = "dokht"
 		prefix = no
-		modifier = persian_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	khwarezmi = {
@@ -7925,7 +7393,7 @@ iranian = {
 		male_patronym = "zade"
 		female_patronym = "dokht"
 		prefix = no
-		modifier = persian_culture_modifier
+		modifier = default_culture_modifier
 		allow_looting = yes
 	}
 
@@ -7965,7 +7433,7 @@ iranian = {
 		male_patronym = "zade"
 		female_patronym = "dokht"
 		prefix = no
-		modifier = persian_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	kurdish = {
@@ -8020,7 +7488,7 @@ iranian = {
 		male_patronym = "kurê "
 		female_patronym = "kiçê "
 		prefix = yes
-		modifier = kurdish_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	afghan = { # a.k.a. Pashtun=
@@ -8215,7 +7683,7 @@ east_african = {
 		prefix = yes
 		dynasty_title_names = yes
 		founder_named_dynasties = yes
-		modifier = east_african_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	afar = {
@@ -8239,7 +7707,7 @@ east_african = {
 		prefix = yes
 		dynasty_title_names = yes
 		founder_named_dynasties = yes
-		modifier = east_african_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	daju = {
@@ -8327,25 +7795,6 @@ central_african = {
 		modifier = default_culture_modifier
 	}
 
-	kanuri = {
-		graphical_cultures = { westafricangfx africangfx }
-		color = { 0.8 0.45 0.75 }
-		male_names = {
-			Abbas Abdallah Abdul Abdulraham Abubakar Adam_Adam Ahmed Airimi Alhaji Ali Alooma Amin Amr Arku Arsu
-			Baba Baram Bikorom Biri Bukar Bulu Buyuma Dabbalemi Dala Daoud_David Dugu Dunama Fune Gaji Gajideni
-			Galrima Gana Garbai Gazali Gazi Ghana Hume Hummay Ibrahim_Abraham Idris Kaday Kanemi Kashim
-			Katakarmabe Katur Kiyari Kura Kuri Kuwaana Madu Mahmoud Mamane Modu Mohammed_Mohammed Mufioma Murama
-			Musa_Moses Mustafa_Mustafa Nikale Osman Said Salmama Sanda Sani Sef Selma Shettima Shu Suleyman_Solomon Tandja Umar
-			Waziri Yahya_John Yaqub_Jacob Yusuf_Joseph Zannah
-		}
-		female_names = {
-			Aisha Aissa Aliyah Amina Aziza Bakhita Cinta Daniya Dikwa Fatima_Fatima Halima Jalila Kaltum Karima
-			Khadija_Khadijah Khalila Kili Layla Malika Mariam_Maria Mina Nadia Rashida Shadia Shakira Sukda Tebunnu Wahida
-			Ya Yasmin
-		}
-		modifier = west_african_culture_modifier
-	}
-
 	hausa = {
 		graphical_cultures = { westafricangfx africangfx }
 		color = { 0.9 0.55 0.8 }
@@ -8373,10 +7822,14 @@ central_african = {
 			Safiyya_Safiyyah Sakinah Salimah Samirah Sandamata Shadia Shakira Shata Shawata Shukriyah SUmayya Talatu
 			Turunku Wahida Walzama Yakumo Yanbamu Yasmin Yukuna Zahrah Zainab_Zainab Zakiyyah Zama Zaytun Zubayda_Zubaidah
 		}
-		modifier = west_african_culture_modifier
+		modifier = default_culture_modifier
 	}
+}
 	
-	### Umbra Spherae
+omotic_group = {
+		alternate_start = { NOT = { has_alternate_start_parameter = { key = special_culture value = animal_world } } }
+		graphical_cultures = { africangfx westafricangfx }
+		
 	omotic = {
 		graphical_cultures = { africangfx westafricangfx }
 		secondary_event_pictures = bedouin_arabic
@@ -8424,75 +7877,6 @@ central_african = {
 		dukes_called_kings = yes
 		modifier = default_culture_modifier
 	}
-	
-	nilotic = {
-		graphical_cultures = { africangfx westafricangfx }
-		secondary_event_pictures = bedouin_arabic
-		
-		color = { 0.7 0.6 0.2 }
-
-		male_names = {
-			Alier Alou Bol Chol Deng Dut Garang Hol Jok Kuol Kuur Mabior Makuach Marial Mayol Teng Thon
-			Kapalei Koinet Komeyicin Kurary Leboo Legeny Legishon Lemaron Lemashon Lemayian Lembui Lemuanik Lolkerra Maitera Masigonde Mbiraru Mejooli
-			Meticiki Murunga Naengop Nampazo Ntimama Oloishona Parneres Sabore Sankei Sankale Santamo Simel Sironka Surum Tonkei
-		}
-		female_names = {
-			Acol Achor Adut Agau Agop Ajuong Akech Aker Alek Aluel Amer Anon Atap Atong Awek Ayen Nyandeng
-			Isina Kingasunye Kiserian Lankenua Liloe Malazo Naeku Naimutiae Naipanoi Naisaruru Naisenya Naisiae Naisianoi Nalangu Nalutuesha Namelok Namunyak
-			Naramal Naserian Nataana Nkasiogi Peresian Pion Resson Sankau Segeyian Semeyian Siglal Siatamei Simaloi Simu Sintamei Sipanto Sopiato Tanei
-			Tentoyia Terenua Tigisi
-		}
-
-		founder_named_dynasties = yes
-		dukes_called_kings = yes
-		modifier = default_culture_modifier
-	}
-	
-	sudanese = {
-		graphical_cultures = { africangfx westafricangfx }
-		secondary_event_pictures = bedouin_arabic
-		
-		color = { 0.3 0.7 0.4 }
-
-		male_names = {
-			Alier Alou Bol Chol Deng Dut Garang Hol Jok Kuol Kuur Mabior Makuach Marial Mayol Teng Thon
-			Kapalei Koinet Komeyicin Kurary Leboo Legeny Legishon Lemaron Lemashon Lemayian Lembui Lemuanik Lolkerra Maitera Masigonde Mbiraru Mejooli
-			Meticiki Murunga Naengop Nampazo Ntimama Oloishona Parneres Sabore Sankei Sankale Santamo Simel Sironka Surum Tonkei
-		}
-		female_names = {
-			Acol Achor Adut Agau Agop Ajuong Akech Aker Alek Aluel Amer Anon Atap Atong Awek Ayen Nyandeng
-			Isina Kingasunye Kiserian Lankenua Liloe Malazo Naeku Naimutiae Naipanoi Naisaruru Naisenya Naisiae Naisianoi Nalangu Nalutuesha Namelok Namunyak
-			Naramal Naserian Nataana Nkasiogi Peresian Pion Resson Sankau Segeyian Semeyian Siglal Siatamei Simaloi Simu Sintamei Sipanto Sopiato Tanei
-			Tentoyia Terenua Tigisi
-		}
-
-		founder_named_dynasties = yes
-		dukes_called_kings = no
-		modifier = default_culture_modifier
-	}
-	
-	zambian = {
-		graphical_cultures = { africangfx westafricangfx }
-		secondary_event_pictures = bedouin_arabic
-		
-		color = { 0.2 0.3 0.8 }
-
-		male_names = {
-			Alier Alou Bol Chol Deng Dut Garang Hol Jok Kuol Kuur Mabior Makuach Marial Mayol Teng Thon
-			Kapalei Koinet Komeyicin Kurary Leboo Legeny Legishon Lemaron Lemashon Lemayian Lembui Lemuanik Lolkerra Maitera Masigonde Mbiraru Mejooli
-			Meticiki Murunga Naengop Nampazo Ntimama Oloishona Parneres Sabore Sankei Sankale Santamo Simel Sironka Surum Tonkei
-		}
-		female_names = {
-			Acol Achor Adut Agau Agop Ajuong Akech Aker Alek Aluel Amer Anon Atap Atong Awek Ayen Nyandeng
-			Isina Kingasunye Kiserian Lankenua Liloe Malazo Naeku Naimutiae Naipanoi Naisaruru Naisenya Naisiae Naisianoi Nalangu Nalutuesha Namelok Namunyak
-			Naramal Naserian Nataana Nkasiogi Peresian Pion Resson Sankau Segeyian Semeyian Siglal Siatamei Simaloi Simu Sintamei Sipanto Sopiato Tanei
-			Tentoyia Terenua Tigisi
-		}
-
-		founder_named_dynasties = yes
-		dukes_called_kings = no
-		modifier = default_culture_modifier
-	}
 }
 
 west_african = {
@@ -8516,7 +7900,7 @@ west_african = {
 			Djeneba Djenly Djire Fadima Fatim Fatoumata Halima Hawa Ina Kadi Kilia Kolonkan Lorane Mariam
 			Namandjé Nafissa Namiss Nana Safiatou Salimata Sassouma Sidibé Siya Youma Zeinab
 		}
-		modifier = west_african_culture_modifier
+		modifier = default_culture_modifier
 	}
 
 	soninke = {
@@ -8535,123 +7919,6 @@ west_african = {
 			Fadima Fatim Fatoumata Halima Hawa Ina Kondolon Kadi Kilia Kolonkan Lorane Mariam Namandjé Nafissa
 			Namiss Nana Sané Sogolon Safiatou Salimata Sidibé Siya Youma Zeinab
 		}
-		modifier = west_african_culture_modifier
-	}
-
-	wolof = {
-		graphical_cultures = { westafricangfx africangfx }
-		color = { 0.4 0.4 0.2 }
-		male_names = {
-			Abubakari Akoi Alayaman Ali Ali-Fay Botale Badgie Buur Bamari Birama Bisi Biyu Bonga Diawdine
-			DiopDiouf Daoud Diara Fode Fatta Fuluku Gane Gao Kabayo Kanafa Kassa Kaya Kayna Kinkin Kukuray Ishaq
-			Isa Labi Lat Lamane Maad Mahecor M'Bali Mamadi Mamoudou Musa_Moses Ndyabe Ndyay Ndyadyay Ouali Ouati Reidja
-			Sinig Saloum Salman Sandaki Soumaba Sulayman_Solomon Takoi Tib Tchialaw Tasmier War Youssou Yama Yasiboy
-			Zakoi Zenku
-		}
-		female_names = {
-			Kondolon Sané Sogolon Tekhaye Adja Alima Amita Aoua Aminata Aichata Aissata Barakissa Bintou Deye
-			Djeneba Djenly Djire Fadima Fatim Fatoumata Halima Hawa Ina Kadi Kilia Kolonkan Lorane Mariam
-			Namandjé Nafissa Namiss Nana Safiatou Salimata Sassouma Sidibé Siya Youma Zeinab
-		}
-		modifier = west_african_culture_modifier
-	}
-
-	songhay = {
-		color = { 0.5 0.35 0.1 }
-		graphical_cultures = { westafricangfx africangfx }
-		male_names = {
-			Abi Abu Adamu_Adam Ahmad_Ahmad Al-Hajj Alayaman Ali Alkamiisa Ammar Ankabi Ar Arabi Aranda Baba Babba Bada
-			Baki Bakr Bani Bano Baru Bassarou Bay Ber Binta Birma Bisi Biya Biyay Biyo Bonkana Borgo Boumi Bukar
-			Buyunbu Daara Dala Dankataya Dao Daouda_David Dari Dawud_David Dum Dunku Duru Fadazaw Falaku Far
-			Fari-Mondzo Fay Fi Fodi Hanga Hargani Harun_Aaron Hassan_Hasan Hin Huseini Ibrahim_Abraham Igoumou Ikoi Ishaq
-			Isma'il Ize Jim Kaasei Kanafa Kanbu Karaway Karay Karbachi Kayna Keina Kibu'u Kima Kimi Kinba Kinkin
-			Kiray Kisha Kodama Koi Koize Kolon Komi Koy Ku Kukiya Kukura Kuli Kulun Kumay Kun Kur Kusoy Kusur
-			Laraba Maammarou Mahmud_Mahmud Malla Mar Mar-Chindin Mayroumfa Missi Morobani Moussa Muhammed Musa_Moses Nari Nuh
-			Nunta Ouankoy Samsou Samsou-Beri Sanay Shams Shinyunbu Silman Sorko-ije Sulayman_Solomon Sunni Takoi Tib Tomo
-			Uthman_Uthman Wunka Yama Yaqub_Jacob Yasiboy Yuma Zakoi Zalil Zunku
-		}
-		female_names = {
-			Adama Aisha Alkamiisa Amina Aminah Azzah Bilqis Chindi Daara Dangey Fanta Fatima_Fatima Fatima
-			Fitila Gando Geyka Hassana Hawa Huseina Kouton Lambu Layla Mecca Medina Nuru Tarifa Teko Zaynab_Zainab 
-		}
-		modifier = west_african_culture_modifier
-	}
-	
-	ivoir = {
-		graphical_cultures = { westafricangfx africangfx }
-		secondary_event_pictures = bedouin_arabic
-		
-		color = { 0.65 0.35 0.3 }
-
-		male_names = {
-			Abi-Bakr_Abu-Bakr Abubakari_Abu-Bakr Akoi Alayaman Ali_Ali Ali-Fay Ali-Kolon Ali-Zalil Badä Bakr Bakr-Kanbu Bamari Bankanu
-			Bannu Bassarou Bassi Birama Bisi Biyu Bonga Cisse Dankaran Daoud_David Dawud_David Demba Diara Düru
-			Faga-Laye Fatta Fodi Fuluku Fädazu Gane Gao Hargani Harun Igoumou Ishaq_Isaac Ismail_Ismail Kabayo Kalabi Kambine
-			Kanafa Kassa Kasseï Kaya Kayna Kinkin Kisha Kodama Koïzé Kukuray Kusoy Lahiltoul M'Bali Maammarou Maghan
-			Mahmud_Mahmud Majan Malla Mamadi Mamoudou Manding-Bory Mari-Djata Maÿroumfa Missi-Izé Morobani Musa_Moses
-			Nintasanay Nuh Ouali Ouankoÿ Ouati Reidja Sakoura Salman_Solomon Samsou-Béri Samsou-Keïna Sandaki Soumaba
-			Soumaoro Soundiata Sulayman_Solomon Takoi Tib Tomo_Thomas Tunka Umar_Umar Yama Yaqub_Jacob Yasiboy Zakoi Zenku
-		}
-		female_names = {
-			Adja Aichata Aissata Alima Aminata Amita Aoua Barakissa Bintou Deye Djeneba Djenly Djire Fadima
-			Fatim Fatoumata Halima Hawa Ina Kadi Kilia Kolonkan Lorane Mariam Nafissa Namandjé Namiss Nana
-			Safiatou Salimata Sassouma Sidibé Siya Sogolon Tekhaye Youma Zeïnab
-		}
-		
-		founder_named_dynasties = yes
-
-		modifier = default_culture_modifier
-	}
-
-	cameroonian = {
-		graphical_cultures = { westafricangfx africangfx }
-		secondary_event_pictures = bedouin_arabic
-		
-		color = { 0.85 0.35 0.2 }
-
-		male_names = {
-			Abi-Bakr_Abu-Bakr Abubakari_Abu-Bakr Akoi Alayaman Ali_Ali Ali-Fay Ali-Kolon Ali-Zalil Badä Bakr Bakr-Kanbu Bamari Bankanu
-			Bannu Bassarou Bassi Birama Bisi Biyu Bonga Cisse Dankaran Daoud_David Dawud_David Demba Diara Düru
-			Faga-Laye Fatta Fodi Fuluku Fädazu Gane Gao Hargani Harun Igoumou Ishaq_Isaac Ismail_Ismail Kabayo Kalabi Kambine
-			Kanafa Kassa Kasseï Kaya Kayna Kinkin Kisha Kodama Koïzé Kukuray Kusoy Lahiltoul M'Bali Maammarou Maghan
-			Mahmud_Mahmud Majan Malla Mamadi Mamoudou Manding-Bory Mari-Djata Maÿroumfa Missi-Izé Morobani Musa_Moses
-			Nintasanay Nuh Ouali Ouankoÿ Ouati Reidja Sakoura Salman_Solomon Samsou-Béri Samsou-Keïna Sandaki Soumaba
-			Soumaoro Soundiata Sulayman_Solomon Takoi Tib Tomo_Thomas Tunka Umar_Umar Yama Yaqub_Jacob Yasiboy Zakoi Zenku
-		}
-		female_names = {
-			Adja Aichata Aissata Alima Aminata Amita Aoua Barakissa Bintou Deye Djeneba Djenly Djire Fadima
-			Fatim Fatoumata Halima Hawa Ina Kadi Kilia Kolonkan Lorane Mariam Nafissa Namandjé Namiss Nana
-			Safiatou Salimata Sassouma Sidibé Siya Sogolon Tekhaye Youma Zeïnab
-		}
-		
-		founder_named_dynasties = yes
-
-		modifier = default_culture_modifier
-	}
-	
-	gabonese = {
-		graphical_cultures = { westafricangfx africangfx }
-		secondary_event_pictures = bedouin_arabic
-		
-		color = { 0.35 0.25 0.6 }
-
-		male_names = {
-			Abi-Bakr_Abu-Bakr Abubakari_Abu-Bakr Akoi Alayaman Ali_Ali Ali-Fay Ali-Kolon Ali-Zalil Badä Bakr Bakr-Kanbu Bamari Bankanu
-			Bannu Bassarou Bassi Birama Bisi Biyu Bonga Cisse Dankaran Daoud_David Dawud_David Demba Diara Düru
-			Faga-Laye Fatta Fodi Fuluku Fädazu Gane Gao Hargani Harun Igoumou Ishaq_Isaac Ismail_Ismail Kabayo Kalabi Kambine
-			Kanafa Kassa Kasseï Kaya Kayna Kinkin Kisha Kodama Koïzé Kukuray Kusoy Lahiltoul M'Bali Maammarou Maghan
-			Mahmud_Mahmud Majan Malla Mamadi Mamoudou Manding-Bory Mari-Djata Maÿroumfa Missi-Izé Morobani Musa_Moses
-			Nintasanay Nuh Ouali Ouankoÿ Ouati Reidja Sakoura Salman_Solomon Samsou-Béri Samsou-Keïna Sandaki Soumaba
-			Soumaoro Soundiata Sulayman_Solomon Takoi Tib Tomo_Thomas Tunka Umar_Umar Yama Yaqub_Jacob Yasiboy Zakoi Zenku
-		}
-		female_names = {
-			Adja Aichata Aissata Alima Aminata Amita Aoua Barakissa Bintou Deye Djeneba Djenly Djire Fadima
-			Fatim Fatoumata Halima Hawa Ina Kadi Kilia Kolonkan Lorane Mariam Nafissa Namandjé Namiss Nana
-			Safiatou Salimata Sassouma Sidibé Siya Sogolon Tekhaye Youma Zeïnab
-		}
-		
-		founder_named_dynasties = yes
-
 		modifier = default_culture_modifier
 	}
 }
@@ -8705,7 +7972,7 @@ north_african = {
 			Tudert Tuh'r'ict Tureght Ultafa Wenza Wnissa Wrina Z'diant Z'ergha Zaghwa Zahida Zamba Zibba Zilgum
 			Zubayda_Zubaidah Zunagha Zwina Zwira
 		}
-		modifier = berber_culture_modifier
+		modifier = default_culture_modifier
 		dynasty_title_names = yes
 		founder_named_dynasties = yes
 		allow_looting = yes
@@ -8757,7 +8024,7 @@ north_african = {
 		male_patronym = "ibn "
 		female_patronym = "bint "
 		prefix = yes
-		modifier = berber_culture_modifier
+		modifier = default_culture_modifier
 		dynasty_title_names = yes
 		founder_named_dynasties = yes
 		allow_looting = yes
@@ -8809,7 +8076,7 @@ north_african = {
 		male_patronym = "ibn "
 		female_patronym = "bint "
 		prefix = yes
-		modifier = tuareg_culture_modifier
+		modifier = default_culture_modifier
 		dynasty_title_names = yes
 		founder_named_dynasties = yes
 		allow_looting = yes
@@ -8861,7 +8128,7 @@ north_african = {
 		male_patronym = "ibn "
 		female_patronym = "bint "
 		prefix = yes
-		modifier = berber_culture_modifier
+		modifier = default_culture_modifier
 		dynasty_title_names = yes
 		founder_named_dynasties = yes
 		allow_looting = yes
@@ -8913,7 +8180,7 @@ north_african = {
 		male_patronym = "ibn "
 		female_patronym = "bint "
 		prefix = yes
-		modifier = berber_culture_modifier
+		modifier = default_culture_modifier
 		dynasty_title_names = yes
 		founder_named_dynasties = yes
 		allow_looting = yes
@@ -8962,7 +8229,7 @@ north_african = {
 			Tudert Tuh'r'ict Tureght Ultafa Wenza Wnissa Wrina Z'diant Z'ergha Zaghwa Zahida Zamba Zibba Zilgum
 			Zubayda_Zubaidah Zunagha Zwina Zwira
 		}
-		modifier = tuareg_culture_modifier
+		modifier = default_culture_modifier
 		dynasty_title_names = yes
 		founder_named_dynasties = yes
 		allow_looting = yes
@@ -8986,34 +8253,10 @@ north_african = {
 			Guayarmina Ibaya Idaira Ico Itahisa Mifaya Nira Nisa Nisamar Ramagua Sibisse Tamonante Teguise
 			Tenesoya Tinguefaya Zorahaya
 		}
-		modifier = berber_culture_modifier
+		modifier = default_culture_modifier
 		dynasty_title_names = yes
 		founder_named_dynasties = yes
 		allow_looting = yes
-	}
-	
-	guanchinet = {
-		graphical_cultures = { berbergfx }
-		
-		color = { 0.3 0.2 0.1 }
-		
-		male_names = {
-			Guanarigato Betzenuriga Vinque Chindia Binicherque Archinife Tamanca Bencomo Guanareme Betancaice Acaimo_Acaimo Acaymo_Acaimo Adjona Añaterve Beneharo Pelicar
-			Pelinor Romen Tegueste Maninidra Adargoma Doramas Tanausú Atanausu Tinguaro Chimechia Achimenchia Ache Ahuago Alby Altaha Asche Atche Atchen
-			Avago Chemira Dafra Guardafía Mahan Mahey Saco Tiguafaya Zonzamas Amen Alzanxiquian Afaro Agonec Anapa Ar Aran Ataman Banot Benesmen Benichen
-			Bicararo Cancha Cel Chucar Cichiciquizo Coran Coraja Cuca Gofio Guan Guanamana Amana Guarirari Guijon Guirre Jarco Machet Mocan N-amet Rimo
-			Petut Relac Reste Sahur Sahec Samel Tabona Tagorar Tamarco Tanaga Tagaire Teyde Van Xarco Xerax Zahana Zahori Zaxi Sani Quian Harco Sunta
-			Tinerfe Bentor
-		}
-		female_names = {
-			Yaiza Hadaza Isora Aniagua Dafra Faina Fayna Ico Teguise Timanfaya Achimayec Ahof Ahorer Ahico Aguere Ana Ara Chacarquen Chafa Chafana Chamato
-			Cucaha Efiai Guaya Hacichei Hari Harimaguada Haro Hana Haya Maguada Magath Manja Maja Manse Mayec Morangana N-azet Nun O-che Ofiac Quebehi Sole
-			Sabagua Sahana Tabayba Tagasaste Taginaste Taoro Orotava Tara Taraire Tea Xerax Yoya Zucasa Zonfa Hirahi
-		}
-		
-		founder_named_dynasties = yes
-		
-		modifier = default_culture_modifier
 	}
 }
 
@@ -9129,7 +8372,7 @@ italian_group = {
 			Teresa
 		}
 		from_dynasty_prefix = "di "
-		modifier = sardinian_culture_modifier
+		modifier = default_culture_modifier
 		pat_grf_name_chance = 30
 		mat_grf_name_chance = 10
 		father_name_chance = 25
@@ -9222,7 +8465,7 @@ italian_group = {
 			Valentina_Valentina Violante_Yolanda Virginia_Virginia
 		}
 		from_dynasty_prefix = "di "
-		modifier = sicilian_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 30
 		mat_grf_name_chance = 10
@@ -9346,7 +8589,7 @@ italian_group = {
 			Viola_Viola Virginia_Virginia Vittoria_Vittoria Viviana_Viviana
 		}
 		from_dynasty_prefix = "di "
-		modifier = central_italian_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 30
 		mat_grf_name_chance = 10
@@ -9472,7 +8715,7 @@ italian_group = {
 			Virginia_Virginia Vittoria_Vittoria Viviana_Viviana
 		}
 		from_dynasty_prefix = "di "
-		modifier = central_italian_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 30
 		mat_grf_name_chance = 10
@@ -9604,7 +8847,7 @@ italian_group = {
 			Virginia_Virginia Vittoria_Vittoria Viviana_Viviana
 		}
 		from_dynasty_prefix = "di "
-		modifier = sicilian_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 30
 		mat_grf_name_chance = 10
@@ -9730,7 +8973,7 @@ italian_group = {
 			Virginia_Virginia Vittoria_Vittoria Viviana_Viviana
 		}
 		from_dynasty_prefix = "di "
-		modifier = central_italian_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 30
 		mat_grf_name_chance = 10
@@ -9856,7 +9099,7 @@ italian_group = {
 			Virginia_Virginia Vittoria_Vittoria Viviana_Viviana
 		}
 		from_dynasty_prefix = "di "
-		modifier = ligurian_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 30
 		mat_grf_name_chance = 10
@@ -9897,7 +9140,7 @@ italian_group = {
 			Sichelgaita Swanahild_Swanahild Theodelinde Theoderada Theodota Uta_Ute Walderada_Waltrud Wisigarda
 		}
 		from_dynasty_prefix = "von "
-		modifier = langobardisch_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 30
 		mat_grf_name_chance = 10
@@ -10023,7 +9266,7 @@ italian_group = {
 			Virginia_Virginia Vittoria_Vittoria Viviana_Viviana
 		}
 		from_dynasty_prefix = "di "
-		modifier = lombard_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 30
 		mat_grf_name_chance = 10
@@ -10149,7 +9392,7 @@ italian_group = {
 			Virginia_Virginia Vittoria_Vittoria Viviana_Viviana
 		}
 		from_dynasty_prefix = "di "
-		modifier = venetian_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 30
 		mat_grf_name_chance = 10
@@ -10191,7 +9434,7 @@ italian_group = {
 			Valerja_Valeria Virgina_virginia Viola_Yolanda Vittaurja_Victoria
 		}
 		from_dynasty_prefix = "de "
-		modifier = venetian_culture_modifier
+		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 30
 		mat_grf_name_chance = 15
@@ -10262,62 +9505,11 @@ italian_group = {
 		mat_grm_name_chance = 50
 		mother_name_chance = 0
 		disinherit_from_blinding = yes
-		modifier = roman_culture_modifier
-	}
-}
-
-mesoamerican = {
-	graphical_cultures = { mesoamericangfx muslimgfx }
-	alternate_start = {
-		NOT = { has_alternate_start_parameter = { key = special_culture value = animal_world } }
-		has_alternate_start_parameter = { key = culture value = full_random }
-		has_dlc = "Sunset Invasion"
-	}
-
-	nahuatl = {
-		graphical_cultures = { mesoamericangfx }
-		alternate_start = {
-			has_alternate_start_parameter = { key = culture value = full_random }
-			has_dlc = "Sunset Invasion"
-		}
-		color = { 0.8 0.2 0.2 }
-		horde = yes
-		used_for_random = no
-		male_names = {
-			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin
-			Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli
-			Cuetzpalli Cuixtli Cuitlahuac Huitzilin Huitzilihuitl Huitzitl Huitztecol Iquehuacatzin Itzcoatl
-			Itzli Itzcuintli Ixtlilxochitl Mahchimaleh Matlal Mazatl Matlalihuitl Matlatzincatzin Maxtla Miztli
-			Moctezuma Moquihuix Necuametl Nezahualcoyotl Nezahualpilli Nochehuatl Ocuil Olli Opochtli Ozomatli
-			Quauhtli Tapayaxi Tecocoltzin Tecolotl Tetlepanquetzaltzin Tezozomoc Tizoc Tizocic Tlacaelel
-			Tlacaeleltzin Tlalli Tlaloc Tochtli Tototl Tzompantzin Tlilpotonqui Topiltzin Totoquihuaztli Ueman
-			Yayauhqui Yolotli Yolyamanitzin Xicohtencatl Xiuhpilli Xihuitl Xipil Xipilli Xochitl Xochipepe
-			Xochipilli Yaotl Zipactonal Zolin
-		}
-		female_names = {
-			Achcauhtli Acxocueitl Ahuiliztli Amoxtli Atl Atotoztli Ayauhcihuatl Azcalxochitzin Centehua
-			Chalchiuitl Chicahua Chichimecacihuatzin Chipahua Chicomecoatl Chimalma Cihuaton Citlali Citlalli
-			Citlalmina Coaxoch Coszcatl Cozamalotl Cuicatl Eleuia Eloxochitl Etalpalli Eztli Huehue-Zaca Itotia
-			Iuitl Ixcatzin Izel Malinalxochitl Manauia Matlalatzin Mecatl Meztli Miahuaxiuitl Miyaoaxochitl
-			Mizquixahual Momoztli Nahuatl Necahual Nelli Ohtli Papa Patli Quiauhxochitl Sacnite Techichpotzin
-			Tezozomoc Tziquetzalpoztectzin Teiuc Teicuih Teyacapan Tepin Tezcatlan Tlacotl Tlahco Tlahcoehua
-			Toltecatl Tonalnan Tlazozomizqui Yoltzin Xilonen Xiloxoch Xiuhtomiyauhtzin Xochitl Xocoh Xocoyotl
-			Yaretzi Zeltzin Zyanya
-		}
-		from_dynasty_prefix = "of "
-		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
-		pat_grf_name_chance = 50
-		mat_grf_name_chance = 0
-		father_name_chance = 0
-		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
-		pat_grm_name_chance = 25
-		mat_grm_name_chance = 25
-		mother_name_chance = 0
 		modifier = default_culture_modifier
 	}
 }
 
-indoaryan = {
+indo_aryan_group = {
 	graphical_cultures = { indiangfx muslimgfx }
 	alternate_start = { NOT = { has_alternate_start_parameter = { key = special_culture value = animal_world } } }
 
@@ -11245,6 +10437,7 @@ tibetan_group = {
 		
 		modifier = default_culture_modifier
 	}
+	
 	sumpa = { # Sumpa
 		graphical_cultures = { bodpagfx mongolgfx indiangfx muslimgfx }
 		secondary_event_pictures = bedouin_arabic
@@ -11329,9 +10522,116 @@ tibetan_group = {
 		
 		modifier = default_culture_modifier
 	}
+	
+	bamar = {
+		graphical_cultures = { bodpagfx chinesegfx mongolgfx indiangfx muslimgfx }
+		
+		color = { 0.4 0.4 0.2 }
+		
+		male_names = {
+			Arun Aung Aye Bourey Chankrisna Dara Hlaing Maung
+		}
+		female_names = {
+			Chit Cho Hla
+		}
+
+		prefix = no
+
+		modifier = default_culture_modifier
+	}
+	
+	tripuri = {
+		graphical_cultures = { bodpagfx chinesegfx mongolgfx indiangfx muslimgfx }
+		
+		color = { 0.5 0.4 0.3 }
+		
+		male_names = {
+			Maha Dharma Ratna Pratap Vijaya Mukut Dhanya Dhwaja Deva Indra Vijaya Ananta
+			Udai Joy Amar Rajdhar Ishwar Yashodhar Kalyan Govinda Chhatra Govinda Rama Narendra Mahendra
+			Jagat Mukunda Lakshman Krishna "Rama Ganga" Durga "Kashi Chandra" "Bir Chandra" Radha
+			Birendra Bakram Kirit Raja Agar Dungar Jujhar Rajadurlabha
+		}
+		female_names = {
+			Satyavati Subhadra Hira Sundari Lakshmi Mahadevi Ratnavati Machhatri Kamala Vijaya Sarasvati Vamadevi
+			Ishwari
+		}
+
+		prefix = no
+
+		modifier = default_culture_modifier
+	}
+	
+	rakhine = {
+		graphical_cultures = { bodpagfx chinesegfx mongolgfx indiangfx muslimgfx }
+		
+		color = { 0.6 0.5 0.3 }
+		
+		male_names = {
+			Khittathin Sandathin "Yin Phyu" "Naga Thuriya" "Thuriya Raza" Ponnaka Gyiphyu Sithabin
+			Nangyi Lade Kala Bilu Thinkhaya Than Pati Letya Thihaba Razagyi Thagiwin Kawliya Datharaza
+			Ananthiri Minpunsa Pyinsakawa Danayupok Salinkabo Misuthin Ngaranman Ngapogan Ngarakhaing
+			Ngakyon Ngasu Swethin Minkhaung Kabalaung Thanabin Nganathin Nganalon Alawmaphyu Razathu
+			"Saw Lu" Uzana Sawmongyi Nankyargyi Hti Thiwarit Thinhse Myinhseingyi Theinkhathu "Saw Mon"
+			Narameikhla Naranu Basawphyu Dawlya Basawnyo Ranaung Salingathu Raza Gazapati "Saw O" Thazata
+			Bin Dikkha "Saw Hla" Sekkya Hpalaung Khamaung Hari Sanay Ngakuthala Thado Sanda Uggabala "Wara Dhamma"
+			"Mani Dhamma" Nawrahta Mayuppiya Kalamandat Naradipati Wimala Wizaya Narapawara Wizala Madarit
+			"Nara Apaya" Thirithu Parama Thumana Thammada Thaditha
+		}
+		female_names = {
+			"Saw Mae Pon" "Mya Thandar" "Sein Khine" "Aung Mae" "Gaung Pon Mae" "Chi Mae" "Dar Phyu" Panthuzar
+			"Saw Shwe Kya" "Aung Kyawt San" "Tansaung Miphaya" "Saw Thandar Wai" "Shwe Yi" "Nan Htet Mibaya"
+			"Hmauk Taw Ma" "Shwe Ku" "Phwar Thway" "Phwar Saw" "Nan Htet-Miphya" "Phwar-May" Kanadamar Thukhuma
+			Thubarabin "Thubara-Dewi" Thukumariya "Thuwanna Kayla" Radanar-Piya "Yadanar Konmaryi" "Shin lat" "Saw Bot Mae"
+			"Miphaya Phyu" "Nat Shin Mae" "Nanhtet Miphaya" "Natshinmae" "Dhamma" "Shin Htwe" Thupaba Wizala
+			"Saw Mi Taw" "Saw Thanda" "Saw Latt" "Saw Oo" "Saw Thanda" "Saw Bon-Htut" "Saw Mi Latt" "Saw Min Hla"
+			"Saw Kauk Ma" "Minkhaung Medaw" "Saw Mae Kyi" "Saw Shin" "Saw Nan-Hset" "Taung-Nan Mibara" "Saw Thuza"
+			"Saw Thuba" "Shin Phwa" "Shin Pyo" "Saw Nandi" "Saw Manaw" "Saw Mi Saw" "Saw Shin Saw" "Min Gahna"
+			"Saw Pan-Phya" "Min Pan Hla" "Saw Ru Saw" "Saw Htin" "Saw Pa-Ba" "Saw Pyinsa" "Saw Yin Mi" "Saw Khamout"
+			"Saw Sit" "Saw Pu Nyo" "Saw Pyauk" "Saw Nyet Htwa" "Saw Hla Mway" "Saw Nyo" "Saw Thanda Phyu" " Saw Mar-La"
+			"Saw Shwe-Thit" "Shwe Sin Pyaung" Thabula "Shwe Gu-Tha"
+		}
+
+		prefix = no
+
+		modifier = default_culture_modifier
+	}
+	
+	lolo = {
+		graphical_cultures = { bodpagfx chinesegfx mongolgfx indiangfx muslimgfx }
+		
+		color = { 0.6 0.4 0.2 }
+		
+		male_names = {
+			Arun Aung Aye Bourey Chankrisna Dara Hlaing Maung
+		}
+		female_names = {
+			Chit Cho Hla
+		}
+
+		prefix = no
+
+		modifier = default_culture_modifier
+	}
+	
+	kachin = {
+		graphical_cultures = { bodpagfx chinesegfx mongolgfx indiangfx muslimgfx }
+		
+		color = { 0.5 0.5 0.2 }
+		
+		male_names = {
+			Gam-Shawng Gun-Maw La-Nan La-Rip Lum-Dau
+		}
+		female_names = {
+			Chit Cho Hla
+		}
+
+		prefix = no
+
+		modifier = default_culture_modifier
+	}
 }
 
-chinese_group = {
+chinese = {
 	graphical_cultures = { chinesegfx mongolgfx indiangfx muslimgfx }
 	alternate_start = {
 		NOT = { has_alternate_start_parameter = { key = special_culture value = animal_world } }
@@ -11354,6 +10654,29 @@ chinese_group = {
 		}
 		
 		dynasty_title_names = no
+		
+		from_dynasty_prefix = ""
+		
+		modifier = default_culture_modifier
+	}
+	
+	bai = {
+		graphical_cultures = { hangfx chinesegfx mongolgfx indiangfx muslimgfx }
+		unit_graphical_cultures = { chinesegfx }
+		secondary_event_pictures = bedouin_arabic
+		
+		dynasty_name_first = yes
+		
+		color = { 0.7 0.4 0.15 }
+
+		male_names = {
+			Ji Yu Deyi Wuji Xuanling Ruhui Jing Yanbo Shilian Shiji Xingcheng Zhining Suiliang Rengui Zhide Liangsi Daijia Chengsi Changliang Qinwang Jishan Xiujing Yuanzhong Chengqi Shi Ziyi Maozhen Wei Gongren Shidao Wenben Zhou Jifu Shi Dunli Yifu Zhenglun Jingzong Xiangdao Dunxin Liben Chujun Jingxuan Yuanchao Zhiwen Yan Weidao Judao Wenwei Zhaode Sansi Renjie Qiao Zaisi Xuanwei Shuji Anshi Chuke Zhizhong Shaojing Sili Chong Shuo Jiazhen Song Jiuling Linfu Guozhong Yuan Fuguo Huaiguang Sheng Jian Hong Minzhong Zhaodu Wenjing Kang Shuda Yuanji Gui Zheng Wenjie Yuan Maojiang Yushi Dexuan Luo Wenguan Chujun Jingxian Dezhen Siqian Xuantong Guangfu Youning Wuzi Qinke Tong Shou Hui Yanfan Huai Juyuan Chuna Zhizhong Rizhi Youqiu Huaizhen Xi Zhigu Huaishen Qianyao Guangting Yaoqin Xianke Shizhi Xilie Jiansu Jinqin Jin Sui Duo Mei Congdang Yanruo Yin Yan Zhou Junji Yaxiang Chengqing Yi Yanwei Chuyue Hongwu Anqi Renben Heng Yiyan Zhizhou Da'an Daiju Hongmin Weizhi Benli Xiaojie Jiongxiu Dan Jianzhi Huaiyuan Qinming Renyuan Zhigu Xiangxian Na Lin Zhengyi Jingchen Junliang Cha Fangzhi Lübing Youyi Sihui Fuyuan Zhigu Xingben Zhirou Youdao Zhihong Shenji Yuanzong Yuansu Rui Juyuan Yuanfang Shifang Jingquan Yunyuan Yuanheng Fangqing Daoguang Yuanchong Xu Jingze Rong Weiqian Yanzhao Jiafu Yuanhong Xilie Guan Mian Ting Qi Kui Hua Zunqing Zai Hongjian Gun Zhongchen Youfu Lin Yi Bo Congyi Gongfu Yanshang Zao Huang Hun Bi Can Zhi Dan Mai Sun Zongru Yuqing Ying Xunyu Zhiyi Huangshang Yuanheng Di Pan Deyu Jiang Hongjin Guanzhi Fengji Qun Yong Yijian Fu Wenchang Yuanying Sengru Chen Yizhi Chuhou Zongmin Shenxi Guyan Yuanyu Xun Tan Yixing Sifu Shen Rangyi Su Shang Minzhong Yuanshi Guicong Tao Mo Lang Shenyou Zhuan Shenquan Xian Shou Que Shang Zhan Ye Wei Che Gou Changtu Zhaodu Rangneng Yanchang Xisheng Chuan Pu Wo She Riyong Renshi Guangqi Zhirou Yanjing Dewei Shouyi Longji Jie Shouli Yuanzhen Xinfu Yun
+		}
+		female_names = {
+			Anzong Wenshou Aiqin Que Daoan Maoying Qigui Rongji Huinan Yuying Yingwu Xianyuan Lingyuan Wanying Yingmei Zhenfeng Miaodeng Farong Yuzhu Jiangui Fanjing Daozheng Zhirong Huizhao Shuyi Shuyuan Jieyu Ronghua Zhaoyi Lanying Baoming Jingying Shaoming Huiduan Lingqu Yu'er Nizi Jinghui Shunhua Shangrou Hui Lingguang Lingying Lingbing Zhaopei Yao'er Miaorong Shaoji Jingyan Lihua Wuhua Xianji Shouji Zhaorong Ying Xianzi Puxian Lian Mingxiang Yuanhua Tong'e Mingyue Zhaojun "Zu'e" Yuguang Zuqi Zhonghua Yuyi Changyi Huanghua Xiaolian "E'zi" Manyue Yueyi Yueshang Qieluo Lingji Zhou Shuzhen Gui Hui Huitong "Wan'er" Shun Fangmei Zhenyi Caiping Yuhuan Qiniang Qiu Qiuniang Jianrong Chongyan Zhenniang Yuniang Fujin Shiguang "E'huang" "Nüying" Xinyue Hanyue Feishan Shunxuan Taihua Dexiu Jinfeng Chunyan Qiongxian E Taotao Bingyi Yunu Zuimei Chunluo Fengniang Daoqing Zhuozhen Yan Yanyan "Shi'er" "Xian'e" Nanxian Shanxiang Ai Shanli Jinluan "Xi'er" "Zhen'er" Wanyi Mantang Xijie Baozhu Xiuying Zhongyang Ruoxian Ruozhao Ruoxin Ruoxun Ruolun Miaozhen Mao'er Daoyi Niangzi Saihua Guiying Shengqiong Chaochao Fu Zhaoyun Rouniang Rounu Yuniang Biniang Rui Jinhua Guilan Shanwei Suyue Yunxian Nenniang Xiang Zhenli Cuiqiao Zhihui Lingxuan Jicong Shuzhu Yujing Yuanyuan Xiaowan Hengbo Mei Xiangjun Rushi Xianglan Ruying Yuhua Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen "Xiao'e" Xiaoying Xiaoyuan Xiaoji Xiuui "Nüjie" Qingyu Zhichong "Yi'an" Youwu Yupan Jinnu Jinluo Fujin "Hu'er" Jinxian Qiaoyun Sanjin Xiangyun Zhuzhu "Jin'er" Chuanzhu Jinzhu Xiaojin Huimei Miaoyu Quyi Siniang Sanniang "A'wu" Lizhi Jing Shu Lingyue Xianhui Jijiang "Guo'er" Huawan Huazhuang Chang Dehua Panpan Caichun Wenxiu Hong Honghong "A'man" Huimei Shuozhen Youwei Huilan Lize Mingda Sujie Yiyang Hua Yuhuan Shi Diaochan Zheng Liu Kangyi Feiyan Hou Jiangnu Na Shengtong Zhi
+		}
+		
+		dynasty_title_names = yes
 		
 		from_dynasty_prefix = ""
 		
@@ -11799,8 +11122,6 @@ chinese_group = {
 		
 		modifier = default_culture_modifier
 	}
-
-	#UMBRA SPHERAE
 	
 	zhao = {
 		graphical_cultures = { chinesegfx eastasiangfx }

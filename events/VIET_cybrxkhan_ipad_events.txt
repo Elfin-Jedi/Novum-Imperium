@@ -3565,12 +3565,12 @@ character_event = {
 	
 	trigger = {
 		in_command = no
-		NOT = { culture_group = chinese_group }
+		NOT = { culture_group = chinese }
 		NOT = { religion = taoist }
 		NOT = {
 			any_courtier = {
 				OR = {
-					culture_group = chinese_group
+					culture_group = chinese
 					religion = taoist
 				}
 			}
@@ -11631,7 +11631,7 @@ character_event = {
 		in_command = no
 		is_abroad = no
 		NOT = { religion_group = indian_group }
-		NOT = { culture_group = indoaryan }
+		NOT = { culture_group = indo_aryan_group }
 		NOT = { culture_group = dravidian_group }
 		NOT = { culture_group = iranian }
 		NOT = { culture_group = tibetan_group }
@@ -11995,11 +11995,11 @@ character_event = {
 	
 	trigger = {
 		OR = {
-			culture_group = indoaryan
+			culture_group = indo_aryan_group
 			culture_group = dravidian_group
 			capital_scope = {
 				OR = {
-					culture_group = indoaryan
+					culture_group = indo_aryan_group
 					culture_group = dravidian_group
 					region = world_india
 				}
@@ -12095,11 +12095,11 @@ character_event = {
 	
 	trigger = {
 		OR = {
-			culture_group = indoaryan
+			culture_group = indo_aryan_group
 			culture_group = dravidian_group
 			capital_scope = {
 				OR = {
-					culture_group = indoaryan
+					culture_group = indo_aryan_group
 					culture_group = dravidian_group
 					region = world_india
 				}
@@ -12187,11 +12187,11 @@ character_event = {
 	trigger = {
 		#in_command = no
 		OR = {
-			culture_group = indoaryan
+			culture_group = indo_aryan_group
 			culture_group = dravidian_group
 			capital_scope = {
 				OR = {
-					culture_group = indoaryan
+					culture_group = indo_aryan_group
 					culture_group = dravidian_group
 					region = world_india
 				}
@@ -12285,7 +12285,7 @@ character_event = {
 	trigger = {
 		in_command = no
 		OR = {
-			culture_group = indoaryan
+			culture_group = indo_aryan_group
 			culture_group = dravidian_group
 		}
 		any_courtier = {
@@ -12294,7 +12294,7 @@ character_event = {
 			NOT = { trait = craven }
 			NOT = { trait = temperate }
 			OR = {
-				culture_group = indoaryan
+				culture_group = indo_aryan_group
 				culture_group = dravidian_group
 			}
 			OR = {
@@ -12369,7 +12369,7 @@ character_event = {
 				NOT = { trait = craven }
 				NOT = { trait = temperate }
 				OR = {
-					culture_group = indoaryan
+					culture_group = indo_aryan_group
 					culture_group = dravidian_group
 				}
 				OR = {
@@ -12431,7 +12431,7 @@ character_event = {
 	trigger = {
 		#in_command = no
 		#OR = {
-		#	culture_group = indoaryan
+		#	culture_group = indo_aryan_group
 		#	culture_group = dravidian_group
 		#}
 		#OR = {
@@ -12536,7 +12536,7 @@ character_event = {
 	trigger = {
 		#in_command = no
 		OR = {
-			culture_group = indoaryan
+			culture_group = indo_aryan_group
 			culture_group = dravidian_group
 		}
 		year = 900
@@ -14008,7 +14008,7 @@ character_event = {
 	trigger = {
 		#in_command = no
 		NOR = {
-			culture_group = indoaryan
+			culture_group = indo_aryan_group
 			culture_group = dravidian_group
 			any_realm_province = {
 				OR = {
@@ -14866,7 +14866,7 @@ character_event = {
 		name = VIETmisc.2307.b
 		trigger = {
 			OR = {
-				culture_group = chinese_group
+				culture_group = chinese
 				culture = khitan
 				culture = jurchen
 			}

@@ -1,8 +1,8 @@
 ma_i_an = {
-		graphical_cultures = { chinesegfx bodpagfx mongolgfx indiangfx muslimgfx }
+		graphical_cultures = { chinesegfx mongolgfx indiangfx muslimgfx }
 		
 	tagalog = {
-		graphical_cultures = { chinesegfx bodpagfx mongolgfx indiangfx muslimgfx }
+		graphical_cultures = { indochinesegfx chinesegfx mongolgfx indiangfx muslimgfx }
 		
 		color = { 0.5 0.6 0.4 }
 		
@@ -28,9 +28,11 @@ ma_i_an = {
 		prefix = no
 
 		modifier = default_culture_modifier
+		allow_looting = yes
+		seafarer = yes
 	}
 	cebuan = {
-		graphical_cultures = { chinesegfx bodpagfx mongolgfx indiangfx muslimgfx }
+		graphical_cultures = { indochinesegfx chinesegfx mongolgfx indiangfx muslimgfx }
 		
 		color = { 0.5 0.6 0.3 }
 		
@@ -60,6 +62,8 @@ ma_i_an = {
 		prefix = no
 
 		modifier = default_culture_modifier
+		allow_looting = yes
+		seafarer = yes
 	}
 }
 
@@ -67,7 +71,7 @@ papuan_group = {
 		graphical_cultures = { westafricangfx africangfx muslimgfx }
 		
 	papuan = {
-		graphical_cultures = { westafricangfx africangfx muslimgfx }
+		graphical_cultures = { southeastasiangfx westafricangfx africangfx muslimgfx }
 		
 		color = { 0.7 0.8 0.7 }
 		
@@ -130,10 +134,10 @@ papuan_group = {
 }
 
 sulawesi_group = {
-		graphical_cultures = { chinesegfx bodpagfx mongolgfx indiangfx muslimgfx }
+		graphical_cultures = { chinesegfx indiangfx bodpagfx mongolgfx muslimgfx }
 		
 	bugi = {
-		graphical_cultures = { chinesegfx bodpagfx mongolgfx indiangfx muslimgfx }
+		graphical_cultures = { borneangfx chinesegfx indiangfx bodpagfx mongolgfx muslimgfx }
 		
 		color = { 0.3 0.4 0.4 }
 		
@@ -193,9 +197,11 @@ sulawesi_group = {
 		prefix = no
 
 		modifier = default_culture_modifier
+		allow_looting = yes
+		seafarer = yes
 	}
 	minahasa = {
-		graphical_cultures = { chinesegfx bodpagfx mongolgfx indiangfx muslimgfx }
+		graphical_cultures = { borneangfx chinesegfx indiangfx bodpagfx mongolgfx muslimgfx }
 		
 		color = { 0.3 0.4 0.6 }
 		
@@ -254,15 +260,17 @@ sulawesi_group = {
 		prefix = no
 
 		modifier = default_culture_modifier
+		allow_looting = yes
+		seafarer = yes
 	}
 }
 
 maluku_group = {
 
-	graphical_cultures = { chinesegfx bodpagfx mongolgfx indiangfx muslimgfx }
+	graphical_cultures = { chinesegfx indiangfx bodpagfx mongolgfx muslimgfx }
 
 	malukan = {
-		graphical_cultures = { chinesegfx bodpagfx mongolgfx indiangfx muslimgfx }
+		graphical_cultures = { borneangfx chinesegfx indiangfx bodpagfx mongolgfx muslimgfx }
 		
 		color = { 0.8 0.2 0.4 }
 		
@@ -322,9 +330,11 @@ maluku_group = {
 		prefix = no
 
 		modifier = default_culture_modifier
+		allow_looting = yes
+		seafarer = yes
 	}
 	tenggaran = {
-		graphical_cultures = { chinesegfx bodpagfx mongolgfx indiangfx muslimgfx }
+		graphical_cultures = { borneangfx chinesegfx indiangfx bodpagfx mongolgfx muslimgfx }
 		
 		color = { 0.8 0.2 0.6 }
 		
@@ -379,14 +389,16 @@ maluku_group = {
 		prefix = no
 
 		modifier = default_culture_modifier
+		allow_looting = yes
+		seafarer = yes
 	}
 }
 
 malay_group = {
-		graphical_cultures = { chinesegfx bodpagfx mongolgfx indiangfx muslimgfx }
+		graphical_cultures = { chinesegfx indiangfx southindiangfx persiangfx bodpagfx mongolgfx muslimgfx }
 
 	malay = {
-		graphical_cultures = { chinesegfx bodpagfx mongolgfx indiangfx muslimgfx }
+		graphical_cultures = { indonesiangfx chinesegfx indiangfx southindiangfx persiangfx bodpagfx mongolgfx muslimgfx }
 
 		color = { 0.5 0.6 0.2 }
 
@@ -407,9 +419,11 @@ malay_group = {
 		}
 
 		modifier = default_culture_modifier
+		allow_looting = yes
+		seafarer = yes
 	}
 	minangkabau = {
-		graphical_cultures = { chinesegfx bodpagfx mongolgfx indiangfx muslimgfx }
+		graphical_cultures = { indonesiangfx chinesegfx indiangfx southindiangfx persiangfx bodpagfx mongolgfx muslimgfx }
 
 		color = { 0.5 0.6 0.4 }
 
@@ -430,14 +444,16 @@ malay_group = {
 		}
 
 		modifier = default_culture_modifier
+		allow_looting = yes
+		seafarer = yes
 	}
 	samudran = {
-		graphical_cultures = { chinesegfx bodpagfx mongolgfx indiangfx muslimgfx }
+		graphical_cultures = { indonesiangfx chinesegfx indiangfx southindiangfx persiangfx bodpagfx mongolgfx muslimgfx }
 
 		color = { 0.5 0.6 0.6 }
 
 		male_names = {
-			Agam Agam-Baro-Na Agam-Na-Rahmat Banta Bentara Gapeueh Gapi Geumpa Itam Jeumpa Meurah Rayek
+			Agam Agam-Baro-Na Agam-Na-Rahmat Banta Bentara Bintang Gapeueh Gapi Geumpa Itam Jeumpa Meurah Muda Puteh Rayek
 			Teguh-Agam-Meutuwah Ubit
 			Adi Adiputra Agung Agus Ahad Andika Anuar Atan Awang Baba Bachok Bagus Bambang Basuki Bayu Bestari Bintang
 			Biru Bongsu Bujang Budi Budiarto Bulat Che Chik Danang Danial Daud Demak Demang Deraman Deris Desa Dollah
@@ -447,7 +463,7 @@ malay_group = {
 			Teh Teruna Tuah Uda Ujang Ungu Usop Wira Yaakob Yahaya Yeop Yunos Zakaria Zulkarnain Zulkifli
 		}
 		female_names = {
-			Aji Blet Buleuen Bunthok Cahya Dara-Phon-Na Dien Gebrina-Rizki Inong Inseuen Keumala Maneh Meuligoe
+			Aji Blet Buleuen Bunthok Cahya Dara Dara-Phon-Na Dien Gebrina-Rizki Indah Inong Inseuen Intan Keumala Maneh Meuligoe
 			Meulu Meutia Mirah Nabeuet Putroe Seutia
 			Adiputri Aishah Ayu Bunga Cahaya Cempaka Cik Dara Dayang Delima Dewi Dian Embun Esah Hapsah Harum Haryati Indah
 			Intan Izzati Jenab Juwita Kartika Kartini Kembang Kemboja Kemuning Khatijah Kuntum Latipah Mahsuri Mahura
@@ -457,9 +473,11 @@ malay_group = {
 		}
 
 		modifier = default_culture_modifier
+		allow_looting = yes
+		seafarer = yes
 	}
 	batak = {
-		graphical_cultures = { chinesegfx bodpagfx mongolgfx indiangfx muslimgfx }
+		graphical_cultures = { indonesiangfx chinesegfx indiangfx southindiangfx persiangfx bodpagfx mongolgfx muslimgfx }
 
 		color = { 0.5 0.6 0.8 }
 
@@ -489,14 +507,16 @@ malay_group = {
 		}
 
 		modifier = default_culture_modifier
+		allow_looting = yes
+		seafarer = yes
 	}
 }
 
 bornean = {
-		graphical_cultures = { chinesegfx bodpagfx mongolgfx indiangfx muslimgfx }
+		graphical_cultures = { chinesegfx indiangfx bodpagfx mongolgfx muslimgfx }
 
 	dayak = {
-		graphical_cultures = { chinesegfx bodpagfx mongolgfx indiangfx muslimgfx }
+		graphical_cultures = { borneangfx chinesegfx indiangfx bodpagfx mongolgfx muslimgfx }
 
 		color = { 0.5 0.7 0.05 }
 
@@ -517,9 +537,11 @@ bornean = {
 		}
 
 		modifier = default_culture_modifier
+		allow_looting = yes
+		seafarer = yes
 	}
 	banjar = {
-		graphical_cultures = { chinesegfx bodpagfx mongolgfx indiangfx muslimgfx }
+		graphical_cultures = { borneangfx chinesegfx indiangfx bodpagfx mongolgfx muslimgfx }
 
 		color = { 0.5 0.6 0.05 }
 
@@ -540,6 +562,8 @@ bornean = {
 		}
 
 		modifier = default_culture_modifier
+		allow_looting = yes
+		seafarer = yes
 	}
 
 }
@@ -568,10 +592,10 @@ andaman = {
 }
 
 javanese_group = {
-		graphical_cultures = { chinesegfx bodpagfx mongolgfx indiangfx muslimgfx }
+		graphical_cultures = { chinesegfx indiangfx southindiangfx persiangfx bodpagfx mongolgfx muslimgfx }
 
 	javanese = {
-		graphical_cultures = { chinesegfx bodpagfx mongolgfx indiangfx muslimgfx }
+		graphical_cultures = { indonesiangfx chinesegfx indiangfx southindiangfx persiangfx bodpagfx mongolgfx muslimgfx }
 
 		color = { 0.2 0.2 0.1 }
 
@@ -624,9 +648,11 @@ javanese_group = {
 		}
 
 		modifier = default_culture_modifier
+		allow_looting = yes
+		seafarer = yes
 	}
 	sundanese = {
-		graphical_cultures = { chinesegfx bodpagfx mongolgfx indiangfx muslimgfx }
+		graphical_cultures = { indonesiangfx chinesegfx indiangfx southindiangfx persiangfx bodpagfx mongolgfx indiangfx muslimgfx }
 
 		color = { 0.2 0.2 0.3 }
 
@@ -659,6 +685,8 @@ javanese_group = {
 		}
 
 		modifier = default_culture_modifier
+		allow_looting = yes
+		seafarer = yes
 	}
 }
 
@@ -704,6 +732,8 @@ taiwanese = {
 		prefix = no
 
 		modifier = default_culture_modifier
+		allow_looting = yes
+		seafarer = yes
 	}
 	kilai = { #Gaoshan (Highlands)
 		graphical_cultures = { chinesegfx bodpagfx mongolgfx indiangfx muslimgfx }
@@ -745,6 +775,8 @@ taiwanese = {
 		prefix = no # The patronym is added as a suffix
 
 		modifier = default_culture_modifier
+		allow_looting = yes
+		seafarer = yes
 	}
 }
 
@@ -752,61 +784,29 @@ australia_group = {
 	graphical_cultures = { westafricangfx africangfx muslimgfx }
 
 	australian = {
-		graphical_cultures = { westafricangfx africangfx muslimgfx }
+		graphical_cultures = { southeastasiangfx westafricangfx africangfx muslimgfx }
 		
 		color = { 0.6 0.3 0.4 }
 		
 		# 
 		male_names = {
-			Abutan Adam Akai Aling Alui Amoi Angkouw Batas Bokau Bokong Bolang Bolung Bororing Boyoh Buyung Damongilala Damopoli Dapu Datu
-			Datumbanua Dayoh Dededaka Dendeng Dengah Dewat Dien Dimpudus Dipan Dompis Dondo Dondokambei Donsu Doodoh Doringin Dotulong
-			Dumais Dumanauw Dumbi Dungus Dusaw Egam Egetan Ekel Elean Gerungan Gigir Gimon Girot Goni Goniwala Gonta Gosal Gumalag
-			Gumansing Gumion Ilat Imbar Item Kaat Kaawoan Kaendo Kaeng Kaes Kairupan Kalengkongan Kalesaran Kalici Kalitow Kaloh Kalonta
-			Kalumata Kamagi Kambey Kambong Karuyan Karwur Kasenda Katopo Katuuk Kawengian Kawilarang Kawulusan Kawung Kawuwung Keincem
-			Kekung Keles Kelung Kembal Kembau Kembuan Kenap Kepel Kerap Koleangan Koloday Koly Komaling Kondoi Kontul Kopalit Koraah Korah
-			Korengkeng Korompis Koropitan Korouw Korua Kotambunan Kountud Kowaas Kowonbon Kowu Kowulur Koyansouw Kuhu Kulit Kumaat
-			Kumaunang Kumayas Kumendong Kumolontang Kumontoy Kupon Kusen Kusoi Lembong Lempas Lempou Lengkey Lengkoan Lensun Leong Lepar
-			Lesar Lewu Liando Limbat Limbong Limpele Lincewas Lintang Lintong Loing Lolombulan Lomboan Lompoliu Lonan Londa Londok Longdong
-			Lontaan Lontoh Losung Lowai Lowing Ludong Lumanau Lumangkun Lumatau Lumenpouw Lumenta Lumi Lumingas Luminuut Lumowa Lumunon
-			Luntungan Maengkom Maengkong Mailangkai Mailoor Maindoka Mainsouw Mait Makadada Makal Makaley Makaliwe Makangares Makaoron
-			Makarawis Makarawung Makatuuk Makawalang Makawulur Makiolol Mamahit Mamangkey Mamantouw Mamanua Mamarimbing Mamba Mambo Mambu
-			Mamentu Mamoto Mamuaya Mamuntu Mamusung Manarisip Manebu Manese Mangare Mangkey Mangowal Mangundap Manimporok Manopo Manorek
-			Mantoauw Manurip Manus Mapaliey Minder Mingkid Mmanua Mogot Mokalu Mokolensang Mokorimban Momongan Momor Momuat Mondigir Mondong
-			Mondoringin Mondou Mongi Mongilala Mongisidi Mongkaren Mongkau Mongkol Mongula Moniaga Moninca Moningka Moniung Mononimbar
-			Mononutu Montolalu Montong Montung Motto Muaya Mudeng Mukuan Mumek Mumu Mundung Muntu "Muntu Untu" Muntuan Musak Mussu Nangka
-			Nangon Nangoy Naray Nayoan Nelwan Nender Ngala Ngangi Ngantung Ngayouw Ngion Ogi Ogot Ogotan Oleng Oley Ombeng Ombu Ompi Ondang
-			Onsu Opit Oroh Otay Paat Pai Paila Pakasi Palangiten Palar Palenewen Palenteng Palilingan Palit Panambunan Panda Pandean Pandelaki
-			Pandey Pandi Pandong Pangalila Pangau Pangemanan Pangila Pangkerego Pangkey Pantonuwu Pantouw Parengkuan Paruntu Paseki Pasla
-			Pele Pelengkahu Pendang Pepah Pesik Pesot Piay Pinangkaan Pinantik Pinaria Pinontoan Pioh Piri Pitong Pitoy Podung Pola Poli
-			Polimpong Politon Poluakan Pomantouw Ponamon Pondaag Pongayouw Ponggawa Pongilatan Pongoh Ponosingon Pontoan Pontoh Pontororing
-			Poraweouw Porayouw Posumah Potu Poyouw Pua Pungus Punuh Purukan Pusung Putong Raintung Rambi Rambing Rambitan Rampangilei Rampen
-			Rampengan Ransun Rantung Ratag Rembang Rembet Rempas Rengku Rengkuan Rengkung Repi Retor Rimper Rindengan "Rindo Rindo" Robot Rogi
-			Rolangon Rolos Rombot Rompas Rompis Rondo Rondonuwu Rooro Rorimpandey Roring Rorintulus Rosok Ruaw Ruidengan Rumagit Rumambi
-			Rumampen Rumampuk Rumayar Rumbay Rumende Rumengan Rumenser Rumimpunu Rumincap Rumokoy Rumpesak Runturambi Sariowan Sarundayang
-			Saul Seke Seko Sembel Sembung Semeke Senduk Sengke Sengkey Senouw Siwu Siwy Solang Somba Sompi Sompotan Sondakh Soputan Sorongan
-			Suak Suatan Sumaiku Sumakud Sumakul Sumangkud Sumanti Sumarandak Sumarauw Sumele Sumendap Sumesei Sumilat Sumlang Sumolang Sumual
-			Sumuan Sundah Sungkudon Suot Supit Surentu Suwu Taas Tairas Talumepa Talumewo Tambahani Tambalean Tambarici Tambayong Tambengi
-			Tambingon Tamboto Tambun Tambunan Tambuntuan Tambuwun Tamon Tampa Tampanatu Tampanguma Tampemawa Tampenawas Tampi Tampinongkol
-			Tandayu Tangka Tangkere Tangkow Tangkudung Tanod Tanor Tanos Tarandung Taroreh Taulu Tawas Tendean Tengges Tenggor Tengker Terok
-			Tidayoh Tiendas Tikoalu Tikonuwu Tilaar Timbuleng Timpal Tinangon Tindengen Tintingon Tirayoh Tiwa Tiwow Toalu Todar Togas Tololiu
-			Tombeng Tombokan Tompodung Tompunu Tongkeles Tooi Torar Torek Towo Tuegeh Tuera Tulandi Tular Tulenan Tulung Tumanduk Tumangkeng
-			Tumatar Tumbei Tumbelaka Tumbol Tumbuan Tumembouw Tumengkol Tumewu Tumilaar Tumilesar Tumimomor Tumiwa Tumiwang Tumober Tumondo
-			Tumonggor Tumundo Tumurang Tumuyu Tunas Tundalangi Tungka Turang Turangan Tuwaidan Tuyu Tuyuwale Uguy Ukus Ulaan Umbas Umboh Umpel
-			Undap Unsulangi Untu Waani Wagei Wagiu Waha Wahon Wakari Wala Walalangi Walandouw Walintukan Waluyan Wawolangi Wawolumaya Waworuntu
-			Weku Welong Wenas Wenur Weol Wilar Winerungan Winokan Woimbon Wokas Wola Wondal Wongkar Wonok Wooy Worang Worotikan Wotulo Wowilang
-			Wowor Wuisan Wuisang Wulur Wungkana Wungow Wuntu Wurangian Wuwung Wuwungan
+			Jarrah Yarra Marli Tjandamurra Wirra Boonie Daku Kiah Marlun Baiame Warragul Julana Jardi Karri Minjarra Narani Raini Tiddalik
+			Wandjina Yuin Boori Djinba Miro Tarka Waru Gurri Jannali Lirrwi Merindah Yarran Djalu Yarrabah Birrani Dharra Dural Jinkarr 
+			Koora Kurri Millan Murrung Ngarra Tjapukai Wilara Yirra Yirrkala Bungan Djarrung Garrong Jirra Karrang Marrngu Ngurru Wunman 
+			Yalarr Yirrin Barang Darrin Djirra Gundar Karrku Marrin Ngarrka Tjirrbal Wamud Yambirr Bamarang Djarrjarra Gulumarr Karnu Marnu 
+			Ngurunderi Tjurra Wanyu Yirrganydji Balang Djugun Garrawirra Jurru Mangga Ngunawal Tjandara Warlu Yurndu Djurra Garrthal Karnak 
+			Marrawah Ngurruwala Tjurrki Warramirri Yurriwi Bana Djugadi Karnmin Marrinya Nyirrwa Tjurrung Wawun Yurruga Wirribi Yalara Muruwari
+			Wirrgan Yirribi Garrimarr Djurany Ngurruwan Tjurrbal Wanyarra Yirrkal Ngarrbal Djarraka Marrnyula Yirrgany Wirriny Djarrbal Karnawal 
+			Warrambal Yurrgan Balamar Djungan Garriny Karniny Marrgany Nyirrgan Tjurrgan Wawany Yurriny Yalgany Murrgan Karnarr Djirrbal Garrgany
 		}
 		female_names = {
-			Andu Anes Anis Antou Arina Assah Awondatu Awui Bella Inarai Ingkiriwang Inolatan Intama Kalalo Kalangi Kalempou Kalempouw
-			Kamu Kandio Kandou Kapantouw Kaparang Kapele Kapoh Kapoyos Karamoy Karau Karinda Karundeng Kere Kesek Kewas Khodong Kindangen
-			Kirangen Kodongan Kojongian Lala Lalamentik Lalowang Lalu Laluyan Lambogia Lampah Lampus Lanes Langelo Langi Langitan Langkai
-			Languyu Lantang Lantu Laoh Lapian Lasut Legi Legoh Liogu Litow Liu Liwe Loho Makisanti Malingkas Mamesah Manalu Manampiring
-			Manangkod Manapa Manayang Mandang Mangempis Mangindaan Mantik Mantiri Maramis Marentek Maringka Masinambau Masing Masoko Matindas
-			Maukar Mawei Maweru Mawikere Mawuntu Mekel Mema Mende Mendur Mengko Mentang Mentu Mesak Mewengkang Mewoh Mince Mincelungan Pauner
-			Raranta Rares Rarun Rasu Ratu Ratulangi Ratumbuisang Ratuwalangaouw Ratuwalangon Ratuwandang Rau Rauta Regar Rei Rindengan
-			Rogahang Salangka Salendu Sambouw Sambuaga Sambul Sambur Samola Sangkaeng Sangkal Sarapung Saraun Sarayar Sepang Sigar Sigarlaki
-			Simbar Simbawa Sinaulan Singal Singkoh Sinolungan Sirang Walangitan Walean Walebangko Walelang Walian Wanei Wangania Wangko Wantah
-			Wantania Wantasen Wariki Watah Watti Watugigir Watuna Watung Watupongoh Waturandang Watuseke Wauran Wawoh Wawointama
+			Alinta Koori Mali Talia Yindi Kalina Mirri Nina Allira Kirra Tarni Jira Nura Yara Lowanna Bindi Kari Marlee Wilara 
+			Yani Merindah Jannali Lirrwi Yarrabah Birrani Dharra Dural Jinkarr Koora Kurri Millan Murrung Ngarra Tjapukai Wilara 
+			Yirra Yirrkala Bungan Djarrung Garrong Jirra Karrang Marrngu Ngurru Wunman Yalarr Yirrin Barang Darrin Djirra Gundar 
+			Karrku Marrin Ngarrka Tjirrbal Wamud Yambirr Bamarang Djarrjarra Gulumarr Karnu Marnu Ngurunderi Tjurra Wanyu Yirrganydji 
+			Balang Djugun Garrawirra Jurru Mangga Ngunawal Tjandara Warlu Yurndu Bamarang Djurra Garrthal Karnak Marrawah Ngurruwala 
+			Tjurrki Warramirri Yurriwi Bana Djugadi Garrong Karnmin Marrinya Nyirrwa Tjurrung Wawun Yurruga Wirribi Yalara Muruwari Kiah 
+			Tjandamurra Marlu Warragul Julana Minjarra Narani Raini Wandjina Yuin Djinba Miro Tarka Waru Gurri Jannali Lirrwi Merindah Yarran Djalu
 		}
 
 		prefix = no
@@ -815,11 +815,11 @@ australia_group = {
 	}
 }
 
-polynesian_group = {
+polynesian = {
 	graphical_cultures = { westafricangfx africangfx muslimgfx }
 	
 	zealander = {
-		graphical_cultures = { westafricangfx africangfx muslimgfx }
+		graphical_cultures = { southeastasiangfx westafricangfx africangfx muslimgfx }
 		
 		color = { 0.3 0.4 0.6 }
 		
@@ -879,11 +879,49 @@ polynesian_group = {
 		prefix = no
 
 		modifier = default_culture_modifier
+		allow_looting = yes
+		seafarer = yes
 	}
-	polynesian = {
-		graphical_cultures = { chinesegfx bodpagfx mongolgfx westafricangfx muslimgfx }
+	hawaiian = { #Gabbs Edit
+	
+		graphical_cultures = { mesoamericangfx mongolgfx muslimgfx }
 		
-		color = { 0.2 0.8 0.15 }
+		color = { 0.25 0.18 0.74 }	
+		
+		male_names = {
+			Ahe Aheahe Akamai Akamu Akoni Alika Anakoni Ano Aolani Aoloa Aouli Ekewaka Haku Hanale Hani Hanini Haulani Healani Keanu Hikialani Holokai Honi Iakopa Ikaia Ikaika Ioane Iokepa Iokua Kahale Kahawai Kahiau Kahikaina Kahili Kaholo Kahua Kahuna Kai Kaiholo Kaikane Kaiko Kaili Kaimana Kainalu Kainoa Kaipo Kalama Kale Kaleho Kalei Kaleo Kaliko Kalino Kalua Kamalei Kamulea Kana Kanani Kaniela Kanuha Kanye Kapena Kapueo Kapula
+		}
+		female_names = {
+			Mikala Malia Maile Leilani Kalea Kalani Kailani Ailani Akela Alani Aloha Anuhea Apikalia Elikapeka Haukea Haunani Hokulani Iekika Iolana Iwalani Kakalina Kala Kalea Kalena Kehaulani Kekepania Kilikina Lahela Lani Leilani Leimomi Leinani Lilinoe Lokelani Luana Mahealani Maile Mele Mililani Momilani Nalani Pauahi
+		}
+
+		from_dynasty_prefix = ""
+
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+
+		pat_grf_name_chance = 25
+
+		mat_grf_name_chance = 25
+		
+        father_name_chance = 25
+
+
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+
+		pat_grm_name_chance = 25
+		mat_grm_name_chance = 25
+
+		mother_name_chance = 25
+
+
+		modifier = default_culture_modifier
+		
+	}
+	
+	rekohun = {
+		graphical_cultures = { southeastasiangfx westafricangfx africangfx muslimgfx }
+		
+		color = { 0.68 0.32 0.45 }
 		
 		#
 		male_names = {
@@ -941,5 +979,7 @@ polynesian_group = {
 		prefix = no
 
 		modifier = default_culture_modifier
-	}
+		allow_looting = yes
+		seafarer = yes
+	}	
 }

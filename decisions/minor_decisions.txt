@@ -2496,7 +2496,7 @@ decisions = {
 			prisoner = no
 			religion_group = bud_group
 			OR = {
-				culture_group = indoaryan
+				culture_group = indo_aryan_group
 				culture_group = dravidian
 			}
 			NOT = { capital_scope = { region = world_china } }

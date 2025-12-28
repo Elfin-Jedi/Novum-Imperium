@@ -412,7 +412,7 @@ song = {
 			factor = 0
 			NOT = { government = nomadic_government}
 			NOT = { culture_group = altaic }
-			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = chinese }
 		}
 	}
 }
@@ -429,7 +429,7 @@ song = {
 				OR = {
 					NOT = { government = nomadic_government }
 					NOT = { culture_group = altaic }
-					NOT = { culture_group = chinese_group }
+					NOT = { culture_group = chinese }
 				}
 			}
 		}
@@ -445,7 +445,7 @@ song = {
 			factor = 0
 			NOT = { government = nomadic_government}
 			NOT = { culture_group = altaic }
-			NOT = { culture_group = chinese_group }
+			NOT = { culture_group = chinese }
 		}
 	}
 }

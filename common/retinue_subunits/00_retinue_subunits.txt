@@ -1572,7 +1572,7 @@ RETTYPE_CUL_INDIAN =
 	potential = {
 		emf_retinue_hire_basic_potential = yes
 		OR = {
-			culture_group = indoaryan
+			culture_group = indo_aryan_group
 			culture_group = dravidian_group
 		}
 	}
@@ -1640,7 +1640,7 @@ RETTYPE_CUL_HAN =
 	
 	potential = {
 		emf_retinue_hire_basic_potential = yes
-		culture_group = chinese_group
+		culture_group = chinese
 	}
 	
 	modifier = {
@@ -3495,7 +3495,7 @@ RETTYPE_G_INDOARYAN = {
 
 	potential = {
 		is_nomadic = no
-		culture_group = indoaryan
+		culture_group = indo_aryan_group
 	}
 	modifier = {
 		war_elephants_offensive = 0.7

@@ -80,7 +80,7 @@ culture_group_spread = {
 	}		
 	modifier = {
 		factor = 0.05
-		culture_group = chinese_group
+		culture_group = chinese
 		NOT = {
 			has_alternate_start_setting = {
 				setting = culture
@@ -121,7 +121,7 @@ culture_group_spread = {
 			culture_group = byzantine
 			culture_group = finno_ugric
 			culture_group = iranian
-			culture_group = indoaryan
+			culture_group = indo_aryan_group
 		}
 		NOT = {
 			has_alternate_start_setting = {
