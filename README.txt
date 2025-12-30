@@ -9,7 +9,7 @@ Large Mods:
 
 "Lux Ultima" (In progress)
 "Rise to Power"
-"Umbra Sapiens" (In progress, cultures only)
+"Umbra Sapiens" (In progress, cultures only so far)
 
 Medium Mods:
 
