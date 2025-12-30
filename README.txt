@@ -7,8 +7,9 @@ Base:
 
 Large Mods:
 
-"Lux Invicta"
+"Lux Ultima" (In progress)
 "Rise to Power"
+"Umbra Sapiens" (In progress, cultures only)
 
 Medium Mods:
 
