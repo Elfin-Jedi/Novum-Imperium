@@ -45,6 +45,7 @@ Small Mods:
 "Bloodlines Sketchy Cheat Submod"
 "Born This Way"
 "Cadet Dynasty Tool"
+"Caesar's Books"
 "Change Character"
 "Choose your character+"
 "CK2 House Motto"
