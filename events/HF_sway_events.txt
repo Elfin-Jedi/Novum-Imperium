@@ -1845,6 +1845,41 @@ character_event = {
 							#Family grievances
 							family_grievance_trigger = yes
 							war_with = ROOT
+							
+							# Vanilla issue:
+							# Spouse or consort of you or your heir - don't make the parentage of your children or your heir's children questionable!
+							AND = {
+								is_female = yes
+								prefers_men_trigger = no
+								OR = {
+									any_spouse = {
+										character = ROOT
+									}
+									any_consort = {
+										character = ROOT
+									}
+									ROOT = {
+										current_heir = {
+											OR = {
+												any_spouse = {
+													ROOT = {
+														persistent_event_target:sway_target = {
+															character = PREVPREV
+														}
+													}
+												}
+												any_consort = {
+													ROOT = {
+														persistent_event_target:sway_target = {
+															character = PREVPREV
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -7574,156 +7609,156 @@ character_event = {
 					emf_syncretized_religion_with_FROM = yes
 				}
 				OR = {
-					AND = { 
+					AND = {
 						FROM = { religion_group = abrahamic_group }
-						NOT = { trait = sympathy_abrahamics } 
+						NOT = { trait = sympathy_abrahamics }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = anatolian_group }
-						NOT = { trait = sympathy_anatolians } 
+						NOT = { trait = sympathy_anatolians }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = arabpagan_group }
-						NOT = { trait = sympathy_arabpagans } 
+						NOT = { trait = sympathy_arabpagans }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = aztec_group }
-						NOT = { trait = sympathy_aztecs } 
+						NOT = { trait = sympathy_aztecs }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = baltic_group }
-						NOT = { trait = sympathy_baltics } 
+						NOT = { trait = sympathy_baltics }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = bantu_group }
-						NOT = { trait = sympathy_bantus } 
+						NOT = { trait = sympathy_bantus }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = berberpagan_group }
-						NOT = { trait = sympathy_berbers } 
+						NOT = { trait = sympathy_berbers }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = bud_group }
-						NOT = { trait = sympathy_buddhists } 
+						NOT = { trait = sympathy_buddhists }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = celtic_group }
-						NOT = { trait = sympathy_celtics } 
+						NOT = { trait = sympathy_celtics }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = chinese_group }
-						NOT = { trait = sympathy_chinese } 
+						NOT = { trait = sympathy_chinese }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = christian }
-						NOT = { trait = sympathy_christendom } 
+						NOT = { trait = sympathy_christendom }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = east_african_group }
-						NOT = { trait = sympathy_east_africans } 
+						NOT = { trait = sympathy_east_africans }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = egyptian_group }
-						NOT = { trait = sympathy_egyptian } 
+						NOT = { trait = sympathy_egyptian }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = finnish_group }
-						NOT = { trait = sympathy_finnish } 
+						NOT = { trait = sympathy_finnish }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = graecoroman_group }
-						NOT = { trait = sympathy_graecoroman } 
+						NOT = { trait = sympathy_graecoroman }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = indian_group }
-						NOT = { trait = sympathy_indian } 
+						NOT = { trait = sympathy_indian }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = indohelen_group }
-						NOT = { trait = sympathy_indohellens } 
+						NOT = { trait = sympathy_indohellens }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = inti_group }
-						NOT = { trait = sympathy_intis } 
+						NOT = { trait = sympathy_intis }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = inuit_group }
-						NOT = { trait = sympathy_inuit } 
+						NOT = { trait = sympathy_inuit }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = jewish_group }
-						NOT = { trait = sympathy_judaism } 
+						NOT = { trait = sympathy_judaism }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = luwian_group }
-						NOT = { trait = sympathy_luwians } 
+						NOT = { trait = sympathy_luwians }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = mand_group }
-						NOT = { trait = sympathy_mande } 
+						NOT = { trait = sympathy_mande }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = mani_group }
-						NOT = { trait = sympathy_manichaeans } 
+						NOT = { trait = sympathy_manichaeans }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = mithra_group }
-						NOT = { trait = sympathy_mithraics } 
+						NOT = { trait = sympathy_mithraics }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = muslim }
-						NOT = { trait = sympathy_islam } 
+						NOT = { trait = sympathy_islam }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = neoplato_group }
-						NOT = { trait = sympathy_platonics } 
+						NOT = { trait = sympathy_platonics }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = norsegerman_group }
-						NOT = { trait = sympathy_nordic } 
+						NOT = { trait = sympathy_nordic }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = pagan_group }
-						NOT = { trait = sympathy_pagans } 
+						NOT = { trait = sympathy_pagans }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = palmyranpagan_group }
-						NOT = { trait = sympathy_palmyrans } 
+						NOT = { trait = sympathy_palmyrans }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = serer_group }
-						NOT = { trait = sympathy_sererics } 
+						NOT = { trait = sympathy_sererics }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = slavic_group }
-						NOT = { trait = sympathy_slavics } 
+						NOT = { trait = sympathy_slavics }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = sol_group }
-						NOT = { trait = sympathy_sol } 
+						NOT = { trait = sympathy_sol }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = tengri_group }
-						NOT = { trait = sympathy_tengri } 
+						NOT = { trait = sympathy_tengri }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = yazd_group }
-						NOT = { trait = sympathy_yazd } 
+						NOT = { trait = sympathy_yazd }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = zal_group }
-						NOT = { trait = sympathy_zal } 
+						NOT = { trait = sympathy_zal }
 					}
-					AND = { 
+					AND = {
 						FROM = { religion_group = zoroastrian_group }
-						NOT = { trait = sympathy_zoroastrianism } 
+						NOT = { trait = sympathy_zoroastrianism }
 					}
 					AND = {
                         FROM = { religion_group = african_group }
-						NOT = { trait = sympathy_african }   
+						NOT = { trait = sympathy_african } 
                     }
 				}
-			} 
+			}
 			custom_tooltip = { text = tooltip_21076_sympathy } 
 		} 
 		set_character_flag = flag_appease_kind_religion
@@ -8136,18 +8171,6 @@ character_event = {
 					religion_group = FROM
 					emf_syncretized_religion_with_FROM = yes
 				}
-				NOT = { trait = sympathy_platonics }
-				FROM = { religion_group = neoplato_group }
-				FROM = { has_character_flag = flag_appease_kind_religion }
-			} 
-			random = { chance = 30 add_trait = sympathy_platonics }
-		}
-		if = { 
-			limit = { 
-				NOR = {
-					religion_group = FROM
-					emf_syncretized_religion_with_FROM = yes
-				}
 				NOT = { trait = sympathy_nordic }
 				FROM = { religion_group = norsegerman_group }
 				FROM = { has_character_flag = flag_appease_kind_religion }
@@ -8177,6 +8200,18 @@ character_event = {
 				FROM = { has_character_flag = flag_appease_kind_religion }
 			} 
 			random = { chance = 30 add_trait = sympathy_palmyrans }
+		}
+		if = { 
+			limit = { 
+				NOR = {
+					religion_group = FROM
+					emf_syncretized_religion_with_FROM = yes
+				}
+				NOT = { trait = sympathy_platonics }
+				FROM = { religion_group = neoplato_group }
+				FROM = { has_character_flag = flag_appease_kind_religion }
+			} 
+			random = { chance = 30 add_trait = sympathy_platonics }
 		}
 		if = { 
 			limit = { 
@@ -8742,17 +8777,6 @@ character_event = {
 					religion_group = FROM
 					emf_syncretized_religion_with_FROM = yes
 				}
-				NOT = { trait = sympathy_platonics }
-				FROM = { religion_group = neoplato_group }
-			}
-			random = { chance = 30 add_trait = sympathy_platonics }
-		}
-		if = {
-			limit = {
-				NOR = {
-					religion_group = FROM
-					emf_syncretized_religion_with_FROM = yes
-				}
 				NOT = { trait = sympathy_nordic }
 				FROM = { religion_group = norsegerman_group }
 			}
@@ -8779,6 +8803,17 @@ character_event = {
 				FROM = { religion_group = palmyranpagan_group }
 			}
 			random = { chance = 30 add_trait = sympathy_palmyrans }
+		}
+		if = {
+			limit = {
+				NOR = {
+					religion_group = FROM
+					emf_syncretized_religion_with_FROM = yes
+				}
+				NOT = { trait = sympathy_platonics }
+				FROM = { religion_group = neoplato_group }
+			}
+			random = { chance = 30 add_trait = sympathy_platonics }
 		}
 		if = {
 			limit = {
