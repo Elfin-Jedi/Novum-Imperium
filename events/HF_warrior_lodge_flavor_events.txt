@@ -3608,7 +3608,7 @@ character_event = {
     option = # I shall have a weapon forged [From.GetHerHis] honor!
     {
     	trigger = {
-    		any_courtier = {
+    		random_courtier = {
     			OR = {
     				is_learned_trigger = yes
     				has_character_flag = is_court_physician
@@ -3653,34 +3653,60 @@ character_event = {
     portrait = event_target:weapon_forger
 
     immediate = {
-    	FROM = {
-    		any_close_relative = {
-    			limit = {
-    				is_alive = yes
+    	if = { # Correct as written; vanilla is wrong!
+			limit = {
+				FROM = {
+					any_close_relative = {
+    					is_alive = yes
+					}
 					OR = {
 						prisoner = no
 						host = { character = ROOT }
 					}
     			}
-    			save_event_target_as = potential_sacrifice
     		}
+			FROM = {
+				random_close_relative = {
+					limit = {
+						is_alive = yes
+					}
+					save_event_target_as = potential_sacrifice
+				}
+			}
     	}
 
-    	random_courtier = {
+    	if = { # Correct as written; vanilla is wrong!
     		limit = {
-    			OR = {
-    				is_learned_trigger = yes
-    				has_character_flag = is_court_physician
-    				has_minor_title = title_court_physician
-    				has_minor_title = title_teacher
-    				has_minor_title = title_volva
-    				has_minor_title = title_lawspeaker
-    				has_minor_title = title_court_skald
-    				has_minor_title = title_venerable_elder
-    				learning = 18
+				any_courtier = {
+    				OR = {
+    					is_learned_trigger = yes
+    					has_character_flag = is_court_physician
+    					has_minor_title = title_court_physician
+    					has_minor_title = title_teacher
+    					has_minor_title = title_volva
+    					has_minor_title = title_lawspeaker
+    					has_minor_title = title_court_skald
+    					has_minor_title = title_venerable_elder
+    					learning = 18
+    				}
     			}
     		}
-    		save_event_target_as = weapon_forger
+			random_courtier = {
+				limit = {
+					OR = {
+						is_learned_trigger = yes
+						has_character_flag = is_court_physician
+						has_minor_title = title_court_physician
+						has_minor_title = title_teacher
+						has_minor_title = title_volva
+						has_minor_title = title_lawspeaker
+						has_minor_title = title_court_skald
+						has_minor_title = title_venerable_elder
+						learning = 18
+					}
+				}
+    			save_event_target_as = weapon_forger
+			}
     	}
     }
 
@@ -3901,7 +3927,7 @@ character_event = {
     	random_courtier = {
     		limit = {
     			block_general_event_trigger = no
-    			NOT= { character = event_target:witness1 } 
+    			NOT= { character = event_target:witness1} 
     		}
     		save_event_target_as = witness2
     	}

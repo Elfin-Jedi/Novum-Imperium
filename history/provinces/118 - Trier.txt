@@ -22,5 +22,20 @@ culture = franconian
 religion = catholic
 
 # History
+
+270.1.1 = {
+	build_wonder = wonder_trier_cathedral
+	set_wonder_stage = 1
+}
+400.1.1 = {
+	set_wonder_stage = 2
+}
+769.1.1 = {
+	set_wonder_stage = 3
+}
+800.1.1 = {
+	set_wonder_stage = 4
+}
+
 1170.1.1 = { culture = german }
 1192.1.1 = { b_virneburg = castle }

@@ -21,10 +21,20 @@ religion = west_african_pagan
 
 # History
 
+936.1.1 = {
+	build_wonder = wonder_timbuktu_university
+	set_wonder_stage = 1
+}
+
 #berber colonization - most likely the Massufa, whom Ibn Battuta describes as the main population when he visited
 1060.1.1 = { 
 	culture = tagelmust
 }
+
+1066.1.1 = {
+	set_wonder_stage = 3
+}
+
 1090.1.1 = { religion = sunni }
 1267.5.1 = {
 	b_tirakka = castle

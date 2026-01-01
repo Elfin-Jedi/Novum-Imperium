@@ -23,6 +23,20 @@ religion = catholic
 terrain = farmlands
 
 # History
+
+100.1.1 = {
+	build_wonder = wonder_lombardia_unique
+	add_custom_history = cw_lombardia_1
+	set_wonder_stage = 1
+}
+200.1.1 = {
+	set_wonder_stage = 2
+}
+300.1.1 = {
+	add_custom_history = cw_lombardia_2
+	set_wonder_stage = 3
+}
+
 #1193.12.25 = { capital = b_lodi} # ct
 #1200.1.1 = { b_trezzo = castle }
 #1240.1.1 = { capital = b_monza} # ca

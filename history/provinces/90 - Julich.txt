@@ -21,6 +21,21 @@ culture = franconian
 religion = catholic
 
 # History
+
+769.1.1 = {
+	build_wonder = wonder_julich_cathedral
+	set_wonder_stage = 1
+}
+
+790.1.1 = { 
+	culture = german 
+	set_wonder_stage = 2
+}
+
+820.1.1 = {
+	set_wonder_stage = 3
+}
+
 1070.1.1= { b_steinfeld = temple }
 1166.1.1= { b_arenberg = castle }
 1170.1.1 = { culture = german }

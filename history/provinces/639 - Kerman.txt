@@ -23,5 +23,22 @@ culture = persian
 religion = zoroastrian
 
 # History
+
+867.1.1 = {
+	build_wonder = wonder_kerman_fortress
+	set_wonder_stage = 1
+}
+
+936.1.1 = {
+	set_wonder_stage = 2
+	build_wonder_upgrade = upgrade_watch_tower
+}
+
 950.1.1 = {	religion = sunni }
+
+1066.1.1 = {
+	set_wonder_stage = 3
+	build_wonder_upgrade = upgrade_armory
+}
+
 #1060.1.1 = { culture = persian } 
