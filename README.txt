@@ -46,6 +46,7 @@ Small Mods:
 "Born This Way"
 "Cadet Dynasty Tool"
 "Caesar's Books"
+"Caesar's Wonders"
 "Change Character"
 "Choose your character+"
 "CK2 House Motto"
