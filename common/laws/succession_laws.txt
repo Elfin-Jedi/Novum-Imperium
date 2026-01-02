@@ -25,7 +25,6 @@ succession_laws = {
 					}
 				}
 				NOT = { government = confucian_bureaucracy }
-				NOT = { government = bureaucratic_government }
 				NOT = { government = chinese_imperial_government }
 				NOT = { government = playable_republic_government }
 				NOT = { government = playable_theocracy_government }
@@ -91,7 +90,6 @@ succession_laws = {
 					}
 				}
 				NOT = { government = confucian_bureaucracy }
-				NOT = { government = bureaucratic_government }
 				NOT = { government = chinese_imperial_government }
 				NOT = { government = playable_republic_government }
 				NOT = { government = playable_theocracy_government }
@@ -163,7 +161,6 @@ succession_laws = {
 					has_religion_feature = religion_feature_west_african
 					has_religion_feature = religion_feature_slavic
 				}
-				NOT = { government = bureaucratic_government }
 				NOT = { government = playable_republic_government }
 				NOT = { government = playable_theocracy_government }
 			}
@@ -264,7 +261,6 @@ succession_laws = {
 					is_republic = no
 					NOT = { PREV = { tier = BARON } }
 				}
-				NOT = { government = bureaucratic_government }
 				NOT = { government = playable_republic_government }
 				NOT = { government = playable_theocracy_government }
 			}
@@ -431,7 +427,6 @@ succession_laws = {
 					emf_unreformed_pagan = no
 					religion = hellenic_pagan
 				}
-				NOT = { government = bureaucratic_government }
 				NOT = { government = chinese_imperial_government }
 				NOT = { government = playable_republic_government }
 				NOT = { government = playable_theocracy_government }
@@ -769,7 +764,6 @@ succession_laws = {
 					emf_unreformed_pagan = no
 					religion = hellenic_pagan
 				}
-				NOT = { government = bureaucratic_government }
 				NOT = { government = chinese_imperial_government }
 				NOT = { government = playable_republic_government }
 				NOT = { government = playable_theocracy_government }
@@ -829,7 +823,6 @@ succession_laws = {
 				}
 				NOR = {
 					religion_group = muslim
-					government = bureaucratic_government
 					government = chinese_imperial_government
 					government = playable_republic_government
 					government = playable_theocracy_government
@@ -1126,7 +1119,6 @@ succession_laws = {
 					NOT = { any_liege = { holy_order = yes } }
 				}
 				NOR = {
-					government = bureaucratic_government
 					government = chinese_imperial_government
 					government = playable_republic_government
 					government = playable_theocracy_government

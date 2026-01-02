@@ -47,10 +47,7 @@ decisions = {
 				tier = EMPEROR
 				emf_is_chinese_imperial_culture = yes
 			}
-			OR = {
-				has_law = administration_2
-				government = bureaucratic_government
-			}
+			has_law = administration_2
 			conditional_tooltip = {
 				trigger = { emf_is_chinese_imperial_culture = yes }
 				prestige = 4000

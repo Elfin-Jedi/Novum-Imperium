@@ -56,6 +56,7 @@ society_quest_event = {
 				new_character = {
 					set_character_flag = rtp_trash #Just delete this dude
 					save_event_target_as = rtp_society_quest_target #The first target of the quest
+					set_immune_to_pruning = yes
 				}
 			}
 		}
@@ -131,6 +132,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The first target of the quest
+			set_immune_to_pruning = yes
 		}
 	}
 
@@ -252,6 +254,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The first target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		sound_effect = quest_completed
@@ -274,6 +277,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The first target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		sound_effect = quest_failed
@@ -297,6 +301,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The first target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		sound_effect = quest_completed
@@ -319,6 +324,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The first target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		sound_effect = quest_failed
@@ -359,6 +365,7 @@ society_quest_event = {
 		society = {
 			leader = {
 				save_event_target_as = rtp_society_quest_target #The first target of the quest
+				set_immune_to_pruning = yes
 			}
 		}
 	}
@@ -603,6 +610,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The first target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		sound_effect = quest_completed
@@ -624,6 +632,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The first target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		sound_effect = quest_failed
@@ -672,6 +681,7 @@ society_quest_event = {
 			new_character = {
 				set_character_flag = rtp_trash #Just delete this dude
 				save_event_target_as = rtp_society_quest_target #The first target of the quest
+				set_immune_to_pruning = yes
 			}
 		}
 	}
@@ -746,6 +756,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The first target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		character_event = {
@@ -769,6 +780,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The first target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		character_event = {
@@ -906,6 +918,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The first target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		sound_effect = quest_completed
@@ -927,6 +940,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The first target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		sound_effect = quest_failed
@@ -971,6 +985,7 @@ society_quest_event = {
 					}
 				}
 				save_event_target_as = rtp_society_quest_target #The first target of the quest
+				set_immune_to_pruning = yes
 			}
 		}
 	}
@@ -1053,6 +1068,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The first target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		set_character_flag = rtp_option_1 #The tome
@@ -1069,6 +1085,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The first target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		set_character_flag = rtp_option_2 #The scroll
@@ -1085,6 +1102,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The first target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		set_character_flag = rtp_option_3 #The tablet
@@ -1169,6 +1187,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The first target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		sound_effect = quest_completed
@@ -1190,6 +1209,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The first target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		sound_effect = quest_failed
@@ -1236,6 +1256,7 @@ society_quest_event = {
 			new_character = {
 				set_character_flag = rtp_trash #Just delete this dude
 				save_event_target_as = rtp_society_quest_target #The first target of the quest
+				set_immune_to_pruning = yes
 			}
 		}
 	}
@@ -1310,6 +1331,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The first target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		character_event = {
@@ -1407,6 +1429,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The first target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		sound_effect = quest_completed

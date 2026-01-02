@@ -40,6 +40,7 @@ society_quest_event = {
 				}
 			}
 			save_event_target_as = rtp_society_quest_target #The target of the quest
+			set_immune_to_pruning = yes
 			random_child_even_if_dead = {
 				limit = {
 					is_alive = no
@@ -321,6 +322,7 @@ society_quest_event = {
 				}
 			}
 			save_event_target_as = rtp_society_quest_target #The target of the quest
+			set_immune_to_pruning = yes
 		}
 	}
 
@@ -640,6 +642,7 @@ society_quest_event = {
 				society_rank == 3
 			}
 			save_event_target_as = rtp_society_quest_target #The target of the quest
+			set_immune_to_pruning = yes
 		}
 	}
 
@@ -872,6 +875,7 @@ society_quest_event = {
 			new_character = {
 				set_character_flag = rtp_trash #Just delete this dude
 				save_event_target_as = rtp_society_quest_target #The first target of the quest
+				set_immune_to_pruning = yes
 				imprison = PREV
 			}
 			create_character = {
@@ -885,6 +889,7 @@ society_quest_event = {
 			new_character = {
 				set_character_flag = rtp_trash #Just delete this dude
 				save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+				set_immune_to_pruning = yes
 			}
 		}
 	}
@@ -1320,6 +1325,7 @@ society_quest_event = {
 			new_character = {
 				set_character_flag = rtp_trash #Just delete this dude
 				save_event_target_as = rtp_society_quest_target #The first target of the quest
+				set_immune_to_pruning = yes
 			}
 			create_character = {
 				age = 35
@@ -1332,6 +1338,7 @@ society_quest_event = {
 			new_character = {
 				set_character_flag = rtp_trash #Just delete this dude
 				save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+				set_immune_to_pruning = yes
 			}
 		}
 	}
@@ -1427,6 +1434,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target
+			set_immune_to_pruning = yes
 		}
 
 		character_event = {
@@ -1450,6 +1458,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target2 = {
 			save_event_target_as = rtp_society_quest_target2
+			set_immune_to_pruning = yes
 		}
 
 		character_event = {

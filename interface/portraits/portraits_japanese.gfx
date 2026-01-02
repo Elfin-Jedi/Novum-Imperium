@@ -3,20 +3,6 @@ spriteTypes = {
 ############## japanese ##########################
 
 	spriteType = {
-		name = "PORTRAIT_japanesegfx_child_male"
-		texturefile = "gfx\\characters\\default_son_chinese.tga"
-		noOfFrames = 1
-		norefcount = yes
-	}
-	
-	spriteType = {
-		name = "PORTRAIT_japanesegfx_child_female"
-		texturefile = "gfx\\characters\\default_daughter_chinese.tga"
-		noOfFrames = 1
-		norefcount = yes
-	}
-
-	spriteType = {
 		name = "GFX_japanese_male_headgear"
 		texturefile = "gfx\\characters\\japanese_male\\japanese_male_headgear.dds"
 		noOfFrames = 1
@@ -40,21 +26,21 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_japanese_female_headgear"
 		texturefile = "gfx\\characters\\japanese_female\\japanese_female_headgear.dds"
-		noOfFrames = 1
+		noOfFrames = 12
 		norefcount = yes
 	}
 
 	spriteType = {
 		name = "GFX_japanese_female_headgear_mid"
 		texturefile = "gfx\\characters\\japanese_female\\japanese_female_headgear.dds"
-		noOfFrames = 1
+		noOfFrames = 12
 		norefcount = yes
 	}
 
 	spriteType = {
 		name = "GFX_japanese_female_headgear_behind"
 		texturefile = "gfx\\characters\\japanese_female\\japanese_female_headgear.dds"
-		noOfFrames = 1
+		noOfFrames = 12
 		norefcount = yes
 	}
 
@@ -80,11 +66,15 @@ spriteTypes = {
 			"GFX_chinese_male_eyes:d6"
 			"GFX_chinese_male_nose:d3"
 			"GFX_chinese_male_eyes2:d6:e"
+			"GFX_child_back:p17"
+			"GFX_chinese_son_base:p18"
+			"GFX_chinese_son_eyes:p18:e"
 			"GFX_character_freckles:p20"
 			"GFX_character_chinese_male_pale:p22"
 			"GFX_character_scars:p7:y"
 			"GFX_character_scars_mid:p25"
 			"GFX_character_scars_high:p26"
+			"GFX_chinese_sonhair:p18:h"
 			"GFX_character_black_eye:p23"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"
@@ -304,11 +294,15 @@ spriteTypes = {
 			"GFX_chinese_female_makeup1:p14"
 			"GFX_chinese_female_makeup2:p15"
 			"GFX_chinese_female_eyes2:d6:e"
+			"GFX_child_back:p17"
+			"GFX_chinese_daughter_base:p18"
+			"GFX_chinese_daughter_eyes:p18:e"
 			"GFX_character_freckles:p20"
 			"GFX_character_chinese_female_pale:p22"
 			"GFX_character_scars:p7:y"
 			"GFX_character_scars_mid:p25"
 			"GFX_character_scars_high:p26"
+			"GFX_chinese_daughterhair:p18:h"
 			"GFX_character_black_eye:p23"
 			"GFX_character_reddots:p8"
 			"GFX_character_boils:p9"

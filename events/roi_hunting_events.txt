@@ -221,7 +221,7 @@ character_event = {
 			limit = { has_character_flag = killed_tiger }
 			character_event = { id = RoI.2501 }
 			any_vassal = {
-				limit = { has_character_flag = hunting_tigers }
+				limit = { has_character_flag = killed_tiger }
 				character_event = { id = RoI.2501 }
 			}
 			break = yes

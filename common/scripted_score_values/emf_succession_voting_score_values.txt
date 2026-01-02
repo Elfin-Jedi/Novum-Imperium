@@ -88,10 +88,7 @@ emf_succession_voting_elector_selection_basic_elective = {
 	additive_modifier = { # Liege is always an elector.
 		value = 210
 		is_vassal_or_below = FROMFROM
-		OR = {
-			government = chinese_imperial_government
-			government = bureaucratic_government
-		}
+		government = chinese_imperial_government
 	}
 	additive_modifier = { # Theocracies favored over other government forms, feudalism left at base score.
 		value = 14

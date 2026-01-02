@@ -70,9 +70,9 @@ random_scenario_merchant_republics = {
 
 #random_scenario_theocracies = {
 #	type = checkbox
-#	random_default = unchecked
+#	random_default = checked
 #	sort_priority = 994
-	#priority = 48
+#	#priority = 48
 #	
 #	potential = {
 #		is_random_world = yes
@@ -81,7 +81,6 @@ random_scenario_merchant_republics = {
 #	checked = {
 #		effect = {
 #			spawn_theocracies_effect = yes
-#			spawn_republics_effect = yes
 #		}
 #	}
 #	unchecked = {

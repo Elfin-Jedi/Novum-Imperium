@@ -1044,65 +1044,15 @@ spawn_theocracies_effect = {
 
 spawn_theocracy_effect = {
 	random_character = {
-		limit = {
-			is_government_potential = theocracy_government
-			is_landed = yes
-			any_demesne_title = {
-				tier = COUNT
-			}
-			NOR = {
-				is_merchant_republic = yes
-				holy_order = yes
-				mercenary = yes
-				controls_religion = yes
-				is_nomadic = yes
-			}
-			capital_scope = {
-				location = {
-					any_province_holding = {
-						holding_type = temple
-					}
-				}
-			}
-		}
-		preferred_limit = {
-			tier = COUNT
-			is_adult = yes
-		}
-		preferred_limit = {
-			tier = DUKE
-			is_adult = yes
-		}
-		preferred_limit = {
-			tier = KING
-			is_adult = yes
-			NOT = {
-				any_character = {
-					is_landed = yes
-					rtp_is_republic_government = yes
-					tier = KING 
-					NOT = {
-						distance = { value = 1000 where = PREV }
-					}
-				}
-			}
-		}
-		preferred_limit = {
-			tier = EMPEROR
-			is_adult = yes
-			NOT = {
-				any_character = {
-					is_landed = yes
-					rtp_is_republic_government = yes
-					tier = EMPEROR
-					NOT = {
-						distance = { value = 1000 where = PREV }
-					}
-				}
-			}
-		}
 		
 		save_event_target_as = target_theocracy
+		
+		any_demesne_title = {
+			limit = {
+				holding_type = castle
+			}
+			convert_to = temple
+		}
 		
 		set_government_type = playable_theocracy_government
 		remove_spouse = spouse

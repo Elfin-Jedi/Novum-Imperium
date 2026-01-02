@@ -35,6 +35,7 @@ society_quest_event = {
 					}
 				}
 				save_event_target_as = rtp_society_quest_target #The target of the quest
+				set_immune_to_pruning = yes
 				event_target:rtp_society_quest_target = {
 					liege = {
 						create_character = {
@@ -48,6 +49,7 @@ society_quest_event = {
 						new_character = {
 							set_character_flag = rtp_trash #Just delete this dude
 							save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+							set_immune_to_pruning = yes
 						}
 						create_character = {
 							age = 30
@@ -60,6 +62,7 @@ society_quest_event = {
 						new_character = {
 							set_character_flag = rtp_trash #Just delete this dude
 							save_event_target_as = rtp_society_quest_target3 #The third target of the quest
+							set_immune_to_pruning = yes
 						}
 					}
 				}
@@ -143,6 +146,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target2 = {
 			save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		random = {
@@ -161,6 +165,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target3 = {
 			save_event_target_as = rtp_society_quest_target3 #The third target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		random = {
@@ -172,6 +177,7 @@ character_event = {
 		hidden_tooltip = {
 			event_target:rtp_society_quest_target3 = {
 				save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+				set_immune_to_pruning = yes
 			}
 		}
 
@@ -209,6 +215,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target2 = {
 			save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		ai_chance = {
@@ -221,6 +228,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target2 = {
 			save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		ai_chance = {
@@ -338,6 +346,7 @@ society_quest_event = {
 			new_character = {
 				set_character_flag = rtp_trash #Just delete this dude
 				save_event_target_as = rtp_society_quest_target #The target of the quest
+				set_immune_to_pruning = yes
 			}
 		}
 		society = {
@@ -852,6 +861,7 @@ society_quest_event = {
 					prisoner = yes
 				}
 				save_event_target_as = rtp_society_quest_target #The target of the quest
+				set_immune_to_pruning = yes
 			}
 			random_society_member = {
 				limit = {
@@ -1127,6 +1137,7 @@ society_quest_event = {
 			new_character = {
 				set_character_flag = rtp_trash #Just delete this dude
 				save_event_target_as = rtp_society_quest_target #The target of the quest
+				set_immune_to_pruning = yes
 			}
 		}
 	}
@@ -1211,6 +1222,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		random = {
@@ -1235,6 +1247,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		random = {
@@ -1259,6 +1272,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		random = {
@@ -1295,6 +1309,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		character_event = {
@@ -1321,6 +1336,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		character_event = {
@@ -1343,6 +1359,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		character_event = {
@@ -1365,6 +1382,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		character_event = {
@@ -1387,6 +1405,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		character_event = {
@@ -1597,8 +1616,10 @@ society_quest_event = {
 				}
 			}
 			save_event_target_as = rtp_society_quest_target2 #The second target of the quest
+			set_immune_to_pruning = yes
 			spouse = {
 				save_event_target_as = rtp_society_quest_target #The target of the quest
+				set_immune_to_pruning = yes
 			}
 		}
 	}
@@ -1686,6 +1707,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		random = {
@@ -1702,6 +1724,7 @@ character_event = {
 
 		event_target:rtp_society_quest_target = {
 			save_event_target_as = rtp_society_quest_target #The target of the quest
+			set_immune_to_pruning = yes
 		}
 
 		random = {
