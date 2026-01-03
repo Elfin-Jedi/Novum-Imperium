@@ -2,8 +2,8 @@ far_east;Far East;;;;;;;;;;;;;x
 japanese;Japanese;;;;;;;;;;;;;x
 ainu;Ainu;;;;;;;;;;;;;x
 ryukyuan;Ryukyuan;;;;;;;;;;;;;x
-emperor_japanese;Mikado;;;;;;;;;;;;;x
-emperor_female_japanese;Mikado;;;;;;;;;;;;;x
+emperor_japanese;Shogun;;;;;;;;;;;;;x
+emperor_female_japanese;Kogo;;;;;;;;;;;;;x
 king_japanese;Kokuo;;;;;;;;;;;;;x
 king_female_japanese;Jo'o;;;;;;;;;;;;;x
 duke_japanese;Daimyo;;;;;;;;;;;;;x
@@ -24,16 +24,17 @@ count_title_ruler_consort_japanese;Kami;;;;;;;;;;;;;x
 count_title_ruler_consort_female_japanese;Kita no Kata;;;;;;;;;;;;;x
 duke_title_ruler_consort_japanese;Daimyo;;;;;;;;;;;;;x
 duke_title_ruler_consort_female_japanese;Midaidokoro;;;;;;;;;;;;;x
-emperor_title_ruler_consort_japanese;Mikado;;;;;;;;;;;;;x
+emperor_title_ruler_consort_japanese;Shogun;;;;;;;;;;;;;x
 emperor_title_ruler_consort_female_japanese;Kogo;;;;;;;;;;;;;x
 title_queen_mother_japanese;Kokumo;;;;;;;;;;;;;x
 emperor_title_queen_mother_female_japanese;Kotaigo;;;;;;;;;;;;;x
 title_prince_japanese;Oji;;;;;;;;;;;;;x
 title_prince_female_japanese;Ojo;;;;;;;;;;;;;x
-e_japan;Iaponia;;;;;;;;;;;;;x
-k_japan;Iaponia;;;;;;;;;;;;;x
+e_japan;Japan;;;;;;;;;;;;;x
+k_japan;Japan;;;;;;;;;;;;;x
 k_ainumosir;Ainu Moshir;;;;;;;;;;;;;x
 k_ryukyu;Ruuchuu;;;;;;;;;;;;;x
+d_yamato;Japan;;;;;;;;;;;;;x
 d_shinto;Shinto High Priesthood;;;;;;;;;;;;;x
 d_ryukyu_shinto;Ko-Shinto High Priesthood;;;;;;;;;;;;;x
 d_ainu_pantheism_reformed;Katunkamuy High Priesthood;;;;;;;;;;;;;x
@@ -79,9 +80,11 @@ c_nagato;Nagato;;;;;;;;;;;;;x
 c_tajima;Tajima;;;;;;;;;;;;;x
 c_izumo;Izumo;;;;;;;;;;;;;x
 c_iwami;Iwami;;;;;;;;;;;;;x
+c_aki;Aki;;;;;;;;;;;;;x
+c_nagato;Nagato;;;;;;;;;;;;;x
 c_awa;Awa;;;;;;;;;;;;;x
 c_tosa;Tosa;;;;;;;;;;;;;x
-c_iyo;Hephaistion;;;;;;;;;;;;;x
+c_iyo;Iyo;;;;;;;;;;;;;x
 c_bungo;Bungo;;;;;;;;;;;;;x
 c_chikuzen;Chikuzen;;;;;;;;;;;;;x
 c_hizen;Hizen;;;;;;;;;;;;;x
@@ -124,7 +127,6 @@ b_kubiki;Kubiki;;;;;;;;;;;;;x
 b_naoetsu;Naoetsu;;;;;;;;;;;;;x
 b_oguni;Oguni;;;;;;;;;;;;;x
 b_uonuma;Uonuma;;;;;;;;;;;;;x
-b_sado;Sado;;;;;;;;;;;;;x
 b_kanbara;Kanbara;;;;;;;;;;;;;x
 b_iwafune;Iwafune;;;;;;;;;;;;;x
 b_koshi;Koshi;;;;;;;;;;;;;x
@@ -483,6 +485,7 @@ b_iriomote;Irimutii;;;;;;;;;;;;;x
 b_sistukari;Sistukari;;;;;;;;;;;;;x
 e_japan_adj;Japanese;;;;;;;;;;;;;x
 k_japan_adj;Japanese;;;;;;;;;;;;;x
+k_ainumosir;Ainu;;;;;;;;;;;;;x
 k_ryukyu_adj;Ryukyuan;;;;;;;;;;;;;x
 d_tohoku_adj;Tohoku;;;;;;;;;;;;;x
 d_kanto_adj;Kanto;;;;;;;;;;;;;x
@@ -526,6 +529,8 @@ c_nagato_adj;Nagato;;;;;;;;;;;;;x
 c_tajima_adj;Tajima;;;;;;;;;;;;;x
 c_izumo_adj;Izumo;;;;;;;;;;;;;x
 c_iwami_adj;Iwami;;;;;;;;;;;;;x
+c_aki_adj;Aki;;;;;;;;;;;;;x
+c_nagato_adj;Nagato;;;;;;;;;;;;;x
 c_awa_adj;Awa;;;;;;;;;;;;;x
 c_tosa_adj;Tosa;;;;;;;;;;;;;x
 c_iyo_adj;Iyo;;;;;;;;;;;;;x
@@ -546,19 +551,171 @@ c_sakishima_adj;Sachishima;;;;;;;;;;;;;x
 c_tsushima;Tsushima;;;;;;;;;;;;;x
 c_tsushima_adj;Tsushima;;;;;;;;;;;;;x
 b_kaneda;Kaneda;;;;;;;;;;;;;x
-c_kuril;Kuril;;;;;;;;;;;;;x
-c_kuril_adj;Kuril;;;;;;;;;;;;;x
-b_kuril;Kuril;;;;;;;;;;;;;x
-emperor_nihonohellenic;Mikado;;;;;;;;;;;;;x
-emperor_female_nihonohellenic;Mikado;;;;;;;;;;;;;x
-king_nihonohellenic;Kokuo;;;;;;;;;;;;;x
-king_female_nihonohellenic;Jo'o;;;;;;;;;;;;;x
-duke_nihonohellenic;Daimyo;;;;;;;;;;;;;x
-duke_female_nihonohellenic;Daimyo;;;;;;;;;;;;;x
-duchy_of_nihonohellenic;Circuit of;;;;;;;;;;;;;x
-count_nihonohellenic;Kami;;;;;;;;;;;;;x
-count_female_nihonohellenic;Kami;;;;;;;;;;;;;x
-county_of_nihonohellenic;Province of;;;;;;;;;;;;;x
-baron_nihonohellenic;Gunji;;;;;;;;;;;;;x
-baron_female_nihonohellenic;Gunji;;;;;;;;;;;;;x
-barony_of_nihonohellenic;Manor of;;;;;;;;;;;;;x
+MIKADO_MALE;Tenno;;;;;;;;;;;;;x
+MIKADO_FEMALE;Tenno;;;;;;;;;;;;;x
+MIKADO_FEMALE_consort_female_japanese;Kogo;;;;;;;;;;;;;x
+RETTYPE_CUL_SAMURAI;Samurai;;;;;;;;;;;;;x
+ca_culture_japanese_1_desc;Here are loyal young noblemen taught the way of the samurai;;;;;;;;;;;;;x
+ca_culture_japanese_1;Dojo;;;;;;;;;;;;;x
+ca_culture_japanese_2;Dojo;;;;;;;;;;;;;x
+ca_culture_japanese_3;Dojo;;;;;;;;;;;;;x
+ca_culture_japanese_4;Dojo;;;;;;;;;;;;;x
+STAT_PIETY_HONOUR;Honour;;;;;;;;;;;;;x
+EVTDESCjapanevents.1;We hace succeded in siezing our rightfull mastery over all of Japan. Now it is time for us to return the Tenno his dignity ... under our protection.;;;;;;;;;;;;;x
+EVTOPTAjapanevents.1;We will protect the rightfull Emperor;;;;;;;;;;;;;x
+EVTOPTBjapanevents.1;It is time for a new Emperor;;;;;;;;;;;;;x
+EVTOPTCjapanevents.1;All is as it must be;;;;;;;;;;;;;x
+job_marshal_japanese;Hyobu-kyo;;;;;;;;;;;;;x
+job_treasurer_japanese;Okura-kyo;;;;;;;;;;;;;x
+job_spymaster_japanese;Gyobu-kyo;;;;;;;;;;;;;x
+job_spiritual_japanese;Jibu-kyo;;;;;;;;;;;;;x
+job_spiritual_nihon_shinto;Jibu-kyo;;;;;;;;;;;;;x
+job_chancellor_japanese;Daijo-daijin;;;;;;;;;;;;;x
+title_councilmember_king_japanese;Dainagon;;;;;;;;;;;;;x
+title_councilmember_emperor_japanese;Dainagon;;;;;;;;;;;;;x
+title_dainagon;Dainagon;;;;;;;;;;;;;x
+title_dainagon_desc;The Dainagon was a counselor of the first rank in the Imperial court of Japan. They assisted the Minister of the Left (the Sadaijin) and the Minister of the Right (the Udaijin).;;;;;;;;;;;;;x
+title_shikibu;Shikibu-kyo;;;;;;;;;;;;;x
+title_shikibu_desc;The Shikibu-kyo managed the personnel evaluation system, the code of etiquette, the recruitment and promotion, and the award, with administering Daigaku-ryo - an organization for training up government officials.;;;;;;;;;;;;;x
+title_appointed_regent_nihon_shinto;Kampaku;;;;;;;;;;;;;x
+title_naidaijin;Naidaijin;;;;;;;;;;;;;x
+title_naidaijin_desc;Literally meaning Inner Minister, was an ancient office in the Japanese Imperial Court. Its role, rank and authority varied throughout the pre-Meiji period of Japanese history, but in general remained as a significant post under the Taiho Code.;;;;;;;;;;;;;x
+title_sadaijin;Sadaijin;;;;;;;;;;;;;x
+title_sadaijin_desc;The Sadaijin was the Senior Minister of State, overseeing all functions of government with the Udaijin as his deputy.;;;;;;;;;;;;;x
+title_udaijin;Udaijin;;;;;;;;;;;;;x
+title_udaijin_desc;The Udaijin was the Junior Minister of State, overseeing all branches of the Daijo-kan or  Great Council of State.;;;;;;;;;;;;;x
+title_shonagon;Shonagon;;;;;;;;;;;;;x
+title_shonagon_desc;The Shonagon are said to help the memories of the principal officers, to put seals to deeds, and carry communications to others within the daijō-kan. They are both military and civil.;;;;;;;;;;;;;x
+title_chunagon;Chunagon;;;;;;;;;;;;;x
+title_chunagon_desc;In the ranks of the Imperial bureaucracy, the Chunagon(middle counselors) came between the Dainagon (major counselors) and the Shōnagon (minor counselors).;;;;;;;;;;;;;x
+title_kunai;Kunai-kyo;;;;;;;;;;;;;x
+title_kunai_desc;The Minister of the Imperial Household provided for the needs of the Imperial Household.;;;;;;;;;;;;;x
+title_nakatsukasa;Nakatsukasa-kyo;;;;;;;;;;;;;x
+title_nakatsukasa_desc;The Nakatsukasa-kyo or Minister of Central Affairs administered all duties related to the Imperial Court, such as assisting the Emperor, proclaiming the imperial edict, conferring the court rank.;;;;;;;;;;;;;x
+title_minbu;Minbu-kyo;;;;;;;;;;;;;x
+title_minbu_desc;The Minbu-kyo or Minister of Popular Affairs managed affairs related to families, the fields, mountains and rivers, roads, and land taxes nationwide;;;;;;;;;;;;;x
+title_daijotenno;Daijo Tenno;;;;;;;;;;;;;x
+title_daijotenno_desc;The Daijo Tenno is the title for an Emperor of Japan who abdicates the Chrysanthemum Throne in favour of a successor.;;;;;;;;;;;;;x
+yamato;Blood of Jimmu;;;;;;;;;;;;;x
+yamato_desc;The legendary first emperor of Japan, he launched a military expedition from Hyuga near the Seto Inland Sea, captured Yamato, and established this as his center of power.;;;;;;;;;;;;;x
+todaiji_buddhist;Nara;;;;;;;;;;;;;x
+todaiji_buddhist_desc;Nara Buddhism refers to Buddhist scholarship and monasteries in Nara, the first permanent capital of Japan, during the Nara period.;;;;;;;;;;;;;x
+nanzenji_buddhist;Zen;;;;;;;;;;;;;x
+nanzenji_buddhist_desc;Japanese Zen refers to the Japanese forms of Zen Buddhism, an originally Chinese Mahayana school of Buddhism that strongly emphasizes dhyana, the meditative training of awareness and equanimity.;;;;;;;;;;;;;x
+nichiren_buddhist;Nichiren;;;;;;;;;;;;;x
+nichiren_buddhist_desc;Nichiren, also known as Hokkeshu is a branch of Mahayana Buddhism based on the teachings of the 13th-century Japanese Buddhist priest Nichiren;;;;;;;;;;;;;x
+jodoshinshu_buddhist;Amida;;;;;;;;;;;;;x
+jodoshinshu_buddhist_desc;Amida is a broad branch of Mahayana Buddhism focused on achieving rebirth in a Buddha's Buddha-field or Pure Land. It is one of the most widely practiced traditions of Buddhism in East Asia.;;;;;;;;;;;;;x
+koyasan_buddhist;Shingon;;;;;;;;;;;;;x
+koyasan_buddhist_desc;Shingon is one of the major schools of Buddhism in Japan and one of the few surviving Vajrayana lineages in East Asia, originally spread from India to China through traveling monks such as Vajrabodhi and Amoghavajra.;;;;;;;;;;;;;x
+enryakuji_buddhist;Tendai;;;;;;;;;;;;;x
+enryakuji_buddhist_desc;Tendai, also known as the Tendai Lotus School is a Mahayana Buddhist tradition officially established in Japan in 806 by the Japanese monk Saicho.;;;;;;;;;;;;;x
+ronin;Ronin;;;;;;;;;;;;;x
+ronin_desc;A ronin, was a samurai without a lord or master during the feudal period of Japan. A samurai became masterless upon the death of his master or after the loss of his master's favor or privilege.;;;;;;;;;;;;;x
+convert_shinto_branch;Change Shinto branch;;;;;;;;;;;;;x
+EVTOPTAjapanevents.2;Convert to Nara Buddhism;;;;;;;;;;;;;x
+EVTOPTBjapanevents.2;Convert to Tendai Buddhism;;;;;;;;;;;;;x
+EVTOPTCjapanevents.2;Convert to Shingon Buddhism;;;;;;;;;;;;;x
+EVTOPTDjapanevents.2;Convert to Amida Buddhism;;;;;;;;;;;;;x
+EVTOPTEjapanevents.2;Convert to Nichiren Buddhism;;;;;;;;;;;;;x
+EVTOPTFjapanevents.2;Convert to Zen Buddhism;;;;;;;;;;;;;x
+EVTDESCjapanevents.2;Shinto Buddhism boasts several sects. It might be advantageous for us to change our branch.;;;;;;;;;;;;;x
+EVTOPTGjapanevents.2;Next page;;;;;;;;;;;;;x
+EVTOPTHjapanevents.2;Return;;;;;;;;;;;;;x
+EVTOPTIjapanevents.2;Nonsense all of it;;;;;;;;;;;;;x
+monastic_order_sohei;The Sohei;;;;;;;;;;;;;x
+monastic_order_sohei_desc;The Sohei were Buddhist warrior monks of both classical and feudal Japan. At certain points in history, they held considerable power, obliging the imperial and military governments to collaborate.;;;;;;;;;;;;;x
+monastic_order_sohei_currency;Devotion;;;;;;;;;;;;;x
+monastic_order_sohei_rank_1_male;Ubasoko;;;;;;;;;;;;;x
+monastic_order_sohei_rank_2_male;Sensei;;;;;;;;;;;;;x
+monastic_order_sohei_rank_3_male;Osho;;;;;;;;;;;;;x
+monastic_order_sohei_rank_4_male;Ajari;;;;;;;;;;;;;x
+monastic_order_sohei_rank_1_female;Ubasoko;;;;;;;;;;;;;x
+monastic_order_sohei_rank_2_female;Sensei;;;;;;;;;;;;;x
+monastic_order_sohei_rank_3_female;Osho;;;;;;;;;;;;;x
+monastic_order_sohei_rank_4_female;Ajari;;;;;;;;;;;;;x
+currency_name_monastic_order_sohei;Devotion;;;;;;;;;;;;;x
+the_shinobi;The Shinobi;;;;;;;;;;;;;x
+currency_name_the_shinobi;Influence;;;;;;;;;;;;;x
+the_shinobi_desc;The Shinobi were covert agents or mercenaries in feudal Japan. The functions of the shinobi included reconnaissance, espionage, infiltration, deception, ambush, bodyguarding and their fighting skills in martial arts, including ninjutsu. Their covert methods of waging irregular warfare were deemed dishonorable and beneath the honor of the samurai.;;;;;;;;;;;;;x
+the_shinobi_rank_1_male;Genin;;;;;;;;;;;;;x
+the_shinobi_rank_2_male;Chuunin;;;;;;;;;;;;;x
+the_shinobi_rank_3_male;Jounin;;;;;;;;;;;;;x
+the_shinobi_rank_4_male;Hokage;;;;;;;;;;;;;x
+the_shinobi_rank_1_female;Genin;;;;;;;;;;;;;x
+the_shinobi_rank_2_female;Chuunin;;;;;;;;;;;;;x
+the_shinobi_rank_3_female;Jounin;;;;;;;;;;;;;x
+the_shinobi_rank_4_female;Hokage;;;;;;;;;;;;;x
+shinobi_drug_effect;Buy Opium in the black market;;;;;;;;;;;;;x
+nihon_shinto_opinion;Shinto opinion;;;;;;;;;;;;;x
+ask_total_harakiri;Request Familly's Hara-kiri;;;;;;;;;;;;;x
+ask_total_harakiri_desc;Seppuku, sometimes referred to as hara-kiri, is a form of Japanese ritual suicide by disembowelment.;;;;;;;;;;;;;x
+ask_harakiri;Request Hara-kiri;;;;;;;;;;;;;x
+ask_harakiri_desc;Seppuku, sometimes referred to as hara-kiri, is a form of Japanese ritual suicide by disembowelment.;;;;;;;;;;;;;x
+DEATH_HARAKIRI;committed hara-kiri;;;;;;;;;;;;;x
+EVTDESCjapanevents.6;You have acted with great dishonour and are being asked by [From.GetTitledFirstName] to salvage the reputation of your familly by undergoing Hara-kiri.;;;;;;;;;;;;;x
+EVTOPTAjapanevents.6;Death before dishonour;;;;;;;;;;;;;x
+EVTOPTBjapanevents.6;Catch me if you can!;;;;;;;;;;;;;x
+EVTDESCjapanevents.7;You have acted with great dishonour and are being asked by [From.GetTitledFirstName] to salvage the reputation of your familly by undergoing Hara-kiri along with all your close familly.;;;;;;;;;;;;;x
+EVTOPTAjapanevents.7;Death before dishonour;;;;;;;;;;;;;x
+EVTOPTBjapanevents.7;Catch me if you can!;;;;;;;;;;;;;x
+japanese_feudalism;Samurai;;;;;;;;;;;;;x
+japanese_feudalism_desc;The term samurai was originally used to denote the aristocratic warriors, but it came to apply to all the members of the warrior class that rose to power in the 12th century and dominated the Japanese government until the Meiji Restoration in 1868.;;;;;;;;;;;;;x
+japanese_imperial_government;Insei;;;;;;;;;;;;;x
+japanese_imperial_government_desc;Insei or 'cloistered government' describes the strategy of emperors during the late Heian Period (794-1185 CE) in ancient Japan where they abdicated in favour of a chosen heir yet still ruled in some capacity, typically after retiring to a Buddhist monastery, hence the reference to a cloister.;;;;;;;;;;;;;x 
+retire_cloister;Retire to a Monastery;;;;;;;;;;;;;x
+retire_cloister_desc;In feudal Japan emperors often abdicated and joined monastic communities, but retained power and influence.;;;;;;;;;;;;;x
+EVTDESCjapanevents.10;Do you really wish to abdicate the Chrysanthemum Throne and join a monastic community?;;;;;;;;;;;;;x
+EVTOPTAjapanevents.10;I shall rule from the shadows;;;;;;;;;;;;;x
+EVTOPTBjapanevents.10;It is not time yet;;;;;;;;;;;;;x
+d_bonin;Bonin;;;;;;;;;;;;;x
+d_bonin_adj;Bonin;;;;;;;;;;;;;x
+c_ogasawara;Ogasawara;;;;;;;;;;;;;x
+c_ogasawara_adj;Ogasawara;;;;;;;;;;;;;x
+c_oshimanew;Oshima;;;;;;;;;;;;;x
+c_oshimanew_adj;Oshima;;;;;;;;;;;;;x
+b_ogasawara;Ogasawara;;;;;;;;;;;;;x
+b_hahajima;Hahajima;;;;;;;;;;;;;x
+b_iwojima;Iwojima;;;;;;;;;;;;;x
+b_oshimanew;Oshima;;;;;;;;;;;;;x
+b_hachijo;Hachijo;;;;;;;;;;;;;x
+b_aogashima;Aogashima;;;;;;;;;;;;;x
+b_mikurajima;Mikurajima;;;;;;;;;;;;;x
+b_miyake;Miyake;;;;;;;;;;;;;x
+b_kozushima;Kozushima;;;;;;;;;;;;;x
+b_niijima;Niijima;;;;;;;;;;;;;x
+d_kurils;Kurils;;;;;;;;;;;;;x
+d_kurils_adj;Kurils;;;;;;;;;;;;;x
+c_kurilsk;Kurilsk;;;;;;;;;;;;;x
+d_kurilsk_adj;Kurilsk;;;;;;;;;;;;;x
+b_kurilsk;Kurilsk;;;;;;;;;;;;;x
+b_baykovo;Baykovo;;;;;;;;;;;;;x
+c_urup;Urup;;;;;;;;;;;;;x
+c_urup_adj;Urup;;;;;;;;;;;;;x
+b_urup;Urup;;;;;;;;;;;;;x
+c_iturup;Iturup;;;;;;;;;;;;;x
+c_iturup_adj;Iturup;;;;;;;;;;;;;x
+b_iturup;Iturup;;;;;;;;;;;;;x
+c_kunashir;Kunashir;;;;;;;;;;;;;x
+c_kunashir_adj;Kunashir;;;;;;;;;;;;;x
+b_kunashir;Kunashir;;;;;;;;;;;;;x
+b_shikotan;Shikotan;;;;;;;;;;;;;x
+c_sado;Sado;;;;;;;;;;;;;x
+c_sado_adj;Sado;;;;;;;;;;;;;x
+b_sado;Sado;;;;;;;;;;;;;x
+b_seisuiji;Seisuiji;;;;;;;;;;;;;x
+b_kiyomizudera;Kiyomizudera;;;;;;;;;;;;;x
+b_hamochi;Hamochi;;;;;;;;;;;;;x
+b_akadomari;Akadomari;;;;;;;;;;;;;x
+b_kanonji;Kanonji;;;;;;;;;;;;;x
+b_himezaki;Himezaki;;;;;;;;;;;;;x
+kuge;Kuge;;;;;;;;;;;;;x
+kuge_desc;The kuge was a Japanese aristocratic class that dominated the Japanese Imperial Court in Kyoto.;;;;;;;;;;;;;x
+claim_shogunate;Claim Shogunate;;;;;;;;;;;;;x
+claim_shogunate_DESC;Our clan commands more power than the central authority of Japan! We can seize this opportunity to become Shogun!;;;;;;;;;;;;;x
+claim_shogunate_2;Claim Shogunate;;;;;;;;;;;;;x
+claim_shogunate_2_DESC;The dice has been cast! Another can as openly declared their intentions of ruling militarily over all of Japan. We whould be fools not to act.;;;;;;;;;;;;;x
+EVTNAMEjapanevents.10;Cloistered Rule;;;;;;;;;;;;;x
+EVTNAMEjapanevents.1;The Emperor rules no more;;;;;;;;;;;;;x
+EVTNAMEjapanevents.6;Hara-kiri;;;;;;;;;;;;;x
+EVTNAMEjapanevents.7;Familial Hara-kiri;;;;;;;;;;;;;x

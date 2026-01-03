@@ -23,19 +23,35 @@ religion = orthodox
 
 # History
 
-324.1.1 = {
-	build_wonder = wonder_con_wall
-	set_wonder_stage = 2
+330.5.11 = { # Nova Roma/Constantinople established
+		build_wonder = wonder_city_of_wonders_byz
+		set_wonder_stage = 5
+		build_wonder_upgrade = upgrade_cow_district_mega_palation
+		build_wonder_upgrade = upgrade_cow_district_hippodromos_byz
+		build_wonder_upgrade = upgrade_cow_district_forum_constantine
+		build_wonder_upgrade = upgrade_cow_district_limen_byz
+		# build_wonder_upgrade = upgrade_cow_amphitheatron_byz # Ampitheatron was abandoned due to Christian morals, so you have to rebuild it
 }
 
-404.1.1 = {
-	set_wonder_stage = 3
-	build_wonder_upgrade = upgrade_studded_bastions
-	build_wonder_upgrade = upgrade_soaring_fortresses
-	build_wonder_upgrade = upgrade_gatehouse_forts
-	build_wonder_upgrade = upgrade_deep_defense_architecture
-	build_wonder_upgrade = upgrade_watchtower_network
-	build_wonder_upgrade = upgrade_tower
+340.1.1 = { # Imperial Library of Constantinople founded by Constantius II during his reign (337–361 AD)
+	build_wonder_upgrade = upgrade_cow_district_bibliothekai_byz
+	set_wonder_stage = 6
+}
+
+413.1.1 = { # Theodosian Walls
+	set_wonder_stage = 7
+	build_wonder_upgrade = upgrade_cow_district_theodosian_walls
+	# build_wonder_upgrade = upgrade_cow_district_chryseia_pyle # Only a gate, not quite a fortress yet
+}
+
+425.1.1 = { #  Imperial University of Constantinople founded by Theodosius II in 425 AD
+	build_wonder_upgrade = upgrade_cow_district_pandidakterion
+	set_wonder_stage = 8
+}
+
+562.12.23 = { # Hagia Sophia - Finalized
+	set_wonder_stage = 9
+	build_wonder_upgrade = upgrade_cow_district_hagia_sophia
 }
 
 769.1.1 = { 

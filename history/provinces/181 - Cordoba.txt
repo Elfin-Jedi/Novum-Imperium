@@ -28,7 +28,40 @@ culture = andalusian_arabic
 religion = sunni
 
 # History
+
+1.1.1 = {
+	build_wonder = wonder_city_of_wonders_cord
+	set_wonder_stage = 1
+}
+
+766.1.1 = { # Islamic Cordoba chosen as capital
+	set_wonder_stage = 4
+}
+
+850.1.1 = { # Islamic Cordoba grows
+	set_wonder_stage = 6
+	build_wonder_upgrade = upgrade_cow_street_lamps_cord
+	build_wonder_upgrade = upgrade_cow_sewers_cord
+}
+
+936.1.1 = { # Medina Azahara built between 936-940
+	build_wonder_upgrade = upgrade_cow_district_medina_azahara
+	build_wonder_upgrade = upgrade_cow_district_university_cord
+}
+
 940.1.1 = { b_madinat_al_zahra = city }
-1010.1.1 = { remove_settlement = b_madinat_al_zahra }
+
+987.1.1 = { # Islamic Cordoba at it's peak
+	set_wonder_stage = 7
+	build_wonder_upgrade = upgrade_cow_district_mosque_cord
+}
+
+1010.1.1 = { # Medina Azahara destroyed during uprising
+	remove_settlement = b_madinat_al_zahra
+	destroy_wonder_upgrade = upgrade_cow_district_medina_azahara
+	set_wonder_stage = 6
+	add_custom_history = String_medina_azahara_destroyed
+}
+
 1251.1.1 = { culture = castillan }
 1251.1.1 = { religion = catholic }

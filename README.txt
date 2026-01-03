@@ -49,6 +49,7 @@ Small Mods:
 "Caesar's Wonders"
 "Change Character"
 "Choose your character+"
+"Cities of Wonders"
 "CK2 House Motto"
 "CK2RPG Siege Victory Choices"
 "CK2RPG Siege Victory Choices hotfix"

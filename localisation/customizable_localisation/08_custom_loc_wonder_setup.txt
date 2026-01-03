@@ -22,6 +22,25 @@ defined_text = {
 
 	use_first_valid = yes # (Defaults to no)
 
+	text = { # Unique name (Constantinople)
+		trigger = {
+			has_wonder = wonder_city_of_wonders_byz
+		}
+		localisation_key = wonder_city_of_wonders_byz
+	}
+	text = { # Unique name (Roma)
+		trigger = {
+			has_wonder = wonder_city_of_wonders_roma
+		}
+		localisation_key = wonder_city_of_wonders_roma
+	}
+	text = { # Unique name (Jerusalem)
+		trigger = {
+			has_wonder = wonder_city_of_wonders_jeru
+		}
+		localisation_key = wonder_city_of_wonders_jeru
+	}
+
 	######### Very rare...
 	text = {
 		trigger = {
@@ -718,6 +737,52 @@ defined_text = {
 		trigger = { has_wonder_flag = pyramid }
 		localisation_key = String_Pyramid
 	}
+	text = {
+		trigger = { 
+			uses_dynamic_name_cow_trigger = yes
+			wonder_stage = 1
+			NOT = { wonder_stage = 3 }
+		}
+		localisation_key = String_cow_City1
+	}
+	text = {
+		trigger = { 
+			uses_dynamic_name_cow_trigger = yes
+			wonder_stage = 3
+			NOT = { wonder_stage = 6 }
+		}
+		localisation_key = String_cow_City2
+	}
+	text = {
+		trigger = { 
+			uses_dynamic_name_cow_trigger = yes
+			wonder_stage = 6
+			NOT = { wonder_stage = 9 }
+		}
+		localisation_key = String_cow_City3
+	}
+	text = {
+		trigger = { 
+			uses_dynamic_name_cow_trigger = yes
+			OR = {
+				wonder_stage = 9
+				wonder_stage = 10
+			}
+		}
+		localisation_key = String_cow_City4
+	}
+	text = {
+		trigger = { has_wonder = wonder_city_of_wonders_byz }
+		localisation_key = String_cow_byz_Basileuousa
+	}
+	text = {
+		trigger = { has_wonder = wonder_city_of_wonders_roma }
+		localisation_key = String_cow_roma_Eternal
+	}
+	text = {
+		trigger = { has_wonder = wonder_city_of_wonders_jeru }
+		localisation_key = String_cow_jeru_Holy
+	}
 	
 	#In case it cannot find anything...
     fallback_text = {
@@ -829,6 +894,12 @@ defined_text = {
 		trigger = { has_wonder_flag = stone_formation }
 		localisation_key = String_stone_formation
 	}
+	text = {
+		trigger = {
+			has_city_of_wonders_trigger = yes
+		}
+		localisation_key = String_cow_city
+	}
 	
 	#In case it cannot find anything...
     fallback_text = {
@@ -917,25 +988,77 @@ defined_text = {
 	name = GetWonderDesc
 	#Dependent on event-targets: upgrade_00, upgrade_01 and upgrade_02
 	text = {
+		trigger = { #For City of Wonders (Constantinople)
+			has_wonder = wonder_city_of_wonders_byz
+		}
+		localisation_key = wonder_city_of_wonders_byz_desc
+	}
+	text = {
+		trigger = { #For City of Wonders (Roma)
+			has_wonder = wonder_city_of_wonders_roma
+		}
+		localisation_key = wonder_city_of_wonders_roma_desc
+	}
+	text = {
+		trigger = { #For City of Wonders (Alexandria)
+			has_wonder = wonder_city_of_wonders_alex
+		}
+		localisation_key = wonder_city_of_wonders_alex_desc
+	}
+	text = {
+		trigger = { #For City of Wonders (Antioch)
+			has_wonder = wonder_city_of_wonders_anti
+		}
+		localisation_key = wonder_city_of_wonders_anti_desc
+	}
+	text = {
+		trigger = { #For City of Wonders (Jerusalem)
+			has_wonder = wonder_city_of_wonders_jeru
+		}
+		localisation_key = wonder_city_of_wonders_jeru_desc
+	}
+	text = {
+		trigger = { #For City of Wonders (Babylon/Baghdad)
+			has_wonder = wonder_city_of_wonders_baby
+		}
+		localisation_key = wonder_city_of_wonders_baby_desc
+	}
+	text = {
 		trigger = { #for baby wonders (adds upgrade mention)
 			has_wonder_upgrade = yes
 			NOT = { num_of_wonder_upgrades = 3 }
 			NOT = { wonder_age = 15 }
+			NOT = {
+				has_city_of_wonders_trigger = yes
+			}
 		}
 		localisation_key = String_Wonder_Desc00
 	}
 	text = { #for wonders that build no upgrades, but stages instead: no upgrade addendum
 		trigger = {
 			has_wonder_upgrade = no
+			NOT = {
+				has_city_of_wonders_trigger = yes
+			}
 		}
 		localisation_key = String_Wonder_Desc01
 	}
 	text = { #Variant 1: mentions an upgrade
-		trigger = { num_of_wonder_upgrades = 2 }
+		trigger = { 
+			num_of_wonder_upgrades = 2 
+			NOT = {
+				has_city_of_wonders_trigger = yes
+			}
+		}
 		localisation_key = String_Wonder_Desc02
 	}
 	text = { #Variant 2: mentions an upgrade
-		trigger = { num_of_wonder_upgrades = 5 }
+		trigger = { 
+			num_of_wonder_upgrades = 5 
+			NOT = {
+				has_city_of_wonders_trigger = yes
+			}
+		}
 		localisation_key = String_Wonder_Desc03
 	}
 }
