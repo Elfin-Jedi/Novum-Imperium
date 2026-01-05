@@ -14,41 +14,266 @@ targetted_decisions = {
 		}
 		effect = {
 			if = {
-				limit = { ROOT = {is_landed = no} }
-				
-				grant_title_no_opinion = c_landless_t
-				
-				if = {
-					limit = {
-						dynasty = none
-					}
-					dynasty = 19930
-					set_government_type = rtp_lowborn_g
-					primary_title = {
-						gender_succ = true_cognatic
-						add_law = {
-							law = rtp_lowborn_succ
-							cooldown = no
-							opinion_effect = no
+				limit = {
+					ROOT = {
+						higher_tier_than = BARON
+						NOT = { government = theocracy_government }
+					} 
+				}
+				FROM = {
+					set_player_character = ROOT
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = {
+						AND = {
+							lower_tier_than = BARON
+							dynasty = none
 						}
 					}
 				}
-				else = {
-					set_government_type = rtp_noble_g
-					primary_title = {
-						gender_succ = true_cognatic
-						add_law = {
-							law = rtp_family_election_succ
-							cooldown = no
-							opinion_effect = no
-						}
+				dynasty = 19930
+				set_government_type = rtp_lowborn_g
+				grant_title_no_opinion = c_landless_t
+				primary_title = {
+					gender_succ = true_cognatic
+					add_law = {
+						law = rtp_lowborn_succ
+						cooldown = no
+						opinion_effect = no
 					}
 				}
 				FROM = {
-						set_player_character = ROOT
+					set_player_character = ROOT
 				}
 			}
-			FROM = { set_player_character = ROOT }
+			else_if = {
+				limit = {
+					ROOT = {
+						NOR = {
+							dynasty = none
+							rtp_is_baron = yes
+							government = theocracy_government
+						}
+					}
+				}
+				set_government_type = rtp_noble_g
+				grant_title_no_opinion = c_landless_t
+				primary_title = {
+					gender_succ = true_cognatic
+					add_law = {
+						law = rtp_family_election_succ
+						cooldown = no
+						opinion_effect = no
+					}
+				}
+				FROM = {
+					set_player_character = ROOT
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = {
+						rtp_is_baron = yes
+					}
+				}
+				ROOT = {
+					any_demesne_title = {
+						tier = BARON
+						save_event_target_as = rtp_barony
+					}
+					liege = {
+						save_event_target_as = rtp_liege
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							any_demesne_title = {
+								holding_type = castle
+							}
+							rtp_is_mercenary = yes
+						}
+					}
+					set_character_flag = rtp_mercenary
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							any_demesne_title = {
+								holding_type = castle
+							}
+							rtp_is_holy_order = yes
+						}
+					}
+					set_character_flag = rtp_holy_order
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							any_demesne_title = {
+								holding_type = city
+							}
+							rtp_is_republic = yes
+						}
+					}
+					set_character_flag = rtp_republic
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							any_demesne_title = {
+								holding_type = temple
+							}
+							rtp_is_theocracy = yes
+						}
+					}
+					set_character_flag = rtp_theocracy
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							any_demesne_title = {
+								holding_type = castle
+							}
+							rtp_is_feudal = yes
+						}
+					}
+					set_character_flag = rtp_feudal
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							any_demesne_title = {
+								holding_type = castle
+							}
+							rtp_is_iqta = yes
+						}
+					}
+					set_character_flag = rtp_iqta
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							capital_holding = {
+								holding_type = temple
+							}
+							rtp_is_monastic = yes
+						}
+					}
+					set_character_flag = rtp_monastic
+				}
+				else = {
+					limit = {
+						ROOT = {
+							any_demesne_title = {
+								holding_type = tribal
+							}
+							rtp_is_tribal = yes
+						}
+					}
+					set_character_flag = rtp_tribal
+				}
+				grant_title_no_opinion = c_baron_t
+				FROM = {
+					set_player_character = ROOT
+				}
+				c_baron_t = {
+					set_name = rtp_barony
+					set_preferred_capital = rtp_barony
+					save_persistent_event_target = {
+						name = rtp_home_capital
+						scope = rtp_barony
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							has_character_flag = rtp_mercenary
+						}
+					}
+					set_government_type = rtp_baron_mercenary_g
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_character_flag = rtp_holy_order
+						}
+					}
+					set_government_type = rtp_baron_order_g
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_character_flag = rtp_republic
+						}
+					}
+					set_government_type = rtp_baron_republic_g
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_character_flag = rtp_theocracy
+						}
+					}
+					c_baron_t = {
+						set_name = event_target:rtp_barony
+					}
+					set_government_type = rtp_baron_theocracy_g
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_character_flag = rtp_rtp_feudal
+						}
+					}
+					set_government_type = rtp_baron_g
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_character_flag = rtp_iqta
+						}
+					}
+					set_government_type = rtp_baron_iqta_g
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_character_flag = rtp_monastic
+						}
+					}
+					set_government_type = rtp_baron_monastic_g
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_character_flag = rtp_tribal
+						}
+					}
+					set_government_type = rtp_baron_tribal_g
+				}
+				set_defacto_liege = event_target:rtp_liege
+			}
+			else_if = {
+				limit = {
+					ROOT = {
+						higher_tier_than = BARON
+						government = theocracy_government
+					}
+				}
+				grant_title_no_opinion = k_papacy
+				set_government_type = rtp_landless_theocracy_g
+				FROM = {
+					set_player_character = ROOT
+				}
+			}
+			else = {
+				FROM = {
+					set_player_character = ROOT
+				}
+			}
 		}
 		revoke_allowed = {
 			always = no

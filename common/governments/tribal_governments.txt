@@ -115,6 +115,8 @@ tribal_governments = {
 		}
 		
 		character_modifier = {
+			vassal_opinion = -10
+			
 			martial = 1
 
 			intrigue = -1
@@ -134,10 +136,6 @@ tribal_governments = {
 		can_build_tribal = yes
 		can_build_hospitals = no
 		can_change_to_nomad_on_start = yes
-
-		character_modifier = {
-			vassal_opinion = -10
-		}
 
 		unit_modifier = {
 			land_morale = -0.5

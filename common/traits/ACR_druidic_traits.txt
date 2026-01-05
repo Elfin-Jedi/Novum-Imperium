@@ -1,13 +1,16 @@
 head1 = {
 	potential = {
-		religion_group = celtic_group
+		OR = {
+			religion = celtic_pagan
+			religion = celtic_pagan_reformed
+		}
 	}
 	
-	martial = 1
+	combat_rating = 5
 	monthly_character_prestige = 0.5
 	command_modifier = {	
-		religious_enemy = 0.1
-		morale_offence = 0.1
+		religious_enemy = 0.05
+		morale_offence = 0.05
 	}
 	ai_ambition = 15
 	ai_zeal = 5
@@ -15,49 +18,64 @@ head1 = {
 
 head2 = {
 	potential = {
-		religion_group = celtic_group
+		OR = {
+			religion = celtic_pagan
+			religion = celtic_pagan_reformed
+		}
 	}
-	martial = 3
+	combat_rating = 10
 	monthly_character_prestige = 1.5
 	customizer = no
 	same_religion_opinion = 10
-	
+	cached = yes # Keep a cache of all trait holders, to use with the corresponding event trigger 	
 	command_modifier = {
-		center = 0.1
-		religious_enemy = 0.3
-		morale_offence = 0.2
-		defence = 0.2
+		religious_enemy = 0.1
+		morale_offence = 0.1
 	}
 	ai_ambition = 40
-	ai_zeal = 10
+	ai_zeal = 50
 }
 
 druid = {
 	potential = {
-	religion_group = celtic_group
+		OR = {
+			religion = celtic_pagan
+			religion = celtic_pagan_reformed
+		}
 	}
+	
+	opposites =  {
+		bad_druid
+	}
+	
+	religious = no # Cleared manually on religious conversion, to avoid losing it on reformation
+	
 	monthly_character_piety = 0.5
 	learning = 3
 	diplomacy = 2
+	
 	customizer = no
 	
 	cannot_inherit = yes
 }
 
 bad_druid = {
-
 	potential = {
-		religion_group = celtic_group
+		OR = {
+			religion = celtic_pagan
+			religion = celtic_pagan_reformed
+		}
 	}
-	opposites =  {
+
+	opposites = {
 		druid
 	}
 	
 	religious = no # Cleared manually on religious conversion, to avoid losing it on reformation
 	
-	opposite_opinion = -10
-	church_opinion = -20
-	same_opinion_if_same_religion = 50
+	opposite_opinion = -5
+	church_opinion = -10
+	same_opinion_if_same_religion = 25
 	
 	monthly_character_piety = -1
 
@@ -120,18 +138,22 @@ bad_dryad = {
 	child_insult_adj = INSULT_CRUMMY
 }
 
-fian = {
+fian = {	
 	potential = {
-	religion_group = celtic_group
+		OR = {
+			religion = celtic_pagan
+			religion = celtic_pagan_reformed
+		}
 	}
+
 	martial = 2
 	learning = 1
-	
+	combat_rating = 7
 	same_religion_opinion = 5
 	
-	same_opinion = 20
+	same_opinion = 10
 	
-	fertility = 5.0
+	fertility = 0.05
 	
 	customizer = no
 	
@@ -143,24 +165,23 @@ fian = {
 }
 
 celtic_knight = {
+
 	potential = {
-	religion_group = celtic_group
+		religion = celtic_pagan_reformed
 	}
 	
 	martial = 2
 	learning = 1
-	
-	same_religion_opinion = 10
-	
-	same_opinion = 20
+	combat_rating = 10
+	same_religion_opinion = 5
+	same_opinion = 10
 	
 	customizer = no
 	
 	cannot_inherit = yes
-	cannot_marry = yes
 	
 	sex_appeal_opinion = 5
-	fertility = 15.0
+	fertility = 0.15
 	
 	command_modifier = {
 		religious_enemy = 0.25
@@ -171,7 +192,10 @@ celtic_knight = {
 
 wolf = {
 	potential = {
-		religion_group = celtic_group
+		OR = {
+			religion = celtic_pagan
+			religion = celtic_pagan_reformed
+		}
 	}
 	martial = 2
 	monthly_character_prestige = 0.15
@@ -182,14 +206,17 @@ wolf = {
 
 learning_druidic_arts = {
 	potential = {
-	religion_group = celtic_group
+		OR = {
+			religion = celtic_pagan
+			religion = celtic_pagan_reformed
+		}
 	}
 	
 	customizer = no
 	
 	monthly_character_piety = 0.5
-	same_religion_opinion = 10
-	fertility = -50.0
+	same_religion_opinion = 5
+	fertility = -0.5
 	
 	stewardship = -2
 	intrigue = -2
@@ -199,14 +226,17 @@ learning_druidic_arts = {
 }
 
 changeling = {
+	
 	potential = {
-	religion_group = celtic_group
+		religion_group = pagan_group
 	}
 	health = 3
 	
+	cached = yes # Keep a cache of all trait holders, to use with the corresponding event trigger 	
+	
 	same_religion_opinion = 5
 	
-	same_opinion = -10
+	same_opinion = -5
 	
 	customizer = no
 	
@@ -292,14 +322,6 @@ morrigan = {
 	female_compliment_adj = COMPL_RIGHTEOUS
 }
 
-treasure_cauldron = {
-	potential = {
-	religion_group = celtic_group
-	}
-	
-	customizer = no
-}
-
 sych = { # welsh for "dry"
 	potential = {
 		religion = britannic_pagan
@@ -348,111 +370,4 @@ britannic_leader = {
 		terrain = farmlands
 		cavalry = 0.2
 	}
-}
-
-treasure_chariot = {
-	potential = {
-	religion_group = celtic_group
-	}
-	
-	customizer = no
-}
-
-treasure_chessboard = {
-	potential = {
-	religion_group = celtic_group
-	}
-	
-	customizer = no
-}
-
-treasure_coat = {
-	potential = {
-	religion_group = celtic_group
-	}
-	
-	customizer = no
-}
-
-treasure_crock_and_dish = {
-	potential = {
-		OR = {
-			religion = celtic_pagan
-			religion = celtic_pagan_reformed
-		}
-	}
-	
-	customizer = no
-}
-
-treasure_dyrnwyn = {
-	potential = {
-	religion_group = celtic_group
-	}
-	
-	customizer = no
-}
-
-treasure_halter = {
-	potential = {
-	religion_group = celtic_group
-	}
-	
-	customizer = no
-}
-
-treasure_hamper = {
-	potential = {
-	religion_group = celtic_group
-	}
-	
-	customizer = no
-}
-
-treasure_horn = {
-	potential = {
-	religion_group = celtic_group
-	}
-	
-	customizer = no
-}
-
-treasure_knife = {
-	potential = {
-	religion_group = celtic_group
-	}
-	
-	customizer = no
-}
-
-treasure_mantle_arthur = {
-	potential = {
-	religion_group = celtic_group
-	}
-	
-	customizer = no
-}
-
-treasure_mantle_tegau = {
-	potential = {
-	religion_group = celtic_group
-	}
-	
-	customizer = no
-}
-
-treasure_stone_and_ring = {
-	potential = {
-	religion_group = celtic_group
-	}
-	
-	customizer = no
-}
-
-treasure_whetstone = {
-	potential = {
-	religion_group = celtic_group
-	}
-	
-	customizer = no
 }

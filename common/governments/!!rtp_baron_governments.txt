@@ -542,7 +542,7 @@ feudal_governments = {
 }
 
 #Baron - Tribal
-tribal_government = {
+tribal_governments = {
 	rtp_baron_tribal_g = {
 		potential = {
 			ai = no
@@ -564,7 +564,7 @@ tribal_government = {
 				is_government_potential = rtp_baron_mercenary_g
 				is_government_potential = rtp_baron_republic_g
 				is_government_potential = rtp_baron_theocracy_g
-				is_government_potential = rtp_baron_feudal_g
+				is_government_potential = rtp_baron_g
 			}
 			NAND = { 
 				culture_group = tibetan_group

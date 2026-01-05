@@ -27,7 +27,6 @@ feudal_governments = {
 				AND = { 
 					is_save_game = no
 					has_game_started = no
-					OR = {
 					primary_title = { 
 						OR = { 
 						title = e_indo_roman_empire
@@ -40,12 +39,9 @@ feudal_governments = {
 	
 						}
 					}
-					}
 				}
-				AND = { 
-				    OR = {
-					primary_title = { 
-						OR = { 
+				primary_title = { 
+					OR = { 
 						title = e_indo_roman_empire
 						title = e_orientis
 						title = e_britannica
@@ -53,8 +49,6 @@ feudal_governments = {
 						title = k_western_expedition
 						title = d_chadican_uprising
 						title = e_iaponi
-						}
-					}
 					}
 				}
 			}

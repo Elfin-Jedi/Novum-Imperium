@@ -1,21 +1,5 @@
 # hair, mouth, chin, nose, eyes, cheek, ear, neck
 spriteTypes = {
-	
-	############## mongol ##########################
-	
-		spriteType = {
-			name = "PORTRAIT_merinagfx_child_male"
-			texturefile = "gfx\\characters\\default_son_merina.tga"
-			noOfFrames = 1
-			norefcount = yes
-		}
-		
-		spriteType = {
-			name = "PORTRAIT_merinagfx_child_female"
-			texturefile = "gfx\\characters\\default_daughter_merina.tga"
-			noOfFrames = 1
-			norefcount = yes
-		}
 		
 		### mongol MALE ####
 		
@@ -342,11 +326,15 @@ spriteTypes = {
 				"GFX_merina_male_nose:d3"					#10
 				"GFX_merina_male_eyes:d6"
 				"GFX_merina_male_eyes2:d6:e"
+				"GFX_child_back:p17"
+				"GFX_mongol_son_base:p18"
+				"GFX_mongol_son_eyes:p18:e"
 				"GFX_character_freckles:p20"
 				"GFX_character_mongol_male_pale:p22"
 				"GFX_character_scars:p7:y"
 				"GFX_character_scars_mid:p25"
 				"GFX_character_scars_high:p26"
+				"GFX_mongol_sonhair:p18:h"
 				"GFX_character_black_eye:p23"
 				"GFX_character_reddots:p8"
 				"GFX_character_boils:p9"
@@ -807,9 +795,13 @@ spriteTypes = {
 				"GFX_character_freckles:p20"
 				"GFX_character_mongol_female_pale:p22"
 				"GFX_merina_female_ear:d7"
+				"GFX_child_back:p17"
+				"GFX_mongol_daughter_base:p18"
+				"GFX_mongol_daughter_eyes:p18:e"
 				"GFX_character_scars:p7:y"
 				"GFX_character_scars_mid:p25"
 				"GFX_character_scars_high:p26"
+				"GFX_mongol_daughterhair:p18:h"
 				"GFX_character_black_eye:p23"
 				"GFX_character_reddots:p8"
 				"GFX_character_boils:p9"

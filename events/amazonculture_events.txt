@@ -467,6 +467,7 @@ namespace = AmzCul
 					religion = qarmatian
 					has_global_flag = qarmatian_enat_cognatic_flag
 				}
+				NOT = { has_game_rule = { name = gender value = all } }
 				has_game_rule = { 
 					name = succession_law_amz
 					value = enatic_cognatic_amz

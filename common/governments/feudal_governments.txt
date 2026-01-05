@@ -392,7 +392,7 @@ feudal_governments = {
 				}
 				religion = paulician
 				religion = waldensian
-				religion = yazidism
+				religion = yazidi
 			}
 			NOT = { is_government_potential = order_government }
 			NOT = {
@@ -422,38 +422,36 @@ feudal_governments = {
 				}
 			}
 			religion = bogomilist
-			NOT = { d_bogomilist = { has_flag = bogomilist_formalized } }
-			AND = { 
-				OR = {
-					culture_group = tibetan_group
-					religion = bon
-					religion = bon_reformed
-					religion_group = bud_group
-					religion = celtic_pagan
-					religion = celtic_pagan_reformed
-					AND = {
-						OR = {
-							culture_group = dravidian_group
-							culture_group = indo_aryan_group
-						}
-						religion_group = indian_group
-						OR = {
-							learning = 10
-							trait = zealous
-							trait = brahmin
-							trait = indian_pilgrim
-							trait = muni
-							trait = aryika
-							trait = bhikkhu
-							trait = bhikkhuni
-							trait = sanyasi
-							trait = sanyasini
-							trait = reincarnation
-						}
+			NOT = { d_bogomilist = { has_flag = bogomilist_formalized } } 
+			OR = {
+				culture_group = tibetan_group
+				religion = bon
+				religion = bon_reformed
+				religion_group = bud_group
+				religion = celtic_pagan
+				religion = celtic_pagan_reformed
+				AND = {
+					OR = {
+						culture_group = dravidian_group
+						culture_group = indo_aryan_group
+					}
+					religion_group = indian_group
+					OR = {
+						learning = 10
+						trait = zealous
+						trait = brahmin
+						trait = indian_pilgrim
+						trait = muni
+						trait = aryika
+						trait = bhikkhu
+						trait = bhikkhuni
+						trait = sanyasi
+						trait = sanyasini
+						trait = reincarnation
 					}
 				}
-				higher_tier_than = BARON
 			}
+			higher_tier_than = BARON
 			NAND = { 
 				tier = EMPEROR
 				primary_title = { has_title_flag = pretender_chinese_empire }
@@ -1172,18 +1170,13 @@ feudal_governments = {
 			NOT = { is_government_potential = classical_government }
 			NOT = { is_government_potential = japanese_imperial_government }
 			NOT = { is_government_potential = order_government }
-			AND = {
-				OR = {
-					culture_group = tibetan_group
-					culture_group = burman
-				}
-				OR = {
-					religion = bon
-					religion = bon_reformed
-					religion_group = bud_group
-				}
-				higher_tier_than = BARON
+			culture_group = tibetan_group
+			OR = {
+				religion = bon
+				religion = bon_reformed
+				religion_group = bud_group
 			}
+			higher_tier_than = BARON
 			OR = {
 				NOT = { religion = bogomilist }
 				d_bogomilist = { has_flag = bogomilist_formalized }
@@ -1280,7 +1273,7 @@ feudal_governments = {
 				}
 				religion = paulician
 				religion = waldensian
-				religion = yazidism
+				religion = yazidi
 			}
 			NOT = { is_government_potential = order_government }
 			NOT = { religion_group = muslim }
@@ -1392,7 +1385,7 @@ feudal_governments = {
 				}
 				religion = paulician
 				religion = waldensian
-				religion = yazidism
+				religion = yazidi
 			}
 			NOT = { is_government_potential = order_government }
 			religion_group = muslim
@@ -1513,7 +1506,7 @@ feudal_governments = {
 				}
 				religion = paulician
 				religion = waldensian
-				religion = yazidism
+				religion = yazidi
 			}
 			NOT = { is_government_potential = order_government }
 			religion = bogomilist
@@ -1623,7 +1616,7 @@ feudal_governments = {
 				}
 				religion = paulician
 				religion = waldensian
-				religion = yazidism
+				religion = yazidi
 			}
 			NOT = { is_government_potential = order_government }
 			NOT = { religion_group = muslim }
@@ -1631,15 +1624,13 @@ feudal_governments = {
 				NOT = { religion = bogomilist }
 				d_bogomilist = { has_flag = bogomilist_formalized }
 			}
-			AND = { 
-				culture_group = tibetan_group
-				OR = {
-					religion = bon
-					religion = bon_reformed
-					religion_group = bud_group
-				}
-				higher_tier_than = BARON
+			culture_group = tibetan_group
+			OR = {
+				religion = bon
+				religion = bon_reformed
+				religion_group = bud_group
 			}
+			higher_tier_than = BARON
 			NAND = { 
 				tier = EMPEROR
 				primary_title = { has_title_flag = pretender_chinese_empire }
@@ -2268,151 +2259,5 @@ feudal_governments = {
 		color = { 0 0 0 }
 
 		capital_move_delay = 600
-	}
-	
-	#####################################################################################
-    
-    playable_republic_government = {
-		preferred_holdings = { CITY }
-		allowed_holdings = { 
-			CITY
-			CASTLE
-			FORT
-			HOSPITAL
-		}
-		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
-			TRIBAL
-		}
-		accepts_liege_governments = { # Accepts other republics
-			merchant_republic_government
-			muslim_merchant_republic_government
-			bogomilist_merchant_republic_government
-			feudal_government
-			muslim_government
-			playable_republic_government
-			playable_theocracy_government
-			tribal_government # Numahr: Tribals can rule over feudal without penalty
-			bogomilist_government
-			theocratic_feudal_government
-			imperial_government
-			muslim_imperial_government
-			bogomilist_imperial_government
-			theocratic_imperial_government
-			chinese_imperial_government
-			chinese_vassal_government
-			japanese_imperial_government
-			japanese_feudal_government
-			japanese_monastic_feudal_government
-		}
-		accepts_liege_governments_culture = {
-			oriental_monarchy_government
-		}
-		accepts_liege_governments_religion = { # only radical governments from the correct religion are accepted
-			anarchist_government
-			demagogic_government
-			mystic_government
-			absolutist_government
-			hegemonic_government
-			messianic_government
-		}
-		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
-			tribal_government
-		}
-		frame_suffix = "_republic"
-		title_prefix = "city_"
-		potential = {
-			NOT = { government = merchant_republic_government }
-			NOT = { is_government_potential = merchant_republic_government }
-			NOT = { is_government_potential = rtp_baron_republic_g }
-			NOT = {tier = baron}
-			NAND = {
-				controls_religion = yes
-				can_head_religion_trigger = no
-			}
-		}
-		
-		character_modifier = {
-			stewardship = 1
-
-			intrigue = -1
-		}
-	
-		color = { 209 125 130 }
-        
-		can_imprison_without_reason = no
-		can_revoke_without_reason = no
-		
-		can_build_tribal = no        
-	}
-
-	playable_theocracy_government = {
-		preferred_holdings = { TEMPLE }
-		allowed_holdings = {
-			TEMPLE
-			CASTLE
-			FORT
-			HOSPITAL
-		}
-		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
-			TRIBAL
-		}
-		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
-			tribal_government
-		}
-		accepts_liege_governments = {
-			merchant_republic_government
-			muslim_merchant_republic_government
-			bogomilist_merchant_republic_government
-			feudal_government
-			muslim_government
-			playable_republic_government
-			playable_theocracy_government
-			tribal_government # Numahr: Tribals can rule over feudal without penalty
-			bogomilist_government
-			theocratic_feudal_government
-			imperial_government
-			muslim_imperial_government
-			bogomilist_imperial_government
-			theocratic_imperial_government
-			chinese_imperial_government
-			chinese_vassal_government
-			japanese_imperial_government
-			japanese_feudal_government
-			japanese_monastic_feudal_government
-		}
-		accepts_liege_governments_culture = {
-			oriental_monarchy_government
-		}
-		accepts_liege_governments_religion = { # only radical governments from the correct religion are accepted
-			anarchist_government
-			demagogic_government
-			mystic_government
-			absolutist_government
-			hegemonic_government
-			messianic_government
-		}
-		frame_suffix = "_theocracy"
-		title_prefix = "temple_"
-		potential = {
-			NOT = {	religion_group = muslim }
-			is_patrician = no
-			NOT = { is_government_potential = rtp_baron_theocracy_g }
-            NOT = {	tier = baron }
-
-		}
-		
-		character_modifier = {
-			learning = 1
-
-			stewardship = -1
-		}
-		
-		color = { 220 220 220 }
-		
-		can_create_kingdoms = no
-		have_gender_laws = no
-		can_be_granted_kingdoms_and_empires_by_other_government = no
-
-		can_build_tribal = no
 	}
 }

@@ -210,8 +210,12 @@ emf_set_government_to_match_PREV = {
 		set_government_type = nomadic_government
 	}
 	else_if = {
-		limit = { PREV = { is_theocracy = yes } }
+		limit = { PREV = { is_theocracy = yes rtp_is_baron = no } }
 		set_government_type = playable_theocracy_government
+	}
+	else_if = {
+		limit = { PREV = { is_theocracy = yes rtp_is_baron = yes } }
+		set_government_type = rtp_baron_theocracy_g
 	}
 	else_if = {
 		limit = { PREV = { is_republic = yes } }
@@ -223,8 +227,13 @@ emf_set_government_to_match_PREV = {
 			limit = { PREV = { government = confucian_bureaucracy } }
 			set_government_type = confucian_bureaucracy
 		}
-		else = {
+		else_if = {
+			limit = { PREV = { rtp_is_baron = no } }
 			set_government_type = playable_republic_government
+		}
+		else = {
+			limit = { PREV = { rtp_is_baron = yes } }
+			set_government_type = rtp_baron_republic_g
 		}
 	}
 }

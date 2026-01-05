@@ -290,7 +290,7 @@ feudal_governments = {
 		accepts_liege_governments = {
 			feudal_government
 			muslim_government
-			theocracy_government
+			playable_theocracy_government
 			theocratic_feudal_government
 			chinese_imperial_government
 		}
@@ -327,20 +327,18 @@ feudal_governments = {
 				}
 				AND = {
 					any_liege = {
-						AND = {
-							# tier = duke #till i make a king version? test create kingdom
-							# NOT = { tier = king }
-							NOT = { any_demesne_title = { has_title_flag = chivalry_merc_title } }
-							NOT = { holy_order = yes } #use the normal holy order gov
+						# tier = duke #till i make a king version? test create kingdom
+						# NOT = { tier = king }
+						NOT = { any_demesne_title = { has_title_flag = chivalry_merc_title } }
+						NOT = { holy_order = yes } #use the normal holy order gov
+						OR = {
 							OR = {
-								OR = {
-									has_landed_title = d_chivalry_holy_hand
-									has_landed_title = d_chivalry_holy_warden
-									has_landed_title = d_chivalry_holy_scion
-									has_landed_title = d_chivalry_holy_rose
-								}
-								any_demesne_title = { has_title_flag = chivalry_holy_title }
+								has_landed_title = d_chivalry_holy_hand
+								has_landed_title = d_chivalry_holy_warden
+								has_landed_title = d_chivalry_holy_scion
+								has_landed_title = d_chivalry_holy_rose
 							}
+							any_demesne_title = { has_title_flag = chivalry_holy_title }
 						}
 						religion = ROOT
 					}
@@ -409,7 +407,7 @@ feudal_governments = {
 		}
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
 			feudal_government
-			theocracy_government
+			playable_theocracy_government
 			theocratic_feudal_government
 			muslim_government
 			chinese_imperial_government

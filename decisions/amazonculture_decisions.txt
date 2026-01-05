@@ -1688,6 +1688,7 @@ decisions = {
 					religion_allows_female_temple_holders = yes
 				}
 			}
+			NOT = { has_game_rule = { name = gender value = all } }
 			any_demesne_title = { 
 				NOR = { 
 					has_law = enatic_cognatic_succession 

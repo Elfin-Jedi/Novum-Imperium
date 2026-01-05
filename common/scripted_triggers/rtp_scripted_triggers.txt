@@ -25,7 +25,6 @@ rtp_is_lower_baron = {
 
 #Checks if the character is a baron
 rtp_is_baron = {
-	ai = no
 	is_landed = yes
 	capital_holding = {
 		is_capital = no
@@ -41,27 +40,93 @@ rtp_is_landless = {
 
 #Checks if the player is a mercenary
 rtp_is_mercenary = {
-	has_character_flag = rtp_mercenary #This guy is a mercenary
+	OR = {
+		has_character_flag = rtp_mercenary #This guy is a mercenary
+		government = mercenary_government
+		government = rtp_baron_mercenary_g
+		government = rtp_landless_mercenary_g
+	}
 }
 
 #Checks if the player is a holy order
 rtp_is_holy_order = {
-	has_character_flag = rtp_holy_order #This guy is a holy order
+	OR = {
+		has_character_flag = rtp_holy_order #This guy is a holy order
+		government = holy_order_government
+		government = rtp_baron_order_g
+		government = rtp_landless_order_g
+	}
 }
 
 #Checks if the player is a republic
 rtp_is_republic = {
-	has_character_flag = rtp_republic #This guy is a republic
+	OR = {
+		has_character_flag = rtp_republic #This guy is a republic
+		government = merchant_republic_government
+		government = muslim_merchant_republic_government
+		government = bogomilist_merchant_republic_government
+		government = playable_republic_government
+		government = republic_government
+		government = rtp_republic_g
+		government = rtp_baron_republic_g
+	}
 }
 
 #Checks if the player is a theocracy
 rtp_is_theocracy = {
-	has_character_flag = rtp_theocracy #This guy is a theocracy
+	OR = {
+		has_character_flag = rtp_theocracy #This guy is a theocracy
+		government = playable_theocracy_government
+		government = theocracy_government
+		government = rtp_theocracy_g
+		government = rtp_baron_theocracy_g
+	}
 }
 
 #Checks if the player is a confederation
 rtp_is_confederation = {
-	has_character_flag = rtp_confederation #This guy is a confederation
+	OR = {
+		has_character_flag = rtp_confederation #This guy is a confederation
+		government = rtp_confederation_g
+	}
+}
+
+#Checks if the player is feudal.
+rtp_is_feudal = {
+	OR = {
+		has_character_flag = rtp_feudal #This guy is feudal
+		government = feudal_government
+		government = bogomilist_government
+		government = oriental_monarchy_government
+		government = classical_government
+		government = chinese_vassal_government
+		government = japanese_feudal_government
+	}
+}
+
+#Checks if the player is iqta.
+rtp_is_iqta = {
+	OR = {
+		has_character_flag = rtp_iqta #This guy is iqta
+		government = muslim_government
+	}
+}
+
+#Checks if the player is monastic.
+rtp_is_monastic = {
+	OR = {
+		has_character_flag = rtp_iqta #This guy is monastic
+		government = theocratic_feudal_government
+		government = japanese_monastic_feudal_government
+	}
+}
+
+#Checks if the player is tribal.
+rtp_is_tribal = {
+	OR = {
+		has_character_flag = rtp_iqta #This guy is tribal
+		government = tribal_government
+	}
 }
 
 #Checks if the character has any job

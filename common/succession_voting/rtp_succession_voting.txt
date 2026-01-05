@@ -676,6 +676,7 @@ rtp_theocracy_election_v = {
 			religion = ROOT
 			OR = {
 				government = theocracy_government
+				government = playable_theocracy_government
 				government = rtp_baron_theocracy_g
 				government = rtp_theocracy_g
 			}
@@ -1121,6 +1122,7 @@ rtp_theocracy_election_v = {
 					is_landed = yes
 					OR = {
 						government = theocracy_government
+						government = playable_theocracy_government
 						government = rtp_baron_theocracy_g
 						government = rtp_theocracy_g
 					}

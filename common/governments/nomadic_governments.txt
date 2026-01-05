@@ -55,7 +55,7 @@ nomadic_governments = {
 				}
 				religion = paulician
 				religion = waldensian
-				religion = yazidism
+				religion = yazidi
 				culture_group = altaic
 				culture_group = iranian
 				culture_group = berberic
@@ -125,9 +125,7 @@ nomadic_governments = {
 		character_modifier = {
 			vassal_opinion = -10
 			max_population = 1550 # Compensates for the capital taking up one holding slot
-		}
-		
-		character_modifier = {
+			
 			martial = 1
 
 			diplomacy = -1
