@@ -26,8 +26,8 @@ succession_laws = {
 				}
 				NOT = { government = confucian_bureaucracy }
 				NOT = { government = chinese_imperial_government }
-				NOT = { government = playable_republic_government }
-				NOT = { government = playable_theocracy_government }
+				NOT = { government = rtp_republic_g }
+				NOT = { government = rtp_theocracy_g }
 			}
 			rebel = no
 		}
@@ -91,8 +91,8 @@ succession_laws = {
 				}
 				NOT = { government = confucian_bureaucracy }
 				NOT = { government = chinese_imperial_government }
-				NOT = { government = playable_republic_government }
-				NOT = { government = playable_theocracy_government }
+				NOT = { government = rtp_republic_g }
+				NOT = { government = rtp_theocracy_g }
 			}
 			rebel = no
 		}
@@ -161,8 +161,8 @@ succession_laws = {
 					has_religion_feature = religion_feature_west_african
 					has_religion_feature = religion_feature_slavic
 				}
-				NOT = { government = playable_republic_government }
-				NOT = { government = playable_theocracy_government }
+				NOT = { government = rtp_republic_g }
+				NOT = { government = rtp_theocracy_g }
 			}
 			rebel = no
 		}
@@ -261,8 +261,8 @@ succession_laws = {
 					is_republic = no
 					NOT = { PREV = { tier = BARON } }
 				}
-				NOT = { government = playable_republic_government }
-				NOT = { government = playable_theocracy_government }
+				NOT = { government = rtp_republic_g }
+				NOT = { government = rtp_theocracy_g }
 			}
 		}
 		allow = {
@@ -358,8 +358,8 @@ succession_laws = {
 				is_merchant_republic = no
 				is_patrician = no
 				NOT = { government = confucian_bureaucracy }
-				NOT = { government = playable_republic_government }
-				NOT = { government = playable_theocracy_government }
+				NOT = { government = rtp_republic_g }
+				NOT = { government = rtp_theocracy_g }
 			}
 		}
 		allow = {
@@ -428,8 +428,8 @@ succession_laws = {
 					religion = hellenic_pagan
 				}
 				NOT = { government = chinese_imperial_government }
-				NOT = { government = playable_republic_government }
-				NOT = { government = playable_theocracy_government }
+				NOT = { government = rtp_republic_g }
+				NOT = { government = rtp_theocracy_g }
 			}
 		}
 		allow = {
@@ -498,8 +498,8 @@ succession_laws = {
 					}
 				}
 				NOT = { government = confucian_bureaucracy }
-				NOT = { government = playable_republic_government }
-				NOT = { government = playable_theocracy_government }
+				NOT = { government = rtp_republic_g }
+				NOT = { government = rtp_theocracy_g }
 			}
 		}
 		effect = {
@@ -541,8 +541,8 @@ succession_laws = {
 					is_tribal = yes
 				}
 				NOT = { government = confucian_bureaucracy }
-				NOT = { government = playable_republic_government }
-				NOT = { government = playable_theocracy_government }
+				NOT = { government = rtp_republic_g }
+				NOT = { government = rtp_theocracy_g }
 			}
 			NOT = { tier = BARON }
 		}
@@ -588,8 +588,8 @@ succession_laws = {
 				is_merchant_republic = no
 				is_patrician = no
 				NOT = { government = confucian_bureaucracy }
-				NOT = { government = playable_republic_government }
-				NOT = { government = playable_theocracy_government }
+				NOT = { government = rtp_republic_g }
+				NOT = { government = rtp_theocracy_g }
 			}
 		}
 		allow = {
@@ -634,8 +634,8 @@ succession_laws = {
 					is_tribal = yes
 				}
 				NOT = { government = confucian_bureaucracy }
-				NOT = { government = playable_republic_government }
-				NOT = { government = playable_theocracy_government }
+				NOT = { government = rtp_republic_g }
+				NOT = { government = rtp_theocracy_g }
 			}
 			NOT = { tier = BARON }
 		}
@@ -703,8 +703,8 @@ succession_laws = {
 					}
 				}
 				NOT = { government = confucian_bureaucracy }
-				NOT = { government = playable_republic_government }
-				NOT = { government = playable_theocracy_government }
+				NOT = { government = rtp_republic_g }
+				NOT = { government = rtp_theocracy_g }
 			}
 			NOT = { tier = BARON }
 		}
@@ -765,8 +765,8 @@ succession_laws = {
 					religion = hellenic_pagan
 				}
 				NOT = { government = chinese_imperial_government }
-				NOT = { government = playable_republic_government }
-				NOT = { government = playable_theocracy_government }
+				NOT = { government = rtp_republic_g }
+				NOT = { government = rtp_theocracy_g }
 			}
 		}
 		allow = {
@@ -824,8 +824,8 @@ succession_laws = {
 				NOR = {
 					religion_group = muslim
 					government = chinese_imperial_government
-					government = playable_republic_government
-					government = playable_theocracy_government
+					government = rtp_republic_g
+					government = rtp_theocracy_g
 				}
 				OR = {
 					independent = yes
@@ -927,8 +927,8 @@ succession_laws = {
 					NOT = { any_liege = { holy_order = yes } }
 				}
 				NOT = { government = confucian_bureaucracy }
-				NOT = { government = playable_republic_government }
-				NOT = { government = playable_theocracy_government }
+				NOT = { government = rtp_republic_g }
+				NOT = { government = rtp_theocracy_g }
 			}
 			OR = {
 				is_landless_type_title = no
@@ -991,8 +991,8 @@ succession_laws = {
 				NOR = {
 					government = confucian_bureaucracy
 					government = chinese_imperial_government
-					government = playable_republic_government
-					government = playable_theocracy_government
+					government = rtp_republic_g
+					government = rtp_theocracy_g
 				}
 			}
 		}
@@ -1071,8 +1071,6 @@ succession_laws = {
 					independent = yes
 					is_feudal = no
 					NOT = { any_liege = { holy_order = yes } }
-					government = playable_republic_government
-					government = playable_theocracy_government
 				}
 				NOT = {
 					any_demesne_title = {
@@ -1120,8 +1118,8 @@ succession_laws = {
 				}
 				NOR = {
 					government = chinese_imperial_government
-					government = playable_republic_government
-					government = playable_theocracy_government
+					government = rtp_republic_g
+					government = rtp_theocracy_g
 				}
 			}
 			is_landless_type_title = no
@@ -1146,8 +1144,8 @@ succession_laws = {
 				NOR = {
 					government = confucian_bureaucracy
 					government = chinese_imperial_government
-					government = playable_republic_government
-					government = playable_theocracy_government
+					government = rtp_republic_g
+					government = rtp_theocracy_g
 				}
 			}
 		}

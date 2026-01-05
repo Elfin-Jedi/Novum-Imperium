@@ -65,7 +65,6 @@ rtp_is_republic = {
 		government = merchant_republic_government
 		government = muslim_merchant_republic_government
 		government = bogomilist_merchant_republic_government
-		government = playable_republic_government
 		government = republic_government
 		government = rtp_republic_g
 		government = rtp_baron_republic_g
@@ -76,7 +75,6 @@ rtp_is_republic = {
 rtp_is_theocracy = {
 	OR = {
 		has_character_flag = rtp_theocracy #This guy is a theocracy
-		government = playable_theocracy_government
 		government = theocracy_government
 		government = rtp_theocracy_g
 		government = rtp_baron_theocracy_g
@@ -606,7 +604,6 @@ rtp_is_republic_government = {
 	OR = {
 		government = rtp_baron_republic_g
 		government = rtp_republic_g
-		government = playable_republic_government
 		government = republic_government
 	}
 }
@@ -616,7 +613,6 @@ rtp_is_theocracy_government = {
 	OR = {
 		government = rtp_baron_theocracy_g
 		government = rtp_theocracy_g
-		government = playable_theocracy_government
 		government = theocracy_government
 	}
 }

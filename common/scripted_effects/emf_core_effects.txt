@@ -211,7 +211,7 @@ emf_set_government_to_match_PREV = {
 	}
 	else_if = {
 		limit = { PREV = { is_theocracy = yes rtp_is_baron = no } }
-		set_government_type = playable_theocracy_government
+		set_government_type = rtp_theocracy_g
 	}
 	else_if = {
 		limit = { PREV = { is_theocracy = yes rtp_is_baron = yes } }
@@ -229,7 +229,7 @@ emf_set_government_to_match_PREV = {
 		}
 		else_if = {
 			limit = { PREV = { rtp_is_baron = no } }
-			set_government_type = playable_republic_government
+			set_government_type = rtp_republic_g
 		}
 		else = {
 			limit = { PREV = { rtp_is_baron = yes } }

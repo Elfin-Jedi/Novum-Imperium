@@ -1054,7 +1054,7 @@ spawn_theocracy_effect = {
 			convert_to = temple
 		}
 		
-		set_government_type = playable_theocracy_government
+		set_government_type = rtp_theocracy_g
 		remove_spouse = spouse
 		any_demesne_province = {
 			any_province_holding = {
@@ -1329,7 +1329,7 @@ spawn_republic_effect = {
 				}
 			}
 		}
-		set_government_type = playable_republic_government
+		set_government_type = rtp_republic_g
 		any_demesne_province = {
 			any_province_holding = {
 				limit = {

@@ -153,11 +153,9 @@ feudal_governments = {
 			merchant_republic_government
 			muslim_merchant_republic_government
 			bogomilist_merchant_republic_government
-			republic_government
 			rtp_republic_g
 			rtp_privateer_g
 
-			playable_theocracy_government
 			rtp_theocracy_g
 
 			tribal_government
@@ -193,7 +191,6 @@ feudal_governments = {
 	#Republic
 	rtp_republic_g = {
 		potential = {
-			ai = no
 			is_patrician = no
 			rtp_is_republic = yes
 			NAND = {
@@ -254,9 +251,7 @@ feudal_governments = {
 	#Theocracy
 	rtp_theocracy_g = {
 		potential = {
-			ai = no
 			is_patrician = no
-			rtp_is_theocracy = yes
 			NOR = {
 				religion_group = muslim
 				is_government_potential = imperial_government
@@ -281,10 +276,19 @@ feudal_governments = {
 
 		allowed_holdings = {
 			TEMPLE
+			CASTLE
 			FORT
 			HOSPITAL
 		}
-
+		
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+		}
+		
 		builds_with_piety = {
 			TEMPLE
 		}
@@ -300,10 +304,7 @@ feudal_governments = {
 			merchant_republic_government
 			muslim_merchant_republic_government
 			bogomilist_merchant_republic_government
-			playable_republic_government
 			rtp_republic_g
-
-			playable_theocracy_government
 
 			tribal_government
 
@@ -335,7 +336,11 @@ feudal_governments = {
 			stewardship = -1
 		}
 		
-		men_can_take_consorts = no
+		can_create_kingdoms = no
+		have_gender_laws = no
+		can_be_granted_kingdoms_and_empires_by_other_government = no
+
+		can_build_tribal = no
 	}
 }
 
@@ -429,10 +434,8 @@ republic_governments = {
 			merchant_republic_government
 			muslim_merchant_republic_government
 			bogomilist_merchant_republic_government
-			playable_republic_government
 			rtp_republic_g
 
-			playable_theocracy_government
 			rtp_theocracy_g
 
 			tribal_government

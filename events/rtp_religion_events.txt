@@ -533,7 +533,6 @@ character_event = {
 						religion = catholic
 						OR = {
 							government = theocracy_government
-							government = playable_theocracy_government
 							government = rtp_theocracy_g
 						}
 					}
@@ -564,7 +563,6 @@ character_event = {
 						religion = orthodox
 						OR = {
 							government = theocracy_government
-							government = playable_theocracy_government
 							government = rtp_theocracy_g
 						}
 					}
