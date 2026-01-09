@@ -2955,6 +2955,14 @@ character_event = {
 				name = voice_of_jesus
 				duration = -1
 			}
+			if = {
+				limit = {
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = joan_of_arc
+				}
+			}
 			opinion = {
 				modifier = opinion_loyal_servant
 				who = ROOT

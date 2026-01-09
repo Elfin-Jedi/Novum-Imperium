@@ -246,15 +246,7 @@ mjolnir = {
 		value = 0
 		additive_modifier = {
 			value = 5
-			OR = {
-				religion = norse_pagan
-				religion = norse_pagan_reformed
-			}
-			is_landed = yes
-		}
-		additive_modifier = {
-			value = 100
-			religion = norse_pagan
+			religion_group = norsegerman_group
 			is_landed = yes
 		}
 	}
@@ -286,10 +278,7 @@ andvaranaut = {
 		value = 0
 		additive_modifier = {
 			value = 5
-			OR = {
-				religion = norse_pagan
-				religion = norse_pagan_reformed
-			}
+			religion_group = norsegerman_group
 			is_landed = yes
 		}
 	}
@@ -356,15 +345,7 @@ sampo = {
 		value = 0
 		additive_modifier = {
 			value = 5
-			OR = {
-				religion = finnish_pagan
-				religion = finnish_pagan_reformed
-			}
-			is_landed = yes
-		}
-		additive_modifier = {
-			value = 100
-			religion = finnish_pagan
+			religion_group = finnish_group
 			is_landed = yes
 		}
 	}
@@ -396,15 +377,7 @@ axe_of_perun = {
 		value = 0
 		additive_modifier = {
 			value = 5
-			OR = {
-				religion = slavic_pagan
-				religion = slavic_pagan_reformed
-			}
-			is_landed = yes
-		}
-		additive_modifier = {
-			value = 100
-			religion = slavic_pagan
+			religion_group = slavic_group
 			is_landed = yes
 		}
 	}
@@ -439,11 +412,6 @@ axe_of_perkunas = {
 			religion_group = baltic_group
 			is_landed = yes
 		}
-		additive_modifier = {
-			value = 100
-			religion_group = baltic_group
-			is_landed = yes
-		}
 	}
 
 	artifacts = {
@@ -473,15 +441,7 @@ yada_tashy = {
 		value = 0
 		additive_modifier = {
 			value = 100
-			OR = {
-				religion = tengri_pagan
-				religion = tengri_pagan_reformed
-			}
-			is_landed = yes
-		}
-		additive_modifier = {
-			value = 100
-			religion = tengri_pagan
+			religion_group = tengri_group
 			is_landed = yes
 		}
 	}
@@ -789,10 +749,7 @@ gjallarhorn = {
 		value = 0
 		additive_modifier = {
 			value = 100
-			OR = {
-				religion = norse_pagan
-				religion = norse_pagan_reformed
-			}
+			religion_group = norsegerman_group
 			is_landed = yes
 		}
 	}

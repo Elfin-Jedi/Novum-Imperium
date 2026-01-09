@@ -1,27 +1,6 @@
 # Content by Adam 'theStormWeaver/xirsoi' Chevalier
 # Quality 5
 
-nimean_lion_skin = {
-    quality = 5
-    monthly_character_prestige = 0.5
-    monthly_character_piety = 0.5
-    martial = 3
-    command_modifier = {
-        morale_offence = 0.20
-    }
-    active = {
-        religion_openly_in_hellenic_subgroup_trigger = yes
-    }
-    stacking = no
-    allowed_gift = {
-        religion_openly_in_hellenic_subgroup_trigger = yes
-    }
-    flags = { hellenic_pagan religious unique troops_morale }
-    slot = ceremonial_torso
-    picture = GFX_strange_chest
-	indestructible = yes
-}
-
 kronium = {
     quality = 5
     monthly_character_prestige = 0.5
@@ -161,23 +140,6 @@ odysseus_bow = {
     flags = { religious hellenic_pagan troops_morale combat_weapon weapon bow unique }
     picture = GFX_strange_chest
     slot = weapon
-}
-
-mask_of_agamemnon = {
-    quality = 4
-    monthly_character_piety = 0.5
-    monthly_character_prestige = 0.5
-    vassal_opinion = 10
-    active = {
-        religion_openly_in_hellenic_subgroup_trigger = yes
-    }
-    stacking = no
-    allowed_gift = {
-        religion_openly_in_hellenic_subgroup_trigger = yes
-    }
-    flags = { religious hellenic_pagan crown unique }
-    picture = GFX_strange_chest
-    slot = crown
 }
 
 crown_of_theseus = {

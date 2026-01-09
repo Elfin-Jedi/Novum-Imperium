@@ -1,0 +1,376 @@
+####################
+#### QUALITY 5  ####
+####################
+
+dragon_scale = {
+	max_amount = 3
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			religion_group = tengri_group
+			is_landed = yes
+		}
+		additive_modifier = {
+			value = 100
+			religion = tengri_pagan
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		dragon_scale = {
+			value = 1
+		}
+	}
+}
+
+firebird_plumage = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			religion_group = slavic_group
+			is_landed = yes
+		}
+		additive_modifier = {
+			value = 100
+			religion = slavic_pagan
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		firebird_plumage = {
+			value = 1
+		}
+	}
+}
+
+baba_yaga_pestle_mortar = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			religion_group = slavic_group
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		baba_yaga_pestle_mortar = {
+			value = 1
+		}
+	}
+}
+
+yadachy_cloak = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			religion_group = tengri_group
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		yadachy_cloak = {
+			value = 1
+		}
+	}
+}
+
+
+sacred_amber = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			religion_group = baltic_group
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		sacred_amber = {
+			value = 1
+		}
+	}
+}
+
+ekwensu_mask = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion_group = serer_group
+				religion_group = african_pagan_group
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		ekwensu_mask = {
+			value = 1
+		}
+	}
+}
+
+shango_staff = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion_group = serer_group
+				religion_group = african_pagan_group
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		shango_staff = {
+			value = 1
+		}
+	}
+}
+
+ukonvasara = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			religion_group = finnish_group
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		ukonvasara = {
+			value = 1
+		}
+	}
+}
+
+magic_kantele = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			religion_group = finnish_group
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		magic_kantele = {
+			value = 1
+		}
+	}
+}
+
+eye_of_ra = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			OR = {
+				religion_group = sol_group
+				religion_group = egyptian_group
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		eye_of_ra = {
+			value = 1
+		}
+	}
+}
+
+
+helios_chariot = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 5
+			religion_group = sol_group
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		helios_chariot = {
+			value = 1
+		}
+	}
+}

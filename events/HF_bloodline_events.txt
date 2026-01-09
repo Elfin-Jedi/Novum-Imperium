@@ -2,6 +2,7 @@
 
 
 namespace=HF
+namespace=MB
 
 character_event = { # Great warrior character chance
 	id = HF.99
@@ -15730,6 +15731,128 @@ narrative_event = {
 		}
 		ai_chance = { 
 			factor = 100
+		}
+	}
+}
+
+# New Patch 1.1
+
+narrative_event = {
+	id = MB.1
+	title = EVTTITLEMB1
+	desc = EVTDESCAMB1
+	picture = GFX_evt_holy_emperor
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	has_dlc = "Holy Fury"
+	
+	option = { 
+		name = EVTOPTAMB
+		if = { 
+			limit = { is_female = no }
+			create_bloodline = {
+				type = arthur
+			}
+			sound_effect = bloodline_added
+		}
+		if = { 
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = arthur
+				inheritance = matrilineal
+			}		
+			sound_effect = bloodline_added
+		}
+	}
+}
+
+narrative_event = {
+	id = MB.2
+	title = EVTTITLEMB2
+	desc = EVTDESCAMB2
+	picture = GFX_evt_china_civil_war
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	has_dlc = "Holy Fury"
+	
+	option = { 
+		name = EVTOPTAMB
+		if = { 
+			limit = { is_female = no }
+			create_bloodline = {
+				type = guan_yu
+			}
+			sound_effect = bloodline_added
+		}
+		if = { 
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = guan_yu
+				inheritance = matrilineal
+			}		
+			sound_effect = bloodline_added
+		}
+	}
+}
+
+narrative_event = {
+	id = MB.3
+	title = EVTTITLEMB3
+	desc = EVTDESCAMB3
+	picture = GFX_evt_rome_restored_byzantine
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	has_dlc = "Holy Fury"
+	
+	option = { 
+		name = EVTOPTAMB
+		if = { 
+			limit = { is_female = no }
+			create_bloodline = {
+				type = trajan
+			}
+			sound_effect = bloodline_added
+		}
+		if = { 
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = trajan
+				inheritance = matrilineal
+			}	
+			sound_effect = bloodline_added
+		}
+	}
+}
+
+narrative_event = {
+	id = MB.4
+	title = EVTTITLEMB4
+	desc = EVTDESCAMB4
+	picture = GFX_evt_vikings_arriving_oldgods
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	has_dlc = "Holy Fury"
+	
+	option = { 
+		name = EVTOPTAMB
+		if = { 
+			limit = { is_female = no }
+			create_bloodline = {
+				type = leif_erikson
+			}
+			sound_effect = bloodline_added
+		}
+		if = { 
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = leif_erikson
+				inheritance = matrilineal
+			}
+			sound_effect = bloodline_added
 		}
 	}
 }

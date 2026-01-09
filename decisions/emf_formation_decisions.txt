@@ -2054,6 +2054,30 @@ decisions = {
 		        }
 				give_nickname = nick_the_great
 			}
+			if = {
+				limit = {
+					is_female = yes
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = hre_female
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_hre"
+				}
+			}
+			if = {
+				limit = {
+					is_female = no
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = hre_male
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_hre"
+				}
+			}
 			else = {
 				random_list = {
 					40 = {
@@ -2233,6 +2257,30 @@ decisions = {
 		            narrative_event = { id = LT.40015 }
 		        }
 				give_nickname = nick_the_great
+			}
+			if = {
+				limit = {
+					is_female = yes
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = hre_female
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_hre"
+				}
+			}
+			if = {
+				limit = {
+					is_female = no
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = hre_male
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_hre"
+				}
 			}
 			else = {
 				random_list = {

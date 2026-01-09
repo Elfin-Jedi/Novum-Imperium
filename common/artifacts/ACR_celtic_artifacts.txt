@@ -19,29 +19,6 @@ silver_hand_of_nuada = {
 	indestructible = yes
 }
 
-spear_of_lugh = {
-	quality = 5
-	monthly_character_prestige = 0.5
-	martial = 3
-	combat_rating = 25
-	same_religion_opinion = 5
-	command_modifier = {
-		cavalry = 0.1
-		morale_offence = 0.1
-	}
-	active = {
-		religion_openly_celtic_or_reformed_trigger = yes
-	}
-	stacking = no
-	allowed_gift = {
-		religion_openly_celtic_or_reformed_trigger = yes
-	}
-	flags = { celtic_pagan religious unique combat troops_morale }
-	slot = weapon
-	picture = GFX_strange_chest
-	indestructible = yes
-}
-
 trident_of_britannia = {
 	quality = 5
 	monthly_character_prestige = 0.5

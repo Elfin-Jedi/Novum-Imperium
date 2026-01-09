@@ -34,6 +34,7 @@ Medium Mods:
 "Seduction and Romance Revamped"
 "VIET Events Reborn - A Flavor Event Mod"
 "Warrior Societies (HIP)"
+"WOWGAG's More Artifacts & Bloodlines" [Contains "Historical and Fantastical Artifacts" & "Mythic Artifacts"]
 
 Small Mods:
 
@@ -77,7 +78,10 @@ Small Mods:
 "Improved Genetics 2.0"
 "Knights of Saint Constantine"
 "Legalized Gay Marriage"
+"More Buildable Wonders"
 "More Council Members"
+"More Pagan Artifacts"
+"MTA - New Artifacts"
 "MTA - Specific Punishments"
 "MTA - Vice and Virtue"
 "New Holding Slot"
