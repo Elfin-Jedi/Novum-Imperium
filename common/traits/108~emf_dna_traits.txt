@@ -52,6 +52,10 @@ comely = {
 		wrymouth
 		homely
 		fair
+		base_fair_1
+		base_fair_2
+		negative_fair_1
+		negative_fair_2
 	}
 
 	female_compliment = COMPL_BEAUTY
@@ -77,6 +81,10 @@ homely = {
 		ugly
 		comely
 		fair
+		base_fair_1
+		base_fair_2
+		negative_fair_1
+		negative_fair_2
 	}
 
 	is_visible = {
@@ -98,6 +106,13 @@ bright = {
 		genius
 		quick
 		dim
+		base_2
+		quick_1
+		genius_1
+		minus_1
+		minus_2
+		minus_4
+		minus_6
 	}
 
 	diplomacy = 1
@@ -125,6 +140,13 @@ dim = {
 		genius
 		bright
 		quick
+		base_2
+		quick_1
+		genius_1
+		minus_1
+		minus_2
+		minus_4
+		minus_6
 	}
 
 	diplomacy = -1
@@ -152,6 +174,8 @@ burly = {
 		weak
 		strong
 		delicate
+		strong_1
+		weak_1
 	}
 
 	combat_rating = 10
@@ -174,6 +198,8 @@ delicate = {
 		weak
 		strong
 		burly
+		strong_1
+		weak_1
 	}
 
 	health = -0.25

@@ -26,55 +26,62 @@ character_event = {
 				}
 			}
 		}
-		death_in_china_trigger = no
-		death_no_trace_trigger = no
-		NOR = {
-			trait = excommunicated
-			trait = drunkard
-			trait = hedonist
-			trait = cannibal_trait
-			#controls_religion = yes
-			religion = waldensian
-			is_any_kinslayer_trigger = yes
-			has_character_modifier = voice_of_satan
-			has_character_modifier = known_satanist
-			has_character_modifier = suspected_demon_spawn
-			has_character_modifier = suspected_witch
-			has_character_modifier = known_witch
-			has_character_modifier = crazy_cannibal
-			has_character_modifier = demon_child_non_pagan
-			has_character_modifier = corrupting_magic_minor
-			has_character_modifier = corrupting_magic_major
-			
-			any_claim = { title = k_papal_state } # Antipopes
-			any_claim = { title = d_fraticelli } # Antipopes
-		}
 		OR = {
 			AND = {
-				tier = EMPEROR
-				piety >= 1250
-			}
+				death_in_china_trigger = no
+				death_no_trace_trigger = no
+				NOR = {
+					trait = excommunicated
+					trait = drunkard
+					trait = hedonist
+					trait = cannibal_trait
+					#controls_religion = yes
+		            religion = waldensian
+		            is_any_kinslayer_trigger = yes
+		            has_character_modifier = voice_of_satan
+		            has_character_modifier = known_satanist
+		            has_character_modifier = suspected_demon_spawn
+		            has_character_modifier = suspected_witch
+		            has_character_modifier = known_witch
+		            has_character_modifier = crazy_cannibal
+		            has_character_modifier = demon_child_non_pagan
+		            has_character_modifier = corrupting_magic_minor
+		            has_character_modifier = corrupting_magic_major
 
-			AND = {
-				tier = KING
-				piety >= 1000
+		            any_claim = { title = k_papal_state } # Antipopes
+		            any_claim = { title = d_fraticelli } # Antipopes
+				}
+				OR = {
+					AND = {
+						tier = Emperor
+						piety >= 1250
+					}
+
+					AND = {
+						tier = King
+						piety >= 1000
+					}
+					AND = {
+						tier = Duke
+						piety >= 750
+					}
+					AND = {
+						tier = Count
+						piety >= 500
+					}
+					has_character_modifier = true_christian_knight
+		            has_any_opinion_modifier = opinion_baptism_sponsor_target
+				}
+				has_vice_trigger = no
+				is_benevolent_trigger = yes
+				is_pious_trigger = yes
+				has_virtue_trigger = yes
+				is_adult = yes
 			}
-			AND = {
-				tier = DUKE
-				piety >= 750
+			OR = {
+				has_character_modifier = PDP_guaranteed_sainthood
 			}
-			AND = {
-				tier = COUNT
-				piety >= 500
-			}
-			has_character_modifier = true_christian_knight
-			has_any_opinion_modifier = opinion_baptism_sponsor_target
 		}
-		has_vice_trigger = no
-		is_benevolent_trigger = yes
-		is_impious_trigger = no
-		has_virtue_trigger = yes
-		is_adult = yes
 	}
 
 	immediate = {
@@ -117,6 +124,10 @@ character_event = {
 				}
 				random = {
 					chance = 100
+					modifier = {
+						factor = 100
+						has_character_modifier = PDP_guaranteed_sainthood
+					}
 					modifier = {
 						factor = 0.25
 						event_target:saint_person = {
@@ -411,7 +422,7 @@ narrative_event = {
 	portrait = event_target:saint_person
 	has_dlc = "Holy Fury"
 
-	option = {      
+	option = {
 		name = EVTOPTA_HF_40006
 		if = {
 			limit = {
@@ -497,13 +508,16 @@ province_event = {
 		event_target:saint_person = {
 			OR = {
 				trait = beatified
-				NOT = { religion_group = christian }
+				has_religion_feature = religion_beatification
+				has_religion_feature = religion_feature_baltic
+				has_religion_feature = religion_feature_slavic
+				has_religion_feature = religion_syncretic_christian
 				AND = {
                     religion = bori
                     has_global_flag = bori_beatification
                 }
 			}
-			NOT = { has_character_flag = blessed_ancestor_prestige } # Already founded a bloodline based on Prestige
+			NOT = { has_character_flag = blessed_ancestor_prestige }
 		}
 	}
 
@@ -731,7 +745,7 @@ character_event = {
 					25 = {
 						set_variable = { which = global_miracle value = 13 }
 						event_target:saint_person = {
-							give_nickname = nick_the_miracle_worker 
+							give_nickname = nick_the_miracle_worker
 						}
 					}
 					#Rats
@@ -879,7 +893,7 @@ character_event = {
 						religion_group = christian
 					}
 					remove_trait = beatified
-					add_trait = saint   
+					add_trait = saint
 					if = {
 						limit = {
 							is_female = yes
@@ -991,7 +1005,7 @@ character_event = {
 						}
 					}
 					event_target:random_saint_realm_province = {
-						setting_up_saintly_burial_site_effect = yes             
+						setting_up_saintly_burial_site_effect = yes
 					}
 				}
 			}
@@ -2735,7 +2749,7 @@ character_event = {
 	notification = yes
 	has_dlc = "Holy Fury"
 
-	option = {      
+	option = {
 		name = OK
 	}
 }
@@ -2784,7 +2798,7 @@ narrative_event = {
 		}
 	}
 
-	option = {      
+	option = {
 		name = EVTOPTA_HF_40025
 		show_portrait = FROM
 		if = {
@@ -3104,7 +3118,7 @@ narrative_event = {
 
 	title = TITLEHF.40055
 	portrait = event_target:saint_person
-	picture = GFX_evt_beatification	
+	picture = GFX_evt_beatification
 	border = GFX_event_narrative_frame_religion
 	is_triggered_only = yes
 	has_dlc = "Holy Fury"
@@ -3117,7 +3131,7 @@ narrative_event = {
 				OR = {
 					trait = drunkard
 					trait = hedonist
-				}        		
+				}
 				event_target:saint_person = {
 					family = ROOT
 				}
@@ -3155,7 +3169,6 @@ narrative_event = {
 					trait = drunkard
 					trait = hedonist
 				}
-				
 			}
 		}
 		show_portrait = bishopric_holder
@@ -3168,7 +3181,7 @@ narrative_event = {
 			OR = {
 				trait = drunkard
 				trait = hedonist
-			}    		
+			}
 			event_target:saint_person = {
 				family = ROOT
 			}
@@ -3204,7 +3217,7 @@ province_event = {
 	is_triggered_only = yes
 	has_dlc = "Holy Fury"
 	immediate = {
-		k_papal_state = { 
+		k_papal_state = {
 			holder_scope = {
 				character_event = { id = HF.40058 }
 			}
@@ -3366,14 +3379,14 @@ narrative_event = {
 		show_portrait = event_target:saint_person
 	}
 
-	#Family and disapprove of Papal decision 
+	#Family and disapprove of Papal decision
 	option = {
 		name = EVTOPTD_HF_40060
 		trigger = {
 			OR = {
 				trait = drunkard
 				trait = hedonist
-			}    		
+			}
 			event_target:saint_person = {
 				family = ROOT
 			}
@@ -3381,7 +3394,7 @@ narrative_event = {
 		opinion = {
 			modifier = insulted
 			who = FROM
-		}        
+		}
 		FROM = {
 			show_scope_change = no
 			opinion = {
@@ -3628,7 +3641,7 @@ character_event = {
 					lunatic = { give_nickname = nick_the_fool_for_christ new_bloodline = { set_description = saintly_lunatic_description } }
 					drunkard = { give_nickname = nick_gods_drunkard new_bloodline = { set_description = saintly_drunkard_description } }
 					homosexual = { give_nickname = nick_papal_lover new_bloodline = { set_description = saintly_homosexual_description } }
-					lustful = { give_nickname = nick_papal_lover new_bloodline = { set_description = saintly_lustful_description } } 
+					lustful = { give_nickname = nick_papal_lover new_bloodline = { set_description = saintly_lustful_description } }
 					seducer = { give_nickname = nick_gods_seducer new_bloodline = { set_description = saintly_seducer_description } }
 					seductress = { give_nickname = nick_gods_seducer new_bloodline = { set_description = saintly_seducer_description } }
 				}
@@ -3682,7 +3695,7 @@ character_event = {
 				}
 			}
 			any_playable_ruler = {
-				limit = {  
+				limit = {
 					religion = ROOT
 					event_target:papal_attacker = {
 						NOT = {
@@ -3706,7 +3719,7 @@ narrative_event = {
 					trait = impaler
 				}
 			}
-		} 
+		}
 		text = EVTDESCA_HF_40098
 	}
 	desc = {
@@ -3816,7 +3829,7 @@ narrative_event = {
 					trait = drunkard
 					trait = seducer
 					trait = lustful
-					trait = lunatic                
+					trait = lunatic
 				}
 			}
 		}
@@ -3851,7 +3864,7 @@ narrative_event = {
 		custom_tooltip = { text = impious_canonization_tooltip }
 
 		ai_chance = {
-			factor = 20 
+			factor = 20
 			modifier = {
 				factor = 4
 				OR = {
@@ -3897,13 +3910,13 @@ narrative_event = {
 	}
 
 	#Support the war to depose the Pope
-	option = {      
+	option = {
 		name = EVTOPTA_HF_40093
 		trigger = {
 			independent = yes
-			NOR = { 
+			NOR = {
 				trait = cynical
-				has_character_flag = supported_impious_pope 
+				has_character_flag = supported_impious_pope
 				any_war = {
 					using_cb = depose_impious_pope
 				}
@@ -3941,7 +3954,7 @@ narrative_event = {
 		}
 	}
 	#Support the Pope
-	option = {      
+	option = {
 		name = EVTOPTB_HF_40093
 		trigger = {
 			independent = yes
@@ -4038,7 +4051,7 @@ narrative_event = {
 		}
 	}
 
-	option = {      
+	option = {
 		name = EVTOPTA_HF_40094
 		trigger = {
 			NOT = {
@@ -4068,7 +4081,7 @@ narrative_event = {
 	is_triggered_only = yes
 	has_dlc = "Holy Fury"
 
-	option = {      
+	option = {
 		name = EVTOPTA_HF_40095
 		trigger = {
 			NOT = {

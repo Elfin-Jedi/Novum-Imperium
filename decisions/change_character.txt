@@ -262,11 +262,25 @@ targetted_decisions = {
 						higher_tier_than = BARON
 						government = theocracy_government
 					}
+					save_event_target_as = new_player
+					if = {
+						limit = {
+							is_theocracy = yes
+							religion = catholic
+						}
+						set_government_type = playable_theocracy_government
+					}
+					if = {
+						limit = {
+							is_theocracy = yes
+							NOT = {religion = catholic}
+						}
+						set_government_type = playable_non_catholic_theocracy_government
+					}
+					character_event = {id = PDP.3 days = 1}
 				}
-				grant_title_no_opinion = k_papacy
-				set_government_type = rtp_landless_theocracy_g
 				FROM = {
-					set_player_character = ROOT
+					set_player_character = event_target:new_player
 				}
 			}
 			else = {

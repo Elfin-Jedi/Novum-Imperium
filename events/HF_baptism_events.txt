@@ -316,78 +316,81 @@ narrative_event = {
 			}
 			ROOT = { give_nickname = nick_the_civilized }
 		}
-		if = { #Increase tribal organization.
-			limit = {
-				primary_title = {
-					has_law = tribal_organization_3
+		if = {
+			limit = { is_tribal = yes }
+			if = { #Increase tribal organization.
+				limit = {
+					primary_title = {
+						has_law = tribal_organization_3
+					}
 				}
-			}
-			ROOT = {
-				show_scope_change = no
-				any_demesne_title = {
+				ROOT = {
 					show_scope_change = no
-					limit = { higher_tier_than = COUNT }
-					add_law = {
-						law = tribal_organization_4
-						cooldown = no
-						opinion_effect = no
+					any_demesne_title = {
+						show_scope_change = no
+						limit = { higher_tier_than = COUNT }
+						add_law = {
+							law = tribal_organization_4
+							cooldown = no
+							opinion_effect = no
+						}
 					}
 				}
 			}
-		}
-		if = { #Increase tribal organization.
-			limit = {
-				primary_title = {
-					has_law = tribal_organization_2
+			else_if = { #Increase tribal organization.
+				limit = {
+					primary_title = {
+						has_law = tribal_organization_2
+					}
 				}
-			}
-			ROOT = {
-				show_scope_change = no
-				any_demesne_title = {
+				ROOT = {
 					show_scope_change = no
-					limit = { higher_tier_than = COUNT }
-					add_law = {
-						law = tribal_organization_3
-						cooldown = no
-						opinion_effect = no
+					any_demesne_title = {
+						show_scope_change = no
+						limit = { higher_tier_than = COUNT }
+						add_law = {
+							law = tribal_organization_3
+							cooldown = no
+							opinion_effect = no
+						}
+					}
+				} 
+			}
+			else_if = { #Increase tribal organization.
+				limit = {
+					primary_title = {
+						has_law = tribal_organization_1
+					}
+				}
+				ROOT = {
+					show_scope_change = no
+					any_demesne_title = {
+						show_scope_change = no
+						limit = { higher_tier_than = COUNT }
+						add_law = {
+							law = tribal_organization_2
+							cooldown = no
+							opinion_effect = no
+						}
 					}
 				}
 			}
-		}
-		if = { #Increase tribal organization.
-			limit = {
-				primary_title = {
-					has_law = tribal_organization_1
-				}
-			}
-			ROOT = {
-				show_scope_change = no
-				any_demesne_title = {
-					show_scope_change = no
-					limit = { higher_tier_than = COUNT }
-					add_law = {
-						law = tribal_organization_2
-						cooldown = no
-						opinion_effect = no
+			else_if = { #Increase tribal organization.
+				limit = {
+					primary_title = { 
+						has_law = tribal_organization_0
 					}
 				}
-			}
-		}
-		if = { #Increase tribal organization.
-			limit = {
-				primary_title = {
-					has_law = tribal_organization_0
-				}
-			}
-			ROOT = {
-				show_scope_change = no
-				any_demesne_title = {
+				ROOT = {
 					show_scope_change = no
-					limit = { higher_tier_than = COUNT }
-					add_law = {
-						law = tribal_organization_1
-						cooldown = no
-						opinion_effect = no
+					any_demesne_title = {
+						show_scope_change = no
+						limit = { higher_tier_than = COUNT }
+						add_law = {
+							law = tribal_organization_1
+							cooldown = no
+							opinion_effect = no
+						}
 					}
 				}
 			}
@@ -395,9 +398,8 @@ narrative_event = {
 		hidden_tooltip = {
 			if = {
 				limit = { higher_real_tier_than = COUNT }
-				any_playable_ruler = {
+				any_player = {
 					limit = {
-						ai = no
 						NOT = { character = ROOT }
 						NOT = { vassal_of = ROOT }
 						OR = {
@@ -547,9 +549,8 @@ narrative_event = {
 			limit = {
 				event_target:sponsoring_king = {
 					religion_group = christian
-					any_realm_character = {
+					any_courtier_or_vassal = { 
 						is_theocracy = yes
-						liege = { character = event_target:sponsoring_king }
 						religion = event_target:sponsoring_king
 						NOT = { block_general_event_trigger = yes }
 						OR = {
@@ -564,9 +565,8 @@ narrative_event = {
 			}
 			hidden_tooltip = {
 				event_target:sponsoring_king = {
-					random_realm_character = {
+					random_courtier_or_vassal = {
 						limit = {
-							liege = { character = event_target:sponsoring_king }
 							is_theocracy = yes
 							religion = event_target:sponsoring_king
 							NOT = { block_general_event_trigger = yes }
@@ -1147,42 +1147,6 @@ letter_event = {
 				factor = 0
 				NOT = { opinion = { who = from value = -40 } }
 			}
-			modifier = {
-				factor = 0.5
-				FROM = {
-					any_vassal = {
-						leads_faction = faction_lower_tribal_organization
-						faction_power = {
-							faction = faction_lower_tribal_organization
-							power = 1.0
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.25
-				FROM = {
-					any_vassal = {
-						leads_faction = faction_lower_tribal_organization
-						faction_power = {
-							faction = faction_lower_tribal_organization
-							power = 1.5
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				FROM = {
-					any_vassal = {
-						leads_faction = faction_lower_tribal_organization
-						faction_power = {
-							faction = faction_lower_tribal_organization
-							power = 2.0
-						}
-					}
-				}
-			}
 		}
 	}
 	option = { #Pagan vassal decides he will not convert
@@ -1315,7 +1279,7 @@ letter_event = {
 			}
 			modifier = {
 				factor = 2
-				is_rival = FROM
+				is_foe = FROM
 			}
 			modifier = {
 				factor = 0.5
@@ -1389,6 +1353,14 @@ letter_event = {
 			modifier = {
 				factor = 0.75
 				event_target:sponsoring_king  = { religion = shiite }
+			}
+			modifier = {
+				factor = 0.75
+				event_target:sponsoring_king  = { religion = ismaili }
+			}
+			modifier = {
+				factor = 0.75
+				event_target:sponsoring_king  = { religion = zaydi }
 			}
 			modifier = {
 				factor = 1.15
@@ -2092,7 +2064,12 @@ narrative_event = {
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
 				religion_group = christian
-				NOT = { religion_group = event_target:sponsoring_king }
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_christian
+					}
+				}
 			}
 			random = { chance = 60
 				add_trait = sympathy_christendom
@@ -2147,7 +2124,12 @@ narrative_event = {
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
 				religion_group = indian_group
-				NOT = { religion_group = event_target:sponsoring_king }
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_indian
+					}
+				}
 			}
 			random = { chance = 60
 				add_trait = sympathy_indian
@@ -2246,7 +2228,12 @@ narrative_event = {
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
 				religion_group = muslim
-				NOT = { religion_group = event_target:sponsoring_king }
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_muslim
+					}
+				}
 			}
 			random = { chance = 60
 				add_trait = sympathy_islam
@@ -2367,7 +2354,12 @@ narrative_event = {
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
 				religion_group = zoroastrian_group
-				NOT = { religion_group = event_target:sponsoring_king }
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_zoroastrian
+					}
+				}
 			}
 			random = { chance = 60
 				add_trait = sympathy_zoroastrianism
@@ -2498,7 +2490,12 @@ narrative_event = {
 			limit = {
 				trait = zealous
 				religion_group = christian
-				NOT = { religion_group = event_target:sponsoring_king }
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_christian
+					}
+				}
 			}
 			remove_trait = zealous
 			hidden_tooltip = { character_event = { id = 38310 } } #Notification
@@ -2553,7 +2550,12 @@ narrative_event = {
 			limit = {
 				trait = zealous
 				religion_group = indian_group
-				NOT = { religion_group = event_target:sponsoring_king }
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_indian
+					}
+				}
 			}
 			remove_trait = zealous
 			hidden_tooltip = { character_event = { id = 38310 } } #Notification
@@ -2652,7 +2654,12 @@ narrative_event = {
 			limit = {
 				trait = zealous
 				religion_group = muslim
-				NOT = { religion_group = event_target:sponsoring_king }
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_muslim
+					}
+				}
 			}
 			remove_trait = zealous
 			hidden_tooltip = { character_event = { id = 38310 } } #Notification
@@ -2773,7 +2780,12 @@ narrative_event = {
 			limit = {
 				trait = zealous
 				religion_group = zoroastrian_group
-				NOT = { religion_group = event_target:sponsoring_king }
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_zoroastrian
+					}
+				}
 			}
 			remove_trait = zealous
 			hidden_tooltip = { character_event = { id = 38310 } } #Notification
@@ -2854,78 +2866,81 @@ narrative_event = {
 				}
 			}
 		}
-		if = { #Increase tribal organization.
-			limit = {
-				primary_title = {
-					has_law = tribal_organization_3
+		if = {
+			limit = { is_tribal = yes }
+			if = { #Increase tribal organization.
+				limit = {
+					primary_title = {
+						has_law = tribal_organization_3
+					}
 				}
-			}
-			ROOT = {
-				show_scope_change = no
-				any_demesne_title = {
+				ROOT = {
 					show_scope_change = no
-					limit = { higher_tier_than = COUNT }
-					add_law = {
-						law = tribal_organization_4
-						cooldown = no
-						opinion_effect = no
+					any_demesne_title = {
+						show_scope_change = no
+						limit = { higher_tier_than = COUNT }
+						add_law = {
+							law = tribal_organization_4
+							cooldown = no
+							opinion_effect = no
+						}
 					}
 				}
 			}
-		}
-		if = { #Increase tribal organization.
-			limit = {
-				primary_title = {
-					has_law = tribal_organization_2
+			if = { #Increase tribal organization.
+				limit = {
+					primary_title = {
+						has_law = tribal_organization_2
+					}
 				}
-			}
-			ROOT = {
-				show_scope_change = no
-				any_demesne_title = {
+					ROOT = {
+						show_scope_change = no
+						any_demesne_title = {
+							show_scope_change = no
+							limit = { higher_tier_than = COUNT }
+							add_law = {
+								law = tribal_organization_3
+								cooldown = no
+								opinion_effect = no
+							}
+						}
+					} 
+				}
+				if = { #Increase tribal organization.
+					limit = {
+					primary_title = {
+						has_law = tribal_organization_1
+					}
+				}
+				ROOT = {
 					show_scope_change = no
-					limit = { higher_tier_than = COUNT }
-					add_law = {
-						law = tribal_organization_3
-						cooldown = no
-						opinion_effect = no
+					any_demesne_title = {
+						show_scope_change = no
+						limit = { higher_tier_than = COUNT }
+						add_law = {
+							law = tribal_organization_2
+							cooldown = no
+							opinion_effect = no
+						}
 					}
 				}
 			}
-		}
-		if = { #Increase tribal organization.
-			limit = {
-				primary_title = {
-					has_law = tribal_organization_1
-				}
-			}
-			ROOT = {
-				show_scope_change = no
-				any_demesne_title = {
-					show_scope_change = no
-					limit = { higher_tier_than = COUNT }
-					add_law = {
-						law = tribal_organization_2
-						cooldown = no
-						opinion_effect = no
+			if = { #Increase tribal organization.
+				limit = {
+					primary_title = {
+						has_law = tribal_organization_0
 					}
 				}
-			}
-		}
-		if = { #Increase tribal organization.
-			limit = {
-				primary_title = {
-					has_law = tribal_organization_0
-				}
-			}
-			ROOT = {
-				show_scope_change = no
-				any_demesne_title = {
+				ROOT = {
 					show_scope_change = no
-					limit = { higher_tier_than = COUNT }
-					add_law = {
-						law = tribal_organization_1
-						cooldown = no
-						opinion_effect = no
+					any_demesne_title = {
+						show_scope_change = no
+						limit = { higher_tier_than = COUNT }
+						add_law = {
+							law = tribal_organization_1
+							cooldown = no
+							opinion_effect = no
+						}
 					}
 				}
 			}
@@ -3117,7 +3132,12 @@ narrative_event = {
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
 				religion_group = christian
-				NOT = { religion_group = event_target:sponsoring_king }
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_christian
+					}
+				}
 			}
 			random = { chance = 60
 				add_trait = sympathy_christendom
@@ -3172,7 +3192,12 @@ narrative_event = {
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
 				religion_group = indian_group
-				NOT = { religion_group = event_target:sponsoring_king }
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_indian
+					}
+				}
 			}
 			random = { chance = 60
 				add_trait = sympathy_indian
@@ -3271,7 +3296,12 @@ narrative_event = {
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
 				religion_group = muslim
-				NOT = { religion_group = event_target:sponsoring_king }
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_muslim
+					}
+				}
 			}
 			random = { chance = 60
 				add_trait = sympathy_islam
@@ -3392,7 +3422,12 @@ narrative_event = {
 				NOT = { trait = zealous }
 				NOT = { trait = cynical }
 				religion_group = zoroastrian_group
-				NOT = { religion_group = event_target:sponsoring_king }
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_zoroastrian
+					}
+				}
 			}
 			random = { chance = 60
 				add_trait = sympathy_zoroastrianism
@@ -3523,7 +3558,12 @@ narrative_event = {
 			limit = {
 				trait = zealous
 				religion_group = christian
-				NOT = { religion_group = event_target:sponsoring_king }
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_christian
+					}
+				}
 			}
 			remove_trait = zealous
 			hidden_tooltip = { character_event = { id = 38310 } } #Notification
@@ -3578,7 +3618,12 @@ narrative_event = {
 			limit = {
 				trait = zealous
 				religion_group = indian_group
-				NOT = { religion_group = event_target:sponsoring_king }
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_indian
+					}
+				}
 			}
 			remove_trait = zealous
 			hidden_tooltip = { character_event = { id = 38310 } } #Notification
@@ -3666,7 +3711,12 @@ narrative_event = {
 			limit = {
 				trait = zealous
 				religion_group = muslim
-				NOT = { religion_group = event_target:sponsoring_king }
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_muslim
+					}
+				}
 			}
 			remove_trait = zealous
 			hidden_tooltip = { character_event = { id = 38310 } } #Notification
@@ -3787,7 +3837,12 @@ narrative_event = {
 			limit = {
 				trait = zealous
 				religion_group = zoroastrian_group
-				NOT = { religion_group = event_target:sponsoring_king }
+				NOR = {
+					religion_group = event_target:sponsoring_king
+					event_target:sponsoring_king = {
+						has_religion_feature = religion_syncretic_zoroastrian
+					}
+				}
 			}
 			remove_trait = zealous
 			hidden_tooltip = { character_event = { id = 38310 } } #Notification
@@ -3827,9 +3882,8 @@ narrative_event = {
 			limit = {
 				event_target:sponsoring_king = {
 					religion_group = christian
-					any_realm_character = {
+					any_courtier_or_vassal = {
 						is_theocracy = yes
-						liege = { character = event_target:sponsoring_king }
 						religion = event_target:sponsoring_king
 						NOT = { block_general_event_trigger = yes }
 						OR = {
@@ -3844,9 +3898,8 @@ narrative_event = {
 			}
 			hidden_tooltip = {
 				event_target:sponsoring_king = {
-					random_realm_character = {
+					random_courtier_or_vassal = {
 						limit = {
-							liege = { character = event_target:sponsoring_king }
 							is_theocracy = yes
 							religion = event_target:sponsoring_king
 							NOT = { block_general_event_trigger = yes }
@@ -4027,7 +4080,7 @@ letter_event = {
 		hidden_tooltip = {
 			if = {
 				limit = { higher_real_tier_than = BARON }
-				any_vassal = { character_event = { id = HF.20009 } }
+				any_vassal = { letter_event = { id = HF.20009 } }
 			}
 		}
 	}
@@ -4690,7 +4743,7 @@ letter_event = {
 		hidden_tooltip = {
 			if = {
 				limit = { higher_real_tier_than = BARON }
-				any_vassal = { character_event = { id = HF.20028 } }
+				any_vassal = { letter_event = { id = HF.20028 } }
 			}
 		}
 		ai_chance = { factor = 100 }
@@ -4720,8 +4773,11 @@ long_character_event = {
 		name = EVTOPTAHF20029
 		set_character_flag = flag_truebelievers_revolter
 		hidden_tooltip = {
+			event_target:converting_king = { primary_title = { save_event_target_as = converting_king_primary_title } }
 			start_faction = {
 				faction = faction_true_belivers
+				title = event_target:converting_king_primary_title
+				can_join_existing = yes
 			}
 		}
 		custom_tooltip = { text = truebelievers_preparation_tooltip }
@@ -4951,19 +5007,50 @@ character_event = {
 
 	immediate = {
 		hidden_tooltip = {
-			create_random_priest = {
-				random_traits = yes
-				dynasty = none
-				culture = event_target:sponsoring_king
-				religion = event_target:sponsoring_king
-				female = no
-				age = 35
-				attributes = {
-				learning = 7
-				diplomacy = 5
+			random_list = {
+				50 = {
+					modifier = {
+						factor = 0
+						event_target:sponsoring_king = {
+							religion_allows_male_temple_holders = no
+						}
+					}
+					create_random_priest = {
+						random_traits = yes
+						dynasty = none
+						culture = event_target:sponsoring_king
+						religion = event_target:sponsoring_king
+						female = no
+						age = 35
+						attributes = {
+							learning = 7
+							diplomacy = 5
+						}
+					}
+				}
+				50 = {
+					modifier = {
+						factor = 0
+						event_target:sponsoring_king = {
+							religion_allows_female_temple_holders = no
+						}
+					}
+					create_random_priest = {
+						random_traits = yes
+						dynasty = none
+						culture = event_target:sponsoring_king
+						religion = event_target:sponsoring_king
+						female = yes
+						age = 35
+						attributes = {
+							learning = 7
+							diplomacy = 5
+						}
+					}
 				}
 			}
 			new_character = {
+				emf_new_character_priest = yes
 				give_job_title = job_spiritual
 				save_event_target_as = convert_lord_spiritual
 			}
@@ -4992,8 +5079,8 @@ character_event = {
 
 	trigger = {
 		is_ruler = yes
-		event_target:converting_king = {
-			has_character_flag = flag_converted_baptism
+		event_target:converting_king = { 
+			has_character_flag = flag_converted_baptism 
 			is_alive = yes
 			is_ruler = yes
 		}
@@ -5189,7 +5276,7 @@ character_event = {
 				 	factor = 0
 				 	event_target:sponsoring_king = {
 				 		OR = {
-				 			trait = incapable
+				 			is_incapable = yes
 				 			is_inaccessible_trigger = yes
 							war = yes
 				 		}
@@ -5761,9 +5848,9 @@ character_event = {
 	show_root = yes
 
 	trigger = {
-		event_target:converting_king = {
-		is_ruler = yes
-		is_alive = yes
+		event_target:converting_king = { 
+			is_ruler = yes
+			is_alive = yes
 		}
 		event_target:sponsoring_king = {
 			is_ruler = yes
@@ -5937,7 +6024,7 @@ character_event = {
 	show_root = yes
 
 	trigger = {
-		event_target:converting_king = {
+		event_target:converting_king = { 
 			is_ruler = yes
 			is_alive = yes
 		}
@@ -5958,10 +6045,8 @@ character_event = {
 		show_portrait = event_target:converting_king
 		trigger = {
 			event_target:sponsoring_king = {
-				NOR = {
-					trait = incapable
-					is_inaccessible_trigger = yes
-				}
+				is_incapable = no
+				is_inaccessible_trigger = no
 			}
 		custom_tooltip = { text = EVTTOOLTIPAHF20048 }
 		}
@@ -6424,7 +6509,7 @@ letter_event = {
 	hide_new = yes
 	show_root = yes
 	trigger = {
-		NOT = { trait = incapable }
+		is_incapable = no 
 		is_ruler = yes
 	}
 
@@ -6460,12 +6545,12 @@ character_event = {
 				modifier = opinion_baptism_sponsor_target
 			}
 		}
-		NOT = { trait = incapable }
+		is_incapable = no
 	}
 
 	fail_trigger_effect = {
 		if = {
-			limit = { trait = incapable }
+			limit = { is_incapable = yes }
 			event_target:sponsoring_king = { character_event = { id = HF.20098 } }
 		}
 	}
@@ -6543,7 +6628,7 @@ character_event = {
 	show_root = yes
 
 	trigger = { #If at any time the agreement is broken for whatever reason, abort the whole chain.
-		event_target:converting_king = {
+		event_target:converting_king = { 
 			is_ruler = yes
 			is_alive = yes
 		}
@@ -6555,11 +6640,11 @@ character_event = {
 				modifier = opinion_baptism_sponsor_target
 			}
 		}
-		NOT = { trait = incapable }
+		is_incapable = no
 	}
 	fail_trigger_effect = {
 		if = {
-			limit = { trait = incapable }
+			limit = { is_incapable = yes }
 			event_target:converting_king = { character_event = { id = HF.20099 } }
 		}
 	}
@@ -6584,7 +6669,7 @@ character_event = {
 	show_root = yes
 
 	trigger = { #If at any time the agreement is broken for whatever reason, abort the whole chain.
-		event_target:converting_king = {
+		event_target:converting_king = { 
 			is_ruler = yes
 			is_alive = yes
 		}
@@ -6596,11 +6681,11 @@ character_event = {
 				modifier = opinion_baptism_sponsor_target
 			}
 		}
-		NOT = { trait = incapable }
+		is_incapable = no
 	}
 	fail_trigger_effect = {
 		if = {
-			limit = { trait = incapable }
+			limit = { is_incapable = yes }
 			event_target:sponsoring_king = { character_event = { id = HF.20098 } }
 		}
 	}
@@ -6695,7 +6780,7 @@ character_event = {
 	show_root = yes
 
 	trigger = { #If at any time the agreement is broken for whatever reason, abort the whole chain.
-		event_target:converting_king = {
+		event_target:converting_king = { 
 			is_ruler = yes
 			is_alive = yes
 		}
@@ -6705,11 +6790,11 @@ character_event = {
 				modifier = opinion_baptism_sponsor_target
 			}
 		}
-		NOT = { trait = incapable }
+		is_incapable = no
 	}
 	fail_trigger_effect = {
 		if = {
-			limit = { trait = incapable }
+			limit = { is_incapable = yes }
 			event_target:converting_king = { character_event = { id = HF.20099 } }
 		}
 	}
@@ -6841,11 +6926,11 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	hide_new = yes
 	show_root = yes
-	trigger = { NOT = { trait = incapable } }
+	trigger = { is_incapable = no }
 
 	fail_trigger_effect = {
 		if = {
-			limit = { trait = incapable }
+			limit = { is_incapable = yes }
 			event_target:sponsoring_king = { character_event = { id = HF.20098 } }
 		}
 	}
@@ -6905,11 +6990,11 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	hide_new = yes
 	show_root = yes
-	trigger = { NOT = { trait = incapable } }
+	trigger = { is_incapable = no }
 
 	fail_trigger_effect = {
 		if = {
-			limit = { trait = incapable }
+			limit = { is_incapable = yes }
 			event_target:sponsoring_king = { character_event = { id = HF.20098 } }
 		}
 	}
@@ -6952,7 +7037,7 @@ character_event = {
 	show_root = yes
 
 	trigger = { #If at any time the agreement is broken for whatever reason, abort the whole chain.
-		event_target:converting_king = {
+		event_target:converting_king = { 
 			is_ruler = yes
 			is_alive = yes
 		}
@@ -6964,11 +7049,11 @@ character_event = {
 				modifier = opinion_baptism_sponsor_target
 			}
 		}
-		NOT = { trait = incapable }
+		is_incapable = no
 	}
 	fail_trigger_effect = {
 		if = {
-			limit = { trait = incapable }
+			limit = { is_incapable = yes }
 			event_target:converting_king = { character_event = { id = HF.20099 } }
 		}
 	}
@@ -7720,7 +7805,7 @@ character_event = {
 	show_root = yes
 
 	trigger = { #If at any time the agreement is broken for whatever reason, abort the whole chain.
-		event_target:converting_king = {
+		event_target:converting_king = { 
 			is_ruler = yes
 			is_alive = yes
 		}
@@ -7732,11 +7817,11 @@ character_event = {
 				modifier = opinion_baptism_sponsor_target
 			}
 		}
-		NOT = { trait = incapable }
+		is_incapable = no
 	}
 	fail_trigger_effect = {
 		if = {
-			limit = { trait = incapable }
+			limit = { is_incapable = yes }
 			event_target:converting_king = { character_event = { id = HF.20099 } }
 		}
 	}
@@ -7800,7 +7885,7 @@ character_event = {
 	show_root = yes
 
 	trigger = { #If at any time the agreement is broken for whatever reason, abort the whole chain.
-		event_target:converting_king = {
+		event_target:converting_king = { 
 			is_ruler = yes
 			is_alive = yes
 		}
@@ -7812,11 +7897,11 @@ character_event = {
 				modifier = opinion_baptism_sponsor_target
 			}
 		}
-		NOT = { trait = incapable }
+		is_incapable = no
 	}
 	fail_trigger_effect = {
 		if = {
-			limit = { trait = incapable }
+			limit = { is_incapable = yes }
 			event_target:converting_king = { character_event = { id = HF.20099 } }
 		}
 	}
@@ -7843,7 +7928,7 @@ character_event = {
 	show_root = yes
 
 	trigger = { #If at any time the agreement is broken for whatever reason, abort the whole chain.
-		event_target:converting_king = {
+		event_target:converting_king = { 
 			is_ruler = yes
 			is_alive = yes
 		}
@@ -7855,11 +7940,11 @@ character_event = {
 				modifier = opinion_baptism_sponsor_target
 			}
 		}
-		NOT = { trait = incapable }
+		is_incapable = no
 	}
 	fail_trigger_effect = {
 		if = {
-			limit = { trait = incapable }
+			limit = { is_incapable = yes }
 			event_target:sponsoring_king = { character_event = { id = HF.20098 } }
 		}
 	}
@@ -7876,22 +7961,11 @@ character_event = {
 	option = { #Propose marriage.
 		name = EVTOPTAHF20076
 		trigger = {
-			is_married = no
-			age = 16
+			can_marry = FROM
+			is_marriage_adult = yes
 			FROM = {
-				is_married = no
-				age = 16
+				is_marriage_adult = yes
 				ai = yes
-			}
-			OR = {
-				AND = {
-					is_female = yes
-					FROM = { is_female = no }
-				}
-				AND = {
-					is_female = no
-					FROM = { is_female = yes }
-				}
 			}
 		}
 		hidden_tooltip = { FROM = { character_event = { id = HF.20078 } } } #Sponsor decides
@@ -7905,33 +7979,27 @@ character_event = {
 	option = { #Declare Love.
 		name = EVTOPTBHF20076
 		trigger = {
-			age = 16
-			FROM = { age = 16 }
+			is_adult = yes
+			FROM = { is_adult = yes }
 			NOT = { is_lover = FROM }
+			from_mutual_attraction_trigger = yes
 			OR = {
-				AND = {
-					is_female = yes
-					FROM = { is_female = no }
-				}
-				AND = {
-					is_female = no
-					FROM = { is_female = yes }
-				}
-				AND = {
-					is_female = no
-					trait = homosexual
-					FROM = { is_female = no }
-				}
-				AND = {
-					is_female = yes
-					trait = homosexual
-					FROM = { is_female = yes }
-				}
+				ai = no
+				NOT = { is_close_relative = FROM }
+				emf_divine_blood_true_religion = yes
+				emf_willing_to_consider_incest_despite_religion = yes
 			}
 		}
 		hidden_tooltip = { FROM = { character_event = { id = HF.20079 } } } #Sponsor decides
-		ai_chance = { factor = 25
+		ai_chance = {
+			factor = 25
 			modifier = {
+				factor = 0.25
+				is_close_relative = FROM
+				emf_divine_blood_true_religion = no
+				emf_willing_to_consider_incest_despite_religion = yes
+			}
+			modifier = { 
 				factor = 0.5
 				num_of_lovers = 1
 			}
@@ -7976,7 +8044,7 @@ character_event = {
 	show_root = yes
 
 	trigger = { #If at any time the agreement is broken for whatever reason, abort the whole chain.
-		event_target:converting_king = {
+		event_target:converting_king = { 
 			is_ruler = yes
 			is_alive = yes
 		}
@@ -7988,11 +8056,11 @@ character_event = {
 				modifier = opinion_baptism_sponsor_target
 			}
 		}
-		NOT = { trait = incapable }
+		is_incapable = no
 	}
 	fail_trigger_effect = {
 		if = {
-			limit = { trait = incapable }
+			limit = { is_incapable = yes }
 			event_target:sponsoring_king = { character_event = { id = HF.20098 } }
 		}
 	}
@@ -8009,22 +8077,11 @@ character_event = {
 	option = { #Propose marriage.
 		name = EVTOPTAHF20077
 		trigger = {
-			is_married = no
-			age = 16
+			can_marry = FROM
+			is_marriage_adult = yes
 			FROM = {
-				is_married = no
-				age = 16
+				is_marriage_adult = yes
 				ai = yes
-			}
-			OR = {
-				AND = {
-					is_female = yes
-					FROM = { is_female = no }
-				}
-				AND = {
-					is_female = no
-					FROM = { is_female = yes }
-				}
 			}
 		}
 		hidden_tooltip = { FROM = { character_event = { id = HF.20078 } } } #Sponsor decides
@@ -8033,27 +8090,17 @@ character_event = {
 	option = { #Declare Love.
 		name = EVTOPTBHF20077
 		trigger = {
-			age = 16
-			FROM = { age = 16 }
+			is_adult = yes
+			FROM = { is_adult = yes }
 			NOT = { is_lover = FROM }
+			from_mutual_attraction_trigger = yes
 			OR = {
+				ai = no
+				NOT = { is_close_relative = FROM }
+				emf_divine_blood_true_religion = yes
 				AND = {
-					is_female = yes
-					FROM = { is_female = no }
-				}
-				AND = {
-					is_female = no
-					FROM = { is_female = yes }
-				}
-				AND = {
-					is_female = no
-					trait = homosexual
-					FROM = { is_female = no }
-				}
-				AND = {
-					is_female = yes
-					trait = homosexual
-					FROM = { is_female = yes }
+					emf_willing_to_consider_incest_despite_religion = yes
+					random = 25
 				}
 			}
 		}
@@ -8110,7 +8157,7 @@ character_event = {
 	show_root = yes
 
 	trigger = { #If at any time the agreement is broken for whatever reason, abort the whole chain.
-		event_target:converting_king = {
+		event_target:converting_king = { 
 			is_ruler = yes
 			is_alive = yes
 		}
@@ -8122,11 +8169,11 @@ character_event = {
 				modifier = opinion_baptism_sponsor_target
 			}
 		}
-		NOT = { trait = incapable }
+		is_incapable = no
 	}
 	fail_trigger_effect = {
 		if = {
-			limit = { trait = incapable }
+			limit = { is_incapable = yes }
 			event_target:converting_king = { character_event = { id = HF.20099 } }
 		}
 	}
@@ -8139,7 +8186,7 @@ character_event = {
 		ai_chance = { factor = 40
 		 	modifier = {
 		 		factor = 0.25
-		 		is_rival = FROM
+		 		is_foe = FROM
 			}
 		 	modifier = {
 		 		factor = 0.8
@@ -8218,7 +8265,7 @@ character_event = {
 	show_root = yes
 
 	trigger = { #If at any time the agreement is broken for whatever reason, abort the whole chain.
-		event_target:converting_king = {
+		event_target:converting_king = { 
 			is_ruler = yes
 			is_alive = yes
 		}
@@ -8230,12 +8277,12 @@ character_event = {
 				modifier = opinion_baptism_sponsor_target
 			}
 		}
-		NOT = { trait = incapable }
+		is_incapable = no
 	}
 
 	fail_trigger_effect = {
 		if = {
-			limit = { trait = incapable }
+			limit = { is_incapable = yes }
 			event_target:converting_king = { character_event = { id = HF.20099 } }
 		}
 	}
@@ -8246,25 +8293,28 @@ character_event = {
 		if = {
 			limit = {
 				NOT = { trait = homosexual }
-				OR = {
-					AND = {
-						is_female = yes
-						FROM = { is_female = yes }
-					}
-					AND = {
-						is_female = no
-						FROM = { is_female = no }
-					}
-				}
+				same_sex = FROM
 			}
 			add_trait = homosexual
 		}
 		add_lover = FROM
 		hidden_tooltip = { FROM = { character_event = { id = HF.20084 } } }
-		ai_chance = { factor = 40
-		 	modifier = {
+		ai_chance = {
+			factor = 40 
+		 	modifier = { 
 		 		factor = 0
 		 		is_rival = FROM
+			}
+			modifier = {
+				factor = 0.25
+				is_close_relative = FROM
+				emf_divine_blood_true_religion = no
+			}
+			modifier = {
+				factor = 0
+				is_close_relative = FROM
+				emf_divine_blood_true_religion = no
+				emf_willing_to_consider_incest_despite_religion = no
 			}
 		 	modifier = {
 		 		factor = 0.75
@@ -8276,14 +8326,7 @@ character_event = {
 			}
 		 	modifier = {
 		 		factor = 0
-				FROM = { is_female = yes }
-				is_female = yes
-				NOT = { trait = homosexual }
-			}
-		 	modifier = {
-		 		factor = 0
-				FROM = { is_female = no }
-				is_female = no
+				same_sex = FROM
 				NOT = { trait = homosexual }
 			}
 		 	modifier = {
@@ -8399,7 +8442,7 @@ character_event = {
 	show_root = yes
 
 	trigger = { #If at any time the agreement is broken for whatever reason, abort the whole chain.
-		event_target:converting_king = {
+		event_target:converting_king = { 
 			is_ruler = yes
 			is_alive = yes
 		}
@@ -8411,11 +8454,11 @@ character_event = {
 				modifier = opinion_baptism_sponsor_target
 			}
 		}
-		NOT = { trait = incapable }
+		is_incapable = no
 	}
 	fail_trigger_effect = {
 		if = {
-			limit = { trait = incapable }
+			limit = { is_incapable = yes }
 			event_target:converting_king = { character_event = { id = HF.20099 } }
 		}
 	}
@@ -8536,7 +8579,7 @@ character_event = {
 	show_root = yes
 
 	trigger = { #If at any time the agreement is broken for whatever reason, abort the whole chain.
-		event_target:converting_king = {
+		event_target:converting_king = { 
 			is_ruler = yes
 			is_alive = yes
 		}
@@ -8548,12 +8591,12 @@ character_event = {
 				modifier = opinion_baptism_sponsor_target
 			}
 		}
-		NOT = { trait = incapable }
+		is_incapable = no
 	}
 
 	fail_trigger_effect = {
 		if = {
-			limit = { trait = incapable }
+			limit = { is_incapable = yes }
 			event_target:converting_king = { character_event = { id = HF.20099 } }
 		}
 	}
@@ -9001,7 +9044,7 @@ character_event = {
 		has_dlc = "Holy Fury"
 		religion_group = christian
 		higher_tier_than = DUKE
-		NOT = { trait = incapable }
+		is_incapable = no
 		OR = { #Must qualify for at least one of the special options.
 			AND = {
 				society_member_of = the_satanists
@@ -9064,6 +9107,7 @@ character_event = {
 						religion = orthodox
 					}
 					rightful_religious_head_scope = {
+						NOT = { block_general_event_trigger = yes }
 						OR = {
 							has_landed_title = k_papal_state
 							has_landed_title = k_orthodox
@@ -9089,9 +9133,8 @@ character_event = {
 			}
 			if = {
 				limit = {
-					any_realm_character = {
+					any_courtier_or_vassal = {
 						is_theocracy = yes
-						top_liege = { character = ROOT }
 						religion = ROOT
 						NOT = { block_general_event_trigger = yes }
 						OR = {
@@ -9105,10 +9148,9 @@ character_event = {
 						NOT = { has_landed_title = k_orthodox }
 					}
 				}
-				random_realm_character = {
+				random_courtier_or_vassal = {
 					limit = {
 						is_theocracy = yes
-						top_liege = { character = ROOT }
 						religion = ROOT
 						NOT = { block_general_event_trigger = yes }
 						OR = {
@@ -9131,8 +9173,7 @@ character_event = {
 		name = EVTOPTZHF20100
 		custom_tooltip = { text = tooltip_HF20100_Z }
 		trigger = {
-			society_member_of = the_satanists
-			has_society_currency_medium_trigger = yes
+			event_target:scoped_satanist = { is_alive = yes }
 		}
 		show_portrait = scoped_satanist
 		detract_society_currency_medium_effect = yes
@@ -9142,8 +9183,7 @@ character_event = {
 			if = {
 				limit = {
 					any_realm_character = {
-						top_liege = { character = ROOT }
-						NOT =  { trait = incapable }
+						is_incapable = no
 						is_theocracy = no
 						is_adult = yes
 						society_member_of = the_satanists
@@ -9163,8 +9203,8 @@ character_event = {
 			factor = 100
 			modifier = { #If the true heir can still come, don't waste your only chance to give him the trait.
 				factor = 0.1
-				NOT = { age = 40 }
-				NOT = { spouse = { age = 40 } }
+				NOT = { practical_age = 40 }
+				NOT = { spouse = { practical_age = 40 } }
 				FROM = { is_female = yes }
 				OR = {
 					has_law = agnatic_succession
@@ -9173,8 +9213,8 @@ character_event = {
 			}
 			modifier = { #If the true heir can still come, don't waste your only chance to give him the trait.
 				factor = 0.1
-				NOT = { age = 40 }
-				NOT = { spouse = { age = 40 } }
+				NOT = { practical_age = 40 }
+				NOT = { spouse = { practical_age = 40 } }
 				FROM = { is_female = no }
 				OR = {
 					has_law = enatic_succession
@@ -9197,18 +9237,8 @@ character_event = {
 			}
 		}
 		custom_tooltip = { text = tooltip_HF20100_A }
-		trigger = { event_target:scoped_pope = { is_alive = yes } }
 		show_portrait = scoped_pope
-		trigger = {
-			religion_head = {
-				is_alive = yes
-				NOT = { block_general_event_trigger = yes }
-				OR = {
-					has_landed_title = k_papal_state
-					has_landed_title = k_orthodox
-				}
-			}
-		}
+		trigger = { event_target:scoped_pope = { is_alive = yes } }
 		scaled_wealth = { value = -1.0 min = -250 max = -500 }
 		tiered_piety_negative_effect = yes
 		event_target:scoped_pope = { save_event_target_as = scoped_baptizer }
@@ -9217,8 +9247,7 @@ character_event = {
 			if = {
 				limit = {
 					any_realm_character = {
-						top_liege = { character = ROOT }
-						NOT =  { trait = incapable }
+						is_incapable = no
 						is_theocracy = no
 						is_adult = yes
 						religion = ROOT
@@ -9254,8 +9283,8 @@ character_event = {
 			}
 			modifier = { #If the true heir can still come, don't waste your only chance to give him the trait.
 				factor = 0.1
-				NOT = { age = 40 }
-				NOT = { spouse = { age = 40 } }
+				NOT = { practical_age = 40 }
+				NOT = { spouse = { practical_age = 40 } }
 				FROM = { is_female = yes }
 				OR = {
 					has_law = agnatic_succession
@@ -9264,8 +9293,8 @@ character_event = {
 			}
 			modifier = { #If the true heir can still come, don't waste your only chance to give him the trait.
 				factor = 0.1
-				NOT = { age = 40 }
-				NOT = { spouse = { age = 40 } }
+				NOT = { practical_age = 40 }
+				NOT = { spouse = { practical_age = 40 } }
 				FROM = { is_female = no }
 				OR = {
 					has_law = enatic_succession
@@ -9279,23 +9308,6 @@ character_event = {
 		custom_tooltip = { text = tooltip_HF20100_B }
 		trigger = { event_target:scoped_bishop = { is_alive = yes } }
 		show_portrait = scoped_bishop
-		trigger = {
-			any_realm_character = {
-				is_theocracy = yes
-				top_liege = { character = ROOT }
-				religion = ROOT
-				NOT = { block_general_event_trigger = yes }
-				OR = {
-					higher_tier_than = BARON
-					has_minor_title = title_cardinal
-					has_minor_title = title_fraticelli_cardinal
-					any_claim = { title = k_papal_state } #Antipope
-					any_claim = { title = k_orthodox } #Antipope
-				}
-				NOT = { has_landed_title = k_papal_state }
-				NOT = { has_landed_title = k_orthodox }
-			}
-		}
 		scaled_wealth = { value = -0.75 min = -50 max = -150 }
 		tiered_piety_negative_effect = yes
 		event_target:scoped_bishop = { save_event_target_as = scoped_baptizer }
@@ -9304,8 +9316,7 @@ character_event = {
 			if = {
 				limit = {
 					any_realm_character = {
-						top_liege = { character = ROOT }
-						NOT =  { trait = incapable }
+						is_incapable = no
 						is_theocracy = no
 						is_adult = yes
 						religion = ROOT
@@ -9337,8 +9348,8 @@ character_event = {
 			}
 			modifier = { #If the true heir can still come, don't waste your only chance to give him the trait.
 				factor = 0.1
-				NOT = { age = 40 }
-				NOT = { spouse = { age = 40 } }
+				NOT = { practical_age = 40 }
+				NOT = { spouse = { practical_age = 40 } }
 				FROM = { is_female = yes }
 				OR = {
 					has_law = agnatic_succession
@@ -9347,8 +9358,8 @@ character_event = {
 			}
 			modifier = { #If the true heir can still come, don't waste your only chance to give him the trait.
 				factor = 0.1
-				NOT = { age = 40 }
-				NOT = { spouse = { age = 40 } }
+				NOT = { practical_age = 40 }
+				NOT = { spouse = { practical_age = 40 } }
 				FROM = { is_female = no }
 				OR = {
 					has_law = enatic_succession
@@ -9410,7 +9421,7 @@ character_event = {
 				limit =  {
 					any_realm_character = {
 						top_liege = { character = ROOT }
-						NOT =  { trait = incapable }
+						is_incapable = no
 						is_theocracy = no
 						is_powerful_vassal = yes
 						religion = ROOT
@@ -9426,8 +9437,7 @@ character_event = {
 				}
 				random_realm_character = {
 					limit = {
-						top_liege = { character = ROOT }
-						NOT =  { trait = incapable }
+						is_incapable = no
 						is_theocracy = no
 						is_powerful_vassal = yes
 						religion = ROOT
@@ -9472,7 +9482,7 @@ character_event = {
 				limit =  {
 					any_realm_character = {
 						top_liege = { character = ROOT }
-						NOT =  { trait = incapable }
+						is_incapable = no
 						reverse_opinion =  { who = ROOT value = 20 }
 						is_theocracy = no
 						religion = ROOT
@@ -9489,8 +9499,7 @@ character_event = {
 				}
 				random_realm_character = {
 					limit = {
-						top_liege = { character = ROOT }
-						NOT =  { trait = incapable }
+						is_incapable = no
 						reverse_opinion = { who = ROOT value = 20 }
 						is_theocracy = no
 						religion = ROOT
@@ -9527,8 +9536,7 @@ character_event = {
 			if = { #Check for any vassal.
 				limit =  {
 					any_realm_character = {
-						top_liege = { character = ROOT }
-						NOT =  { trait = incapable }
+						is_incapable = no
 						is_theocracy = no
 						religion = ROOT
 						is_ruler = yes
@@ -9545,8 +9553,7 @@ character_event = {
 				}
 				random_realm_character = {
 					limit = {
-						top_liege = { character = ROOT }
-						NOT =  { trait = incapable }
+						is_incapable = no
 						is_theocracy = no
 						religion = ROOT
 						is_ruler = yes
@@ -9578,8 +9585,7 @@ character_event = {
 			if = { #Check for any courtier.
 				limit =  {
 					any_realm_character = {
-						top_liege = { character = ROOT }
-						NOT =  { trait = incapable }
+						is_incapable = no
 						is_theocracy = no
 						religion = ROOT
 						is_ruler = no
@@ -9597,8 +9603,7 @@ character_event = {
 				}
 				random_realm_character = {
 					limit = {
-						top_liege = { character = ROOT }
-						NOT =  { trait = incapable }
+						is_incapable = no
 						is_theocracy = no
 						religion = ROOT
 						is_ruler = no
@@ -9646,8 +9651,7 @@ character_event = {
 			if = { #Check for any powerful vassal.
 				limit =  {
 					any_realm_character = {
-						top_liege = { character = ROOT }
-						NOT =  { trait = incapable }
+						is_incapable = no
 						is_theocracy = no
 						is_powerful_vassal = yes
 						religion = ROOT
@@ -9664,8 +9668,7 @@ character_event = {
 				}
 				random_realm_character = {
 					limit = {
-						top_liege = { character = ROOT }
-						NOT =  { trait = incapable }
+						is_incapable = no
 						is_theocracy = no
 						is_powerful_vassal = yes
 						religion = ROOT
@@ -9710,8 +9713,7 @@ character_event = {
 			if = { #Check for a liked vassal.
 				limit =  {
 					any_realm_character = {
-						top_liege = { character = ROOT }
-						NOT =  { trait = incapable }
+						is_incapable = no
 						reverse_opinion =  { who = ROOT value = 20 }
 						is_theocracy = no
 						religion = ROOT
@@ -9729,8 +9731,7 @@ character_event = {
 				}
 				random_realm_character = {
 					limit = {
-						top_liege = { character = ROOT }
-						NOT =  { trait = incapable }
+						is_incapable = no
 						reverse_opinion = { who = ROOT value = 20 }
 						is_theocracy = no
 						religion = ROOT
@@ -9768,8 +9769,7 @@ character_event = {
 			if = { #Check for any vassal.
 				limit =  {
 					any_realm_character = {
-						top_liege = { character = ROOT }
-						NOT =  { trait = incapable }
+						is_incapable = no
 						is_theocracy = no
 						religion = ROOT
 						is_ruler = yes
@@ -9787,8 +9787,7 @@ character_event = {
 				}
 				random_realm_character = {
 					limit = {
-						top_liege = { character = ROOT }
-						NOT =  { trait = incapable }
+						is_incapable = no
 						is_theocracy = no
 						religion = ROOT
 						is_ruler = yes
@@ -9821,8 +9820,7 @@ character_event = {
 			if = { #Check for any courtier.
 				limit =  {
 					any_realm_character = {
-						top_liege = { character = ROOT }
-						NOT =  { trait = incapable }
+						is_incapable = no
 						is_theocracy = no
 						religion = ROOT
 						is_ruler = no
@@ -9841,8 +9839,7 @@ character_event = {
 				}
 				random_realm_character = {
 					limit = {
-						top_liege = { character = ROOT }
-						NOT =  { trait = incapable }
+						is_incapable = no
 						is_theocracy = no
 						religion = ROOT
 						is_ruler = no
@@ -9913,7 +9910,7 @@ character_event = {
 			factor = 100
 			modifier = {
 				factor = 0.1
-				is_rival = event_target:godfather_option_1
+				is_foe = event_target:godfather_option_1
 			}
 			modifier = {
 				factor = 0.25
@@ -9973,7 +9970,7 @@ character_event = {
 			factor = 50
 			modifier = {
 				factor = 0.1
-				is_rival = event_target:godfather_option_2
+				is_foe = event_target:godfather_option_2
 			}
 			modifier = {
 				factor = 0.25
@@ -10033,7 +10030,7 @@ character_event = {
 			factor = 10
 			modifier = {
 				factor = 0.1
-				is_rival = event_target:godfather_option_3
+				is_foe = event_target:godfather_option_3
 			}
 			modifier = {
 				factor = 0.25
@@ -10093,7 +10090,7 @@ character_event = {
 			factor = 10
 			modifier = {
 				factor = 0.1
-				is_rival = event_target:godfather_option_4
+				is_foe = event_target:godfather_option_4
 			}
 			modifier = {
 				factor = 0.25
@@ -10195,8 +10192,8 @@ character_event = {
 		text = EVTDESCBHF20103_ORTODOX
 		trigger = {
 			rightful_religious_head_scope = { has_landed_title = k_orthodox }
-			event_target:baptizing_child = {
-				has_character_flag = flag_baptized_by_pope
+			event_target:baptizing_child = { 
+				has_character_flag = flag_baptized_by_pope 
 				NOR = {
 					has_character_flag = demon_child_non_pagan
 					has_character_flag = demon_child
@@ -10300,6 +10297,7 @@ character_event = {
 				hidden_tooltip = { add_trait = baptized_by_pope }
 				clr_character_flag = flag_baptized_by_pope
 				event_target:scoped_pope = {
+					character_event = {id = PDPHF.1 days = 0}
 					show_scope_change = no
 					opinion = {
 						modifier = opinion_baptized
@@ -10493,7 +10491,7 @@ character_event = {
 
 
 	trigger = {
-		NOT = { trait = incapable }
+		is_incapable = no
 		society_member_of = the_satanists
 		FROM = {
 			religion = ROOT
@@ -10553,6 +10551,7 @@ character_event = {
 						religion = orthodox
 					}
 					rightful_religious_head_scope = {
+						NOT = { block_general_event_trigger = yes }
 						OR = {
 							has_landed_title = k_papal_state
 							has_landed_title = k_orthodox
@@ -10580,7 +10579,6 @@ character_event = {
 				limit = {
 					any_realm_character = {
 						is_theocracy = yes
-						top_liege = { character = ROOT }
 						religion = ROOT
 						NOT = { block_general_event_trigger = yes }
 						OR = {
@@ -10597,7 +10595,6 @@ character_event = {
 				random_realm_character = {
 					limit = {
 						is_theocracy = yes
-						top_liege = { character = ROOT }
 						religion = ROOT
 						NOT = { block_general_event_trigger = yes }
 						OR = {
@@ -10619,10 +10616,7 @@ character_event = {
 	option = { #Satanist Baptism
 		name = EVTOPTZHF20100
 		custom_tooltip = { text = tooltip_HF20100_Z }
-		trigger = {
-			society_member_of = the_satanists
-			has_society_currency_major_trigger = yes
-		}
+		trigger = { event_target:scoped_satanist = { is_alive = yes } }
 		show_portrait = scoped_satanist
 		detract_society_currency_medium_effect = yes
 		event_target:scoped_satanist = { save_event_target_as = scoped_baptizer }
@@ -10631,8 +10625,7 @@ character_event = {
 			if = {
 				limit = {
 					any_realm_character = {
-						top_liege = { character = ROOT }
-						NOT =  { trait = incapable }
+						is_incapable = no
 						is_theocracy = no
 						is_adult = yes
 						society_member_of = the_satanists
@@ -10652,8 +10645,8 @@ character_event = {
 			factor = 100
 			modifier = { #If the true heir can still come, don't waste your only chance to give him the trait.
 				factor = 0.1
-				NOT = { age = 40 }
-				NOT = { spouse = { age = 40 } }
+				NOT = { practical_age = 40 }
+				NOT = { spouse = { practical_age = 40 } }
 				FROM = { is_female = yes }
 				OR = {
 					has_law = agnatic_succession
@@ -10662,8 +10655,8 @@ character_event = {
 			}
 			modifier = { #If the true heir can still come, don't waste your only chance to give him the trait.
 				factor = 0.1
-				NOT = { age = 40 }
-				NOT = { spouse = { age = 40 } }
+				NOT = { practical_age = 40 }
+				NOT = { spouse = { practical_age = 40 } }
 				FROM = { is_female = no }
 				OR = {
 					has_law = enatic_succession
@@ -10688,16 +10681,6 @@ character_event = {
 		custom_tooltip = { text = tooltip_HF20100_A }
 		trigger = { event_target:scoped_pope = { is_alive = yes } }
 		show_portrait = scoped_pope
-		trigger = {
-			religion_head = {
-				is_alive = yes
-				NOT = { block_general_event_trigger = yes }
-				OR = {
-					has_landed_title = k_papal_state
-					has_landed_title = k_orthodox
-				}
-			}
-		}
 		scaled_wealth = { value = -2.0 min = -350 max = -750 }
 		tiered_piety_negative_effect = yes
 		event_target:scoped_pope = { save_event_target_as = scoped_baptizer }
@@ -10706,8 +10689,7 @@ character_event = {
 			if = {
 				limit = {
 					any_realm_character = {
-						top_liege = { character = ROOT }
-						NOT =  { trait = incapable }
+						is_incapable = no
 						is_theocracy = no
 						is_adult = yes
 						religion = ROOT
@@ -10743,8 +10725,8 @@ character_event = {
 			}
 			modifier = { #If the true heir can still come, don't waste your only chance to give him the trait.
 				factor = 0.1
-				NOT = { age = 40 }
-				NOT = { spouse = { age = 40 } }
+				NOT = { practical_age = 40 }
+				NOT = { spouse = { practical_age = 40 } }
 				FROM = { is_female = yes }
 				OR = {
 					has_law = agnatic_succession
@@ -10753,8 +10735,8 @@ character_event = {
 			}
 			modifier = { #If the true heir can still come, don't waste your only chance to give him the trait.
 				factor = 0.1
-				NOT = { age = 40 }
-				NOT = { spouse = { age = 40 } }
+				NOT = { practical_age = 40 }
+				NOT = { spouse = { practical_age = 40 } }
 				FROM = { is_female = no }
 				OR = {
 					has_law = enatic_succession
@@ -10768,23 +10750,6 @@ character_event = {
 		custom_tooltip = { text = tooltip_HF20100_B }
 		trigger = { event_target:scoped_bishop = { is_alive = yes } }
 		show_portrait = scoped_bishop
-		trigger = {
-			any_realm_character = {
-				is_theocracy = yes
-				top_liege = { character = ROOT }
-				religion = ROOT
-				NOT = { block_general_event_trigger = yes }
-				OR = {
-					higher_tier_than = BARON
-					has_minor_title = title_cardinal
-					has_minor_title = title_fraticelli_cardinal
-					any_claim = { title = k_papal_state } #Antipope
-					any_claim = { title = k_orthodox } #Antipope
-				}
-				NOT = { has_landed_title = k_papal_state }
-				NOT = { has_landed_title = k_orthodox }
-			}
-		}
 		scaled_wealth = { value = -1.5 min = -150 max = -350 }
 		tiered_piety_negative_effect = yes
 		event_target:scoped_bishop = { save_event_target_as = scoped_baptizer }
@@ -10793,8 +10758,7 @@ character_event = {
 			if = {
 				limit = {
 					any_realm_character = {
-						top_liege = { character = ROOT }
-						NOT =  { trait = incapable }
+						is_incapable = no
 						is_theocracy = no
 						is_adult = yes
 						religion = ROOT
@@ -10826,8 +10790,8 @@ character_event = {
 			}
 			modifier = { #If the true heir can still come, don't waste your only chance to give him the trait.
 				factor = 0.1
-				NOT = { age = 40 }
-				NOT = { spouse = { age = 40 } }
+				NOT = { practical_age = 40 }
+				NOT = { spouse = { practical_age = 40 } }
 				FROM = { is_female = yes }
 				OR = {
 					has_law = agnatic_succession
@@ -10836,8 +10800,8 @@ character_event = {
 			}
 			modifier = { #If the true heir can still come, don't waste your only chance to give him the trait.
 				factor = 0.1
-				NOT = { age = 40 }
-				NOT = { spouse = { age = 40 } }
+				NOT = { practical_age = 40 }
+				NOT = { spouse = { practical_age = 40 } }
 				FROM = { is_female = no }
 				OR = {
 					has_law = enatic_succession
@@ -10868,10 +10832,10 @@ character_event = {
 
 	trigger = {
 		religion = FROM
-		NOT = { trait = incapable }
+		is_incapable = no
 		FROM = {
 			is_alive = yes
-			NOT = { trait = incapable }
+			is_incapable = no
 		}
 	}
 
@@ -10979,7 +10943,12 @@ character_event = {
 	option = {
 		name = EVTOPTAHF20112
 		trigger = {
-			primary_title = { has_law = succ_elective_gavelkind }
+			primary_title = {
+				succ_law_title = {
+					has_law = succ_elective_gavelkind
+					is_law_potential = succ_gavelkind
+				}
+			}
 		}
 		tiered_prestige_negative_effect = yes
 		primary_title = {
@@ -10996,9 +10965,6 @@ character_event = {
 			}
 			FROM = { character_event = { id = HF.20110 days = 1500 random = 500 } }
 		}
-		ai_chance = {
-			factor = 100
-		}
 	}
 	option = {
 		name = EVTOPTBHF20112
@@ -11006,8 +10972,8 @@ character_event = {
 		hidden_tooltip = {
 			FROM = { character_event = { id = HF.20110 days = 1000 random = 250 } }
 		}
-		ai_chance = {
-			factor = 0
+		trigger = {
+			ai = no
 		}
 	}
 }
@@ -11273,7 +11239,7 @@ character_event = {
 					match_min = 50
 					match_max = 500
 					attrition = 1.0
-					can_inherit = no
+					cannot_inherit = yes
 				}
 			}
 		}
@@ -11325,7 +11291,7 @@ character_event = {
 		event_target:convert_lord_spiritual = {
 			is_alive = yes
 			religion = ROOT
-			NOT = { trait = incapable }
+			is_incapable = no
 		}
 	}
 	is_triggered_only = yes
@@ -11340,11 +11306,11 @@ character_event = {
 	        name_list = religion # Optional. What name list to use. Can also use "religion" for religious names of the scoped character's religion, or "culture"
 		}
 		hidden_tooltip = {
-			any_realm_character = {
+			any_close_relative = {
 				limit = {
-					is_close_relative = ROOT
+					same_realm = ROOT
 					religion = ROOT
-					NOT = { trait = incapable }
+					is_incapable = no
 				}
 				character_event = { id = HF.20119 }
 			}

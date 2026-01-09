@@ -6,7 +6,7 @@ theocracy_governments = {
 		preferred_holdings = { TEMPLE }
 		allowed_holdings = {
 			TEMPLE
-			CASTLE
+			#CASTLE
 			FORT
 			HOSPITAL
 		}
@@ -15,6 +15,8 @@ theocracy_governments = {
 		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
+			theocracy_government
+			playable_theocracy_government
 		}
 		accepts_liege_governments = {
 			feudal_government
@@ -34,6 +36,7 @@ theocracy_governments = {
 			bogomilist_imperial_government
 			theocratic_imperial_government
 			chinese_imperial_government
+			playable_theocracy_government
 			tribal_government
 			nomadic_government
 		}
@@ -77,7 +80,7 @@ theocracy_governments = {
 
 		can_create_kingdoms = no
 		have_gender_laws = no
-		can_be_granted_kingdoms_and_empires_by_other_government = yes
+		can_be_granted_kingdoms_and_empires_by_other_government = no
 
 		can_build_tribal = no
 		

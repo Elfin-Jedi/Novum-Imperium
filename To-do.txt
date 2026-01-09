@@ -1,26 +1,44 @@
+List of Changes:
+
+Added "Playable (Dynastic) Theocracies"
+Added "Playable Dynastic Theocracies - HIP Compatch"
+Added "Ancient Religions Reborn Playable Theocracy Compatch"
+Added "Playable Theocracies Allow Beards"
+Added "Playable Dynastic Theocracy become Court Chaplain"
+Re-"HIP"ified HF_baptism_events.
+Combined "Playable (Dynastic) Theocracies"s play as option into change_character.
+Cleaned up congenital traits.
+Added localisation for tzeltal, mayan_group.
+
 Testing:
 
-Zunbils still have 2 caste types. Check?
-Need to test joining the coven as a hellenic male or gay female
+Need to test joining the coven (titan_pagan or promethean_pagan) as a male or a gay female.
+%Do tiger hunts still ignore kills by vassals? 2 of 5 tests worked. 1 didn't.
+Vendetta decision. RTP Intrigue top level ability. Does it add people to my plots or reverse?
 
 To-Do:
 
 fix the_underworld_triad, other new devil worshipper societies
 alternate start religious heads, divorces, excommunications, etc.
 Move touch of fate, debug cheats, and play dirty to enable cheats
-compare and merge all matching Lux Ultima files, with mod merger. Also add most new ones.
+%compare and merge all matching Lux Ultima files, with mod merger. Also add most new ones.
 Add holy orders from Lux Ultima, mercs too?
 make it so landless characters can press barony claims in war?
 Finish fixing indoroman_events.txt
 What does 'emf_western_christian_religion' include?
-Give non-heresy HIP Christians back their special icons
+Give non-heresy HIP Christians back their special icons.
 rip_maimed_events.txt has a set of religious sympathies each with special flags, expand?
+
+%Finish adding events from Lux Ultima, last did: HF_warrior_lodge_powers_events.
+%Finish kid portraits from Umbra Sapiens. At: nadene.
+Fix Witoto, Huave, Panoan, Maipurean, etc. female portraits. (Missing noses and mouths). southernativegfx.
+Check Minahasa gfxs. Children have extra ears, harelips, when merged with Tamil. Unfortunatly main is borneangfx, which is already done.
+Give an icon to live to old age ambition. Also have no worries.
+Chukchi (Far Northeastern), Yukaghir, & Tacanan women also lack faces.
+Make landless mercenaries with a titular duchy act like otherwise identical holy orders.
 
 Artifacts & Wonders Edition:
 
-"Caesar's Books"
-"Caesar's Wonders"
-"Cities of Wonders"
 "More Buildable Wonders"
 "More Pagan Artifacts"
 "MTA - New Artifacts"
@@ -28,7 +46,7 @@ Artifacts & Wonders Edition:
 "More Artifacts Submod - BLG Compatibility Mod"
 "An Antique Land"
 "Bibliophile"
-"Pagan Wondors"
+"Pagan Wonders"
 
 Inheritance & Court Edition
 
@@ -81,6 +99,7 @@ Cultures Edition
 6. 633: Rise of Islam
 7. Diadochi Kings
 8. Winter King
+CK2Plus
 
 LF - Custom Religion
 
@@ -91,4 +110,5 @@ Monastic Feudal for Pagan Temporal Heads
 
 Usurpation Fix
 The Rise of the New Churches
+Defenders of Our Faith?
 Easy Heresy

@@ -22,7 +22,7 @@ monastic_order_benedictine = {
 		hidden_trigger = {
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = monastic_order_benedictine
 					rank = 1
 				}
@@ -58,7 +58,7 @@ monastic_order_benedictine = {
 	
 	society_rank = {
 		level = 1
-		limit = 100 
+		limit = 100
 		startup_limit = 10
 		modifier = {
 			monthly_character_piety = 0.05
@@ -71,7 +71,7 @@ monastic_order_benedictine = {
 		level = 2
 		limit = 50
 		startup_limit = 6
-		modifier = { 
+		modifier = {
 			monthly_character_piety = 0.1
 			stewardship = 1
 			fertility = -0.15
@@ -85,7 +85,7 @@ monastic_order_benedictine = {
 	
 	society_rank = {
 		level = 3
-		limit = 25 
+		limit = 25
 		startup_limit = 3
 		modifier = {
 			monthly_character_piety = 0.2
@@ -103,10 +103,10 @@ monastic_order_benedictine = {
 		level = 4
 		limit = 5
 		startup_limit = 1
-		modifier = { 
+		modifier = {
 			monthly_character_piety = 0.5
 			stewardship = 3
-			build_cost_temple_modifier = -0.5 
+			build_cost_temple_modifier = -0.5
 			fertility = -0.15
 		}
 		decisions = {
@@ -212,7 +212,12 @@ monastic_order_benedictine = {
 		value = 10
 
 		modifier = {
-			is_priest = yes
+			#is_priest = yes
+			###PDP
+			OR = {
+				is_priest = yes
+				PDP_is_theocracy = yes
+			}
 			factor = 10
 		}
 		modifier = {
@@ -331,7 +336,7 @@ monastic_order_dominican = {
 		hidden_trigger = {
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = monastic_order_dominican
 					rank = 1
 				}
@@ -365,7 +370,7 @@ monastic_order_dominican = {
 
 	society_rank = {
 		level = 1
-		limit = 100 
+		limit = 100
 		startup_limit = 10
 		modifier = {
 			monthly_character_piety = 0.05
@@ -378,7 +383,7 @@ monastic_order_dominican = {
 		level = 2
 		limit = 50
 		startup_limit = 6
-		modifier = { 
+		modifier = {
 			monthly_character_piety = 0.1
 			learning = 1
 			fertility = -0.15
@@ -392,7 +397,7 @@ monastic_order_dominican = {
 	
 	society_rank = {
 		level = 3
-		limit = 25 
+		limit = 25
 		startup_limit = 3
 		modifier = {
 			monthly_character_piety = 0.2
@@ -408,9 +413,9 @@ monastic_order_dominican = {
 
 	society_rank = {
 		level = 4
-		limit = 5 
+		limit = 5
 		startup_limit = 1
-		modifier = { 
+		modifier = {
 			monthly_character_piety = 0.5
 			learning = 3
 			build_cost_temple_modifier = -0.5
@@ -448,7 +453,7 @@ monastic_order_dominican = {
 		has_trait = {
 			trait = theologian
 			value = 3
-		}	
+		}
 		has_trait = {
 			trait = celibate
 			value = 2
@@ -519,7 +524,12 @@ monastic_order_dominican = {
 		value = 10
 
 		modifier = {
-			is_priest = yes
+			#is_priest = yes
+			###PDP
+			OR = {
+				is_priest = yes
+				PDP_is_theocracy = yes
+			}
 			factor = 10
 		}
 		modifier = {
@@ -638,7 +648,7 @@ monastic_order_orthodox = {
 		hidden_trigger = {
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = monastic_order_orthodox
 					rank = 1
 				}
@@ -674,7 +684,7 @@ monastic_order_orthodox = {
 
 	society_rank = {
 		level = 1
-		limit = 50 
+		limit = 50
 		startup_limit = 10
 		modifier = {
 			monthly_character_piety = 0.05
@@ -687,7 +697,7 @@ monastic_order_orthodox = {
 		level = 2
 		limit = 20
 		startup_limit = 6
-		modifier = { 
+		modifier = {
 			monthly_character_piety = 0.1
 			learning = 1
 			fertility = -0.15
@@ -701,7 +711,7 @@ monastic_order_orthodox = {
 	
 	society_rank = {
 		level = 3
-		limit = 10 
+		limit = 10
 		startup_limit = 3
 		modifier = {
 			monthly_character_piety = 0.2
@@ -719,7 +729,7 @@ monastic_order_orthodox = {
 		level = 4
 		limit = 5
 		startup_limit = 1
-		modifier = { 
+		modifier = {
 			monthly_character_piety = 0.5
 			temple_vassal_tax_modifier = 0.1
 			learning = 3
@@ -753,7 +763,7 @@ monastic_order_orthodox = {
 		has_trait = {
 			trait = theologian
 			value = 3
-		}	
+		}
 		has_trait = {
 			trait = celibate
 			value = 2
@@ -946,7 +956,7 @@ monastic_order_nestorian = {
 		hidden_trigger = {
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = monastic_order_nestorian
 					rank = 1
 				}
@@ -982,7 +992,7 @@ monastic_order_nestorian = {
 
 	society_rank = {
 		level = 1
-		limit = 50 
+		limit = 50
 		startup_limit = 10
 		modifier = {
 			monthly_character_piety = 0.05
@@ -995,7 +1005,7 @@ monastic_order_nestorian = {
 		level = 2
 		limit = 20
 		startup_limit = 6
-		modifier = { 
+		modifier = {
 			monthly_character_piety = 0.1
 			learning = 1
 			fertility = -0.15
@@ -1009,7 +1019,7 @@ monastic_order_nestorian = {
 	
 	society_rank = {
 		level = 3
-		limit = 10 
+		limit = 10
 		startup_limit = 3
 		modifier = {
 			monthly_character_piety = 0.2
@@ -1027,7 +1037,7 @@ monastic_order_nestorian = {
 		level = 4
 		limit = 5
 		startup_limit = 1
-		modifier = { 
+		modifier = {
 			monthly_character_piety = 0.5
 			temple_vassal_tax_modifier = 0.1
 			build_cost_temple_modifier = -0.5
@@ -1061,7 +1071,7 @@ monastic_order_nestorian = {
 		has_trait = {
 			trait = theologian
 			value = 3
-		}	
+		}
 		has_trait = {
 			trait = celibate
 			value = 2
@@ -1262,7 +1272,7 @@ monastic_order_monophysite = {
 		hidden_trigger = {
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = monastic_order_monophysite
 					rank = 1
 				}
@@ -1298,7 +1308,7 @@ monastic_order_monophysite = {
 
 	society_rank = {
 		level = 1
-		limit = 50 
+		limit = 50
 		startup_limit = 10
 		modifier = {
 			monthly_character_piety = 0.05
@@ -1311,7 +1321,7 @@ monastic_order_monophysite = {
 		level = 2
 		limit = 20
 		startup_limit = 6
-		modifier = { 
+		modifier = {
 			monthly_character_piety = 0.1
 			learning = 1
 			fertility = -0.15
@@ -1325,7 +1335,7 @@ monastic_order_monophysite = {
 	
 	society_rank = {
 		level = 3
-		limit = 10 
+		limit = 10
 		startup_limit = 3
 		modifier = {
 			monthly_character_piety = 0.2
@@ -1343,7 +1353,7 @@ monastic_order_monophysite = {
 		level = 4
 		limit = 5
 		startup_limit = 1
-		modifier = { 
+		modifier = {
 			monthly_character_piety = 0.5
 			temple_vassal_tax_modifier = 0.1
 			build_cost_temple_modifier = -0.5
@@ -1381,7 +1391,7 @@ monastic_order_monophysite = {
 		has_trait = {
 			trait = theologian
 			value = 3
-		}	
+		}
 		has_trait = {
 			trait = celibate
 			value = 2
@@ -1569,7 +1579,7 @@ monastic_order_hindu = {
 		hidden_trigger = {
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = monastic_order_hindu
 					rank = 1
 				}
@@ -1602,7 +1612,7 @@ monastic_order_hindu = {
 
 	society_rank = {
 		level = 1
-		limit = 50 
+		limit = 50
 		startup_limit = 10
 		modifier = {
 			monthly_character_piety = 0.05
@@ -1615,7 +1625,7 @@ monastic_order_hindu = {
 		level = 2
 		limit = 20
 		startup_limit = 6
-		modifier = { 
+		modifier = {
 			monthly_character_piety = 0.1
 			learning = 1
 			fertility = -0.15
@@ -1629,7 +1639,7 @@ monastic_order_hindu = {
 	
 	society_rank = {
 		level = 3
-		limit = 10 
+		limit = 10
 		startup_limit = 3
 		modifier = {
 			monthly_character_piety = 0.2
@@ -1645,9 +1655,9 @@ monastic_order_hindu = {
 
 	society_rank = {
 		level = 4
-		limit = 5 
+		limit = 5
 		startup_limit = 1
-		modifier = { 
+		modifier = {
 			monthly_character_piety = 0.5
 			learning = 3
 			build_cost_temple_modifier = -0.5
@@ -1827,7 +1837,7 @@ monastic_order_buddhist = {
 		hidden_trigger = {
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = monastic_order_buddhist
 					rank = 1
 				}
@@ -1866,7 +1876,7 @@ monastic_order_buddhist = {
 
 	society_rank = {
 		level = 1
-		limit = 50 
+		limit = 50
 		startup_limit = 10
 		modifier = {
 			monthly_character_piety = 0.05
@@ -1879,7 +1889,7 @@ monastic_order_buddhist = {
 		level = 2
 		limit = 20
 		startup_limit = 6
-		modifier = { 
+		modifier = {
 			monthly_character_piety = 0.1
 			diplomacy = 1
 			fertility = -0.15
@@ -1893,7 +1903,7 @@ monastic_order_buddhist = {
 	
 	society_rank = {
 		level = 3
-		limit = 10 
+		limit = 10
 		startup_limit = 3
 		modifier = {
 			monthly_character_piety = 0.2
@@ -1911,7 +1921,7 @@ monastic_order_buddhist = {
 		level = 4
 		limit = 5
 		startup_limit = 1
-		modifier = { 
+		modifier = {
 			monthly_character_piety = 0.5
 			diplomacy = 3
 			build_cost_temple_modifier = -0.5
@@ -2091,7 +2101,7 @@ monastic_order_jain = {
 		hidden_trigger = {
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = monastic_order_jain
 					rank = 1
 				}
@@ -2124,7 +2134,7 @@ monastic_order_jain = {
 
 	society_rank = {
 		level = 1
-		limit = 50 
+		limit = 50
 		startup_limit = 10
 		modifier = {
 			monthly_character_piety = 0.05
@@ -2137,7 +2147,7 @@ monastic_order_jain = {
 		level = 2
 		limit = 20
 		startup_limit = 6
-		modifier = { 
+		modifier = {
 			monthly_character_piety = 0.1
 			learning = 1
 			fertility = -0.15
@@ -2151,7 +2161,7 @@ monastic_order_jain = {
 	
 	society_rank = {
 		level = 3
-		limit = 10 
+		limit = 10
 		startup_limit = 3
 		modifier = {
 			monthly_character_piety = 0.2
@@ -2169,7 +2179,7 @@ monastic_order_jain = {
 		level = 4
 		limit = 5
 		startup_limit = 1
-		modifier = { 
+		modifier = {
 			monthly_character_piety = 0.5
 			learning = 3
 			build_cost_temple_modifier = -0.5
@@ -2359,7 +2369,7 @@ monastic_order_stoics = {
 		hidden_trigger = {
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = monastic_order_stoics
 					rank = 1
 				}
@@ -2370,16 +2380,16 @@ monastic_order_stoics = {
 			is_tribal = yes
 			is_nomadic = yes
 		}
-		OR = { 
-			religion = hellenic_pagan 
+		OR = {
+			religion = hellenic_pagan
 			religion = hellenic_pagan_reformed
 			religion = promethean_pagan
 			trait = stoic
-			AND = { 
+			AND = {
 				culture = roman
 				OR = { #Somewhat compatible when mixed with Roman culture.
-					religion_group = christian 
-					religion_group = jewish_group 
+					religion_group = christian
+					religion_group = jewish_group
 					religion = bon
 					religion = bon_reformed
 					religion_group = bud_group
@@ -2409,16 +2419,16 @@ monastic_order_stoics = {
 			is_tribal = yes
 			is_nomadic = yes
 		}
-		OR = { 
-			religion = hellenic_pagan 
+		OR = {
+			religion = hellenic_pagan
 			religion = hellenic_pagan_reformed
 			religion = promethean_pagan
 			trait = stoic
-			AND = { 
+			AND = {
 				culture = roman
 				OR = { #Somewhat compatible when mixed with Roman culture.
-					religion_group = christian 
-					religion_group = jewish_group 
+					religion_group = christian
+					religion_group = jewish_group
 					religion = bon
 					religion = bon_reformed
 					religion_group = bud_group
@@ -2434,13 +2444,13 @@ monastic_order_stoics = {
 			is_nomadic = yes
 		}
 		OR = {
-			religion = hellenic_pagan 
+			religion = hellenic_pagan
 			religion = hellenic_pagan_reformed
-			AND = { 
+			AND = {
 				culture = roman
 				OR = { #Somewhat compatible when mixed with Roman culture.
-					religion_group = christian 
-					religion_group = jewish_group 
+					religion_group = christian
+					religion_group = jewish_group
 					religion = bon
 					religion = bon_reformed
 					religion_group = bud_group
@@ -2451,7 +2461,7 @@ monastic_order_stoics = {
 
 	society_rank = {
 		level = 1
-		limit = 60 
+		limit = 60
 		startup_limit = 10
 		modifier = {
 			monthly_character_piety = 0.05
@@ -2464,7 +2474,7 @@ monastic_order_stoics = {
 		level = 2
 		limit = 30
 		startup_limit = 6
-		modifier = { 
+		modifier = {
 			monthly_character_piety = 0.1
 			learning = 1
 			fertility = -0.15
@@ -2478,7 +2488,7 @@ monastic_order_stoics = {
 	
 	society_rank = {
 		level = 3
-		limit = 25 
+		limit = 25
 		startup_limit = 4
 		modifier = {
 			monthly_character_piety = 0.2
@@ -2497,7 +2507,7 @@ monastic_order_stoics = {
 		level = 4
 		limit = 8
 		startup_limit = 2
-		modifier = { 
+		modifier = {
 			monthly_character_piety = 0.5
 			diplomacy = 1
 			learning = 2
@@ -2531,7 +2541,7 @@ monastic_order_stoics = {
 		has_trait = {
 			trait = theologian
 			value = 4
-		}	
+		}
 		has_trait = {
 			trait = temperate
 			value = 4
@@ -2680,13 +2690,13 @@ monastic_order_stoics = {
 			}
 			OR = {
 				trait = stoic
-				religion = hellenic_pagan 
+				religion = hellenic_pagan
 				religion = hellenic_pagan_reformed
-				AND = { 
+				AND = {
 					culture = roman
 					OR = { #Somewhat compatible when mixed with Roman culture.
-						religion_group = christian 
-						religion_group = jewish_group 
+						religion_group = christian
+						religion_group = jewish_group
 						religion = bon
 						religion = bon_reformed
 						religion_group = bud_group
@@ -2738,7 +2748,7 @@ hermetics = {
 		hidden_trigger = {
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = hermetics
 					rank = 1
 				}
@@ -2814,7 +2824,7 @@ hermetics = {
 		level = 2
 		limit = 100
 		startup_limit = 6
-		modifier = { 
+		modifier = {
 			learning = 1
 			church_opinion = -10
 		}
@@ -2841,7 +2851,7 @@ hermetics = {
 		level = 4
 		limit = 20
 		startup_limit = 2
-		modifier = { 
+		modifier = {
 			learning = 3
 			church_opinion = -10
 		}
@@ -3042,7 +3052,7 @@ the_assassins = {
 		hidden_trigger = {
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = the_assassins
 					rank = 1
 				}
@@ -3143,7 +3153,7 @@ the_assassins = {
 
 	society_rank = {
 		level = 1
-		limit = 20 
+		limit = 20
 		startup_limit = 10
 		modifier = {
 			is_visible = {
@@ -3166,7 +3176,7 @@ the_assassins = {
 		level = 2
 		limit = 15
 		startup_limit = 6
-		modifier = { 
+		modifier = {
 			is_visible = {
 				OR = {
 					society_member_of = the_assassins
@@ -3175,11 +3185,11 @@ the_assassins = {
 			}
 			murder_plot_power_modifier = 0.65 # further increased plotpower
 			defensive_plot_power_modifier = 0.20
-			intrigue = 1 
+			intrigue = 1
 			combat_rating = 10 # bonus to dueling
 		}
 		decisions = {
-			assassins_scare_ruler #Available (targeted) Power: Can scare rulers to get a Favor (leave a dagger on their pillow, etc. 
+			assassins_scare_ruler #Available (targeted) Power: Can scare rulers to get a Favor (leave a dagger on their pillow, etc.
 		}
 	}
 	
@@ -3207,7 +3217,7 @@ the_assassins = {
 
 	society_rank = {
 		level = 4
-		limit = 1 
+		limit = 1
 		startup_limit = 1
 		modifier = {
 			is_visible = {
@@ -3226,7 +3236,7 @@ the_assassins = {
 			assassins_raise_troops #Available Power: Can raise a special regiment
 			assassins_mark_for_death #Available (targeted) Power: Mark for death (+ assassins_clear_marked_for_death_target i.e. the clearing of the mark)
 		}
-		obedience_tooltip = obedience_tooltip #this can be unique per rank/society 
+		obedience_tooltip = obedience_tooltip #this can be unique per rank/society
 		obedient = {
 			ROOT = {
 				always = yes
@@ -3238,7 +3248,7 @@ the_assassins = {
 		name = currency_name_the_assassins
     
 		per_attribute = {
-			name = intrigue 
+			name = intrigue
 			value = 0.5
 		}
 		has_trait = {
@@ -3368,7 +3378,7 @@ the_assassins = {
 		modifier = {
 			trait = charitable
 			factor = 1.1
-		}	
+		}
 	}
 	
 	startup_populate = {
@@ -3446,7 +3456,7 @@ the_satanists = {
 			}
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = the_satanists
 					rank = 1
 				}
@@ -3491,7 +3501,7 @@ the_satanists = {
 
 	society_rank = {
 		level = 1
-		limit = 100 
+		limit = 100
 		startup_limit = 10
 		decisions = {
 			decision_abduct
@@ -3506,7 +3516,7 @@ the_satanists = {
 		level = 2
 		limit = 50
 		startup_limit = 6
-		modifier = { 
+		modifier = {
 			is_visible = {
 				OR = {
 					society_member_of = the_satanists
@@ -3528,7 +3538,7 @@ the_satanists = {
 	
 	society_rank = {
 		level = 3
-		limit = 25 
+		limit = 25
 		startup_limit = 3
 		modifier = {
 			is_visible = {
@@ -3551,9 +3561,9 @@ the_satanists = {
 
 	society_rank = {
 		level = 4
-		limit = 1 
+		limit = 1
 		startup_limit = 1
-		modifier = { 
+		modifier = {
 			is_visible = {
 				OR = {
 					society_member_of = the_satanists
@@ -3567,7 +3577,7 @@ the_satanists = {
 			DW_prolong_life #Available Power: Prolong Life
 			DW_demonic_impregnation #Available power: Unholy Impregnation
 		}
-		obedience_tooltip = obedience_tooltip #this can be unique per rank/society 
+		obedience_tooltip = obedience_tooltip #this can be unique per rank/society
 		obedient = {
 			ROOT = {
 				always = yes
@@ -3813,7 +3823,7 @@ the_trollcrafters = {
 			}
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = the_trollcrafters
 					rank = 1
 				}
@@ -3850,7 +3860,7 @@ the_trollcrafters = {
 	
 	society_rank = {
 		level = 1
-		limit = 100 
+		limit = 100
 		startup_limit = 10
 		decisions = {
 			decision_abduct
@@ -3861,11 +3871,11 @@ the_trollcrafters = {
 		#custom_tooltip = unlockable_DW_powers_at_rank_2;
 	}
 	
-	society_rank = { 
+	society_rank = {
 		level = 2
 		limit = 50
 		startup_limit = 6
-		modifier = { 
+		modifier = {
 			is_visible = {
 				OR = {
 					society_member_of = the_trollcrafters
@@ -3887,7 +3897,7 @@ the_trollcrafters = {
 	
 	society_rank = {
 		level = 3
-		limit = 25 
+		limit = 25
 		startup_limit = 3
 		modifier = {
 			is_visible = {
@@ -3910,9 +3920,9 @@ the_trollcrafters = {
 
 	society_rank = {
 		level = 4
-		limit = 1 
+		limit = 1
 		startup_limit = 1
-		modifier = { 
+		modifier = {
 			is_visible = {
 				OR = {
 					society_member_of = the_trollcrafters
@@ -3925,12 +3935,12 @@ the_trollcrafters = {
 			DW_prolong_life #Available Power: Prolong Life
 			DW_demonic_impregnation #Available power: Unholy Impregnation
 		}
-		obedience_tooltip = obedience_tooltip #this can be unique per rank/society 
+		obedience_tooltip = obedience_tooltip #this can be unique per rank/society
 		obedient = {
 			ROOT = {
 				always = yes
 			}
-		}		
+		}
 	}
 
 	plots = {
@@ -4101,7 +4111,7 @@ the_trollcrafters = {
 				}
 			}
 			ai = yes
-	    	controls_religion = no 
+	    	controls_religion = no
 		    OR = {
 				true_religion_norse_pagan_reformed_trigger = yes
 				true_religion_norse_pagan_trigger = yes
@@ -4159,7 +4169,7 @@ the_cult_of_kali = {
 			}
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = the_cult_of_kali
 					rank = 1
 				}
@@ -4196,7 +4206,7 @@ the_cult_of_kali = {
 
 	society_rank = {
 		level = 1
-		limit = 100 
+		limit = 100
 		startup_limit = 10
 		decisions = {
 			decision_abduct
@@ -4209,11 +4219,11 @@ the_cult_of_kali = {
 
 	potential = { } #no rules
 	
-	society_rank = { 
+	society_rank = {
 		level = 2
 		limit = 50
 		startup_limit = 6
-		modifier = { 
+		modifier = {
 			is_visible = {
 				OR = {
 					society_member_of = the_cult_of_kali
@@ -4235,7 +4245,7 @@ the_cult_of_kali = {
 	
 	society_rank = {
 		level = 3
-		limit = 25 
+		limit = 25
 		startup_limit = 3
 		modifier = {
 			is_visible = {
@@ -4258,9 +4268,9 @@ the_cult_of_kali = {
 
 	society_rank = {
 		level = 4
-		limit = 1 
+		limit = 1
 		startup_limit = 1
-		modifier = { 
+		modifier = {
 			is_visible = {
 				OR = {
 					society_member_of = the_cult_of_kali
@@ -4273,7 +4283,7 @@ the_cult_of_kali = {
 			DW_prolong_life #Available Power: Prolong Life
 			DW_demonic_impregnation #Available power: Unholy Impregnation
 		}
-		obedience_tooltip = obedience_tooltip #this can be unique per rank/society 
+		obedience_tooltip = obedience_tooltip #this can be unique per rank/society
 		obedient = {
 			ROOT = {
 				always = yes
@@ -4495,7 +4505,7 @@ the_cold_ones = {
 			}
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = the_cold_ones
 					rank = 1
 				}
@@ -4532,13 +4542,13 @@ the_cold_ones = {
 			religion = finnish_pagan_reformed
 			secret_religion = finnish_pagan
 			secret_religion = finnish_pagan_reformed
-			society_member_of = the_cold_ones		
+			society_member_of = the_cold_ones
 		}
 	}
 
 	society_rank = {
 		level = 1
-		limit = 100 
+		limit = 100
 		startup_limit = 10
 		decisions = {
 			decision_abduct
@@ -4549,11 +4559,11 @@ the_cold_ones = {
 		#custom_tooltip = unlockable_DW_powers_at_rank_2;
 	}
 	
-	society_rank = { 
+	society_rank = {
 		level = 2
 		limit = 50
 		startup_limit = 6
-		modifier = { 
+		modifier = {
 			is_visible = {
 				OR = {
 					society_member_of = the_cold_ones
@@ -4575,7 +4585,7 @@ the_cold_ones = {
 	
 	society_rank = {
 		level = 3
-		limit = 25 
+		limit = 25
 		startup_limit = 3
 		modifier = {
 			is_visible = {
@@ -4598,9 +4608,9 @@ the_cold_ones = {
 
 	society_rank = {
 		level = 4
-		limit = 1 
+		limit = 1
 		startup_limit = 1
-		modifier = { 
+		modifier = {
 			is_visible = {
 				OR = {
 					society_member_of = the_cold_ones
@@ -4613,7 +4623,7 @@ the_cold_ones = {
 			DW_prolong_life #Available Power: Prolong Life
 			DW_demonic_impregnation #Available power: Unholy Impregnation
 		}
-		obedience_tooltip = obedience_tooltip #this can be unique per rank/society 
+		obedience_tooltip = obedience_tooltip #this can be unique per rank/society
 		obedient = {
 			ROOT = {
 				always = yes
@@ -4780,7 +4790,7 @@ the_cold_ones = {
 				religion = slavic_pagan
 				religion = slavic_pagan_reformed
 				secret_religion = slavic_pagan
-				secret_religion = slavic_pagan_reformed			
+				secret_religion = slavic_pagan_reformed
 			}
 			OR = {
 				has_impious_trait_trigger = yes
@@ -4834,7 +4844,7 @@ the_plaguebringers = {
 			}
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = the_plaguebringers
 					rank = 1
 				}
@@ -4869,7 +4879,7 @@ the_plaguebringers = {
 	
 	society_rank = {
 		level = 1
-		limit = 100 
+		limit = 100
 		startup_limit = 10
 		decisions = {
 			decision_abduct
@@ -4880,11 +4890,11 @@ the_plaguebringers = {
 		#custom_tooltip = unlockable_DW_powers_at_rank_2;
 	}
 	
-	society_rank = { 
+	society_rank = {
 		level = 2
 		limit = 50
 		startup_limit = 6
-		modifier = { 
+		modifier = {
 			is_visible = {
 				OR = {
 					society_member_of = the_plaguebringers
@@ -4906,7 +4916,7 @@ the_plaguebringers = {
 	
 	society_rank = {
 		level = 3
-		limit = 25 
+		limit = 25
 		startup_limit = 3
 		modifier = {
 			is_visible = {
@@ -4929,9 +4939,9 @@ the_plaguebringers = {
 
 	society_rank = {
 		level = 4
-		limit = 1 
+		limit = 1
 		startup_limit = 1
-		modifier = { 
+		modifier = {
 			is_visible = {
 				OR = {
 					society_member_of = the_plaguebringers
@@ -4944,7 +4954,7 @@ the_plaguebringers = {
 			DW_prolong_life #Available Power: Prolong Life
 			DW_demonic_impregnation #Available power: Unholy Impregnation
 		}
-		obedience_tooltip = obedience_tooltip #this can be unique per rank/society 
+		obedience_tooltip = obedience_tooltip #this can be unique per rank/society
 		obedient = {
 			ROOT = {
 				always = yes
@@ -5112,7 +5122,7 @@ the_plaguebringers = {
 				}
 			}
 			ai = yes
-	    	controls_religion = no 
+	    	controls_religion = no
 	    	OR = {
 		    	true_religion_tengri_pagan_trigger = yes
 				true_religion_tengri_pagan_reformed_trigger = yes
@@ -5169,7 +5179,7 @@ the_vodouns = {
 			}
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = the_vodouns
 					rank = 1
 				}
@@ -5204,7 +5214,7 @@ the_vodouns = {
 	
 	society_rank = {
 		level = 1
-		limit = 100 
+		limit = 100
 		startup_limit = 10
 		decisions = {
 			decision_abduct
@@ -5215,11 +5225,11 @@ the_vodouns = {
 		#custom_tooltip = unlockable_DW_powers_at_rank_2;
 	}
 	
-	society_rank = { 
+	society_rank = {
 		level = 2
 		limit = 50
 		startup_limit = 6
-		modifier = { 
+		modifier = {
 			is_visible = {
 				OR = {
 					society_member_of = the_vodouns
@@ -5241,7 +5251,7 @@ the_vodouns = {
 	
 	society_rank = {
 		level = 3
-		limit = 25 
+		limit = 25
 		startup_limit = 3
 		modifier = {
 			is_visible = {
@@ -5264,9 +5274,9 @@ the_vodouns = {
 
 	society_rank = {
 		level = 4
-		limit = 1 
+		limit = 1
 		startup_limit = 1
-		modifier = { 
+		modifier = {
 			is_visible = {
 				OR = {
 					society_member_of = the_vodouns
@@ -5279,7 +5289,7 @@ the_vodouns = {
 			DW_prolong_life #Available Power: Prolong Life
 			DW_demonic_impregnation #Available power: Unholy Impregnation
 		}
-		obedience_tooltip = obedience_tooltip #this can be unique per rank/society 
+		obedience_tooltip = obedience_tooltip #this can be unique per rank/society
 		obedient = {
 			ROOT = {
 				always = yes
@@ -5447,7 +5457,7 @@ the_vodouns = {
 				}
 			}
 			ai = yes
-	    	controls_religion = no 
+	    	controls_religion = no
 	    	OR = {
 		    	true_religion_west_african_pagan_trigger = yes
 				true_religion_west_african_pagan_reformed_trigger = yes
@@ -5506,7 +5516,7 @@ the_bacchants = {
 			}
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = the_bacchants
 					rank = 1
 				}
@@ -5539,10 +5549,10 @@ the_bacchants = {
 			top_liege = { true_religion_hellenic_pagan_reformed_trigger = yes }
 			top_liege = { true_religion_hellenic_pagan_trigger = yes }
 			culture = roman #Historically fashionable thrill for bored patricians.
-			AND = { 
+			AND = {
 				has_global_flag = flag_started_roman_renaissance
 				top_liege = { has_landed_title = e_roman_empire } #Historically a plague for the Empire.
-			} 
+			}
 		}
 	}
 	
@@ -5550,7 +5560,7 @@ the_bacchants = {
 	
 	society_rank = {
 		level = 1
-		limit = 100 
+		limit = 100
 		startup_limit = 10
 		decisions = {
 			decision_abduct
@@ -5561,11 +5571,11 @@ the_bacchants = {
 		#custom_tooltip = unlockable_DW_powers_at_rank_2;
 	}
 	
-	society_rank = { 
+	society_rank = {
 		level = 2
 		limit = 50
 		startup_limit = 6
-		modifier = { 
+		modifier = {
 			is_visible = {
 				OR = {
 					society_member_of = the_bacchants
@@ -5587,7 +5597,7 @@ the_bacchants = {
 	
 	society_rank = {
 		level = 3
-		limit = 25 
+		limit = 25
 		startup_limit = 3
 		modifier = {
 			is_visible = {
@@ -5610,9 +5620,9 @@ the_bacchants = {
 
 	society_rank = {
 		level = 4
-		limit = 1 
+		limit = 1
 		startup_limit = 1
-		modifier = { 
+		modifier = {
 			is_visible = {
 				OR = {
 					society_member_of = the_bacchants
@@ -5625,12 +5635,12 @@ the_bacchants = {
 			DW_prolong_life #Available Power: Prolong Life
 			DW_demonic_impregnation #Available power: Unholy Impregnation
 		}
-		obedience_tooltip = obedience_tooltip #this can be unique per rank/society 
+		obedience_tooltip = obedience_tooltip #this can be unique per rank/society
 		obedient = {
 			ROOT = {
 				always = yes
 			}
-		}		
+		}
 	}
 
 	plots = {
@@ -5801,15 +5811,15 @@ the_bacchants = {
 				}
 			}
 			ai = yes
-	    	controls_religion = no 
+	    	controls_religion = no
 		    OR = {
 				true_religion_hellenic_pagan_reformed_trigger = yes
 				true_religion_hellenic_pagan_trigger = yes
 				culture = roman
-				AND = { 
+				AND = {
 					has_global_flag = flag_started_roman_renaissance
 					top_liege = { has_landed_title = e_roman_empire } #Historically a plague for the Empire.
-				} 
+				}
 			}
 			OR = {
 				has_impious_trait_trigger = yes
@@ -5851,7 +5861,7 @@ secret_religious_society_template = {
 		hidden_trigger = {
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = FROM
 					rank = 1
 				}
@@ -5897,7 +5907,7 @@ secret_religious_society_template = {
 		level = 2
 		limit = 30
 		startup_limit = 0
-		modifier = { 
+		modifier = {
 			is_visible = {
 				OR = {
 					same_society_as = FROM
@@ -5933,7 +5943,7 @@ secret_religious_society_template = {
 		level = 4
 		limit = 1
 		startup_limit = 0
-		modifier = { 
+		modifier = {
 			diplomacy = 3
 			is_visible = {
 				OR = {
@@ -5969,7 +5979,7 @@ secret_religious_society_template = {
 		has_trait = {
 			trait = theologian
 			value = 3
-		}	
+		}
 		has_trait = {
 			trait = celibate
 			value = 2
@@ -6124,7 +6134,7 @@ warrior_lodge_norse = {
 		hidden_trigger = {
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = warrior_lodge_norse
 					rank = 1
 				}
@@ -6163,7 +6173,7 @@ warrior_lodge_norse = {
 	show_society = {
 		OR = {
 			#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
-			religion_openly_norse_or_reformed_trigger = yes	
+			religion_openly_norse_or_reformed_trigger = yes
 			AND = {
 				#You are of a religion that doesn't match *any* warrior lodge
 				has_religion_matching_available_warrior_lodge_trigger = no
@@ -6196,7 +6206,7 @@ warrior_lodge_norse = {
 
 	society_rank = { #"Fledling"
 		level = 1
-		limit = 50 
+		limit = 50
 		startup_limit = 10
 		modifier = {
 			monthly_character_prestige = 0.25
@@ -6205,7 +6215,7 @@ warrior_lodge_norse = {
 			warrior_lodge_duel #Passive Power: Unlocks Duel
 			warrior_lodge_shieldmaiden #Passive Power: Unlocks Shieldmaidens
 			warrior_lodge_survivor #Passive Power: Survivor
-			warrior_lodge_lifetime_of_war #Passive Power: A Lifetime of War			
+			warrior_lodge_lifetime_of_war #Passive Power: A Lifetime of War
 			warrior_lodge_norse_go_berserk #Power: Go Berserk
 		}
 	}
@@ -6218,7 +6228,7 @@ warrior_lodge_norse = {
 			monthly_character_prestige = 0.5
 			combat_rating = 5
 			martial = 1
-		}		
+		}
 		powers = {
 			warrior_lodge_reaver #Passive Power: Reaver
 			warrior_lodge_warrior_training #Power: Warrior Training
@@ -6228,7 +6238,7 @@ warrior_lodge_norse = {
 	
 	society_rank = { #"Veteran"
 		level = 3
-		limit = 10 
+		limit = 10
 		startup_limit = 4
 		modifier = {
 			monthly_character_prestige = 0.75
@@ -6245,7 +6255,7 @@ warrior_lodge_norse = {
 		level = 4
 		limit = 4
 		startup_limit = 3
-		modifier = { 
+		modifier = {
 			monthly_character_prestige = 1
 			combat_rating = 15
 			martial = 3
@@ -6521,7 +6531,7 @@ warrior_lodge_norse = {
 		modifier = {
 			trait = misguided_warrior
 			factor = 1.1
-		}	
+		}
 		modifier = {
 			trait = tough_soldier
 			factor = 1.2
@@ -6683,7 +6693,7 @@ warrior_lodge_norse = {
 			trait = hunchback
 			factor = 0.8
 		}
-	}	
+	}
 
 	startup_populate = {
 	    trigger = {
@@ -6727,7 +6737,7 @@ warrior_lodge_tengri = { # Also generally for Nomads
 		hidden_trigger = {
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = warrior_lodge_tengri
 					rank = 1
 				}
@@ -6767,7 +6777,7 @@ warrior_lodge_tengri = { # Also generally for Nomads
 	show_society = {
 		OR = {
 			#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
-			religion_openly_tengri_or_reformed_trigger = yes	
+			religion_openly_tengri_or_reformed_trigger = yes
 			is_nomadic = yes
 			AND = {
 				#You are of a religion that doesn't match *any* warrior lodge
@@ -6802,7 +6812,7 @@ warrior_lodge_tengri = { # Also generally for Nomads
 
 	society_rank = { #"Fledling"
 		level = 1
-		limit = 50 
+		limit = 50
 		startup_limit = 10
 		modifier = {
 			monthly_character_prestige = 0.25
@@ -6823,7 +6833,7 @@ warrior_lodge_tengri = { # Also generally for Nomads
 			monthly_character_prestige = 0.5
 			combat_rating = 5
 			martial = 1
-		}		
+		}
 		powers = {
 			warrior_lodge_reaver #Passive Power: Reaver
 			warrior_lodge_warrior_training #Power: Warrior Training
@@ -6834,7 +6844,7 @@ warrior_lodge_tengri = { # Also generally for Nomads
 	
 	society_rank = { #"Veteran"
 		level = 3
-		limit = 10 
+		limit = 10
 		startup_limit = 4
 		modifier = {
 			monthly_character_prestige = 0.75
@@ -6851,7 +6861,7 @@ warrior_lodge_tengri = { # Also generally for Nomads
 		level = 4
 		limit = 4
 		startup_limit = 3
-		modifier = { 
+		modifier = {
 			monthly_character_prestige = 1
 			combat_rating = 15
 			martial = 3
@@ -7127,7 +7137,7 @@ warrior_lodge_tengri = { # Also generally for Nomads
 		modifier = {
 			trait = misguided_warrior
 			factor = 1.1
-		}	
+		}
 		modifier = {
 			trait = tough_soldier
 			factor = 1.2
@@ -7289,7 +7299,7 @@ warrior_lodge_tengri = { # Also generally for Nomads
 			trait = hunchback
 			factor = 0.8
 		}
-	}	
+	}
 
 	startup_populate = {
 	    trigger = {
@@ -7336,7 +7346,7 @@ warrior_lodge_baltic = {
 		hidden_trigger = {
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = warrior_lodge_baltic
 					rank = 1
 				}
@@ -7375,7 +7385,7 @@ warrior_lodge_baltic = {
 	show_society = {
 		OR = {
 			#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
-			religion_openly_baltic_or_reformed_trigger = yes	
+			religion_openly_baltic_or_reformed_trigger = yes
 			AND = {
 				#You are of a religion that doesn't match *any* warrior lodge
 				has_religion_matching_available_warrior_lodge_trigger = no
@@ -7409,7 +7419,7 @@ warrior_lodge_baltic = {
 
 	society_rank = { #"Fledling"
 		level = 1
-		limit = 50 
+		limit = 50
 		startup_limit = 10
 		modifier = {
 			monthly_character_prestige = 0.25
@@ -7430,7 +7440,7 @@ warrior_lodge_baltic = {
 			monthly_character_prestige = 0.5
 			combat_rating = 5
 			martial = 1
-		}		
+		}
 		powers = {
 			warrior_lodge_reaver #Passive Power: Reaver
 			warrior_lodge_warrior_training #Power: Warrior Training
@@ -7440,7 +7450,7 @@ warrior_lodge_baltic = {
 	
 	society_rank = { #"Veteran"
 		level = 3
-		limit = 10 
+		limit = 10
 		startup_limit = 4
 		modifier = {
 			monthly_character_prestige = 0.75
@@ -7458,7 +7468,7 @@ warrior_lodge_baltic = {
 		level = 4
 		limit = 4
 		startup_limit = 3
-		modifier = { 
+		modifier = {
 			monthly_character_prestige = 1
 			combat_rating = 15
 			martial = 3
@@ -7734,7 +7744,7 @@ warrior_lodge_baltic = {
 		modifier = {
 			trait = misguided_warrior
 			factor = 1.1
-		}	
+		}
 		modifier = {
 			trait = tough_soldier
 			factor = 1.2
@@ -7896,7 +7906,7 @@ warrior_lodge_baltic = {
 			trait = hunchback
 			factor = 0.8
 		}
-	}	
+	}
 
 	startup_populate = {
 	    trigger = {
@@ -7940,7 +7950,7 @@ warrior_lodge_finnish = {
 		hidden_trigger = {
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = warrior_lodge_finnish
 					rank = 1
 				}
@@ -7979,7 +7989,7 @@ warrior_lodge_finnish = {
 	show_society = {
 		OR = {
 			#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
-			religion_openly_finnish_or_reformed_trigger = yes	
+			religion_openly_finnish_or_reformed_trigger = yes
 			
 			AND = {
 				#You are of a religion that doesn't match *any* warrior lodge
@@ -8013,7 +8023,7 @@ warrior_lodge_finnish = {
 
 	society_rank = { #"Fledling"
 		level = 1
-		limit = 50 
+		limit = 50
 		startup_limit = 10
 		modifier = {
 			monthly_character_prestige = 0.25
@@ -8034,7 +8044,7 @@ warrior_lodge_finnish = {
 			monthly_character_prestige = 0.5
 			combat_rating = 5
 			martial = 1
-		}		
+		}
 		powers = {
 			warrior_lodge_reaver #Passive Power: Reaver
 			warrior_lodge_warrior_training #Power: Warrior Training
@@ -8044,7 +8054,7 @@ warrior_lodge_finnish = {
 	
 	society_rank = { #"Veteran"
 		level = 3
-		limit = 10 
+		limit = 10
 		startup_limit = 4
 		modifier = {
 			monthly_character_prestige = 0.75
@@ -8053,7 +8063,7 @@ warrior_lodge_finnish = {
 		}
 		powers = {
 			warrior_lodge_inspire_warriors #Power: Inspire Warriors
-			warrior_lodge_war_sacrifice #Power: War Sacrifice			
+			warrior_lodge_war_sacrifice #Power: War Sacrifice
 			warrior_lodge_suomenusko_summon_warriors #Power: Summon Warriors of Ukko
 		}
 	}
@@ -8062,7 +8072,7 @@ warrior_lodge_finnish = {
 		level = 4
 		limit = 4
 		startup_limit = 3
-		modifier = { 
+		modifier = {
 			monthly_character_prestige = 1
 			combat_rating = 15
 			martial = 3
@@ -8338,7 +8348,7 @@ warrior_lodge_finnish = {
 		modifier = {
 			trait = misguided_warrior
 			factor = 1.1
-		}	
+		}
 		modifier = {
 			trait = tough_soldier
 			factor = 1.2
@@ -8500,7 +8510,7 @@ warrior_lodge_finnish = {
 			trait = hunchback
 			factor = 0.8
 		}
-	}	
+	}
 
 	startup_populate = {
 	    trigger = {
@@ -8544,7 +8554,7 @@ warrior_lodge_slavic = {
 		hidden_trigger = {
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = warrior_lodge_slavic
 					rank = 1
 				}
@@ -8570,7 +8580,7 @@ warrior_lodge_slavic = {
 					text = society_has_at_least_10_members_tt
 					FROM = { num_of_society_members >= 10 }
 				}
-				has_tribal_or_nomadic_government_trigger = yes				
+				has_tribal_or_nomadic_government_trigger = yes
 				custom_tooltip = {
 					text = special_join_warrior_lodge_trigger_tt
 					special_join_warrior_lodge_trigger = yes
@@ -8584,7 +8594,7 @@ warrior_lodge_slavic = {
 	show_society = {
 		OR = {
 			#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
-			religion_openly_slavic_or_reformed_trigger = yes	
+			religion_openly_slavic_or_reformed_trigger = yes
 			AND = {
 				#You are of a religion that doesn't match *any* warrior lodge
 				has_religion_matching_available_warrior_lodge_trigger = no
@@ -8617,7 +8627,7 @@ warrior_lodge_slavic = {
 
 	society_rank = { #"Fledling"
 		level = 1
-		limit = 50 
+		limit = 50
 		startup_limit = 10
 		modifier = {
 			monthly_character_prestige = 0.25
@@ -8649,7 +8659,7 @@ warrior_lodge_slavic = {
 	
 	society_rank = { #"Veteran"
 		level = 3
-		limit = 10 
+		limit = 10
 		startup_limit = 4
 		modifier = {
 			monthly_character_prestige = 0.75
@@ -8666,7 +8676,7 @@ warrior_lodge_slavic = {
 		level = 4
 		limit = 4
 		startup_limit = 3
-		modifier = { 
+		modifier = {
 			monthly_character_prestige = 1
 			combat_rating = 15
 			martial = 3
@@ -8942,7 +8952,7 @@ warrior_lodge_slavic = {
 		modifier = {
 			trait = misguided_warrior
 			factor = 1.1
-		}	
+		}
 		modifier = {
 			trait = tough_soldier
 			factor = 1.2
@@ -9104,7 +9114,7 @@ warrior_lodge_slavic = {
 			trait = hunchback
 			factor = 0.8
 		}
-	}	
+	}
 
 	startup_populate = {
 	    trigger = {
@@ -9148,7 +9158,7 @@ warrior_lodge_west_african = {
 		hidden_trigger = {
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = warrior_lodge_west_african
 					rank = 1
 				}
@@ -9175,7 +9185,8 @@ warrior_lodge_west_african = {
 			}
 			has_tribal_or_nomadic_government_trigger = yes
 			custom_tooltip = {
-				text = special_join_warrior_lodge_trigger_tt					special_join_warrior_lodge_trigger = yes
+				text = special_join_warrior_lodge_trigger_tt
+				special_join_warrior_lodge_trigger = yes
 			}
 			NOT = { trait = zealous }
 		}
@@ -9186,7 +9197,7 @@ warrior_lodge_west_african = {
 		religion_openly_west_african_or_reformed_trigger = yes
 		AND = {
 			#You are of a religion that doesn't match *any* warrior lodge
-			has_religion_matching_available_warrior_lodge_trigger = no	
+			has_religion_matching_available_warrior_lodge_trigger = no
 			OR = {
 				#You have neighbors, etc, of the correct religion...
 				any_vassal = {
@@ -9221,7 +9232,7 @@ warrior_lodge_west_african = {
 
 	society_rank = { #"Fledling"
 		level = 1
-		limit = 50 
+		limit = 50
 		startup_limit = 10
 		modifier = {
 			monthly_character_prestige = 0.25
@@ -9252,7 +9263,7 @@ warrior_lodge_west_african = {
 	
 	society_rank = { #"Veteran"
 		level = 3
-		limit = 10 
+		limit = 10
 		startup_limit = 4
 		modifier = {
 			monthly_character_prestige = 0.75
@@ -9269,7 +9280,7 @@ warrior_lodge_west_african = {
 		level = 4
 		limit = 4
 		startup_limit = 3
-		modifier = { 
+		modifier = {
 			monthly_character_prestige = 1
 			combat_rating = 15
 			martial = 3
@@ -9550,7 +9561,7 @@ warrior_lodge_west_african = {
 		modifier = {
 			trait = misguided_warrior
 			factor = 1.1
-		}	
+		}
 		modifier = {
 			trait = tough_soldier
 			factor = 1.2
@@ -9724,7 +9735,7 @@ warrior_lodge_west_african = {
 			trait = hunchback
 			factor = 0.8
 		}
-	}	
+	}
 
 	startup_populate = {
 	    trigger = {
@@ -9768,7 +9779,7 @@ warrior_lodge_zun = {
 		hidden_trigger = {
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = warrior_lodge_zun
 					rank = 1
 				}
@@ -9807,7 +9818,7 @@ warrior_lodge_zun = {
 	show_society = {
 		OR = {
 			#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
-			religion_openly_zun_or_reformed_trigger = yes	
+			religion_openly_zun_or_reformed_trigger = yes
 			AND = {
 				#You are of a religion that doesn't match *any* warrior lodge
 				has_religion_matching_available_warrior_lodge_trigger = no
@@ -9840,7 +9851,7 @@ warrior_lodge_zun = {
 
 	society_rank = { #"Fledling"
 		level = 1
-		limit = 50 
+		limit = 50
 		startup_limit = 10
 		modifier = {
 			monthly_character_prestige = 0.25
@@ -9865,14 +9876,14 @@ warrior_lodge_zun = {
 		powers = {
 			warrior_lodge_reaver #Passive Power: Reaver
 			warrior_lodge_warrior_training #Power: Warrior Training
-			warrior_lodge_summon_commander #Power: Summon Commander			
+			warrior_lodge_summon_commander #Power: Summon Commander
 			warrior_lodge_zun_battle_trance #Power: Battle Trance
 		}
 	}
 	
 	society_rank = { #"Veteran"
 		level = 3
-		limit = 10 
+		limit = 10
 		startup_limit = 4
 		modifier = {
 			monthly_character_prestige = 0.75
@@ -9889,7 +9900,7 @@ warrior_lodge_zun = {
 		level = 4
 		limit = 4
 		startup_limit = 3
-		modifier = { 
+		modifier = {
 			monthly_character_prestige = 1
 			combat_rating = 15
 			martial = 3
@@ -10165,7 +10176,7 @@ warrior_lodge_zun = {
 		modifier = {
 			trait = misguided_warrior
 			factor = 1.1
-		}	
+		}
 		modifier = {
 			trait = tough_soldier
 			factor = 1.2
@@ -10327,7 +10338,7 @@ warrior_lodge_zun = {
 			trait = hunchback
 			factor = 0.8
 		}
-	}	
+	}
 
 	startup_populate = {
 	    trigger = {
@@ -10372,7 +10383,7 @@ warrior_lodge_bon = {
 		hidden_trigger = {
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = warrior_lodge_bon
 					rank = 1
 				}
@@ -10411,7 +10422,7 @@ warrior_lodge_bon = {
 	show_society = {
 		OR = {
 			#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
-			religion_openly_bon_or_reformed_trigger = yes	
+			religion_openly_bon_or_reformed_trigger = yes
 			AND = {
 				#You are of a religion that doesn't match *any* warrior lodge
 				has_religion_matching_available_warrior_lodge_trigger = no
@@ -10444,7 +10455,7 @@ warrior_lodge_bon = {
 
 	society_rank = { #"Fledling"
 		level = 1
-		limit = 50 
+		limit = 50
 		startup_limit = 10
 		modifier = {
 			monthly_character_prestige = 0.25
@@ -10466,7 +10477,7 @@ warrior_lodge_bon = {
 			monthly_character_prestige = 0.5
 			combat_rating = 5
 			martial = 1
-		}		
+		}
 		powers = {
 			warrior_lodge_reaver #Passive Power: Reaver
 			warrior_lodge_warrior_training #Power: Warrior Training
@@ -10476,7 +10487,7 @@ warrior_lodge_bon = {
 	
 	society_rank = { #"Veteran"
 		level = 3
-		limit = 10 
+		limit = 10
 		startup_limit = 4
 		modifier = {
 			monthly_character_prestige = 0.75
@@ -10493,7 +10504,7 @@ warrior_lodge_bon = {
 		level = 4
 		limit = 4
 		startup_limit = 3
-		modifier = { 
+		modifier = {
 			monthly_character_prestige = 1
 			combat_rating = 15
 			martial = 3
@@ -10769,7 +10780,7 @@ warrior_lodge_bon = {
 		modifier = {
 			trait = misguided_warrior
 			factor = 1.1
-		}	
+		}
 		modifier = {
 			trait = tough_soldier
 			factor = 1.2
@@ -10927,7 +10938,7 @@ warrior_lodge_bon = {
 			trait = hunchback
 			factor = 0.8
 		}
-	}	
+	}
 
 	startup_populate = {
 	    trigger = {
@@ -10973,7 +10984,7 @@ warrior_lodge_hellenic = {
 		hidden_trigger = {
 			NAND = {
 				ai = yes
-				is_society_rank_full = { 
+				is_society_rank_full = {
 					society = warrior_lodge_hellenic
 					rank = 1
 				}
@@ -11012,7 +11023,7 @@ warrior_lodge_hellenic = {
 	show_society = {
 		OR = {
 			#You are this religion: will show only this lodge (the other "show_society"'s will make sure)
-			religion_openly_hellenic_or_reformed_trigger = yes	
+			religion_openly_hellenic_or_reformed_trigger = yes
 			AND = {
 				#You are of a religion that doesn't match *any* warrior lodge
 				has_religion_matching_available_warrior_lodge_trigger = no
@@ -11045,7 +11056,7 @@ warrior_lodge_hellenic = {
 
 	society_rank = { #"Fledling"
 		level = 1
-		limit = 50 
+		limit = 50
 		startup_limit = 10
 		modifier = {
 			monthly_character_prestige = 0.25
@@ -11076,7 +11087,7 @@ warrior_lodge_hellenic = {
 	
 	society_rank = { #"Veteran"
 		level = 3
-		limit = 10 
+		limit = 10
 		startup_limit = 4
 		modifier = {
 			monthly_character_prestige = 0.75
@@ -11085,7 +11096,7 @@ warrior_lodge_hellenic = {
 		}
 		powers = {
 			warrior_lodge_inspire_warriors #Power: Inspire Warriors
-			warrior_lodge_war_sacrifice #Power: War Sacrifice		
+			warrior_lodge_war_sacrifice #Power: War Sacrifice
 		}
 	}
 
@@ -11093,7 +11104,7 @@ warrior_lodge_hellenic = {
 		level = 4
 		limit = 4
 		startup_limit = 3
-		modifier = { 
+		modifier = {
 			monthly_character_prestige = 1
 			combat_rating = 15
 			martial = 3
@@ -11369,7 +11380,7 @@ warrior_lodge_hellenic = {
 		modifier = {
 			trait = misguided_warrior
 			factor = 1.1
-		}	
+		}
 		modifier = {
 			trait = tough_soldier
 			factor = 1.2
@@ -11531,7 +11542,7 @@ warrior_lodge_hellenic = {
 			trait = hunchback
 			factor = 0.8
 		}
-	}	
+	}
 
 	startup_populate = {
 	    trigger = {

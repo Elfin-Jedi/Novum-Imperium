@@ -252,11 +252,16 @@ succession_laws = {
 				}
 				is_nomadic = no
 				is_theocracy = no
+				NOT = { government = playable_theocracy_government }
 				trigger_if = {
 					limit = { is_patrician = no }
 					NOR = {
 						religion_group = muslim
 						religion_group = indian_group
+					}
+					OR = {
+						emf_unreformed_pagan = no
+						religion = hellenic_pagan
 					}
 					is_republic = no
 					NOT = { PREV = { tier = BARON } }
@@ -697,9 +702,9 @@ succession_laws = {
 						culture_group = celtic
 						NOT = { culture = pictish }
 					}
+					religion_openly_in_celtic_subgroup_trigger = yes
 					any_owned_bloodline = {
 						has_bloodline_flag = bloodline_tanistry
-						bloodline_is_active_for = PREV
 					}
 				}
 				NOT = { government = confucian_bureaucracy }
@@ -917,6 +922,7 @@ succession_laws = {
 							has_religion_feature = religion_matriarchal
 						}
 						is_theocracy = no
+						NOT = { government = playable_theocracy_government }
 					}
 				}
 				is_republic = no
@@ -970,6 +976,8 @@ succession_laws = {
 				title = d_cathar
 				title = d_bogomilist
 				title = d_manichean
+				title = k_britannic_pagan
+				title = d_celtic_pagan_reformed
 			}
 		}
 		effect = {
@@ -1024,6 +1032,8 @@ succession_laws = {
 				title = d_cathar
 				title = d_bogomilist
 				title = d_manichean
+				title = d_celtic_pagan_reformed
+				title = k_britannic_pagan
 			}
 			temporary = no
 			OR = {
@@ -1034,8 +1044,16 @@ succession_laws = {
 					OR = {
 						is_republic = yes
 						AND = {
-							is_theocracy = yes
-							NOT = { holder_scope = { religion_group = muslim } }
+							OR = {
+								is_theocracy = yes
+								government = playable_theocracy_government
+							}
+							NOR = {
+								holder_scope = {
+									religion_group = muslim
+									religion = britannic_pagan
+								}
+							}
 						}
 					}
 				}
@@ -1043,7 +1061,10 @@ succession_laws = {
 					OR = {
 						is_republic = yes
 						AND = {
-							is_theocracy = yes
+							OR = {
+								is_theocracy = yes
+								government = playable_theocracy_government
+							}
 							NOT = { religion_group = muslim }
 						}
 					}
@@ -1053,7 +1074,10 @@ succession_laws = {
 				is_landless_type_title = yes
 				holder_scope = {
 					OR = {
-						is_theocracy = no
+						AND = {
+							is_theocracy = no
+							NOT = { government = playable_theocracy_government }
+						}
 						NOR = {
 							religion = catholic
 							religion = cathar
@@ -1094,9 +1118,15 @@ succession_laws = {
 			OR = {
 				AND = {
 					tier = BARON
-					is_theocracy = yes
+					OR = {
+						is_theocracy = yes
+						government = playable_theocracy_government
+					}
 				}
-				holder_scope = { is_theocracy = yes }
+				OR = {
+					holder_scope = { is_theocracy = yes }
+					holder_scope = { government = playable_theocracy_government}
+				}
 			}
 			holder_scope = {
 				rtp_is_theocracy_government = yes
@@ -1127,6 +1157,57 @@ succession_laws = {
 		}
 		effect = {
 			succession = catholic_bishopric
+		}
+	}
+	
+	succ_playable_catholic_bishopric = {
+		potential = {
+			ai = no
+			is_landless_type_title = no
+			OR = {
+				AND = {
+					tier = baron
+					OR = {
+						is_theocracy = yes
+						government = playable_theocracy_government
+					}
+				}
+				OR = {
+					holder_scope = { is_theocracy = yes }
+					holder_scope = { government = playable_theocracy_government}
+					holder_scope = { government = order_government}
+				}
+			}
+
+			holder_scope = {
+				OR = {
+					religion = catholic
+					religion = fraticelli
+				}
+				is_merchant_republic = no
+				#OR = {
+					#independent = yes
+					###is_feudal = no
+					#NOT = {
+					#	any_liege = {
+					#		holy_order = yes
+					#	}
+					#}
+				#}
+			}
+			is_primary_type_title = no
+			NOT = { holder_scope = { government = confucian_bureaucracy } }
+			NOT = { holder_scope = { government = chinese_imperial_government } }
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = playable_bishopric_succession
+			}
+			elective_voting_rules = playable_bishopric_succession
+		}
+		revoke_allowed = {
+			always = no
 		}
 	}
 
@@ -1188,7 +1269,10 @@ gender_laws = {
 				NOT = { has_religion_feature = religion_feature_bon }
 				OR = {
 					NOT = { tier = BARON }
-					is_theocracy = yes
+					OR = {
+						is_theocracy = yes
+						government = playable_theocracy_government
+					}
 					is_republic = yes
 				}
 				NOT = {
@@ -1240,16 +1324,26 @@ gender_laws = {
 				AND = {
 					tier = BARON
 					is_theocracy = no
+					NOT = { government = playable_theocracy_government }
 					is_republic = no
 				}
 				holder_scope = {
 					is_theocracy = no
+					NOT = { government = playable_theocracy_government }
 				}
 			}
 			is_landless_type_title = no
 			is_primary_type_title = no
 		}
 		allow = {
+			hidden_trigger = {
+				owner = {
+					OR = {
+						ai = no
+						NOT = { has_flag = emf_ai_no_cognatic }
+					}
+				}
+			}
 			OR = {
 				has_law = agnatic_succession
 				has_law = true_cognatic_succession
@@ -1872,7 +1966,7 @@ gender_laws = {
 					OR = {
 						has_religion_feature = religion_matriarchal
 						any_owned_bloodline = {
-							has_bloodline_flag = bloodline_enatic_cognatic 
+							has_bloodline_flag = bloodline_enatic_cognatic
 						}
 						has_landed_title = e_hip
 					}

@@ -90,6 +90,7 @@ decisions = {
 			is_adult = yes
 			NOT = { has_flag = ask_for_indulgence }
 			NOT = { trait = excommunicated }
+			NOT = { has_landed_title = k_papal_state}
 		}
 		allow = {
 			prisoner = no
@@ -124,7 +125,6 @@ decisions = {
 		potential = {
 			is_adult = yes
 			is_playable = yes
-			is_landed = yes
 			OR = {
 				AND = {
 					is_landed = yes
@@ -800,7 +800,7 @@ decisions = {
 			has_dlc = "The Old Gods"
 			OR = {
 				religion = zoroastrian
-				religion = zurvanism
+				religion = zurvanist
 				religion = khurmazta						
 			}
 			is_heretic = no
@@ -1026,6 +1026,7 @@ decisions = {
 
 		potential = {
 			#has_dlc = "Sons of Abraham"
+			is_alternate_start = no
 			independent = yes
 			higher_tier_than = DUKE
 			NOR = {

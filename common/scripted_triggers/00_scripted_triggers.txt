@@ -1634,6 +1634,55 @@ can_be_spymaster_trigger = {
 }
 
 can_be_spiritual_trigger = {
+	OR = {
+		NOT = { government = feudal_government }
+		is_ruler = no
+	}
+
+	OR = {
+		NOT = { government = theocratic_feudal_government }
+		is_ruler = no
+	}
+
+	OR = {
+		NOT = { government = chinese_imperial_government }
+		is_ruler = no
+	}
+
+	OR = {
+		NOT = { government = order_government }
+		is_ruler = no
+	}
+
+	OR = {
+		NOT = { government = roman_imperial_government }
+		is_ruler = no
+	}
+
+	OR = {
+		NOT = { government = nomadic_government }
+		is_ruler = no
+	}
+
+	OR = {
+		NOT = { government = merchant_republic_government }
+		is_ruler = no
+	}
+
+	OR = {
+		NOT = { government = republic_government }
+		is_ruler = no
+	}
+
+	OR = {
+		NOT = { government = confucian_bureaucracy }
+		is_ruler = no
+	}
+
+	OR = {
+		NOT = { government = tribal_government }
+		is_ruler = no
+	}
 	is_adult = yes
 	prisoner = no
 	independent = no
