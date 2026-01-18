@@ -12,10 +12,7 @@ setting_up_saintly_burial_site_effect = {
 deciding_upon_saint_effect = {
     random = {
         chance = 1
-        modifier = {
-			factor = 10000
-			has_character_modifier = PDP_guaranteed_sainthood
-		}
+
 		#Lower chance when there is more Saints around
         modifier = {
             factor = 0.8

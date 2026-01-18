@@ -94,6 +94,7 @@ feudal_governments = {
 				dynasty = 19930
 				is_government_potential = rtp_baron_order_g
 				is_government_potential = rtp_landless_order_g
+				is_government_potential = rtp_landless_mercenary_g
 				is_government_potential = rtp_baron_mercenary_g
 				is_government_potential = rtp_baron_republic_g
 				is_government_potential = rtp_baron_theocracy_g
@@ -177,7 +178,9 @@ feudal_governments = {
 		}
 
 		allowed_holdings = {
-			FAMILY_PALACE
+			CASTLE
+			FORT
+			HOSPITAL
 		}
 
 		accepts_liege_governments = {
@@ -296,7 +299,6 @@ feudal_governments = {
 	#Landless - Adventurer
 	rtp_landless_adventurer_g = {
 		potential = {
-			ai = yes
 			has_game_started = yes
 			is_ruler = yes
 			is_landed = no
@@ -306,6 +308,7 @@ feudal_governments = {
 			NOR = {
 				is_government_potential = rtp_baron_order_g
 				is_government_potential = rtp_landless_order_g
+				is_government_potential = rtp_landless_mercenary_g
 			}
 		}
 
@@ -321,9 +324,7 @@ feudal_governments = {
 		frame_suffix = "_landlessadventurer"
 		capital_move_delay = 600
 	}
-}
-
-theocracy_governments = {
+	
 	#Landless - Theocracy
 	rtp_landless_theocracy_g = {
 		potential = {

@@ -1,19 +1,24 @@
 List of Changes:
 
-Added "More Buildable Wonders"
-sardinian_early aging kid portraits.
-Fixed Witoto, Huave, Panoan, Maipurean, Chukchi, Yukaghir, & Tacanan, etc. female portraits. (Missing noses and mouths). southernativegfx, northeastasiangfx.
-Added "More Pagan Artifacts"
-Added "MTA - New Artifacts"
-Added "WOWGAG's More Artifacts & Bloodlines" [Contains "Historical and Fantastical Artifacts" & "Mythic Artifacts"]
-Localisation for zapotec, yucatecan, mamean, haripunjaya, quichean, and nakh cultures.
-Fixed a Chango dynasty name.
-Localisation for b_golok.
+Updated mnm_artifacts_events & 01_more_artifact_spawns with all African religion groups.
+Fixed wrongly named provinces (Zimbabwe and Rwanda were in China).
+Figured out encodings for accents on characters and restored several.
+Fixed noculture mercenaries.
+Localisation for aztecan_group, kanari, thaton, & tepanec.
+Added traits.
+Localisation for b_chagsam & b_songpan.
+May have made it so slavery laws cannot be changed back and forth at the same time. Tried to add a cooldown.
+Removed "Playable (Dynastic) Theocracy" and its compatchs and submods. Made rtp_landless_theocracy_g playable and change_character to-able.
+You can now switch to any character in the game: mercenaries, holy orders, heads of religion, landless courtiers, etc.
+Fixed midage and old Itelman female portraits.
+Change to completely random character decision added.
+Adding a scripted_effect for adding a completely random artifact from all existing artifacts (still in progress) to the visit marketplace - peddlars decision.
+Adding new religions to scripted effect for repopulating Rise to Power societies (still in progress).
 
 Testing:
 
 Need to test joining the coven (titan_pagan or promethean_pagan) as a male or a gay female.
-%Do tiger hunts still ignore kills by vassals? 2 of 5 tests worked. 1 didn't.
+%Do tiger hunts still ignore kills by vassals?
 Vendetta decision. RTP Intrigue top level ability. Does it add people to my plots or reverse?
 
 To-Do:
@@ -31,10 +36,19 @@ rip_maimed_events.txt has a set of religious sympathies each with special flags,
 
 %Finish adding events from Lux Ultima, last did: HF_warrior_lodge_powers_events.
 %Finish kid portraits from Umbra Sapiens. At: siberiangfx.
-Check Minahasa gfxs. Children have extra ears, harelips, when merged with Tamil. Unfortunatly main is borneangfx, which is already done.
+Children have extra ears and hareips:
+	Harelips: Cham female, Klamath female, 
+	Ears: 
 Give an icon to live to old age ambition. Also have no worries.
-Make landless mercenaries with a titular duchy act like otherwise identical holy orders.
 Chango males may have mismatching headgear fronts and backs.
+Set up appointing heads of religion for reformed-at-start religions.
+Expand society religion new characters in rtp_scripted_effects.
+Do events between hellenic_flavor_events & HF_religious_events. Lost when copied from github.
+Allow Agnatic with same conditions as Enatic, or restrict Enatic to match Agnatic.
+Events not for lowborn:
+	"introduce it at court"'
+	shouldn't be allowed to be council member
+Move Inti marked religions under native_american_group to inti_group.
 
 Artifacts & Wonders Edition:
 

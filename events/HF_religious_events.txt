@@ -7825,23 +7825,23 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { mazdakism = { has_religion_feature = religion_cosmopolitan } }
+			limit = { mazdaki = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
-				limit = { religion = mazdakism }
+				limit = { religion = mazdaki }
 				apply_cosmopolitan_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { zurvanism = { has_religion_feature = religion_cosmopolitan } }
+			limit = { zurvanist = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
-				limit = { religion = zurvanism }
+				limit = { religion = zurvanist }
 				apply_cosmopolitan_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { mani = { has_religion_feature = religion_cosmopolitan } }
+			limit = { manichean = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
-				limit = { religion = mani }
+				limit = { religion = manichean }
 				apply_cosmopolitan_on_start_effect = yes
 			}
 		}
@@ -7853,9 +7853,9 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { yazidism = { has_religion_feature = religion_cosmopolitan } }
+			limit = { yazidi = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
-				limit = { religion = yazidism }
+				limit = { religion = yazidi }
 				apply_cosmopolitan_on_start_effect = yes
 			}
 		}
@@ -8238,23 +8238,23 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { mazdakism = { has_religion_feature = religion_dogmatic } }
+			limit = { mazdaki = { has_religion_feature = religion_dogmatic } }
 			random_playable_ruler = {
-				limit = { religion = mazdakism }
+				limit = { religion = mazdaki }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { zurvanism = { has_religion_feature = religion_dogmatic } }
+			limit = { zurvanist = { has_religion_feature = religion_dogmatic } }
 			random_playable_ruler = {
-				limit = { religion = zurvanism }
+				limit = { religion = zurvanist }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
 			limit = { mani = { has_religion_feature = religion_dogmatic } }
 			random_playable_ruler = {
-				limit = { religion = mani }
+				limit = { religion = manichean }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
@@ -8266,9 +8266,9 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { yazidism = { has_religion_feature = religion_dogmatic } }
+			limit = { yazidi = { has_religion_feature = religion_dogmatic } }
 			random_playable_ruler = {
-				limit = { religion = yazidism }
+				limit = { religion = yazidi }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
@@ -8651,23 +8651,23 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { mazdakism = { has_religion_feature = religion_syncretic_christian } }
+			limit = { mazdaki = { has_religion_feature = religion_syncretic_christian } }
 			random_playable_ruler = {
-				limit = { religion = mazdakism }
+				limit = { religion = mazdaki }
 				apply_syncretic_christian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { zurvanism = { has_religion_feature = religion_syncretic_christian } }
+			limit = { zurvanist = { has_religion_feature = religion_syncretic_christian } }
 			random_playable_ruler = {
-				limit = { religion = zurvanism }
+				limit = { religion = zurvanist }
 				apply_syncretic_christian_on_start_effect = yes
 			}
 		}
 		if = {
 			limit = { mani = { has_religion_feature = religion_syncretic_christian } }
 			random_playable_ruler = {
-				limit = { religion = mani }
+				limit = { religion = manichean }
 				apply_syncretic_christian_on_start_effect = yes
 			}
 		}
@@ -8679,9 +8679,9 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { yazidism = { has_religion_feature = religion_syncretic_christian } }
+			limit = { yazidi = { has_religion_feature = religion_syncretic_christian } }
 			random_playable_ruler = {
-				limit = { religion = yazidism }
+				limit = { religion = yazidi }
 				apply_syncretic_christian_on_start_effect = yes
 			}
 		}
@@ -9064,23 +9064,23 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { mazdakism = { has_religion_feature = religion_syncretic_muslim } }
+			limit = { mazdaki = { has_religion_feature = religion_syncretic_muslim } }
 			random_playable_ruler = {
-				limit = { religion = mazdakism }
+				limit = { religion = mazdaki }
 				apply_syncretic_muslim_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { zurvanism = { has_religion_feature = religion_syncretic_muslim } }
+			limit = { zurvanist = { has_religion_feature = religion_syncretic_muslim } }
 			random_playable_ruler = {
-				limit = { religion = zurvanism }
+				limit = { religion = zurvanist }
 				apply_syncretic_muslim_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { mani = { has_religion_feature = religion_syncretic_muslim } }
+			limit = { manichean = { has_religion_feature = religion_syncretic_muslim } }
 			random_playable_ruler = {
-				limit = { religion = mani }
+				limit = { religion = manichean }
 				apply_syncretic_muslim_on_start_effect = yes
 			}
 		}
@@ -9092,9 +9092,9 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { yazidism = { has_religion_feature = religion_syncretic_muslim } }
+			limit = { yazidi = { has_religion_feature = religion_syncretic_muslim } }
 			random_playable_ruler = {
-				limit = { religion = yazidism }
+				limit = { religion = yazidi }
 				apply_syncretic_muslim_on_start_effect = yes
 			}
 		}
@@ -9477,23 +9477,23 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { mazdakism = { has_religion_feature = religion_syncretic_zoroastrian } }
+			limit = { mazdaki = { has_religion_feature = religion_syncretic_zoroastrian } }
 			random_playable_ruler = {
-				limit = { religion = mazdakism }
+				limit = { religion = mazdaki }
 				apply_syncretic_zoroastrian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { zurvanism = { has_religion_feature = religion_syncretic_zoroastrian } }
+			limit = { zurvanist = { has_religion_feature = religion_syncretic_zoroastrian } }
 			random_playable_ruler = {
-				limit = { religion = zurvanism }
+				limit = { religion = zurvanist }
 				apply_syncretic_zoroastrian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { mani = { has_religion_feature = religion_syncretic_zoroastrian } }
+			limit = { manichean = { has_religion_feature = religion_syncretic_zoroastrian } }
 			random_playable_ruler = {
-				limit = { religion = mani }
+				limit = { religion = manichean }
 				apply_syncretic_zoroastrian_on_start_effect = yes
 			}
 		}
@@ -9505,9 +9505,9 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { yazidism = { has_religion_feature = religion_syncretic_zoroastrian } }
+			limit = { yazidi = { has_religion_feature = religion_syncretic_zoroastrian } }
 			random_playable_ruler = {
-				limit = { religion = yazidism }
+				limit = { religion = yazidi }
 				apply_syncretic_zoroastrian_on_start_effect = yes
 			}
 		}
@@ -9890,23 +9890,23 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { mazdakism = { has_religion_feature = religion_syncretic_indian } }
+			limit = { mazdaki = { has_religion_feature = religion_syncretic_indian } }
 			random_playable_ruler = {
-				limit = { religion = mazdakism }
+				limit = { religion = mazdaki }
 				apply_syncretic_indian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { zurvanism = { has_religion_feature = religion_syncretic_indian } }
+			limit = { zurvanist = { has_religion_feature = religion_syncretic_indian } }
 			random_playable_ruler = {
-				limit = { religion = zurvanism }
+				limit = { religion = zurvanist }
 				apply_syncretic_indian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { mani = { has_religion_feature = religion_syncretic_indian } }
+			limit = { manichean = { has_religion_feature = religion_syncretic_indian } }
 			random_playable_ruler = {
-				limit = { religion = mani }
+				limit = { religion = manichean }
 				apply_syncretic_indian_on_start_effect = yes
 			}
 		}
@@ -9918,9 +9918,9 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { yazidism = { has_religion_feature = religion_syncretic_indian } }
+			limit = { yazidi = { has_religion_feature = religion_syncretic_indian } }
 			random_playable_ruler = {
-				limit = { religion = yazidism }
+				limit = { religion = yazidi }
 				apply_syncretic_indian_on_start_effect = yes
 			}
 		}

@@ -161,24 +161,22 @@ character_event = {
 #Religious Head receives event determining punishment.
 character_event = {
 	id = HFP.23003
-	hide_window = no #Why hide this?
+	hide_window = yes
 	is_triggered_only = yes
-	desc = HFP.23003_desc
-	picture = GFX_evt_knight_kneeling
 	immediate = {
 		random_list = {
 			# Possible impositions:
 
-			#Tiered Money #liftExcommunicationTieredMoney
-			#Tiered Prestige #liftExcommunicationTieredPrestige
-			#Vow of Celibacy #liftExcommunicationCelibacy
-			#Son/Daughter must take vows. #liftExcommunicationSonToChurch
-			#Abdication-> Become Monk/Nun #liftExcommunicationAbdication
-			#Enforce Papal Succession (Kings/Emperors) #liftExcommunicationInvestiture
-			#Change succession to Gavelkind (unless Elective or worse) (King/Emperors) #liftExcommunicationGavelkind
-			#Give Italian lands back (Emperors) #liftExcommunicationItalianLand
-			#Give Independence to Papacy (Emperors) #liftExcommunicationIndependence
-			#Request vassalization (Italian Dukes) #liftExcommunicationVassalization
+			#Tiered Money
+			#Tiered Prestige
+			#Vow of Celibacy
+			#Son/Daughter must take vows.
+			#Abdication-> Become Monk/Nun
+			#Enforce Papal Succession (Kings/Emperors)
+			#Change succession to Gavelkind (unless Elective or worse) (King/Emperors)
+			#Give Italian lands back (Emperors)
+			#Give Independence to Papacy (Emperors)
+			#Request vassalization (Italian Dukes)
 			
 			30 = { #Pay tiered money.
 				modifier = {
@@ -303,12 +301,7 @@ character_event = {
 					factor = 0.5
 					trait = zealous
 				}
-				###PDP
-				set_character_flag = liftExcommunicationTieredMoney
-				if = {
-					limit = {ai = yes}
-					FROM = { letter_event = { id = HFP.23004 } } #Asks for Gold.
-				}
+				FROM = { letter_event = { id = HFP.23004 } } #Asks for Gold.
 			}
 			30 = { #Pay tiered Prestige.
 				trigger = {
@@ -326,12 +319,7 @@ character_event = {
 					factor = 0.5
 					trait = cynical
 				}
-				###PDP
-				set_character_flag = liftExcommunicationTieredPrestige
-				if = {
-					limit = {ai = yes}
-					FROM = { letter_event = { id = HFP.23006 } } #Asks for Prestige.
-				}
+				FROM = { letter_event = { id = HFP.23006 } } #Asks for Prestige.
 			}
 			
 			20 = { #Impose celibacy
@@ -392,12 +380,7 @@ character_event = {
 						who = FROM
 					}
 				}
-				###PDP
-				set_character_flag = liftExcommunicationCelibacy
-				if = {
-					limit = {ai = yes}
-					FROM = { letter_event = { id = HFP.23008 } } #Impose Celibacy.
-				}
+				FROM = { letter_event = { id = HFP.23008 } } #Impose Celibacy.
 			}
 			10 = { #Send Son/Daughter to monastery.
 				trigger = {
@@ -525,12 +508,7 @@ character_event = {
 						who = FROM
 					}
 				}
-				###PDP
-				set_character_flag = liftExcommunicationSonToChurch
-				if = {
-					limit = {ai = yes}
-					FROM = { letter_event = { id = HFP.23010 } } #Send child to monastery/nunnery.
-				}
+				FROM = { letter_event = { id = HFP.23010 } } #Send child to monastery/nunnery.
 			}
 
 			3 = {
@@ -711,12 +689,7 @@ character_event = {
 						who = FROM
 					}
 				}
-				###PDP
-				set_character_flag = liftExcommunicationAbdication
-				if = {
-					limit = {ai = yes}
-					FROM = { letter_event = { id = HFP.23012 } } #Impose abdication.
-				}
+				FROM = { letter_event = { id = HFP.23012 } } #Impose abdication.
 			}
 			30 = { #Impose Papal Investiture.
 				modifier = {
@@ -750,12 +723,7 @@ character_event = {
 						who = FROM
 					}
 				}
-				###PDP
-				set_character_flag = liftExcommunicationInvestiture
-				if = {
-					limit = {ai = yes}
-					FROM = { letter_event = { id = HFP.23014 } } #Impose Papal Investiture.
-				}
+				FROM = { letter_event = { id = HFP.23014 } } #Impose Papal Investiture.
 			}
 			5 = { #Impose Gavelkind
 				trigger = {
@@ -824,12 +792,7 @@ character_event = {
 						who = FROM
 					}
 				}
-				###PDP
-				set_character_flag = liftExcommunicationGavelkind
-				if = {
-					limit = {ai = yes}
-					FROM = { letter_event = { id = HFP.23016 } } #Impose Gavelkind.
-				}
+				FROM = { letter_event = { id = HFP.23016 } } #Impose Gavelkind.
 			}
 			20 = { #Request Italian Lands.
 				trigger = { 
@@ -1075,12 +1038,7 @@ character_event = {
 						who = FROM
 					}
 				}
-				###PDP
-				set_character_flag = liftExcommunicationItalianLand
-				if = {
-					limit = {ai = yes}
-					FROM = { letter_event = { id = HFP.23018 } } #Request Italian lands.
-				}
+				FROM = { letter_event = { id = HFP.23018 } } #Request Italian lands.
 			}
 			60 = {
 				trigger = {
@@ -1184,12 +1142,7 @@ character_event = {
 						who = FROM
 					}
 				}
-				###PDP
-				set_character_flag = liftExcommunicationIndependence
-				if = {
-					limit = {ai = yes}
-					FROM = { letter_event = { id = HFP.23020 } } #I want to be independent.
-				}
+				FROM = { letter_event = { id = HFP.23020 } } #I want to be independent.
 			}
 			10 = { #Requests Vassalization.
 				trigger = {
@@ -1435,147 +1388,9 @@ character_event = {
 						who = FROM
 					}
 				}
-				###PDP
-				set_character_flag = liftExcommunicationVassalization
-				if = {
-					limit = {ai = yes}
-					FROM = { letter_event = { id = HFP.23022 } } #Request Vassalization.
-				}
+				FROM = { letter_event = { id = HFP.23022 } } #Request Vassalization.
 			}
 		}
-	}
-	###PDP
-	#do this for all non default options. Also make it so that it works for the ai again...
-	option = { #ai has no choice
-		name = PDP_lift_excommunication_opt_ai
-		trigger = {
-			ai = yes
-		}
-	}
-	option = {
-		name = NO_AI
-		trigger = {
-			ai = no
-			always = no
-		}
-		character_event = {}
-	}
-	option = {
-		name = PDP_lift_excommunication_opt_gold
-		trigger = {
-			ai = no
-		}
-		FROM = { letter_event = { id = HFP.23004 } } #Asks for Gold.
-	}
-	option = {
-		name = PDP_lift_excommunication_opt_prestige
-		trigger = {
-			ai = no
-		}
-		FROM = { letter_event = { id = HFP.23006 } } #Asks for Prestige.
-	}
-	option = {
-		trigger = {
-			has_character_flag = liftExcommunicationIndependence
-			ai = no
-		}
-		name = PDP_lift_excommunication_opt_independence
-		FROM = { letter_event = { id = HFP.23020 } } #I want to be independent.
-	}
-	option = {
-		trigger = {
-			has_character_flag = liftExcommunicationInvestiture
-			ai = no
-		}
-		name = PDP_lift_excommunication_opt_investiture
-		FROM = { letter_event = { id = HFP.23014 } } #Impose Papal Investiture.
-	}
-	option = {
-		trigger = {
-			has_character_flag = liftExcommunicationItalianLand
-			ai = no
-		}
-		name = PDP_lift_excommunication_opt_italian_land
-		FROM = { letter_event = { id = HFP.23018 } } #Request Italian lands.
-	}
-	option = {
-		trigger = {
-			has_character_flag = liftExcommunicationVassalization
-			ai = no
-		}
-		name = PDP_lift_excommunication_opt_vassalization
-		FROM = { letter_event = { id = HFP.23022 } } #Request Vassalization.
-	}
-	option = {
-		trigger = {
-			has_character_flag = liftExcommunicationAbdication
-			ai = no
-		}
-		name = PDP_lift_excommunication_opt_abdication
-		piety = -200
-		prestige = 100
-		FROM = { letter_event = { id = HFP.23012 } } #Impose abdication.
-	}
-	option = {
-		trigger = {
-			has_character_flag = liftExcommunicationCelibacy
-			ai = no
-		}
-		name = PDP_lift_excommunication_opt_celibacy
-		FROM = { letter_event = { id = HFP.23008 } } #Impose Celibacy.
-	}
-	option = {
-		trigger = {
-			has_character_flag = liftExcommunicationGavelkind
-			ai = no
-		}
-		name = PDP_lift_excommunication_opt_gavelkind
-		FROM = { letter_event = { id = HFP.23016 } } #Impose Gavelkind.
-	}
-	option = {
-		trigger = {
-			OR = {
-				has_character_flag = liftExcommunicationSonToChurch
-				AND = {
-					FROM = {
-						any_child = {
-							count = 3
-							age = 16
-							is_married = no
-							is_ruler = no
-							prisoner = no
-							NOT = { trait = incapable }
-							FROM = {
-								NOT = {
-									current_heir = { character = PREVPREV }
-								}
-							}
-							NOR = {
-								trait = monk
-								trait = nun
-							}
-						}
-					}
-				}
-			}
-			ai = no
-		}
-		name = PDP_lift_excommunication_opt_son_to_church
-		FROM = { letter_event = { id = HFP.23010 } } #Send child to monastery/nunnery.
-	}
-
-
-	after = {
-		clr_character_flag = liftExcommunicationTieredMoney #done
-		clr_character_flag = liftExcommunicationTieredPrestige #done
-		clr_character_flag = liftExcommunicationCelibacy #done
-		clr_character_flag = liftExcommunicationSonToChurch #done
-		clr_character_flag = liftExcommunicationAbdication #done
-		clr_character_flag = liftExcommunicationInvestiture #done
-		clr_character_flag = liftExcommunicationGavelkind #done
-		clr_character_flag = liftExcommunicationItalianLand #done
-		clr_character_flag = liftExcommunicationIndependence #done
-		clr_character_flag = liftExcommunicationVassalization #done
 	}
 }
 

@@ -212,12 +212,7 @@ monastic_order_benedictine = {
 		value = 10
 
 		modifier = {
-			#is_priest = yes
-			###PDP
-			OR = {
-				is_priest = yes
-				PDP_is_theocracy = yes
-			}
+			is_priest = yes
 			factor = 10
 		}
 		modifier = {
@@ -524,12 +519,7 @@ monastic_order_dominican = {
 		value = 10
 
 		modifier = {
-			#is_priest = yes
-			###PDP
-			OR = {
-				is_priest = yes
-				PDP_is_theocracy = yes
-			}
+			is_priest = yes
 			factor = 10
 		}
 		modifier = {

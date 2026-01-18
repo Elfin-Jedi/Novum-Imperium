@@ -31,7 +31,7 @@ k_donatist = {
 		Wiwul Yuba Yugerten Yuften
 	}
 }
-k_mani = {
+k_manichean = {
     color={ 243 209 23 }
     capital = 647 # Merv
 	dignity = 100 # Counted as having this many more counties than it does
@@ -39,13 +39,13 @@ k_mani = {
     title = "ARCHEGOS"
     foa = "ZARATHUSHTROEMA_FOA"
     short_name = yes
-	religion = mani
+	religion = manichean
 
     # Always exists
     landless = yes
     
     # Controls a religion
-    controls_religion = mani
+    controls_religion = manichean
     
     # Cannot be held as a secondary title
     primary = yes
@@ -2818,7 +2818,7 @@ d_mari_christ_reformed = {
 	
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
 }
-# d_mazdakism_reformed = { #Does not have religious head on reformation
+# d_mazdaki_reformed = { #Does not have religious head on reformation
 	# color={ 155 155 235 }
 	# color2={ 220 220 0 }
 	
@@ -2831,7 +2831,7 @@ d_mari_christ_reformed = {
 	
 	# creation_requires_capital = no
 	# allow = {
-		# religion = mazdakism_reformed
+		# religion = mazdaki_reformed
 		# religion_authority = 0.5
 		# num_of_holy_sites = 3
 		# piety = 500
@@ -2845,9 +2845,9 @@ d_mari_christ_reformed = {
 	# dignity = 100 # Counted as having this many more counties than it does
 	
 	# # Controls a religion
-	# controls_religion = mazdakism_reformed
+	# controls_religion = mazdaki_reformed
 	
-	# religion = mazdakism_reformed
+	# religion = mazdaki_reformed
 	
 	# dynasty_title_names = no 	# Will not be named "Seljuk", etc.
 # }
@@ -3914,7 +3914,7 @@ d_zor_angra_reformed = {
 	
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
 }
-d_zurvanism_reformed = {
+d_zurvanist_reformed = {
 	color={ 155 155 235 }
 	color2={ 220 220 0 }
 	
@@ -3928,7 +3928,7 @@ d_zurvanism_reformed = {
 	creation_requires_capital = no
 	
 	allow = {
-		religion = zurvanism_reformed
+		religion = zurvanist_reformed
 		num_of_holy_sites = 1
 		piety = 1000
 		religion_authority = 0.5
@@ -3939,9 +3939,9 @@ d_zurvanism_reformed = {
 	dignity = 100 # Counted as having this many more counties than it does
 	
 	# Controls a religion
-	controls_religion = zurvanism_reformed
+	controls_religion = zurvanist_reformed
 	
-	religion = zurvanism_reformed
+	religion = zurvanist_reformed
 	
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
 }

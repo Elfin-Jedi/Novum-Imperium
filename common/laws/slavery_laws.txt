@@ -38,7 +38,23 @@ de_jure_laws = {
 					has_law = slavery_2
 					has_law = slavery_3
 				}
-			}	
+			}
+			custom_tooltip = {
+				text = slavery_law_change_cooldown
+				owner = {
+					OR = {
+						NOT = { has_flag = slavery_law_cooldown_@PREV }
+						had_flag = { flag = slavery_law_cooldown_@PREV days = 7300 }
+					}
+				}
+			}
+			custom_tooltip = {
+				text = slavery_law_change_cooldown_title
+				OR = {
+					NOT = { has_flag = slavery_law_cooldown }
+					had_flag = { flag = slavery_law_cooldown_days = 3650 }
+				}
+			}
 			holder_scope = {
 				OR = {
 					custom_tooltip = {
@@ -524,7 +540,9 @@ de_jure_laws = {
 				}	
 				revoke_law = slavery_1
 				revoke_law = slavery_2
-				revoke_law = slavery_3				
+				revoke_law = slavery_3
+				clr_flag = slavery_law_cooldown
+				set_flag = slavery_law_cooldown
 			}
 			holder_scope = { clr_character_flag = passive_slave_change }
 		}
@@ -557,6 +575,8 @@ de_jure_laws = {
 				revoke_law = slavery_0
 				revoke_law = slavery_2
 				revoke_law = slavery_3
+				clr_flag = slavery_law_cooldown
+				set_flag = slavery_law_cooldown
 			}
 		}
 	}
@@ -578,7 +598,23 @@ de_jure_laws = {
 					has_law = slavery_1
 					has_law = slavery_3
 				}
-			}	
+			}
+			custom_tooltip = {
+				text = slavery_law_change_cooldown
+				owner = {
+					OR = {
+						NOT = { has_flag = slavery_law_cooldown_@PREV }
+						had_flag = { flag = slavery_law_cooldown_@PREV days = 7300 }
+					}
+				}
+			}
+			custom_tooltip = {
+				text = slavery_law_change_cooldown_title
+				OR = {
+					NOT = { has_flag = slavery_law_cooldown }
+					had_flag = { flag = slavery_law_cooldown_days = 3650 }
+				}
+			}
 			holder_scope = {
 				NOR = {
 					trait = liberator
@@ -1088,6 +1124,8 @@ de_jure_laws = {
 				revoke_law = slavery_1
 				revoke_law = slavery_3
 				holder_scope = { clr_character_flag = passive_slave_change }
+				clr_flag = slavery_law_cooldown
+				set_flag = slavery_law_cooldown
 			}
 			holder_scope = { add_trait = slave_owner }
 		}	
@@ -1110,7 +1148,23 @@ de_jure_laws = {
 					has_law = slavery_1
 					has_law = slavery_2
 				}
-			}	
+			}
+			custom_tooltip = {
+				text = slavery_law_change_cooldown
+				owner = {
+					OR = {
+						NOT = { has_flag = slavery_law_cooldown_@PREV }
+						had_flag = { flag = slavery_law_cooldown_@PREV days = 7300 }
+					}
+				}
+			}
+			custom_tooltip = {
+				text = slavery_law_change_cooldown_title
+				OR = {
+					NOT = { has_flag = slavery_law_cooldown }
+					had_flag = { flag = slavery_law_cooldown_days = 3650 }
+				}
+			}			
 			holder_scope = {
 				OR = {
 					prefers_thralls_trigger = yes
@@ -1605,7 +1659,8 @@ de_jure_laws = {
 				revoke_law = slavery_1
 				revoke_law = slavery_2
 				holder_scope = { clr_character_flag = passive_slave_change }
-				
+				clr_flag = slavery_law_cooldown
+				set_flag = slavery_law_cooldown
 			}			
 			holder_scope = { add_trait = slave_owner }
 		}

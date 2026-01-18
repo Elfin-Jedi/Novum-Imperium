@@ -8422,7 +8422,7 @@ character_event = {
 	trigger = {
 		in_command = no
 		religion_group = zoroastrian_group
-		NOT = { religion = mazdakism } # Mazdakites don't for whatever reason
+		NOT = { religion = mazdaki } # Mazdakites don't for whatever reason
 		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		#NOT = { has_alternate_start_parameter = { key = culture_names value = random } }
 	}

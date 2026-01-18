@@ -4,11 +4,11 @@ decisions = {
 		potential = {
 			ai = no
 			is_ruler = yes
-			religion = mani
+			religion = manichean
 			age = 16
 			demesne_size = 1
 			NOT = { has_character_flag = manichean_alms_giving }
-			is_title_active = k_mani
+			is_title_active = k_manichean
 			rightful_religious_head_scope = {	
 				NOT = {
 					character = ROOT
@@ -52,7 +52,7 @@ decisions = {
 	     ai = no
 	     age = 16
 			OR = {
-				religion = mani
+				religion = manichean
 				religion = mani_mithra
 				religion = mandaean
 				religion = mandaean_reformed
@@ -228,7 +228,7 @@ decisions = {
 			# is_ruler = yes
 			# age = 16
 			# demesne_size = 1
-			# NOT = { is_title_active = k_mani }
+			# NOT = { is_title_active = k_manichean }
 		# }
 		
 		# allow = {

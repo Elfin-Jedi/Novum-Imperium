@@ -2791,7 +2791,7 @@ tlingit_group = {
 		}
 		
 		female_names = {
-			Kaagaxkweix Kaaguneteen Kaatkwaaxsnei Kah-thli-yudt Kanagoo Katie_Catherine Keixwnei Koodeilge "Kudeit saakw" Kut-xoox
+			Kaagaxkweix Kaaguneteen Kaatkwaaxsnei Kah-thli-yudt Kanagoo Katie_Catherine Keixwnei Koodeilge "Kudeit saakw" Kut-xoox
 			Nuwuteiyi
 			"Shax'saani Keek'" Shgagei Sonya
 			Xoon-sel-ut
@@ -2898,7 +2898,7 @@ northwest_coast = {
 			"T'lajung Nung Kingaas" Taan Tahaygen Tanu Thasi "Tl'aagaang Quna" "Tsaa Hamjuuwee" Tsaak Tsahtsaa Tsinni 
 			Wigaanad Wiiaa 
 			Xa Xunts Xuut 
-			Yahguaas Yahl "Yahl Gwaawaas" "Yahl Hinku" "Yahl Kangwaas" "Yahl Naaw" "Yahl Sgoansins"
+			Yahguaas Yahl "Yahl Gwaawaas" "Yahl Hinku" "Yahl Kangwaas" "Yahl Naaw" "Yahl Sgoansins"
 		}
 
 		female_names = {
@@ -2917,7 +2917,7 @@ northwest_coast = {
 			Taan "Taawga Halaa Leyga" Tanu Tsaak Tsahtsaa Tsang 
 			Waawga Wah-Kah-Nee Wewick 
 			Xa Xanj Xhalkuts 
-			Yaahl Yaanans Yahl "Yahl Gwaawaas" "Yahl Hinku" "Yahl Kangwaas" "Yahl Naaw" "Yahl Sgoansins" Yan 
+			Yaahl Yaanans Yahl "Yahl Gwaawaas" "Yahl Hinku" "Yahl Kangwaas" "Yahl Naaw" "Yahl Sgoansins" Yan 
 		}
 
 		
@@ -3388,7 +3388,7 @@ tanoan_group = {
 			Quetahtsay 
 			Dohasan Doha Deahhohe Deasah
 			Haungooah Hovekah Hawanhay Hekito 
-			Guipahgho Guipahgah  "Guika'ti"
+			Guipahgho Guipahgah  "Guik̉a'ti"
 			"Mamanti" "Mamaydayte" Marmocarwer
 			"K'yabeen" "K'yaitah" "Kokoytaudle" Kahhano Kahdecoah Kiddawdy Kawaua Kasteah
 			Kiddahwaddy Kaukeastoas Kiwdewcusekits Kiokatiskedah Kahwiddis Kitsteddywats
@@ -4675,6 +4675,53 @@ iroquoian = {
 			Tyonajanegen Alliquippa Konwatsitiaienni Genessee Satekon Tekakwitha
 			Taima Chekaqua Kataka Mecaitch Neshota Chagasort Pecama Namachewana Nanochaatasa Taimah Catchemackeseo
 			Tyonajanegen Alliquippa Konwatsitiaienni Genessee Satekon Tekakwitha 
+		}
+
+		from_dynasty_prefix = ""
+		dynasty_title_names = yes
+		horde = yes
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+
+		pat_grf_name_chance = 50
+
+		mat_grf_name_chance = 0
+		
+        father_name_chance = 0
+
+
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+
+		pat_grm_name_chance = 20
+		mat_grm_name_chance = 20
+
+		mother_name_chance = 0
+
+
+		modifier = default_culture_modifier
+
+	}
+	
+	tanoan = {
+
+		graphical_cultures = { plainsgfx northernnativegfx mongolgfx muslimgfx }
+
+		color = { 0.61 0.12 0.24 }
+
+		male_names = {
+			Sequoyah Attakullaculla Guwisguwi Moytoy Yonaguska Tsiyu Gansini Agi It Boudinot Lach'n Koatohee 
+			Scholauetta Tuskegatahu Ooskwha Kolakusta Newota Konatota Tuckasee Toostaka Untoola Unsuokanail 
+			Chonosta Chescoonwho Chesetoa Chesecotetona Sketaloska Chokasatahe Onanoota Ookoseta Umatooetha 
+			Necatee Amokontakona Kowetatahee Keukuck Tulatiska Wooaluka Tatliusta Skeleak Akonoluchta Cheanoka 
+			Ostaiah Oortlokecteh Chockonnistaller Noothoietah Kunnateelah Utturah Weelee Oolassoteh Tlorene 
+			Jonnurteekee Oonatakoteekee Kanowsurhee Yonah Oolah Tunksalenee Oorkullaukee Kumamah Chattakuteehee 
+			Kettegiskie Tauuotihee Chuquilataque Salleekookoolah Tallotuskee Chellokee Tuskeegatee Neekaanneah 
+			Kulsateehee Keetakeuskah Akooh Sawanooekee Yonahequah Keenahkunnah Kaweesoolaskee Teekalohenah 
+			Chochuchee Kostayeak Ookouseteeh Kanitta Nemetuah Wyuka Tulco
+		}
+		female_names = {
+			Asmita Nanyehi Cuhtahlatah Sequoya Adsila Amadahy Awenasa Awinita Ayita Galilahi Leotie Usdi Galilani Hialeah 
+			Immookalee Tayanita Sequoia Ahyoka Ama Galilani Ghigau Hiawassee Immokalee Inola Knasgowa Nanye-hi Ninovan 
+			Salali Tsistunagiska Tsula Tayanita Yona
 		}
 
 		from_dynasty_prefix = ""
@@ -6801,7 +6848,7 @@ tupi = {
 			Bishnud Birigui Bage Baependi Bacuara 
 			Cauan Caue Chavuku Caiua Caiubi Caninde Carioca Caramuru Cayres Cabuçu
 			Goias Guaracy Grajau Goias Guarani Guazi Cajuru
-			Ibere Itibere_Ibere Irae Iguacu Iguatemi Itapoan Iba Ipupiara
+			Ibere Itibere_Ibere Irae Iguaçu Iguatemi Itapoan Iba Ipupiara
 			Lacirandy
 			Jacy Juracy Juruna Jakaira Jurandir Jandir Jaboatao Jacicoe
 			Kauan Kawahib Karai Katupyry Kuarahy Kuarahyrese "Ka'akupe"
@@ -6879,7 +6926,7 @@ tupi = {
 			Bishnud Birigui Bage Baependi Bacuara 
 			Cauan Caue Chavuku Caiua Caiubi Caninde Carioca Caramuru Cayres Cabuçu
 			Goias Guaracy Grajau Goias Guarani Guazi Cajuru
-			Ibere Itibere_Ibere Irae Iguacu Iguatemi Itapoan Iba Ipupiara
+			Ibere Itibere_Ibere Irae Iguaçu Iguatemi Itapoan Iba Ipupiara
 			Lacirandy
 			Jacy Juracy Juruna Jakaira Jurandir Jandir Jaboatao Jacicoe
 			Kauan Kawahib Karai Katupyry Kuarahy Kuarahyrese "Ka'akupe"
@@ -6961,7 +7008,7 @@ bororo_group = {
 			Bishnud Birigui Bage Baependi Bacuara 
 			Cauan Caue Chavuku Caiua Caiubi Caninde Carioca Caramuru Cayres Cabuçu
 			Goias Guaracy Grajau Goias Guarani Guazi Cajuru
-			Ibere Itibere_Ibere Irae Iguacu Iguatemi Itapoan Iba Ipupiara
+			Ibere Itibere_Ibere Irae Iguaçu Iguatemi Itapoan Iba Ipupiara
 			Lacirandy
 			Jacy Juracy Juruna Jakaira Jurandir Jandir Jaboatao Jacicoe
 			Kauan Kawahib Karai Katupyry Kuarahy Kuarahyrese "Ka'akupe"
@@ -7043,7 +7090,7 @@ je = {
 			Bishnud Birigui Bage Baependi Bacuara 
 			Cauan Caue Chavuku Caiua Caiubi Caninde Carioca Caramuru Cayres Cabuçu
 			Goias Guaracy Grajau Goias Guarani Guazi Cajuru
-			Ibere Itibere_Ibere Irae Iguacu Iguatemi Itapoan Iba Ipupiara
+			Ibere Itibere_Ibere Irae Iguaçu Iguatemi Itapoan Iba Ipupiara
 			Lacirandy
 			Jacy Juracy Juruna Jakaira Jurandir Jandir Jaboatao Jacicoe
 			Kauan Kawahib Karai Katupyry Kuarahy Kuarahyrese "Ka'akupe"
@@ -7125,7 +7172,7 @@ kanamari_group = {
 			Bishnud Birigui Bage Baependi Bacuara 
 			Cauan Caue Chavuku Caiua Caiubi Caninde Carioca Caramuru Cayres Cabuçu
 			Goias Guaracy Grajau Goias Guarani Guazi Cajuru
-			Ibere Itibere_Ibere Irae Iguacu Iguatemi Itapoan Iba Ipupiara
+			Ibere Itibere_Ibere Irae Iguaçu Iguatemi Itapoan Iba Ipupiara
 			Lacirandy
 			Jacy Juracy Juruna Jakaira Jurandir Jandir Jaboatao Jacicoe
 			Kauan Kawahib Karai Katupyry Kuarahy Kuarahyrese "Ka'akupe"
@@ -7207,7 +7254,7 @@ witoto_group = {
 			Bishnud Birigui Bage Baependi Bacuara 
 			Cauan Caue Chavuku Caiua Caiubi Caninde Carioca Caramuru Cayres Cabuçu
 			Goias Guaracy Grajau Goias Guarani Guazi Cajuru
-			Ibere Itibere_Ibere Irae Iguacu Iguatemi Itapoan Iba Ipupiara
+			Ibere Itibere_Ibere Irae Iguaçu Iguatemi Itapoan Iba Ipupiara
 			Lacirandy
 			Jacy Juracy Juruna Jakaira Jurandir Jandir Jaboatao Jacicoe
 			Kauan Kawahib Karai Katupyry Kuarahy Kuarahyrese "Ka'akupe"
@@ -7289,7 +7336,7 @@ panoan_group = {
 			Bishnud Birigui Bage Baependi Bacuara 
 			Cauan Caue Chavuku Caiua Caiubi Caninde Carioca Caramuru Cayres Cabuçu
 			Guaracy Grajau Goias Guarani Guazi Cajuru
-			Ibere Itibere_Ibere Irae Iguacu Iguatemi Itapoan Iba Ipupiara
+			Ibere Itibere_Ibere Irae Iguaçu Iguatemi Itapoan Iba Ipupiara
 			Lacirandy
 			Jacy Juracy Juruna Jakaira Jurandir Jandir Jaboatao Jacicoe
 			Kauan Kawahib Karai Katupyry Kuarahy Kuarahyrese "Ka'akupe"
@@ -7367,7 +7414,7 @@ panoan_group = {
 			Bishnud Birigui Bage Baependi Bacuara 
 			Cauan Caue Chavuku Caiua Caiubi Caninde Carioca Caramuru Cayres Cabuçu
 			Goias Guaracy Grajau Goias Guarani Guazi Cajuru
-			Ibere Itibere_Ibere Irae Iguacu Iguatemi Itapoan Iba Ipupiara
+			Ibere Itibere_Ibere Irae Iguaçu Iguatemi Itapoan Iba Ipupiara
 			Lacirandy
 			Jacy Juracy Juruna Jakaira Jurandir Jandir Jaboatao Jacicoe
 			Kauan Kawahib Karai Katupyry Kuarahy Kuarahyrese "Ka'akupe"
@@ -7448,7 +7495,7 @@ graphical_cultures = { westafricangfx africangfx muslimgfx }
 			Bishnud Birigui Bage Baependi Bacuara 
 			Cauan Caue Chavuku Caiua Caiubi Caninde Carioca Caramuru Cayres Cabuçu
 			Goias Guaracy Grajau Goias Guarani Guazi Cajuru
-			Ibere Itibere_Ibere Irae Iguacu Iguatemi Itapoan Iba Ipupiara
+			Ibere Itibere_Ibere Irae Iguaçu Iguatemi Itapoan Iba Ipupiara
 			Lacirandy
 			Jacy Juracy Juruna Jakaira Jurandir Jandir Jaboatao Jacicoe
 			Kauan Kawahib Karai Katupyry Kuarahy Kuarahyrese "Ka'akupe"
@@ -7529,7 +7576,7 @@ graphical_cultures = { westafricangfx africangfx muslimgfx }
 			Bishnud Birigui Bage Baependi Bacuara 
 			Cauan Caue Chavuku Caiua Caiubi Caninde Carioca Caramuru Cayres Cabuçu
 			Goias Guaracy Grajau Goias Guarani Guazi Cajuru
-			Ibere Itibere_Ibere Irae Iguacu Iguatemi Itapoan Iba Ipupiara
+			Ibere Itibere_Ibere Irae Iguaçu Iguatemi Itapoan Iba Ipupiara
 			Lacirandy
 			Jacy Juracy Juruna Jakaira Jurandir Jandir Jaboatao Jacicoe
 			Kauan Kawahib Karai Katupyry Kuarahy Kuarahyrese "Ka'akupe"
@@ -7610,7 +7657,7 @@ paez_group = {
 			Bishnud Birigui Bage Baependi Bacuara 
 			Cauan Caue Chavuku Caiua Caiubi Caninde Carioca Caramuru Cayres Cabuçu
 			Goias Guaracy Grajau Goias Guarani Guazi Cajuru
-			Ibere Itibere_Ibere Irae Iguacu Iguatemi Itapoan Iba Ipupiara
+			Ibere Itibere_Ibere Irae Iguaçu Iguatemi Itapoan Iba Ipupiara
 			Lacirandy
 			Jacy Juracy Juruna Jakaira Jurandir Jandir Jaboatao Jacicoe
 			Kauan Kawahib Karai Katupyry Kuarahy Kuarahyrese "Ka'akupe"
@@ -7691,7 +7738,7 @@ zaparoan_group = {
 			Bishnud Birigui Bage Baependi Bacuara 
 			Cauan Caue Chavuku Caiua Caiubi Caninde Carioca Caramuru Cayres Cabuçu
 			Goias Guaracy Grajau Goias Guarani Guazi Cajuru
-			Ibere Itibere_Ibere Irae Iguacu Iguatemi Itapoan Iba Ipupiara
+			Ibere Itibere_Ibere Irae Iguaçu Iguatemi Itapoan Iba Ipupiara
 			Lacirandy
 			Jacy Juracy Juruna Jakaira Jurandir Jandir Jaboatao Jacicoe
 			Kauan Kawahib Karai Katupyry Kuarahy Kuarahyrese "Ka'akupe"
@@ -7772,7 +7819,7 @@ graphical_cultures = { mongolgfx muslimgfx }
 			Bishnud Birigui Bage Baependi Bacuara 
 			Cauan Caue Chavuku Caiua Caiubi Caninde Carioca Caramuru Cayres Cabuçu
 			Goias Guaracy Grajau Goias Guarani Guazi Cajuru
-			Ibere Itibere_Ibere Irae Iguacu Iguatemi Itapoan Iba Ipupiara
+			Ibere Itibere_Ibere Irae Iguaçu Iguatemi Itapoan Iba Ipupiara
 			Lacirandy
 			Jacy Juracy Juruna Jakaira Jurandir Jandir Jaboatao Jacicoe
 			Kauan Kawahib Karai Katupyry Kuarahy Kuarahyrese "Ka'akupe"
@@ -7970,7 +8017,7 @@ waikuruan_group = {
 			Bishnud Birigui Bage Baependi Bacuara 
 			Cauan Caue Chavuku Caiua Caiubi Caninde Carioca Caramuru Cayres Cabuçu
 			Goias Guaracy Grajau Goias Guarani Guazi Cajuru
-			Ibere Itibere_Ibere Irae Iguacu Iguatemi Itapoan Iba Ipupiara
+			Ibere Itibere_Ibere Irae Iguaçu Iguatemi Itapoan Iba Ipupiara
 			Lacirandy
 			Jacy Juracy Juruna Jakaira Jurandir Jandir Jaboatao Jacicoe
 			Kauan Kawahib Karai Katupyry Kuarahy Kuarahyrese "Ka'akupe"
@@ -8048,7 +8095,7 @@ waikuruan_group = {
 			Bishnud Birigui Bage Baependi Bacuara 
 			Cauan Caue Chavuku Caiua Caiubi Caninde Carioca Caramuru Cayres Cabuçu
 			Goias Guaracy Grajau Goias Guarani Guazi Cajuru
-			Ibere Itibere_Ibere Irae Iguacu Iguatemi Itapoan Iba Ipupiara
+			Ibere Itibere_Ibere Irae Iguaçu Iguatemi Itapoan Iba Ipupiara
 			Lacirandy
 			Jacy Juracy Juruna Jakaira Jurandir Jandir Jaboatao Jacicoe
 			Kauan Kawahib Karai Katupyry Kuarahy Kuarahyrese "Ka'akupe"
@@ -8128,7 +8175,7 @@ zamucoan_group = {
 			Bishnud Birigui Bage Baependi Bacuara 
 			Cauan Caue Chavuku Caiua Caiubi Caninde Carioca Caramuru Cayres Cabuçu
 			Goias Guaracy Grajau Goias Guarani Guazi Cajuru
-			Ibere Itibere_Ibere Irae Iguacu Iguatemi Itapoan Iba Ipupiara
+			Ibere Itibere_Ibere Irae Iguaçu Iguatemi Itapoan Iba Ipupiara
 			Lacirandy
 			Jacy Juracy Juruna Jakaira Jurandir Jandir Jaboatao Jacicoe
 			Kauan Kawahib Karai Katupyry Kuarahy Kuarahyrese "Ka'akupe"

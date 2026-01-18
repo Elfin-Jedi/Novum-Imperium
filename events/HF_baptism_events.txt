@@ -10297,7 +10297,6 @@ character_event = {
 				hidden_tooltip = { add_trait = baptized_by_pope }
 				clr_character_flag = flag_baptized_by_pope
 				event_target:scoped_pope = {
-					character_event = {id = PDPHF.1 days = 0}
 					show_scope_change = no
 					opinion = {
 						modifier = opinion_baptized

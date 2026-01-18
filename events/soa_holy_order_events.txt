@@ -4655,14 +4655,14 @@ narrative_event = {
 				has_global_flag = zoroastrian_priesthood_founded
 				OR = {
 					religion = zoroastrian
-					religion = zurvanism
+					religion = zurvanist
 					religion = khurmazta						
 				}
 				is_heretic = no
 			}
 			AND = {
 				has_global_flag = mazdaki_priesthood_founded		
-				religion = mazdakism
+				religion = mazdaki
 			}
 		}
 	}

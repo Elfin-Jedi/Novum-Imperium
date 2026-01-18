@@ -42,7 +42,9 @@ rtp_is_landless = {
 rtp_is_mercenary = {
 	OR = {
 		has_character_flag = rtp_mercenary #This guy is a mercenary
+		mercenary = yes
 		government = mercenary_government
+		government = rtp_mercenary_g
 		government = rtp_baron_mercenary_g
 		government = rtp_landless_mercenary_g
 	}

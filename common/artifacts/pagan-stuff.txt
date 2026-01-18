@@ -90,8 +90,11 @@ ekwensu_mask = {
 	defensive_plot_power_modifier = 0.25
 	active = {
 		OR = {
+			religion_group = east_african_group
+			religion_group = bantu_group
 			religion_group = serer_group
-			religion_group = african_group 
+			religion_group = african_pagan_group
+			religion_group = african_group
 		}
 	}
 	quality = 5
@@ -114,8 +117,11 @@ shango_staff = {
 	vassal_limit = 10
 	active = {
 		OR = {
+			religion_group = east_african_group
+			religion_group = bantu_group
 			religion_group = serer_group
-			religion_group = african_group 
+			religion_group = african_pagan_group
+			religion_group = african_group
 		}
 	}
 	quality = 5

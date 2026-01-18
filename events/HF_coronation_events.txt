@@ -29,17 +29,7 @@ character_event = {
 		}
 		religion_head = { show_portrait = THIS }
 		custom_tooltip = { text = EVTTOOLTIPHF20201 }
-		hidden_tooltip = {
-			religion_head = {
-				if = {
-					limit = {ai = yes}
-					letter_event = { id = HF.20201 days = 30 random = 5 }
-				}
-				else = {
-					character_event = { id = PDPHF.200 days = 30 random = 5 } #ask the player what he wants...
-				}
-			}
-		}
+		hidden_tooltip = { religion_head = { letter_event = { id = HF.20201 days = 30 random = 5 } } }
 		ai_chance = {
 			factor = 70
 			modifier = {
@@ -464,7 +454,6 @@ letter_event = {
 	id = HF.20201
 	desc = EVTDESCHFA20201
 	border = GFX_event_letter_frame_religion
-	hide_window = yes #maybe hiding it is better than showing this stupid option.
 	religion_group = christian
 
 	is_triggered_only = yes
@@ -1910,7 +1899,6 @@ letter_event = {
 						}
 						OR = {
 							excommunicated_for = ROOT
-							NOT = { religion = ROOT }
 							AND = {
 								is_theocracy = no
 								NOT = {
@@ -6373,11 +6361,7 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 
 	is_triggered_only = yes
-	immediate = {
-		FROMFROM = { #inform the priest / pope! he's got to have some fun too.
-			character_event = {id = PDPHF.10 days = 0}
-		}
-	}
+	
 	option = {
 		name = EVTOPTAHF20236
 		custom_tooltip = { text = papal_orgy_drunk }
@@ -6621,7 +6605,7 @@ character_event = {
 		tiered_piety_negative_effect = yes
 		hidden_tooltip = {
 			FROMFROMFROM = {
-				character_event = {id = PDPHF.11 days = 0}
+				save_event_target_as = sex_partner
 			}
 			unprotected_sex_effect_event_target = yes
 		}
@@ -11467,9 +11451,6 @@ character_event = {
 		}
 		#Notify all guests, then conclude the ceremony.
 		hidden_tooltip = {
-			event_target:coronation_priest = {
-				character_event = {id = PDPHF.21 days = 0}
-			}
 			character_event = { id = HF.20371 } #Self-Coronation scandal.
 			character_event = { id = HF.20369 days = 3 random = 3 } #wrap up, clear all flags.
 			any_vassal = {
@@ -11575,9 +11556,6 @@ character_event = {
 		}
 		#Notify all guests, then conclude the ceremony.
 		hidden_tooltip = {
-			event_target:coronation_priest = {
-				character_event = {id = PDPHF.20 days = 0}
-			}
 			character_event = { id = HF.20369 days = 3 random = 3 } #wrap up, clear all flags.
 			any_vassal = {
 				limit = {
@@ -12461,32 +12439,112 @@ character_event = {
 				}
 				modifier = {
 					factor = 0
-					spouse = {
-						NOR = { 
-							religion = catholic
-							religion = fraticelli
+					NOT = {
+						any_spouse = { 
+							OR = { 
+								religion = catholic
+								religion = fraticelli
+							}
 						}
 					}
 				}
 				modifier = {
 					factor = 1.75
-					spouse = {
+					any_spouse = {
+						OR = { 
+							religion = catholic
+							religion = fraticelli
+						}
 						trait = wroth
 					}
 				}
-				modifier = {
+				modifier = { 
 					factor = 1.75
-					spouse = {
+					any_spouse = {
+						OR = { 
+							religion = catholic
+							religion = fraticelli
+						}
 						emf_is_crowned = yes
 					}
 				}
-				modifier = {
+				modifier = { 
 					factor = 1.5
-					spouse = {
+					any_spouse = {
+						OR = { 
+							religion = catholic
+							religion = fraticelli
+						}
 						higher_real_tier_than = ROOT
 					}
 				}
-				character_event = { id = HF.20378 days = 100 random = 100 } #Spouse is upset.
+				random_spouse = {
+					limit = {
+						OR = { 
+							religion = catholic
+							religion = fraticelli
+						}
+					}
+					preferred_limit = {
+						is_main_spouse = yes
+						higher_real_tier_than = ROOT
+						trait = wroth
+						emf_is_crowned = yes
+					}
+					preferred_limit = {
+						higher_real_tier_than = ROOT
+						trait = wroth
+						emf_is_crowned = yes
+					}
+					preferred_limit = {
+						is_main_spouse = yes
+						trait = wroth
+						emf_is_crowned = yes
+					}
+					preferred_limit = {
+						trait = wroth
+						emf_is_crowned = yes
+					}
+					preferred_limit = {
+						is_main_spouse = yes
+						higher_real_tier_than = ROOT
+						OR = {
+							trait = wroth
+							emf_is_crowned = yes
+						}
+					}
+					preferred_limit = {
+						higher_real_tier_than = ROOT
+						OR = {
+							trait = wroth
+							emf_is_crowned = yes
+						}
+					}
+					preferred_limit = {
+						is_main_spouse = yes
+						OR = {
+							trait = wroth
+							emf_is_crowned = yes
+						}
+					}
+					preferred_limit = {
+						OR = {
+							trait = wroth
+							emf_is_crowned = yes
+						}
+					}
+					preferred_limit = {
+						is_main_spouse = yes
+						higher_real_tier_than = ROOT
+					}
+					preferred_limit = {
+						higher_real_tier_than = ROOT
+					}
+					preferred_limit = {
+						is_main_spouse = yes
+					}
+					character_event = { id = HF.20378 days = 100 random = 100 } #Spouse is upset.
+				}
 			}
 			20 = {
 				modifier = {
@@ -14482,208 +14540,177 @@ character_event = {
 
 	immediate = {
 		if = {
-			limit = {
-				emf_has_hre = yes
-				any_artifact = { artifact_type = crown_hre }
+			limit = { emf_has_hre = yes }
+			event_target:transfer_hre_crown = {
+				artifact_owner = {
+					PREV = {
+						transfer_artifact = {
+							from = PREV
+							to = ROOT
+						}
+					}
+				}
 			}
-			e_hre = {
-				current_heir = { save_event_target_as = worthy_hre_crown }
-			}
-			e_hre_french = {
-				current_heir = { save_event_target_as = worthy_hre_crown }
-			}
-			player_heir = { save_event_target_as = unworthy_hre_crown }
-			any_artifact = {
-				limit = { artifact_type = crown_hre }
-				save_event_target_as = inheriting_artifact_1
-			}
-			current_heir = { character_event = { id = HF.20407 days = 1 } }
 		}
 		if = {
-			limit = {
-				emf_has_roman_empire = yes
-				any_artifact = { artifact_type = crown_byzantine }
+			limit = { emf_has_roman_empire = yes }
+			event_target:transfer_byz_crown = {
+				artifact_owner = {
+					PREV = {
+						transfer_artifact = {
+							from = PREV
+							to = ROOT
+						}
+					}
+				}
 			}
-			e_byzantium = {
-				current_heir = { save_event_target_as = worthy_byz_crown }
-			}
-			e_roman_empire = {
-				current_heir = { save_event_target_as = worthy_byz_crown }
-			}
-			player_heir = { save_event_target_as = unworthy_byz_crown }
-			any_artifact = {
-				limit = { artifact_type = crown_byzantine }
-				save_event_target_as = inheriting_artifact_2
-			}
-			current_heir = { character_event = { id = HF.20407 days = 1 } }
 		}
 		if = {
-			limit = {
-				has_landed_title = d_norse_pagan_reformed
-				any_artifact = { artifact_type = crown_fylkir }
+			limit = { has_landed_title = d_norse_pagan_reformed }
+			event_target:transfer_fylkir_crown = {
+				artifact_owner = {
+					PREV = {
+						transfer_artifact = {
+							from = PREV
+							to = ROOT
+						}
+					}
+				}
 			}
-			d_norse_pagan_reformed = {
-				current_heir = { save_event_target_as = worthy_fylkir_crown }
-			}
-			player_heir = { save_event_target_as = unworthy_fylkir_crown }
-			any_artifact = {
-				limit = { artifact_type = crown_fylkir }
-				save_event_target_as = inheriting_artifact_3
-			}
-			current_heir = { character_event = { id = HF.20407 days = 1 } }
 		}
 		if = {
-			limit = {
-				has_landed_title = d_tengri_pagan_reformed
-				any_artifact = { artifact_type = crown_tengri_fylkir }
+			limit = { has_landed_title = d_tengri_pagan_reformed }
+			event_target:transfer_tengri_fylkir_crown = {
+				artifact_owner = {
+					PREV = {
+						transfer_artifact = {
+							from = PREV
+							to = ROOT
+						}
+					}
+				}
 			}
-			d_tengri_pagan_reformed = {
-				current_heir = { save_event_target_as = worthy_tengri_fylkir_crown }
-			}
-			player_heir = { save_event_target_as = unworthy_tengri_fylkir_crown }
-			any_artifact = {
-				limit = { artifact_type = crown_tengri_fylkir }
-				save_event_target_as = inheriting_artifact_tengricrown
-			}
-			current_heir = { character_event = { id = HF.20407 days = 1 } }
 		}
 		if = {
-			limit = {
-				has_landed_title = d_finnish_pagan_reformed
-				any_artifact = { artifact_type = crown_finnish_fylkir }
+			limit = { has_landed_title = d_finnish_pagan_reformed }
+			event_target:transfer_finnish_fylkir_crown = {
+				artifact_owner = {
+					PREV = {
+						transfer_artifact = {
+							from = PREV
+							to = ROOT
+						}
+					}
+				}
 			}
-			d_finnish_pagan_reformed = {
-				current_heir = { save_event_target_as = worthy_finnish_fylkir_crown }
-			}
-			player_heir = { save_event_target_as = unworthy_finnish_fylkir_crown }
-			any_artifact = {
-				limit = { artifact_type = crown_finnish_fylkir }
-				save_event_target_as = inheriting_artifact_finnishcrown
-			}
-			current_heir = { character_event = { id = HF.20407 days = 1 } }
 		}
 		if = {
-			limit = {
-				has_landed_title = d_west_african_pagan_reformed
-				any_artifact = { artifact_type = crown_west_african_fylkir }
+			limit = { has_landed_title = d_west_african_pagan_reformed }
+			event_target:transfer_west_african_fylkir_crown = {
+				artifact_owner = {
+					PREV = {
+						transfer_artifact = {
+							from = PREV
+							to = ROOT
+						}
+					}
+				}
 			}
-			d_west_african_pagan_reformed = {
-				current_heir = { save_event_target_as = worthy_west_african_fylkir_crown }
-			}
-			player_heir = { save_event_target_as = unworthy_west_african_fylkir_crown }
-			any_artifact = {
-				limit = { artifact_type = crown_west_african_fylkir }
-				save_event_target_as = inheriting_artifact_west_africancrown
-			}
-			current_heir = { character_event = { id = HF.20407 days = 1 } }
 		}
 		if = {
-			limit = {
-				has_landed_title = d_slavic_pagan_reformed
-				any_artifact = { artifact_type = crown_slavic_fylkir }
+			limit = { has_landed_title = d_slavic_pagan_reformed }
+			event_target:transfer_slavic_fylkir_crown = {
+				artifact_owner = {
+					PREV = {
+						transfer_artifact = {
+							from = PREV
+							to = ROOT
+						}
+					}
+				}
 			}
-			d_slavic_pagan_reformed = {
-				current_heir = { save_event_target_as = worthy_slavic_fylkir_crown }
-			}
-			player_heir = { save_event_target_as = unworthy_slavic_fylkir_crown }
-			any_artifact = {
-				limit = { artifact_type = crown_slavic_fylkir }
-				save_event_target_as = inheriting_artifact_slaviccrown
-			}
-			current_heir = { character_event = { id = HF.20407 days = 1 } }
 		}
 		if = {
-			limit = {
-				has_landed_title = d_baltic_pagan_reformed
-				any_artifact = { artifact_type = crown_romuva_fylkir }
+			limit = { has_landed_title = d_baltic_pagan_reformed }
+			event_target:transfer_romuva_fylkir_crown = {
+				artifact_owner = {
+					PREV = {
+						transfer_artifact = {
+							from = PREV
+							to = ROOT
+						}
+					}
+				}
 			}
-			d_baltic_pagan_reformed = {
-				current_heir = { save_event_target_as = worthy_baltic_fylkir_crown }
-			}
-			player_heir = { save_event_target_as = unworthy_baltic_fylkir_crown }
-			any_artifact = {
-				limit = { artifact_type = crown_romuva_fylkir }
-				save_event_target_as = inheriting_artifact_balticcrown
-			}
-			current_heir = { character_event = { id = HF.20407 days = 1 } }
 		}
 		if = {
-			limit = {
-				has_landed_title = d_bon_reformed
-				any_artifact = { artifact_type = scepter_bon_fylkir }
+			limit = { has_landed_title = d_bon_reformed }
+			event_target:transfer_bon_fylkir_scepter = {
+				artifact_owner = {
+					PREV = {
+						transfer_artifact = {
+							from = PREV
+							to = ROOT
+						}
+					}
+				}
 			}
-			d_bon_reformed = {
-				current_heir = { save_event_target_as = worthy_bon_fylkir_crown }
-			}
-			player_heir = { save_event_target_as = unworthy_bon_fylkir_crown }
-			any_artifact = {
-				limit = { artifact_type = scepter_bon_fylkir }
-				save_event_target_as = inheriting_artifact_boncrown
-			}
-			current_heir = { character_event = { id = HF.20407 days = 1 } }
 		}
 		if = {
-			limit = {
-				has_landed_title = d_zun_pagan_reformed
-				any_artifact = { artifact_type = crown_zun_fylkir }
+			limit = { has_landed_title = d_zun_pagan_reformed }
+			event_target:transfer_zun_fylkir_crown = {
+				artifact_owner = {
+					PREV = {
+						transfer_artifact = {
+							from = PREV
+							to = ROOT
+						}
+					}
+				}
 			}
-			d_zun_pagan_reformed = {
-				current_heir = { save_event_target_as = worthy_zun_fylkir_crown }
-			}
-			player_heir = { save_event_target_as = unworthy_zun_fylkir_crown }
-			any_artifact = {
-				limit = { artifact_type = crown_zun_fylkir }
-				save_event_target_as = inheriting_artifact_zuncrown
-			}
-			current_heir = { character_event = { id = HF.20407 days = 1 } }
 		}
 		if = {
-			limit = {
-				has_landed_title = k_hellenic_pagan
-				any_artifact = { artifact_type = scepter_hellenic_fylkir }
+			limit = { has_landed_title = k_hellenic_pagan }
+			event_target:transfer_hellenic_fylkir_scepter = {
+				artifact_owner = {
+					PREV = {
+						transfer_artifact = {
+							from = PREV
+							to = ROOT
+						}
+					}
+				}
 			}
-			k_hellenic_pagan = {
-				current_heir = { save_event_target_as = worthy_hellenic_fylkir_crown }
-			}
-			player_heir = { save_event_target_as = unworthy_hellenic_fylkir_crown }
-			any_artifact = {
-				limit = { artifact_type = scepter_hellenic_fylkir }
-				save_event_target_as = inheriting_artifact_helleniccrown
-			}
-			current_heir = { character_event = { id = HF.20407 days = 1 } }
 		}
 		if = {
-			limit = {
-				has_landed_title = d_aztec_reformed
-				any_artifact = { artifact_type = crown_aztec_fylkir }
+			limit = { has_landed_title = d_aztec_reformed }
+			event_target:transfer_aztec_fylkir_crown = {
+				artifact_owner = {
+					PREV = {
+						transfer_artifact = {
+							from = PREV
+							to = ROOT
+						}
+					}
+				}
 			}
-			d_aztec_reformed = {
-				current_heir = { save_event_target_as = worthy_aztec_fylkir_crown }
-			}
-			player_heir = { save_event_target_as = unworthy_aztec_fylkir_crown }
-			any_artifact = {
-				limit = { artifact_type = crown_aztec_fylkir }
-				save_event_target_as = inheriting_artifact_azteccrown
-			}
-			current_heir = { character_event = { id = HF.20407 days = 1 } }
 		}
 		if = {
-			limit = {
-				has_landed_title = e_persia
-				any_artifact = { artifact_type = crown_pahlavi }
+			limit = { has_landed_title = e_persia }
+			event_target:transfer_pahlavi_crown = {
+				artifact_owner = {
+					PREV = {
+						transfer_artifact = {
+							from = PREV
+							to = ROOT
+						}
+					}
+				}
 			}
-			e_persia = {
-				current_heir = { save_event_target_as = worthy_pahlavi_crown }
-			}
-			player_heir = { save_event_target_as = unworthy_pahlavi_crown }
-			any_artifact = {
-				limit = { artifact_type = crown_pahlavi }
-				save_event_target_as = inheriting_artifact_4
-			}
-			current_heir = { character_event = { id = HF.20407 days = 1 } }
 		}
 	}
 }
+
 #Ping to prevent crown duplication.
 character_event = {
 	id = HF.20407

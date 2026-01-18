@@ -2979,10 +2979,10 @@ defined_text = {
 		trigger = {
 			OR = {
 				is_christian_secret_religious_society_member_trigger = yes
-				society_member_of = secret_religious_society_yazidism
+				society_member_of = secret_religious_society_yazidi
 				society_member_of = secret_religious_society_druze
-				society_member_of = secret_religious_society_mazdakism
-				society_member_of = secret_religious_society_mani
+				society_member_of = secret_religious_society_mazdaki
+				society_member_of = secret_religious_society_manichean
 			}
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -2994,7 +2994,7 @@ defined_text = {
 		trigger = { 
 			is_muslim_secret_religious_society_member_trigger = yes
 			NOR = {
-				society_member_of = secret_religious_society_yazidism
+				society_member_of = secret_religious_society_yazidi
 				society_member_of = secret_religious_society_druze
 			}
 			NOT = {
@@ -3166,10 +3166,10 @@ defined_text = {
 		trigger = { 
 			OR = {
 				is_christian_secret_religious_society_member_trigger = yes 
-				society_member_of = secret_religious_society_yazidism
+				society_member_of = secret_religious_society_yazidi
 				society_member_of = secret_religious_society_druze
-				society_member_of = secret_religious_society_mazdakism
-				society_member_of = secret_religious_society_mani
+				society_member_of = secret_religious_society_mazdaki
+				society_member_of = secret_religious_society_manichean
 			}
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -3181,7 +3181,7 @@ defined_text = {
 		trigger = { 
 			is_muslim_secret_religious_society_member_trigger = yes 
 			NOR = {
-				society_member_of = secret_religious_society_yazidism
+				society_member_of = secret_religious_society_yazidi
 				society_member_of = secret_religious_society_druze
 			}
 			NOT = {
@@ -4360,13 +4360,13 @@ defined_text = {
         localisation_key = String_Koran
         trigger = { 
             true_religion_group_muslim_trigger = yes
-            NOT = { true_religion_yazidism_trigger = yes }
+            NOT = { true_religion_yazidi_trigger = yes }
             NOT = { true_religion_druze_trigger = yes }
         }
     }
     text = { 
         localisation_key = String_Book_of_Illumination
-        trigger = { true_religion_yazidism_trigger = yes }
+        trigger = { true_religion_yazidi_trigger = yes }
     }
     text = { 
         localisation_key = String_Epistles_of_Wisdom
@@ -4380,12 +4380,12 @@ defined_text = {
         localisation_key = String_Gathas
         trigger = { 
             true_religion_group_zoroastrian_group_trigger = yes 
-            NOT = { true_religion_mazdakism_trigger = yes }
+            NOT = { true_religion_mazdaki_trigger = yes }
         }
     }
     text = { 
         localisation_key = String_Great_Secret
-        trigger = { true_religion_mazdakism_trigger = yes }
+        trigger = { true_religion_mazdaki_trigger = yes }
     }
     text = { 
         localisation_key = String_Mahabharata
@@ -17343,9 +17343,9 @@ defined_text = {
 						religion = apostolic
 						religion = nestorian
 						religion = zoroastrian
-						religion = mazdakism
-						religion = zurvanism
-						religion = mani
+						religion = mazdaki
+						religion = zurvanist
+						religion = manichean
 						religion = khurmazta
 						religion = jewish
 						religion = samaritan
@@ -17374,9 +17374,9 @@ defined_text = {
 						religion = apostolic
 						religion = nestorian
 						religion = zoroastrian
-						religion = mazdakism
-						religion = zurvanism
-						religion = mani
+						religion = mazdaki
+						religion = zurvanist
+						religion = manichean
 						religion = khurmazta
 						religion = jewish
 						religion = samaritan
@@ -17413,9 +17413,9 @@ defined_text = {
 						religion = apostolic
 						religion = nestorian
 						religion = zoroastrian
-						religion = mazdakism
-						religion = zurvanism
-						religion = mani
+						religion = mazdaki
+						religion = zurvanist
+						religion = manichean
 						religion = khurmazta
 						religion = jewish
 						religion = samaritan
@@ -17437,9 +17437,9 @@ defined_text = {
 						religion = apostolic
 						religion = nestorian
 						religion = zoroastrian
-						religion = mazdakism
-						religion = zurvanism
-						religion = mani
+						religion = mazdaki
+						religion = zurvanist
+						religion = manichean
 						religion = khurmazta
 						religion = jewish
 						religion = samaritan
@@ -18632,7 +18632,7 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			religion = mani
+			religion = manichean
 		}
 		localisation_key = Holy_Order_Manichean
 	}

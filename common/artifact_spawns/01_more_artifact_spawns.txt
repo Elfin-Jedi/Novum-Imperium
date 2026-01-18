@@ -210,10 +210,7 @@ gungnir = {
 		value = 0
 		additive_modifier = {
 			value = 5
-			OR = {
-				religion = norse_pagan
-				religion = norse_pagan_reformed
-			}
+			religion_group = norsegerman_group
 			is_landed = yes
 		}
 	}
@@ -662,7 +659,10 @@ eshu_staff = {
 		additive_modifier = {
 			value = 5
 			OR = {
+				religion_group = east_african_group
+				religion_group = bantu_group
 				religion_group = serer_group
+				religion_group = african_pagan_group
 				religion_group = african_group
 			}
 			is_landed = yes
@@ -697,7 +697,10 @@ creator_mask = {
 		additive_modifier = {
 			value = 5
 			OR = {
+				religion_group = east_african_group
+				religion_group = bantu_group
 				religion_group = serer_group
+				religion_group = african_pagan_group
 				religion_group = african_group
 			}
 			is_landed = yes
@@ -732,7 +735,10 @@ small_totem = {
 		additive_modifier = {
 			value = 5
 			OR = {
+				religion_group = east_african_group
+				religion_group = bantu_group
 				religion_group = serer_group
+				religion_group = african_pagan_group
 				religion_group = african_group
 			}
 			is_landed = yes
@@ -766,12 +772,7 @@ tezcatlipoca = {
 		value = 0
 		additive_modifier = {
 			value = 5
-			OR = {
-				religion = aztec
-				religion = aztec_reformed
-				religion = quetzal
-				religion = quetzal_reformed
-			}
+			religion_group = aztec_group
 			is_landed = yes
 		}
 		additive_modifier = {
@@ -809,12 +810,7 @@ xiuhtecuhtli = {
 		value = 0
 		additive_modifier = {
 			value = 5
-			OR = {
-				religion = aztec
-				religion = aztec_reformed
-				religion = quetzal
-				religion = quetzal_reformed
-			}
+			religion_group = aztec_group
 			is_landed = yes
 		}
 		additive_modifier = {
@@ -852,12 +848,7 @@ huitzilopochtli = {
 		value = 0
 		additive_modifier = {
 			value = 5
-			OR = {
-				religion = aztec
-				religion = aztec_reformed
-				religion = quetzal
-				religion = quetzal_reformed
-			}
+			religion_group = aztec_group
 			is_landed = yes
 		}
 		additive_modifier = {
@@ -895,12 +886,7 @@ xolotl = {
 		value = 0
 		additive_modifier = {
 			value = 5
-			OR = {
-				religion = aztec
-				religion = aztec_reformed
-				religion = quetzal
-				religion = quetzal_reformed
-			}
+			religion_group = aztec_group
 			is_landed = yes
 		}
 		additive_modifier = {
@@ -938,10 +924,7 @@ bon_picture = {
 		value = 0
 		additive_modifier = {
 			value = 5
-			OR = {
-				religion = bon
-				religion = bon_reformed
-			}
+			religion_group = chinese_group
 			is_landed = yes
 		}
 	}
@@ -973,10 +956,7 @@ khatvanga = {
 		value = 0
 		additive_modifier = {
 			value = 5
-			OR = {
-				religion = bon
-				religion = bon_reformed
-			}
+			religion_group = chinese_group
 			is_landed = yes
 		}
 	}
@@ -2302,7 +2282,10 @@ opon_ifa = {
 		additive_modifier = {
 			value = 5
 			OR = {
+				religion_group = east_african_group
+				religion_group = bantu_group
 				religion_group = serer_group
+				religion_group = african_pagan_group
 				religion_group = african_group
 			}
 			is_landed = yes
@@ -2337,7 +2320,10 @@ spider_silk = {
 		additive_modifier = {
 			value = 5
 			OR = {
+				religion_group = east_african_group
+				religion_group = bantu_group
 				religion_group = serer_group
+				religion_group = african_pagan_group
 				religion_group = african_group
 			}
 			is_landed = yes
@@ -2372,7 +2358,10 @@ ikenga_totem = {
 		additive_modifier = {
 			value = 5
 			OR = {
+				religion_group = east_african_group
+				religion_group = bantu_group
 				religion_group = serer_group
+				religion_group = african_pagan_group
 				religion_group = african_group
 			}
 			is_landed = yes
@@ -2407,7 +2396,10 @@ chameleon_cloak = {
 		additive_modifier = {
 			value = 5
 			OR = {
+				religion_group = east_african_group
+				religion_group = bantu_group
 				religion_group = serer_group
+				religion_group = african_pagan_group
 				religion_group = african_group
 			}
 			is_landed = yes
@@ -2442,7 +2434,10 @@ khonvoum_bow = {
 		additive_modifier = {
 			value = 5
 			OR = {
+				religion_group = east_african_group
+				religion_group = bantu_group
 				religion_group = serer_group
+				religion_group = african_pagan_group
 				religion_group = african_group
 			}
 			is_landed = yes

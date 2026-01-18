@@ -800,7 +800,7 @@ d_holyluwian = {
 	strength_growth_per_century = 0.5
 	mercenary_type = d_holyluwian_composition
 }
-d_holymani = {
+d_holymanichean = {
 	color = { 146 146 47 }
 	color2 = { 255 255 255 }
 	capital = 628
@@ -817,13 +817,13 @@ d_holymani = {
 	culture = uyghur
 
 	# Parent Religion/Culture
-	religion = mani
+	religion = manichean
 
 	# Cannot be held as a secondary title
 	primary = yes
 
 	strength_growth_per_century = 0.5
-	mercenary_type = d_holymani_composition
+	mercenary_type = d_holymanichean_composition
 }
 d_holymani_mithra = {
 	color = { 109 109 208 }
@@ -2700,7 +2700,7 @@ d_holymari_christ_reformed = {
 	strength_growth_per_century = 0.5
 	mercenary_type = d_holymari_christ_reformed_composition
 }
-d_holymazdakism_reformed = {
+d_holymazdaki_reformed = {
 	color = { 200 60 50 }
 	color2 = { 255 255 255 }
 	capital = 639
@@ -2717,13 +2717,13 @@ d_holymazdakism_reformed = {
 	culture = parthian
 
 	# Parent Religion/Culture
-	religion = mazdakism_reformed
+	religion = mazdaki_reformed
 
 	# Cannot be held as a secondary title
 	primary = yes
 
 	strength_growth_per_century = 0.5
-	mercenary_type = d_holymazdakism_reformed_composition
+	mercenary_type = d_holymazdaki_reformed_composition
 }
 d_holymontanist_reformed = {
 	color = { 255 66 129 }
@@ -3625,7 +3625,7 @@ d_holyzulu_pagan_reformed = {
 	strength_growth_per_century = 0.5
 	mercenary_type = d_holyzulu_pagan_reformed_composition
 }
-d_holyzurvanism_reformed = {
+d_holyzurvanist_reformed = {
 	color = { 189 199 51 }
 	color2 = { 255 255 255 }
 	capital = 695
@@ -3642,13 +3642,13 @@ d_holyzurvanism_reformed = {
 	culture = persian
 
 	# Parent Religion/Culture
-	religion = zurvanism_reformed
+	religion = zurvanist_reformed
 
 	# Cannot be held as a secondary title
 	primary = yes
 
 	strength_growth_per_century = 0.5
-	mercenary_type = d_holyzurvanism_reformed_composition
+	mercenary_type = d_holyzurvanist_reformed_composition
 }
 
 # INDEPENDENT MERCS
@@ -4006,11 +4006,11 @@ d_pecheneg_band = {
 	
 	# Hire Trigger
 	allow = {
-		religion = mani
+		religion = manichean
 	}
 	
 	# Parent Religion/Culture 
-	religion = mani
+	religion = manichean
 	culture = pecheneg
 
 	# Always exists

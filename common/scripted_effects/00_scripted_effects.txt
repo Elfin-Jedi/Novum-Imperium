@@ -4294,7 +4294,7 @@ add_crusade_trait_effect = {
 	}
 	if = {
 		limit = {
-			religion = mani
+			religion = manichean
 		}
 		add_trait = guardian_of_elect
 		break = yes
@@ -39152,10 +39152,10 @@ apply_dogmatic_on_start_effect = {
 	remove_intermarry = khurmazta
 	remove_intermarry = mandaean
 	remove_intermarry = mani_group
-	remove_intermarry = mazdakism
-	remove_intermarry = yazidism
+	remove_intermarry = mazdaki
+	remove_intermarry = yazidi
 	remove_intermarry = zoroastrian
-	remove_intermarry = zurvanism
+	remove_intermarry = zurvanist
 	
 	remove_intermarry = pagan
 	remove_intermarry = bon
@@ -39233,10 +39233,10 @@ apply_syncretic_zoroastrian_on_start_effect = {
 	add_intermarry = khurmazta
 	add_intermarry = mandaean
 	add_intermarry = mani_group
-	add_intermarry = mazdakism
-	add_intermarry = yazidism
+	add_intermarry = mazdaki
+	add_intermarry = yazidi
 	add_intermarry = zoroastrian
-	add_intermarry = zurvanism
+	add_intermarry = zurvanist
 	
 	add_intermarry = zoroastrian_group
 }
@@ -47094,11 +47094,11 @@ abdicate_holy_order_if_religion_changes_effect = {
 		if = {
 			limit = {
 				is_title_active = d_army_light
-				religion = mani
+				religion = manichean
 				owner = { 
 					ai = yes
 					holy_order = yes 
-					NOT = { religion = mani } 
+					NOT = { religion = manichean } 
 				}
 			}
 			log = "[d_army_light.owner.GetTitledFirstName] was found to be unfit to lead the [d_army_light.GetName] and therefore removed by the abdicate holy order effect!"

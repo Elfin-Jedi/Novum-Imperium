@@ -109,11 +109,11 @@ namespace = AmzCul
 				limit = {
 					OR = {
 						religion = zoroastrian
-						religion = mani
+						religion = manichean
 						religion = khurmazta
 					}
 				}
-				religion = mazdakism
+				religion = mazdaki
 				hidden_tooltip = {
 					any_tributary = {
 						limit = { 
@@ -195,11 +195,11 @@ namespace = AmzCul
 				limit = {	
 					OR = {
 						religion = zoroastrian
-						religion = mani
+						religion = manichean
 						religion = khurmazta
 					}
 				}
-				set_secret_religion = mazdakism
+				set_secret_religion = mazdaki
 			}
 			clr_character_flag = amazonian_heresy_flag
 		}
@@ -296,7 +296,7 @@ namespace = AmzCul
 					religion = cathar
 					religion = messalian
 					religion = bogomilist
-					religion = mazdakism			
+					religion = mazdaki		
 				}
 			}
 		}
@@ -310,7 +310,7 @@ namespace = AmzCul
 					religion = cathar
 					religion = messalian
 					religion = bogomilist
-					religion = mazdakism
+					religion = mazdaki
 				}
 			}
 		}
@@ -323,7 +323,7 @@ namespace = AmzCul
 					religion = cathar
 					religion = messalian
 					religion = bogomilist
-					religion = mazdakism
+					religion = mazdaki
 				}
 			}
 		}
@@ -380,7 +380,7 @@ namespace = AmzCul
 							has_global_flag = mazdaki_enat_cognatic_flag
 							has_global_flag = mazdaki_enatic_flag
 						}
-						religion = mazdakism
+						religion = mazdaki
 					}
 				}
 				OR = {
@@ -429,7 +429,7 @@ namespace = AmzCul
 					}
 					AND = {
 						NOT = { has_global_flag = mazdaki_special_feature }
-						religion = mazdakism
+						religion = mazdaki
 					}
 				}
 			}
@@ -460,7 +460,7 @@ namespace = AmzCul
 					}
 					AND = {
 						NOT = { has_global_flag = mazdaki_concubines_flag }
-						religion = mazdakism
+						religion = mazdaki
 					}
 				}
 			}
@@ -518,7 +518,7 @@ namespace = AmzCul
 					set_global_flag = bogomilist_abs_cognatic_flag
 				}
 				if = {
-					limit = { religion = mazdakism }
+					limit = { religion = mazdaki }
 					set_global_flag = mazdaki_abs_cognatic_flag
 				}
 				add_character_modifier = { 
@@ -556,7 +556,7 @@ namespace = AmzCul
 					set_global_flag = bogomilist_enat_cognatic_flag
 				}
 				if = {
-					limit = { religion = mazdakism }
+					limit = { religion = mazdaki }
 					set_global_flag = mazdaki_enat_cognatic_flag
 				}
 				add_character_modifier = { 
@@ -594,7 +594,7 @@ namespace = AmzCul
 					set_global_flag = bogomilist_enatic_flag
 				}
 				if = {
-					limit = { religion = mazdakism }
+					limit = { religion = mazdaki }
 					set_global_flag = mazdaki_enatic_flag
 				}
 				add_character_modifier = { 
@@ -662,7 +662,7 @@ namespace = AmzCul
 					set_global_flag = bogomilist_special_feature
 				}
 				if = {
-					limit = { religion = mazdakism }
+					limit = { religion = mazdaki }
 					set_priests_can_marry = yes
 					set_peace_piety_gain = 1
 					set_ai_aggression = 0.75
@@ -702,7 +702,7 @@ namespace = AmzCul
 					set_global_flag = bogomilist_special_feature
 				}
 				if = {
-					limit = { religion = mazdakism }
+					limit = { religion = mazdaki }
 					set_jizya_tax = yes
 					set_piety_loss_for_attacking_same_religion = yes
 					set_global_flag = mazdaki_special_feature
@@ -743,7 +743,7 @@ namespace = AmzCul
 					set_global_flag = bogomilist_special_feature
 				}
 				if = {
-					limit = { religion = mazdakism }
+					limit = { religion = mazdaki }
 					set_allow_looting = yes
 					set_peace_prestige_loss = yes
 					set_ai_aggression = 1.5
@@ -797,7 +797,7 @@ namespace = AmzCul
 				set_global_flag = bogomilist_concubines_flag	
 			}
 			if = {
-				limit = { religion = mazdakism }
+				limit = { religion = mazdaki }
 				set_global_flag = mazdaki_concubines_flag	
 			}
 			piety = -1000
@@ -829,7 +829,7 @@ namespace = AmzCul
 				set_global_flag = bogomilist_concubines_flag	
 			}
 			if = {
-				limit = { religion = mazdakism }
+				limit = { religion = mazdaki }
 				set_global_flag = mazdaki_concubines_flag	
 			}
 			sound_effect = pagan_reformation
@@ -861,7 +861,7 @@ namespace = AmzCul
 				set_global_flag = bogomilist_concubines_flag	
 			}
 			if = {
-				limit = { religion = mazdakism }
+				limit = { religion = mazdaki }
 				set_global_flag = mazdaki_concubines_flag	
 			}
 			sound_effect = pagan_reformation

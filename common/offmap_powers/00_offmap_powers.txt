@@ -668,14 +668,14 @@ offmap_china = {
 					factor = 0
 					NOT = {
 						any_province = {
-							religion = mani
+							religion = manichean
 							is_within_diplo_range = offmap_china
 						}
 					}
 				}
 				modifier = {
 					factor = 0.5
-					FROMFROM = { religion = mani }
+					FROMFROM = { religion = manichean }
 				}
 			}
 			likes_khurmaztans = {

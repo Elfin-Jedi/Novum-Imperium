@@ -417,8 +417,8 @@ decisions = {
 				factor = 1.5
 				OR = { 
 					religion = zoroastrian
-					religion = mazdakism
-					religion = mani
+					religion = mazdaki
+					religion = manichean
 					religion = khurmazta
 					religion = zun_pagan
 					religion = zun_pagan_reformed
@@ -1668,7 +1668,7 @@ decisions = {
 					has_global_flag = bogomilist_enat_cognatic_flag
 				}
 				AND = {
-					religion = mazdakism
+					religion = mazdaki
 					has_global_flag = mazdaki_enat_cognatic_flag
 				}
 			}
@@ -1734,7 +1734,7 @@ decisions = {
 					has_global_flag = bogomilist_enatic_flag
 				}
 				AND = {
-					religion = mazdakism
+					religion = mazdaki
 					has_global_flag = mazdaki_enatic_flag
 				}
 				has_religion_feature = religion_matriarchal
@@ -1852,7 +1852,7 @@ decisions = {
 					}
 				}
 				AND = {
-					religion = mazdakism
+					religion = mazdaki
 					NOR = {
 						has_global_flag = mazdaki_enat_cognatic_flag
 						has_global_flag = mazdaki_enatic_flag
@@ -3742,7 +3742,7 @@ decisions = {
 				religion = monothelite
 				religion = iconoclast
 				religion = paulician
-				religion = mani
+				religion = manichean
 				religion = khurmazta
 			}
 			OR = {
@@ -3830,7 +3830,7 @@ decisions = {
 							NOT = { has_global_flag = bogomilist_seminary_flag }
 						}
 						AND = {
-							religion = mazdakism
+							religion = mazdaki
 							NOT = { has_global_flag = mazdaki_seminary_flag }
 						}
 					}
@@ -3847,7 +3847,7 @@ decisions = {
 							NOT = { has_global_flag = zikri_seminary_flag }
 						}
 						AND = {
-							religion = yazidism
+							religion = yazidi
 							NOT = { has_global_flag = yazidi_seminary_flag }
 						}
 						AND = {
@@ -3978,7 +3978,7 @@ decisions = {
 					has_global_flag = bogomilist_seminary_flag 
 				}
 				AND = {
-					religion = mazdakism
+					religion = mazdaki
 					has_global_flag = mazdaki_seminary_flag 
 				}
 				AND = {
@@ -3990,7 +3990,7 @@ decisions = {
 					has_global_flag = zikri_seminary_flag 
 				}
 				AND = {
-					religion = yazidism
+					religion = yazidi
 					has_global_flag = yazidi_seminary_flag 
 				}
 				AND = {
@@ -4483,7 +4483,7 @@ decisions = {
 					}
 				}
 				AND = {															
-					religion = mazdakism
+					religion = mazdaki
 					NOR = {
 						has_global_flag = mazdaki_abs_cognatic_flag
 						has_global_flag = mazdaki_enat_cognatic_flag
@@ -4537,7 +4537,7 @@ decisions = {
 					}
 				}
 				AND = {														
-					religion = mazdakism
+					religion = mazdaki
 					NOT = { has_global_flag = mazdaki_special_feature }
 					realm_character_percent = {		# 25% of characters
 						target = 0.25
@@ -4569,7 +4569,7 @@ decisions = {
 					}
 				}
 				AND = {														
-					religion = mazdakism
+					religion = mazdaki
 					NOT = { has_global_flag = mazdaki_concubines_flag }
 					realm_character_percent = {		# 50% of characters
 						target = 0.50
@@ -4714,7 +4714,7 @@ decisions = {
 					}
 				}
 				AND = {
-					religion = yazidism
+					religion = yazidi
 					NOR = {
 						has_global_flag = yazidi_abs_cognatic_flag
 						has_global_flag = yazidi_enat_cognatic_flag
@@ -4854,7 +4854,7 @@ decisions = {
 					}
 				}
 				AND = {
-					religion = yazidism
+					religion = yazidi
 					NOT = { has_global_flag = yazidi_reformed_marriage_flag }
 					realm_character_percent = {		# 40% of characters
 						target = 0.40
@@ -4949,7 +4949,7 @@ decisions = {
 					}
 				}
 				AND = {
-					religion = yazidism
+					religion = yazidi
 					OR = {
 						culture = themiskyran_amz
 						culture = valkyrie_amz
@@ -5085,7 +5085,7 @@ decisions = {
 							}
 						}
 						AND = {
-							religion = yazidism
+							religion = yazidi
 							OR = {
 								has_global_flag = yazidi_abs_cognatic_flag
 								has_global_flag = yazidi_enat_cognatic_flag
@@ -5219,7 +5219,7 @@ decisions = {
 					}
 				}
 				AND = {
-					religion = yazidism
+					religion = yazidi
 					OR = {
 						has_global_flag = yazidi_enat_cognatic_flag
 						has_global_flag = yazidi_reformed_marriage_flag 

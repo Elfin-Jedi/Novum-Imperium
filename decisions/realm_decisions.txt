@@ -90,7 +90,6 @@ decisions = {
 			is_adult = yes
 			NOT = { has_flag = ask_for_indulgence }
 			NOT = { trait = excommunicated }
-			NOT = { has_landed_title = k_papal_state}
 		}
 		allow = {
 			prisoner = no

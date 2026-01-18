@@ -19,7 +19,7 @@ character_event = {
 
 	desc = {
 		text = EVTDESC_emf_heresy_155_manichean
-		trigger = { religion = mani }
+		trigger = { religion = manichean }
 	}
 	desc = {
 		text = EVTDESC_emf_heresy_155_cathar
@@ -63,7 +63,7 @@ character_event = {
 
 	desc = {
 		text = EVTDESC_emf_heresy_156_manichean
-		trigger = { religion = mani }
+		trigger = { religion = manichean }
 	}
 	desc = {
 		text = EVTDESC_emf_heresy_156_cathar
@@ -89,7 +89,7 @@ character_event = {
 
 	desc = {
 		text = EVTDESC_emf_heresy_157_manichean
-		trigger = { religion = mani }
+		trigger = { religion = manichean }
 	}
 	desc = {
 		text = EVTDESC_emf_heresy_157_cathar
@@ -460,7 +460,7 @@ character_event = {
 	option = {
 		name = EVTOPTA_emf_heresy_226
 		if = {
-			limit = { religion = mani }
+			limit = { religion = manichean }
 			add_character_modifier = {
 				name = patron_reason
 				duration = -1
@@ -470,7 +470,7 @@ character_event = {
 	option = {
 		name = EVTOPTB_emf_heresy_226
 		if = {
-			limit = { religion = mani }
+			limit = { religion = manichean }
 			add_character_modifier = {
 				name = patron_mind
 				duration = -1
@@ -480,7 +480,7 @@ character_event = {
 	option = {
 		name = EVTOPTC_emf_heresy_226
 		if = {
-			limit = { religion = mani }
+			limit = { religion = manichean }
 			add_character_modifier = {
 				name = patron_intelligence
 				duration = -1
@@ -491,7 +491,7 @@ character_event = {
 		trigger = { ai = yes }
 		name = EVTOPTB_emf_heresy_227
 		if = {
-			limit = { religion = mani }
+			limit = { religion = manichean }
 			add_character_modifier = {
 				name = patron_mani_understanding
 				duration = -1
@@ -502,7 +502,7 @@ character_event = {
 		trigger = { ai = yes }
 		name = EVTOPTA_emf_heresy_227
 		if = {
-			limit = { religion = mani }
+			limit = { religion = manichean }
 			add_character_modifier = {
 				name = patron_thought
 				duration = -1
@@ -528,7 +528,7 @@ character_event = {
 	option = {
 		name = EVTOPTB_emf_heresy_227
 		if = {
-			limit = { religion = mani }
+			limit = { religion = manichean }
 			add_character_modifier = {
 				name = patron_mani_understanding
 				duration = -1
@@ -538,7 +538,7 @@ character_event = {
 	option = {
 		name = EVTOPTA_emf_heresy_227
 		if = {
-			limit = { religion = mani }
+			limit = { religion = manichean }
 			add_character_modifier = {
 				name = patron_thought
 				duration = -1
@@ -568,7 +568,7 @@ narrative_event = {
 		random_realm_lord = {
 			limit = {
 				in_revolt = no
-				religion = mani
+				religion = manichean
 				capital_holding = { is_holy_site = ROOT }
 				prisoner = no
 				is_incapable = no
@@ -582,7 +582,7 @@ narrative_event = {
 		random_realm_lord = {
 			limit = {
 				in_revolt = no
-				religion = mani
+				religion = manichean
 				capital_holding = { holding_type = temple }
 				prisoner = no
 				is_incapable = no
@@ -603,7 +603,7 @@ narrative_event = {
 		create_random_priest = {
 			random_traits = yes
 			dynasty = random
-			religion = mani
+			religion = manichean
 			culture = ROOT
 			age = 40
 			health = 7
@@ -638,13 +638,13 @@ narrative_event = {
 	option = {
 		name = EVTOPTA_emf_heresy_228
 		trigger = {
-			NOT = { religion = mani }
+			NOT = { religion = manichean }
 		}
 		event_target:new_manichean_leader = { }
 	}
 	option = {
 		name = EVTOPTB_emf_heresy_228
-		trigger = { religion = mani }
+		trigger = { religion = manichean }
 		event_target:new_manichean_leader = { }
 	}
 }
@@ -664,13 +664,13 @@ narrative_event = {
 	option = {
 		name = EVTOPTA_emf_heresy_229
 		trigger = {
-			religion = mani
+			religion = manichean
 		}
 	}
 	option = {
 		name = I_SEE
 		trigger = {
-			NOT = { religion = mani }
+			NOT = { religion = manichean }
 		}
 	}
 }
@@ -890,7 +890,7 @@ narrative_event = {
 			character = FROM
 			same_realm = FROM
 			has_landed_title = d_manichean
-			religion = mani
+			religion = manichean
 			capital_scope = {
 				NOT = {
 					distance = {
@@ -920,7 +920,7 @@ narrative_event = {
 		name = EVTOPTA_emf_heresy_235
 		trigger = {
 			NOT = { has_landed_title = d_manichean }
-			religion = mani
+			religion = manichean
 		}
 		tooltip = {
 			d_manichean = { unsafe_destroy_landed_title = THIS }
@@ -931,7 +931,7 @@ narrative_event = {
 		trigger = {
 			NOR = {
 				has_landed_title = d_manichean
-				religion = mani
+				religion = manichean
 			}
 			religion_group = muslim
 		}
@@ -944,7 +944,7 @@ narrative_event = {
 		trigger = {
 			NOR = {
 				has_landed_title = d_manichean
-				religion = mani
+				religion = manichean
 				religion_group = muslim
 			}
 		}
@@ -964,7 +964,7 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		religion = mani
+		religion = manichean
 	}
 
 	option = {
@@ -986,7 +986,7 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		religion = mani
+		religion = manichean
 	}
 
 	option = {
@@ -1514,7 +1514,7 @@ province_event = {
 			random_traits = yes
 			dynasty = 100639 #Khorramdin
 			name = "Babak"
-			religion = mazdakism
+			religion = mazdaki
 			culture = persian
 			female = no
 			age = 24
@@ -1858,7 +1858,7 @@ narrative_event = {
 			limit = {
 				in_revolt = no
 				pf_war_trait_trigger = no
-				religion = mazdakism
+				religion = mazdaki
 				capital_holding = { is_holy_site = ROOT }
 				prisoner = no
 				is_incapable = no
@@ -1873,7 +1873,7 @@ narrative_event = {
 			limit = {
 				in_revolt = no
 				pf_war_trait_trigger = no
-				religion = mazdakism
+				religion = mazdaki
 				capital_holding = { holding_type = temple }
 				prisoner = no
 				is_incapable = no
@@ -1894,7 +1894,7 @@ narrative_event = {
 		create_random_priest = {
 			random_traits = yes
 			dynasty = random
-			religion = mazdakism
+			religion = mazdaki
 			culture = ROOT
 			age = 40
 			health = 7
@@ -1929,13 +1929,13 @@ narrative_event = {
 	option = {
 		name = I_SEE
 		trigger = {
-			NOT = { religion = mazdakism }
+			NOT = { religion = mazdaki }
 		}
 		event_target:new_mazdaki_leader = { }
 	}
 	option = {
 		name = EVTOPTA_emf_heresy_258
-		trigger = { religion = mazdakism }
+		trigger = { religion = mazdaki }
 		event_target:new_mazdaki_leader = { }
 	}
 }
@@ -1966,7 +1966,7 @@ character_event = {
 	option = {
 		name = EVTOPTA_emf_heresy_259
 		if = {
-			limit = { religion = mazdakism }
+			limit = { religion = mazdaki }
 			add_character_modifier = {
 				name = patron_discernment
 				duration = -1
@@ -1976,7 +1976,7 @@ character_event = {
 	option = {
 		name = EVTOPTB_emf_heresy_259
 		if = {
-			limit = { religion = mazdakism }
+			limit = { religion = mazdaki }
 			add_character_modifier = {
 				name = patron_understanding
 				duration = -1
@@ -1986,7 +1986,7 @@ character_event = {
 	option = {
 		name = EVTOPTC_emf_heresy_259
 		if = {
-			limit = { religion = mazdakism }
+			limit = { religion = mazdaki }
 			add_character_modifier = {
 				name = patron_preservation
 				duration = -1
@@ -1996,7 +1996,7 @@ character_event = {
 	option = {
 		name = EVTOPTD_emf_heresy_259
 		if = {
-			limit = { religion = mazdakism }
+			limit = { religion = mazdaki }
 			add_character_modifier = {
 				name = patron_joy
 				duration = -1
@@ -2042,7 +2042,7 @@ character_event = {
 		set_flag = holding_peacock_feast
 		any_vassal = {
 			limit = {
-				religion = yazidism
+				religion = yazidi
 				prisoner = no
 				is_incapable = no
 				emf_can_disturb = yes
@@ -2516,7 +2516,7 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 
 	only_playable = yes
-	religion = yazidism
+	religion = yazidi
 	war = yes
 
 	trigger = {
@@ -2665,7 +2665,7 @@ narrative_event = {
 	max_age = 20
 	prisoner = no
 	capable_only = yes
-	religion = yazidism
+	religion = yazidi
 
 	trigger = {
 		is_reincarnated = no
@@ -2706,7 +2706,7 @@ narrative_event = {
 	}
 
 	major_trigger = {
-		religion = yazidism
+		religion = yazidi
 		same_realm = ROOT
 	}
 

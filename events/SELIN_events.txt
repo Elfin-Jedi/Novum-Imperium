@@ -72,7 +72,7 @@
 # 			religion = waaq
 # 			religion = waldensian
 # 			religion = yazdanism
-# 			religion = yazidism
+# 			religion = yazidi
 # 			religion = yoruba
 # 			religion = zal_mani
 # 			# Reformed religions
@@ -90,7 +90,7 @@
 # 			religion = judaism_reformed
 # 			religion = mani_germanic_reformed
 # 			religion = mani_slavic_reformed
-# 			religion = mazdakism_reformed
+# 			religion = mazdaki_reformed
 # 			religion = muslim_aliite_reformed
 # 			religion = priscillian_reformed
 # 			religion = ragnarok_reformed
@@ -187,7 +187,7 @@
 # 				religion = waaq
 # 				religion = waldensian
 # 				religion = yazdanism
-# 				religion = yazidism
+# 				religion = yazidi
 # 				religion = yoruba
 # 				religion = zal_mani
 # 				# Reformed religions
@@ -205,7 +205,7 @@
 # 				religion = judaism_reformed
 # 				religion = mani_germanic_reformed
 # 				religion = mani_slavic_reformed
-# 				religion = mazdakism_reformed
+# 				religion = mazdaki_reformed
 # 				religion = muslim_aliite_reformed
 # 				religion = priscillian_reformed
 # 				religion = ragnarok_reformed
@@ -258,10 +258,10 @@
 # 			religion = jud_zion
 # 			religion = kharijite
 # 			religion = mand_ruha
-# 			religion = mani
+# 			religion = manichean
 # 			religion = mani_ahriman
 # 			religion = mani_slavic
-# 			religion = mazdakism
+# 			religion = mazdaki
 # 			religion = plato_christ
 # 			religion = plato_islam
 # 			religion = plato_pythagorean
@@ -325,10 +325,10 @@
 # 				religion = jud_zion
 # 				religion = kharijite
 # 				religion = mand_ruha
-# 				religion = mani
+# 				religion = manichean
 # 				religion = mani_ahriman
 # 				religion = mani_slavic
-# 				religion = mazdakism
+# 				religion = mazdaki
 # 				religion = plato_christ
 # 				religion = plato_islam
 # 				religion = plato_pythagorean
@@ -2515,24 +2515,24 @@ province_event = {
 				duration = 9125
 			}
 		}
-		#mani flagging
+		#manichean flagging
 		if = {
 			limit = {
-				religion = mani
-				NOT = { has_province_modifier = province_mani }
+				religion = manichean
+				NOT = { has_province_modifier = province_manichean }
 			}
 			add_province_modifier = {
-				name = province_mani
+				name = province_manichean
 				duration = -1
 			}
 		}
-		#mani cleansing
+		#manichean cleansing
 		if = {
 			limit = {
-				NOT = { religion = mani }
-				has_province_modifier = province_mani
+				NOT = { religion = manichean }
+				has_province_modifier = province_manichean
 			}
-			remove_province_modifier = province_mani
+			remove_province_modifier = province_manichean
 			add_province_modifier = {
 				name = province_conversion
 				duration = 9125
@@ -2722,24 +2722,24 @@ province_event = {
 				duration = 9125
 			}
 		}
-		#mazdakism flagging
+		#mazdaki flagging
 		if = {
 			limit = {
-				religion = mazdakism
-				NOT = { has_province_modifier = province_mazdakism }
+				religion = mazdaki
+				NOT = { has_province_modifier = province_mazdaki }
 			}
 			add_province_modifier = {
-				name = province_mazdakism
+				name = province_mazdaki
 				duration = -1
 			}
 		}
-		#mazdakism cleansing
+		#mazdaki cleansing
 		if = {
 			limit = {
-				NOT = { religion = mazdakism }
-				has_province_modifier = province_mazdakism
+				NOT = { religion = mazdaki }
+				has_province_modifier = province_mazdaki
 			}
-			remove_province_modifier = province_mazdakism
+			remove_province_modifier = province_mazdaki
 			add_province_modifier = {
 				name = province_conversion
 				duration = 9125
@@ -4654,24 +4654,24 @@ province_event = {
 				duration = 9125
 			}
 		}
-		#yazidism flagging
+		#yazidi flagging
 		if = {
 			limit = {
-				religion = yazidism
-				NOT = { has_province_modifier = province_yazidism }
+				religion = yazidi
+				NOT = { has_province_modifier = province_yazidi }
 			}
 			add_province_modifier = {
-				name = province_yazidism
+				name = province_yazidi
 				duration = -1
 			}
 		}
-		#yazidism cleansing
+		#yazidi cleansing
 		if = {
 			limit = {
-				NOT = { religion = yazidism }
-				has_province_modifier = province_yazidism
+				NOT = { religion = yazidi }
+				has_province_modifier = province_yazidi
 			}
-			remove_province_modifier = province_yazidism
+			remove_province_modifier = province_yazidi
 			add_province_modifier = {
 				name = province_conversion
 				duration = 9125
@@ -4907,24 +4907,24 @@ province_event = {
 				duration = 9125
 			}
 		}
-		#zurvanism flagging
+		#zurvanist flagging
 		if = {
 			limit = {
-				religion = zurvanism
-				NOT = { has_province_modifier = province_zurvanism }
+				religion = zurvanist
+				NOT = { has_province_modifier = province_zurvanist }
 			}
 			add_province_modifier = {
-				name = province_zurvanism
+				name = province_zurvanist
 				duration = -1
 			}
 		}
-		#zurvanism cleansing
+		#zurvanist cleansing
 		if = {
 			limit = {
-				NOT = { religion = zurvanism }
-				has_province_modifier = province_zurvanism
+				NOT = { religion = zurvanist }
+				has_province_modifier = province_zurvanist
 			}
-			remove_province_modifier = province_zurvanism
+			remove_province_modifier = province_zurvanist
 			add_province_modifier = {
 				name = province_conversion
 				duration = 9125
@@ -5827,24 +5827,24 @@ province_event = {
 				duration = 9125
 			}
 		}
-		#mazdakism_reformed flagging
+		#mazdaki_reformed flagging
 		if = {
 			limit = {
-				religion = mazdakism_reformed
-				NOT = { has_province_modifier = province_mazdakism_reformed }
+				religion = mazdaki_reformed
+				NOT = { has_province_modifier = province_mazdaki_reformed }
 			}
 			add_province_modifier = {
-				name = province_mazdakism_reformed
+				name = province_mazdaki_reformed
 				duration = -1
 			}
 		}
-		#mazdakism_reformed cleansing
+		#mazdaki_reformed cleansing
 		if = {
 			limit = {
-				NOT = { religion = mazdakism_reformed }
-				has_province_modifier = province_mazdakism_reformed
+				NOT = { religion = mazdaki_reformed }
+				has_province_modifier = province_mazdaki_reformed
 			}
-			remove_province_modifier = province_mazdakism_reformed
+			remove_province_modifier = province_mazdaki_reformed
 			add_province_modifier = {
 				name = province_conversion
 				duration = 9125
@@ -6678,24 +6678,24 @@ province_event = {
 				duration = 9125
 			}
 		}
-		#zurvanism_reformed flagging
+		#zurvanist_reformed flagging
 		if = {
 			limit = {
-				religion = zurvanism_reformed
-				NOT = { has_province_modifier = province_zurvanism_reformed }
+				religion = zurvanist_reformed
+				NOT = { has_province_modifier = province_zurvanist_reformed }
 			}
 			add_province_modifier = {
-				name = province_zurvanism_reformed
+				name = province_zurvanist_reformed
 				duration = -1
 			}
 		}
-		#zurvanism_reformed cleansing
+		#zurvanist_reformed cleansing
 		if = {
 			limit = {
-				NOT = { religion = zurvanism_reformed }
-				has_province_modifier = province_zurvanism_reformed
+				NOT = { religion = zurvanist_reformed }
+				has_province_modifier = province_zurvanist_reformed
 			}
-			remove_province_modifier = province_zurvanism_reformed
+			remove_province_modifier = province_zurvanist_reformed
 			add_province_modifier = {
 				name = province_conversion
 				duration = 9125

@@ -4584,7 +4584,7 @@ character_event = {
 
 	immediate = {
 		if = {
-			limit = { religion = yazidism }
+			limit = { religion = yazidi }
 			if = {
 				limit = { has_character_flag = good_pilgrimage }
 				character_event = { id = emf_heresy.282 }

@@ -151,8 +151,8 @@ GOD_PTAHIL;Ptahil;;;;;;;;;;;;;x
 GREAT_BAN;Great Ban;;;;;;;;;;;;;x
 GREAT_PURIFICATION;Great Purification;;;;;;;;;;;;;x
 HAS_RELIGION_HEAD_AT_PEACE;Official religion head exists and is not at war\n;;;;;;;;;;;;;x
-HAS_THREE_MANICHEAN_VASSALS_AVAILABLE;Has at least three [mani.GetName] vassals available\n;;;;;;;;;;;;;x
-HAS_THREE_YAZIDI_VASSALS_AVAILABLE;Has at least three [yazidism.GetName] vassals who can attend\n;;;;;;;;;;;;;x
+HAS_THREE_MANICHEAN_VASSALS_AVAILABLE;Has at least three [manichean.GetName] vassals available\n;;;;;;;;;;;;;x
+HAS_THREE_YAZIDI_VASSALS_AVAILABLE;Has at least three [yazidi.GetName] vassals who can attend\n;;;;;;;;;;;;;x
 ibadi_creation_independent;Either independent or all lieges are §Y[ibadi.GetName]§!\n;;;;;;;;;;;;;x
 ismaili_bloodline_TT;Has the bloodline of a §Y[ismaili.GetName]§! leader.;A la lignée d'un chef §Y[ismaili.GetName]§!.;Hat die Blutlinie eines §Y[ismaili.GetName]en§! Anführers;;Es del linaje de un líder §Y[ismaili.GetName]§!.;;;;;x
 ISMAILI_CALIPHATE_REVOLT;Pretender [d_ismaili.GetFullName];;;;;;;;;;;;;x
@@ -379,15 +379,15 @@ investiture_law_0_option;Head;;;;;;;;;;;;;x
 investiture_law_0_desc;Only the [Root.Holder.Religion.GetName] [Root.Holder.RelHead.GetTitle] may appoint [Root.Holder.Religion.GetPriestTitle]s within the [Root.GetFullName]. This will give the Crown a §G50%§! [Root.Holder.Religion.GetPietyName] cost discount when requesting special actions like Divorce and Excommunication.;;;;;;;;;;;;;x
 investiture_law_1_desc;[Root.Holder.Religion.GetPriestTitleCap]s within the [Root.GetFullName] can be appointed by their secular lieges, and will be more loyal to their liege. The [Root.Holder.Religion.GetName] [Root.Holder.RelHead.GetTitle] will not be pleased.;;;;;;;;;;;;;x
 maz_wealth_group;Wealth Sharing;;;;;;;;;;;;;x
-maz_wealth_group_desc;One of Mazdak's primary teachings was that the [d_zoroastrian.GetFullName] oppressed its people, and hoarded its wealth. He believed that wealth should be shared, and espoused ideas of egalitarianism that were way ahead of his time. A ruler of proper faith should, by the [mazdakism.GetName] faith, set aside a large share of its taxes for the people -- and force their vassals to do the same.;;;;;;;;;;;;;x
+maz_wealth_group_desc;One of Mazdak's primary teachings was that the [d_zoroastrian.GetFullName] oppressed its people, and hoarded its wealth. He believed that wealth should be shared, and espoused ideas of egalitarianism that were way ahead of his time. A ruler of proper faith should, by the [mazdaki.GetName] faith, set aside a large share of its taxes for the people -- and force their vassals to do the same.;;;;;;;;;;;;;x
 mazdaki_wealth_0;No Wealth Sharing;;;;;;;;;;;;;x
 mazdaki_wealth_0_desc;There is no system of wealth sharing, just as it has always been.;;;;;;;;;;;;;x
 mazdaki_wealth_0_option;None;;;;;;;;;;;;;x
 mazdaki_wealth_1;Minimal Wealth Sharing;;;;;;;;;;;;;x
-mazdaki_wealth_1_desc;The [mazdakism.GetName] nobility must put aside a token amount of wealth for the people -- more for show than anything substantial.;;;;;;;;;;;;;x
+mazdaki_wealth_1_desc;The [mazdaki.GetName] nobility must put aside a token amount of wealth for the people -- more for show than anything substantial.;;;;;;;;;;;;;x
 mazdaki_wealth_1_option;Minimal;;;;;;;;;;;;;x
 mazdaki_wealth_2;Basic Wealth Sharing;;;;;;;;;;;;;x
-mazdaki_wealth_2_desc;The [mazdakism.GetName] nobility must put aside a portion of their wealth and taxes in order to subsidize the poorest of the poor.;;;;;;;;;;;;;x
+mazdaki_wealth_2_desc;The [mazdaki.GetName] nobility must put aside a portion of their wealth and taxes in order to subsidize the poorest of the poor.;;;;;;;;;;;;;x
 mazdaki_wealth_2_option;Basic;;;;;;;;;;;;;x
 mazdaki_wealth_3;High Wealth Sharing;;;;;;;;;;;;;x
 mazdaki_wealth_3_desc;A large amount of the taxes and wealth possessed by the nobility must go towards the people -- the building of shelters for the poor, the standard granting of gifts for the ill-favored, and the construction of hospitals for the sick.;;;;;;;;;;;;;x
@@ -478,11 +478,11 @@ patron_addai_desc;St. Addai is the patron Saint of this character;;;;;;;;;;;;;x
 patron_adelphius;St. Adelphius;;;;;;;;;;;;;x
 patron_adelphius_desc;St. Adelphius is the patron Saint of this character;;;;;;;;;;;;;x
 patron_discernment;The Power of Discernment;;;;;;;;;;;;;x
-patron_discernment_desc;This [Root.GetManWoman] has devoted [Root.GetHerselfHimself] to the [mazdakism.GetName] Power of discernment.;;;;;;;;;;;;;x
+patron_discernment_desc;This [Root.GetManWoman] has devoted [Root.GetHerselfHimself] to the [mazdaki.GetName] Power of discernment.;;;;;;;;;;;;;x
 patron_intelligence;Reyana;;;;;;;;;;;;;x
 patron_intelligence_desc;The Shekhinah of Intelligence;;;;;;;;;;;;;x
 patron_joy;The Power of Joy;;;;;;;;;;;;;x
-patron_joy_desc;This [Root.GetManWoman] has devoted [Root.GetHerselfHimself] to the [mazdakism.GetName] Power of joy.;;;;;;;;;;;;;x
+patron_joy_desc;This [Root.GetManWoman] has devoted [Root.GetHerselfHimself] to the [mazdaki.GetName] Power of joy.;;;;;;;;;;;;;x
 patron_lucifer;Lucifer;;;;;;;;;;;;;x
 patron_lucifer_desc;Lucifer, eldest son of [messalian.GetHighGodName], is the patron Saint of this character;;;;;;;;;;;;;x
 patron_mani_understanding;Tar'îtâ;;;;;;;;;;;;;x
@@ -492,13 +492,13 @@ patron_mind_desc;The Shekhinah of Mind;;;;;;;;;;;;;x
 patron_nestor;St. Nestorius;;;;;;;;;;;;;x
 patron_nestor_desc;St. Nestorius is the patron Saint of this character;;;;;;;;;;;;;x
 patron_preservation;The Power of Preservation;;;;;;;;;;;;;x
-patron_preservation_desc;This [Root.GetManWoman] has devoted [Root.GetHerselfHimself] to the [mazdakism.GetName] Power of preservation.;;;;;;;;;;;;;x
+patron_preservation_desc;This [Root.GetManWoman] has devoted [Root.GetHerselfHimself] to the [mazdaki.GetName] Power of preservation.;;;;;;;;;;;;;x
 patron_reason;Haunâ;;;;;;;;;;;;;x
 patron_reason_desc;The Shekhinah of Reason;;;;;;;;;;;;;x
 patron_thought;Mahíabtâ;;;;;;;;;;;;;x
 patron_thought_desc;The Shekhinah of Thought;;;;;;;;;;;;;x
 patron_understanding;The Power of Understanding;;;;;;;;;;;;;x
-patron_understanding_desc;This [Root.GetManWoman] has devoted [Root.GetHerselfHimself] to the [mazdakism.GetName] Power of understanding.;;;;;;;;;;;;;x
+patron_understanding_desc;This [Root.GetManWoman] has devoted [Root.GetHerselfHimself] to the [mazdaki.GetName] Power of understanding.;;;;;;;;;;;;;x
 paulician_suppression;[paulician.GetName] Suppression;;;;;;;;;;;;;x
 paulician_suppression_desc;[paulician.GetName] heretics are being violently oppressed in the province, causing widespread chaos and destruction.;;;;;;;;;;;;;x
 raise_tribal_units_timer;Raised Warriors;;;;;;;;;;;;;x
@@ -585,19 +585,19 @@ INSULT_KAFIR;apostate;;;;;;;;;;;;;x
 kharijite_kafir;Kafir;;;;;;;;;;;;;x
 kharijite_kafir_desc;This [Root.GetManWoman] has been declared 'kafir', or an apostate to the [kharijite.GetName] faith.;;;;;;;;;;;;;x
 koasasa_azrael;Koasasa;;;;;;;;;;;;;x
-koasasa_azrael_desc;This [Root.GetManWoman] is believed by the [yazidism.GetName] to be a koasasa, or earthly reincarnation, of Melek Azrael, the Angel of Death.;;;;;;;;;;;;;x
+koasasa_azrael_desc;This [Root.GetManWoman] is believed by the [yazidi.GetName] to be a koasasa, or earthly reincarnation, of Melek Azrael, the Angel of Death.;;;;;;;;;;;;;x
 koasasa_dardael;Koasasa;;;;;;;;;;;;;x
-koasasa_dardael_desc;This [Root.GetManWoman] is believed by the [yazidism.GetName] to be a koasasa, or earthly reincarnation, of an angelic being by the name of Melek Dardael.;;;;;;;;;;;;;x
+koasasa_dardael_desc;This [Root.GetManWoman] is believed by the [yazidi.GetName] to be a koasasa, or earthly reincarnation, of an angelic being by the name of Melek Dardael.;;;;;;;;;;;;;x
 koasasa_israfel;Koasasa;;;;;;;;;;;;;x
-koasasa_israfel_desc;This [Root.GetManWoman] is believed by the [yazidism.GetName] to be a koasasa, or earthly reincarnation, of Melek Israfel, the Burning Angel of the Trumpet.;;;;;;;;;;;;;x
+koasasa_israfel_desc;This [Root.GetManWoman] is believed by the [yazidi.GetName] to be a koasasa, or earthly reincarnation, of Melek Israfel, the Burning Angel of the Trumpet.;;;;;;;;;;;;;x
 koasasa_mihael;Koasasa;;;;;;;;;;;;;x
-koasasa_mihael_desc;This [Root.GetManWoman] is believed by the [yazidism.GetName] to be a koasasa, or earthly reincarnation, of Melek Mihael, the Commander of the Armies of [yazidi.GetHighGodName].;;;;;;;;;;;;;x
+koasasa_mihael_desc;This [Root.GetManWoman] is believed by the [yazidi.GetName] to be a koasasa, or earthly reincarnation, of Melek Mihael, the Commander of the Armies of [yazidi.GetHighGodName].;;;;;;;;;;;;;x
 koasasa_nurael;Koasasa;;;;;;;;;;;;;x
-koasasa_nurael_desc;This [Root.GetManWoman] is believed by the [yazidism.GetName] to be a koasasa, or earthly reincarnation, of an angelic being by the name of Melek Nurael.;;;;;;;;;;;;;x
+koasasa_nurael_desc;This [Root.GetManWoman] is believed by the [yazidi.GetName] to be a koasasa, or earthly reincarnation, of an angelic being by the name of Melek Nurael.;;;;;;;;;;;;;x
 koasasa_samael;Koasasa;;;;;;;;;;;;;x
-koasasa_samael_desc;This [Root.GetManWoman] is believed by the [yazidism.GetName] to be a koasasa, or earthly reincarnation, of Melek Samael, the Accuser and Destroyer.;;;;;;;;;;;;;x
+koasasa_samael_desc;This [Root.GetManWoman] is believed by the [yazidi.GetName] to be a koasasa, or earthly reincarnation, of Melek Samael, the Accuser and Destroyer.;;;;;;;;;;;;;x
 koasasa_taus;Koasasa;;;;;;;;;;;;;x
-koasasa_taus_desc;This [Root.GetManWoman] is believed by the [yazidism.GetName] to be a koasasa, or earthly reincarnation, of Melek Taus, the Peacock Angel and most revered of their faith.;;;;;;;;;;;;;x
+koasasa_taus_desc;This [Root.GetManWoman] is believed by the [yazidi.GetName] to be a koasasa, or earthly reincarnation, of Melek Taus, the Peacock Angel and most revered of their faith.;;;;;;;;;;;;;x
 martyr;Martyr;;;;;;;;;;;;;x
 martyr_desc;This [Root.GetManWoman] died a [christian.GetGroupName] martyr.;;;;;;;;;;;;;x
 messalian_master;Perfection;;;;;;;;;;;;;x
@@ -617,7 +617,7 @@ emf_saint;Saint;;;;;;;;;;;;;x
 emf_saint_desc;This [Root.GetManWoman] is revered as a [christian.GetGroupName] saint, having been officially canonized by the head of their religion.;;;;;;;;;;;;;x
 sandaliati;Sandaliati;;;;;;;;;;;;;x
 sandaliati_desc;The Sandaliati are the underground agents of the [waldensian.GetName] Church.;;;;;;;;;;;;;x
-yazidi_pilgrim;[yazidism.GetName] Pilgrim;;;;;;;;;;;;;x
+yazidi_pilgrim;[yazidi.GetName] Pilgrim;;;;;;;;;;;;;x
 yazidi_pilgrim_desc;This [Root.GetManWoman] made the long journey to Lalish to attend the Feast of Assembly.;;;;;;;;;;;;;x
 #
 ##### CASTE TRAITS #####
@@ -766,9 +766,9 @@ manichean_create_leader_desc;The [mani.GetName] faith has been without a true le
 manichean_patronize_art;Patronize Art;;;;;;;;;;;;;x
 manichean_patronize_art_desc;Religious artwork is important to the [mani.GetName] faith. Mani himself was known as 'the Artist', and [mani.GetName] rulers would donate their wealth to support the creation of new artistic works.;;;;;;;;;;;;;x
 mazdaki_restore_priesthood;Create [d_mazdaki.GetFullName];;;;;;;;;;;;;x
-mazdaki_restore_priesthood_desc;While Mazdak railed against the oppression of the [d_zoroastrian.GetFullName], now that his teachings have spread across all of [k_persia.GetName] perhaps the time has come to institue an organized priesthood of our own -- one that espouses the egalitarian principles upon which the [mazdakism.GetName] faith is founded.;;;;;;;;;;;;;x
-mazdaki_choose_patron_deity;Choose [mazdakism.GetName] Power;;;;;;;;;;;;;x
-mazdaki_choose_patron_deity_desc;The [mazdakism.GetName] teach there are four Powers that bring Light into the World: Discernment, Understanding, Preservation, and Joy. Any adult member of the faith may embrace one of these Powers. in an attempt to achieve eventual perfection.;;;;;;;;;;;;;x
+mazdaki_restore_priesthood_desc;While Mazdak railed against the oppression of the [d_zoroastrian.GetFullName], now that his teachings have spread across all of [k_persia.GetName] perhaps the time has come to institue an organized priesthood of our own -- one that espouses the egalitarian principles upon which the [mazdaki.GetName] faith is founded.;;;;;;;;;;;;;x
+mazdaki_choose_patron_deity;Choose [mazdaki.GetName] Power;;;;;;;;;;;;;x
+mazdaki_choose_patron_deity_desc;The [mazdaki.GetName] teach there are four Powers that bring Light into the World: Discernment, Understanding, Preservation, and Joy. Any adult member of the faith may embrace one of these Powers. in an attempt to achieve eventual perfection.;;;;;;;;;;;;;x
 messalian_abandon_prayers;Abandon Prayers;;;;;;;;;;;;;x
 messalian_abandon_prayers_desc;The process of driving out one's demons is an exhausting process, perhaps even dangerous. While it would mean failure in the eyes of the Holy Spirit, perhaps it is best to put aside the prayers for a time and restore your strength before attempting them again.;;;;;;;;;;;;;x
 messalian_become_master;Achieve Perfection;;;;;;;;;;;;;x
@@ -814,9 +814,9 @@ waldensian_choose_path_desc;The [waldensian.GetName]s offer three different path
 waldensian_hospital;Build Hospital;;;;;;;;;;;;;x
 waldensian_hospital_desc;To better care for the poor, your councilors have advised building a hospital in [Root.Capital.GetName] to give proper medical care to the city. While it would be expensive to build and maintain, it would benefit the people enormously.;;;;;;;;;;;;;x
 yazidi_peacock_feast;Celebrate Tawûsgeran;;;;;;;;;;;;;x
-yazidi_peacock_feast_desc;Tawûsgeran, also known as 'Circulation of the Peacock', is an important [yazidism.GetName] festival where Qewals and other religious dignitaries visit [yazidism.GetName] villages, bringing the senjaq, sacred images of a peacock made from brass symbolising Tawûsê Melek. These are venerated, taxes are collected from the pious, sermons are preached and holy water distributed.;;;;;;;;;;;;;x
-yazidi_pilgrimage;[yazidism.GetName] Pilgrimage;;;;;;;;;;;;;x
-yazidi_pilgrimage_desc;Go on a pilgrimage that is of vital importance to the [yazidism.GetName] faithful: a voyage to visit the Tomb of Sheikh Adi ibn Musafir, and attend the Feast of the Assembly.;;;;;;;;;;;;;x
+yazidi_peacock_feast_desc;Tawûsgeran, also known as 'Circulation of the Peacock', is an important [yazidi.GetName] festival where Qewals and other religious dignitaries visit [yazidi.GetName] villages, bringing the senjaq, sacred images of a peacock made from brass symbolising Tawûsê Melek. These are venerated, taxes are collected from the pious, sermons are preached and holy water distributed.;;;;;;;;;;;;;x
+yazidi_pilgrimage;[yazidi.GetName] Pilgrimage;;;;;;;;;;;;;x
+yazidi_pilgrimage_desc;Go on a pilgrimage that is of vital importance to the [yazidi.GetName] faithful: a voyage to visit the Tomb of Sheikh Adi ibn Musafir, and attend the Feast of the Assembly.;;;;;;;;;;;;;x
 #
 #### EVENTS #####
 #
@@ -900,14 +900,14 @@ EVTDESC_emf_heresy_257;It is said that the Abbasids would never have been able t
 EVTOPTA_emf_heresy_257;This is an outrage!;;;;;;;;;;;;;x
 EVTOPTB_emf_heresy_257;It's about time!;;;;;;;;;;;;;x
 EVTNAME_emf_heresy_258;The [d_mazdaki.GetFullName];;;;;;;;;;;;;x
-EVTDESC_emf_heresy_258;Although the Prophet Mazdak always railed against the corruption of the [d_zoroastrian.GetFullName], and his followers have never had an official structure to speak of, now that the faith has risen to such prominence under [Root.GetTitledName] it seems the time has come to give it to them. With [new_mazdaki_leader.GetTitledFirstName] chosen as the new [new_mazdaki_leader.PrimaryTitle.GetRulerTitle] of the [new_mazdaki_leader.PrimaryTitle.GetFullName], the [mazdakism.GetName] faith has entered a new era, with a priesthood rivalling that of the [zoroastrian.GetName]s from which they once stemmed... and have, perhaps, now exceeded.;;;;;;;;;;;;;x
+EVTDESC_emf_heresy_258;Although the Prophet Mazdak always railed against the corruption of the [d_zoroastrian.GetFullName], and his followers have never had an official structure to speak of, now that the faith has risen to such prominence under [Root.GetTitledName] it seems the time has come to give it to them. With [new_mazdaki_leader.GetTitledFirstName] chosen as the new [new_mazdaki_leader.PrimaryTitle.GetRulerTitle] of the [new_mazdaki_leader.PrimaryTitle.GetFullName], the [mazdaki.GetName] faith has entered a new era, with a priesthood rivalling that of the [zoroastrian.GetName]s from which they once stemmed... and have, perhaps, now exceeded.;;;;;;;;;;;;;x
 EVTOPTA_emf_heresy_258;A glorious day!;;;;;;;;;;;;;x
-EVTDESC_emf_heresy_259;The [mazdakism.GetName] teach there are four Powers that bring Light into the World: Discernment, Understanding, Preservation, and Joy. Any adult member of the faith may embrace one of these Powers. in an attempt to achieve eventual perfection.;;;;;;;;;;;;;x
+EVTDESC_emf_heresy_259;The [mazdaki.GetName] teach there are four Powers that bring Light into the World: Discernment, Understanding, Preservation, and Joy. Any adult member of the faith may embrace one of these Powers. in an attempt to achieve eventual perfection.;;;;;;;;;;;;;x
 EVTOPTA_emf_heresy_259;I choose the Power of Discernment.;;;;;;;;;;;;;x
 EVTOPTB_emf_heresy_259;I choose the Power of Understanding.;;;;;;;;;;;;;x
 EVTOPTC_emf_heresy_259;I choose the Power of Preservation.;;;;;;;;;;;;;x
 EVTOPTD_emf_heresy_259;I choose the Power of Joy.;;;;;;;;;;;;;x
-EVTDESC_emf_heresy_260;You have begun preparations for the Tawûsgeran festival, also known as the 'Circulation of the Peacock'. You send out messengers with invitations to your [yazidism.GetName] vassals, expecting all to come and honor Melek Taus, greatest among the seven angels.;;;;;;;;;;;;;x
+EVTDESC_emf_heresy_260;You have begun preparations for the Tawûsgeran festival, also known as the 'Circulation of the Peacock'. You send out messengers with invitations to your [yazidi.GetName] vassals, expecting all to come and honor Melek Taus, greatest among the seven angels.;;;;;;;;;;;;;x
 EVTOPTA_emf_heresy_260;I've been looking forward to this!;;;;;;;;;;;;;x
 EVTDESC_emf_heresy_261;[Root.GetTitledFirstName],\n\nThe time has come once again for us all to celebrate the Tawûsgeran, a time to honor Melek Taus - He who is most holy amongst the seven angels. The festival will take place in [From.Capital.GetName], and you are hereby formally invited to attend.\nSincerely,\n[From.GetTitledName];;;;;;;;;;;;;x
 EVTDESC_emf_heresy_263;The Tawûsgeran festival is well under way when you finally arrive in [FromFrom.Capital.GetName]. [Root.Religion.GetPriestTitleCap]s walk throughout the crowds, giving out vials of holy water to the faithful. You can hear the holy rites to the Seven being chanted at shrines everywhere you walk, though the name of Melek Taus is most prominent amongst them.;;;;;;;;;;;;;x
@@ -940,22 +940,22 @@ EVTOPTA_emf_heresy_273;Until next time!;;;;;;;;;;;;;x
 EVTDESC_emf_heresy_277;Sadly, the death of [From.GetTitledFirstName] means the Circulation of the Peacock must be canceled.;;;;;;;;;;;;;x
 EVTOPTA_emf_heresy_277;Such is how it is.;;;;;;;;;;;;;x
 EVTNAME_emf_heresy_278;A Koasasa is Discovered;;;;;;;;;;;;;x
-EVTDESC_emf_heresy_278_taus;The concept of metempsychosis, or rebirth, is central to the [yazidism.GetName] faith. Indeed, they believe it is possible for the Seven Archangels to be reborn among the faithful as 'koasasa'. Today it has been declared that [Root.GetTitledName] is none other than the koasasa of the Peacock Angel himself, Melek Taus. [yazidism.GetName] throughout the land celebrate this discovery, and everywhere the young man travels he is given offerings by those overjoyed by the angel's return to the mortal world.;;;;;;;;;;;;;x
-EVTDESC_emf_heresy_278_israfel;The concept of metempsychosis, or rebirth, is central to the [yazidism.GetName] faith. Indeed, they believe it is possible for the Seven Archangels to be reborn among the faithful as 'koasasa'. Today it has been declared that [Root.GetTitledName] is none other than the koasasa of the Burning Angel of the Trumpet, Melek Israfel. [yazidism.GetName] throughout the land celebrate this discovery, and everywhere the young man travels he is given offerings by those overjoyed by the angel's return to the mortal world.;;;;;;;;;;;;;x
-EVTDESC_emf_heresy_278_azrael;The concept of metempsychosis, or rebirth, is central to the [yazidism.GetName] faith. Indeed, they believe it is possible for the Seven Archangels to be reborn among the faithful as 'koasasa'. Today it has been declared that [Root.GetTitledName] is none other than the koasasa of the Angel of Death, Melek Azrael. [yazidism.GetName] throughout the land celebrate this discovery, and everywhere the young man travels he is given offerings by those overjoyed by the angel's return to the mortal world.;;;;;;;;;;;;;x
-EVTDESC_emf_heresy_278_mihael;The concept of metempsychosis, or rebirth, is central to the [yazidism.GetName] faith. Indeed, they believe it is possible for the Seven Archangels to be reborn among the faithful as 'koasasa'. Today it has been declared that [Root.GetTitledName] is none other than the koasasa of the Commander of the Armies of [yazidi.GetHighGodName], Melek Mihael. [yazidism.GetName] throughout the land celebrate this discovery, and everywhere the young man travels he is given offerings by those overjoyed by the angel's return to the mortal world.;;;;;;;;;;;;;x
-EVTDESC_emf_heresy_278_dardael;The concept of metempsychosis, or rebirth, is central to the [yazidism.GetName] faith. Indeed, they believe it is possible for the Seven Archangels to be reborn among the faithful as 'koasasa'. Today it has been declared that [Root.GetTitledName] is none other than the koasasa of the Great Angel, Melek Dardael. [yazidism.GetName] throughout the land celebrate this discovery, and everywhere the young man travels he is given offerings by those overjoyed by the angel's return to the mortal world.;;;;;;;;;;;;;x
-EVTDESC_emf_heresy_278_samael;The concept of metempsychosis, or rebirth, is central to the [yazidism.GetName] faith. Indeed, they believe it is possible for the Seven Archangels to be reborn among the faithful as 'koasasa'. Today it has been declared that [Root.GetTitledName] is none other than the koasasa of the Accuser and Destroyer, Melek Samael. [yazidism.GetName] throughout the land celebrate this discovery, and everywhere the young man travels he is given offerings by those overjoyed by the angel's return to the mortal world.;;;;;;;;;;;;;x
-EVTDESC_emf_heresy_278_nurael;The concept of metempsychosis, or rebirth, is central to the [yazidism.GetName] faith. Indeed, they believe it is possible for the Seven Archangels to be reborn among the faithful as 'koasasa'. Today it has been declared that [Root.GetTitledName] is none other than the koasasa of the Great Angel, Melek Nurael. [yazidism.GetName] throughout the land celebrate this discovery, and everywhere the young man travels he is given offerings by those overjoyed by the angel's return to the mortal world.;;;;;;;;;;;;;x
+EVTDESC_emf_heresy_278_taus;The concept of metempsychosis, or rebirth, is central to the [yazidi.GetName] faith. Indeed, they believe it is possible for the Seven Archangels to be reborn among the faithful as 'koasasa'. Today it has been declared that [Root.GetTitledName] is none other than the koasasa of the Peacock Angel himself, Melek Taus. [yazidi.GetName] throughout the land celebrate this discovery, and everywhere the young man travels he is given offerings by those overjoyed by the angel's return to the mortal world.;;;;;;;;;;;;;x
+EVTDESC_emf_heresy_278_israfel;The concept of metempsychosis, or rebirth, is central to the [yazidi.GetName] faith. Indeed, they believe it is possible for the Seven Archangels to be reborn among the faithful as 'koasasa'. Today it has been declared that [Root.GetTitledName] is none other than the koasasa of the Burning Angel of the Trumpet, Melek Israfel. [yazidi.GetName] throughout the land celebrate this discovery, and everywhere the young man travels he is given offerings by those overjoyed by the angel's return to the mortal world.;;;;;;;;;;;;;x
+EVTDESC_emf_heresy_278_azrael;The concept of metempsychosis, or rebirth, is central to the [yazidi.GetName] faith. Indeed, they believe it is possible for the Seven Archangels to be reborn among the faithful as 'koasasa'. Today it has been declared that [Root.GetTitledName] is none other than the koasasa of the Angel of Death, Melek Azrael. [yazidi.GetName] throughout the land celebrate this discovery, and everywhere the young man travels he is given offerings by those overjoyed by the angel's return to the mortal world.;;;;;;;;;;;;;x
+EVTDESC_emf_heresy_278_mihael;The concept of metempsychosis, or rebirth, is central to the [yazidi.GetName] faith. Indeed, they believe it is possible for the Seven Archangels to be reborn among the faithful as 'koasasa'. Today it has been declared that [Root.GetTitledName] is none other than the koasasa of the Commander of the Armies of [yazidi.GetHighGodName], Melek Mihael. [yazidi.GetName] throughout the land celebrate this discovery, and everywhere the young man travels he is given offerings by those overjoyed by the angel's return to the mortal world.;;;;;;;;;;;;;x
+EVTDESC_emf_heresy_278_dardael;The concept of metempsychosis, or rebirth, is central to the [yazidi.GetName] faith. Indeed, they believe it is possible for the Seven Archangels to be reborn among the faithful as 'koasasa'. Today it has been declared that [Root.GetTitledName] is none other than the koasasa of the Great Angel, Melek Dardael. [yazidi.GetName] throughout the land celebrate this discovery, and everywhere the young man travels he is given offerings by those overjoyed by the angel's return to the mortal world.;;;;;;;;;;;;;x
+EVTDESC_emf_heresy_278_samael;The concept of metempsychosis, or rebirth, is central to the [yazidi.GetName] faith. Indeed, they believe it is possible for the Seven Archangels to be reborn among the faithful as 'koasasa'. Today it has been declared that [Root.GetTitledName] is none other than the koasasa of the Accuser and Destroyer, Melek Samael. [yazidi.GetName] throughout the land celebrate this discovery, and everywhere the young man travels he is given offerings by those overjoyed by the angel's return to the mortal world.;;;;;;;;;;;;;x
+EVTDESC_emf_heresy_278_nurael;The concept of metempsychosis, or rebirth, is central to the [yazidi.GetName] faith. Indeed, they believe it is possible for the Seven Archangels to be reborn among the faithful as 'koasasa'. Today it has been declared that [Root.GetTitledName] is none other than the koasasa of the Great Angel, Melek Nurael. [yazidi.GetName] throughout the land celebrate this discovery, and everywhere the young man travels he is given offerings by those overjoyed by the angel's return to the mortal world.;;;;;;;;;;;;;x
 EVTOPTA_emf_heresy_278;I will do my best to live up to this honor!;;;;;;;;;;;;;x
 EVTOPTB_emf_heresy_278;A glorious day for us all!;;;;;;;;;;;;;x
-EVTDESC_emf_heresy_279;The pilgrimage to Lalish, a site just outside of the bustling city of Mosul, is one of the most important journeys a [yazidism.GetName] can undertake. There one attends the Feast of the Assembly, and returns filled with the spirit and strength of the Seven Archangels... or so the story goes.;;;;;;;;;;;;;x
+EVTDESC_emf_heresy_279;The pilgrimage to Lalish, a site just outside of the bustling city of Mosul, is one of the most important journeys a [yazidi.GetName] can undertake. There one attends the Feast of the Assembly, and returns filled with the spirit and strength of the Seven Archangels... or so the story goes.;;;;;;;;;;;;;x
 EVTDESC_emf_heresy_280;The day has come. Your belongings are packed, arrangements have been made for matters in [Root.Capital.GetName] to be attended to while you are away, and your departure has been kept quiet to prevent the unsavory from taking advantage of your solitary journey. Now you must begin your journey to Lalish.;;;;;;;;;;;;;x
 EVTNAME_emf_heresy_281;Arrival at Lalish;;;;;;;;;;;;;x
-EVTDESC_emf_heresy_281;You arrive in the bustling city of holy Mosul, and it is not long before you make your way to Lalish, a mountain valley village not far to the north. This sleepy place is where the [yazidism.GetName] faith truly began, and as the Feast of the Assembly unfolds, prayers offered to the Seven Archangels up in the heavens, you marvel at the conical roofs of Sheikh Adi ibn Musafir's tomb. The rest of your stay will be spent in Mosul, but you cannot help but feel overcome at having taken a path so many have walked before you.;;;;;;;;;;;;;x
+EVTDESC_emf_heresy_281;You arrive in the bustling city of holy Mosul, and it is not long before you make your way to Lalish, a mountain valley village not far to the north. This sleepy place is where the [yazidi.GetName] faith truly began, and as the Feast of the Assembly unfolds, prayers offered to the Seven Archangels up in the heavens, you marvel at the conical roofs of Sheikh Adi ibn Musafir's tomb. The rest of your stay will be spent in Mosul, but you cannot help but feel overcome at having taken a path so many have walked before you.;;;;;;;;;;;;;x
 EVTOPTA_emf_heresy_281;Now, what to do next?;;;;;;;;;;;;;x
-EVTNAME_emf_heresy_285;The [yazidism.GetName] Faith;;;;;;;;;;;;;x
-EVTDESC_emf_heresy_285;There are many who claim the [yazidism.GetName] to be devil-worshippers, due to their veneration of the Peacock Angel they call Melek Taus or Shaytan. This has led the [yazidism.GetName] to be considered [muslim.GetGroupName] heretics for countless generations, even though their religion incorporates syncretic elements of not only the [muslim.GetGroupName] faith but also Gnosticism and the [zoroastrian.GetName] faith. Now, with [Root.GetTitledName] having risen to such power, [Root.GetSheHe] has declared the [yazidism.GetName] to be their own faith and no heresy -- and [Root.GetSheHe] has the prestige to be listened to. In the end, it may change nothing save to the [yazidism.GetName] themselves, but even so it is a sign as to just how far they have come since the ancient days of worshipping at hidden [Root.GetHouseOfWorship]s in the Kurdish foothills.;;;;;;;;;;;;;x
+EVTNAME_emf_heresy_285;The [yazidi.GetName] Faith;;;;;;;;;;;;;x
+EVTDESC_emf_heresy_285;There are many who claim the [yazidi.GetName] to be devil-worshippers, due to their veneration of the Peacock Angel they call Melek Taus or Shaytan. This has led the [yazidism.GetName] to be considered [muslim.GetGroupName] heretics for countless generations, even though their religion incorporates syncretic elements of not only the [muslim.GetGroupName] faith but also Gnosticism and the [zoroastrian.GetName] faith. Now, with [Root.GetTitledName] having risen to such power, [Root.GetSheHe] has declared the [yazidism.GetName] to be their own faith and no heresy -- and [Root.GetSheHe] has the prestige to be listened to. In the end, it may change nothing save to the [yazidism.GetName] themselves, but even so it is a sign as to just how far they have come since the ancient days of worshipping at hidden [Root.GetHouseOfWorship]s in the Kurdish foothills.;;;;;;;;;;;;;x
 EVTOPTA_emf_heresy_285;Praise to Melek Taus!;;;;;;;;;;;;;x
 EVTOPTB_emf_heresy_285;They are still devil-worshippers.;;;;;;;;;;;;;x
 EVTNAME_emf_heresy_1800;A New Reign;;;;;;;;;;;;;x

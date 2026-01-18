@@ -272,6 +272,27 @@ character_event = {
 			}
 			set_flag = emf_inv_cooldown_@FROM
 		}
+		# Slavery
+		if = {
+			limit = { # A secondary crown title creation where primary title has cooldown
+				primary_title = {
+					higher_tier_than = DUKE
+					NOT = { title = FROM }
+					ROOT = { has_flag = novum_imperium_slavery_law_cooldown_@PREV }
+				}
+			}
+			set_flag = novum_imperium_slavery_law_cooldown_@FROM
+		}
+		if = {
+			limit = { # A primary title creation (can only be an empire) where there is a prior cooldown
+				FROM = { is_primary_holder_title = yes }
+				any_demesne_title = {
+					higher_tier_than = DUKE
+					ROOT = { has_flag = novum_imperium_slavery_law_cooldown_@PREV }
+				}
+			}
+			set_flag = novum_imperium_slavery_law_cooldown_@FROM
+		}
 		# NOTE: Imperial Kingdom Creation law does not need to copy cooldowns upon title creation
 	}
 }

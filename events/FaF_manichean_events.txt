@@ -36,7 +36,7 @@ namespace = manichean
 	# option = {
 		# name = "manichean.1000.a"
 		# d_manichean = { destroy_landed_title = THIS }
-		# banish_religion = mani
+		# banish_religion = manichean
 		# any_playable_ruler = {
 				# limit = { 
 					# ai = no 
@@ -63,7 +63,7 @@ namespace = manichean
 		# name = manichean.1001.a
 		# trigger = {
 			# OR = {
-				# religion = mani
+				# religion = manichean
 				# religion = mandaean
 			# }
 		# }
@@ -73,7 +73,7 @@ namespace = manichean
 		# trigger = {
 			# NOT = {
 				# OR = {
-				# religion = mani
+				# religion = manichean
 				# religion = mandaean
 			# }
 				# religion_group = muslim
@@ -103,7 +103,7 @@ namespace = manichean
 		# name = manichean.1002.a
 		# trigger = {
 			# OR = {
-				# religion = mani
+				# religion = manichean
 				# religion = mandaean
 			# }
 		# }
@@ -113,7 +113,7 @@ namespace = manichean
 		# trigger = {
 			# NOT = {
 				# OR = {
-				# religion = mani
+				# religion = manichean
 				# religion = mandaean
 			# }
 				# religion_group = muslim
@@ -483,7 +483,7 @@ character_event = {
 
 	trigger = {
 		OR = {
-			religion = mani
+			religion = manichean
 			religion = mandaean
 			religion = mandaean_reformed
 		}
@@ -496,7 +496,7 @@ character_event = {
 			}
 			learning = 10
 			OR = {
-				religion = mani
+				religion = manichean
 				religion = mandaean
 				religion = mandaean_reformed
 			}
@@ -518,7 +518,7 @@ character_event = {
 				}
 				learning = 10
 				OR = {
-					religion = mani
+					religion = manichean
 					religion = mandaean
 					religion = mandaean_reformed
 				}
@@ -738,7 +738,7 @@ character_event = {
 	    # create_character = {
 				# random_traits = yes
 				# culture = ROOT
-				# religion = mani
+				# religion = manichean
 				# trait = manichean_elect
 				# trait = mastermind_theologian
 				# dynasty = none
@@ -811,7 +811,7 @@ character_event = {
 	# option = {
 		# name = manichean.61.a
 		# ai_chance = { factor = 100 }
-		# religion = mani
+		# religion = manichean
 	# }
 	# option = {
 		# name = manichean.61.b
@@ -830,7 +830,7 @@ character_event = {
 	# prisoner = no
 	
 	# trigger = {
-	    # religion = mani
+	    # religion = manichean
 		# trait = manichean_elect
 		# employer = {
 		    # age = 16

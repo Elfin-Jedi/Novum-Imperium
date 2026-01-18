@@ -126,7 +126,9 @@ character_event = {
 						culture = ROOT
 						county = {
 							grant_title = ROOT
-							set_defacto_liege = FROM
+							ROOT = {
+								set_defacto_liege = FROM
+							}
 						}
 					}
 				}

@@ -1,5 +1,5 @@
 name="Novum Imperium: A Mod Merger"
-path="mod/Novum-Imperium"
+archive="mod/Novum-Imperium"
 user_dir="Novum Imperium"
 
 replace_path = "common/artifacts"

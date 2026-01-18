@@ -793,18 +793,18 @@ zealot_pattern_for = {
 	mazdaki_wealth_0 = {
 		is_landed = yes
 		is_feudal = yes
-		NOT = { religion = mazdakism }
+		NOT = { religion = mazdaki }
 	}
 	mazdaki_wealth_1 = {
 		OR = {
 			AND = {
 				is_landed = yes
 				is_feudal = yes
-				NOT = { religion = mazdakism }
+				NOT = { religion = mazdaki }
 				FROMFROM = { has_law = mazdaki_wealth_2 }
 			}
 			AND = {
-				religion = mazdakism
+				religion = mazdaki
 				FROMFROM = { has_law = mazdaki_wealth_0 }
 			}
 		}
@@ -814,11 +814,11 @@ zealot_pattern_for = {
 			AND = {
 				is_landed = yes
 				is_feudal = yes
-				NOT = { religion = mazdakism }
+				NOT = { religion = mazdaki }
 				FROMFROM = { has_law = mazdaki_wealth_3 }
 			}
 			AND = {
-				religion = mazdakism
+				religion = mazdaki
 				FROMFROM = { has_law = mazdaki_wealth_1 }
 			}
 		}
@@ -828,17 +828,17 @@ zealot_pattern_for = {
 			AND = {
 				is_landed = yes
 				is_feudal = yes
-				NOT = { religion = mazdakism }
+				NOT = { religion = mazdaki }
 				FROMFROM = { has_law = mazdaki_wealth_4 }
 			}
 			AND = {
-				religion = mazdakism
+				religion = mazdaki
 				FROMFROM = { has_law = mazdaki_wealth_2 }
 			}
 		}
 	}
 	mazdaki_wealth_4 = {
-		religion = mazdakism
+		religion = mazdaki
 	}
 	
 	infighting_0 = { always = no }
@@ -1562,18 +1562,18 @@ zealot_pattern_against = {
 		}
 	}
 	mazdaki_wealth_0 = {
-		religion = mazdakism
+		religion = mazdaki
 	}
 	mazdaki_wealth_1 = {
 		OR = {
 			AND = {
 				is_landed = yes
 				is_feudal = yes
-				NOT = { religion = mazdakism }
+				NOT = { religion = mazdaki }
 				FROMFROM = { has_law = mazdaki_wealth_0 }
 			}
 			AND = {
-				religion = mazdakism
+				religion = mazdaki
 				FROMFROM = { has_law = mazdaki_wealth_2 }
 			}
 		}
@@ -1583,11 +1583,11 @@ zealot_pattern_against = {
 			AND = {
 				is_landed = yes
 				is_feudal = yes
-				NOT = { religion = mazdakism }
+				NOT = { religion = mazdaki }
 				FROMFROM = { has_law = mazdaki_wealth_1 }
 			}
 			AND = {
-				religion = mazdakism
+				religion = mazdaki
 				FROMFROM = { has_law = mazdaki_wealth_3 }
 			}
 		}
@@ -1597,11 +1597,11 @@ zealot_pattern_against = {
 			AND = {
 				is_landed = yes
 				is_feudal = yes
-				NOT = { religion = mazdakism }
+				NOT = { religion = mazdaki }
 				FROMFROM = { has_law = mazdaki_wealth_2 }
 			}
 			AND = {
-				religion = mazdakism
+				religion = mazdaki
 				FROMFROM = { has_law = mazdaki_wealth_4 }
 			}
 		}
@@ -1609,7 +1609,7 @@ zealot_pattern_against = {
 	mazdaki_wealth_4 = {
 		is_landed = yes
 		is_feudal = yes
-		NOT = { religion = mazdakism }
+		NOT = { religion = mazdaki }
 	}
 	
 	infighting_0 = { religion_head = { character = FROMFROM } }

@@ -810,7 +810,7 @@ narrative_event = { # Activate GHW's and holy orders when running randomized rel
 		activate_title = { title = d_army_light status = yes }
 		create_character = {
 			random_traits = yes
-			religion = mani
+			religion = manichean
 			culture = persian
 			dynasty = NONE
 			female = no
@@ -1553,7 +1553,7 @@ character_event = { # Alternate Start general maintenance
 			d_iconoclast = { set_random_coa_effect = yes }
 		}
 		if = {
-			limit = { yazidism = { is_name_randomized = yes } }
+			limit = { yazidi = { is_name_randomized = yes } }
 			d_yazidi = { set_random_coa_effect = yes }
 		}
 		if = {
@@ -1646,7 +1646,7 @@ character_event = { # Alternate Start general maintenance
 			d_maronite = { set_random_coa_effect = yes }
 		}
 		if = {
-			limit = { mazdakism = { is_name_randomized = yes } }
+			limit = { mazdaki = { is_name_randomized = yes } }
 			d_mazdaki = { set_random_coa_effect = yes }
 		}
 		if = {

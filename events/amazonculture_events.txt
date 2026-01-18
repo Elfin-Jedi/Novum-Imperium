@@ -436,7 +436,7 @@ namespace = AmzCul
 					has_global_flag = bogomilist_enat_cognatic_flag
 				}
 				AND = {
-					religion = mazdakism
+					religion = mazdaki
 					has_global_flag = mazdaki_enat_cognatic_flag
 				}
 				AND = {
@@ -452,7 +452,7 @@ namespace = AmzCul
 					has_global_flag = ibadi_enat_cognatic_flag
 				}
 				AND = {
-					religion = yazidism
+					religion = yazidi
 					has_global_flag = yazidi_enat_cognatic_flag
 				}
 				AND = {
@@ -545,7 +545,7 @@ namespace = AmzCul
 					has_global_flag = bogomilist_enatic_flag
 				}
 				AND = {
-					religion = mazdakism
+					religion = mazdaki
 					has_global_flag = mazdaki_enatic_flag
 				}
 				has_religion_feature = religion_matriarchal
@@ -619,7 +619,7 @@ namespace = AmzCul
 					has_global_flag = bogomilist_abs_cognatic_flag
 				}
 				AND = {
-					religion = mazdakism
+					religion = mazdaki
 					has_global_flag = mazdaki_abs_cognatic_flag
 				}
 				AND = {
@@ -635,7 +635,7 @@ namespace = AmzCul
 					has_global_flag = ibadi_abs_cognatic_flag
 				}
 				AND = {
-					religion = yazidism
+					religion = yazidi
 					has_global_flag = yazidi_abs_cognatic_flag
 				}
 				AND = {
@@ -1210,7 +1210,7 @@ namespace = AmzCul
 				set_global_flag = bogomilist_seminary_flag
 			}
 			if = {
-				limit = { religion = mazdakism }
+				limit = { religion = mazdaki }
 				set_global_flag = mazdaki_seminary_flag
 			}
 			if = {
@@ -1222,7 +1222,7 @@ namespace = AmzCul
 				set_global_flag = zikri_seminary_flag
 			}
 			if = {
-				limit = { religion = yazidism }
+				limit = { religion = yazidi }
 				set_global_flag = yazidi_seminary_flag
 			}
 			if = {
@@ -1317,7 +1317,7 @@ namespace = AmzCul
 					NOT = { has_global_flag = bogomilist_seminary_flag }
 				}
 				AND = {
-					religion = mazdakism
+					religion = mazdaki
 					NOT = { has_global_flag = mazdaki_seminary_flag }
 				}
 				AND = {
@@ -1329,7 +1329,7 @@ namespace = AmzCul
 					NOT = { has_global_flag = zikri_seminary_flag }
 				}
 				AND = {
-					religion = yazidism
+					religion = yazidi
 					NOT = { has_global_flag = yazidi_seminary_flag }
 				}
 				AND = {

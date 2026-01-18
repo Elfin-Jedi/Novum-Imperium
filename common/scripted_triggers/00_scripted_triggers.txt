@@ -983,7 +983,7 @@ has_crusade_trait_trigger = {
 			trait = dragon_knight
 		}
 		AND = {
-			religion = mani
+			religion = manichean
 			trait = guardian_of_elect
 		}
 		AND = {
@@ -1634,55 +1634,6 @@ can_be_spymaster_trigger = {
 }
 
 can_be_spiritual_trigger = {
-	OR = {
-		NOT = { government = feudal_government }
-		is_ruler = no
-	}
-
-	OR = {
-		NOT = { government = theocratic_feudal_government }
-		is_ruler = no
-	}
-
-	OR = {
-		NOT = { government = chinese_imperial_government }
-		is_ruler = no
-	}
-
-	OR = {
-		NOT = { government = order_government }
-		is_ruler = no
-	}
-
-	OR = {
-		NOT = { government = roman_imperial_government }
-		is_ruler = no
-	}
-
-	OR = {
-		NOT = { government = nomadic_government }
-		is_ruler = no
-	}
-
-	OR = {
-		NOT = { government = merchant_republic_government }
-		is_ruler = no
-	}
-
-	OR = {
-		NOT = { government = republic_government }
-		is_ruler = no
-	}
-
-	OR = {
-		NOT = { government = confucian_bureaucracy }
-		is_ruler = no
-	}
-
-	OR = {
-		NOT = { government = tribal_government }
-		is_ruler = no
-	}
 	is_adult = yes
 	prisoner = no
 	independent = no
@@ -2763,8 +2714,8 @@ true_religion_mand_ruha_trigger = {
 true_religion_mani_ahriman_trigger = {
     true_religion = mani_ahriman
 }
-true_religion_mazdakism_trigger = {
-    true_religion = mazdakism
+true_religion_mazdaki_trigger = {
+    true_religion = mazdaki
 }
 true_religion_melkite_trigger = {
     true_religion = melkite
@@ -5364,7 +5315,7 @@ looting_artifact_event_religious_artifacts_trigger = {
 				NOT = { has_artifact_flag = zikri }
 			}
 			trigger_else_if = {
-				limit = { ROOT = { religion = yazidism } }
+				limit = { ROOT = { religion = yazidi } }
 				NOT = { has_artifact_flag = yazidi }
 			}
 			trigger_else_if = {
@@ -5404,11 +5355,11 @@ looting_artifact_event_religious_artifacts_trigger = {
 				NOT = { has_artifact_flag = zoroastrian }
 			}
 			trigger_else_if = {
-				limit = { ROOT = { religion = mazdakism } }
+				limit = { ROOT = { religion = mazdaki } }
 				NOT = { has_artifact_flag = mazdaki }
 			}
 			trigger_else_if = {
-				limit = { ROOT = { religion = mani } }
+				limit = { ROOT = { religion = manichean } }
 				NOT = { has_artifact_flag = manichean }
 			}
 			trigger_else_if = {
@@ -7370,12 +7321,11 @@ religion_openly_west_african_or_reformed_trigger = {
 		text = religion_openly_west_african_or_reformed_tooltip
 		hidden_trigger = {
 			OR = {
+				religion_group = east_african_group
+				religion_group = bantu_group
+				religion_group = serer_group
+				religion_group = african_pagan_group
 				religion_group = african_group
-				religion = serer_reformed
-				religion = mande_pagan
-				religion = yoruba
-				religion = nyame
-				religion = anansi
 			}
 		}
 	}
@@ -7385,10 +7335,7 @@ religion_openly_zun_or_reformed_trigger = {
 	custom_tooltip = {
 		text = religion_openly_zun_or_reformed_tooltip
 		hidden_trigger = {
-			OR = {
-				religion = zun_pagan
-				religion = zun_pagan_reformed
-			}
+			religion_group = sol_group
 		}
 	}
 }
@@ -7829,10 +7776,10 @@ likes_zoroastrians = {
 	religion = zoroastrian
 }
 likes_mazdakis = {
-	religion = mazdakism
+	religion = mazdaki
 }
 likes_manicheans = {
-	religion = mani
+	religion = manichean
 }
 likes_khurmaztans = {
 	religion = khurmazta

@@ -1543,10 +1543,6 @@ character_event = {
 			factor = 0.5
 			wealth = 2000
 		}
-		modifier = {
-			factor = 8
-			ai = no
-		}
 	}
 
 	option = {
@@ -2165,10 +2161,6 @@ character_event = {
 			factor = 0.25
 			trait = zealous
 		}
-		modifier = {
-			factor = 20
-			ai = no
-		}
 	}
 
 	option = {
@@ -2588,105 +2580,11 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 
 	is_triggered_only = yes
-	trigger = {#always show this event if pope is ai controlled, otherwise ask for player preference
-		OR = {
-			ai = yes
-			FROM = {ai = no} #always show requests from other players
-			NOR = {
-				has_character_flag = PDP_indulgence_dukes
-				has_character_flag = PDP_indulgence_kings
-				has_character_flag = PDP_indulgence_emperors
-			}
-			AND = {
-				FROM = {
-					higher_tier_than = COUNT
-				}
-				has_character_flag = PDP_indulgence_dukes
-			}
-			AND = {
-				FROM = {
-					higher_tier_than = DUKE
-				}
-				has_character_flag = PDP_indulgence_kings
-			}
-			AND = {
-				FROM = {
-					higher_tier_than = KING
-				}
-				has_character_flag = PDP_indulgence_emperors
-			}
-		}
-	}
+
 	option = {
-		name = "EVTOPTA39250" #accept it
-		custom_tooltip = { text = PDP_accept_indulgence }
+		name = "EVTOPTA39250"
 		FROM = {
 			character_event = { id = 39251 days = 3 random = 7 tooltip = "EVTTOOLTIP39251" }
-		}
-		ai_chance = {
-			factor = 100
-		}
-		if = {
-			limit = {
-				ai = no
-				NOT = {trait = arbitrary}
-				wealth = 250 #you don't need the money, but take it nonetheless
-			}
-			random = {
-				chance = 5
-				if = {
-					limit = {trait = just}
-					remove_trait = just
-				}
-				else = {
-					add_trait = arbitrary
-				}
-			}
-		}
-		if = {
-			limit = {
-				ai = no
-				trait = arbitrary
-				NOT = {trait = greedy}
-				wealth = 2500 #you really do not need it...
-			}
-			random = {
-				chance = 5
-				if = {
-					limit = {trait = charitable}
-					remove_trait = charitable
-				}
-				else = {
-					add_trait = greedy
-				}
-			}
-		}
-	}
-	option = {
-		name = EVTOPTB39250 #deny option for player
-		ai_chance = {
-			factor = 0
-		}
-		FROM = {
-			#clr_character_flag  = ask_for_indulgence #dont clear flag so character get's a cooldown...
-			character_event = { id = PDP.200 days = 3 random = 7 tooltip = PDP_not_accept_indulgence}
-		}
-		if = {
-			limit = {
-				ai = no
-				NOT = {trait = just}
-				NOT = {wealth = 250} #you need that money
-			}
-			random = {
-				chance = 2.5
-				if = {
-					limit = {trait = arbitrary}
-					remove_trait = arbitrary
-				}
-				else = {
-					add_trait = just
-				}
-			}
 		}
 	}
 }

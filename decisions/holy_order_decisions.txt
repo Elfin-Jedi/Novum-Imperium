@@ -2480,15 +2480,15 @@ decisions = {
 		}
 	}
 
-	borrow_money_d_holymani = {
+	borrow_money_d_holymanichean = {
 		only_playable = yes
 		ai_check_interval = 120
 		potential = {
 			is_playable = yes
 			is_nomadic = no
-			religion = mani
+			religion = manichean
 			is_heretic = no
-			is_title_active = d_holymani
+			is_title_active = d_holymanichean
 			OR = {
 				ai = no
 				AND = {
@@ -2497,12 +2497,12 @@ decisions = {
 					independent = yes
 				}
 			}
-			NOT = { has_character_modifier = borrowed_from_d_holymani }
-			NOT = { has_character_modifier = expelled_d_holymani }
+			NOT = { has_character_modifier = borrowed_from_d_holymanichean }
+			NOT = { has_character_modifier = expelled_d_holymanichean }
 
 			has_dlc = "Sons of Abraham"
 
-			d_holymani = {
+			d_holymanichean = {
 				holder_scope = {
 					liege = {
 						NOT = { character = ROOT }
@@ -2512,7 +2512,7 @@ decisions = {
 		}
 
 		allow = {
-			d_holymani = {
+			d_holymanichean = {
 				holder_scope = {
 					wealth = 300
 					ROOT = {
@@ -2524,13 +2524,13 @@ decisions = {
 
 		effect = {
 			add_character_modifier = {
-				name = borrowed_from_d_holymani
+				name = borrowed_from_d_holymanichean
 				duration = -1
 				inherit = yes
 			}
 
 			hidden_tooltip = {
-				d_holymani = {
+				d_holymanichean = {
 					holder_scope = {
 						character_event = {
 							id = SoA.1010
@@ -8330,15 +8330,15 @@ decisions = {
 		}
 	}
 
-	borrow_money_d_holymazdakism_reformed = {
+	borrow_money_d_holymazdaki_reformed = {
 		only_playable = yes
 		ai_check_interval = 120
 		potential = {
 			is_playable = yes
 			is_nomadic = no
-			religion = mazdakism_reformed
+			religion = mazdaki_reformed
 			is_heretic = no
-			is_title_active = d_holymazdakism_reformed
+			is_title_active = d_holymazdaki_reformed
 			OR = {
 				ai = no
 				AND = {
@@ -8347,12 +8347,12 @@ decisions = {
 					independent = yes
 				}
 			}
-			NOT = { has_character_modifier = borrowed_from_d_holymazdakism_reformed }
-			NOT = { has_character_modifier = expelled_d_holymazdakism_reformed }
+			NOT = { has_character_modifier = borrowed_from_d_holymazdaki_reformed }
+			NOT = { has_character_modifier = expelled_d_holymazdaki_reformed }
 
 			has_dlc = "Sons of Abraham"
 
-			d_holymazdakism_reformed = {
+			d_holymazdaki_reformed = {
 				holder_scope = {
 					liege = {
 						NOT = { character = ROOT }
@@ -8362,7 +8362,7 @@ decisions = {
 		}
 
 		allow = {
-			d_holymazdakism_reformed = {
+			d_holymazdaki_reformed = {
 				holder_scope = {
 					wealth = 300
 					ROOT = {
@@ -8374,13 +8374,13 @@ decisions = {
 
 		effect = {
 			add_character_modifier = {
-				name = borrowed_from_d_holymazdakism_reformed
+				name = borrowed_from_d_holymazdaki_reformed
 				duration = -1
 				inherit = yes
 			}
 
 			hidden_tooltip = {
-				d_holymazdakism_reformed = {
+				d_holymazdaki_reformed = {
 					holder_scope = {
 						character_event = {
 							id = SoA.1010
@@ -11216,15 +11216,15 @@ decisions = {
 		}
 	}
 
-	borrow_money_d_holyzurvanism_reformed = {
+	borrow_money_d_holyzurvanist_reformed = {
 		only_playable = yes
 		ai_check_interval = 120
 		potential = {
 			is_playable = yes
 			is_nomadic = no
-			religion = zurvanism_reformed
+			religion = zurvanist_reformed
 			is_heretic = no
-			is_title_active = d_holyzurvanism_reformed
+			is_title_active = d_holyzurvanist_reformed
 			OR = {
 				ai = no
 				AND = {
@@ -11233,12 +11233,12 @@ decisions = {
 					independent = yes
 				}
 			}
-			NOT = { has_character_modifier = borrowed_from_d_holyzurvanism_reformed }
-			NOT = { has_character_modifier = expelled_d_holyzurvanism_reformed }
+			NOT = { has_character_modifier = borrowed_from_d_holyzurvanist_reformed }
+			NOT = { has_character_modifier = expelled_d_holyzurvanist_reformed }
 
 			has_dlc = "Sons of Abraham"
 
-			d_holyzurvanism_reformed = {
+			d_holyzurvanist_reformed = {
 				holder_scope = {
 					liege = {
 						NOT = { character = ROOT }
@@ -11248,7 +11248,7 @@ decisions = {
 		}
 
 		allow = {
-			d_holyzurvanism_reformed = {
+			d_holyzurvanist_reformed = {
 				holder_scope = {
 					wealth = 300
 					ROOT = {
@@ -11260,13 +11260,13 @@ decisions = {
 
 		effect = {
 			add_character_modifier = {
-				name = borrowed_from_d_holyzurvanism_reformed
+				name = borrowed_from_d_holyzurvanist_reformed
 				duration = -1
 				inherit = yes
 			}
 
 			hidden_tooltip = {
-				d_holyzurvanism_reformed = {
+				d_holyzurvanist_reformed = {
 					holder_scope = {
 						character_event = {
 							id = SoA.1010
@@ -13089,21 +13089,21 @@ decisions = {
 		}
 	}
 	
-	expel_d_holymani = {
+	expel_d_holymanichean = {
 		only_independent = yes
 		ai = no
 		
 		potential = {
-			religion = mani
+			religion = manichean
 			
 			higher_tier_than = DUKE
 			independent = yes
-			is_title_active = d_holymani
-			NOT = { has_character_modifier = expelled_d_holymani }
+			is_title_active = d_holymanichean
+			NOT = { has_character_modifier = expelled_d_holymanichean }
 
 			any_realm_province = {
 				any_province_lord = {
-					d_holymani = {
+					d_holymanichean = {
 						holder_scope = {
 							OR = {
 								character = PREVPREV
@@ -13122,13 +13122,13 @@ decisions = {
 			custom_tooltip = {
 				text = expelling_holy_order_decision_tooltip
 				hidden_tooltip = {
-					NOT = { has_character_flag = expel_d_holymani_check }
+					NOT = { has_character_flag = expel_d_holymanichean_check }
 				}
 			}
 		}
 
 		effect = {
-			set_character_flag = expel_d_holymani_check
+			set_character_flag = expel_d_holymanichean_check
 			custom_tooltip = {
 				text = expelling_holy_order_decision_tooltip_b
 				hidden_tooltip = {
@@ -17421,21 +17421,21 @@ decisions = {
 		}
 	}
 
-	expel_d_holymazdakism_reformed = {
+	expel_d_holymazdaki_reformed = {
 		only_independent = yes
 		ai = no
 
 		potential = {
-			religion = mazdakism_reformed
+			religion = mazdaki_reformed
 			
 			higher_tier_than = DUKE
 			independent = yes
-			is_title_active = d_holymazdakism_reformed
-			NOT = { has_character_modifier = expelled_d_holymazdakism_reformed }
+			is_title_active = d_holymazdaki_reformed
+			NOT = { has_character_modifier = expelled_d_holymazdaki_reformed }
 
 			any_realm_province = {
 				any_province_lord = {
-					d_holymazdakism_reformed = {
+					d_holymazdaki_reformed = {
 						holder_scope = {
 							OR = {
 								character = PREVPREV
@@ -17454,13 +17454,13 @@ decisions = {
 			custom_tooltip = {
 				text = expelling_holy_order_decision_tooltip
 				hidden_tooltip = {
-					NOT = { has_character_flag = expel_d_holymazdakism_reformed_check }
+					NOT = { has_character_flag = expel_d_holymazdaki_reformed_check }
 				}
 			}
 		}
 
 		effect = {
-			set_character_flag = expel_d_holymazdakism_reformed_check
+			set_character_flag = expel_d_holymazdaki_reformed_check
 			custom_tooltip = {
 				text = expelling_holy_order_decision_tooltip_b
 				hidden_tooltip = {
@@ -19530,21 +19530,21 @@ decisions = {
 		}
 	}
 
-	expel_d_holyzurvanism_reformed = {
+	expel_d_holyzurvanist_reformed = {
 		only_independent = yes
 		ai = no
 
 		potential = {
-			religion = zurvanism_reformed
+			religion = zurvanist_reformed
 			
 			higher_tier_than = DUKE
 			independent = yes
-			is_title_active = d_holyzurvanism_reformed
-			NOT = { has_character_modifier = expelled_d_holyzurvanism_reformed }
+			is_title_active = d_holyzurvanist_reformed
+			NOT = { has_character_modifier = expelled_d_holyzurvanist_reformed }
 
 			any_realm_province = {
 				any_province_lord = {
-					d_holyzurvanism_reformed = {
+					d_holyzurvanist_reformed = {
 						holder_scope = {
 							OR = {
 								character = PREVPREV
@@ -19563,13 +19563,13 @@ decisions = {
 			custom_tooltip = {
 				text = expelling_holy_order_decision_tooltip
 				hidden_tooltip = {
-					NOT = { has_character_flag = expel_d_holyzurvanism_reformed_check }
+					NOT = { has_character_flag = expel_d_holyzurvanist_reformed_check }
 				}
 			}
 		}
 
 		effect = {
-			set_character_flag = expel_d_holyzurvanism_reformed_check
+			set_character_flag = expel_d_holyzurvanist_reformed_check
 			custom_tooltip = {
 				text = expelling_holy_order_decision_tooltip_b
 				hidden_tooltip = {
@@ -22280,21 +22280,21 @@ decisions = {
 		}
 	}
 	
-	donate_money_to_d_holymani = {
+	donate_money_to_d_holymanichean = {
 		only_playable = yes
 		potential = {
 			is_playable = yes
-			religion = mani
+			religion = manichean
 			
-			is_title_active = d_holymani
-			NOT = { has_character_modifier = expelled_d_holymani }
-#			is_title_active = d_holymani 
+			is_title_active = d_holymanichean
+			NOT = { has_character_modifier = expelled_d_holymanichean }
+#			is_title_active = d_holymanichean
 
 
 
 			has_dlc = "Sons of Abraham"
 
-			d_holymani = {
+			d_holymanichean = {
 				holder_scope = {
 					liege = {
 						NOT = { character = ROOT }
@@ -22319,7 +22319,7 @@ decisions = {
 			}
 
 			hidden_tooltip = {
-				d_holymani = {
+				d_holymanichean = {
 					holder_scope = {
 						character_event = {
 							id = SoA.1140
@@ -22344,7 +22344,7 @@ decisions = {
 					piety = 1000
 					NOT = { wealth = 1000 }
 #					AND = {
-						NOT = { controls_religion = mani }
+						NOT = { controls_religion = manichean }
 #					}
 				}
 			}
@@ -27830,21 +27830,21 @@ decisions = {
 		}
 	}
 	
-	donate_money_to_d_holymazdakism_reformed = {
+	donate_money_to_d_holymazdaki_reformed = {
 		only_playable = yes
 		potential = {
 			is_playable = yes
-			religion = mazdakism_reformed
+			religion = mazdaki_reformed
 			
-			is_title_active = d_holymazdakism_reformed
-			NOT = { has_character_modifier = expelled_d_holymazdakism_reformed }
-#			is_title_active = d_holymazdakism_reformed 
+			is_title_active = d_holymazdaki_reformed
+			NOT = { has_character_modifier = expelled_d_holymazdaki_reformed }
+#			is_title_active = d_holymazdaki_reformed 
 
 
 
 			has_dlc = "Sons of Abraham"
 
-			d_holymazdakism_reformed = {
+			d_holymazdaki_reformed = {
 				holder_scope = {
 					liege = {
 						NOT = { character = ROOT }
@@ -27869,7 +27869,7 @@ decisions = {
 			}
 
 			hidden_tooltip = {
-				d_holymazdakism_reformed = {
+				d_holymazdaki_reformed = {
 					holder_scope = {
 						character_event = {
 							id = SoA.1140
@@ -27894,7 +27894,7 @@ decisions = {
 					piety = 1000
 					NOT = { wealth = 1000 }
 #					AND = {
-						NOT = { controls_religion = mazdakism_reformed }
+						NOT = { controls_religion = mazdaki_reformed }
 #					}
 				}
 			}
@@ -30563,20 +30563,20 @@ decisions = {
 		}
 	}
 	
-	donate_money_to_d_holyzurvanism_reformed = {
+	donate_money_to_d_holyzurvanist_reformed = {
 		only_playable = yes
 		potential = {
 			is_playable = yes
-			religion = zurvanism_reformed
+			religion = zurvanist_reformed
 			
-			is_title_active = d_holyzurvanism_reformed
-			NOT = { has_character_modifier = expelled_d_holyzurvanism_reformed }
+			is_title_active = d_holyzurvanist_reformed
+			NOT = { has_character_modifier = expelled_d_holyzurvanist_reformed }
 
 
 
 			has_dlc = "Sons of Abraham"
 
-			d_holyzurvanism_reformed = {
+			d_holyzurvanist_reformed = {
 				holder_scope = {
 					liege = {
 						NOT = { character = ROOT }
@@ -30601,7 +30601,7 @@ decisions = {
 			}
 
 			hidden_tooltip = {
-				d_holyzurvanism_reformed = {
+				d_holyzurvanist_reformed = {
 					holder_scope = {
 						character_event = {
 							id = SoA.1140
@@ -30625,7 +30625,7 @@ decisions = {
 				OR = {
 					piety = 1000
 					NOT = { wealth = 1000 }
-					NOT = { controls_religion = zurvanism_reformed }
+					NOT = { controls_religion = zurvanist_reformed }
 				}
 			}
 			modifier = {
@@ -33657,25 +33657,25 @@ decisions = {
 		}
 	}
 	
-	vassalize_d_holymani = {
+	vassalize_d_holymanichean = {
 		only_playable = yes
 		is_high_prio = yes
 
 		potential = {
 
 			is_playable = yes
-			religion = mani
+			religion = manichean
 
 
-			NOT = { has_character_modifier = expelled_d_holymani }
+			NOT = { has_character_modifier = expelled_d_holymanichean }
 
-			is_title_active = d_holymani
+			is_title_active = d_holymanichean
 
 			higher_tier_than = KING
 
 			has_dlc = "Sons of Abraham"
 
-			d_holymani = {
+			d_holymanichean = {
 				holder_scope = {
 					NOT = { has_truce = ROOT }
 					ROOT = { NOT = { has_truce = PREV } }
@@ -33684,7 +33684,7 @@ decisions = {
 					}
 					NOT = { num_of_count_titles = 3 }
 					independent = yes
-					primary_title = { title = d_holymani }
+					primary_title = { title = d_holymanichean }
 				}
 			}
 		}
@@ -33701,7 +33701,7 @@ decisions = {
 			prestige = -500
 
 			hidden_tooltip = {
-				d_holymani = {
+				d_holymanichean = {
 					holder_scope = {
 						wealth = 1500
 						piety = 1000
@@ -38541,25 +38541,25 @@ decisions = {
 		}
 	}
 	
-	vassalize_d_holymazdakism_reformed = {
+	vassalize_d_holymazdaki_reformed = {
 		only_playable = yes
 		is_high_prio = yes
 
 		potential = {
 
 			is_playable = yes
-			religion = mazdakism_reformed
+			religion = mazdaki_reformed
 
 
-			NOT = { has_character_modifier = expelled_d_holymazdakism_reformed }
+			NOT = { has_character_modifier = expelled_d_holymazdaki_reformed }
 
-			is_title_active = d_holymazdakism_reformed
+			is_title_active = d_holymazdaki_reformed
 
 			higher_tier_than = KING
 
 			has_dlc = "Sons of Abraham"
 
-			d_holymazdakism_reformed = {
+			d_holymazdaki_reformed = {
 				holder_scope = {
 					NOT = { has_truce = ROOT }
 					ROOT = { NOT = { has_truce = PREV } }
@@ -38568,7 +38568,7 @@ decisions = {
 					}
 					NOT = { num_of_count_titles = 3 }
 					independent = yes
-					primary_title = { title = d_holymazdakism_reformed }
+					primary_title = { title = d_holymazdaki_reformed }
 				}
 			}
 		}
@@ -38585,7 +38585,7 @@ decisions = {
 			prestige = -500
 
 			hidden_tooltip = {
-				d_holymazdakism_reformed = {
+				d_holymazdaki_reformed = {
 					holder_scope = {
 						wealth = 1500
 						piety = 1000
@@ -40983,25 +40983,25 @@ decisions = {
 		}
 	}
 	
-	vassalize_d_holyzurvanism_reformed = {
+	vassalize_d_holyzurvanist_reformed = {
 		only_playable = yes
 		is_high_prio = yes
 
 		potential = {
 
 			is_playable = yes
-			religion = zurvanism_reformed
+			religion = zurvanist_reformed
 
 
-			NOT = { has_character_modifier = expelled_d_holyzurvanism_reformed }
+			NOT = { has_character_modifier = expelled_d_holyzurvanist_reformed }
 
-			is_title_active = d_holyzurvanism_reformed
+			is_title_active = d_holyzurvanist_reformed
 
 			higher_tier_than = KING
 
 			has_dlc = "Sons of Abraham"
 
-			d_holyzurvanism_reformed = {
+			d_holyzurvanist_reformed = {
 				holder_scope = {
 					NOT = { has_truce = ROOT }
 					ROOT = { NOT = { has_truce = PREV } }
@@ -41010,7 +41010,7 @@ decisions = {
 					}
 					NOT = { num_of_count_titles = 3 }
 					independent = yes
-					primary_title = { title = d_holyzurvanism_reformed }
+					primary_title = { title = d_holyzurvanist_reformed }
 				}
 			}
 		}
@@ -41027,7 +41027,7 @@ decisions = {
 			prestige = -500
 
 			hidden_tooltip = {
-				d_holyzurvanism_reformed = {
+				d_holyzurvanist_reformed = {
 					holder_scope = {
 						wealth = 1500
 						piety = 1000
@@ -41572,8 +41572,8 @@ decisions = {
 		potential = {
 			OR = {
 				religion = zoroastrian
-				religion = mazdakism
-				religion = zurvanism
+				religion = mazdaki
+				religion = zurvanist
 			}
 			is_heretic = no
 			higher_tier_than = DUKE

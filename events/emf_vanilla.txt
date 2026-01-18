@@ -564,7 +564,7 @@ character_event = {
 				is_title_active = d_immortals
 			}
 			AND = { # Manichean
-				religion = mani
+				religion = manichean
 				is_title_active = d_army_light
 			}
 			AND = { # Jewish
@@ -1086,7 +1086,7 @@ character_event = {
 	# Manichean
 	option = { # The Army of Light
 		trigger = {
-			religion = mani
+			religion = manichean
 			is_title_active = d_army_light
 		}
 		ai_chance = {

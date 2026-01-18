@@ -1230,6 +1230,811 @@ emf_reset_settable_religion_flags = {
 	clr_flag = emf_women_can_take_consorts
 }
 
+emf_set_default_flags_for_druze_reformed = {
+	set_flag = emf_playable
+	clr_flag = emf_ai_peaceful
+	set_flag = emf_hostile_within_group
+	clr_flag = emf_ai_fabricate_claims
+	set_variable = { which = emf_peace_piety_gain value = 0.0 }
+	set_variable = { which = emf_ai_convert_other_groups value = 2 }
+	set_variable = { which = emf_ai_convert_same_group value = 1 }
+	clr_flag = emf_peace_prestige_loss
+	set_variable = { which = emf_aggression value = 1.0 }
+	clr_flag = emf_raised_vassal_opinion_loss
+	set_flag = emf_attacking_same_religion_piety_loss
+	set_variable = { which = emf_max_wives value = 1 }
+	set_variable = { which = emf_max_consorts value = 0 }
+	set_flag = emf_feminist
+	set_flag = emf_has_heir_designation
+	set_variable = { which = emf_short_reign_opinion_year_mult value = 2 }
+	clr_flag = emf_uses_jizya_tax
+	clr_flag = emf_can_retire_to_monastery
+	clr_flag = emf_can_excommunicate
+	clr_flag = emf_can_grant_divorce
+	clr_flag = emf_can_grant_invasion_cb
+	clr_flag = emf_can_grant_claim
+	clr_flag = emf_pc_marriage
+	clr_flag = emf_bs_marriage
+	clr_flag = emf_psc_marriage
+	set_flag = emf_cousin_marriage
+	clr_flag = emf_seafarer
+	clr_flag = emf_allow_looting
+	clr_flag = emf_allow_rivermovement
+	clr_flag = emf_allow_viking_invasion
+	clr_flag = emf_autocephaly
+	clr_flag = emf_pentarchy
+	clr_flag = emf_divine_blood
+	clr_flag = emf_uses_decadence
+	clr_flag = emf_can_have_antipopes
+	set_flag = emf_priests_can_marry
+	set_flag = emf_priests_can_inherit
+	clr_flag = emf_ignores_defensive_attrition
+	clr_flag = emf_defensive_attrition
+	set_flag = emf_matrilineal_marriages
+	set_flag = emf_men_can_take_consorts
+	clr_flag = emf_women_can_take_consorts
+}
+
+emf_set_default_flags_for_judaism_reformed = {
+	set_flag = emf_playable
+	set_flag = emf_ai_peaceful
+	clr_flag = emf_hostile_within_group
+	set_flag = emf_ai_fabricate_claims
+	set_variable = { which = emf_peace_piety_gain value = 0.0 }
+	set_variable = { which = emf_ai_convert_other_groups value = 2 }
+	set_variable = { which = emf_ai_convert_same_group value = 1 }
+	clr_flag = emf_peace_prestige_loss
+	set_variable = { which = emf_aggression value = 1.0 }
+	clr_flag = emf_raised_vassal_opinion_loss
+	clr_flag = emf_attacking_same_religion_piety_loss
+	set_variable = { which = emf_max_wives value = 1 }
+	set_variable = { which = emf_max_consorts value = 0 }
+	clr_flag = emf_feminist
+	set_flag = emf_has_heir_designation
+	set_variable = { which = emf_short_reign_opinion_year_mult value = 2 }
+	clr_flag = emf_uses_jizya_tax
+	clr_flag = emf_can_retire_to_monastery
+	clr_flag = emf_can_excommunicate
+	set_flag = emf_can_grant_divorce
+	clr_flag = emf_can_grant_invasion_cb
+	clr_flag = emf_can_grant_claim
+	clr_flag = emf_pc_marriage
+	clr_flag = emf_bs_marriage
+	set_flag = emf_psc_marriage
+	set_flag = emf_cousin_marriage
+	clr_flag = emf_seafarer
+	clr_flag = emf_allow_looting
+	clr_flag = emf_allow_rivermovement
+	clr_flag = emf_allow_viking_invasion
+	clr_flag = emf_autocephaly
+	clr_flag = emf_pentarchy
+	clr_flag = emf_divine_blood
+	clr_flag = emf_uses_decadence
+	clr_flag = emf_can_have_antipopes
+	clr_flag = emf_priests_can_marry
+	set_flag = emf_priests_can_inherit
+	clr_flag = emf_ignores_defensive_attrition
+	clr_flag = emf_defensive_attrition
+	set_flag = emf_matrilineal_marriages
+	set_flag = emf_men_can_take_consorts
+	clr_flag = emf_women_can_take_consorts
+}
+
+emf_set_default_flags_for_sethian_reformed = {
+	set_flag = emf_playable
+	set_flag = emf_ai_peaceful
+	clr_flag = emf_hostile_within_group
+	set_flag = emf_ai_fabricate_claims
+	set_variable = { which = emf_peace_piety_gain value = 0.0 }
+	set_variable = { which = emf_ai_convert_other_groups value = 2 }
+	set_variable = { which = emf_ai_convert_same_group value = 1 }
+	clr_flag = emf_peace_prestige_loss
+	set_variable = { which = emf_aggression value = 1.0 }
+	clr_flag = emf_raised_vassal_opinion_loss
+	clr_flag = emf_attacking_same_religion_piety_loss
+	set_variable = { which = emf_max_wives value = 1 }
+	set_variable = { which = emf_max_consorts value = 0 }
+	clr_flag = emf_feminist
+	set_flag = emf_has_heir_designation
+	set_variable = { which = emf_short_reign_opinion_year_mult value = 2 }
+	clr_flag = emf_uses_jizya_tax
+	clr_flag = emf_can_retire_to_monastery
+	clr_flag = emf_can_excommunicate
+	set_flag = emf_can_grant_divorce
+	clr_flag = emf_can_grant_invasion_cb
+	clr_flag = emf_can_grant_claim
+	clr_flag = emf_pc_marriage
+	clr_flag = emf_bs_marriage
+	set_flag = emf_psc_marriage
+	set_flag = emf_cousin_marriage
+	clr_flag = emf_seafarer
+	clr_flag = emf_allow_looting
+	clr_flag = emf_allow_rivermovement
+	clr_flag = emf_allow_viking_invasion
+	clr_flag = emf_autocephaly
+	clr_flag = emf_pentarchy
+	clr_flag = emf_divine_blood
+	clr_flag = emf_uses_decadence
+	clr_flag = emf_can_have_antipopes
+	set_flag = emf_priests_can_marry
+	set_flag = emf_priests_can_inherit
+	clr_flag = emf_ignores_defensive_attrition
+	clr_flag = emf_defensive_attrition
+	set_flag = emf_matrilineal_marriages
+	set_flag = emf_men_can_take_consorts
+	clr_flag = emf_women_can_take_consorts
+}
+
+emf_set_default_flags_for_muslim_sufi_reformed = {
+	set_flag = emf_playable
+	clr_flag = emf_ai_peaceful
+	set_flag = emf_hostile_within_group
+	clr_flag = emf_ai_fabricate_claims
+	set_variable = { which = emf_peace_piety_gain value = 0.0 }
+	set_variable = { which = emf_ai_convert_other_groups value = 2 }
+	set_variable = { which = emf_ai_convert_same_group value = 1 }
+	clr_flag = emf_peace_prestige_loss
+	set_variable = { which = emf_aggression value = 1.0 }
+	set_flag = emf_raised_vassal_opinion_loss
+	set_flag = emf_attacking_same_religion_piety_loss
+	set_variable = { which = emf_max_wives value = 4 }
+	set_variable = { which = emf_max_consorts value = 0 }
+	clr_flag = emf_feminist
+	clr_flag = emf_has_heir_designation
+	set_variable = { which = emf_short_reign_opinion_year_mult value = 4 }
+	set_flag = emf_uses_jizya_tax
+	clr_flag = emf_can_retire_to_monastery
+	clr_flag = emf_can_excommunicate
+	clr_flag = emf_can_grant_divorce
+	clr_flag = emf_can_grant_invasion_cb
+	clr_flag = emf_can_grant_claim
+	clr_flag = emf_pc_marriage
+	clr_flag = emf_bs_marriage
+	clr_flag = emf_psc_marriage
+	set_flag = emf_cousin_marriage
+	clr_flag = emf_seafarer
+	clr_flag = emf_allow_looting
+	clr_flag = emf_allow_rivermovement
+	clr_flag = emf_allow_viking_invasion
+	clr_flag = emf_autocephaly
+	clr_flag = emf_pentarchy
+	clr_flag = emf_divine_blood
+	clr_flag = emf_uses_decadence
+	clr_flag = emf_can_have_antipopes
+	set_flag = emf_priests_can_marry
+	set_flag = emf_priests_can_inherit
+	clr_flag = emf_ignores_defensive_attrition
+	clr_flag = emf_defensive_attrition
+	clr_flag = emf_matrilineal_marriages
+	set_flag = emf_men_can_take_consorts
+	clr_flag = emf_women_can_take_consorts
+	set_variable = { which = emf_independence_war_score_bonus value = 20 }
+}
+
+emf_set_default_flags_for_cybele_reformed = {
+	set_variable = { which = emf_peace_piety_gain value = 0.0 }
+	set_variable = { which = emf_ai_convert_other_groups value = 2 }
+	set_variable = { which = emf_ai_convert_same_group value = 1 }
+	set_flag = emf_peace_prestige_loss
+	set_variable = { which = emf_aggression value = 1.0 }
+	clr_flag = emf_raised_vassal_opinion_loss
+	clr_flag = emf_attacking_same_religion_piety_loss
+	set_variable = { which = emf_max_wives value = 1 }
+	set_variable = { which = emf_max_consorts value = 0 }
+	clr_flag = emf_feminist
+	clr_flag = emf_has_heir_designation
+	set_variable = { which = emf_short_reign_opinion_year_mult value = 3 }
+	clr_flag = emf_uses_jizya_tax
+	clr_flag = emf_can_retire_to_monastery
+	clr_flag = emf_can_excommunicate
+	clr_flag = emf_can_grant_divorce
+	clr_flag = emf_can_grant_invasion_cb
+	clr_flag = emf_can_grant_claim
+	clr_flag = emf_pc_marriage
+	clr_flag = emf_bs_marriage
+	set_flag = emf_psc_marriage
+	set_flag = emf_cousin_marriage
+	clr_flag = emf_seafarer
+	clr_flag = emf_allow_looting
+	clr_flag = emf_allow_rivermovement
+	clr_flag = emf_allow_viking_invasion
+	clr_flag = emf_autocephaly
+	clr_flag = emf_pentarchy
+	clr_flag = emf_divine_blood
+	clr_flag = emf_uses_decadence
+	clr_flag = emf_can_have_antipopes
+	set_flag = emf_priests_can_marry
+	set_flag = emf_priests_can_inherit
+	clr_flag = emf_ignores_defensive_attrition
+	clr_flag = emf_defensive_attrition
+	set_flag = emf_matrilineal_marriages
+	set_flag = emf_men_can_take_consorts
+	clr_flag = emf_women_can_take_consorts
+}
+
+emf_set_default_flags_for_ethiopian_war_reformed = {
+	set_variable = { which = emf_peace_piety_gain value = 0.0 }
+	set_variable = { which = emf_ai_convert_other_groups value = 2 }
+	set_variable = { which = emf_ai_convert_same_group value = 1 }
+	set_flag = emf_peace_prestige_loss
+	set_variable = { which = emf_aggression value = 2.0 }
+	clr_flag = emf_raised_vassal_opinion_loss
+	clr_flag = emf_attacking_same_religion_piety_loss
+	set_variable = { which = emf_max_wives value = 1 }
+	set_variable = { which = emf_max_consorts value = 0 }
+	clr_flag = emf_feminist
+	clr_flag = emf_has_heir_designation
+	set_variable = { which = emf_short_reign_opinion_year_mult value = -1000 }
+	clr_flag = emf_uses_jizya_tax
+	clr_flag = emf_can_retire_to_monastery
+	clr_flag = emf_can_excommunicate
+	clr_flag = emf_can_grant_divorce
+	clr_flag = emf_can_grant_invasion_cb
+	clr_flag = emf_can_grant_claim
+	clr_flag = emf_pc_marriage
+	clr_flag = emf_bs_marriage
+	set_flag = emf_psc_marriage
+	set_flag = emf_cousin_marriage
+	clr_flag = emf_seafarer
+	set_flag = emf_allow_looting
+	clr_flag = emf_allow_rivermovement
+	clr_flag = emf_allow_viking_invasion
+	clr_flag = emf_autocephaly
+	clr_flag = emf_pentarchy
+	clr_flag = emf_divine_blood
+	clr_flag = emf_uses_decadence
+	clr_flag = emf_can_have_antipopes
+	set_flag = emf_priests_can_marry
+	set_flag = emf_priests_can_inherit
+	clr_flag = emf_ignores_defensive_attrition
+	clr_flag = emf_defensive_attrition
+	set_flag = emf_matrilineal_marriages
+	set_flag = emf_men_can_take_consorts
+	clr_flag = emf_women_can_take_consorts
+	set_variable = { which = emf_independence_war_score_bonus value = 20 }
+}
+
+emf_set_default_flags_for_waaq = {
+	set_variable = { which = emf_peace_piety_gain value = 0.0 }
+	set_variable = { which = emf_ai_convert_other_groups value = 2 }
+	set_variable = { which = emf_ai_convert_same_group value = 2 }
+	clr_flag = emf_peace_prestige_loss
+	set_variable = { which = emf_aggression value = 1.5 }
+	set_flag = emf_raised_vassal_opinion_loss
+	clr_flag = emf_attacking_same_religion_piety_loss
+	set_variable = { which = emf_max_wives value = 1 }
+	set_variable = { which = emf_max_consorts value = 3 }
+	clr_flag = emf_feminist
+	clr_flag = emf_has_heir_designation
+	set_variable = { which = emf_short_reign_opinion_year_mult value = 4 }
+	clr_flag = emf_uses_jizya_tax
+	clr_flag = emf_can_retire_to_monastery
+	clr_flag = emf_can_excommunicate
+	clr_flag = emf_can_grant_divorce
+	clr_flag = emf_can_grant_invasion_cb
+	clr_flag = emf_can_grant_claim
+	clr_flag = emf_pc_marriage
+	clr_flag = emf_bs_marriage
+	set_flag = emf_psc_marriage
+	set_flag = emf_cousin_marriage
+	clr_flag = emf_seafarer
+	clr_flag = emf_allow_looting
+	clr_flag = emf_allow_rivermovement
+	clr_flag = emf_allow_viking_invasion
+	clr_flag = emf_autocephaly
+	clr_flag = emf_pentarchy
+	clr_flag = emf_divine_blood
+	clr_flag = emf_uses_decadence
+	clr_flag = emf_can_have_antipopes
+	set_flag = emf_priests_can_marry
+	set_flag = emf_priests_can_inherit
+	clr_flag = emf_ignores_defensive_attrition
+	clr_flag = emf_defensive_attrition
+	set_flag = emf_matrilineal_marriages
+	set_flag = emf_men_can_take_consorts
+	clr_flag = emf_women_can_take_consorts
+	set_variable = { which = emf_independence_war_score_bonus value = 30 }
+}
+
+emf_set_default_flags_for_arab_pagan_reformed = {
+	set_variable = { which = emf_peace_piety_gain value = 0.0 }
+	set_variable = { which = emf_ai_convert_other_groups value = 2 }
+	set_variable = { which = emf_ai_convert_same_group value = 1 }
+	clr_flag = emf_peace_prestige_loss
+	set_variable = { which = emf_aggression value = 1.0 }
+	clr_flag = emf_raised_vassal_opinion_loss
+	clr_flag = emf_attacking_same_religion_piety_loss
+	set_variable = { which = emf_max_wives value = 1 }
+	set_variable = { which = emf_max_consorts value = 3 }
+	set_flag = emf_feminist
+	set_flag = emf_has_heir_designation
+	set_variable = { which = emf_short_reign_opinion_year_mult value = 0 }
+	clr_flag = emf_uses_jizya_tax
+	clr_flag = emf_can_retire_to_monastery
+	clr_flag = emf_can_excommunicate
+	clr_flag = emf_can_grant_divorce
+	clr_flag = emf_can_grant_invasion_cb
+	clr_flag = emf_can_grant_claim
+	clr_flag = emf_pc_marriage
+	clr_flag = emf_bs_marriage
+	set_flag = emf_psc_marriage
+	set_flag = emf_cousin_marriage
+	clr_flag = emf_seafarer
+	clr_flag = emf_allow_looting
+	clr_flag = emf_allow_rivermovement
+	clr_flag = emf_allow_viking_invasion
+	clr_flag = emf_autocephaly
+	clr_flag = emf_pentarchy
+	clr_flag = emf_divine_blood
+	clr_flag = emf_uses_decadence
+	clr_flag = emf_can_have_antipopes
+	set_flag = emf_priests_can_marry
+	set_flag = emf_priests_can_inherit
+	clr_flag = emf_ignores_defensive_attrition
+	clr_flag = emf_defensive_attrition
+	set_flag = emf_matrilineal_marriages
+	set_flag = emf_men_can_take_consorts
+	set_flag = emf_women_can_take_consorts
+}
+
+emf_set_default_flags_for_almaqah = {
+	set_variable = { which = emf_peace_piety_gain value = 0.0 }
+	set_variable = { which = emf_ai_convert_other_groups value = 2 }
+	set_variable = { which = emf_ai_convert_same_group value = 1 }
+	clr_flag = emf_peace_prestige_loss
+	set_variable = { which = emf_aggression value = 1.0 }
+	set_flag = emf_raised_vassal_opinion_loss
+	clr_flag = emf_attacking_same_religion_piety_loss
+	set_variable = { which = emf_max_wives value = 1 }
+	set_variable = { which = emf_max_consorts value = 3 }
+	set_flag = emf_feminist
+	clr_flag = emf_has_heir_designation
+	set_variable = { which = emf_short_reign_opinion_year_mult value = 2 }
+	clr_flag = emf_uses_jizya_tax
+	clr_flag = emf_can_retire_to_monastery
+	clr_flag = emf_can_excommunicate
+	set_flag = emf_can_grant_divorce
+	clr_flag = emf_can_grant_invasion_cb
+	set_flag = emf_can_grant_claim
+	clr_flag = emf_pc_marriage
+	clr_flag = emf_bs_marriage
+	set_flag = emf_psc_marriage
+	set_flag = emf_cousin_marriage
+	clr_flag = emf_seafarer
+	clr_flag = emf_allow_looting
+	clr_flag = emf_allow_rivermovement
+	clr_flag = emf_allow_viking_invasion
+	clr_flag = emf_autocephaly
+	clr_flag = emf_pentarchy
+	clr_flag = emf_divine_blood
+	clr_flag = emf_uses_decadence
+	clr_flag = emf_can_have_antipopes
+	set_flag = emf_priests_can_marry
+	set_flag = emf_priests_can_inherit
+	clr_flag = emf_ignores_defensive_attrition
+	clr_flag = emf_defensive_attrition
+	set_flag = emf_matrilineal_marriages
+	set_flag = emf_men_can_take_consorts
+	clr_flag = emf_women_can_take_consorts
+	set_flag = emf_investiture
+}
+
+emf_set_default_flags_for_talab = {
+	set_variable = { which = emf_peace_piety_gain value = 0.0 }
+	set_variable = { which = emf_ai_convert_other_groups value = 2 }
+	set_variable = { which = emf_ai_convert_same_group value = 1 }
+	clr_flag = emf_peace_prestige_loss
+	set_variable = { which = emf_aggression value = 1.0 }
+	set_flag = emf_raised_vassal_opinion_loss
+	clr_flag = emf_attacking_same_religion_piety_loss
+	set_variable = { which = emf_max_wives value = 1 }
+	set_variable = { which = emf_max_consorts value = 3 }
+	set_flag = emf_feminist
+	clr_flag = emf_has_heir_designation
+	set_variable = { which = emf_short_reign_opinion_year_mult value = -1000 }
+	clr_flag = emf_uses_jizya_tax
+	clr_flag = emf_can_retire_to_monastery
+	clr_flag = emf_can_excommunicate
+	clr_flag = emf_can_grant_divorce
+	clr_flag = emf_can_grant_invasion_cb
+	clr_flag = emf_can_grant_claim
+	clr_flag = emf_pc_marriage
+	clr_flag = emf_bs_marriage
+	set_flag = emf_psc_marriage
+	set_flag = emf_cousin_marriage
+	clr_flag = emf_seafarer
+	clr_flag = emf_allow_looting
+	clr_flag = emf_allow_rivermovement
+	set_flag = emf_allow_viking_invasion
+	clr_flag = emf_autocephaly
+	clr_flag = emf_pentarchy
+	clr_flag = emf_divine_blood
+	clr_flag = emf_uses_decadence
+	clr_flag = emf_can_have_antipopes
+	set_flag = emf_priests_can_marry
+	set_flag = emf_priests_can_inherit
+	clr_flag = emf_ignores_defensive_attrition
+	set_flag = emf_defensive_attrition
+	set_flag = emf_matrilineal_marriages
+	set_flag = emf_men_can_take_consorts
+	clr_flag = emf_women_can_take_consorts
+}
+
+emf_set_default_flags_for_shams = {
+	set_variable = { which = emf_peace_piety_gain value = 0.0 }
+	set_variable = { which = emf_ai_convert_other_groups value = 2 }
+	set_variable = { which = emf_ai_convert_same_group value = 1 }
+	clr_flag = emf_peace_prestige_loss
+	set_variable = { which = emf_aggression value = 1.0 }
+	set_flag = emf_raised_vassal_opinion_loss
+	clr_flag = emf_attacking_same_religion_piety_loss
+	set_variable = { which = emf_max_wives value = 1 }
+	set_variable = { which = emf_max_consorts value = 3 }
+	set_flag = emf_feminist
+	clr_flag = emf_has_heir_designation
+	set_variable = { which = emf_short_reign_opinion_year_mult value = 3 }
+	clr_flag = emf_uses_jizya_tax
+	clr_flag = emf_can_retire_to_monastery
+	clr_flag = emf_can_excommunicate
+	clr_flag = emf_can_grant_divorce
+	clr_flag = emf_can_grant_invasion_cb
+	clr_flag = emf_can_grant_claim
+	clr_flag = emf_pc_marriage
+	clr_flag = emf_bs_marriage
+	set_flag = emf_psc_marriage
+	set_flag = emf_cousin_marriage
+	clr_flag = emf_seafarer
+	clr_flag = emf_allow_looting
+	clr_flag = emf_allow_rivermovement
+	clr_flag = emf_allow_viking_invasion
+	clr_flag = emf_autocephaly
+	clr_flag = emf_pentarchy
+	clr_flag = emf_divine_blood
+	clr_flag = emf_uses_decadence
+	clr_flag = emf_can_have_antipopes
+	set_flag = emf_priests_can_marry
+	set_flag = emf_priests_can_inherit
+	clr_flag = emf_ignores_defensive_attrition
+	clr_flag = emf_defensive_attrition
+	set_flag = emf_matrilineal_marriages
+	set_flag = emf_men_can_take_consorts
+	clr_flag = emf_women_can_take_consorts
+}
+
+emf_set_default_flags_for_allat = {
+	set_variable = { which = emf_peace_piety_gain value = 0.0 }
+	set_variable = { which = emf_ai_convert_other_groups value = 2 }
+	set_variable = { which = emf_ai_convert_same_group value = 1 }
+	clr_flag = emf_peace_prestige_loss
+	set_variable = { which = emf_aggression value = 1.0 }
+	set_flag = emf_raised_vassal_opinion_loss
+	clr_flag = emf_attacking_same_religion_piety_loss
+	set_variable = { which = emf_max_wives value = 1 }
+	set_variable = { which = emf_max_consorts value = 3 }
+	set_flag = emf_feminist
+	clr_flag = emf_has_heir_designation
+	set_variable = { which = emf_short_reign_opinion_year_mult value = 3 }
+	clr_flag = emf_uses_jizya_tax
+	clr_flag = emf_can_retire_to_monastery
+	clr_flag = emf_can_excommunicate
+	clr_flag = emf_can_grant_divorce
+	clr_flag = emf_can_grant_invasion_cb
+	clr_flag = emf_can_grant_claim
+	clr_flag = emf_pc_marriage
+	clr_flag = emf_bs_marriage
+	set_flag = emf_psc_marriage
+	set_flag = emf_cousin_marriage
+	clr_flag = emf_seafarer
+	clr_flag = emf_allow_looting
+	clr_flag = emf_allow_rivermovement
+	clr_flag = emf_allow_viking_invasion
+	clr_flag = emf_autocephaly
+	clr_flag = emf_pentarchy
+	clr_flag = emf_divine_blood
+	clr_flag = emf_uses_decadence
+	clr_flag = emf_can_have_antipopes
+	set_flag = emf_priests_can_marry
+	set_flag = emf_priests_can_inherit
+	clr_flag = emf_ignores_defensive_attrition
+	clr_flag = emf_defensive_attrition
+	set_flag = emf_matrilineal_marriages
+	set_flag = emf_men_can_take_consorts
+	clr_flag = emf_women_can_take_consorts
+	set_variable = { which = emf_independence_war_score_bonus value = 20 }
+}
+
+emf_set_default_flags_for_hubal = {
+	set_variable = { which = emf_peace_piety_gain value = 0.0 }
+	set_variable = { which = emf_ai_convert_other_groups value = 2 }
+	set_variable = { which = emf_ai_convert_same_group value = 1 }
+	clr_flag = emf_peace_prestige_loss
+	set_variable = { which = emf_aggression value = 1.0 }
+	set_flag = emf_raised_vassal_opinion_loss
+	clr_flag = emf_attacking_same_religion_piety_loss
+	set_variable = { which = emf_max_wives value = 1 }
+	set_variable = { which = emf_max_consorts value = 3 }
+	set_flag = emf_feminist
+	clr_flag = emf_has_heir_designation
+	set_variable = { which = emf_short_reign_opinion_year_mult value = 3 }
+	clr_flag = emf_uses_jizya_tax
+	clr_flag = emf_can_retire_to_monastery
+	clr_flag = emf_can_excommunicate
+	clr_flag = emf_can_grant_divorce
+	clr_flag = emf_can_grant_invasion_cb
+	clr_flag = emf_can_grant_claim
+	clr_flag = emf_pc_marriage
+	clr_flag = emf_bs_marriage
+	set_flag = emf_psc_marriage
+	set_flag = emf_cousin_marriage
+	clr_flag = emf_seafarer
+	clr_flag = emf_allow_looting
+	clr_flag = emf_allow_rivermovement
+	clr_flag = emf_allow_viking_invasion
+	clr_flag = emf_autocephaly
+	clr_flag = emf_pentarchy
+	clr_flag = emf_divine_blood
+	clr_flag = emf_uses_decadence
+	clr_flag = emf_can_have_antipopes
+	set_flag = emf_priests_can_marry
+	set_flag = emf_priests_can_inherit
+	clr_flag = emf_ignores_defensive_attrition
+	clr_flag = emf_defensive_attrition
+	set_flag = emf_matrilineal_marriages
+	set_flag = emf_men_can_take_consorts
+	clr_flag = emf_women_can_take_consorts
+	set_variable = { which = emf_independence_war_score_bonus value = 20 }
+}
+
+emf_set_default_flags_for_attar = {
+	set_variable = { which = emf_peace_piety_gain value = 0.0 }
+	set_variable = { which = emf_ai_convert_other_groups value = 2 }
+	set_variable = { which = emf_ai_convert_same_group value = 1 }
+	set_flag = emf_peace_prestige_loss
+	set_variable = { which = emf_aggression value = 1.0 }
+	clr_flag = emf_raised_vassal_opinion_loss
+	clr_flag = emf_attacking_same_religion_piety_loss
+	set_variable = { which = emf_max_wives value = 1 }
+	set_variable = { which = emf_max_consorts value = 3 }
+	set_flag = emf_feminist
+	clr_flag = emf_has_heir_designation
+	set_variable = { which = emf_short_reign_opinion_year_mult value = 3 }
+	clr_flag = emf_uses_jizya_tax
+	clr_flag = emf_can_retire_to_monastery
+	clr_flag = emf_can_excommunicate
+	clr_flag = emf_can_grant_divorce
+	clr_flag = emf_can_grant_invasion_cb
+	clr_flag = emf_can_grant_claim
+	clr_flag = emf_pc_marriage
+	clr_flag = emf_bs_marriage
+	set_flag = emf_psc_marriage
+	set_flag = emf_cousin_marriage
+	clr_flag = emf_seafarer
+	clr_flag = emf_allow_looting
+	clr_flag = emf_allow_rivermovement
+	clr_flag = emf_allow_viking_invasion
+	clr_flag = emf_autocephaly
+	clr_flag = emf_pentarchy
+	clr_flag = emf_divine_blood
+	clr_flag = emf_uses_decadence
+	clr_flag = emf_can_have_antipopes
+	set_flag = emf_priests_can_marry
+	set_flag = emf_priests_can_inherit
+	clr_flag = emf_ignores_defensive_attrition
+	clr_flag = emf_defensive_attrition
+	set_flag = emf_matrilineal_marriages
+	set_flag = emf_men_can_take_consorts
+	clr_flag = emf_women_can_take_consorts
+}
+
+emf_set_default_flags_for_maher = {
+	set_variable = { which = emf_peace_piety_gain value = 0.0 }
+	set_variable = { which = emf_ai_convert_other_groups value = 2 }
+	set_variable = { which = emf_ai_convert_same_group value = 1 }
+	set_flag = emf_peace_prestige_loss
+	set_variable = { which = emf_aggression value = 1.5 }
+	clr_flag = emf_raised_vassal_opinion_loss
+	clr_flag = emf_attacking_same_religion_piety_loss
+	set_variable = { which = emf_max_wives value = 1 }
+	set_variable = { which = emf_max_consorts value = 3 }
+	set_flag = emf_feminist
+	clr_flag = emf_has_heir_designation
+	set_variable = { which = emf_short_reign_opinion_year_mult value = 4 }
+	clr_flag = emf_uses_jizya_tax
+	clr_flag = emf_can_retire_to_monastery
+	clr_flag = emf_can_excommunicate
+	clr_flag = emf_can_grant_divorce
+	clr_flag = emf_can_grant_invasion_cb
+	clr_flag = emf_can_grant_claim
+	clr_flag = emf_pc_marriage
+	clr_flag = emf_bs_marriage
+	set_flag = emf_psc_marriage
+	set_flag = emf_cousin_marriage
+	clr_flag = emf_seafarer
+	clr_flag = emf_allow_looting
+	clr_flag = emf_allow_rivermovement
+	clr_flag = emf_allow_viking_invasion
+	clr_flag = emf_autocephaly
+	clr_flag = emf_pentarchy
+	clr_flag = emf_divine_blood
+	clr_flag = emf_uses_decadence
+	clr_flag = emf_can_have_antipopes
+	set_flag = emf_priests_can_marry
+	set_flag = emf_priests_can_inherit
+	clr_flag = emf_ignores_defensive_attrition
+	clr_flag = emf_defensive_attrition
+	set_flag = emf_matrilineal_marriages
+	set_flag = emf_men_can_take_consorts
+	clr_flag = emf_women_can_take_consorts
+	set_variable = { which = emf_independence_war_score_bonus value = 10 }
+}
+
+emf_set_default_flags_for_quetzal_reformed = {
+	set_variable = { which = emf_peace_piety_gain value = 0.0 }
+	set_variable = { which = emf_ai_convert_other_groups value = 2 }
+	set_variable = { which = emf_ai_convert_same_group value = 1 }
+	clr_flag = emf_peace_prestige_loss
+	set_variable = { which = emf_aggression value = 2.0 }
+	set_flag = emf_raised_vassal_opinion_loss
+	clr_flag = emf_attacking_same_religion_piety_loss
+	set_variable = { which = emf_max_wives value = 1 }
+	set_variable = { which = emf_max_consorts value = 3 }
+	clr_flag = emf_feminist
+	clr_flag = emf_has_heir_designation
+	set_variable = { which = emf_short_reign_opinion_year_mult value = -1000 }
+	clr_flag = emf_uses_jizya_tax
+	clr_flag = emf_can_retire_to_monastery
+	clr_flag = emf_can_excommunicate
+	clr_flag = emf_can_grant_divorce
+	clr_flag = emf_can_grant_invasion_cb
+	clr_flag = emf_can_grant_claim
+	clr_flag = emf_pc_marriage
+	clr_flag = emf_bs_marriage
+	set_flag = emf_psc_marriage
+	set_flag = emf_cousin_marriage
+	clr_flag = emf_seafarer
+	clr_flag = emf_allow_looting
+	clr_flag = emf_allow_rivermovement
+	clr_flag = emf_allow_viking_invasion
+	clr_flag = emf_autocephaly
+	clr_flag = emf_pentarchy
+	clr_flag = emf_divine_blood
+	clr_flag = emf_uses_decadence
+	clr_flag = emf_can_have_antipopes
+	set_flag = emf_priests_can_marry
+	set_flag = emf_priests_can_inherit
+	clr_flag = emf_ignores_defensive_attrition
+	clr_flag = emf_defensive_attrition
+	set_flag = emf_matrilineal_marriages
+	set_flag = emf_men_can_take_consorts
+	clr_flag = emf_women_can_take_consorts
+	set_flag = emf_join_crusade_if_bordering_hostile
+}
+
+emf_set_default_flags_for_quetzal = {
+	set_variable = { which = emf_peace_piety_gain value = 0.0 }
+	set_variable = { which = emf_ai_convert_other_groups value = 2 }
+	set_variable = { which = emf_ai_convert_same_group value = 1 }
+	set_flag = emf_peace_prestige_loss
+	set_variable = { which = emf_aggression value = 1.0 }
+	clr_flag = emf_raised_vassal_opinion_loss
+	clr_flag = emf_attacking_same_religion_piety_loss
+	set_variable = { which = emf_max_wives value = 1 }
+	set_variable = { which = emf_max_consorts value = 0 }
+	clr_flag = emf_feminist
+	clr_flag = emf_has_heir_designation
+	set_variable = { which = emf_short_reign_opinion_year_mult value = 4 }
+	clr_flag = emf_uses_jizya_tax
+	clr_flag = emf_can_retire_to_monastery
+	clr_flag = emf_can_excommunicate
+	clr_flag = emf_can_grant_divorce
+	clr_flag = emf_can_grant_invasion_cb
+	clr_flag = emf_can_grant_claim
+	clr_flag = emf_pc_marriage
+	clr_flag = emf_bs_marriage
+	set_flag = emf_psc_marriage
+	set_flag = emf_cousin_marriage
+	clr_flag = emf_seafarer
+	clr_flag = emf_allow_looting
+	clr_flag = emf_allow_rivermovement
+	clr_flag = emf_allow_viking_invasion
+	clr_flag = emf_autocephaly
+	clr_flag = emf_pentarchy
+	clr_flag = emf_divine_blood
+	clr_flag = emf_uses_decadence
+	clr_flag = emf_can_have_antipopes
+	set_flag = emf_priests_can_marry
+	set_flag = emf_priests_can_inherit
+	clr_flag = emf_ignores_defensive_attrition
+	clr_flag = emf_defensive_attrition
+	set_flag = emf_matrilineal_marriages
+	set_flag = emf_men_can_take_consorts
+	clr_flag = emf_women_can_take_consorts
+}
+
+emf_set_default_flags_for_mayan_reformed = {
+	set_variable = { which = emf_peace_piety_gain value = 0.0 }
+	set_variable = { which = emf_ai_convert_other_groups value = 2 }
+	set_variable = { which = emf_ai_convert_same_group value = 1 }
+	clr_flag = emf_peace_prestige_loss
+	set_variable = { which = emf_aggression value = 1.5 }
+	set_flag = emf_raised_vassal_opinion_loss
+	clr_flag = emf_attacking_same_religion_piety_loss
+	set_variable = { which = emf_max_wives value = 1 }
+	set_variable = { which = emf_max_consorts value = 3 }
+	clr_flag = emf_feminist
+	clr_flag = emf_has_heir_designation
+	set_variable = { which = emf_short_reign_opinion_year_mult value = -1000 }
+	clr_flag = emf_uses_jizya_tax
+	clr_flag = emf_can_retire_to_monastery
+	clr_flag = emf_can_excommunicate
+	clr_flag = emf_can_grant_divorce
+	clr_flag = emf_can_grant_invasion_cb
+	clr_flag = emf_can_grant_claim
+	clr_flag = emf_pc_marriage
+	clr_flag = emf_bs_marriage
+	set_flag = emf_psc_marriage
+	set_flag = emf_cousin_marriage
+	clr_flag = emf_seafarer
+	clr_flag = emf_allow_looting
+	clr_flag = emf_allow_rivermovement
+	clr_flag = emf_allow_viking_invasion
+	clr_flag = emf_autocephaly
+	clr_flag = emf_pentarchy
+	clr_flag = emf_divine_blood
+	clr_flag = emf_uses_decadence
+	clr_flag = emf_can_have_antipopes
+	set_flag = emf_priests_can_marry
+	set_flag = emf_priests_can_inherit
+	clr_flag = emf_ignores_defensive_attrition
+	clr_flag = emf_defensive_attrition
+	set_flag = emf_matrilineal_marriages
+	set_flag = emf_men_can_take_consorts
+	clr_flag = emf_women_can_take_consorts
+	set_flag = emf_join_crusade_if_bordering_hostile
+}
+
+emf_set_default_flags_for_mayan = {
+	set_variable = { which = emf_peace_piety_gain value = 0.0 }
+	set_variable = { which = emf_ai_convert_other_groups value = 2 }
+	set_variable = { which = emf_ai_convert_same_group value = 2 }
+	set_flag = emf_peace_prestige_loss
+	set_variable = { which = emf_aggression value = 1.0 }
+	clr_flag = emf_raised_vassal_opinion_loss
+	clr_flag = emf_attacking_same_religion_piety_loss
+	set_variable = { which = emf_max_wives value = 1 }
+	set_variable = { which = emf_max_consorts value = 3 }
+	clr_flag = emf_feminist
+	clr_flag = emf_has_heir_designation
+	set_variable = { which = emf_short_reign_opinion_year_mult value = -1000 }
+	clr_flag = emf_uses_jizya_tax
+	clr_flag = emf_can_retire_to_monastery
+	clr_flag = emf_can_excommunicate
+	clr_flag = emf_can_grant_divorce
+	clr_flag = emf_can_grant_invasion_cb
+	clr_flag = emf_can_grant_claim
+	clr_flag = emf_pc_marriage
+	clr_flag = emf_bs_marriage
+	set_flag = emf_psc_marriage
+	set_flag = emf_cousin_marriage
+	clr_flag = emf_seafarer
+	clr_flag = emf_allow_looting
+	clr_flag = emf_allow_rivermovement
+	clr_flag = emf_allow_viking_invasion
+	clr_flag = emf_autocephaly
+	clr_flag = emf_pentarchy
+	clr_flag = emf_divine_blood
+	clr_flag = emf_uses_decadence
+	clr_flag = emf_can_have_antipopes
+	set_flag = emf_priests_can_marry
+	set_flag = emf_priests_can_inherit
+	clr_flag = emf_ignores_defensive_attrition
+	clr_flag = emf_defensive_attrition
+	set_flag = emf_matrilineal_marriages
+	set_flag = emf_men_can_take_consorts
+	clr_flag = emf_women_can_take_consorts
+	set_variable = { which = emf_independence_war_score_bonus value = 30 }
+}
+
 emf_set_default_flags_for_catholic = {
 	set_flag = emf_playable
 	set_flag = emf_ai_peaceful

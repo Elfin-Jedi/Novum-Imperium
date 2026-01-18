@@ -2123,6 +2123,9 @@ rtp_give_random_generic_artifact_se = {
 		1 = {
 			add_artifact = the_secret_history_of_culture
 		}
+		10 = {
+			add_any_artifact_effect = yes
+		}			
 	}
 }
 
@@ -3467,7 +3470,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = catholic
 							culture = THIS
 							dynasty = none
@@ -3477,7 +3480,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = cathar
 							culture = THIS
 							dynasty = none
@@ -3487,7 +3490,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = fraticelli
 							culture = THIS
 							dynasty = none
@@ -3497,7 +3500,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = waldensian
 							culture = THIS
 							dynasty = none
@@ -3507,8 +3510,138 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = lollard
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = adoptionist
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = arian
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = cathar_reformed
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = christian_populist_reformed
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = mari_christ_reformed
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = priscillian_reformed
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = antinomian
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = donatist
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = mari_christ
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = priscillian
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = celtic_christ
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = norse_christ
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = unctionist
 							culture = THIS
 							dynasty = none
 						}
@@ -3559,7 +3692,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = orthodox
 							culture = THIS
 							dynasty = none
@@ -3569,7 +3702,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = bogomilist
 							culture = THIS
 							dynasty = none
@@ -3579,7 +3712,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = monothelite
 							culture = THIS
 							dynasty = none
@@ -3589,7 +3722,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = iconoclast
 							culture = THIS
 							dynasty = none
@@ -3599,8 +3732,78 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = paulician
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = tondrakian
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = vieti_orthodox
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = melkite
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = montanist_reformed
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = montanist
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = sabellianist
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = valentinian
 							culture = THIS
 							dynasty = none
 						}
@@ -3646,7 +3849,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = chalcedonian
 							culture = THIS
 							dynasty = none
@@ -3656,7 +3859,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = iconoclast
 							culture = THIS
 							dynasty = none
@@ -3695,13 +3898,457 @@ rtp_create_society_members_se = {
 				}
 			}
 			random_playable_ruler = {
-				create_character = {
-					age = 20
-					random_traits = yes
-					female = no
-					religion = aztec
-					culture = THIS
-					dynasty = none
+				random_list = {
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = quetzal_reformed
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = quetzal
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = mayan_reformed
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = mayan
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = aztec
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = inti_reformed
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = inti
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = inuit_pagan_reformed
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = inuit_pagan
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = zemiist
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = kachina
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = pohakantenna
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = sgaanaang
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = wakanda
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = wakan_tanka
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = mahoma
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = southern_cult
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = orenda
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = algic_pagan
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = algic_pagan
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = animism_reformed
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = animism
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = tupan_reformed
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = tupan
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = chiminigagua_reformed
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = chiminigagua
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = lapta_reformed
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = lapta
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = aiwamdzu_reformed
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = aiwamdzu
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = lakayah_reformed
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = lakayah
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = tehuelchian_reformed
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = tehuelchian
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = witran_mapu_reformed
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = witran_mapu
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = tsarutama_reformed
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = tsarutama
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = kaaulayawaa_reformed
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = kaaulayawaa
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = baniwa_reformed
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = baniwa
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = south_american_reformed
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = south_american
+							culture = THIS
+							dynasty = none
+						}
+					}
+					10 = {
+						create_character = {
+							age = 20
+							random_traits = yes
+							female = random
+							religion = south_american
+							culture = THIS
+							dynasty = none
+						}
+					}
 				}
 				new_character = {
 					join_society = rtp_martial_aztec
@@ -3731,13 +4378,157 @@ rtp_create_society_members_se = {
 			}
 		}
 		random_playable_ruler = {
-			create_character = {
-				age = 20
-				random_traits = yes
-				female = no
-				religion = norse_pagan
-				culture = THIS
-				dynasty = none
+			random_list = {
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = german_pagan_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = norse_christ_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = norse_pagan_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = ragnarok_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = teiwaz_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = norse_pagan
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = norse_war
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = ragnarok
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = sowilo
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = nott
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = german_pagan
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = irminsul
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = allfather
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = teiwaz
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = northern_sun_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
 			}
 			new_character = {
 				join_society = rtp_martial_norse
@@ -3766,13 +4557,157 @@ rtp_create_society_members_se = {
 			}
 		}
 		random_playable_ruler = {
-			create_character = {
-				age = 20
-				random_traits = yes
-				female = no
-				religion = tengri_pagan
-				culture = THIS
-				dynasty = none
+			random_list = {
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = erlik_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = tengri_bud_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = tengri_confucian_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = tengri_mani_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = tengri_pagan_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = tengri_rod_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = vattisenyaly_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = tengri_pagan
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = tengri_ahriman
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = tengri_bud
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = tengri_confucian
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = tengri_mani
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = tengri_rod
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = vattisenyaly
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = erlik
+						culture = THIS
+						dynasty = none
+					}
+				}
 			}
 			new_character = {
 				join_society = rtp_martial_tengri
@@ -3801,13 +4736,137 @@ rtp_create_society_members_se = {
 			}
 		}
 		random_playable_ruler = {
-			create_character = {
-				age = 20
-				random_traits = yes
-				female = no
-				religion = baltic_pagan
-				culture = THIS
-				dynasty = none
+			random_list = {
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = baltic_pagan_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = dievas
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = saule
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = perkunas
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = peckols
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = baltic_pagan
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = celtic_christ_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = celtic_pagan_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = iberian_pagan_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = celtic_pagan
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = lugh
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = endovellico
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = britannic_pagan
+						culture = THIS
+						dynasty = none
+					}
+				}
 			}
 			new_character = {
 				join_society = rtp_martial_baltic
@@ -3836,13 +4895,87 @@ rtp_create_society_members_se = {
 			}
 		}
 		random_playable_ruler = {
-			create_character = {
-				age = 20
-				random_traits = yes
-				female = no
-				religion = finnish_pagan
-				culture = THIS
-				dynasty = none
+			random_list = {
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = finnish_pagan_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = chumbylat_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = voipel_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = finnish_pagan
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = ilmatar
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = jumala
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = chumbylat
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = voipel
+						culture = THIS
+						dynasty = none
+					}
+				}
 			}
 			new_character = {
 				join_society = rtp_martial_finnish
@@ -3871,13 +5004,87 @@ rtp_create_society_members_se = {
 			}
 		}
 		random_playable_ruler = {
-			create_character = {
-				age = 20
-				random_traits = yes
-				female = no
-				religion = slavic_pagan
-				culture = THIS
-				dynasty = none
+			random_list = {
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = slavic_pagan_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = perun
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = veles
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = slavic_pagan
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = rod
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = svaroh
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = dazhbog
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = svetovid
+						culture = THIS
+						dynasty = none
+					}
+				}
 			}
 			new_character = {
 				join_society = rtp_martial_slavic
@@ -3906,13 +5113,787 @@ rtp_create_society_members_se = {
 			}
 		}
 		random_playable_ruler = {
-			create_character = {
-				age = 20
-				random_traits = yes
-				female = no
-				religion = west_african_pagan
-				culture = THIS
-				dynasty = none
+			random_list = {
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = bori
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = a_tag_roog
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = amazigh
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = ethiopian_war_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = waaq
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = bantu_pagan_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = nyakalagan_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = zande_pagan_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = zulu_pagan_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = kintu
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = akuj_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = akuj
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = baluba_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = baluba
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = batembuzi
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = bukongo_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = bukongo
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = bumuntu_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = bumuntu
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = byeri_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = byeri
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = dua
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = enkai
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = imana
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = imipashi_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = imipashi
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = kalunga_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = kalunga
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = odinane_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = odinane
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = nyasaye
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = nyau
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = num_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = num
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = nzambiist_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = nzambiist
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = makonde_pagan
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = mwari
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = muzimu_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = muzimu
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = okuruo_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = okuruo
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = zande_pagan
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = zulu_pagan
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = berber_pagan_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = berber_pagan
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = gurzil
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = amanai
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = amun_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = aten_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = isis_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = set_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = amun
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = aten
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = horus_re
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = isis
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = set
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = egyptian_pagan_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = egyptian_pagan
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = aten_pagan
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = serer_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = mande_pagan
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = yoruba
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = nyame
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = anansi
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = west_african_pagan
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = south_bantu_mythology_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = south_bantu_mythology
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = east_bantu_mythology_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = east_bantu_mythology
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = omotic_pagan_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = omotic_pagan
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = cushitic_pagan_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = cushitic_pagan
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = nilotic_pagan_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = nilotic_pagan
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = khoi_san_mythology_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = khoi_san_mythology
+						culture = THIS
+						dynasty = none
+					}
+				}
 			}
 			new_character = {
 				join_society = rtp_martial_west_african
@@ -3941,13 +5922,157 @@ rtp_create_society_members_se = {
 			}
 		}
 		random_playable_ruler = {
-			create_character = {
-				age = 20
-				random_traits = yes
-				female = no
-				religion = zun_pagan
-				culture = THIS
-				dynasty = none
+			random_list = {
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = sol_boreas_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = sol_islam_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = sol_sahara_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = sol
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = sol_christ
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = sol_mani
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = sol_apollo
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = sol_boreas
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = sol_islam
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = sol_norse
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = sol_slav
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = sol_tsahay
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = sol_sahara
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = sol_sahara
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = zun_pagan
+						culture = THIS
+						dynasty = none
+					}
+				}
 			}
 			new_character = {
 				join_society = rtp_martial_zun
@@ -3976,13 +6101,487 @@ rtp_create_society_members_se = {
 			}
 		}
 		random_playable_ruler = {
-			create_character = {
-				age = 20
-				random_traits = yes
-				female = no
-				religion = bon
-				culture = THIS
-				dynasty = none
+			random_list = {
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = bon_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = lubu_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = tao_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = confucian
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = shenjiao
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = lubu
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = bon
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = lubu
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = tao
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = sol_taoist
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = ainu_pantheism_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = ainu_pantheism
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = jurchen_pagan_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = jurchen_pagan
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = nat
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = sastsana_phi
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = rmagao
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = benzhujiao
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = bimojiao
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = ua_dab
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = nugyauq
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = thangiao
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = shingyo
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = nihon_shinto
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = ryukyu_shinto
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = melanesian_religion_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = melanesian_religion
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = taiwanese_religion_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = taiwanese_religion
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = philippine_religion_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = philippine_religion
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = bornean_religion_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = bornean_religion
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = sulawesi_religion_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = sulawesi_religion
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = flores_religion_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = flores_religion
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = java_religion_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = java_religion
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = sumatran_religion_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = sumatran_religion
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = malagasy_religion_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = malagasy_religion
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = dreamtime_religion_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = dreamtime_religion
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = maori_religion_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = maori_religion
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = taoist
+						culture = THIS
+						dynasty = none
+					}
+				}
 			}
 			new_character = {
 				join_society = rtp_martial_bon
@@ -4011,13 +6610,107 @@ rtp_create_society_members_se = {
 			}
 		}
 		random_playable_ruler = {
-			create_character = {
-				age = 20
-				random_traits = yes
-				female = no
-				religion = hellenic_pagan
-				culture = THIS
-				dynasty = none
+			random_list = {
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = cybele_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = graeco_roman_reformed
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = graeco_roman
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = jupiter
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = dionysos
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = alexandros
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = solomonic_alexandros
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = roman_imperial
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = cybele
+						culture = THIS
+						dynasty = none
+					}
+				}
+				10 = {
+					create_character = {
+						age = 20
+						random_traits = yes
+						female = random
+						religion = hellenic_pagan
+						culture = THIS
+						dynasty = none
+					}
+				}
 			}
 			new_character = {
 				join_society = rtp_martial_hellenic
@@ -4051,7 +6744,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = jewish
 						culture = THIS
 						dynasty = none
@@ -4061,7 +6754,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = samaritan
 						culture = THIS
 						dynasty = none
@@ -4071,7 +6764,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = karaite
 						culture = THIS
 						dynasty = none
@@ -4110,7 +6803,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = zoroastrian
 						culture = THIS
 						dynasty = none
@@ -4120,8 +6813,8 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
-						religion = mazdakism
+						female = random
+						religion = mazdaki
 						culture = THIS
 						dynasty = none
 					}
@@ -4130,8 +6823,8 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
-						religion = mani
+						female = random
+						religion = manichean
 						culture = THIS
 						dynasty = none
 					}
@@ -4140,7 +6833,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = khurmazta
 						culture = THIS
 						dynasty = none
@@ -4179,7 +6872,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = hindu
 						culture = THIS
 						dynasty = none
@@ -4189,7 +6882,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = bud_zen
 						culture = THIS
 						dynasty = none
@@ -4199,7 +6892,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = jain
 						culture = THIS
 						dynasty = none
@@ -4209,7 +6902,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = taoist
 						culture = THIS
 						dynasty = none
@@ -4248,7 +6941,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = miaphysite
 						culture = THIS
 						dynasty = none
@@ -4258,7 +6951,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = monophysite
 						culture = THIS
 						dynasty = none
@@ -4297,7 +6990,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = nestorian
 						culture = THIS
 						dynasty = none
@@ -4307,7 +7000,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = messalian
 						culture = THIS
 						dynasty = none
@@ -4346,7 +7039,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = sunni
 						culture = THIS
 						dynasty = none
@@ -4356,7 +7049,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = zikri
 						culture = THIS
 						dynasty = none
@@ -4366,8 +7059,8 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
-						religion = yazidism
+						female = random
+						religion = yazidi
 						culture = THIS
 						dynasty = none
 					}
@@ -4405,7 +7098,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = shiite
 						culture = THIS
 						dynasty = none
@@ -4415,7 +7108,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = druze
 						culture = THIS
 						dynasty = none
@@ -4425,7 +7118,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = hurufi
 						culture = THIS
 						dynasty = none
@@ -4435,7 +7128,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = qarmatian
 						culture = THIS
 						dynasty = none
@@ -4474,7 +7167,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = ibadi
 						culture = THIS
 						dynasty = none
@@ -4484,7 +7177,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = kharijite
 						culture = THIS
 						dynasty = none
@@ -4537,7 +7230,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = catholic
 							culture = THIS
 							dynasty = none
@@ -4547,7 +7240,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = cathar
 							culture = THIS
 							dynasty = none
@@ -4557,7 +7250,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = fraticelli
 							culture = THIS
 							dynasty = none
@@ -4567,7 +7260,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = waldensian
 							culture = THIS
 							dynasty = none
@@ -4577,7 +7270,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = lollard
 							culture = THIS
 							dynasty = none
@@ -4629,7 +7322,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = orthodox
 							culture = THIS
 							dynasty = none
@@ -4639,7 +7332,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = bogomilist
 							culture = THIS
 							dynasty = none
@@ -4649,7 +7342,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = monothelite
 							culture = THIS
 							dynasty = none
@@ -4659,7 +7352,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = iconoclast
 							culture = THIS
 							dynasty = none
@@ -4669,7 +7362,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = paulician
 							culture = THIS
 							dynasty = none
@@ -4716,7 +7409,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = chalcedonian
 							culture = THIS
 							dynasty = none
@@ -4726,7 +7419,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = iconoclast
 							culture = THIS
 							dynasty = none
@@ -4764,7 +7457,7 @@ rtp_create_society_members_se = {
 			create_character = {
 				age = 20
 				random_traits = yes
-				female = no
+				female = random
 				religion = hellenic_pagan
 				culture = THIS
 				dynasty = none
@@ -4801,7 +7494,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = norse_pagan
 						culture = THIS
 						dynasty = none
@@ -4811,7 +7504,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = aztec
 						culture = THIS
 						dynasty = none
@@ -4821,7 +7514,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = zun_pagan
 						culture = THIS
 						dynasty = none
@@ -4831,7 +7524,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = finnish_pagan
 						culture = THIS
 						dynasty = none
@@ -4841,7 +7534,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = west_african_pagan
 						culture = THIS
 						dynasty = none
@@ -4851,7 +7544,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = slavic_pagan
 						culture = THIS
 						dynasty = none
@@ -4861,7 +7554,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = baltic_pagan
 						culture = THIS
 						dynasty = none
@@ -4871,7 +7564,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = tengri_pagan
 						culture = THIS
 						dynasty = none
@@ -4881,7 +7574,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = bon
 						culture = THIS
 						dynasty = none
@@ -4920,7 +7613,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = zoroastrian
 						culture = THIS
 						dynasty = none
@@ -4930,8 +7623,8 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
-						religion = mazdakism
+						female = random
+						religion = mazdaki
 						culture = THIS
 						dynasty = none
 					}
@@ -4940,8 +7633,8 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
-						religion = mani
+						female = random
+						religion = manichean
 						culture = THIS
 						dynasty = none
 					}
@@ -4950,7 +7643,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = khurmazta
 						culture = THIS
 						dynasty = none
@@ -4989,7 +7682,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = jewish
 						culture = THIS
 						dynasty = none
@@ -4999,7 +7692,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = samaritan
 						culture = THIS
 						dynasty = none
@@ -5009,7 +7702,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = karaite
 						culture = THIS
 						dynasty = none
@@ -5048,7 +7741,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = miaphysite
 						culture = THIS
 						dynasty = none
@@ -5058,7 +7751,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = monophysite
 						culture = THIS
 						dynasty = none
@@ -5097,7 +7790,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = nestorian
 						culture = THIS
 						dynasty = none
@@ -5107,7 +7800,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = messalian
 						culture = THIS
 						dynasty = none
@@ -5146,7 +7839,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = sunni
 						culture = THIS
 						dynasty = none
@@ -5156,7 +7849,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = zikri
 						culture = THIS
 						dynasty = none
@@ -5166,8 +7859,8 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
-						religion = yazidism
+						female = random
+						religion = yazidi
 						culture = THIS
 						dynasty = none
 					}
@@ -5205,7 +7898,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = shiite
 						culture = THIS
 						dynasty = none
@@ -5215,7 +7908,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = druze
 						culture = THIS
 						dynasty = none
@@ -5225,7 +7918,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = hurufi
 						culture = THIS
 						dynasty = none
@@ -5235,7 +7928,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = qarmatian
 						culture = THIS
 						dynasty = none
@@ -5274,7 +7967,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = ibadi
 						culture = THIS
 						dynasty = none
@@ -5284,7 +7977,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = kharijite
 						culture = THIS
 						dynasty = none
@@ -5321,7 +8014,7 @@ rtp_create_society_members_se = {
 			create_character = {
 				age = 20
 				random_traits = yes
-				female = no
+				female = random
 				religion = hindu
 				culture = THIS
 				dynasty = none
@@ -5356,7 +8049,7 @@ rtp_create_society_members_se = {
 			create_character = {
 				age = 20
 				random_traits = yes
-				female = no
+				female = random
 				religion = bud_zen
 				culture = THIS
 				dynasty = none
@@ -5391,7 +8084,7 @@ rtp_create_society_members_se = {
 			create_character = {
 				age = 20
 				random_traits = yes
-				female = no
+				female = random
 				religion = jain
 				culture = THIS
 				dynasty = none
@@ -5426,7 +8119,7 @@ rtp_create_society_members_se = {
 			create_character = {
 				age = 20
 				random_traits = yes
-				female = no
+				female = random
 				religion = taoist
 				culture = THIS
 				dynasty = none
@@ -5477,7 +8170,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = catholic
 							culture = THIS
 							dynasty = none
@@ -5487,7 +8180,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = cathar
 							culture = THIS
 							dynasty = none
@@ -5497,7 +8190,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = fraticelli
 							culture = THIS
 							dynasty = none
@@ -5507,7 +8200,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = waldensian
 							culture = THIS
 							dynasty = none
@@ -5517,7 +8210,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = lollard
 							culture = THIS
 							dynasty = none
@@ -5527,7 +8220,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = orthodox
 							culture = THIS
 							dynasty = none
@@ -5537,7 +8230,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = bogomilist
 							culture = THIS
 							dynasty = none
@@ -5547,7 +8240,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = monothelite
 							culture = THIS
 							dynasty = none
@@ -5557,7 +8250,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = iconoclast
 							culture = THIS
 							dynasty = none
@@ -5567,7 +8260,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = paulician
 							culture = THIS
 							dynasty = none
@@ -5577,7 +8270,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = nestorian
 							culture = THIS
 							dynasty = none
@@ -5587,7 +8280,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = messalian
 							culture = THIS
 							dynasty = none
@@ -5597,7 +8290,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = miaphysite
 							culture = THIS
 							dynasty = none
@@ -5607,7 +8300,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = monophysite
 							culture = THIS
 							dynasty = none
@@ -5654,7 +8347,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = chalcedonian
 							culture = THIS
 							dynasty = none
@@ -5664,7 +8357,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = iconoclast
 							culture = THIS
 							dynasty = none
@@ -5674,7 +8367,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = nestorian
 							culture = THIS
 							dynasty = none
@@ -5684,7 +8377,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = messalian
 							culture = THIS
 							dynasty = none
@@ -5694,7 +8387,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = miaphysite
 							culture = THIS
 							dynasty = none
@@ -5704,7 +8397,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = monophysite
 							culture = THIS
 							dynasty = none
@@ -5746,7 +8439,7 @@ rtp_create_society_members_se = {
 				create_character = {
 					age = 20
 					random_traits = yes
-					female = no
+					female = random
 					religion = aztec
 					culture = THIS
 					dynasty = none
@@ -5782,7 +8475,7 @@ rtp_create_society_members_se = {
 			create_character = {
 				age = 20
 				random_traits = yes
-				female = no
+				female = random
 				religion = norse_pagan
 				culture = THIS
 				dynasty = none
@@ -5817,7 +8510,7 @@ rtp_create_society_members_se = {
 			create_character = {
 				age = 20
 				random_traits = yes
-				female = no
+				female = random
 				religion = tengri_pagan
 				culture = THIS
 				dynasty = none
@@ -5852,7 +8545,7 @@ rtp_create_society_members_se = {
 			create_character = {
 				age = 20
 				random_traits = yes
-				female = no
+				female = random
 				religion = baltic_pagan
 				culture = THIS
 				dynasty = none
@@ -5887,7 +8580,7 @@ rtp_create_society_members_se = {
 			create_character = {
 				age = 20
 				random_traits = yes
-				female = no
+				female = random
 				religion = finnish_pagan
 				culture = THIS
 				dynasty = none
@@ -5922,7 +8615,7 @@ rtp_create_society_members_se = {
 			create_character = {
 				age = 20
 				random_traits = yes
-				female = no
+				female = random
 				religion = slavic_pagan
 				culture = THIS
 				dynasty = none
@@ -5957,7 +8650,7 @@ rtp_create_society_members_se = {
 			create_character = {
 				age = 20
 				random_traits = yes
-				female = no
+				female = random
 				religion = west_african_pagan
 				culture = THIS
 				dynasty = none
@@ -5992,7 +8685,7 @@ rtp_create_society_members_se = {
 			create_character = {
 				age = 20
 				random_traits = yes
-				female = no
+				female = random
 				religion = zun_pagan
 				culture = THIS
 				dynasty = none
@@ -6027,7 +8720,7 @@ rtp_create_society_members_se = {
 			create_character = {
 				age = 20
 				random_traits = yes
-				female = no
+				female = random
 				religion = bon
 				culture = THIS
 				dynasty = none
@@ -6062,7 +8755,7 @@ rtp_create_society_members_se = {
 			create_character = {
 				age = 20
 				random_traits = yes
-				female = no
+				female = random
 				religion = hellenic_pagan
 				culture = THIS
 				dynasty = none
@@ -6099,7 +8792,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = sunni
 						culture = THIS
 						dynasty = none
@@ -6109,7 +8802,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = zikri
 						culture = THIS
 						dynasty = none
@@ -6119,8 +8812,8 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
-						religion = yazidism
+						female = random
+						religion = yazidi
 						culture = THIS
 						dynasty = none
 					}
@@ -6129,7 +8822,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = ibadi
 						culture = THIS
 						dynasty = none
@@ -6139,7 +8832,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = kharijite
 						culture = THIS
 						dynasty = none
@@ -6149,7 +8842,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = shiite
 						culture = THIS
 						dynasty = none
@@ -6159,7 +8852,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = druze
 						culture = THIS
 						dynasty = none
@@ -6169,7 +8862,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = hurufi
 						culture = THIS
 						dynasty = none
@@ -6179,7 +8872,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = qarmatian
 						culture = THIS
 						dynasty = none
@@ -6218,7 +8911,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = jewish
 						culture = THIS
 						dynasty = none
@@ -6228,7 +8921,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = samaritan
 						culture = THIS
 						dynasty = none
@@ -6238,7 +8931,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = karaite
 						culture = THIS
 						dynasty = none
@@ -6277,7 +8970,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = zoroastrian
 						culture = THIS
 						dynasty = none
@@ -6287,8 +8980,8 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
-						religion = mazdakism
+						female = random
+						religion = mazdaki
 						culture = THIS
 						dynasty = none
 					}
@@ -6297,8 +8990,8 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
-						religion = mani
+						female = random
+						religion = manichean
 						culture = THIS
 						dynasty = none
 					}
@@ -6307,7 +9000,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = khurmazta
 						culture = THIS
 						dynasty = none
@@ -6346,7 +9039,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = hindu
 						culture = THIS
 						dynasty = none
@@ -6356,7 +9049,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = bud_zen
 						culture = THIS
 						dynasty = none
@@ -6366,7 +9059,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = jain
 						culture = THIS
 						dynasty = none
@@ -6376,7 +9069,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = taoist
 						culture = THIS
 						dynasty = none
@@ -6445,7 +9138,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = norse_pagan
 						culture = THIS
 						dynasty = none
@@ -6455,7 +9148,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = tengri_pagan
 						culture = THIS
 						dynasty = none
@@ -6465,7 +9158,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = baltic_pagan
 						culture = THIS
 						dynasty = none
@@ -6475,7 +9168,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = finnish_pagan
 						culture = THIS
 						dynasty = none
@@ -6485,7 +9178,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = slavic_pagan
 						culture = THIS
 						dynasty = none
@@ -6495,7 +9188,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = west_african_pagan
 						culture = THIS
 						dynasty = none
@@ -6505,7 +9198,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = zun_pagan
 						culture = THIS
 						dynasty = none
@@ -6515,7 +9208,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = bon
 						culture = THIS
 						dynasty = none
@@ -6525,7 +9218,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = hellenic_pagan
 						culture = THIS
 						dynasty = none
@@ -6535,7 +9228,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = aztec
 						culture = THIS
 						dynasty = none
@@ -6545,7 +9238,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = catholic
 						culture = THIS
 						dynasty = none
@@ -6555,7 +9248,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = orthodox
 						culture = THIS
 						dynasty = none
@@ -6565,7 +9258,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = miaphysite
 						culture = THIS
 						dynasty = none
@@ -6575,7 +9268,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = nestorian
 						culture = THIS
 						dynasty = none
@@ -6585,7 +9278,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = sunni
 						culture = THIS
 						dynasty = none
@@ -6595,7 +9288,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = shiite
 						culture = THIS
 						dynasty = none
@@ -6605,7 +9298,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = ibadi
 						culture = THIS
 						dynasty = none
@@ -6615,7 +9308,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = jewish
 						culture = THIS
 						dynasty = none
@@ -6625,7 +9318,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = zoroastrian
 						culture = THIS
 						dynasty = none
@@ -6635,7 +9328,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = hindu
 						culture = THIS
 						dynasty = none
@@ -6645,7 +9338,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = jain
 						culture = THIS
 						dynasty = none
@@ -6655,7 +9348,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = bud_zen
 						culture = THIS
 						dynasty = none
@@ -6665,7 +9358,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = taoist
 						culture = THIS
 						dynasty = none
@@ -6798,7 +9491,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = hindu
 							culture = THIS
 							dynasty = none
@@ -6808,7 +9501,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = bud_zen
 							culture = THIS
 							dynasty = none
@@ -6818,7 +9511,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = jain
 							culture = THIS
 							dynasty = none
@@ -6828,7 +9521,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = taoist
 							culture = THIS
 							dynasty = none
@@ -6838,7 +9531,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = zoroastrian
 							culture = THIS
 							dynasty = none
@@ -6848,8 +9541,8 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
-							religion = mazdakism
+							female = random
+							religion = mazdaki
 							culture = THIS
 							dynasty = none
 						}
@@ -6858,8 +9551,8 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
-							religion = mani
+							female = random
+							religion = manichean
 							culture = THIS
 							dynasty = none
 						}
@@ -6868,7 +9561,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = khurmazta
 							culture = THIS
 							dynasty = none
@@ -6878,7 +9571,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = catholic
 							culture = THIS
 							dynasty = none
@@ -6888,7 +9581,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = cathar
 							culture = THIS
 							dynasty = none
@@ -6898,7 +9591,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = fraticelli
 							culture = THIS
 							dynasty = none
@@ -6908,7 +9601,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = waldensian
 							culture = THIS
 							dynasty = none
@@ -6918,7 +9611,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = lollard
 							culture = THIS
 							dynasty = none
@@ -6928,7 +9621,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = orthodox
 							culture = THIS
 							dynasty = none
@@ -6938,7 +9631,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = bogomilist
 							culture = THIS
 							dynasty = none
@@ -6948,7 +9641,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = monothelite
 							culture = THIS
 							dynasty = none
@@ -6958,7 +9651,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = iconoclast
 							culture = THIS
 							dynasty = none
@@ -6968,7 +9661,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = paulician
 							culture = THIS
 							dynasty = none
@@ -6978,7 +9671,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = nestorian
 							culture = THIS
 							dynasty = none
@@ -6988,7 +9681,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = messalian
 							culture = THIS
 							dynasty = none
@@ -6998,7 +9691,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = miaphysite
 							culture = THIS
 							dynasty = none
@@ -7008,7 +9701,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = monophysite
 							culture = THIS
 							dynasty = none
@@ -7018,7 +9711,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = sunni
 							culture = THIS
 							dynasty = none
@@ -7028,7 +9721,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = zikri
 							culture = THIS
 							dynasty = none
@@ -7038,8 +9731,8 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
-							religion = yazidism
+							female = random
+							religion = yazidi
 							culture = THIS
 							dynasty = none
 						}
@@ -7048,7 +9741,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = ibadi
 							culture = THIS
 							dynasty = none
@@ -7058,7 +9751,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = kharijite
 							culture = THIS
 							dynasty = none
@@ -7068,7 +9761,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = shiite
 							culture = THIS
 							dynasty = none
@@ -7078,7 +9771,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = druze
 							culture = THIS
 							dynasty = none
@@ -7088,7 +9781,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = hurufi
 							culture = THIS
 							dynasty = none
@@ -7098,7 +9791,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = qarmatian
 							culture = THIS
 							dynasty = none
@@ -7108,7 +9801,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = jewish
 							culture = THIS
 							dynasty = none
@@ -7118,7 +9811,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = samaritan
 							culture = THIS
 							dynasty = none
@@ -7128,7 +9821,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = karaite
 							culture = THIS
 							dynasty = none
@@ -7175,7 +9868,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = hindu
 							culture = THIS
 							dynasty = none
@@ -7185,7 +9878,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = bud_zen
 							culture = THIS
 							dynasty = none
@@ -7195,7 +9888,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = jain
 							culture = THIS
 							dynasty = none
@@ -7205,7 +9898,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = taoist
 							culture = THIS
 							dynasty = none
@@ -7215,7 +9908,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = zoroastrian
 							culture = THIS
 							dynasty = none
@@ -7225,8 +9918,8 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
-							religion = mazdakism
+							female = random
+							religion = mazdaki
 							culture = THIS
 							dynasty = none
 						}
@@ -7235,8 +9928,8 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
-							religion = mani
+							female = random
+							religion = manichean
 							culture = THIS
 							dynasty = none
 						}
@@ -7245,7 +9938,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = khurmazta
 							culture = THIS
 							dynasty = none
@@ -7255,7 +9948,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = chalcedonian
 							culture = THIS
 							dynasty = none
@@ -7265,7 +9958,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = iconoclast
 							culture = THIS
 							dynasty = none
@@ -7275,7 +9968,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = nestorian
 							culture = THIS
 							dynasty = none
@@ -7285,7 +9978,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = messalian
 							culture = THIS
 							dynasty = none
@@ -7295,7 +9988,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = miaphysite
 							culture = THIS
 							dynasty = none
@@ -7305,7 +9998,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = monophysite
 							culture = THIS
 							dynasty = none
@@ -7315,7 +10008,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = sunni
 							culture = THIS
 							dynasty = none
@@ -7325,7 +10018,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = zikri
 							culture = THIS
 							dynasty = none
@@ -7335,8 +10028,8 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
-							religion = yazidism
+							female = random
+							religion = yazidi
 							culture = THIS
 							dynasty = none
 						}
@@ -7345,7 +10038,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = ibadi
 							culture = THIS
 							dynasty = none
@@ -7355,7 +10048,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = kharijite
 							culture = THIS
 							dynasty = none
@@ -7365,7 +10058,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = shiite
 							culture = THIS
 							dynasty = none
@@ -7375,7 +10068,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = druze
 							culture = THIS
 							dynasty = none
@@ -7385,7 +10078,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = hurufi
 							culture = THIS
 							dynasty = none
@@ -7395,7 +10088,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = qarmatian
 							culture = THIS
 							dynasty = none
@@ -7405,7 +10098,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = jewish
 							culture = THIS
 							dynasty = none
@@ -7415,7 +10108,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = samaritan
 							culture = THIS
 							dynasty = none
@@ -7425,7 +10118,7 @@ rtp_create_society_members_se = {
 						create_character = {
 							age = 20
 							random_traits = yes
-							female = no
+							female = random
 							religion = karaite
 							culture = THIS
 							dynasty = none
@@ -7465,7 +10158,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = norse_pagan
 						culture = THIS
 						dynasty = none
@@ -7475,7 +10168,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = zun_pagan
 						culture = THIS
 						dynasty = none
@@ -7485,7 +10178,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = hellenic_pagan
 						culture = THIS
 						dynasty = none
@@ -7495,7 +10188,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = aztec
 						culture = THIS
 						dynasty = none
@@ -7505,7 +10198,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = finnish_pagan
 						culture = THIS
 						dynasty = none
@@ -7515,7 +10208,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = west_african_pagan
 						culture = THIS
 						dynasty = none
@@ -7525,7 +10218,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = slavic_pagan
 						culture = THIS
 						dynasty = none
@@ -7535,7 +10228,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = baltic_pagan
 						culture = THIS
 						dynasty = none
@@ -7545,7 +10238,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = tengri_pagan
 						culture = THIS
 						dynasty = none
@@ -7555,7 +10248,7 @@ rtp_create_society_members_se = {
 					create_character = {
 						age = 20
 						random_traits = yes
-						female = no
+						female = random
 						religion = bon
 						culture = THIS
 						dynasty = none
